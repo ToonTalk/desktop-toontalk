@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+   <head>
+      <title>ToonTalk</title>
+      <meta content="Microsoft Visual Studio.NET 7.0" name="GENERATOR">
+      <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+      <LINK rel="stylesheet" type="text/css" href="../dialog.css">
+      <script language="javascript" id="clientEventHandlersJS">
+<!--
+// Translators: please translate the following button labels
+var OKLabel = "OK";
+var YesLabel = "Ja";
+var NoLabel = "Nej";
+var RetryLabel = "Retry"; // translation??
+var CancelLabel = "Avbryt";
+function loadBody() 	{
+	//get the arguments passed in
+   var inputs;
+   if (window.dialogArguments == null) { // for testing
+      inputs = new Array(3);
+      inputs[0] = "OK";
+      inputs[1] = "ICONEXCL";
+      inputs[2] = 'No input given.<br>This page should be run from ToonTalk.<br>Translators - view Source and find section for translators';
+   } else {
+      inputs = window.dialogArguments.split(";");
+   };
+   document.writeln('<P align="left">');
+   if (inputs[1] != "NO ICON") {
+      document.writeln('<img src="../' + inputs[1] + '.gif"' + ' alt="' + inputs[1] + '"' + '>');
+   };
+   for (var i = 2; i < inputs.length; i++) {
+       document.writeln(inputs[i]);
+   };
+   document.writeln("</P>");
+   document.writeln("<P align='center'>");
+   if (inputs[0] == "OK") {
+      document.writeln('<INPUT onclick="sendBack(\'OK\')" type="button" value=' + OKLabel + '>');
+   } else if (inputs[0] == "YESNO") {
+      document.writeln('<INPUT onclick="sendBack(\'YES\')" type="button" value=' + YesLabel + '>');
+      document.writeln('<INPUT onclick="sendBack(\'NO\')" type="button" value=' + NoLabel + '>');
+   } else if (inputs[0] == "RETRYCANCEL") {
+      document.writeln('<INPUT onclick="sendBack(\'RETRY\')" type="button" value=' + RetryLabel + '>');
+      document.writeln('<INPUT onclick="sendBack(\'CANCEL\')" type="button" value=' + CancelLabel + '>');
+   };
+   document.writeln("</P>"); 
+}
+function sendBack(message) {
+    window.returnValue = message;
+    window.close();
+}
+//-->
+      </script>
+   </head>
+   <body>
+      <script>loadBody();</script>
+   </body>
+</html>

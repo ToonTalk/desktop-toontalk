@@ -1,0 +1,32 @@
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to Window's clipboard. For example, you can use
+Window's Notepad or Write program. Just be sure your selection includes
+the code below and then select the Copy command in the Edit menu. 
+Then it will appear in the ToonTalk remote control for the clipboard. 
+You can find the clipboard remote control on page 30 of the Sensor notebook. 
+Just use Dusty to vacuum it off the clipboard. 
+   The following is a box with 2 holes. The first hole contains a hollow
+oval which is partly visible. The first thing on the back is a box with
+3 holes. The hole labeled with "message" contains an empty nest. The
+hole labeled with "Up Speed" contains a remote control for the speed
+towards the top. The hole labeled with "inc" contains the number -10.
+And the second thing on the back is a robot who wants a box with 3
+holes. The first hole contains a pad with the text "hit" on it. The hole
+labeled with "Up Speed" contains any number (for example, a remote
+control for the speed towards the top). The hole labeled with "inc"
+contains any number. If given a box like that he will pick up his box.
+And drop it. And grab a magic wand. And use the magic wand on the third
+hole inside his box. And drop what he just copied on the second hole
+inside his box. And release the magic wand. And grab a copy of Dusty.
+And use Dusty to vacuum what's in the first hole inside his box. And
+release Dusty. The second hole contains a bird.
+   What follows is in a special code and was produced by ToonTalk(tm) 
+UK English Version 1.03. To learn more about ToonTalk see www.toontalk.com.
+1HStartToonTalkEncoding:
+CgACAPgAAAwXBTwCpgCmAAAAAgAgAAMACG1lc3NhZ2UABgAAAAlVcCBTcGVlZAAkAAAAACsA
+A/kAAARpbmMAAAoAAAAtAAAAAAAAAAAABSAAAwAADgMAaGl0CVVwIFNwZWVkACTSAAAAKwED
+/wRpbmMAAAoAAAAtASC7/wAAAf8ABwD/AAgA/wADAv8ABAAC/wAJAAH/AAYC/wANA/8ADgAA
+/wAQA/8AF////wAAAAAAAAAABwD//w==
+.
+This is the end of the code for the ToonTalk object. 

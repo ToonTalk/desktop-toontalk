@@ -1,0 +1,38 @@
+IDS_TROUBLE_SHOOT_DIRECTX_MEDIA, // new on 100600
+ "ToonTalk teve problemas a utilizar as extensões DirectX Media para carregar imagens. Queres ver o que podes fazer para resolver o problema?"
+
+IDS_JAVA_SENSOR_LIMITATIONS, // new on 120101
+ "Desculpa. Alguns sensores não funcionam em Java. O seguinte sensor ficará inactivo em Java: "
+
+IDS_M22_MISSING, // new on 130201
+ "Esta instalaçAo do ToonTalk não tem os ficheiros de dados de baixa resolução. Clica em 'Opções' para mudar para 640x480 ou superior ou contacta apoio@cnotinfor.com."
+
+IDS_TROUBLE_SHOOT_JAVA_APPLET, // new on 170201
+ "Ocorreu um erro ao compilar a Java applet. Queres ler como podes resolver isto?"
+
+IDS_ROBOT_VACUUMED_UP_HIS_BOX, // new on 180201
+ "Um robot aspirou a sua caixa."
+
+IDS_NO_IP_ADDRESS, // new on 010301
+ "ToonTalk não consegue encontrar um endereço IP neste computador. Os pássaros de longa distância não vão funcionar, a não ser que saias, te ligues a Internet, e tentes de novo."
+IDS_LOADING_FOREIGN_BIRD,
+ "ToonTalk está a carregar um passáro forasteiro que utiliza uma extensão ao ToonTalk (DLL)."
+IDS_ROBOT_USING_FOREIGN_BIRD,
+ "Um robot está para utilizar um passário forasteiro que utiliza uma extensão ao ToonTalk (DLL)."
+IDS_OK_TO_LOAD_DLL,
+ "Não há problema em carregar" // followed by a file name
+IDS_OK_TO_LOAD_DLL2,
+ " " // after the file name
+
+IDS_WANT_TO_UPDATE_TT_INI_TOONTALK32_1, // new on 170301
+ "ToonTalk foi instalado para executar" // followed by the name of an EXE file
+IDS_WANT_TO_UPDATE_TT_INI_TOONTALK32_2,
+ "Queres actualizá-lo para o executar em vez da versão que estás a executar?"
+
+IDS_OPTION5_ANSWER7, // new on 110401
+ "Não quero que o ET fale mas quero as legendas."
+
+IDS_DEMO_FILE_MISSING, // new on 060401
+ "Este exemplo não foi instalado.\rA versão de demonstração apenas inclui o exemplo Introdução ao ToonTalk."
+IDS_INSERT_CDROM, 
+  "Se inserires o CD-ROM do ToonTalk e esperares alguns segundos,\rToonTalk vai poder contnuar."

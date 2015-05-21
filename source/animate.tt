@@ -1,0 +1,781 @@
+<?xml version="1.0"?>
+<!--   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. Then it will appear
+in the ToonTalk remote control for the clipboard. You can find the
+clipboard remote control on page 30 of the Sensor notebook. Just use
+Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. 
+   What follows is in a special code and was produced by ToonTalk(r) 
+ToonTalk 2.81. To learn more about ToonTalk visit www.toontalk.com.
+-->
+<ToonTalkObject xmlns="http://www.toontalk.com" Language="1" Version="2">
+ <Box>
+  <NumberOfHoles>2</NumberOfHoles>
+  <Hole>1
+   <Robot Parameter="1" Index="22">
+    <Label><![CDATA[Make
+Trans-
+Parent]]></Label>
+    <ThoughtBubble>
+     <Box Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1
+       <Box Parameter="3">
+        <NumberOfHoles>2</NumberOfHoles>
+        <Hole>1
+         <UserPicture PixelWidth="504" PixelHeight="360">C:\Program Files\Animated Programs\ToonTalk\Downloads\heart1.png
+          <Geometry Z="-2147483648">
+           <Left>14471</Left>
+           <Bottom>26106</Bottom>
+           <Width>552</Width>
+           <Height>712</Height>
+          </Geometry>
+          <Active/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>15750</Width>
+           <Height>11250</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </UserPicture>
+         <Label><![CDATA[heart1]]></Label>
+        </Hole>
+        <Hole>2
+         <UserPicture PixelWidth="504" PixelHeight="360">C:\Program Files\Animated Programs\ToonTalk\Downloads\heart1.png
+          <Geometry Z="-2147483648">
+           <Left>15166</Left>
+           <Bottom>26106</Bottom>
+           <Width>552</Width>
+           <Height>712</Height>
+          </Geometry>
+          <Active/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>15750</Width>
+           <Height>11250</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </UserPicture>
+         <Label><![CDATA[heart1]]></Label>
+        </Hole>
+        <Active/>
+        <Erased/>
+       </Box>
+       <Label><![CDATA[In]]></Label>
+      </Hole>
+      <Hole>2
+       <Box Parameter="3">
+        <NumberOfHoles>0</NumberOfHoles>
+        <Active/>
+        <Erased/>
+       </Box>
+       <Label><![CDATA[Out]]></Label>
+      </Hole>
+      <Active/>
+     </Box>
+     <GeometricRelationToContainer RecordedLeaderWidthSquared="8294400" RecordedLeaderHeightSquared="756900" WidthTimesLeaderWidth="7346880" HeightTimesLeaderHeight="736890" XOffsetTimesLeaderWidth="4979520" YOffsetTimesLeaderHeight="796050" Z="-1"/>
+     <Active/>
+     <SeeAll/>
+    </ThoughtBubble>
+    <Actions ID="245" Version="2" MadeOrMovedCount="6">
+     <Grasp>MyBox.1</Grasp>
+     <TypeTo KeyDescription="1" KeyCode="49">InHand</TypeTo>
+     <MadeOrMoved TypeCode="10">1</MadeOrMoved>
+     <Drop>2</Drop>
+     <Grasp>1</Grasp>
+     <DropOn>MyBox.1</DropOn>
+     <Grasp>2.1</Grasp>
+     <Use></Use>
+     <MadeOrMoved TypeCode="9">3</MadeOrMoved>
+     <Drop>4</Drop>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <SelectAndType KeyDescription=" " KeyCode="32">3</SelectAndType>
+     <Grasp>3.2</Grasp>
+     <MadeOrMoved TypeCode="10">5</MadeOrMoved>
+     <Drop>5</Drop>
+     <Grasp>4</Grasp>
+     <Use></Use>
+     <DropOn>2.1</DropOn>
+     <TypeLabel KeyDescription="+" KeyCode="43">5.1</TypeLabel>
+     <TypeTo KeyDescription="+" KeyCode="43">5.1</TypeTo>
+     <Grasp>MyBox.2</Grasp>
+     <Drop>6</Drop>
+     <Grasp>2</Grasp>
+     <DropOnRightSide>6</DropOnRightSide>
+     <Grasp>6</Grasp>
+     <DropOn>MyBox.2</DropOn>
+     <Grasp KeyDescription="1" KeyCode="49">Vacuum</Grasp>
+     <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+     <UseOn>5</UseOn>
+     <Drop>Vacuum</Drop>
+    </Actions>
+    <Active/>
+   </Robot>
+  </Hole>
+  <Hole>2
+   <PictureOf SerialNumber="7">
+    <Appearance>
+     <UserPicture PixelWidth="208" PixelHeight="174">C:\Program Files\Animated Programs\ToonTalk\Downloads\test3.gif
+      <Geometry Z="-2">
+       <Left>19987</Left>
+       <Bottom>15861</Bottom>
+       <Width>100000</Width>
+       <Height>50000</Height>
+      </Geometry>
+      <SeeSome/>
+      <GeometryWhenFreeAndUnflipped>
+       <Width>3892</Width>
+       <Height>3053</Height>
+      </GeometryWhenFreeAndUnflipped>
+     </UserPicture>
+    </Appearance>
+    <GeometricRelationToContainer RecordedLeaderWidthSquared="68062500" RecordedLeaderHeightSquared="9000000" WidthTimesLeaderWidth="24750000" HeightTimesLeaderHeight="4500000" XOffsetTimesLeaderWidth="37125000" YOffsetTimesLeaderHeight="2250000" Z="-2"/>
+    <SeeSome/>
+    <OnBack>
+     <UserPicture PixelWidth="110" PixelHeight="156">Animation
+      <GeometricRelationToContainer RecordedLeaderWidthSquared="15147664" RecordedLeaderHeightSquared="9320809" WidthTimesLeaderWidth="6628076" HeightTimesLeaderHeight="4078808" XOffsetTimesLeaderWidth="470932" YOffsetTimesLeaderHeight="4951966" Z="-2147483648"/>
+      <SeeSome/>
+      <GeometryWhenFreeAndUnflipped>
+       <Width>4375</Width>
+       <Height>3280</Height>
+      </GeometryWhenFreeAndUnflipped>
+     </UserPicture>
+    </OnBack>
+    <OnBack>
+     <Robot>
+      <Label><![CDATA[Animate]]></Label>
+      <ThoughtBubble>
+       <Box Parameter="4">
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1
+         <Picture>
+          <ColorIndex>0</ColorIndex>
+          <Shape Code="0" Description="a rectangle"/>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="2137444" RecordedLeaderHeightSquared="219961" WidthTimesLeaderWidth="204680" HeightTimesLeaderHeight="109746" XOffsetTimesLeaderWidth="133042" YOffsetTimesLeaderHeight="54873" Z="-2147483648"/>
+          <SeeSome/>
+          <Erased/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>5184</Width>
+           <Height>2424</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </Picture>
+         <Label><![CDATA[Looks]]></Label>
+        </Hole>
+        <Hole>2
+         <Box Parameter="3">
+          <NumberOfHoles>3</NumberOfHoles>
+          <Hole>1
+           <Picture>
+            <ColorIndex>0</ColorIndex>
+            <Shape Code="0" Description="a rectangle"/>
+            <Geometry Z="-2147483648">
+             <Left>6038</Left>
+             <Bottom>21142</Bottom>
+             <Width>400</Width>
+             <Height>150</Height>
+            </Geometry>
+            <SeeSome/>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>5312</Width>
+             <Height>3984</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </Picture>
+          </Hole>
+          <Hole>2
+           <Picture Parameter="1">
+            <ColorIndex>1</ColorIndex>
+            <Shape Code="0" Description="a rectangle"/>
+            <Geometry Z="-2147483648">
+             <Left>6184</Left>
+             <Bottom>21142</Bottom>
+             <Width>400</Width>
+             <Height>150</Height>
+            </Geometry>
+            <SeeSome/>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>5312</Width>
+             <Height>3984</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </Picture>
+          </Hole>
+          <Hole>3
+           <Picture Parameter="2">
+            <ColorIndex>2</ColorIndex>
+            <Shape Code="0" Description="a rectangle"/>
+            <Geometry Z="-2147483648">
+             <Left>6330</Left>
+             <Bottom>21142</Bottom>
+             <Width>400</Width>
+             <Height>150</Height>
+            </Geometry>
+            <SeeSome/>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>5312</Width>
+             <Height>3984</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </Picture>
+          </Hole>
+          <Active/>
+          <Erased/>
+         </Box>
+         <Label><![CDATA[frames]]></Label>
+        </Hole>
+        <Hole>3
+         <Box Parameter="4">
+          <NumberOfHoles>3</NumberOfHoles>
+          <Hole>1
+           <Integer NotUsingDefaultTextColor="1">100
+            <Active/>
+            <Erased/>
+           </Integer>
+          </Hole>
+          <Hole>2
+           <Scale Parameter="5">Moving
+            <SeeSome/>
+           </Scale>
+          </Hole>
+          <Hole>3
+           <PictureOf>
+            <Appearance>
+             <Integer NotUsingDefaultTextColor="1">128574
+              <Erased/>
+             </Integer>
+            </Appearance>
+            <GeometricRelationToContainer RecordedLeaderWidthSquared="19600" RecordedLeaderHeightSquared="54756" WidthTimesLeaderWidth="4760" HeightTimesLeaderHeight="27612" XOffsetTimesLeaderWidth="13440" YOffsetTimesLeaderHeight="13806" Z="-2147483648"/>
+            <Erased/>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>38</Width>
+             <Height>120</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </PictureOf>
+           <Label><![CDATA[ms counter]]></Label>
+          </Hole>
+          <Active/>
+         </Box>
+         <Label><![CDATA[counter mech]]></Label>
+        </Hole>
+        <Active/>
+       </Box>
+       <GeometricRelationToContainer RecordedLeaderWidthSquared="4782969" RecordedLeaderHeightSquared="1192464" WidthTimesLeaderWidth="4782969" HeightTimesLeaderHeight="1283100" XOffsetTimesLeaderWidth="3039930" YOffsetTimesLeaderHeight="1278732" Z="-2147483648"/>
+       <Active/>
+       <SeeAll/>
+      </ThoughtBubble>
+      <Actions ID="192" Version="0" MadeOrMovedCount="4">
+       <MoveTo>NumberStack</MoveTo>
+       <MadeOrMoved TypeCode="0">1</MadeOrMoved>
+       <Grasp>1</Grasp>
+       <TypeTo KeyDescription="" KeyCode="8">InHand</TypeTo>
+       <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+       <DropOn>MyBox.3.3</DropOn>
+       <Grasp>Vacuum</Grasp>
+       <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+       <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+       <UseOn>MyBox.1</UseOn>
+       <Drop>Vacuum</Drop>
+       <Grasp>MyBox.2</Grasp>
+       <Drop>2</Drop>
+       <Grasp>MagicWand</Grasp>
+       <UseOn>2.1</UseOn>
+       <DropOn>MyBox.1</DropOn>
+       <Drop>MagicWand</Drop>
+       <Grasp>2</Grasp>
+       <TypeTo KeyDescription="1" KeyCode="49">InHand</TypeTo>
+       <MadeOrMoved TypeCode="10">4</MadeOrMoved>
+       <DropOnRightSide>4</DropOnRightSide>
+       <Grasp>4</Grasp>
+       <DropOn>MyBox.2</DropOn>
+      </Actions>
+      <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+       <Box Parameter="4" SerialNumber="19">
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1
+         <RemoteControl Code="15" Description="Looks">
+          <For>
+           <PictureOf SameAs="7"/>
+          </For>
+          <NotFlippedOver/>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="180625" RecordedLeaderHeightSquared="111556" WidthTimesLeaderWidth="44200" HeightTimesLeaderHeight="55778" XOffsetTimesLeaderWidth="11050" YOffsetTimesLeaderHeight="27722" Z="-2147483648"/>
+          <SeeSome/>
+         </RemoteControl>
+         <Label><![CDATA[Looks]]></Label>
+        </Hole>
+        <Hole>2
+         <Box Parameter="4">
+          <NumberOfHoles>2</NumberOfHoles>
+          <Hole>1
+           <UserPicture PixelWidth="208" PixelHeight="174">C:\Program Files\Animated Programs\ToonTalk\Downloads\test2.gif
+            <GeometricRelationToContainer RecordedLeaderWidthSquared="10816" RecordedLeaderHeightSquared="27889" WidthTimesLeaderWidth="3952" HeightTimesLeaderHeight="14028" XOffsetTimesLeaderWidth="936" YOffsetTimesLeaderHeight="7014" Z="-2147483648"/>
+            <SeeSome/>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>6500</Width>
+             <Height>5437</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </UserPicture>
+           <Label><![CDATA[test2]]></Label>
+          </Hole>
+          <Hole>2
+           <UserPicture PixelWidth="208" PixelHeight="174">C:\Program Files\Animated Programs\ToonTalk\Downloads\test3.gif
+            <GeometricRelationToContainer RecordedLeaderWidthSquared="10816" RecordedLeaderHeightSquared="27889" WidthTimesLeaderWidth="3952" HeightTimesLeaderHeight="14028" XOffsetTimesLeaderWidth="5928" YOffsetTimesLeaderHeight="7014" Z="-2147483648"/>
+            <SeeSome/>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>6500</Width>
+             <Height>5437</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </UserPicture>
+           <Label><![CDATA[test3]]></Label>
+          </Hole>
+         </Box>
+         <Label><![CDATA[frames]]></Label>
+        </Hole>
+        <Hole>3
+         <Box Parameter="4">
+          <NumberOfHoles>3</NumberOfHoles>
+          <Hole>1
+           <Integer NotUsingDefaultTextColor="1">100</Integer>
+           <Label><![CDATA[change this (ms)]]></Label>
+          </Hole>
+          <Hole>2
+           <Scale Parameter="5">Moving
+            <SeeSome/>
+           </Scale>
+          </Hole>
+          <Hole>3
+           <PictureOf SerialNumber="26">
+            <Appearance>
+             <Integer NotUsingDefaultTextColor="1">94</Integer>
+            </Appearance>
+            <PartlyVisibleIfPartOfPicture/>
+            <GeometricRelationToContainer RecordedLeaderWidthSquared="10816" RecordedLeaderHeightSquared="27889" WidthTimesLeaderWidth="2496" HeightTimesLeaderHeight="14028" XOffsetTimesLeaderWidth="7384" YOffsetTimesLeaderHeight="7014" Z="-2147483648"/>
+            <OnBack>
+             <Robot>
+              <Label><![CDATA[Lac]]></Label>
+              <ThoughtBubble>
+               <Box Parameter="4">
+                <NumberOfHoles>2</NumberOfHoles>
+                <Hole>1
+                 <PictureOf>
+                  <Appearance>
+                   <Integer NotUsingDefaultTextColor="1">1
+                    <Erased/>
+                   </Integer>
+                  </Appearance>
+                  <GeometricRelationToContainer RecordedLeaderWidthSquared="41126569" RecordedLeaderHeightSquared="18198756" WidthTimesLeaderWidth="14955116" HeightTimesLeaderHeight="9099378" XOffsetTimesLeaderWidth="3738779" YOffsetTimesLeaderHeight="4547556" Z="-2147483648"/>
+                  <Erased/>
+                  <GeometryWhenFreeAndUnflipped>
+                   <Width>15</Width>
+                   <Height>13</Height>
+                  </GeometryWhenFreeAndUnflipped>
+                 </PictureOf>
+                 <Label><![CDATA[Looks]]></Label>
+                </Hole>
+                <Hole>2
+                 <RemoteControl Code="53" Description="Milli-secondssinceLastFrame">
+                  <GlobalSensor/>
+                  <Value>
+                   <Integer>23</Integer>
+                  </Value>
+                  <Erased/>
+                 </RemoteControl>
+                 <Label><![CDATA[Timer]]></Label>
+                </Hole>
+                <Active/>
+               </Box>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="92160000" RecordedLeaderHeightSquared="98465929" WidthTimesLeaderWidth="92160000" HeightTimesLeaderHeight="105997486" XOffsetTimesLeaderWidth="58617600" YOffsetTimesLeaderHeight="105471567" Z="-2147483648"/>
+               <Active/>
+               <SeeAll/>
+              </ThoughtBubble>
+              <Actions ID="103" Version="0" MadeOrMovedCount="1">
+               <Grasp>MagicWand</Grasp>
+               <UseOn>MyBox.2</UseOn>
+               <DropOn>MyBox.1</DropOn>
+               <Drop>MagicWand</Drop>
+              </Actions>
+              <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+               <Box Parameter="4" SerialNumber="29">
+                <NumberOfHoles>2</NumberOfHoles>
+                <Hole>1
+                 <RemoteControl Code="15" Description="Looks">
+                  <For>
+                   <PictureOf SameAs="26"/>
+                  </For>
+                  <NotFlippedOver/>
+                  <GeometricRelationToContainer RecordedLeaderWidthSquared="92006464" RecordedLeaderHeightSquared="12166144" WidthTimesLeaderWidth="33456896" HeightTimesLeaderHeight="6083072" XOffsetTimesLeaderWidth="8364224" YOffsetTimesLeaderHeight="3041536" Z="-2147483648"/>
+                 </RemoteControl>
+                 <Label><![CDATA[Looks]]></Label>
+                </Hole>
+                <Hole>2
+                 <RemoteControl Code="53" Description="Milli-secondssinceLastFrame">
+                  <GlobalSensor/>
+                  <Value>
+                   <Integer>11</Integer>
+                  </Value>
+                 </RemoteControl>
+                 <Label><![CDATA[Timer]]></Label>
+                </Hole>
+               </Box>
+              </WorkingInfo>
+             </Robot>
+            </OnBack>
+            <OnBack>
+             <Box SameAs="29"/>
+            </OnBack>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>2496</Width>
+             <Height>3288</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </PictureOf>
+           <Label><![CDATA[ms counter]]></Label>
+          </Hole>
+         </Box>
+         <Label><![CDATA[counter mech]]></Label>
+        </Hole>
+       </Box>
+      </WorkingInfo>
+     </Robot>
+    </OnBack>
+    <OnBack>
+     <PictureOf Parameter="1" SerialNumber="31">
+      <Appearance>
+       <TextPad>
+        <TextValue><![CDATA[I make
+an animation]]></TextValue>
+        <VariableWidthFont/>
+       </TextPad>
+      </Appearance>
+      <PartlyVisibleIfPartOfPicture/>
+      <GeometricRelationToContainer RecordedLeaderWidthSquared="15147664" RecordedLeaderHeightSquared="9320809" WidthTimesLeaderWidth="6628076" HeightTimesLeaderHeight="4078808" XOffsetTimesLeaderWidth="470932" YOffsetTimesLeaderHeight="293088" Z="-2147483648"/>
+      <OnBack>
+       <Picture>
+        <ColorIndex>0</ColorIndex>
+        <Shape Code="0" Description="a rectangle"/>
+        <SeeSome/>
+        <FlippedOver/>
+        <OnBack>
+         <Robot>
+          <Label><![CDATA[speak]]></Label>
+          <ThoughtBubble>
+           <Box Parameter="4">
+            <NumberOfHoles>5</NumberOfHoles>
+            <Hole>1
+             <Speech>
+              <TextValue><![CDATA[SpeakSpeak]]></TextValue>
+              <Active/>
+              <Erased/>
+             </Speech>
+            </Hole>
+            <Hole>2
+             <Label><![CDATA[Looks]]></Label>
+            </Hole>
+            <Hole>3
+             <TextPad>
+              <TextValue><![CDATA[yes]]></TextValue>
+              <Active/>
+             </TextPad>
+             <Label><![CDATA[selected?]]></Label>
+            </Hole>
+            <Hole>4
+             <Picture Parameter="1">
+              <BuiltIn Code="32" PictureNumber="1" Description="a switch"/>
+              <GeometricRelationToContainer RecordedLeaderWidthSquared="41242084" RecordedLeaderHeightSquared="18198756" WidthTimesLeaderWidth="6344936" HeightTimesLeaderHeight="9099378" XOffsetTimesLeaderWidth="25379744" YOffsetTimesLeaderHeight="4547556" Z="-2147483648"/>
+              <SeeSome/>
+              <GeometryWhenFreeAndUnflipped>
+               <Width>13120</Width>
+               <Height>6888</Height>
+              </GeometryWhenFreeAndUnflipped>
+             </Picture>
+            </Hole>
+            <Hole>5
+             <TextPad>
+              <TextValue><![CDATA[ ]]></TextValue>
+              <Active/>
+             </TextPad>
+            </Hole>
+            <Active/>
+           </Box>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="92160000" RecordedLeaderHeightSquared="98465929" WidthTimesLeaderWidth="92160000" HeightTimesLeaderHeight="105997486" XOffsetTimesLeaderWidth="58617600" YOffsetTimesLeaderHeight="105471567" Z="-2147483648"/>
+           <Active/>
+           <SeeAll/>
+          </ThoughtBubble>
+          <Actions ID="798" Version="0" MadeOrMovedCount="2">
+           <MoveTo>TextPadStack</MoveTo>
+           <MadeOrMoved TypeCode="14">1</MadeOrMoved>
+           <Grasp>1</Grasp>
+           <TypeTo KeyDescription="" KeyCode="8">InHand</TypeTo>
+           <Drop>1</Drop>
+           <Grasp>MagicWand</Grasp>
+           <UseOn>MyBox.2</UseOn>
+           <DropOnLeftSide>1</DropOnLeftSide>
+           <Drop>MagicWand</Drop>
+           <Grasp>1</Grasp>
+           <DropOn>MyBox.1</DropOn>
+           <Grasp>1</Grasp>
+           <Drop>1</Drop>
+           <Grasp>MyBox.1</Grasp>
+           <TypeTo KeyDescription=" " KeyCode="32">InHand</TypeTo>
+           <DropOn>MyBox.1</DropOn>
+           <TypeTo KeyDescription="+" KeyCode="43">MyBox.4</TypeTo>
+           <Grasp KeyDescription="1" KeyCode="49">Vacuum</Grasp>
+           <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+           <UseOn>1</UseOn>
+           <Drop>Vacuum</Drop>
+          </Actions>
+          <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+           <Box Parameter="4" SerialNumber="35">
+            <NumberOfHoles>5</NumberOfHoles>
+            <Hole>1
+             <Speech>
+              <TextValue><![CDATA[I make
+an animation ]]></TextValue>
+              <Erased/>
+             </Speech>
+            </Hole>
+            <Hole>2
+             <RemoteControl Code="15" Description="Looks">
+              <For>
+               <PictureOf SameAs="31"/>
+              </For>
+              <NotFlippedOver/>
+              <GeometricRelationToContainer RecordedLeaderWidthSquared="206726884" RecordedLeaderHeightSquared="4892944" WidthTimesLeaderWidth="31804136" HeightTimesLeaderHeight="2446472" XOffsetTimesLeaderWidth="47706204" YOffsetTimesLeaderHeight="1223236" Z="-2147483648"/>
+             </RemoteControl>
+             <Label><![CDATA[Looks]]></Label>
+            </Hole>
+            <Hole>3
+             <RemoteControl Code="11" Description="Selected?">
+              <Appearance>
+               <TextPad>
+                <TextValue><![CDATA[no]]></TextValue>
+                <Active/>
+               </TextPad>
+              </Appearance>
+              <For>
+               <PictureOf SameAs="31"/>
+              </For>
+              <Value>
+               <Integer>0</Integer>
+              </Value>
+             </RemoteControl>
+             <Label><![CDATA[selected?]]></Label>
+            </Hole>
+            <Hole>4
+             <Picture Parameter="1">
+              <BuiltIn Code="32" PictureNumber="1" Description="a switch"/>
+              <GeometricRelationToContainer RecordedLeaderWidthSquared="206726884" RecordedLeaderHeightSquared="4892944" WidthTimesLeaderWidth="31804136" HeightTimesLeaderHeight="2446472" XOffsetTimesLeaderWidth="127216544" YOffsetTimesLeaderHeight="1223236" Z="-2147483648"/>
+              <SeeSome/>
+              <GeometryWhenFreeAndUnflipped>
+               <Width>13120</Width>
+               <Height>6888</Height>
+              </GeometryWhenFreeAndUnflipped>
+             </Picture>
+            </Hole>
+            <Hole>5
+             <RemoteControl Code="27" Description="KeyJustPressed">
+              <GlobalSensor/>
+              <Value>
+               <Integer>0</Integer>
+              </Value>
+             </RemoteControl>
+             <Label><![CDATA[Key]]></Label>
+            </Hole>
+           </Box>
+          </WorkingInfo>
+          <Next>
+           <Robot>
+            <Label><![CDATA[reset]]></Label>
+            <ThoughtBubble>
+             <Box Parameter="4">
+              <NumberOfHoles>5</NumberOfHoles>
+              <Hole>1
+               <Speech>
+                <TextValue><![CDATA[Speak]]></TextValue>
+                <Active/>
+                <Erased/>
+               </Speech>
+              </Hole>
+              <Hole>2
+               <Label><![CDATA[Looks]]></Label>
+              </Hole>
+              <Hole>3
+               <Label><![CDATA[selected?]]></Label>
+              </Hole>
+              <Hole>4
+               <Picture>
+                <BuiltIn Code="32" PictureNumber="0" Description="a switch"/>
+                <GeometricRelationToContainer RecordedLeaderWidthSquared="41242084" RecordedLeaderHeightSquared="18198756" WidthTimesLeaderWidth="6344936" HeightTimesLeaderHeight="9099378" XOffsetTimesLeaderWidth="25379744" YOffsetTimesLeaderHeight="4547556" Z="-2147483648"/>
+                <SeeSome/>
+                <GeometryWhenFreeAndUnflipped>
+                 <Width>13120</Width>
+                 <Height>6888</Height>
+                </GeometryWhenFreeAndUnflipped>
+               </Picture>
+              </Hole>
+              <Active/>
+             </Box>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="92160000" RecordedLeaderHeightSquared="98465929" WidthTimesLeaderWidth="92160000" HeightTimesLeaderHeight="105997486" XOffsetTimesLeaderWidth="58617600" YOffsetTimesLeaderHeight="105471567" Z="-2147483648"/>
+             <Active/>
+             <SeeAll/>
+            </ThoughtBubble>
+            <Actions ID="800" Version="0" MadeOrMovedCount="0">
+             <Grasp>Vacuum</Grasp>
+             <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+             <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+             <UseOn>MyBox.1</UseOn>
+             <TypeTo KeyDescription=" " KeyCode="32">InHand</TypeTo>
+             <Drop>Vacuum</Drop>
+             <TypeTo KeyDescription="+" KeyCode="43">MyBox.4</TypeTo>
+            </Actions>
+            <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+             <Box SameAs="35"/>
+            </WorkingInfo>
+            <GeometricRelationToContainer RecordedLeaderWidthSquared="92160000" RecordedLeaderHeightSquared="98465929" WidthTimesLeaderWidth="92160000" HeightTimesLeaderHeight="98465929" XOffsetTimesLeaderWidth="58617600" YOffsetTimesLeaderHeight="78451238" Z="-2147483648"/>
+           </Robot>
+          </Next>
+         </Robot>
+        </OnBack>
+        <OnBack>
+         <TextPad>
+          <TextValue><![CDATA[Speech
+mechanism]]></TextValue>
+          <VariableWidthFont/>
+         </TextPad>
+        </OnBack>
+        <OnBack>
+         <Box SameAs="35"/>
+        </OnBack>
+        <GeometryWhenFreeAndUnflipped>
+         <Width>3333</Width>
+         <Height>2500</Height>
+        </GeometryWhenFreeAndUnflipped>
+       </Picture>
+      </OnBack>
+      <OnBack>
+       <Picture>
+        <ColorIndex>0</ColorIndex>
+        <Shape Code="0" Description="a rectangle"/>
+        <SeeSome/>
+        <FlippedOver/>
+        <OnBack>
+         <Robot SerialNumber="41">
+          <Label><![CDATA[space
+destroyer]]></Label>
+          <ThoughtBubble>
+           <Box Parameter="4">
+            <NumberOfHoles>3</NumberOfHoles>
+            <Hole>1
+             <Label><![CDATA[Looks]]></Label>
+            </Hole>
+            <Hole>2
+             <TextPad>
+              <TextValue><![CDATA[yes]]></TextValue>
+              <Active/>
+             </TextPad>
+             <Label><![CDATA[Selected?]]></Label>
+            </Hole>
+            <Hole>3
+             <TextPad>
+              <TextValue><![CDATA[ ]]></TextValue>
+              <Active/>
+             </TextPad>
+             <Label><![CDATA[Key]]></Label>
+            </Hole>
+            <Active/>
+           </Box>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="92160000" RecordedLeaderHeightSquared="98465929" WidthTimesLeaderWidth="92160000" HeightTimesLeaderHeight="105997486" XOffsetTimesLeaderWidth="58617600" YOffsetTimesLeaderHeight="105471567" Z="-2147483648"/>
+           <Active/>
+           <SeeAll/>
+          </ThoughtBubble>
+          <Actions ID="954" Version="0" MadeOrMovedCount="0">
+           <TypeTo KeyDescription="" KeyCode="8">MyBox.1</TypeTo>
+          </Actions>
+          <WorkingInfo SetDownCounter="0" RecentPageNumber="0">
+           <Box Parameter="4" SerialNumber="42">
+            <NumberOfHoles>3</NumberOfHoles>
+            <Hole>1
+             <RemoteControl Code="15" Description="Looks">
+              <For>
+               <PictureOf SameAs="31"/>
+              </For>
+              <NotFlippedOver/>
+              <GeometricRelationToContainer RecordedLeaderWidthSquared="125440000" RecordedLeaderHeightSquared="7840000" WidthTimesLeaderWidth="31360000" HeightTimesLeaderHeight="3920000" XOffsetTimesLeaderWidth="7840000" YOffsetTimesLeaderHeight="1960000" Z="-2147483648"/>
+             </RemoteControl>
+             <Label><![CDATA[Looks]]></Label>
+            </Hole>
+            <Hole>2
+             <RemoteControl Code="11" Description="Selected?">
+              <Appearance>
+               <TextPad>
+                <TextValue><![CDATA[no]]></TextValue>
+                <Active/>
+               </TextPad>
+              </Appearance>
+              <For>
+               <PictureOf SameAs="31"/>
+              </For>
+              <Value>
+               <Integer>0</Integer>
+              </Value>
+             </RemoteControl>
+             <Label><![CDATA[Selected?]]></Label>
+            </Hole>
+            <Hole>3
+             <RemoteControl Code="27" Description="KeyJustPressed">
+              <GlobalSensor/>
+              <Value>
+               <Integer>0</Integer>
+              </Value>
+             </RemoteControl>
+             <Label><![CDATA[Key]]></Label>
+            </Hole>
+           </Box>
+           <FirstTeammateToFail>
+            <Robot SameAs="41"/>
+           </FirstTeammateToFail>
+          </WorkingInfo>
+         </Robot>
+        </OnBack>
+        <OnBack>
+         <TextPad>
+          <TextValue><![CDATA[I remove a
+space, if I'm
+selected and
+you type space]]></TextValue>
+          <VariableWidthFont/>
+         </TextPad>
+        </OnBack>
+        <OnBack>
+         <Box SameAs="42"/>
+        </OnBack>
+        <GeometryWhenFreeAndUnflipped>
+         <Width>3333</Width>
+         <Height>2500</Height>
+        </GeometryWhenFreeAndUnflipped>
+       </Picture>
+      </OnBack>
+      <GeometryWhenFreeAndUnflipped>
+       <Width>4375</Width>
+       <Height>3280</Height>
+      </GeometryWhenFreeAndUnflipped>
+     </PictureOf>
+    </OnBack>
+    <OnBack>
+     <Box SameAs="19"/>
+    </OnBack>
+    <GeometryWhenFreeAndUnflipped>
+     <Width>3892</Width>
+     <Height>3053</Height>
+    </GeometryWhenFreeAndUnflipped>
+   </PictureOf>
+  </Hole>
+  <Geometry Z="-1">
+   <Width>8250</Width>
+   <Height>3000</Height>
+  </Geometry>
+  <Active/>
+ </Box>
+</ToonTalkObject>

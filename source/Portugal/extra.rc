@@ -1,0 +1,160 @@
+IDS_OPTION9_QUESTION,       // new on 230999 - needs translation
+  "Queres alterar a voz que o ToonTalk usa?"
+ IDS_OPTION9_EXPLANATION,
+  "O ToonTalk pode utilizar vozes diferentes instaldas no teu computador. Isto altera a voz do ET. "
+ IDS_OPTION9_ANSWER1,
+  "Quero utilizar uma voz com o nome "  // followed by the mode name
+ IDS_OPTION9_ANSWER2,
+  "Quero utilizar uma voz com o nome "  // followed by the mode name
+ IDS_OPTION9_ANSWER3,
+  "Quero utilizar uma voz com o nome "  // followed by the mode name
+ IDS_OPTION9_ANSWER4,
+  "Quero utilizar uma voz com o nome "  // followed by the mode name
+ IDS_OPTION9_ANSWER5,
+  "Quero utilizar uma voz com o nome "  // followed by the mode name
+ IDS_OPTION9_ANSWER6,
+  "Quero utilizar uma voz com o nome "  // followed by the mode name
+ IDS_OPTION9_ANSWER7,
+  "Quero utilizar uma voz com o nome "  // followed by the mode name
+
+IDS_OPTION2_QUESTION,
+  "Que resolução queres para o ercã do ToonTalk?"
+ IDS_OPTION2_EXPLANATION,
+  "Se escolheres uma resolução maior, as imagens ficam melhores e tens mais espaço, mas o ToonTalk pode ficar mais lento. "
+ IDS_OPTION2_EXPLANATION+1,
+  "Sugiro que alteres a resolução do ecrã até encontrares uma boa para o teu computador. "
+ IDS_OPTION2_ANSWER1,
+  "Quero que o ToonTalk com 320 por 240 pixels. Desta maneira o ToonTalk é executado o mais rapidamente possível, mas as imagens ficam muito granuladas. "
+ IDS_OPTION2_ANSWER2,
+   "Quero que o ToonTalk com 640 por 480 pixels. Ainda quero o ToonTalk rápido, mas não tão granulado. "
+ IDS_OPTION2_ANSWER3,
+   "Quero que o ToonTalk com 800 por 600 pixels. Quero que as imagens pareçam melhores e ter mais espaço quando me sento. Vou ver se o ToonTalk fica mais lento. "
+ IDS_OPTION2_ANSWER4,
+   "Quero que o ToonTalk com 1024 por 768 pixels. Quero imagens melhores e mais espaço. "
+ IDS_OPTION2_ANSWER5,
+   "Quero que o ToonTalk com 1152 por 864 pixels. Quero mais espaço. "
+ IDS_OPTION2_ANSWER6,
+   "Quero que o ToonTalk com 1280 por 1024 pixels. Vou experimentar se o ToonTalk é suficientemente rápido, pois eu quero este espaço todo. "
+ IDS_OPTION2_ANSWER7,
+   "Quero que o ToonTalk com 1600 por 1200 pixels. Quero ver se o meu computador suporta esta resolução e se é suficientemente rápido. "
+
+IDS_OPTION5_ANSWER6, // new on 270999
+  "Quero que o ET fale e não quero balões de fala, mas quero subtítulos."
+
+IDS_OPTION5_EXPLANATION+1, //updated on 270999 needs translation
+  "Atenção, o ET só fala as vozes instaladas no teu computador. O CD-ROM do ToonTalk instala uma voz. "
+
+
+=========
+
+IDS_THAT_REMINDS_ME_OF, // new on 290699
+ // for example, "You are holding a box that reminds me of the text "this is a comment"".
+ "que me faz lembrar"
+IDS_THAT_REMINDS_ME_OF2, // used after "this is a comment" above.
+ " "
+
+IDS_SOMETHING, // new on 300699
+"algo"
+
+IDS_ANY_ROBOT, // new on 090799
+"qualquer robot"
+
+IDS_ANY_FORCE_EFFECT, // new on 160799
+ "qualquer efeito de força"
+IDS_BLANK_FORCE_EFFECT,
+ "um efeito de força apagado"
+IDS_FORCE_EFFECT_TYPE_INDEFINITE,
+ "um efeito force feedback"
+IDS_FORCE_EFFECT_TYPE_DEFINITE,
+ "o efeito force feedback"
+IDS_FORCE_EFFECT_TYPE_PLURAL,
+ "efeitos force feedback"
+IDS_FORCE_EFFECT_TYPE_PRONOUN,
+ "lo"
+
+ // new on 200799
+IDS_KEYBOARD_ACCELERATORS,
+  // be sure that no letter occurs twice in the same situation in the following
+  // Each letter corresponds to a keyboard command:
+
+  // D - Down when in helicopter
+  // U - Up when in helicopter
+
+  // H - Helicopter when walking outside
+
+  // U - Standup if your hand is empty
+  // P - Pickup what is under your finger if your hand is empty
+  // F - Pickup and flip what is under your finger if your hand is empty
+
+  // F - Flip when holding picture or pad
+  // D - Drop what you are holding
+ "bchlavvl"
+
+// The following indicate what should seperate words in sentences.
+// In Japanese it should be "" 
+IDS_SPACE_BEFORE_PRONOUNS,
+ // in Portuguese is "-"
+ "-"
+IDS_DEFAULT_SPACE_BETWEEN_WORDS,
+ " "
+
+IDS_NOT_A_GOOD_DEMO_FILE,
+ "não é um bom ficheiro de registo do ToonTalk."
+IDS_DEMO_FILE_NEED_NEWER_VERSION_OF_TOONTALK,
+ "Este exemplo só corre em versões mais recentes do ToonTalk. Por favor actualiza o teu sistema. Visita www.toontalk.com."
+ 
+IDS_FORCE_EFFECT_HELP, // added 7/31/99
+ "podes sentir esse efeito carregando "
+IDS_FORCE_EFFECT_HELP2,
+ " "
+IDS_FORCE_EFFECTS_ON_PAGE4,
+ "Podes encontrar mais efeitos de força no teu caderno quase no fim do caderno dos sensores."
+
+IDS_UNKNOWN_PROBLEM_READING_A_URL, // new on 9/14/99
+ "Houve um problema a ler um ficheiro da Internet."
+IDS_SHOULD_TOONTALK_STOP_READING_URLS,
+ " Queres que o ToonTalk deixe de procurar ficheiros na Internet?"
+
+IDS_TOOLBOX_IN_VACUUM_HELP, // new on 170999
+ "A Engenhocas não vem porque está no Limpopó, o Aspirador. Utiliza o Limpopó para a cuspir. "
+
+IDS_ERROR_WHILE_SAVING_A_CITY, // new on 010200
+"Aguma coisa correu mal enquanto grava a cidade. A cidade não foi gravada."
+
+IDS_ERRORS_KEEPING_LOG_SEGMENTS,
+"Um erro ocorreu enquanto se grava coisas para o time travel. O time travel pode não funcionar correctamente para este utilizador."
+
+IDS_TIME_TRAVEL_RUN_BUTTON_LABEL,
+"OK" // good to be very very short - used as label on small time travel button to mean start replaying from current time frame
+
+IDS_RESULT_OF_SAVING_HOUSE, // added 030200
+"Este é o resultado de gravares uma casa."
+
+IDS_RESULT_OF_SAVING_CITY,
+"Este é o resultado de gravares uma cidade."
+
+IDS_DEMO_FILE_NEED_OLDER_VERSION_OF_TOONTALK, // new on 070300
+"Esta versão do ToonTalk não pode reproduzir este exemplo. Experimenta com versões superiores à 2.0."
+
+IDS_RESOLUTION_TOO_HIGH, // added on 190300
+"Este computador não suporta a resolução de ecrã "
+
+IDS_DEFAULT_RESOLUTION_LOWERED,
+"A resolução padrão foi baixa para "
+
+IDS_PLEASE_RESTART_TOONTALK,
+"Por favor reinicia o ToonTalk."
+
+IDS_CANT_DROP_REMOTE_LOOK_OF_FLIPPED_PICTURE_ON_BLANK_PICTURE,
+"Não posso largar um controlo remoto para a aspecto de uma imagem virada numa imagem vazia."
+
+IDS_NO_IP_ADDRESS, // new on 010301
+ "ToonTalk can't find an IP address for this machine. Long-distance birds won't work unless you quit, connect to the Internet, and try again."
+IDS_LOADING_FOREIGN_BIRD,
+ "ToonTalk is loading a foreign bird that uses an extension to ToonTalk (a DLL)."
+IDS_ROBOT_USING_FOREIGN_BIRD,
+ "A robot is about to use a foreign bird that uses an extension to ToonTalk (a DLL)."
+IDS_OK_TO_LOAD_DLL,
+ "Is it OK to load" // followed by a file name
+IDS_OK_TO_LOAD_DLL2,
+ " " // after the file name

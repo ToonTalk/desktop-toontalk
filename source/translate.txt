@@ -1,0 +1,46 @@
+See \translateTT\readme.txt for latest version of this.
+
+Translating ToonTalk to another language requires the translation 
+of the following files:
+
+english.rc -- This file contains all the sentences and phrases used
+by Marty the Martian.  It also contains some information for generating
+the notebooks and customizing the sensors.
+Only the parts within " marks should be translated.
+Lines preceeded by // are just comments and should not be translated
+
+ttus.rc -- File describing the dialog boxes used by ToonTalk.
+Only sentences and phrases with quotes ("like this") should be translated.
+"MS Sans Serif", "EDIT", "STATIC", "BUTTON", and file names should
+be left alone.
+
+sttus.rc -- File describing the dialog boxes used by the Start ToonTalk
+program.  Instructions same as above.
+
+The *.pzl files you'll find in the \toontalk\puzzles\english directory
+are all text files that describe the puzzles.
+http://www.toontalk.com/English/make_pzl.htm provides more information
+about the format and which parts need translation.
+
+The *.htm files you'll find in the \toontalk\doc\english directory
+are HTML files which includes the users guide.
+
+The *.ust files you'll find the \toontalk\demos directory.  These
+are used to generate subtitles for demos.  Leave the number that
+starts each section alone -- it indicates the start time (in milliseconds).
+
+Also the following 2 sentences are spoken by ToonTalk.  If you could
+record someone saying the translation of them as a WAV file that would be great.
+
+OK.
+OK, I'll pick one.
+
+There is also an automatically generated file based upon the translations of the above that is the basis for the speech engine. It contains about 2000 words and phrases that need to be recorded.
+
+The narration (the translation of the *.ust files described above) can be recorded as well.
+
+Don't hesitate to ask questions.
+
+Good luck and thanks.
+
+

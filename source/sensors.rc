@@ -1,0 +1,303 @@
+
+// this file generates sensors in different languages
+
+#define AMERICAN 0
+#define SWEDISH 1
+#define BRAZILIAN_PORTUGUESE 2
+#define GERMAN 3
+#define FRENCH 4
+#define SPANISH 5
+#define BRITISH 6
+#define TURKISH 7
+#define JAPANESE 8
+#define PORTUGAL_PORTUGUESE 9
+
+IDS_YES,
+ "yes"
+IDS_NO,
+ "no"
+
+// the remote control for the visibility of a picture
+// can display one of the following states:
+
+IDS_VISIBLE_REMOTE_STATE1,
+   "SEE ALL"
+IDS_VISIBLE_REMOTE_STATE2,
+   "SEE SOME"
+IDS_VISIBLE_REMOTE_STATE3,
+   "SEE NOTHING"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME,
+ "Home"
+IDS_VK_END,
+ "End"
+IDS_VK_PRIOR,
+ "Page up"
+IDS_VK_NEXT,
+ "Page down"
+IDS_VK_LEFT,
+ "Left arrow"
+IDS_VK_RIGHT,
+ "Right arrow"
+IDS_VK_UP,
+ "Up arrow"
+IDS_VK_DOWN,
+ "Down arrow"
+IDS_VK_DELETE,
+ "Delete"
+IDS_VK_INSERT,
+ "Insert"
+           
+IDS_OTHER_SPECIAL_KEY,
+ "Special key"
+IDS_SAMPLE_CONTROL_LETTER,
+ "Control-a"
+IDS_BACKSPACE_KEY,
+ "Backspace key" // key added on 5/22/98
+IDS_ENTER_KEY,
+ "Enter"
+IDS_ESCAPE_KEY,
+ "Escape"
+IDS_SOME_KEY,
+ "Some key"
+
+// now the Swedish version 
+
+IDS_YES_SWEDISH,
+"ja"
+IDS_NO_SWEDISH,
+"nej"
+
+IDS_VISIBLE_REMOTE_STATE1_SWEDISH,
+"SE ALLT"
+IDS_VISIBLE_REMOTE_STATE2_SWEDISH,
+"SE LITE"
+IDS_VISIBLE_REMOTE_STATE3_SWEDISH,
+"INTE SE NÅGONTING"
+
+IDS_VK_HOME_SWEDISH,
+"Hem"
+IDS_VK_END_SWEDISH,
+"Slut"
+IDS_VK_PRIOR_SWEDISH,
+"Page up"
+IDS_VK_NEXT_SWEDISH,
+"Page down"
+IDS_VK_LEFT_SWEDISH,
+"Pil vänster"
+IDS_VK_RIGHT_SWEDISH,
+"Pil höger"
+IDS_VK_UP_SWEDISH,
+"Pil upp"
+IDS_VK_DOWN_SWEDISH,
+"Pil ner"
+IDS_VK_DELETE_SWEDISH,
+"Delete"
+IDS_VK_INSERT_SWEDISH,
+"Insert"
+IDS_OTHER_SPECIAL_KEY_SWEDISH,
+"Speciell tangent"
+IDS_SAMPLE_CONTROL_LETTER_SWEDISH,
+"Kontroll-a"
+IDS_BACKSPACE_KEY_SWEDISH,
+"Sudd-tangenten"
+IDS_ENTER_KEY_SWEDISH,
+"Enter"
+IDS_ESCAPE_KEY_SWEDISH,
+"Escape"
+IDS_SOME_KEY_SWEDISH,
+"Någon tangent"
+
+
+IDS_YES_BRAZILIAN_PORTUGUESE,
+ "sim"
+IDS_NO_BRAZILIAN_PORTUGUESE,
+ "não"
+
+IDS_VISIBLE_REMOTE_STATE1_BRAZILIAN_PORTUGUESE,
+        "VER TUDO"
+IDS_VISIBLE_REMOTE_STATE2_BRAZILIAN_PORTUGUESE,
+        "VER PARTE" 
+IDS_VISIBLE_REMOTE_STATE3_BRAZILIAN_PORTUGUESE,
+        "NÃO VER"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME_BRAZILIAN_PORTUGUESE,
+ "Home"
+IDS_VK_END_BRAZILIAN_PORTUGUESE,
+ "End"
+IDS_VK_PRIOR_BRAZILIAN_PORTUGUESE,
+ "Page up"
+IDS_VK_NEXT_BRAZILIAN_PORTUGUESE,
+ "Page down"
+IDS_VK_LEFT_BRAZILIAN_PORTUGUESE,
+ "Seta para a esquerda" 
+IDS_VK_RIGHT_BRAZILIAN_PORTUGUESE,
+ "Seta para a direita "
+IDS_VK_UP_BRAZILIAN_PORTUGUESE,
+ "Seta para cima"
+IDS_VK_DOWN_BRAZILIAN_PORTUGUESE,
+ "Seta para baixo"
+IDS_VK_DELETE_BRAZILIAN_PORTUGUESE,
+ "Delete"
+IDS_VK_INSERT_BRAZILIAN_PORTUGUESE,
+ "Insert"
+
+IDS_OTHER_SPECIAL_KEY_BRAZILIAN_PORTUGUESE,
+ "Tecla especial"
+IDS_SAMPLE_CONTROL_LETTER_BRAZILIAN_PORTUGUESE,
+ "Control-A"
+IDS_BACKSPACE_KEY_BRAZILIAN_PORTUGUESE,
+ "Backspace"
+IDS_ENTER_KEY_BRAZILIAN_PORTUGUESE,
+ "Enter"
+IDS_ESCAPE_KEY_BRAZILIAN_PORTUGUESE,
+ "Escape"
+IDS_SOME_KEY_BRAZILIAN_PORTUGUESE,
+ "Alguma tecla"        
+
+IDS_YES_GERMAN,
+ "Ja"
+IDS_NO_GERMAN,
+ "Nein"
+
+
+IDS_VISIBLE_REMOTE_STATE1_GERMAN,
+        "Alles Sehen"
+IDS_VISIBLE_REMOTE_STATE2_GERMAN,
+        "Einiges Sehen"
+IDS_VISIBLE_REMOTE_STATE3_GERMAN,
+        "Nichts Sehen"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME_GERMAN,
+ "Home"
+IDS_VK_END_GERMAN,
+ "Ende"
+IDS_VK_PRIOR_GERMAN,
+ "Seite nach oben"
+IDS_VK_NEXT_GERMAN,
+ "Seite nach unten"
+IDS_VK_LEFT_GERMAN,
+ "Pfeil links"
+IDS_VK_RIGHT_GERMAN,
+ "Pfeil rechts"
+IDS_VK_UP_GERMAN,
+ "Pfeil oben"
+IDS_VK_DOWN_GERMAN,
+ "Pfeil unten"
+IDS_VK_DELETE_GERMAN,
+ "Löschen"
+IDS_VK_INSERT_GERMAN,
+ "Einfügen"
+           
+IDS_OTHER_SPECIAL_KEY_GERMAN,
+ "Spezial-Taste"
+IDS_SAMPLE_CONTROL_LETTER_GERMAN,
+ "Strg-a"
+IDS_BACKSPACE_KEY_GERMAN,
+ "Zurück"
+IDS_ENTER_KEY_GERMAN,
+ "Eingabe"
+IDS_ESCAPE_KEY_GERMAN,
+ "Esc"
+IDS_SOME_KEY_GERMAN,
+ "Eine Taste"
+        
+IDS_YES_PORTUGAL_PORTUGUESE,
+ "sim"
+IDS_NO_PORTUGAL_PORTUGUESE,
+ "não"
+
+IDS_VISIBLE_REMOTE_STATE1_PORTUGAL_PORTUGUESE,
+        "VER TUDO"
+IDS_VISIBLE_REMOTE_STATE2_PORTUGAL_PORTUGUESE,
+        "VER PARTE" 
+IDS_VISIBLE_REMOTE_STATE3_PORTUGAL_PORTUGUESE,
+        "NÃO VER"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME_PORTUGAL_PORTUGUESE,
+ "Home"
+IDS_VK_END_PORTUGAL_PORTUGUESE,
+ "End"
+IDS_VK_PRIOR_PORTUGAL_PORTUGUESE,
+ "Page up"
+IDS_VK_NEXT_PORTUGAL_PORTUGUESE,
+ "Page down"
+IDS_VK_LEFT_PORTUGAL_PORTUGUESE,
+ "Seta para a esquerda" 
+IDS_VK_RIGHT_PORTUGAL_PORTUGUESE,
+ "Seta para a direita "
+IDS_VK_UP_PORTUGAL_PORTUGUESE,
+ "Seta para cima"
+IDS_VK_DOWN_PORTUGAL_PORTUGUESE,
+ "Seta para baixo"
+IDS_VK_DELETE_PORTUGAL_PORTUGUESE,
+ "Delete"
+IDS_VK_INSERT_PORTUGAL_PORTUGUESE,
+ "Insert"
+
+IDS_OTHER_SPECIAL_KEY_PORTUGAL_PORTUGUESE,
+ "Tecla especial"
+IDS_SAMPLE_CONTROL_LETTER_PORTUGAL_PORTUGUESE,
+ "Control-A"
+IDS_BACKSPACE_KEY_PORTUGAL_PORTUGUESE,
+ "Backspace"
+IDS_ENTER_KEY_PORTUGAL_PORTUGUESE,
+ "Enter"
+IDS_ESCAPE_KEY_PORTUGAL_PORTUGUESE,
+ "Escape"
+IDS_SOME_KEY_PORTUGAL_PORTUGUESE,
+ "Alguma tecla"  
+ 
+IDS_YES_JAPANESE,
+ "yes"
+IDS_NO_JAPANESE,
+ "no"
+
+// the remote control for the visibility of a picture
+// can display one of the following states:
+
+IDS_VISIBLE_REMOTE_STATE1_JAPANESE,
+   "SEE ALL"
+IDS_VISIBLE_REMOTE_STATE2_JAPANESE,
+   "SEE SOME"
+IDS_VISIBLE_REMOTE_STATE3_JAPANESE,
+   "SEE NOTHING"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME_JAPANESE,
+ "Home"
+IDS_VK_END_JAPANESE,
+ "End"
+IDS_VK_PRIOR_JAPANESE,
+ "Page up"
+IDS_VK_NEXT_JAPANESE,
+ "Page down"
+IDS_VK_LEFT_JAPANESE,
+ "Left arrow"
+IDS_VK_RIGHT_JAPANESE,
+ "Right arrow"
+IDS_VK_UP_JAPANESE,
+ "Up arrow"
+IDS_VK_DOWN_JAPANESE,
+ "Down arrow"
+IDS_VK_DELETE_JAPANESE,
+ "Delete"
+IDS_VK_INSERT_JAPANESE,
+ "Insert"
+           
+IDS_OTHER_SPECIAL_KEY_JAPANESE,
+ "Special key"
+IDS_SAMPLE_CONTROL_LETTER_JAPANESE,
+ "Control-a"
+IDS_BACKSPACE_KEY_JAPANESE,
+ "Backspace key" 
+IDS_ENTER_KEY_JAPANESE,
+ "Enter"
+IDS_ESCAPE_KEY_JAPANESE,
+ "Escape"
+IDS_SOME_KEY_JAPANESE,
+ "Some key"

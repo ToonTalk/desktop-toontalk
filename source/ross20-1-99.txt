@@ -1,0 +1,75 @@
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to Window's clipboard. For example, you can use
+Window's Notepad or Write program. Just be sure your selection includes
+the code below and then select the Copy command in the Edit menu. 
+Then it will appear in the ToonTalk remote control for the clipboard. 
+You can find the clipboard remote control on page 30 of the Sensor notebook. 
+Just use Dusty to vacuum it off the clipboard. 
+   The following is a picture of a ball which is partly visible. The first
+thing on the back is a box with 5 holes. The hole labeled with "Last
+Key" contains a remote control for the last key pressed. The second hole
+contains a remote control for the distance from the bottom side. The
+hole labeled with "Up" contains the number 10. The fourth hole contains
+a pad with the text "up" on it. The hole labeled with "Up Collide?"
+contains a remote control for the up/down movement collision detector.
+And the second thing on the back is a robot who wants a box with 5
+holes. The hole labeled with "Last Key" contains a pad with the text "Up
+arrow" on it. The second hole contains any number. The hole labeled with
+"Up" contains any number. The fourth hole contains a pad with the text
+"do" on it. The hole labeled with "Up Collide?" contains a movie of the
+hit or miss cartoon. If given a box like that he will grab a magic wand.
+And use the magic wand on the third hole inside his box. And drop what
+he just copied on the second hole inside his box. And release the magic
+wand. Otherwise, he'll give the box to the robot behind him in line. The
+second robot wants a box with 5 holes. The hole labeled with "Last Key"
+contains a pad with the text "Down arrow" on it. The second hole
+contains any number. The hole labeled with "Up" contains any number. The
+fourth hole contains a pad with the text "up" on it. The hole labeled
+with "Up Collide?" contains a movie of the hit or miss cartoon. If given
+a box like that he will grab a magic wand. And use the magic wand on the
+third hole inside his box. And push '-' to change what he is holding.
+And drop what he just copied on the second hole inside his box. And
+release the magic wand. Otherwise, he'll give the box to the robot
+behind him in line. The third robot wants a box with 5 holes. The hole
+labeled with "Last Key" contains a pad with the text "Down arrow" on it.
+The second hole contains any number. The hole labeled with "Up" contains
+any number. The fourth hole contains a text pad with anything on it. The
+hole labeled with "Up Collide?" contains a movie of the hit or miss
+cartoon. If given a box like that he will grab a magic wand. And use the
+magic wand on the third hole inside his box. And push '-' to change what
+he is holding. And drop what he just copied on the second hole inside
+his box. And release the magic wand. And pick up what's in the fourth
+hole inside his box. And push Backspace key to change what he is
+holding. And push Backspace key to change what he is holding. And push
+'d' to change what he is holding. And push 'o' to change what he is
+holding. And drop it on the fourth hole inside his box. Otherwise, he'll
+give the box to the robot behind him in line. The fourth robot wants a
+box with 5 holes. The hole labeled with "Last Key" contains a pad with
+the text "Up arrow" on it. The second hole contains any number. The hole
+labeled with "Up" contains any number. The fourth hole contains a text
+pad with anything on it. The hole labeled with "Up Collide?" contains a
+movie of the hit or miss cartoon. If given a box like that he will grab
+a magic wand. And use the magic wand on the third hole inside his box.
+And drop what he just copied on the second hole inside his box. And
+release the magic wand. And pick up what's in the fourth hole inside his
+box. And push Backspace key to change what he is holding. And push
+Backspace key to change what he is holding. And push 'u' to change what
+he is holding. And push 'p' to change what he is holding. And drop it on
+the fourth hole inside his box.
+   What follows is in a special code and was produced by ToonTalk(tm) 
+UK English Version 1.03. To learn more about ToonTalk see www.toontalk.com.
+1HStartToonTalkEncoding:
++AAADAAANgJiAIMAAAACACAABQAJTGFzdCBLZXkAJSAAAAArABwAJNUCAAArAAH5AAADVXAA
+AAoAAAArAAAOAgB1cAxVcCBDb2xsaWRlPwAytRQAACsAAQ75AAAAAAAAAAAAAAUgAAUACUxh
+c3QgS2V5AA4IAFVwIGFycm93AABYAgAAKwEDVXAAAAoAAAArAQAOAgBkbwxVcCBDb2xsaWRl
+PwD4AQAMAAA1A0MAPgAAAAAAIG7/AAAB/wADAv8ABAAC/wAJAAH/AAYC/wAX//8FIAAFAAlM
+YXN0IEtleQAOCgBEb3duIGFycm93AABYAgAAKwEDVXAAAAoAAAArAQAOAgB1cAxVcCBDb2xs
+aWRlPwD4AgAMAAA1A0MAPgAAAAAAIHD/AAAB/wADAv8ABAAC/wARDf8tCQAB/wAGAv8AF///
+BSAABQAJTGFzdCBLZXkADgoARG93biBhcnJvdwAAqiMAACsBA1VwAAAKAAAAKwEAIgIAdXAM
+VXAgQ29sbGlkZT8A+AMADAEANQOWAIsAAAAAACB0/wAAAf8AAwL/AAQAAv8AEQ3/LQkAAf8A
+BgL/AAcAA/8AEQ3/CBEN/wgRDf9kEQ3/bwkAA/8AF///BSAABQAJTGFzdCBLZXkADggAVXAg
+YXJyb3cAAGICAAArAQNVcAAACgAAACsBACICAHVwDFVwIENvbGxpZGU/APgEAAwBADUDQwA+
+AAAAAAAgcf8AAAH/AAMC/wAEAAL/AAkAAf8ABgL/AAcAA/8AEQ3/CBEN/wgRDf91EQ3/cAkA
+A/8AF////wAAAAAAAAAA.
+This is the end of the code for the ToonTalk object. 

@@ -1,0 +1,494 @@
+// Copyright (c) 1992,1999.  Ken Kahn, Animated Programs, All rights reserved
+//
+
+#include "starttt.rch"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "starttt.h"
+#include "ver.h"
+
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""AutoRun.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+{
+ IDM_CONTINUE, "Leka Fritt"
+ IDM_SEE_DEMOS, "Se Demos"
+ IDM_RUN_PUZZLES, "Göra Uppdrag"
+ IDS_NARRATION_FILE_SUFFIX, "TAL"
+ IDS_SPEAKERS_ON,
+   "Har du satt på datorns högtalare? Gör det! Det är mycket lättare att förstå ToonTalk demon om du samtidigt kan lyssna på texten."
+ IDS_START_TOONTALK,
+   "Starta Toontalk"
+ IDS_CDROM_MAY_BE_SLOW,
+  "Eftersom ToonTalk inte intallerats på din hårddisk, kommer programmet kanske starta långsamt. Om det går för långsamt, installera ToonTalk igen och välj antingen 'typical' eller 'custom'."
+
+
+ IDM_SET_OPTIONS,
+//  "Set Options"
+//"Tillval"
+"Välj Alternativ"
+
+IDC_OPTION_CAPTION,
+//"Select NEXT after answering the question by clicking on one of the small circles."
+"Välj NÄSTA när du besvarat frågan genom att klicka på en av de små ringarna."
+IDC_OPTION_BACK_TEXT,
+//"<< BACK <<"
+"<< TILLBAKA <<"
+IDC_OPTION_NEXT_TEXT,
+//">> NEXT >>"
+">> NÄSTA >>"
+IDC_OPTION_CANCEL_TEXT,
+//"CANCEL"
+//"ÅNGRA"
+"AVBRYT"
+IDC_OPTION_DONE_TEXT,
+//"DONE"
+"FÄRDIG"
+IDS_OPTIONS_CHANGED_TEXT,
+//"Option settings will be changed as requested if you click on DONE. Run
+//this again if you ever want to change or restore them. You can also set
+//options for a single player by using the notebook on page 10 of your main
+//ToonTalk notebook. "
+//"De markerade tillvalen kommer att ändras enligt önskan om du klickar på FÄRDIG. Kör detta igen om du senare skulle vilja ändra eller återställa tillvalen. Du kan också ställa in tillvalen genom att använda anteckningsboken som finns på sid 10 i ToonTalks anteckningsbok.. "
+ "De markerade alternativen kommer att ändras enligt önskan om du klickar på FÄRDIG. Kör detta igen om du senare skulle vilja ändra eller återställa alternativen. "
+IDS_OPTIONS_CHANGED_TEXT2,
+"Du kan också ställa in alternativen genom att använda anteckningsboken som finns på sid 10 i ToonTalks anteckningsbok. "
+IDS_OPTIONS_RESTORED_TEXT,
+//"Option settings will be restored as requested if you click on DONE. Run this again if ever want to change them. "
+//"De markerade tillvalen kommer att återställas enligt önskan om du klickar på FÄRDIG. Kör detta igen om du senare skulle vilja ändra tillvalen. "
+"De markerade alternativen kommer att återställas enligt önskan om du klickar på FÄRDIG. Kör detta igen om du senare skulle vilja ändra alternativen. "
+IDC_OPTIONS_CHANGED_CAPTION,
+//"Click on DONE to accept all your changes. "
+"Klicka på FÄRDIG för att godkänna alla ändringar. "
+IDS_OPTION_NOT_INSTALLED,
+//"(Not available since not installed.)"
+// "(Saknas och är inte installerat.)"
+ "(Saknas eftersom det inte är installerat.)"
+IDS_OPTION_AVAILABLE_ONLY_ON_CDROM,
+//  "(Available only on CDROM.)"
+  "(Finns enbart på CDROM.)"
+IDS_OPTION_AVAILABLE_ONLY_FOR_32BIT_VERSION,
+//"(Available only with the 32-bit version.)"
+"(Finns enbart i 32-bitars versionen.)"
+IDS_OPTION1_QUESTION,
+//  "What do you want to do?"
+  "Vad vill du göra?"
+IDS_OPTION1_EXPLANATION,
+//  "You have the choice of restoring the options to the way they were when
+//ToonTalk was installed or changing the current options by answering some
+//questions. "
+//  "Du kan välja mellan att återställa tillvalen som de var inställda vid installationen av ToonTalk eller ändra de nuvarande tillvalen genom att besvara några frågor. "
+  "Du kan välja mellan att återställa alternativen som de var inställda vid installationen av ToonTalk eller ändra de nuvarande alternativen genom att besvara några frågor. "
+IDS_OPTION1_EXPLANATION+1,
+//   "Click on NEXT after you've made your choice."
+   "Klicka på NÄSTA när du bestämt dig."
+IDS_OPTION1_ANSWER1,
+//  "I don't want to change anything. "
+  "Jag vill inte ändra på något. "
+IDS_OPTION1_ANSWER2,
+//  "I want to restore the original settings. "
+  "Jag vill gå tillbaka till de ursprungliga inställningarna. "
+IDS_OPTION1_ANSWER3,
+//  "I want to change some option settings for every ToonTalk player on this computer. "
+//  "Jag vill ändra några inställningar för tillvalen som gäller alla ToonTalk spelare på den här datorn. "
+  "Jag vill ändra några inställningar som gäller alla ToonTalk spelare på den här datorn. "
+IDS_OPTION1_ANSWER4,
+//  "I want to change some option settings for every new ToonTalk player on this computer. "
+//  "Jag vill ändra några inställningar för tillvalen som berör alla nya ToonTalk spelare på den här datorn. "
+  "Jag vill ändra några inställningar som berör alla nya ToonTalk spelare på den här datorn. "
+/*
+IDS_OPTION2_QUESTION,
+//  "Which version of ToonTalk do want to run?"
+  "Vilken version av ToonTalk vill du köra?"
+IDS_OPTION2_EXPLANATION,
+//  "32-bit programs are typically more capable, more robust and faster. On a few machines (mostly older ones) the 16-bit version runs better. "
+  "32-bitars program har flera möjligheter, är mera tillförlitliga och snabbare. På en del datorer, i synnerhet äldre, fungerar 16-bitars versionen bättre. "
+IDS_OPTION2_EXPLANATION+1,
+//  "There are some things only the 32-bit version can do. Like run with high-resolution pictures. Or have Marty speak. Or use a joystick. "
+//  "Det finns en del saker som bara 32-bitars versionen kan göra. T ex köra högupplösta bilder.Eller få Marty att tala. Eller använda en joystick. "
+  "Det finns en del saker som bara 32-bitars versionen kan göra. T ex köra högupplösta bilder. Eller få Marty att tala. Eller använda en joystick. "
+  IDS_OPTION2_ANSWER1,
+//  "I want the 16-bit version. The pictures are grainy but ToonTalk is fast."
+  "Jag vill ha 16-bitars versionen. Bilderna blir korniga, men ToonTalk blir snabbt."
+IDS_OPTION2_ANSWER2,
+//   "I want the low-resolution 32-bit version. The pictures are grainy but ToonTalk is fast. "
+   "Jag vill ha den lågupplösta 32-bitars versionen. Bilderna blir korniga, men ToonTalk blir snabbt. "
+IDS_OPTION2_ANSWER3,
+//  "I want the high-resolution 32-bit version. The pictures are sharp but ToonTalk might be slow. "
+  "Jag vill ha den högupplösta 32-bitars versionen. Bilderna blir skarpa, och ToonTalk kanske blir långsamt. "
+*/
+// new version of the above as of 270999 - needs translation -- added 052901
+ 
+// IDS_OPTION2_QUESTION,
+// "What screen resolution do you want for ToonTalk?"
+IDS_OPTION2_QUESTION,
+ "Vilken skärmupplösning vill du ha för ToonTalk?"
+
+// IDS_OPTION2_EXPLANATION,
+// "If you make the screen resolution larger then the pictures will look
+// sharp and you'll have more room, but ToonTalk might run slow and the
+// animation may become jerky. "
+IDS_OPTION2_EXPLANATION,
+ "Om du ställer in högre skärmupplösning får du skarpare bilder och mera plats men ToonTalk kanske blir långsammare och ryckigt. "
+
+
+// IDS_OPTION2_EXPLANATION+1,
+// "I suggest you try different screen resolutions until you find the best
+// one for your computer. "
+IDS_OPTION2_EXPLANATION+1,
+ "Jag föreslår att du provar en annan skärmupplösning tills du hittar den som passar bäst för din dator. "
+
+// IDS_OPTION2_ANSWER1,
+// "I want ToonTalk to run with 320 by 240 pixels. It is OK that pictures
+// will look grainy since I want ToonTalk to run as fast as possible. "
+IDS_OPTION2_ANSWER1,
+ "Jag vill att ToonTalk körs med 320 by 240 pixlar. Det gör inget att bilderna blir korniga för jag vill att ToonTalk går så snabbt som möjligt. "
+
+// IDS_OPTION2_ANSWER2,
+// "I want ToonTalk to run with 640 by 480 pixels. I still want ToonTalk to
+// run fast but not that grainy. "
+IDS_OPTION2_ANSWER2,
+ "Jag vill att ToonTalk körs med 640 by 480 pixlar. Jag vill att ToonTalk ska gå snabbt men inte med fullt så korniga bilder. "
+
+// IDS_OPTION2_ANSWER3,
+// "I want ToonTalk to run with 800 by 600 pixels. I want pictures to look
+// sharper and I want more space when I sit on the floor. I'll see if ToonTalk
+// is slow. "
+IDS_OPTION2_ANSWER3,
+ "Jag vill att ToonTalk körs med 800 by 600 pixlar. Jag vill att bilderna ska bli skarpare och att jag får mera plats när jag sitter ner på golvet. Jag får kolla om ToonTalk blir långsamt. "
+
+// IDS_OPTION2_ANSWER4,
+// "I want ToonTalk to run with 1024 by 768 pixels. I want even sharper
+// pictures and even more space. "
+IDS_OPTION2_ANSWER4,
+ "Jag vill att ToonTalk körs med 1024 by 768 pixlar. Jag vill ha ännu skarpare bilder och ännu mera plats. "
+
+// IDS_OPTION2_ANSWER5,
+// "I want ToonTalk to run with 1152 by 864 pixels. I want more space. "
+IDS_OPTION2_ANSWER5,
+ "Jag vill att ToonTalk körs med 1152 by 864 pixlar. Jag behöver mera plats. "
+
+// IDS_OPTION2_ANSWER6,
+// "I want ToonTalk to run with 1280 by 1024 pixels. I'll see if ToonTalk is
+// fast enough since I want all this space. "
+IDS_OPTION2_ANSWER6,
+ "Jag vill att ToonTalk körs med 1280 by 1024 pixlar. Jag får se om ToonTalk blir tillräckligt snabbt med tanke på all plats jag vill ha. "
+
+// IDS_OPTION2_ANSWER7,
+// "I want ToonTalk to run with 1600 by 1200 pixels. I want to see if my
+// computer can run in this resolution and if so will it be fast enough. "
+IDS_OPTION2_ANSWER7,
+ "Jag vill att ToonTalk körs med 1600 by 1200 pixlar. Jag vill kolla om min dator kan köras i den här upplösningen och om den i så fall blir snabb nog. "
+
+
+
+IDS_OPTION3_QUESTION,
+//  "What size window do you want?"
+  "Vilken storlek vill du ha på fönstret?"
+IDS_OPTION3_EXPLANATION,
+//  "Most people prefer the full-screen version of ToonTalk. On a few computers it doesn't work well. "
+  "De flesta vill ha ToonTalks fullskärmsversion. På vissa datorer fungerar det inte så bra. "
+IDS_OPTION3_EXPLANATION+1,
+//  "ToonTalk can run in any size Window but multiples of 320 by 240 are the fastest. If you run in a Window size larger than your screen it will look like the full-screen mode. But it might be slower or choppier than the real full-screen mode."
+  "ToonTalk kan köras med vilken fönsterstorlek som helst, men multiplar på 320 gånger 240 är snabbast. Om du kör i ett fönster som är större än din skärm kommer det att se ut som fullskärmsläge. Men det kan bli slöare och hackigare är riktigt fullskärmsläge."
+IDS_OPTION3_ANSWER1,
+//  "I want the full-screen version. "
+  "Jag vill ha fullskärmsversionen. "
+IDS_OPTION3_ANSWER2,
+//   "I want to run ToonTalk with the smallest window size. "
+   "Jag vill köra ToonTalk med den minsta fönsterstorleken. "
+IDS_OPTION3_ANSWER3,
+//   "I want to run Toontalk with twice the smallest window size. "
+   "Jag vill köra ToonTalk med två gånger den minsta fönsterstorleken. "
+IDS_OPTION3_ANSWER4,
+//   "I want to run Toontalk with three times the smallest window size. "
+   "Jag vill köra ToonTalk med tre gånger den minsta fönsterstorleken. "
+IDS_OPTION3_ANSWER5,
+//   "I want to run Toontalk with four times the smallest window size. "
+   "Jag vill köra ToonTalk med fyra gånger den minsta fönsterstorleken. "
+IDS_OPTION4_QUESTION,
+//  "Do you want to make the right mouse button more useful?"
+  "Vill du få mera användning av högra musknappen?"
+IDS_OPTION4_EXPLANATION,
+//  "Some people get left and right mixed up a lot. Others can work faster using multiple mouse buttons."
+  "En del människor har svårt att skilja på höger och vänster. Andra kan arbeta snabbare med bägge musknapparna."
+IDS_OPTION4_EXPLANATION+1,
+//  "ToonTalk can treat all mouse buttons the same (except when flying the helicopter) or use the convention that left button means pick up or drop and right button means use or flip. "
+  "ToonTalk kan använda alla musknappar på samma sätt (utom för att flyga med helikoptern) eller fungera så att den vänstra betyder plocka upp eller släppa och den högra betyder använda eller vända. "
+IDS_OPTION4_ANSWER1,
+//  "I want to keep it simple and not worry about which mouse button I'm pushing. "
+  "Jag vill ha det enkelt och slippa bry mig om vilken musknapp jag trycker på. "
+IDS_OPTION4_ANSWER2,
+//  "I want to turn ToonTalk tools on and off by clicking the right mouse button. "
+  "Jag vill sätta igång och stänga av ToonTalks verktyg med den högra musknappen. "
+IDS_OPTION4_ANSWER3,
+//  "I want to turn ToonTalk tools on and off by clicking the right mouse button. And I want to use the middle button to be like typing '-'. "
+  "Jag vill sätta igång och stänga av ToonTalks verktyg med den högra musknappen.. Och jag vill använda mittenknappen till att skriva '-'. "
+IDS_OPTION5_QUESTION,
+//  "Do you want to change how Marty talks?"
+  "Vill du ändra sättet Marty talar på?"
+IDS_OPTION5_EXPLANATION,
+//  "Marty can speak, use talk balloons like comics, or both. And when using talk balloons he can leave little time or lots of time between balloons. "
+  "Marty kan tala, eller använda pratbubblor som i serier, eller båda två. Och när han använder pratbubblor kan han vänta kort eller lång tid mellan pratbubblorna. "
+IDS_OPTION5_EXPLANATION+1, //updated on 270999 needs translation
+//  "Note that Marty can speak only voices have been installed on your computer. The ToonTalk CD-ROM installs a voice. "
+"Lägg märke till att Marty bara kan tala med röster som finns installerade på din dator.  ToonTalks CD-ROM installerar en röst. "
+
+IDS_OPTION5_ANSWER1,
+//  "I want Marty to speak and use talk balloons. "
+  "Jag vill att Marty ska både tala och använda pratbubblor. "
+IDS_OPTION5_ANSWER2,
+//  "I want Marty to speak and not use talk balloons. "
+  "Jag vill att Marty ska tala och avstå från pratbubblor. "
+IDS_OPTION5_ANSWER3,
+//  "I don't want Marty to speak. Each balloon should stay up long enough for a typical 10-year to read. "
+  "Jag vill inte att Marty ska tala. Varje pratbubbla ska finnas kvar så länge att en normal 10-åring hinner läsa. "
+IDS_OPTION5_ANSWER4,
+//"I don't want Marty to speak. Each balloon should stay up long enough for a typical adult to read. "
+  "Jag vill inte att Marty ska tala. Varje pratbubbla ska finnas kvar så länge att en normal vuxen hinner läsa. "
+IDS_OPTION5_ANSWER5,
+//  "I don't want Marty to speak. Each balloon should stay up a very long time. I'll press 'PageDown' when I've read a balloon. "
+  "Jag vill inte att Marty ska tala. Varje pratbubbla ska finnas kvar länge. Jag kommer trycka på 'PageDown' när jag läst pratbubblan. "
+IDS_OPTION5_ANSWER6, // new on 270999
+ "Jag vill att Marty talar med texten synlig, fast utan pratbubblor."
+IDS_OPTION5_ANSWER7, // new on 110401
+//  "I don't want Marty to speak but I do want subtitles."
+  "Jag vill gärna ha textremsor men att Marty ska vara tyst."
+
+  
+IDS_OPTION6_QUESTION,
+//  "Do you want to hear sounds?"
+  "Vill du höra ljuden?"
+IDS_OPTION6_EXPLANATION,
+//  "If you don't like hearing sounds or you don't have a speaker connected to your computer you may want to turn off sound effects. "
+  "Om du inte vill höra ljuden eller datorn inte har några högtalare vill du kanske stänga av ljudeffekterna. "
+IDS_OPTION6_EXPLANATION+1,
+//  "This turns off both sound effects and if, available, Marty's speaking."
+  "Detta stänger av både ljudeffekterna och Martys tal."
+IDS_OPTION6_ANSWER1,
+//  "Yes, I want to hear sounds. "
+  "Ja, jag vill höra ljuden. "
+IDS_OPTION6_ANSWER2,
+//  "No, I don't want to hear sounds. "
+  "Nej, jag vill inte höra ljuden. "
+
+IDS_OPTION7_QUESTION,
+// "What kind of users should ToonTalk expect?"
+ "Vad för slags användare kan tänkas spela ToonTalk?"
+IDS_OPTION7_EXPLANATION,
+// "ToonTalk can help knowledgeable users track down problems by suggesting web pages to read. "
+ "ToonTalk kan hjälpa kunniga användare att hitta lösningar på problem genom att föreslå webbsidor att läsa. "
+IDS_OPTION7_EXPLANATION+1,
+// "ToonTalk can also run in a museum mode where, after an idle period, it will begin to run demos automatically. "
+ "ToonTalk kan också köras i museiläge då programmet, efter en längre paus, börjar köra demos automatiskt. "
+IDS_OPTION7_ANSWER1,
+// "Most users are knowledgeable enough about computers to want help trouble shooting when ToonTalk isn't behaving normally. "
+ "De flesta användarna är tillräckligt datorkunniga för att vilja ha hjälp med problem när ToonTalk uppför sig underligt. "
+IDS_OPTION7_ANSWER2,
+// "Most users are kids or beginners and shouldn't be bothered by trouble shooting advice. "
+ "De flesta användarna är barn eller nybörjare och bör slippa ta ställning till förslag om hjälp vid problem. "
+ IDS_OPTION7_ANSWER3,
+// "Most users are brief visitors to a museum, store, or kiosk. "
+ "De flesta användarna är tillfälliga besökare på ett museum, en affär eller en utställning. "
+
+IDS_OPTION8_QUESTION,
+//  "Do you want to change which language ToonTalk uses?"
+  "Vill du att ToonTalk ska använda ett annat språk?"
+IDS_OPTION8_EXPLANATION,
+//  "ToonTalk has been translated to other languages. This changes what language Marty speaks as well as displayed text."
+  "ToonTalk har översatts till andra språk. Detta ändrar språket som Marty talar liksom den text som visas."
+IDS_OPTION8_ANSWER1,
+//  "I want ToonTalk to use "  // followed by language name
+  "Jag vill att ToonTalk använder "  // followed by language name
+ IDS_OPTION8_ANSWER2,
+  "Jag vill att ToonTalk använder "  // followed by language name
+ IDS_OPTION8_ANSWER3,
+  "Jag vill att ToonTalk använder "  // followed by language name
+ IDS_OPTION8_ANSWER4,
+  "Jag vill att ToonTalk använder "  // followed by language name
+ IDS_OPTION8_ANSWER5,
+  "Jag vill att ToonTalk använder "  // followed by language name
+  IDS_OPTION8_ANSWER6,
+  "Jag vill att ToonTalk använder "  // followed by language name
+  IDS_OPTION8_ANSWER7,
+  "Jag vill att ToonTalk använder "  // followed by language name
+ IDS_ENGLISH_CHOICE,
+  "engelska. (English)"
+ IDS_SWEDISH_CHOICE,
+  "svenska. (Swedish)"
+
+// this translation added on 290501
+//IDS_OPTION9_QUESTION,
+// "Do you want to change the voice that ToonTalk uses?"
+IDS_OPTION9_QUESTION,
+ "Vill du byta ut den röst ToonTalk använder?"
+
+// IDS_OPTION9_EXPLANATION,
+// "ToonTalk can use different voices installed on your computer. This changes Marty's voice. "
+IDS_OPTION9_EXPLANATION,
+ "ToonTalk kan använda olika röster som finns installerade på din dator. Det här ändrar Martys röst. "
+
+// IDS_OPTION9_ANSWER1,
+// "I want ToonTalk to use the voice named "
+IDS_OPTION9_ANSWER1,
+ "Jag vill att ToonTalk använder rösten som heter "
+IDS_OPTION9_ANSWER2,
+  "Jag vill att ToonTalk använder rösten som heter "  // followed by the mode name
+IDS_OPTION9_ANSWER3,
+  "Jag vill att ToonTalk använder rösten som heter "  // followed by the mode name
+IDS_OPTION9_ANSWER4,
+  "Jag vill att ToonTalk använder rösten som heter "  // followed by the mode name
+IDS_OPTION9_ANSWER5,
+  "Jag vill att ToonTalk använder rösten som heter "  // followed by the mode name
+IDS_OPTION9_ANSWER6,
+  "Jag vill att ToonTalk använder rösten som heter "  // followed by the mode name
+IDS_OPTION9_ANSWER7,
+  "Jag vill att ToonTalk använder rösten som heter "  // followed by the mode name
+
+IDS_DOC_SUBDIRECTORY_NAME,
+  "Swedish"
+
+IDM_HELP, // label for a button
+  "Hjälp"
+
+IDM_ABOUT,
+  "Om ToonTalk"
+
+}
+
+
+STRINGTABLE
+{
+ ID_COMPANY, "Animated Programs"
+ ID_APPNAME, "ToonTalk"
+}
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+
+STRINGTABLE
+{
+IDS_INTRO_DEMO,
+"Introduktions tur"
+IDS_EXPLODE_DEMO,
+"Exploderande hus Demo"
+IDS_SWAP_DEMO,
+"Byt Demo"
+IDS_PONG1_DEMO,
+"Bygg Ping Pong (Del 1)"
+IDS_PONG2_DEMO,
+"Bygg Ping Pong (Del 2)"
+IDS_PONG3_DEMO,
+"Bygg Ping Pong (Del 3)"
+IDS_FIBONACCI_DEMO,
+"Fibonacci nummer Demo"
+IDS_FACTORIAL_DEMO,
+"Faktorisk Demo"
+IDS_BANK_DEMO,
+"Bankkonto Demo"
+IDS_APPEND_DEMO,
+"Bifogade listor Demo"
+//IDS_EXPLODE_INSTRUCTIONS,
+//"Bygg dina egna exploderande brickor"
+//"Bygg exploderande brickor"
+IDS_PLAY_PUZZLE_GAME,
+"Göra Uppdrag"
+IDS_FREE_PLAY,
+"Leka Fritt"
+IDS_CONFIRM_PRINT,
+"Instruktionerna kan visas och skrivas ut med Microsofts Word viewer. (Färger kan se felaktiga ut, men det borde skrivas ut rätt.) Är du redo att visa instruktionerna?"
+IDS_CONFIRM_PRINT2,
+"Är du redo för den andra hälften av instruktionerna?"
+IDS_WINDOW_TITLE,
+"Starta ToonTalk"
+IDS_FORGET_IT,
+"Avsluta"
+
+
+ IDS_INTRO_DEMO_FILE, "Intro"
+ IDS_EXPLODE_DEMO_FILE, "Explode"
+ IDS_SWAP_DEMO_FILE, "Swap"
+ IDS_PONG1_DEMO_FILE, "PongAct1"
+ IDS_PONG2_DEMO_FILE, "PongAct2"
+ IDS_PONG3_DEMO_FILE, "PongAct3"
+ IDS_FIBONACCI_DEMO_FILE, "Fibs"
+ IDS_FACTORIAL_DEMO_FILE, "Fact"
+ IDS_BANK_DEMO_FILE, "Account"
+ IDS_APPEND_DEMO_FILE, "Append"
+// IDS_EXPLODE_INSTRUCTIONS_FILE1, "explode1.doc"
+// IDS_EXPLODE_INSTRUCTIONS_FILE2, "explode2.doc"
+}
+
+//DEMOFREE16 BITMAP "swedish\dmofre16.bmp"
+//PICKONE16 BITMAP "swedish\pckdm16.bmp"
+DEMOFREE BITMAP "swedish\demofree.bmp"
+PICKONE BITMAP "swedish\pickone.bmp"
+NOSPEAK_WAVE RCDATA "swedish\nospeak.wav"
+//ILL_PICK_WAVE RCDATA "swedish\pickone.wav"
+OK_WAVE RCDATA "swedish\ok.wav"
+
+
+IDD_ABOUT_DIALOG DIALOG 0, 0, 240, 93
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION ""
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "OK", IDM_EXIT, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 95, 72, 50, 14
+ CONTROL "ToonTalk 2.39b, svensk version", 4, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 71, 4, 98, 12
+ CONTROL "(c) Copyright 1992-2001. Ken Kahn. All rights reserved.", 2, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 30, 52, 180, 8
+ CONTROL "Alla rättigheter i Sverige förbehålles Ekelunds Förlag AB", 1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 32, 28, 176, 12
+}
+

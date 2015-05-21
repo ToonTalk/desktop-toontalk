@@ -1,0 +1,14 @@
+Dear ToonTalk Beta 8A tester:
+
+This program will extract the ToonTalk installation files.
+(If you prefer you may use unzip to extract these files.)  
+You should choose a temporary directory for the files.
+When it is finished please run the program setup.exe.
+When installation is complete you may delete beta8a16.exe
+and the files on the temporary directory.
+
+If you have any problems or don't know the password to
+extract the files then please send mail to
+KenKahn@ToonTalk.com
+
+Thank you and good luck.

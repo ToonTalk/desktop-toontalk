@@ -1,0 +1,402 @@
+// Copyright (c) 1992-2000.  Ken Kahn, Animated Programs, All rights reserved
+//
+
+#include "starttt.rch"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "starttt.h"
+#include "ver.h"
+
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""AutoRun.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+{
+ IDM_CONTINUE, "Brincar"
+ IDM_SEE_DEMOS, "Exemplos"
+ IDM_RUN_PUZZLES, "Puzzles"
+#if TT_UK
+ IDS_NARRATION_FILE_SUFFIX, "UKN"
+#else
+ IDS_NARRATION_FILE_SUFFIX, "PTN"
+#endif
+ IDS_SPEAKERS_ON,
+   "Certifica-te de que as colunas estão ligadas. \rOs exemplos do ToonTalk são mais fáceis de entender com narração."
+ IDS_START_TOONTALK,
+   "Começar ToonTalk"
+ IDS_CDROM_MAY_BE_SLOW,
+   "Como o ToonTalk não foi instalado no disco duro, pode ficar lento ou demorar a carregar.\rSe estiver muito lento, reinstala o ToonTalk e escolhe 'típica' ou 'personalizada'."
+// IDS_PUZZLE_SUBDIRECTORY,
+//   "English"
+// IDS_NEED_CDROM_TO_CONTINUE,
+// "If you insert the ToonTalk CDROM now, ToonTalk will be able to continue. "
+// IDS_WARNING_FILE
+// "Warning: file"
+// IDS_COULDNT_OPEN,
+// "could not be opened. "
+
+IDS_PLEASE_WAIT, // new on 210602
+"Espera por favor..." // copied from ttpt.rc
+
+IDM_SET_OPTIONS,
+  "Opções"
+
+IDM_HELP,
+  "Ajuda"
+
+IDM_ABOUT,
+  "Copyright"
+
+IDS_DOC_SUBDIRECTORY_NAME,
+ "PT" // was "Portuguese" prior to 020500
+
+IDC_OPTION_CAPTION,
+ "Escolhe SEGUINTE depois de responderes à pergunta clicando num dos círculos."
+IDC_OPTION_BACK_TEXT,
+ "ANTERIOR"
+IDC_OPTION_NEXT_TEXT,
+ "SEGUINTE"
+IDC_OPTION_CANCEL_TEXT,
+ "CANCELAR"
+IDC_OPTION_DONE_TEXT,
+ "OK"
+
+IDS_OPTIONS_CHANGED_TEXT,
+ "As opções vão ser alteradas se clicares em OK. Sempre que quiseres podes alterar ou restaurar as opções feitas. "
+IDS_OPTIONS_CHANGED_TEXT2,
+ "Também podes alterar as opções para um só utilizador usando o caderno que está na página 10 do caderno principal do ToonTalk. "
+IDS_OPTIONS_RESTORED_TEXT,
+ "As opções vão ser restauradas se clicares em OK. Sempre que quiseres podes fazer alterações outra vez. "
+
+IDC_OPTIONS_CHANGED_CAPTION,
+ "Clica em OK para aceitar as alterações feitas. "
+
+
+IDS_OPTION_NOT_INSTALLED,
+ "(Não disponível pois não foi instalado.)"
+
+IDS_OPTION_AVAILABLE_ONLY_ON_CDROM,
+  "(Apenas disponível no CDROM.)"
+
+IDS_OPTION_AVAILABLE_ONLY_FOR_32BIT_VERSION,
+ "(Apenas disponível na versão de 32-bit.)"
+
+IDS_DEMO_FILE_MISSING, // new on 140801 (English new on 060401)
+ "Este exemplo não foi instalado.\rA versão de demonstração apenas inclui o exemplo Introdução ao ToonTalk."
+IDS_INSERT_CDROM, 
+  "Se inserires o CD-ROM do ToonTalk e esperares alguns segundos,\rToonTalk vai poder contnuar."
+
+ IDS_OPTION1_QUESTION,
+  "O que é que queres fazer?"
+ IDS_OPTION1_EXPLANATION,
+  "Podes restaurar as opções como estavam quando instalaste o ToonTalk ou alterar as opções actuais respondendo a algumas perguntas. "
+ IDS_OPTION1_EXPLANATION+1,
+   "Clica em SEGUINTE depois de escolheres."
+ IDS_OPTION1_ANSWER1,
+  "Não quero alterar nada. "
+ IDS_OPTION1_ANSWER2,
+  "Quero restaurar as opções originais. "
+ IDS_OPTION1_ANSWER3,
+  "Quero alterar algumas opções para todos os utilizadores do ToonTalk neste computador. "
+ IDS_OPTION1_ANSWER4,
+  "Quero alterar algumas opções para os novos utilizadores do ToonTalk neste computador. "
+
+/*
+ IDS_OPTION2_QUESTION,
+  "Que versão do ToonTalk queres executar?"
+ IDS_OPTION2_EXPLANATION,
+  "Os programas a 32-bit são geralmente mais robustos e rápidos. Nalgumas máquinas (as mais antigas) a versão de 16-bit corre melhor. "
+ IDS_OPTION2_EXPLANATION+1,
+  "Há algumas coisas que só funcionam na versão de 32-bit, como imagens de alta resolução, ou o ET a falar, ou a utilização do joystick. "
+ IDS_OPTION2_ANSWER1,
+  "Quero a versão de 16-bit. As imagens são piores mas o ToonTalk é mais rápido. "
+ IDS_OPTION2_ANSWER2,
+   "Quero a versão de 32-bit com imagens de baixa resolução. As imagens são piores mas o ToonTalk é mais rápido. "
+ IDS_OPTION2_ANSWER3,
+   "Quero a versão de 32-bit com imagens de alta resolução. A imagens são melhores mas o ToonTalk pode ficar mais lento. "
+ */
+   // rewrote above on 230999 to reflect both new resolutions availability and deprecation of 16 bit version
+ IDS_OPTION2_QUESTION,
+  "Que resolução de ecrã queres usar no ToonTalk?"
+ IDS_OPTION2_EXPLANATION,
+  "Se a resolução for maior as imagens ficam mais qualidade e ficas com mais espaço, mas o ToonTalk pode ficar mais lento. "
+ IDS_OPTION2_EXPLANATION+1,
+  "Eu sugiro que tentes várias resoluções até encontrares a ideal para o teu computador. "
+ IDS_OPTION2_ANSWER1,
+  "Quero o ToonTalk a 320 x 240 pixels. Não há problema se as imagens ficarem mais quadradas porque quero é que o ToonTalk funcione o rápido possível. "
+ IDS_OPTION2_ANSWER2,
+  "Quero o ToonTalk a 640 x 480 pixels. Ainda quero o ToonTalk rápido mas com imagens melhores. "
+ IDS_OPTION2_ANSWER3,
+   "Quero o TooTalk a 800 x 600 pixels. Quero imagens com melhor qualidade mais espaço no chão. Vou ver se o ToonTalk é lento. "
+ IDS_OPTION2_ANSWER4,
+  "Quero o ToonTalk a 1024 x 768 pixels. Quero imagens ainda melhores e mais espaço. "
+ IDS_OPTION2_ANSWER5,
+  "Quero o ToonTalk a 1152 x 864 pixels. Eu quero é mais espaço. "
+ IDS_OPTION2_ANSWER6,
+  "Quero o ToonTalk a 1280 x 1024 pixels. Vou ver se o ToonTalk é suficientemente rápido porque eu quero este espaço todo. "
+ IDS_OPTION2_ANSWER7,
+  "Quero o ToonTalk a 1600 x 1200 pixels. Quero saber se o meu computador aguenta esta resolução e é suficentemente rápido. "
+
+ IDS_OPTION3_QUESTION,
+  "Qual o tamanho da janela que queres?"
+ IDS_OPTION3_EXPLANATION,
+  "A maioria das pessoas prefere o ecrã inteiro. Nalguns computadores pode não funcionar bem. "
+ IDS_OPTION3_EXPLANATION+1,
+  "O ToonTalk pode ser executado numa janela de qualquer tamanho. Se for múltiplo de 320 x 240 é mais rápido. Se executares numa janela cujo tamanho seja maior que o teu ecrã, parecerá que estás no modo ecrã inteiro. "
+ IDS_OPTION3_ANSWER1,
+  "Quero o ecrã inteiro. "
+ IDS_OPTION3_ANSWER2,
+   "Quero que o ToonTalk corra na janela mais pequena. "
+ IDS_OPTION3_ANSWER3,
+   "Quero que o ToonTalk corra na janela com o dobro da mais pequena. "
+ IDS_OPTION3_ANSWER4,
+   "Quero que o ToonTalk corra na janela três vezes o tamanho da mais pequena. "
+ IDS_OPTION3_ANSWER5,
+   "Quero que o ToonTalk corra na janela quatro vezes o tamanho da mais pequena. "
+
+ IDS_OPTION4_QUESTION,
+  "Queres utilizar o botão direito do rato?"
+ IDS_OPTION4_EXPLANATION,
+  "Algumas pessoas confundem muito a esquerda com a direita. Outros conseguem trabalhar mais depressa com vários botões do rato."
+ IDS_OPTION4_EXPLANATION+1,
+  "ToonTalk pode tratar todos os botões do rato da mesma maneira (excepto ao comandar o helicóptero) ou utilizar a convenção que o botão esquerdo significa apanhar ou largar e que o botão direito significa usar ou virar. "
+ IDS_OPTION4_ANSWER1,
+  "Quero que seja simples, sem me preocupar com que botão do rato estou a clicar. "
+ IDS_OPTION4_ANSWER2,
+  "Quero ligar e desligar as ferramentas clicando no botão direito do rato. "
+ IDS_OPTION4_ANSWER3,
+  "Quero ligar e desligar as ferramentas clicando no botão direito do rato. E utilizar o botão do meio para ser equivalente a carregar na tecla '-'. "
+
+ IDS_OPTION5_QUESTION,
+  "Queres mudar a maneira de falar do ET?"
+ IDS_OPTION5_EXPLANATION,
+#if TT_UK
+  "Marty can speak, use speech bubbles like comics, or both. And when using speech bubbles he can leave little time or lots of time between bubbles. "
+#else
+  "O ET pode falar, utilizar os balões de fala, ou ambos. Quando fala utilizando os balões de fala pode deixar mais ou menos tempo entre os balões. "
+#endif
+ IDS_OPTION5_EXPLANATION+1,
+  "Atenção que o ET só pode falar se tiver vozes instaladas no teu computador. O CD-ROM do ToonTalk instala uma voz."
+ IDS_OPTION5_ANSWER1,
+#if TT_UK
+  "I want Marty to speak and use speech bubbles. "
+  IDS_OPTION5_ANSWER2,
+  "I want Marty to speak and not use speech bubbles. "
+ IDS_OPTION5_ANSWER3,
+ // prior to 270999 was "Each bubbles ..."
+  "I don't want Marty to speak. Bubbles should stay up long enough for a typical 10-year to read. "
+ IDS_OPTION5_ANSWER4,
+  "I don't want Marty to speak. Bubbles should stay up long enough for a typical adult to read. "
+ IDS_OPTION5_ANSWER5,
+  "I don't want Marty to speak. Bubbles should stay up a very long time. I'll press 'PageDown' when I've read a balloon. "
+ IDS_OPTION5_ANSWER6, // new on 270999
+  "I want Marty to speak and I don't want speech bubbles but I do want subtitles."
+#else
+  "Quero que o ET fale e utilize os balões de fala. "
+ IDS_OPTION5_ANSWER2,
+  "Quero de que o ET fale e não utilize os balões de fala. "
+ IDS_OPTION5_ANSWER3,
+  "Quero que o ET não fale. Cada balão deve ficar tempo suficiente para que uma criança de 10 anos possa ler. "
+ IDS_OPTION5_ANSWER4,
+  "Quero que o ET não fale. Cada balão deve ficar tempo suficiente para que um adulto possa ler. "
+ IDS_OPTION5_ANSWER5,
+  "Quero que o ET não fale. Cada balão deve ficar mais tempo. Eu carrego em 'PageDown' quando tiver acabado de ler. "
+ IDS_OPTION5_ANSWER6, // new on 270999
+  "Quero que o ET fale e não utilize os balões de fala mas legendas."
+  IDS_OPTION5_ANSWER7, // new on 140801 (English version new on 110401)
+ "Não quero que o ET fale mas quero as legendas."
+
+#endif
+
+ IDS_OPTION6_QUESTION,
+  "Queres ouvir sons?"
+ IDS_OPTION6_EXPLANATION,
+  "Se não gostas de ouvir sons ou não tens colunas ligadas, podes querer desactivar os efeitos sonoros. "
+ IDS_OPTION6_EXPLANATION+1,
+  "Isto desactiva os efeitos sonoros e, se disponível, a fala do ET. "
+ IDS_OPTION6_ANSWER1,
+  "Sim, quero ouvir sons. "
+ IDS_OPTION6_ANSWER2,
+  "Não, não quero ouvir sons. "
+
+ IDS_OPTION7_QUESTION,
+  "Que tipo de utilizadores ToonTalk deve esperar?"
+ IDS_OPTION7_EXPLANATION,
+  "ToonTalk pode ajudar utilizadores experientes sugerindo páginas da Internet para lerem. "
+ IDS_OPTION7_EXPLANATION+1,
+  "ToonTalk pode correr no modo quiosque, que ao fim de uma longa pausa, começa a executar exemplos automaticamente. "
+ IDS_OPTION7_ANSWER1,
+  "A maioria dos utilizadores percebem o suficiente de computadores para resolverem problemas quando o ToonTalk não está a funcionar correctamente. "
+ IDS_OPTION7_ANSWER2,
+  "A maioria dos utilizadores são crianças ou principiantes e não devem ser incomodados com problemas. "
+  IDS_OPTION7_ANSWER3,
+  "A maioria dos utilizadores são visitantes de museus, lojas, ou quiosques. "
+
+ IDS_OPTION8_QUESTION,
+ "Queres mudar a linguagem que o ToonTalk utiliza?"
+ IDS_OPTION8_EXPLANATION,
+  "ToonTalk foi traduzido para outras línguas. Isto muda a língua que o ET fala ou que é apresentada."
+ IDS_OPTION8_ANSWER1,
+  "Quero que o ToonTalk utilize "  // followed by language name
+ IDS_OPTION8_ANSWER2,
+  " Quero que o ToonTalk utilize "  // followed by language name
+ IDS_OPTION8_ANSWER3,
+  " Quero que o ToonTalk utilize "  // followed by language name
+ IDS_OPTION8_ANSWER4,
+  " Quero que o ToonTalk utilize "  // followed by language name
+ IDS_OPTION8_ANSWER5,
+  " Quero que o ToonTalk utilize "  // followed by language name
+ IDS_OPTION8_ANSWER6,
+  " Quero que o ToonTalk utilize "  // followed by language name
+ IDS_OPTION8_ANSWER7,
+  " Quero que o ToonTalk utilize "  // followed by language name
+
+ IDS_OPTION9_QUESTION,
+  "Queres alterar a voz que o ToonTalk utiliza?"
+ IDS_OPTION9_EXPLANATION,
+  "O ToonTalk pode ter várias vozes instaladas no teu computador. Isto altera a voz do ET. "
+ IDS_OPTION9_ANSWER1,
+  "Quero que o ToonTalk utilize a voz chamada "  // followed by the mode name
+ IDS_OPTION9_ANSWER2,
+  "Quero que o ToonTalk utilize a voz chamada "  // followed by the mode name
+ IDS_OPTION9_ANSWER3,
+  "Quero que o ToonTalk utilize a voz chamada "  // followed by the mode name
+ IDS_OPTION9_ANSWER4,
+  "Quero que o ToonTalk utilize a voz chamada "  // followed by the mode name
+ IDS_OPTION9_ANSWER5,
+  "Quero que o ToonTalk utilize a voz chamada "  // followed by the mode name
+ IDS_OPTION9_ANSWER6,
+  "Quero que o ToonTalk utilize a voz chamada "  // followed by the mode name
+ IDS_OPTION9_ANSWER7,
+  "Quero que o ToonTalk utilize a voz chamada "  // followed by the mode name
+
+}
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+
+STRINGTABLE
+{
+ IDS_INTRO_DEMO, "Introdução ao ToonTalk"
+ IDS_EXPLODE_DEMO, "Casas Explosivas"
+ IDS_SWAP_DEMO, "Muda se Maior"
+ IDS_PONG1_DEMO, "Construção Ping Pong (Parte 1)"
+ IDS_PONG2_DEMO, "Construção Ping Pong (Parte 2)"
+ IDS_PONG3_DEMO, "Construção Ping Pong (Parte 3)"
+ IDS_FIBONACCI_DEMO, "Números Fibonacci"
+ IDS_FACTORIAL_DEMO, "Factorial"
+ IDS_BANK_DEMO, "Conta Bancária"
+ IDS_APPEND_DEMO, "Juntar Listas"
+// IDS_EXPLODE_INSTRUCTIONS, "Constrói os teus tijolos explosivos"
+ IDS_PLAY_PUZZLE_GAME, "Puzzles"
+ IDS_FREE_PLAY, "Brincar"
+ IDS_CONFIRM_PRINT, "As instruções podem ser vistas ou impressas no Microsoft's Word Viewer.  (As cores podem parecer erradas, mas deve imprimir correctamente.)  Pronto para veres as instruções?"
+ IDS_CONFIRM_PRINT2, "Pronto para a outra metade das instruções?"
+ IDS_WINDOW_TITLE, "Começar ToonTalk"
+ IDS_FORGET_IT, "Sair"
+
+ IDS_INTRO_DEMO_FILE, "Intro"
+ IDS_EXPLODE_DEMO_FILE, "Explode"
+ IDS_SWAP_DEMO_FILE, "Swap"
+ IDS_PONG1_DEMO_FILE, "PongAct1"
+ IDS_PONG2_DEMO_FILE, "PongAct2"
+ IDS_PONG3_DEMO_FILE, "PongAct3"
+ IDS_FIBONACCI_DEMO_FILE, "Fibs"
+ IDS_FACTORIAL_DEMO_FILE, "Fact"
+ IDS_BANK_DEMO_FILE, "Account"
+ IDS_APPEND_DEMO_FILE, "Append"
+// IDS_EXPLODE_INSTRUCTIONS_FILE1, "explode1.doc"
+// IDS_EXPLODE_INSTRUCTIONS_FILE2, "explode2.doc"
+}
+
+
+//DEMOFREE16 BITMAP "english\dmofre16.bmp"
+//PICKONE16 BITMAP "english\pckdm16.bmp"
+DEMOFREE BITMAP "demofree.bmp"
+PICKONE BITMAP "pickone.bmp"
+//NOSPEAK_WAVE RCDATA "english\nospeak.wav"
+//ILL_PICK_WAVE RCDATA "english\pickone.wav"
+
+#if TT_UK
+OK_WAVE RCDATA "uk\ok.wav"
+
+// I replace IDC_STATICTEXT4 with 4, etc so it the following will compile OK - don't remember how they got here
+
+IDD_ABOUT_DIALOG DIALOG 0, 0, 240, 78
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION ""
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "OK", IDM_EXIT, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 95, 52, 50, 14
+ CONTROL "ToonTalk UK English 2.05", 4, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 64, 18, 112, 14
+ CONTROL "(c) Copyright 1992-2001. Ken Kahn. All rights reserved.", 2, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 30, 35, 180, 15
+ CONTROL "Published by Logotron.", 1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 82, 4, 76, 12
+}
+
+#else
+OK_WAVE RCDATA "english\ok.wav"
+
+IDD_ABOUT_DIALOG DIALOG 0, 0, 240, 93
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION ""
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "OK", IDM_EXIT, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 99, 72, 50, 14
+ CONTROL "ToonTalk Versão Portuguesa 2.39b", 4, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 64, 4, 112, 8
+ CONTROL "(c) Copyright 1992-2001. Ken Kahn.\rTodos os direitos reservados.", 2, "static", SS_CENTER | WS_CHILD | WS_VISIBLE, 32, 48, 184, 15
+ CONTROL "Editado pela Cnotinfor, Lda", 1, "static", SS_CENTER | WS_CHILD | WS_VISIBLE, 52, 24, 136, 12
+}
+#endif
+
+
+
+

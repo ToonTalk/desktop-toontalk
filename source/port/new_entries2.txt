@@ -1,0 +1,47 @@
+IDS_ANY_ROBOT, // new on 090799
+"qualquer robô"
+
+IDS_ANY_FORCE_EFFECT, // new on 160799
+ "qualquer efeito de força"
+IDS_BLANK_FORCE_EFFECT,
+ "um efeito de força apagado"
+IDS_FORCE_EFFECT_TYPE_INDEFINITE,
+ "um efeito de força de retorno"
+IDS_FORCE_EFFECT_TYPE_DEFINITE,
+ "o efeito de força de retorno"
+IDS_FORCE_EFFECT_TYPE_PLURAL,
+ "efeitos de força de retorno"
+IDS_FORCE_EFFECT_TYPE_PRONOUN,
+ "o efeito de força de retorno"
+
+ // new on 200799
+IDS_KEYBOARD_ACCELERATORS,
+  // be sure that no letter occurs twice in the same situation in the
+following
+  // Each letter corresponds to a keyboard command:
+
+  // X - (baiXar)Down when in helicopter
+  // S - (Subir)Up when in helicopter
+
+  // H - Helicopter when walking outside
+
+  // E - (Erguer)Standup if your hand is empty
+  // P - Pickup what is under your finger if your hand is empty
+  // G - (Girar)Pickup and flip what is under your finger if your hand is empty
+
+  // G - (Girar)Flip when holding picture or pad
+  // L - (Largar)Drop what you are holding
+ "xshepggl"
+
+// The following indicate what should seperate words in sentences.
+// In Japanese it should be ""
+IDS_SPACE_BEFORE_PRONOUNS,
+ // in Portuguese is "-"
+ " "
+IDS_DEFAULT_SPACE_BETWEEN_WORDS,
+ " "
+
+IDS_NOT_A_GOOD_DEMO_FILE,
+ "não é um bom arquivo de log de exemplo do Toontalk."
+IDS_DEMO_FILE_NEED_NEWER_VERSION_OF_TOONTALK,
+ "O arquivo de exemplo irá funcionar somente nas últimas versões do ToonTalk. Por favor, atualize seu sistema. Visite www.toontalk.com."

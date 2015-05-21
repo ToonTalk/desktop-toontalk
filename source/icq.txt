@@ -1,0 +1,10 @@
+ToonTalk is an animated world where you build and run all sorts of computer programs. And it teaches you to program in a fun way!
+
+<P><A HREF="http://www.toontalk.com">ToonTalk</A> is a Windows program that provides a game-like animated world where you can learn to program while having fun. And you can build and run all sorts of computer programs in a new way. The programs are not textual, but are animated.</P>
+
+<P>This chat room is for ToonTalk users (or those thinking about becoming users) to help each other. Please be polite.</P>
+
+<A HREF="http://www.toontalk.com">Remember to visit www.toontalk.com.</P>
+
+
+animated-programming game-programming visual-programming end-user-programming

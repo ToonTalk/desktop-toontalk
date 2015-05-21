@@ -1,0 +1,137 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\Program Files\Microsoft Office\Office\HTML.DOT">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Programação Concorrente e ToonTalk</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="4" face="Comic Sans MS"><b>Programação Concorrente
+e ToonTalk</b></font></p>
+
+<p><font face="Comic Sans MS">Antes de começar a explicar a programação concorrente
+em ToonTalk e as razões pelas quais é complicado criar extensões concorrentes
+em linguagens </font><font face="Comic Sans MS">sequenciais</font><font face="Comic Sans MS">,
+vou procurar explicar a diferença entre programação concorrente, paralela e
+distribuída. Os processos paralelos são processos que estão a ser executados
+simultaneamente no mesmo computador. Basicamente o computador tem vários
+processadores que se encarregam dos vários processos em paralelo. O
+processamento distribuído controla processos que estão a ser executados em
+vários computadores ligados através de uma rede. Esta distinção é
+importante, porque a computação distribuída implica protocolos de confiança
+entre os sistemas&nbsp; implicados e coloca questões de segurança,
+atribuição de recursos, fiabilidade das ligações, etc... Em situações nas
+quais esta distinção não é crucial, podemos falar simplesmente de
+programação concorrente.</font></p>
+
+<p><font face="Comic Sans MS">O ToonTalk é uma linguagem de programação
+concorrente. Todas as rotinas e sub-rotinas de programação são expressas como
+processos independentes. No caso de um robot precisar de outros robots para
+efectuar sub-computações, tem que ser treinado para carregar um camião com os
+outros robots. A nova casa construída pela tripulação é um novo processo. Ao
+contrário das linguagens convencionais (C, Java, Logo, Lisp, Fortran, Cobol,
+Perl, Basic, etc.), em ToonTalk, não há forma de expressar o conceito de
+subrotina. Nessas linguagens, uma chamada a um procedimento faz com que o
+programa aguarde até que o processo termine e, eventualmente, devolva um valor,
+após o que o programa pode continuar a computação. O comportamento
+equivalente em ToonTalk obtém-se treinando um robot para carregar um camião
+com robots e uma caixa com um pássaro.&nbsp;O robot deve colocar o ninho do
+pássaro na sua caixa e nada mais. Este robot (ou outros elementos da equipa de
+robots) deve ser treinado para procurar qualquer coisa no ninho.
+Consequentemente, este processo será suspenso até que os robots que foram colocados
+no camião dêem alguma coisa ao pássaro. O robot ficará no ninho à espera até
+que algo seja entregue após o que a computação prosseguirá. Por outras
+palavras, uma chamada a uma subrotina ou procedimento em ToonTalk é apenas um
+caso especial da utilização de camiões, pássaros&nbsp; e robots.&nbsp;
+ToonTalk apenas dá ao programador uma forma geral de expressar a criação de
+novos processos.</font></p>
+
+<p><font face="Comic Sans MS">O facto de não haver subrotinas no</font><font face="Comic Sans MS">
+ToonTalk permite a existência de muito maior número de processos que noutras
+linguagens tradicionais. O motivo é que normalmente as subrotinas são
+implementadas com base numa estrutura de dados chamada <i>pilha</i>. As pilhas
+são muito eficientes na implementação de chamadas a procedimentos, incluindo
+chamadas recursivas. O problema é que cada processo (mesmo que suspenso)
+precisa da sua própria pilha. Isto faz com os processos consumam rapidamente
+todos os recursos disponíveis. Pelo contrário, um processo em ToonTalk precisa
+apenas de dois <i>ponteiros</i>: um para o programa (a equipa de robots), outro
+para os dados (a caixa). Não se utilizam pilhas. O ToonTalk foi testado com
+dezenas de milhares de casas (processos), Pelo contrário em experiências
+anteriores com Java apenas se conseguiram umas escassas centenas de processos.</font></p>
+
+<p><font face="Comic Sans MS">As linguagens convencionais assentam em <i>estados
+partilhados</i>. A mesma variável, estruturas de dados, e objectos podem ser
+acedidos a partir de diferentes processos (processos que partilham os mesmos
+dados, são, por normalmente, <i>threads</i>). A <i>partilha de estado</i> é
+necessária, nestas linguagens, de forma a que as <i>threads</i> possam
+trabalhar em conjunto. Esta partilha entre processos concorrentes independentes
+é, no entanto, demasiado perigosa, pois conduz a <i>situações de competição</i>.
+Consideremos a variável <i>A</i>, que representa o balanço actual de uma conta
+poupança. (<i>A</i> pode ser uma variável global ou uma instância de um objecto
+- ambos os tipos de variáveis têm este problema.). Existe uma rotina para
+retirar <i>X</i> de <i>A</i> depois de verificar se <i>X</i> é menor ou igual a
+<i>A</i>. O levantamento é feito atribuindo a <i>A A-X</i>. Por outras
+palavras, só acontece se existir dinheiro suficiente. Introduzamos agora
+processos concorrentes. Imaginemos um saldo de 10.000$ e dois processos para
+levantar respectivamente 9.000$ e 8.000$. Com algum azar os dois levantamentos
+serão efectuados. Pior que isso o saldo final tanto pode ficar 1.000$, como
+2.000$, como -7.000$. Como assim? Imaginemos o seguinte cenário:</font></p>
+
+<p><font face="Comic Sans MS">O processo 1 verifica se <i>A</i> é menor ou
+igual a <i>X</i> e efectua <i>A-X=</i>1.000$, mas antes de atribuir o valor
+1.000$ a <i>A</i>, o processo 2 ocorre e verifica que <i>A=</i>10.000$ e atribui
+a <i>A</i> o valor 2.000$. O processo 1 continua e atribui a <i>A</i> o valor
+1.000$.</font>&nbsp;</p>
+
+<p><font face="Comic Sans MS">Então como é que as linguagens convencionais
+tratam os <i>problemas de competição</i>? Introduzem um novo construto:&nbsp; <i>bloqueio
+de dados críticos</i>. Isto porém cria novos problemas pois o processo 1 pode
+precisar de dados que foram bloqueados pelo processo 2 e vice-versa o que pode
+conduzir a situações de <i>bloqueio total</i>.</font></p>
+
+<p><font face="Comic Sans MS">Como é que o ToonTalk ultrapassa problemas deste
+tipo? Simplesmente não usando <i>estados partilhados</i>. Uma caixa só pode
+existir num lugar. Por sua vez, numa mesma casa os robots trabalham em turnos e
+nunca acedem à mesma caixa ao mesmo tempo. Como não existem <i>estados
+partilhados</i> também não existem <i>problemas de competição</i>, nem de <i>bloqueio
+total</i>. Mas, será que isto não limita o ToonTalk? De facto seria uma
+limitação se não existissem os pássaros. Dado que múltiplas cópias do
+mesmo pássaro podem voar para o mesmo ninho, isto possibilita implementar
+comunicações do tipo <i>muitos para um</i> em vez dos <i>estados partilhados</i>.
+Consideremos novamente o exemplo da conta bancária. Robots em diferentes casas
+podem dar a pássaros desta conta ordens de levantamento, dando-lhes uma caixa
+especificando a quantidade a levantar. Não sabemos, à partida, a ordem pela
+qual as caixas irão chegar ao ninho - no entanto, todas elas serão empilhadas
+pela ordem de chegada. Os robots que trabalham com a caixa da conta verão
+chegar uma caixa ao ninho para efectuar um levantamento. Tratarão cada pedido
+sequencialmente. Isto não traz qualquer problema ainda que o cálculo do novo saldo
+exija um sub-cálculo. Neste caso o robot carregará um camião com uma equipa
+de robots e uma caixa para calcular o novo saldo, após o que colocará o ninho
+que irá receber a resposta no local onde onde está guardado o saldo. Os
+pedidos enviados ao ninho só serão processados à medida que o sub-cálculo
+entrega ao pássaro o novo saldo e o ninho respectivo é coberto.</font></p>
+
+<p><font face="Comic Sans MS">Em conclusão, as tentativas para adicionar
+processos concorrentes a linguagens com sub-rotinas e estados partilhados
+envolve aumento de complexidade, custo adicional na implementação de processos
+e a ocorrência de erros muito difíceis de detectar. O ToonTalk, pelo
+contrário, foi desenhado de raiz para ser concorrente. Em ToonTalk, não há,
+pois, necessidade de introduzir bloqueios a dados críticos, os processos
+consomem menos recursos e não existem problemas de competição e processo
+bloqueados.&nbsp;</font></p>
+
+<p align="center"><font face="Comic Sans MS"><small><a href="toontalk.htm">principal</a></small><small>
+| <a
+href="http://www.cnotinfor.pt/toontalk/search.htm">procura</a></small><small> | <a href="buy.htm">compra</a></small><small>
+| <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">notícias</a></small><small> | <a href="infodesk.htm">informação</a></small><small> | <a href="faq.htm">perguntas</a></small><small>
+| <a href="support.htm">apoio</a></small><small> | <a href="free.htm">downloads</a> |
+<a
+href="press.htm">impre</small><small>nsa</small></a><small> | <a href="address.htm">contacto</a></small></font></p>
+</body>
+</html>

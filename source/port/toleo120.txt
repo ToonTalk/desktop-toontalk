@@ -1,0 +1,402 @@
+ IDS_SCALE_TO_RIGHT,
+  "uma balança inclinada para a direita" // --- (970120) This text is being displayed with na extra ")"
+
+IDS_WHICH_IS_PARTLY_VISIBLE,
+ "que está parcialmente visível" //--- (970120) This text is also being shown with an extra ")"
+
+Couldn't reproduce this.
+
+----------
+IDS_EXPANDER_KEY_COMMANDS,
+ "BTWLSNG" // --- (970119) I'm gonna wait for the next version before translating these and the other KEY_COMMANDAS, Ok?
+
+Sure.  They won't be easy to remember but there's no big problem.
+
+-------------------
+
+ IDS_IS,
+  " is "  // --- (970119) "is" something, or "is" doing something?
+
+Ken:
+ IDS_IS, // as in "Under the wand is a number." and "Inside a computer 6 is 110 in binary."
+
+------
+
+IDS_VISIBLE_REMOTE_STATE1,
+       "VER TUDO" // --- (970119) Where/when are these sentences used?
+
+Ken:
+// the remote control for the visibility of a picture
+// can display one of the following states:
+// In other words -- Marty doesn't say these they show up on the 
+// remote control.
+
+IDS_VISIBLE_REMOTE_STATE1,
+   "SEE ALL"
+IDS_VISIBLE_REMOTE_STATE2,
+   "SEE SOME"
+IDS_VISIBLE_REMOTE_STATE3,
+   "SEE NOTHING"
+
+Note also that these have been moved to sensors.rc so that the
+system is able to show saved sensors in the language of the version
+they were saved in.
+
+----------
+
+IDS_VK_LEFT,
+ "Seta para a esquerda" // --- (970119) On the keyboards here these keys are not labeled. They simply have an arrow to each direction on top of them. What should I put?
+
+Ken: I would put a short description of the key.  If what you have here is
+equivalent to "Left arrow" then it is fine as is.
+
+Note that these too have been moved tos sensors.rc
+
+------
+
+IDS_TOONTALK_VERSION_NUMBER,
+  "Beta Version 6." // --- (970119) I'm not going to translate the version number, nor the start token
+
+IDS_UUENCODING_START_TOKEN,
+  "4!@%!(%@" 
+
+Ken: The IDS_UUENCODING_START_TOKEN has been moved to common.rc (strings that
+are not language dependent).  
+
+The version number is now 6.  When pasting ToonTalk objects into an
+editor the comments will say it was "Beta Version 6.".  I assume that's ok.
+
+------
+
+ IDS_BOMB_USED_HOUSE_HELP4,
+  "Você pode se sentar em segurança clicando em " // --- (970119) I never saw the remaining of this sentence in ToonTalk
+
+Ken: This sentence is finished by "any mouse button."
+(or if you have -b 2 or 3 then it will say "the left mouse button.")
+It is said if you have never used a bomb before or if you pressed F1
+while holding or pointing to a bomb.
+
+By the way, when describing bombs inside thought bubbles Marty would 
+add an extra "any mouse button".  Fixed now.  Also Marty now also 
+explains that the space bar will set off bombs.
+
+-----------
+
+IDS_CUBBY_BAD_CONTENTS_ABORT, 
+  "he tried to put something in a box that doesn't go" // --- (970119) I did not understand what "a box that doesn't go" means
+
+Ken: Yes that wasn't the best wording.  The new version is:
+
+ IDS_CUBBY_BAD_CONTENTS_ABORT,
+ // as in "A robot stopped because he tried to put something in a box that can't be put in boxes."
+// was  "he tried to put something in a box that doesn't go"
+  "he tried to put something in a box that can't be put in boxes"
+
+--------------------
+ IDS_WHOSE,
+  " cujo " // --- (970120) I think that the use of too many "whose" makes the sentence hard to read and boring. My suggestion is to simply tell that the robot expects a box whose: 1st hole contains something, the 2nd hole contains other stuff, ... Ie. list the contents of the holes separated by commas ...
+
+Ken: A good idea.  My only reservation is whether kids are comfortable
+with colons like this.  I'll ask around.  Thanks for the suggestion.
+Other translators -- any opinion?
+
+---------
+ IDS_AND_BEGIN_SENTENCE,
+  "E" // --- (970120) In my opinion, the use of too many sentences starting with "E" is very repetitive and boring. Why not join all the sentences together separating them with a simple ","?
+
+Ken: Another good idea. Generally long sentences are to be avoided
+but these would have a simple structure so it should be ok.
+I'll bounce it off some people to get more opinions. 
+Other translators -- any opinion?
+
+-----------
+ IDS_SEND_TO,
+  "empurrar" // --- (970119) When is this used?
+
+Ken:
+ IDS_SEND_TO, // as in "He will push the 'a' key."
+
+This is used to describe robot's who send key strokes to things they
+are holding (e.g. a text pad).  Used to say "send the letter 'a' to
+the text pad..." but that was too confusing.
+
+--------
+ IDS_LABEL_CHARACTER,
+  "adicionar" // --- (970119) when/where is this used?
+ IDS_CHARACTER_AND_SELECT,
+  "empurrar" // --- (970119) when/where is this used?
+
+Ken: these are also used to describe a robot that types things.
+
+// e.g. "If given a box like that he will push '9' after moving
+// to the first hole of the box he's working on.  And push '7' while
+// pointing to the first hole of the box he's working on."
+// or
+// "If given a box like that he will push 'B'
+// while pointing to the first hole of the box he's working on.  And push
+// 'C' while pointing to the first hole of the box he's working on.  And
+// add 'L' to the label of the first hole of the box he's working on."
+
+----------
+ IDS_DESTROY_HOUSE,
+  "tiver estourado a casa em que ele estiver" // --- (970119) when/where is this used?
+
+ IDS_DESTROY_HOUSE,
+  // As in "And pick up a bomb.  And use it.  And have blown up the house he's in."
+ // I admit not the best way to say this.
+  "have blown up the house he's in"
+
+---------
+ IDS_PICT_CHANGED_KEY_HELP,
+  "This picture is really " // --- (970119) Where/when?
+
+Ken:  For example, pick up a picture of the person walking on page 8
+of the Pictures notebook.
+
+ IDS_PICT_CHANGED_KEY_HELP,
+  // as in "This picture is really 8 pictures."
+  "This picture is really "
+ IDS_PICT_CHANGED_KEY_HELP2,
+ // as in " You can switch between them by pressing the +, -, or space button when selected or held."
+  "You can switch between them "
+ IDS_PICT_CHANGED_KEY_HELP3,
+ // as in "Some pictures can be changed by pressing the +, -, or space button when selected or held. "
+  "Some pictures can be changed "
+
+-----------
+ IDS_PICT_TOSSED_HELP,
+  "You can give this a toss by pressing " // --- (970119) What is this for?
+ IDS_PICT_TOSSED_HELP2,
+  "You can toss a picture by pressing " // ---
+
+Ken: If you pick up a picture you can give it an initial speed as
+described below:
+
+ IDS_PICT_TOSSED_HELP,
+  // as in "You can give this a toss by pressing control while releasing the button."
+  // the word "this" should always refer to a picture of something.
+  "You can give this a toss by pressing "
+ IDS_PICT_TOSSED_HELP2,
+  "You can toss a picture by pressing "
+
+---------
+ IDS_BE_WOP_SOUND,
+  "Be Wop" // --- (970119)
+ IDS_BE_YAW_SOUND,
+  "Be Yaw" // ---
+ IDS_SPIRAL_IN_SOUND,
+  "Spiral In" // ---
+ IDS_SPIRAL_OUT_SOUND,
+  "Spiral Out" // ---
+
+Ken:  These are just the best names I could come up with for these
+strange souunds.  The first 2 approximate how they sound.  The next
+two describe how the sound changes. Did you try them? 
+
+-----------
+
+IDS_THOUSANDS_COMMA,
+ "." // --- (970119) In Brazil, one thousand is written like 1.000,00 , not 1,000.00
+
+Ken: There are only integers in ToonTalk and due to the above one thousand
+is "1.000". 
+When there are floating point numbers I'll have to add the comma.
+
+--------------
+IDS_WHAT_IS_ON_TOP_OF,
+  "o que estiver por cima de" // --- (970119) Here we have our old problem. The "of" of "on top of" will have different translations depending on the word that follows it
+
+Ken:
+IDS_WHAT_IS_ON_TOP_OF,
+  // as in "He will then pick up what is on top of the nest."
+  "what is on top of"
+
+Turns out that it will always refer to a nest.
+
+------
+
+IDS_BETA_TO_EXPIRE_SOON,
+  "Já é hora de obter uma nova versão do ToonTalk. Estaversão beta deixará de funcionar dia primeiro de março." // --- (970119) Is March 1st still valid?
+
+For Beta 6 it is April 1.  For your CDROM I can add a few months.  Does
+July 1 sound ok for that?
+
+-------------------------
+IDS_IN,
+ "in" // --- (970119) Again, "in" will have different translations depending on the word that follow it
+
+Ken: This OK?
+
+IDS_IN,
+ // used only when describing robots that either give things
+ // to birds that are in boxes or put things in boxes that
+ // are in trucks.
+ // "He will give it to the bird in the first hole of the box." or
+ // "He will drop it on the box in the truck."
+ "in"
+
+-------------
+IDS_USE,
+  "use" // --- (970119) Who is the subjetc of this verb? Is it in the infinitive?
+
+Ken: Only used as a noun.  See below:
+
+IDS_WHICH_HAS_ENOUGH_MAGIC,
+ // Together with the following words is used in
+ // "You are holding a magic wand which has enough magic for 4 uses."
+ "which has enough magic for"
+IDS_USE,
+  "use"
+IDS_USES,
+  "uses"
+
+---------------
+IDS_SOMETHING_IS_MISSING,
+ "Algo está faltando do/da" // --- (970119) Two things here. In Portuguese this sentence would become "Something from" + something + "is missing". And the "from" will have different translations depending on the word that follows it
+
+Ken:
+Since it turns out the "something" is always "the box" I've changed it
+as follows:
+
+IDS_SOMETHING_IS_MISSING,
+// was  "Something is missing from"
+ "Something is missing from the box. "
+
+
+------------------
+IDS_THAT_IS_READY_TO,
+ "que está pronto para" // --- (970119) The word "ready" will have different translations depending on the object that is ready
+
+Ken:  It used to use the word "ready" but is used as follows now:
+
+IDS_THAT_IS_READY_TO,
+  // only used to describe a magic wand
+  // following expressions are IDS_COPIER_STATE0, IDS_COPIER_STATE1, or
+  // IDS_COPIER_STATE2
+ "that can"
+
+---------
+IDS_BUTTON_HELP_GIVEN_HELP4,
+"if you pick it up." // --- (970119) "it"may have different translations depending on the noun it refers to
+IDS_BUTTON_HELP_GIVEN_HELP5,
+"if you pick him up." // --- (970119) Same as above
+
+Ken:
+IDS_BUTTON_HELP_GIVEN_HELP4 is only used for wands. 
+IDS_BUTTON_HELP_GIVEN_HELP5 is used for Pumpy and Dusty
+
+IDS_BUTTON_HELP_GIVEN_HELP4,
+  // only used for wands now.
+  // as in "I'll tell you more about magic wands if you pick it up."
+"if you pick it up."
+IDS_BUTTON_HELP_GIVEN_HELP5,
+  // as in "I'll tell you more about bike pumps if you pick him up."
+"if you pick him up."
+
+Is this OK?
+
+--------
+
+IDS_TURN_IT_ON_HELP,
+"Você também pode ligá-lo ou desligá-lo apertando a barra de espaço enquanto o estiver segurando." // --- (970120) "Turn him on/off" will also have different translations the magic wand is female and Dusty is a male word... One possible solution for this problem would be to have all characters converted to the same sex. Other would be to have each situaion defined in separate 
+
+Ken:  I've been using male pronouns for Dusty and Pumpy and neuter for the
+wand.  This entry like the earlier one is split into 2 categories: one
+for both the bike pump and vacuum and the other for the wand.
+
+----------
+IDS_ON, // added 12/3
+ "no"  // --- (970119) as in "use Pumpy on" --> we have the same gender problem here
+
+Ken:
+Only used for Pumpy.  If things change we'll have to address this.
+
+----------------
+THE_LEFT_PAGE_OF, // added 12/13
+"a página à esquerda de" // --- (970119) We may find gender problems here. Where is this used?
+THE_RIGHT_PAGE_OF, // added 12/13
+"a página à direita de" // --- (970119) Same as above
+
+Ken:
+
+THE_LEFT_PAGE_OF, // added 12/13
+// should always be of some notebook
+// as in "If given a box like that he will pick up what's on
+// "the left page of the main notebook."
+"the left page of"
+
+-------------
+ IDS_NUMBER_TYPE_PRONOUN,
+ "para ele" // --- (970119) In order to check if this translation is ok I'll need to know where/when each of these pronouns are used. I assumed something like "give" + pronoun + "something". If this is so, than we have a problem. In Portuguese, instead of "give somebody something", we use "give something to somebody"
+
+Ken:  Currently pronouns are only used in 3 places in ToonTalk:
+1.  When Marty says "You are holding a number pad.  You can drop it by
+clicking any mouse button."
+
+2. "You are pointing to a button of a magic wand.  You can change it
+to do something different if you click on the button."
+
+3. "You are pointing to a number pad.  You can grab it
+by clicking on any mouse button."
+
+Do these uses cause any problems?
+
+-------------
+ IDS_STACK_OF_PRONOUN, // added 12/21
+  "it" // --- (970119) Where/when is this used?
+
+IDS_PICT_OF_PRONOUN, // added 12/21
+ "it" // --- (970119) Where/when is this used?
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+ "it" // --- (970119) Where/when is this used?
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+ "it" // --- (970119) Where/when is this used?
+
+Ken: Just those 3 types of sentences above. (#2 won't occur for these.)
+
+-------------
+IDS_THING_ON_THE_BACK1,
+  "o" // --- (970119) On the back of what? Of the queue, of the picture?
+IDS_THING_ON_THE_BACK2,
+  "objeto que está atrás " // as in "The third thing on the back is a robot."
+
+Ken:
+Just used to talk about what's on the back of pictures.  Since some pictures
+are animation cycles they are sometimes refered to as movies.
+
+------------
+IDS_PAGE_OF1,
+ "a" // --- (970119) Here we also have a gender problem. We would need a female 'first', 'second', ... in order to address 'page', that is a female noun. I would recommend something like "page 1 of the notebook", "page 2 ..." in order to avoid this problem. Another solution would be o have all the adjectives and articles written in their female, male, singular and plural formats.  
+ // as in "the first page of the notebook"
+IDS_PAGE_OF2,
+ "page of" // --- Waiting for the above
+
+Ken: Thanks for pointing this out.  This problem is currently limited
+to ordinal numbers but it does occur often (e.g. "The third hole of
+the box...").  I think the right solution is as you say to have the
+female, male, singular and plural forms.  That is a bit of work.
+Here's what I'm planning.  Keep the current scheme for languages like
+English (and Swedish? German?) where this isn't an issue and follow
+your suggestion about "page 1" or "hole 1" for the other languages.
+This is now on my "to do list".
+
+---
+IDS_HOLE_OF1,
+ "o"
+IDS_HOLE_OF2,
+ "buraco da" // --- (970119) Another place with the gender problem (every time we use 'of' is the same). A solution for this case would be to have 'of' always associated with a noun. That would change 'hole of' + 'the box' to 'hole'+ 'of the box'
+
+Ken: Another good suggestion.  Will look into it.
+
+---------
+ IDS_EXPANDER_APPLY, // added 12/3
+  "use o Pumpy" // --- (970119) Is to use Pumpy or use Pumpy to do something?
+
+Ken:
+ IDS_EXPANDER_APPLY, // added 12/3
+ // e.g. "The robot will robot use Pumpy for 100 milliseconds on the box."
+  "use Pumpy"
+
+-----------
+
+Thanks for all the comments.  They really help.

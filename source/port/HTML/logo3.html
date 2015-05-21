@@ -1,0 +1,523 @@
+<html>
+<head>
+<title>Toon Talk - O Logo é uma tecnologia obsoleta? - Parte 3</title>
+<link rel="stylesheet" type="text/css" href="../toontalk.css">
+</head>
+
+<body link="#0000ff" vlink="#800080" bgcolor="#ffffff">
+
+<div align="center">
+<a name="topo"></a>
+<table width=468 cellspacing=0 cellpadding=0 border=0><tr><td>
+
+<p>
+<table width=460 cellspacing=0 cellpadding=0 border=0><tr><td>
+<div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a>
+<hr size=1>
+    </td></tr>
+</table>
+
+<table width=100% cellpadding=5 cellspacing=0>
+<tr bgcolor="#fedea0">
+	<th><a class="menu" href="logo.html">PARTE 1</a></th>
+	<th><a class="menu" href="logo2.html">PARTE 2</a></th>
+	<th bgcolor="#cc9966"><b>PARTE 3</b></span></th>	
+	<th><a class="menu" href="logo4.html">PARTE 4</a></th>
+	<th><a class="menu" href="logo5.html">PARTE 5</a></th>
+</tr>
+</table>
+
+<h1><hr size=1>
+O Logo é uma tecnologia obsoleta?<hr size=1></h1>
+
+<p class=olho>
+Esta &eacute; uma discuss&atilde;o que foi mantida na <a
+href="news:comp.lang.logo">comp.lang.logo</a> (e na correspondente 
+lista de discuss&atilde;o por e-mail de 16 de novembro a 2 de 
+dezembro, em 1998. A discuss&atilde;o intitulada <a
+href="http://el.www.media.mit.edu/logo-foundation/">O Logo é uma
+tecnologia obsoleta?</a> 
+
+<p class=autor>
+Bill Kerr escreveu na mensagem
+
+<p class=reply>
+Ken Kahn escreveu:
+
+<p class=reply>
+"Eu n&atilde;o tenho ci&ecirc;ncia de nenhuma forma de sincronizar processos
+paralelos no Microworlds."
+
+<p class=reply>
+"Eu penso que esse procedimento do Microworlds (da ajuda do MW,
+e tamb&eacute;m realiz&aacute;-lo?) realiza processos paralelos sincronizados." 
+
+"To sq-circ<br>
+
+T1, pd launch [repeat 36 [fd 10 rt 10]]<br>
+
+; t1 draws a circle<br>
+
+t2, pd launch [repeat 4[ fd 50 rt 90]]<br>
+
+; ts draws a square<br>
+
+waituntil [ done?[repeat 36 [fd 10 rt 10]]]<br>
+
+; the procedure does not continue until the circle is finished<br>
+
+; so that the drawings of circles and square are synchronised<br>
+
+t1, pu rt random 360 fd random 50<br>
+
+t2, pu rt random 360 fd random 50<br>
+
+; repositions turtles for next drawing<br>
+
+sq- circ<br>
+
+end"<br>
+
+<p class=reply>
+Eu estou neutro, obrigado. Esta &eacute; uma esp&eacute;cie de controle de
+sincroniza&ccedil;&atilde;o de fluxo desde que espera at&eacute; que os processos
+gerados por t1 e t2 tenham terminado. Ou "waituntil[ done? "espera
+at&eacute; que todos os processos tenham terminado? O MicroWorlds
+tamb&eacute;m tem a sincroniza&ccedil;&atilde;o de processos baseada em dados?
+Ent&atilde;o, por exemplo, um processo consumidor de alguns dados
+esperar&aacute; at&eacute; que o gerador o tenha gerado? Observe quem em geral
+o gerador n&atilde;o precisa ter terminado, ele pode apenas estar
+reportando os resultados enquanto ele os encontra (por exemplo, um
+mecanismo de pesquisa na Web). Toon Talk tem apenas
+sincroniza&ccedil;&atilde;o de dados, mas esta &eacute; apenas a esp&eacute;cie mais geral de
+sincroniza&ccedil;&atilde;o, desde que algu&eacute;m pode ajustar dados ( No Toon Talk,
+dar um comando a um p&aacute;ssaro) indicando que o processo est&aacute;
+terminando.
+
+<p class=reply>
+A prop&oacute;sito, h&aacute; em algum lugar da Web um manual do Microworlds? 
+
+<p class=reply>
+"E o &uacute;nico meio pelo qual os processos podem se comunicar s&atilde;o
+vari&aacute;veis globais. Esta &eacute; uma modularidade pobre e pode levar a
+que seja extremamente dif&iacute;cil detectar problemas. E em que sentido
+o Microworlds &eacute; orientado para objetos?"
+
+<p class=reply>
+"O Microworlds tem um primitivo "turtlesown" que lhe permite localizar
+coisas como a velocidade ou a posi&ccedil;&atilde;o de um "turtle" que est&aacute;, por
+exemplo, simulando um cavalo. Eu colarei na explica&ccedil;&atilde;o da ajuda do
+MW, o que nos dar&aacute; alguma esp&eacute;cie de ponto para as discuss&otilde;es
+posteriores. Eu n&agrave;o estou tentando sugerir que o MW &eacute; totalmente
+orientado para objetos mas o c&oacute;digo pode residir em objetos como
+cores, "turtles", bot&otilde;es. Isto d&aacute; aos estudantes uma introdu&ccedil;&atilde;o a
+conceitos elementares e para crian&ccedil;as pequenas eu n&atilde;o posso ver
+que a quest&atilde;o v&aacute; al&eacute;m. O MW e o Logo t&ecirc;m vari&aacute;veis locais as quais
+poderiam ser a coisa principal, n&atilde;o? Minha impress&atilde;o principal a
+partir de alguns java "oops" no in&iacute;cio deste ano &eacute; que tudo &eacute; dez
+vezes mais dif&iacute;cil do que utilizando o Logo." 
+
+<p class=reply>
+"Start of paste from MW help<br>
+
+Turtlesown word<br>
+
+<p class=reply>
+Determina uma vari&aacute;vel para todos os "turtles" no projeto em
+andamento. Esta vari&aacute;vel pode ent&atilde;o ser definida para um valor
+espec&iacute;fico para cada "turtlle". Este comando tamb&eacute;m cria um novo
+uso primitivo da defini&ccedil;&atilde;o da palavra seguida pelo nome da vari&aacute;vel
+(por exemplo, turtlesown" velocidade cria um comando de ajuste de
+velocidade como em t1, ajuste de velocidade 12). H&aacute; dois modos de
+obter o valor de uma vari&aacute;vel de um "turtle" definido: voc&ecirc; pode
+informar a um "turtle" e utilizar o nome da vari&aacute;vel para reportar o
+valor ( por exemplo, t1, exibe a velocidade 12, neste exemplo) ou
+voc&ecirc; pode utilizar o nome do "turtle" seguido por 's 9 por exemplo,
+exibir t1's velocidade exibe 12).
+
+<p class=reply>
+Utilize "remove" para remover uma vari&aacute;vel de um "turtle". Isto
+remove a vari&aacute;vel nomeada para todos os "turtles" no projeto. Depois
+de uma instru&ccedil;&atilde;o "turtlesown" , o valor da vari&aacute;vel &eacute; ajustado para a
+lista vazia ( vide as tr&ecirc;s primeiras linhas do exemplo abaixo).
+
+<p class=reply>
+Turtlesown "speed<br>
+
+T1, show speed<br>
+
+(empty list)<br>
+
+t1, setspeed 10<br>
+
+t2, setspeed 20<br>
+
+t3, setspeed 5<br>
+
+t1, show speed<br>
+
+10<br>
+
+show t2's "speed<br>
+
+20<br>
+
+everyone [fd speed]<br>
+
+everyone [forever [fd speed]]<br>
+
+Choose Stop All from the Edit menu.<br>
+
+Remove "speed<br>
+
+End of paste from MW help"<br>
+
+<p class=reply>
+Para mim, e para muitos outros, a ess&ecirc;ncia da id&eacute;ia de um objeto &eacute;
+que ele une dados locais e comportamento. Voc&ecirc; pede a um objeto
+que se mova e se ele caminha, nada, ou voa depende do tipo de
+objeto que ele &eacute;, e de que m&eacute;todos de "movimento" foram
+associados a ele. O "turtlesown" d&aacute; aos objetos alguns dados locais
+( mas &eacute; estranho que todo objeto no sistema tenha o mesmo ajuste
+de vari&aacute;veis locais). Mas o comportamento &eacute; cr&iacute;tico. ( N&atilde;o ocorre que
+se pense que a heran&ccedil;a &eacute; cr&iacute;tica, embora ela sempre seja muito
+adequada).<br><br>
+
+<p class=reply>
+Sauda&ccedil;&otilde;es,<br>
+
+<p class=reply>
+-ken kahn (<a HREF="http://www.toontalk.com/">www.toontalk.com</a>)
+ 
+<p><hr size=1>
+
+<p class=autor>De Bill Kerr:
+
+
+<p>
+"A prop&oacute;sito, h&aacute; em algum lugar da Web um manual do Microworlds?"
+
+<p>
+Eu creio que voc&ecirc; pode fazer o download de uma c&oacute;pia demo do
+MW, com manual, em <a HREF="http://www.microworlds.com/">www.microworlds.com</a>
+
+<p>
+" Para mim, e para muitos outros, a ess&ecirc;ncia da id&eacute;ia de um objeto &eacute;
+que ele une dados locais e comportamento. Voc&ecirc; pede a um objeto
+que se mova e se ele caminha, nada, ou voa depende do tipo de
+objeto que ele &eacute;, e de que m&eacute;todos de "movimento" foram
+associados a ele. O "turtlesown" d&aacute; aos objetos alguns dados locais
+( mas &eacute; estranho que todo objeto no sistema tenha o mesmo ajuste
+de vari&aacute;veis locais). Mas o comportamento &eacute; cr&iacute;tico. ( N&atilde;o ocorre que
+se pense que a heran&ccedil;a &eacute; cr&iacute;tica, embora ela sempre seja muito
+adequada)."
+
+<p>
+Eu imagino que compreendo onde voc&ecirc; quer chegar. Eu me lembro,
+do meu curso de Java, do que &eacute; chamado poliformismo. Eu terei de
+aguardar at&eacute; que tenha tempo fazer um exame mais acurado em
+Toon Talk para tentar avaliar seus coment&aacute;rios acerca dos aspectos
+de sincroniza&ccedil;&atilde;o e de dados de oops que devem ser incorporados
+aos softwares infantis. Grato pelas respostas r&aacute;pidas &agrave;s minhas
+quest&otilde;es.
+
+<p>
+-- Bill Kerr
+
+
+<p><br>
+<hr size=1>
+
+<p class=autor>
+De Wen Su:
+
+<p>
+Eu creio que, se minha compreens&atilde;o &eacute; correta, que h&aacute; uma
+diferen&ccedil;a principal entre MW e TT aqui. Supondo-se os c&oacute;digos
+abaixo, ambos os subprocessos ( chamados C&iacute;rculo e Quadrado)
+que s&atilde;o lan&ccedil;ados tentam modificar uma vari&aacute;vel possu&iacute;da pelo
+processo corrente (chamado Pai), no MW, n&atilde;o h&aacute; nenhum
+mecanismo constru&iacute;do diretamente que permite que o processo Pai
+informe qual o processo lan&ccedil;ado que modifica a vari&aacute;vel primeiro,
+por exemplo. Claro que isto pode ser feito por usu&aacute;rios por outros
+meios. A mesma quest&atilde;o surge em um c&oacute;digo de driver de hardware
+de n&iacute;vel inferior, ou quando tanto o c&oacute;digo do processo ativado se
+interrompe ( o c&oacute;digo que &eacute; acionado para ser executado por um
+evento de interrup&ccedil;&atilde;o do hardware) e o c&oacute;digo de linha principal
+tenta modificar a mesma vari&aacute;vel. No TT, as solicita&ccedil;&otilde;es de
+altera&ccedil;&atilde;o de dados s&atilde;o enviados do C&iacute;rculo e do Quadrado ao Pai e
+as solicita&ccedil;&otilde;es s&atilde;o colocadas em uma fila, e o processo Pai pode
+informar qual das requisi&ccedil;&otilde;es de modifica&ccedil;&atilde;o de dados vem em
+primeiro lugar atrav&eacute;s da seu m&eacute;todos constru&iacute;dos de passagem de
+mensagens (p&aacute;ssaros).
+
+<p>
+Este coment&aacute;rio acima ( se correto), n&atilde;o implica que o MW &eacute; inferior,
+tanto quanto se considere seu valor educacional, IMHO. Talvez os
+desenvolvedores do MW n&atilde;o creiam que esta caracter&iacute;stica seja
+importante para as crian&ccedil;as estudantes. Algumas pessoas ( Ken
+Kahn?) podem acreditar que isto &eacute; muito importante (eu suponho que
+esta &eacute; a raz&atilde;o pela qual ele fala acerca da quest&atilde;o do acesso de
+"vari&aacute;vel global"); outras podem n&atilde;o crer nisso.
+
+<p>
+Sauda&ccedil;&otilde;es,<br>
+Wen
+
+
+<p><hr size=1>
+
+<p class=autor>
+De Ken Kahn:
+
+<p>
+Wen fornevceu um bom exemplo no MicroWorlds do meu ponto
+acerca dos perigos da concorr&ecirc;ncia em linguagens com estado
+compartilhado ( a vari&aacute;vel possu&iacute;da pelo processo "pai" em sua
+mensagem). Obrigado.
+
+<p>
+Sua quest&atilde;o &eacute; acerca de qu&atilde;o importante &eacute; esta quest&atilde;o. N&atilde;o me
+surpreederia se muitos leitores deste grupo de not&iacute;cias tiverem
+ensinado MicroWorlds por v&aacute;rios anos e nunca tiverem visto uma
+crian&ccedil;a rod&aacute;-lo. Por que dever&iacute;amos nos preocupar? Uma raz&atilde;o &eacute; o
+princ&iacute;pio que n&atilde;o dever&iacute;amos dar &agrave;s crian&ccedil;as ferramentas de
+programa&ccedil;&atilde;o que n&oacute;s, adultos, n&atilde;o usar&iacute;amos. Outra raz&atilde;o &eacute; que as
+crian&ccedil;as que fazem a tarefa se tornam ambiciosas e podem come&ccedil;ar
+a explorar que tipos de programa&ccedil;&atilde;o paralela elas podem fazer no
+MicroWorlds, chegar&atilde;o a estes problemas. Estes problemas s&atilde;o de
+dif&iacute;cil solu&ccedil;&atilde;o para que programadores os detectem, localizem, e
+consertem. E ainda pior &eacute; que o MicroWorlds n&atilde;o d&aacute; aos usu&aacute;rios
+ferramentas para lidar com estes problemas (chaves ou regi&otilde;es
+cr&iacute;ticas, por exemplo).
+
+<p>
+Sauda&ccedil;&otilde;es,<br>
+-ken kahn (<a HREF="http://www.toontalk.com/">www.toontalk.com</a>)
+
+
+<p><hr size=1>
+
+<p class=autor>
+De Brian Harvey:
+
+<p>
+&quot;Ken Kahn&quot; &lt;<a
+HREF="mailto:KenKahn@ToonTalk.com">KenKahn@ToonTalk.com</a>&gt; escreveu:<br>
+" E ainda pior &eacute; que o MicroWorlds n&atilde;o d&aacute; aos usu&aacute;rios ferramentas
+para lidar com estes problemas (chaves ou regi&otilde;es cr&iacute;ticas, por
+exemplo)".
+
+<p>
+Eu n&atilde;o sei o que o MW faz, mas o StarLogo tenta garantir resultados
+corretos sem que o usu&aacute;rio esteja atento para as quest&otilde;es de
+sincroniza&ccedil;&atilde;o, por exemplo, garantindo sempre que se est&aacute; num IF, o
+teste e a primeira a&ccedil;&atilde;o na sequ&ecirc;ncia de instru&ccedil;&atilde;o condicional s&atilde;o
+realizados atomicamente.
+
+
+<p><hr size=1>
+
+<p class=autor>
+De Ken Kahn:
+
+<p class=reply>
+Brian Harvey escreveu na mensagem 
+
+<p class=reply>
+"Eu n&atilde;o sei o que o MW faz, mas o StarLogo tenta garantir
+resultados corretos sem que o usu&aacute;rio esteja atento para as
+quest&otilde;es de sincroniza&ccedil;&atilde;o, por exemplo, garantindo sempre que se
+est&aacute; num IF, o teste e a primeira a&ccedil;&atilde;o na sequ&ecirc;ncia de instru&ccedil;&atilde;o
+condicional s&atilde;o realizados atomicamente."
+
+<p class=reply>
+Isto provavelmente funciona bem em uma linguagem SIMD como o
+StarLogo. Mas a atomicidade &eacute; perigosa em geral, pois ela pode
+levar &agrave; uma situa&ccedil;&atilde;o sem sa&iacute;da. Aqui, se o teste condicional &eacute; um
+procedimento, chamar ent&atilde;o aquele procedimento pode por sua vez
+acessar alguma coisa que havia sido fechado por esta regra de
+atomicidade oculta. E ent&atilde;o o progresso se interrompe.
+
+<p class=reply>
+Sauda&ccedil;&otilde;es,<br>
+-ken kahn (www.toontalk.com)
+
+<p><hr size=1>
+
+<p class=autor>
+De Tom Woods:
+
+<p>
+Para mim, a programa&ccedil;&atilde;o textual permite que os estudantes
+expressem seus pensamentos de maneiras similares &agrave; linguagem
+falada. A leitura, a escrita, a fala e a escuta s&atilde;o, necessariamente,
+seriais. Isto n&atilde;o &eacute; uma coisa m&aacute;.
+
+<p>
+Embora eu n&atilde;o esteja familiarizado com o Toon Talk, eu posso
+imaginar a programa&ccedil;&atilde;o visual como sendo similar a outros
+processos visuais criativos. Nas artes visuais, a presen&ccedil;a de uma
+linguagem &eacute; ineg&aacute;vel. Com ela, os artistas podem expressar ricos
+pensamentos paralelos atrav&eacute;s de imagens. Tamb&eacute;m isto n&atilde;o &eacute; uma
+coisa indesej&aacute;vel.
+
+<p>
+Eu me preocupo com qualquer implica&ccedil;&atilde;o que uma forma &eacute; inferior a
+outra, que foi a mensagem que eu recebi quando se disse que o
+Logo &eacute; "tecnologia antiga". Ambas as formas de express&atilde;o s&atilde;o
+importantes. Uma n&atilde;o &eacute; inferior &agrave; outra -apenas diferente.
+
+<p>
+Para aqueles dentre voc&ecirc;s que possam se lembrar de minha
+participa&ccedil;&atilde;o muito mais ativa na lista h&aacute; alguns anos atr&aacute;s, ol&aacute;
+novamente. Eu terminei a escola e fui preso na cadeia. N&atilde;o se
+preocupem, eles me libertaram no final do dia. Eu tenho a
+maravilhosamente criativa tarefa de come&ccedil;ar uma escola, onde n&atilde;o
+havia nada. Uma coisa que eu espero fazer em breve &eacute; conseguir
+que alguns de meus alunos construam computadores a partir de
+componentes usados e entrem na programa&ccedil;&atilde;o. Muitas das
+discuss&otilde;es aqui parecem envolver crian&ccedil;as. Teria algu&eacute;m
+experi&ecirc;ncia com a utiliza&ccedil;&atilde;o do Logo com estudantes adultos?
+
+<p>
+Sauda&ccedil;&otilde;es,<br>
+Tom Woods 
+
+<p><hr size=1>
+
+<p class=autor>
+De Ken Kahn:
+
+<p class=reply>
+Tom &amp; Adele Woods escreveu:
+
+<p class=reply>
+"Para mim, a programa&ccedil;&atilde;o textual permite que os estudantes
+expressem seus pensamentos de maneiras similares &agrave; linguagem
+falada. A leitura, a escrita, a fala e a escuta s&atilde;o, necessariamente,
+seriais. Isto n&atilde;o &eacute; uma coisa m&aacute;."
+
+<p class=reply>
+" Embora eu n&atilde;o esteja familiarizado com o Toon Talk, eu posso
+imaginar a programa&ccedil;&atilde;o visual como sendo similar a outros
+processos visuais criativos. Nas artes visuais, a presen&ccedil;a de uma
+linguagem &eacute; ineg&aacute;vel. Com ela, os artistas podem expressar ricos
+pensamentos paralelos atrav&eacute;s de imagens. Tamb&eacute;m isto n&atilde;o &eacute; uma
+coisa indesej&aacute;vel.
+
+<p class=reply>
+Eu me preocupo com qualquer implica&ccedil;&atilde;o que uma forma &eacute; inferior a
+outra, que foi a mensagem que eu recebi quando se disse que o
+Logo &eacute; "tecnologia antiga". Ambas as formas de express&atilde;o s&atilde;o
+importantes. Uma n&atilde;o &eacute; inferior &agrave; outra -apenas diferente."
+
+<p class=reply>
+Eu concordo, o texto &eacute; bom. Mas eu como eu escrevi em outra parte
+desta discuss&atilde;o com rela&ccedil;&atilde;o a se alguns paradigmas de
+programa&ccedil;&atilde;o s&atilde;o superiores a outros - h&aacute; uma necessidade de
+prioridades aqui. Se um professor est&aacute; ensinando apenas uma
+linguagem em um curso ela deveria ser visual ou textual? Se um pai
+est&aacute; comprando uma linguagem de programa&ccedil;&atilde;o para seus filhos,
+qual delas &eacute; a melhor primeira linguagem? Em um mundo ideal, eu
+adoraria ver as crian&ccedil;as aprenderem ambos os tipos de linguagem. (
+E tamb&eacute;m as linguagens procedurais e as concorrentes orientadas
+para objetos.)
+
+<p class=reply>
+Talvez eu deva reformular a quest&atilde;o da obsol&ecirc;ncia do Logo como "O
+Logo &eacute; ainda a melhor primeira linguagem a ser aprendida pelas
+crian&ccedil;as? ". Eu n&atilde;o creio. Eu acho que as linguagens
+visuais/animadas s&atilde;o mais atraentes para as crian&ccedil;as e mais f&aacute;ceis
+de aprender. Eu penso que linguagens concorrentes orientadas para
+objetos proporcionam uma ferramenta de pensamento mais natural e
+mais poderosa do que as linguagens procedurais sequenciais.
+
+<p class=reply>
+Se concordam comigo, ent&atilde;o a pr&oacute;xima quest&atilde;o &eacute; se o Logo &eacute; a
+segunda melhor linguagem a ser aprendida. Eu me sinto menos
+seguro acerca desse ponto mas imagino se uma crian&ccedil;a que tenha
+se tornado proficiente no Toon Talk n&atilde;o esteja, ao inv&eacute;s, pronta para
+o Java ou Scheme.
+
+<p class=reply>
+Sauda&ccedil;&otilde;es,<br>
+-ken kahn
+
+<p><hr size=1>
+
+<p class=autor>
+Ken Kahn escreveu:
+
+<p>
+"Eu acho que as linguagens visuais/animadas são mais atraentes
+para as crianças e mais fáceis de aprender."
+
+<p>
+Eu penso que a melhor solução para este problema é um sistema
+híbrido, no qual as coisas que são facilmente expressas
+graficamente possam sê-lo, mas também, que tudo possa ser
+expresso textualmente. O Schme Paint de Mike Eisenberg é ainda o
+melhor exemplo do que eu quero dizer. Há o programa gráfico
+padrão, com suas ferramentas de apontar e clicar, mas você também
+pode escrever programas Scheme, e na verdade você pode fazer
+novas ferramentas de apontar e clicar, implementando-as como
+programas Scheme.
+
+<p>
+O Microworlds é uma tentativa decente feita pela comunidade Logo
+para construir alguma coisa com estas linhas, embora esteja longe
+da perfeição. ( Eu estou avaliando a perfeição apenas baseada na
+questão de ser intercambiável o texto e as interfaces gráficas.)
+
+<p>
+Talvez o Toon talk o seja, também, desde que você diz que ele
+produz códigos Java. Se o código Java não é convoluto também ( eu
+ainda não tive chance de jogar com ele-eu tentarei fazê-lo em
+breve!) e se você pode usar o código Java para criar novas
+habilidades no GUI, eu ficarei satisfeito, então.
+
+<p>
+Btw, dizer que a concorrência é "natural" para as pessoas levanta
+muitas questões para mim. Realmente, eu creio que se você está
+simulando um mundo de atores independentes, parece natural
+programá-los separadamente. Mas meus alunos de Ciência da
+Computação certamente não consideram natural os problemas de
+sincronização que surgem se aqueles atores querem compartilhar
+estados!
+
+<p>
+(E finalmente, você e outras pessoas mencionaram que pessoas
+diferentes têm estilos de aprendizagem diversos; parte de mim
+ocasionalmente não deseja fazer animações, e eu sou mais inclinado
+a saber quantas combinações uma simples fechadura tem. Eu
+imagino que eu seja estranho.J)
+&nbsp; :-)
+
+<hr size=1>
+<a class="menu" href="toontalk.html">início</a> -
+<a class="menu" href="search.html">busca</a> -
+<a class="menu" href="buy.html">adquira</a> -
+<a class="menu" href="doc.html">manual</a> -
+<a class="menu" href="whatsnew.html">novidades</a> -
+<a class="menu" href="faq.html">dúvidas</a> -
+<a class="menu" href="support.html">suporte</a> -
+<a class="menu" href="free.html">download</a> -
+<a class="menu" href="press.html">imprensa</a> -
+<a class="menu" href="address.html">contato</a>
+
+</td></tr></table>
+</div>
+</body></html>
+
+<!--  FuturArte Editora Ltda.                                     Divertire  -->

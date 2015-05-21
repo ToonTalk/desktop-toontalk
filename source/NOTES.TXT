@@ -1,0 +1,41 @@
+Ken Kahn's notes:
+
+Dec 27th 1993
+Instructions (better baggage than "tutorials") can work by having
+signs attached to objects (a la Alice in Wonderland) that say things
+like "pick me up" or "copy me".  When action is done, then sign goes
+away and a new sign appears.  Internally actions could be the same as
+events and piggy back off of that mechanism to recognize when event is
+done and where to place next sign.  Could run off a semantic log of
+all events (even those that happen when no body cubby).
+
+Signs vs visual clues.  Consider each event:
+
+SELECT_STACK_ITEM -- stack could blink or change size (in a cycle) a
+                     bit or ...
+GRASP_COPIER -- tool can blink, etc.
+COPY_APPLY -- target can blink, etc.
+COPY_NUMBER_APPLY -- target blinks
+RELEASE_COPIER -- table top blinks or item in hand blinks
+GRASP_ITEM -- item blinks
+RELEASE_ITEM --  table top blinks or item in hand blinks
+RELEASE_ITEM_ON -- hole blinks
+NUMBER_APPLY -- target blinks
+GRASP_VACUUM -- 
+VACUUM_APPLY --
+VACUUM_APPLY_RESTORE -- table top blinks (but not used to indicate release)
+RELEASE_VACUUM --
+CHANGE_NUMBER -- avoid this or a sign saying "type 123"
+NEW_CUBBY_SIZE -- ditto
+HATCH_BIRD -- nest blinks so set it down
+GIVE_BIRD_ITEM -- bird blinks while item in hand
+DROP_ITEM_IN_TRUCK -- truck blinks (when done it "blinks" in another fashion)
+DESTROY_HOUSE -- just now it is special case of use vacuum
+
+Dec 28th.
+Consider using effects like the way GameBoy Link enters a dream by
+making the screen go wavy.  Just shift lines a few pixels...
+
+Dec 29th.
+Combine instruction idea with Markus' idea of museums.  Each house can
+have a sign saying (directions for building "X").

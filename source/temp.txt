@@ -1,0 +1,208 @@
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. Then it will appear
+in the ToonTalk remote control for the clipboard. You can find the
+clipboard remote control on page 30 of the Sensor notebook. Just use
+Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. 
+   The following is a box with 3 holes. The hole labeled with "Right Speed"
+contains a remote control for the speed towards the right. The hole
+labeled with "Up Speed" contains a remote control for the speed towards
+the top. The third hole contains a rectangle with one picture on top.
+The first thing on top is something.
+   What follows is in a special code and was produced by ToonTalk(tm) 
+Beta 081299. To learn more about ToonTalk see www.toontalk.com.
+6BStartToonTalkEncoding:
+IP8AAwAMUmlnaHQgU3BlZWQAJP8AAAAAKwAC+AAADP8AADYiAAABAPgBAAz/AAA2Ji4ALQAA
+AAkAMP8QAEJvdW5jZSBvZmYNCmVkZ2UAAyD/AAYAAAD/tgMAACsAAAz/BAANIvQC3AgAAAAA
+A1VwACT/0wEAACsAAfkAAAlVcCBzcGVlZAAk/wAAAAArAAP5AAABAAz/BgANIr0AvQAAAAAA
+AAD/AAAAACsABf8w/xAAdXANYm9yZGVyDWJvdW5jZf8CIP8ABgAAAP+2AwAAKwAADP8DAA0i
+9ALcCAAAAAADVXAAAP8BAAAAKwEJVXAgc3BlZWQAJP8AAAAAKwEC/wEADP8CAA0ivQC9AAAA
+AAAAAP8AAAAAKwAgVv8BAAH/AAEE/wACAAD/AAcU/wARDf94EQ3/LQkAA/8AF////yD/AAYA
+AAD/MgAAACsAAAz/BQANIvQC3AgAAAAAA1VwACT/0wEAACsAAfkAAAlVcCBzcGVlZAAk/wAA
+AAArAAP5AAABAAz/BgANIr0AvQAAAAAAAAD/AAAAACsABf8w/xIAZG93bg1ib3JkZXINYm91
+bmNl/wIg/wAGAAAA/zIAAAArAAAM/wIADSL0AtwIAAAAAANVcAAA/wEAAAArAQlVcCBzcGVl
+ZAAk/wAAAAArAQL/AQAM/wMADSK9AL0AAAAAAAAA/wAAAAArACBW/wEAAf8AAQT/AAIAAP8A
+BxT/ABEN/3gRDf8tCQAD/wAX////IP8ABgAAAP8yAAAAKwAADP8FAA0i9ALcCAAAAAAGUmln
+aHQAJP8MAgAAKwAA+QAADFJpZ2h0IFNwZWVkACT/AAAAACsAAvkAAAEADP8GAA0ivQC9AAAA
+AAAAAP8AAAAAKwAF/zD/EgBsZWZ0DWJvcmRlcg1ib3VuY2X/AiD/AAYAAAD/MgAAACsAAAz/
+BAANIvQC3AgAAAAABlJpZ2h0AAD/AQAAACsBDFJpZ2h0IFNwZWVkACT/AAAAACsBAv8BAAz/
+AwANIr0AvQAAAAAAAAD/AAAAACsAIFb/AQAB/wABBP8AAgAA/wAHFP8AEQ3/eBEN/y0JAAP/
+ABf///8g/wAGAAAA/7YDAAArAAAM/wQADSL0AtwIAAAAAAZSaWdodAAk/wwCAAArAAD5AAAM
+UmlnaHQgU3BlZWQAJP8AAAAAKwAC+QAAAQAM/wYADSK9AL0AAAAAAAAA/wAAAAArAAX/MP8T
+AHJpZ2h0DWJvcmRlcg1ib3VuY2X/AiD/AAYAAAD/tgMAACsAAAz/AwANIvQC3AgAAAAABlJp
+Z2h0AAD/AQAAACsBDFJpZ2h0IFNwZWVkACT/AAAAACsBAv8BAAz/AgANIr0AvQAAAAAAAAD/
+AAAAACsAIFb/AQAB/wABBP8AAgAA/wAHFP8AEQ3/eBEN/y0JAAP/ABf///8JVXAgU3BlZWQA
+JP8AAAAAKwAD+QAAAPgCAAz/AAA8MvcC7gIBAPkAAAAA.
+This is the end of the code for the ToonTalk object. 
+
+
+
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. Then it will appear
+in the ToonTalk remote control for the clipboard. You can find the
+clipboard remote control on page 30 of the Sensor notebook. Just use
+Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. 
+   The following is a rectangle with one picture on top. The first thing on
+top is a picture of a ball. The first thing on the back is a picture of
+a ball. The first thing on the back is a pad with the text "Bounce off 
+edge" on it. And the second thing on the back is a box with 6 holes. The
+first hole contains the number 950. The second hole contains a scale
+tipped to the left. The hole labeled with "Up" contains a remote control
+for the distance from the bottom side. The hole labeled with "Up speed"
+contains a remote control for the speed towards the top. The hole
+labeled with "" contains a balanced scale. The sixth hole contains the
+number 0. And the third thing on the back is a robot who wants a box
+with 6 holes. The first hole contains the number 950. The second hole
+contains a scale tipped to the right. The hole labeled with "Up"
+contains any number. The hole labeled with "Up speed" contains any
+number (for example, a remote control for the speed towards the right).
+The hole labeled with "" contains a scale tipped to the left. The sixth
+hole contains the number 0. If given a box like that he will move to the
+stack of numbers. And pick up a number. And push 'x' to change what he
+is holding. And push '-' to change what he is holding. And drop it on
+the fourth hole inside his box. And the fourth thing on the back is a
+box with 6 holes. The first hole contains the number 50. The second hole
+contains a scale tipped to the right. The hole labeled with "Up"
+contains a remote control for the distance from the bottom side. The
+hole labeled with "Up speed" contains a remote control for the speed
+towards the top. The hole labeled with "" contains a balanced scale. The
+sixth hole contains the number 0. And the fifth thing on the back is a
+robot who wants a box with 6 holes. The first hole contains the number
+50. The second hole contains a scale tipped to the left. The hole
+labeled with "Up" contains any number. The hole labeled with "Up speed"
+contains any number (for example, a remote control for the speed towards
+the right). The hole labeled with "" contains a scale tipped to the
+right. The sixth hole contains the number 0. If given a box like that he
+will move to the stack of numbers. And pick up a number. And push 'x' to
+change what he is holding. And push '-' to change what he is holding.
+And drop it on the fourth hole inside his box. And the sixth thing on
+the back is a box with 6 holes. The first hole contains the number 50.
+The second hole contains a scale tipped to the right. The hole labeled
+with "Right" contains a remote control for the distance from the left
+side. The hole labeled with "Right Speed" contains a remote control for
+the speed towards the right. The hole labeled with "" contains a
+balanced scale. The sixth hole contains the number 0. And the seventh
+thing on the back is a robot who wants a box with 6 holes. The first
+hole contains the number 50. The second hole contains a scale tipped to
+the left. The hole labeled with "Right" contains any number. The hole
+labeled with "Right Speed" contains any number (for example, a remote
+control for the speed towards the right). The hole labeled with ""
+contains a scale tipped to the right. The sixth hole contains the number
+0. If given a box like that he will move to the stack of numbers. And
+pick up a number. And push 'x' to change what he is holding. And push
+'-' to change what he is holding. And drop it on the fourth hole inside
+his box. And the eighth thing on the back is a box with 6 holes. The
+first hole contains the number 950. The second hole contains a scale
+tipped to the left. The hole labeled with "Right" contains a remote
+control for the distance from the left side. The hole labeled with
+"Right Speed" contains a remote control for the speed towards the right.
+The hole labeled with "" contains a balanced scale. The sixth hole
+contains the number 0. And the ninth thing on the back is a robot who
+wants a box with 6 holes. The first hole contains the number 950. The
+second hole contains a scale tipped to the right. The hole labeled with
+"Right" contains any number. The hole labeled with "Right Speed"
+contains any number (for example, a remote control for the speed towards
+the right). The hole labeled with "" contains a scale tipped to the
+left. The sixth hole contains the number 0. If given a box like that he
+will move to the stack of numbers. And pick up a number. And push 'x' to
+change what he is holding. And push '-' to change what he is holding.
+And drop it on the fourth hole inside his box. And the second thing on
+the back is a picture of a ball. The first thing on the back is a pad
+with the text "bounce  off other  things" on it. And the second thing on
+the back is a box with 2 holes. The hole labeled with "Up Collide?"
+contains a remote control for the up/down movement collision detector.
+The hole labeled with "Up Speed" contains a remote control for the speed
+towards the top. And the third thing on the back is a robot who wants a
+box with 2 holes. The hole labeled with "Up collide?" contains a remote
+control for the up/down movement collision detector. The hole labeled
+with "Up speed " contains any number. If given a box like that he will
+move to the stack of numbers. And pick up a number. And push 'x' to
+change what he is holding. And push '-' to change what he is holding.
+And drop it on the second hole inside his box. And push '+' while
+pointing to the first hole inside his box. And the fourth thing on the
+back is a box with 2 holes. The hole labeled with "Right Collide?"
+contains a remote control for the left/right movement collision
+detector. The hole labeled with "Right Speed" contains a remote control
+for the speed towards the right. And the fifth thing on the back is a
+robot who wants a box with 2 holes. The hole labeled with "Right
+Collide? " contains a remote control for the left/right movement
+collision detector. The hole labeled with "Right Speed" contains any
+number. If given a box like that he will move to the stack of numbers.
+And pick up a number. And push 'x' to change what he is holding. And
+push '-' to change what he is holding. And drop it on the second hole
+inside his box. And push '+' while pointing to the first hole inside his
+box. And the third thing on the back is a pad with the text "bouncing"
+on it. And the fourth thing on the back is a rectangle. The first thing
+on the back is a pad with the text "Set  speed" on it. And the second
+thing on the back is a box with 4 holes. The first hole contains the
+number 0. The second hole contains a balanced scale. The hole labeled
+with "Right Speed" contains a remote control for the speed towards the
+right. The hole labeled with "set speed" contains the number 400. And
+the third thing on the back is a robot who wants a box with 4 holes. The
+first hole contains the number 0. The second hole contains a balanced
+scale. The hole labeled with "Right Speed" contains any number (for
+example, a remote control for the speed towards the top). The hole
+labeled with "set speed" contains any number. If given a box like that
+he will pick up his box. And drop it. And grab a magic wand. And use the
+magic wand on the fourth hole inside his box. And push '=' to change
+what he is holding. And drop what he just copied on the third hole
+inside his box. And release the magic wand. And the fourth thing on the
+back is a box with 4 holes. The first hole contains the number 0. The
+second hole contains a balanced scale. The hole labeled with "Up Speed"
+contains a remote control for the speed towards the top. The hole
+labeled with "set speed" contains the number 400. And the fifth thing on
+the back is a robot who wants a box with 4 holes. The first hole
+contains the number 0. The second hole contains a balanced scale. The
+hole labeled with "Up Speed" contains any number (for example, a remote
+control for the speed towards the top). The hole labeled with "set
+speed" contains any number. If given a box like that he will pick up his
+box. And drop it. And grab a magic wand. And use the magic wand on the
+fourth hole inside his box. And push '=' to change what he is holding.
+And drop what he just copied on the third hole inside his box. And
+release the magic wand.
+   What follows is in a special code and was produced by ToonTalk(tm) 
+Beta 081299. To learn more about ToonTalk see www.toontalk.com.
+6BStartToonTalkEncoding:
++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
+.
+This is the end of the code for the ToonTalk object. 

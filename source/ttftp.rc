@@ -1,0 +1,46 @@
+#include "toontalk.h"
+
+STRINGTABLE { 
+#include "strings.h"
+#include "static.rc"
+}
+
+tt_icon ICON ttftp.ico
+
+1 VERSIONINFO 
+FILEVERSION 1,46,3132,00
+PRODUCTVERSION 3,00,0,0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0xaL
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904e4"
+  {
+   VALUE "Comments", "This implements the WebLabs ToonTalk FTP Publishing Tool 3.132. Copyright \251 Ken Kahn 1992-2005. All rights reserved.\0"
+   VALUE "CompanyName", "Animated Programs\0"
+   VALUE "FileDescription", "ToonTalk FTP Applet\0"
+   VALUE "FileVersion", "46.3132.0\0"
+   VALUE "InternalName", "ToonTalk FTP\0"
+   VALUE "LegalCopyright", "Copyright \251 Ken Kahn 1992-2005\0"
+   VALUE "LegalTrademarks", "ToonTalk is a registered trademark of Animated Programs\0"
+   VALUE "OriginalFilename", "TT_FTP.exe\0"
+   VALUE "ProductName", "ToonTalk 3\0"
+   VALUE "ProductVersion", "46.3132.0\0"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x409, 1252
+ }
+
+}
+
+
+
+

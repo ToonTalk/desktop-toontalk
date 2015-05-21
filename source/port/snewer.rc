@@ -1,0 +1,215 @@
+ IDS_START_TOONTALK,
+"Iniciar o ToonTalk"
+ IDS_CDROM_MAY_BE_SLOW,
+"Como o ToonTalk não foi instalado no disco rígido, pode ser que ele funcione devagar ou seja lento ao iniciar. Se estiver muito devagar, reinstale o ToonTalk de novo e escolha 'padrão' ou 'personalizada'."
+
+IDM_SET_OPTIONS, // doesn't always fit so edited on 280700
+//"Ajustar as Opções"
+"Opções"
+
+IDM_HELP,
+"Ajuda"
+
+IDM_ABOUT,
+"Sobre"
+
+IDS_DOC_SUBDIRECTORY_NAME,
+//"Português"
+"BR"
+
+IDC_OPTION_CAPTION,
+"Escolha AVANÇAR após responder a pergunta clicando em um dos pequenos círculos."
+IDC_OPTION_BACK_TEXT,
+"< Voltar <"
+IDC_OPTION_NEXT_TEXT,
+"> Avançar >"
+IDC_OPTION_CANCEL_TEXT,
+"Cancelar"
+IDC_OPTION_DONE_TEXT,
+"Concluído"
+
+IDS_OPTIONS_CHANGED_TEXT,
+"As configurações de opção serão mudadas como solicitado se você clicar em CONCLUÍDO. Execute isto de novo se quiser mudá-las ou restaurá-las."
+IDS_OPTIONS_CHANGED_TEXT2,
+"Você também pode ajustar as opções para um único jogador usando a agenda na página 10 da sua agenda principal do ToonTalk."
+IDS_OPTIONS_RESTORED_TEXT,
+"As configurações de opção serão restauradas como solicitado se você clicar em CONCLUÍDO. Execute isto de novo se quiser mudá-las."
+
+IDC_OPTIONS_CHANGED_CAPTION,
+"Clique em CONCLUÍDO para aceitar todas as suas mudanças."
+
+
+IDS_OPTION_NOT_INSTALLED,
+"(Não disponível uma vez que não está instalado.)"
+
+IDS_OPTION_AVAILABLE_ONLY_ON_CDROM,
+"(Disponível somente em CD-ROM.)"
+
+IDS_OPTION_AVAILABLE_ONLY_FOR_32BIT_VERSION,
+"(Disponível somente com a versão de 32-bit.)"
+
+ IDS_OPTION1_QUESTION,
+"O que você quer fazer?"
+ IDS_OPTION1_EXPLANATION,
+"Você escolhe se quiser restaurar as opções para a forma que eram quando o ToonTalk foi instalado ou mudar as opções atuais respondendo algumas questões."
+ IDS_OPTION1_EXPLANATION+1,
+"Clique em AVANÇAR depois de fazer a escolha."
+ IDS_OPTION1_ANSWER1,
+"Não quero mudar nada."
+ IDS_OPTION1_ANSWER2,
+"Quero restaurar as configurações originais."
+ IDS_OPTION1_ANSWER3,
+"Quero mudar algumas configurações de opções para todos os jogadores do ToonTalk neste computador."
+ IDS_OPTION1_ANSWER4,
+"Quero mudar algumas configurações de opções para cada novo jogador do ToonTalk neste computador."
+
+/*
+ IDS_OPTION2_QUESTION,
+"Qual a versão do ToonTalk você quer executar?"
+ IDS_OPTION2_EXPLANATION,
+"Programas de 32-bit são tipicamente mais capazes, mais robustos e rápidos. Em poucas máquinas (na maioria, as mais velhas) a versão de 16-bit funciona melhor." 
+ IDS_OPTION2_EXPLANATION+1,
+"Existem algumas coisas que só a versão de 32-bit pode fazer. Como funcionar com imagens de alta resolução. Ou ter o Marty falando. Ou usar  joystick."
+ IDS_OPTION2_ANSWER1,
+"Quero a versão de 16-bit. As imagens são quadriculadas, mas o ToonTalk é rápido."
+ IDS_OPTION2_ANSWER2,
+"Quero a versão de 32-bit de baixa resolução. As imagens são quadriculadas, mas o ToonTalk é rápido." 
+ IDS_OPTION2_ANSWER3,
+"Quero a versão de 32-bit de alta resolução. As imagens são claras, mas o ToonTalk pode ser lento."
+*/
+
+IDS_OPTION2_QUESTION,
+  "Qual resolução você deseja para o ToonTalk?"
+ IDS_OPTION2_EXPLANATION,
+  "Se aumentar a resolução, as imagens ficarão mais nítidas e você terá uma área de trabalho maior, mas o ToonTalk poderá rodar mais vagarosamente e a animação poderá ficar ruim. "
+ IDS_OPTION2_EXPLANATION+1,
+  "Sugiro que você tente uma resolução diferente até encontrar a melhor para seu computador. "
+ IDS_OPTION2_ANSWER1,
+  "Quero que o ToonTalk funcione com 320x240 píxeis. Tudo bem se as imagens ficarem ruins, uma vez que quero que o ToonTalk funcione em um modo mais rápido." 
+ IDS_OPTION2_ANSWER2,
+   "Quero que o ToonTalk funcione com 640x480 píxeis. Ainda quero que o ToonTalk funcione em um modo mais rápido, mas com as imagens não tão ruins. "
+ IDS_OPTION2_ANSWER3,
+   "Quero que o ToonTalk funcione com 800x600 píxeis. Quero que as imagens fiquem nítidas e quero mais espaço quando sento no chão. Verei se o ToonTalk está lento. "
+ IDS_OPTION2_ANSWER4,
+   "Quero que o ToonTalk funcione com 1024x768 píxeis. Quero imagens mais nítidas e ainda mais espaço. "
+ IDS_OPTION2_ANSWER5,
+   "Quero que o ToonTalk funcione com 1152x864 píxeis. Quero mais espaço. "
+ IDS_OPTION2_ANSWER6,
+   "Quero que o ToonTalk funcione com 1280x1024 píxeis. Verei se o ToonTalk é rápido o suficiente, uma vez que quero todo esse espaço. "
+ IDS_OPTION2_ANSWER7,
+   "Quero que o ToonTalk funcione com 1600x1200 píxeis. Quero ver se meu computador funciona nessa resolução e, caso isso aconteça, ficará rápido o suficiente. "
+
+ IDS_OPTION3_QUESTION,
+"Qual é o tamanho da janela que você quer?"
+ IDS_OPTION3_EXPLANATION,
+"A maioria das pessoas prefere a versão de tela cheia do ToonTalk. Em alguns computadores isso não funciona bem."
+ IDS_OPTION3_EXPLANATION+1,
+"O ToonTalk pode funcionar em qualquer tamanho de janela, mas múltiplos de 320 por 240 são os mais rápidos. Se você executar em uma janela de tamanho maior que a sua tela, vai ficar parecido com o modo de tela cheia. Mas pode ficar mais lento ou diferente do que o modo real de tela cheia."
+ IDS_OPTION3_ANSWER1,
+"Quero a versão de tela cheia."
+ IDS_OPTION3_ANSWER2,
+"Quero executar o ToonTalk com o menor tamanho da janela."
+ IDS_OPTION3_ANSWER3,
+"Quero executar o ToonTalk com o dobro do tamanho da janela menor."
+ IDS_OPTION3_ANSWER4,
+"Quero executar o ToonTalk com três vezes o tamanho da janela menor."
+ IDS_OPTION3_ANSWER5,
+"Quero executar o ToonTalk com quatro vezes o tamanho da janela menor."
+
+ IDS_OPTION4_QUESTION,
+"Você quer tornar o botão direito do mouse mais útil?"
+ IDS_OPTION4_EXPLANATION,
+"Algumas pessoas misturam muito a direita com a esquerda. Outras podem trabalhar mais rápido usando múltiplos botões do mouse."
+ IDS_OPTION4_EXPLANATION+1,
+"O ToonTalk pode lidar com todos os botões do mouse do mesmo jeito (exceto quando o helicóptero estiver voando) ou usar o convencional onde o botão esquerdo significa pegar ou soltar e o botão direito significa usar ou girar."
+ IDS_OPTION4_ANSWER1,
+"Quero simplificar e não me preocupar com qual botão do mouse estou apertando."
+ IDS_OPTION4_ANSWER2,
+"Quero ativar e desativar as ferramentas do ToonTalk clicando com o botão direito do mouse."
+ IDS_OPTION4_ANSWER3,
+"Quero ativar e desativar as ferramentas do ToonTalk clicando com o botão direito do mouse. Também quero usar o botão do meio como se digitasse '-'."
+
+ IDS_OPTION5_QUESTION,
+"Você quer mudar a maneira de falar do Márcio?"
+ IDS_OPTION5_EXPLANATION,
+"O Márcio pode falar, usar os balões de fala como quadrinhos, ou ambos. Quando usa balões de fala, ele pode deixar pouco ou muito tempo entre os balões."
+// IDS_OPTION5_EXPLANATION+1,
+//"Observe que o Márcio pode falar somente se o ToonTalk for instalado a partir do CD-ROM."
+IDS_OPTION5_EXPLANATION+1, //updated on 270999 needs translation
+  "Observe que o Márcio pode falar apenas vozes instaladas em seu computador. O CD-ROM do ToonTalk instala uma voz. "
+ IDS_OPTION5_ANSWER1,
+"Quero que o Márcio fale e use os balões de fala."
+ IDS_OPTION5_ANSWER2,
+"Quero que o Márcio fale e não use os balões de fala."
+ IDS_OPTION5_ANSWER3,
+"Não quero que o Márcio fale. Cada balão deve permanecer na tela o tempo suficiente para que uma criança de 10 anos leia."
+ IDS_OPTION5_ANSWER4,
+"Não quero que o Márcio fale. Cada balão deve permanecer na tela o tempo suficiente para que um adulto leia."
+ IDS_OPTION5_ANSWER5,
+"Não quero que o Márcio fale. Cada balão deve  permanecer na tela durante um longo tempo. Vou apertar 'PageDown' quando ler um balão."
+ IDS_OPTION5_ANSWER6, // new on 270999
+"Quero que o Márcio fale; não quero balões, mas sim legendas."
+IDS_OPTION5_ANSWER7, // new on 110401
+ "Não quero que Márcio fale, mas quero as legendas."
+
+
+ IDS_OPTION6_QUESTION,
+"Você quer ouvir sons?"
+ IDS_OPTION6_EXPLANATION,
+"Se você não gosta de ouvir sons ou não tem um alto-falante ligado ao seu computador, você pode querer desabilitar os efeitos de som."
+ IDS_OPTION6_EXPLANATION+1,
+"Este desliga ambos os efeitos de som e, se disponível, a fala do Márcio."
+ IDS_OPTION6_ANSWER1,
+"Sim, quero ouvir sons."
+ IDS_OPTION6_ANSWER2,
+"Não, não quero ouvir sons."
+
+ IDS_OPTION7_QUESTION,
+"Que tipo de usuários o ToonTalk deveria esperar?"
+ IDS_OPTION7_EXPLANATION,
+"O ToonTalk pode ajudar usários com conhecimento a rastrear problemas, sugerindo páginas da web para serem lidas."
+ IDS_OPTION7_EXPLANATION+1,
+"O ToonTalk também pode funcionar em uma apresentação, onde, depois de um período ativo, ele vai começar a mostrar exemplos automaticamente."
+ IDS_OPTION7_ANSWER1,
+"A maioria dos usários conhece o suficiente sobre computadores para querer ajudar a solucionar quando o ToonTalk não está se comportando normalmente."
+ IDS_OPTION7_ANSWER2,
+"A maioria dos usuários é criança ou iniciante e não deveria se preocupar em dar suporte."
+  IDS_OPTION7_ANSWER3,
+"A maioria dos usuários é visitante de um museu, loja ou quiosque."
+
+ IDS_OPTION8_QUESTION,
+"Você quer mudar a língua que o ToonTalk usa?"
+ IDS_OPTION8_EXPLANATION,
+"O ToonTalk foi traduzido para outros idiomas. Isso muda o que o Márcio fala ou mostra."
+ IDS_OPTION8_ANSWER1,
+"Quero que o ToonTalk use "// followed by language name
+ IDS_OPTION8_ANSWER2,
+"Quero que o ToonTalk use "// followed by language name
+ IDS_OPTION8_ANSWER3,
+ "Quero que o ToonTalk use "// followed by language name
+ IDS_OPTION8_ANSWER4,
+"Quero que o ToonTalk use "// followed by language name
+ IDS_OPTION8_ANSWER5,
+"Quero que o ToonTalk use "// followed by language name
+
+IDS_OPTION9_QUESTION,       // new on 230999 - 
+  "Você deseja alterar a voz que o ToonTalk utiliza?"
+ IDS_OPTION9_EXPLANATION,
+  "O ToonTalk pode utilizar vozes diferentes instaladas em seu computador. Isso altera a voz do Márcio. "
+ IDS_OPTION9_ANSWER1,
+  "Quero que o ToonTalk utilize a voz nomeada "  // followed by the mode name
+ IDS_OPTION9_ANSWER2,
+  "Quero que o ToonTalk utilize a voz nomeada "  // followed by the mode name
+ IDS_OPTION9_ANSWER3,
+  "Quero que o ToonTalk utilize a voz nomeada "  // followed by the mode name
+ IDS_OPTION9_ANSWER4,
+  "Quero que o ToonTalk utilize a voz nomeada " // followed by the mode name
+ IDS_OPTION9_ANSWER5,
+  "Quero que o ToonTalk utilize a voz nomeada "  // followed by the mode name
+ IDS_OPTION9_ANSWER6,
+  "Quero que o ToonTalk utilize a voz nomeada "  // followed by the mode name
+ IDS_OPTION9_ANSWER7,
+  "Quero que o ToonTalk utilize a voz nomeada "  // followed by the mode name
+
+
+

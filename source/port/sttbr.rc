@@ -1,0 +1,137 @@
+//Microsoft Visual C++ generated resource script.
+//
+//#define BITMAP_4      4
+//#define BITMAP_3      3
+
+#include "..\starttt.rch"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "..\starttt.h"
+#include "ver.h"
+
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""AutoRun.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+{
+ IDM_CONTINUE, "Jogo Livre"
+ IDM_SEE_DEMOS, "Exemplos"
+// IDM_RUN_PUZZLES, "Quebra-Cabeças"
+ // changed to the following on 040500 in accordance with BugReportMarcus.doc
+ IDM_RUN_PUZZLES, "Desafios"
+ IDS_NARRATION_FILE_SUFFIX, "BRN" // was SPK prior to 040500
+ IDS_SPEAKERS_ON,
+   "Por favor verifique se as caixas de som do computador estão ligadas. Os exemplos do ToonTalk são muito mais fáceis de se entender com a narração."
+#include "snewer.rc"
+}
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+
+STRINGTABLE
+{
+ IDS_INTRO_DEMO, "Tour Introdutório"
+ IDS_EXPLODE_DEMO, "Explodindo Casas"
+ IDS_SWAP_DEMO, "Trocando Se Maior"
+ IDS_PONG1_DEMO, "Pingue-Pongue (Parte 1)"
+ IDS_PONG2_DEMO, "Pingue-Pongue (Parte 2)"
+ IDS_PONG3_DEMO, "Pingue-Pongue (Parte 3)"
+ IDS_FIBONACCI_DEMO, "Números de Fibonacci"
+ IDS_FACTORIAL_DEMO, "Fatorial"
+ IDS_BANK_DEMO, "Conta no Banco"
+ IDS_APPEND_DEMO, "Anexando Listas"
+// IDS_EXPLODE_INSTRUCTIONS, "Contruindo Tijolos Explosivos"
+// IDS_PLAY_PUZZLE_GAME, "Quebra-Cabeças" // changed to the following on 040500 in accordance with BugReportMarcus.doc
+ IDS_PLAY_PUZZLE_GAME, "Desafios"
+ IDS_FREE_PLAY, "Jogo Livre"
+ IDS_CONFIRM_PRINT, "As instruções podem ser vistas e impressas pelo programa Word Viewer da Microsoft. Embora as cores possam parecer diferentes, elas devem sair bem na impressão. Pronto para ver as instruções?"
+ IDS_CONFIRM_PRINT2, "Pronto para a outra metade das instruções?"
+ IDS_WINDOW_TITLE, "Iniciar o ToonTalk"
+ IDS_FORGET_IT, "Sair"
+
+// not to be translated:
+ IDS_INTRO_DEMO_FILE, "Intro"
+ IDS_EXPLODE_DEMO_FILE, "Explode"
+ IDS_SWAP_DEMO_FILE, "Swap"
+ IDS_PONG1_DEMO_FILE, "PongAct1"
+ IDS_PONG2_DEMO_FILE, "PongAct2"
+ IDS_PONG3_DEMO_FILE, "PongAct3"
+ IDS_FIBONACCI_DEMO_FILE, "Fibs"
+ IDS_FACTORIAL_DEMO_FILE, "Fact"
+ IDS_BANK_DEMO_FILE, "Account"
+ IDS_APPEND_DEMO_FILE, "Append"
+// IDS_EXPLODE_INSTRUCTIONS_FILE1, "explode1.doc"
+// IDS_EXPLODE_INSTRUCTIONS_FILE2, "explode2.doc"
+}
+
+
+//MOFREE16 BITMAP "dmofre16.bmp"
+//CKONE16 BITMAP "pckdm16.bmp"
+DEMOFREE BITMAP "demofree.bmp"
+PICKONE BITMAP "pickone.bmp"
+//NOSPEAK_WAVE RCDATA "nospeak.wav" // commented out on 040500 since not not an issue for the CD and for trial versions why waste space
+//ILL_PICK_WAVE RCDATA "pickone.wav" // another waste of space for a rarely used feature
+OK_WAVE RCDATA "ok.wav"
+
+IDD_ABOUT_DIALOG DIALOG 0, 0, 240, 93
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION ""
+FONT 8, "MS Sans Serif"
+{
+ CONTROL "OK", IDM_EXIT, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD |
+WS_VISIBLE | WS_TABSTOP, 99, 72, 50, 14
+ CONTROL "ToonTalk, Versão 2.39b", 4, "static", SS_CENTER | WS_CHILD |
+WS_VISIBLE, 52, 4, 144, 8
+ CONTROL "(c) Copyright 1992-2001. Ken Kahn. Todos os direitos reservados", 2, "static", SS_CENTER | WS_CHILD | WS_VISIBLE, 54, 48, 132, 15
+ CONTROL "Protegido pela patente americana nº. 5,517,663.", 1, "static", SS_CENTER |
+WS_CHILD | WS_VISIBLE, 52, 24, 136, 20
+}

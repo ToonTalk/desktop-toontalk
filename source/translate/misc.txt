@@ -1,0 +1,5 @@
+"Reading from the Internet or a CD-ROM"
+
+"Loading. Please wait."
+
+"Please wait..."

@@ -1,0 +1,15 @@
+5. Tips.
+The Martian will give a complete description of an item if you call for him
+(via F1) while holding or pointing to an item.  This is particularly useful
+for getting a description of what a robot does.
+
+If you hold down the control button while copying the box inside a robot's
+thought bubble, then blanks are restored to their original values.  This is
+often a good way to obtain an example box for a robot to work on.
+
+F8 currently stops all sprites and robots.  F8 again will start them
+up again.  Will be replaced by a nice graphical switch.
+
+The 'Pause' button is a convenient way to pause or quit a demo or
+session with ToonTalk.
+

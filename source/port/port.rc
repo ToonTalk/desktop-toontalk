@@ -1,0 +1,3547 @@
+// Copyright (c) 1992-2000. Ken Kahn, Animated Programs, All rights reserved
+
+#include "strings.h"
+// LATEST/LEO/BETE - AUGUST/99
+// To translate this file simply replace the items within quotes.
+// leave the upper case items alone.
+// Anything following two /s is just a comment and can be ignored.
+// Spaces within quotes are important and should be retained.
+
+// on 280999 replaced pássaro with pombo (for bird)
+
+// On 120500 updated all occurances of . " to . " since space isn't always inserted by code
+
+STRINGTABLE {   
+
+ IDS_TOOLBOX_FROM_SIDE,
+   "Porta-Treco de lado"
+ IDS_TOOLBOX_FROM_ABOVE,
+   "Porta-Treco de cima"
+ IDS_PERSON_WALKING,
+   "uma pessoa andando"
+ IDS_WIRE,
+   "um fio"
+ IDS_HELICOPTER_FLYING,
+   "um helicóptero voando"
+ IDS_PICT_FRAME,
+  "uma moldura de figura"
+ IDS_HELICOPTER_LANDING,
+  "um helicóptero pousando"
+ IDS_PERSON_SITTING,
+   "uma pessoa sentando"
+ IDS_TALL_HOUSE_ABOVE,
+   "a casa alta de cima"
+ IDS_TALL_HOUSE_SIDE,
+  "a casa alta de lado"
+ IDS_TALL_HOUSE_DOOR,
+   "a porta da casa alta"
+ IDS_BIG_HOUSE_DOOR,
+  "a porta da casa grande"
+ IDS_NUMBER_PAD,
+   "um bloco de números"
+ IDS_SCALE,
+  "uma balança"
+ IDS_VACUUM,
+   "Asper"
+ IDS_EXPANDER,
+   "Soprana"
+ IDS_COPIER,
+   "uma varinha mágica"
+ IDS_THOUGHT_BUBBLE,
+  "uma mente de robô"
+ IDS_ROBOT,
+   "um robô"
+ IDS_NEST,
+   "um ninho"
+ IDS_BIRD,
+   "um pombo"
+ IDS_BOMB,
+  "uma bomba"
+ IDS_NOTEBOOOK,
+  "uma agenda"
+ IDS_BOX,
+   "uma caixa"
+ IDS_MOUSE_WITH_HAMMER,
+   "um rato com um martelo"
+ IDS_ARM,
+  "um braço"
+ IDS_HAND,
+  "uma mão"
+ IDS_HAND_HOLDING_WAND,
+  "uma mão segurando uma varinha mágica"
+// IDS_PICTURES_SPRITE,
+//   "uma imagem ou outra"
+ IDS_PUMP_BUTTON, // new 10/19
+   "um botão na bomba de bicicleta"
+ IDS_HEAD_WITH_HAIR,
+   "uma cabeça com cabelo"
+ IDS_HEAD_WITH_HAT,
+   "uma cabeça com um chapéu"
+// IDS_PLATFORM,
+//   "a platform"
+ IDS_VACUUM_BUTTON,  // new on 12/13
+   "um botão de aspirador"
+ IDS_SWITCH,
+   "um interruptor"
+ IDS_PERSON_WITH_HAT_SITTING,
+  "uma pessoa com chapéu sentando"
+ IDS_PERSON_HAIR_SITTING,
+   "uma pessoa com cabelo sentando"
+ IDS_BIG_HOUSE_SIDE,
+   "a casa grande de lado"
+ IDS_BIG_HOUSE_ABOVE,
+   "a casa grande de cima"
+ IDS_WIDE_HOUSE_SIDE,
+   "a casa larga de lado"
+ IDS_WIDE_HOUSE_ABOVE,
+   "a casa larga de cima"
+ IDS_WIDE_HOUSE_DOOR,
+   "a porta da casa larga"
+ IDS_MARTIAN,
+   "Márcio"
+ IDS_TRUCK_INSIDE_HOUSE,
+   "um caminhão dentro da casa"
+ IDS_TRUCK_ABOVE,
+   "um caminhão de cima"
+ IDS_TRUCK_SIDE,
+   "um caminhão de lado"
+ IDS_TALK_BALLOON,
+   "um balão de fala"
+// IDS_LETTER_PLATE,
+//   "a letter plate"
+ IDS_COPIER_BUTTON, // revised 10/19 -- really the wand button but ok...
+   "um botão da varinha mágica" // revised again 12/16
+ IDS_TEXT_PAD,
+   "um bloco de texto"
+ IDS_BOOK_PAGE_TURNING,
+   "uma página de agenda virando"
+ IDS_DIZZY_PERSON,
+   "uma pessoa tonta"
+ IDS_DIZZY_PERSON_WITH_HAIR,
+   "uma pessoa tonta com cabelo"
+ IDS_DIZZY_PERSON_WITH_HAT,
+   "uma pessoa tonta com chapéu"
+ IDS_EXPLOSION,
+   "uma explosão"
+// IDS_MARTIAN_TALKING,
+//   "Márcio falando"
+ IDS_BROKEN_ROCKET_DOOR,
+   "uma porta para um foguete quebrado"
+ IDS_HIT_OR_MISS, // this is the little animation which shows either a hit or a miss for the collision detector
+   "a animação do acertou ou errou"
+ IDS_BALL,
+   "uma bola"
+ IDS_PADDLE,
+  "um rebatedor"
+ IDS_PERSON_WALKING_PICTURE,
+   "uma pessoa andando"
+ IDS_FLOWER_SPRITE,
+   "uma flor"
+ IDS_TREE_SPRITE,  // this and some of the following are used for decoration and can be found in the Pictures notebook
+   "uma árvore"
+ IDS_TRAFFIC_LIGHT_SPRITE,
+   "um sinal de trânsito"
+ IDS_ROCKET_SPRITE,
+   "um foguete"
+ IDS_RECTANGLE,
+   "um retângulo"
+ IDS_BACKGROUND,
+   "um fundo"
+ IDS_USER_SPRITE,  // used to describe a picture that a user imported using the "File to Picture" remote control
+   "uma imagem de um arquivo"  // E.g. "You are holding a picture from a file. "
+
+ IDS_PAGE_BEGIN_SENTENCE,
+  "Página"
+ IDS_CONTAINS,
+  "contém "
+
+  // many ToonTalk data types have 4 entries:
+  // indefinite singular. As in "You are holding A NUMBER. "
+  // definite singular.  As in "You can drop THE NUMBER by clicking a mouse button. "
+  // plural.  As in "You are pointing to a stack of NUMBERS. "
+  // pronoun (accusative, i.e. used as the object not subject)
+  // As in "You are holding a number.  You can drop IT by clicking a mouse button. "
+  // Note if the pronoun is troublesome (e.g. due to word order) you may wish
+  // to just repeat the definite singular for the pronoun entry.
+
+ IDS_NUMBER_TYPE_INDEFINITE,
+  "um número"
+ IDS_NUMBER_TYPE_DEFINITE,
+  "o número"  // changed from o número on 150600 and restored from do número on 190600
+ IDS_NUMBER_TYPE_PLURAL,
+  "números"
+ IDS_NUMBER_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o número"
+ IDS_EXPANDER_TYPE_INDEFINITE,
+  "Soprana, a Bomba de Bicicleta"
+ IDS_EXPANDER_TYPE_DEFINITE,
+  "Soprana, a Bomba de Bicicleta"
+  IDS_EXPANDER_TYPE_PLURAL,
+  "Soprana, a Bomba de Bicicleta"
+ IDS_EXPANDER_TYPE_PRONOUN,
+ "la" // remove preceeding - on 110700
+ IDS_VACUUM_TYPE_INDEFINITE,
+  "Asper, o Aspirador"
+  IDS_VACUUM_TYPE_DEFINITE,
+  "Asper, o Aspirador"
+  IDS_VACUUM_TYPE_PLURAL,
+  "Asper, o Aspirador"
+  IDS_VACUUM_TYPE_PRONOUN,
+ "lo" // remove preceeding - on 110700
+ IDS_COPIER_TYPE_INDEFINITE,
+  "uma varinha mágica"
+ IDS_COPIER_TYPE_DEFINITE,
+  "a varinha mágica"
+ IDS_COPIER_TYPE_PLURAL,
+  "varinhas mágicas"
+ IDS_COPIER_TYPE_PRONOUN,
+ "a varinha"
+ IDS_THOUGHT_BUBBLE_TYPE_INDEFINITE,
+  "uma mente de robô"
+ IDS_THOUGHT_BUBBLE_TYPE_DEFINITE,
+  "a mente do robô"
+ IDS_THOUGHT_BUBBLE_TYPE_PLURAL,
+  "mentes de robô"
+ IDS_THOUGHT_BUBBLE_TYPE_PRONOUN,
+ "la" // updated 120700 "a mente do robô"
+ IDS_ROBOT_TYPE_INDEFINITE,
+  "um robô"
+ IDS_ROBOT_TYPE_DEFINITE,
+  "o robô"
+ IDS_ROBOT_TYPE_PLURAL,
+  "robôs"
+ IDS_ROBOT_TYPE_PRONOUN,
+ "lo" // remove preceeding - on 110700
+ IDS_NEST_TYPE_INDEFINITE,
+  "um ninho"
+ IDS_NEST_TYPE_DEFINITE,
+  "o ninho"
+ IDS_NEST_TYPE_PLURAL,
+  "ninhos"
+ IDS_NEST_TYPE_PRONOUN,
+  "lo"  // updated 120700 "o ninho"
+ IDS_BIRD_TYPE_INDEFINITE,
+  "um pombo"
+ IDS_BIRD_TYPE_DEFINITE,
+  "o pombo"
+ IDS_BIRD_TYPE_PLURAL,
+  "pombos"
+ IDS_BIRD_TYPE_PRONOUN,
+ "lo" // remove preceeding - on 110700
+ IDS_TRUCK_TYPE_INDEFINITE,
+  "um caminhão"
+ IDS_TRUCK_TYPE_DEFINITE,
+  "o caminhão"
+ IDS_TRUCK_TYPE_PLURAL,
+  "caminhões"
+ IDS_TRUCK_TYPE_PRONOUN,
+  "lo" // updated 120700 "o caminhão"
+ IDS_BOOK_TYPE_INDEFINITE,
+  "uma agenda"
+ IDS_BOOK_TYPE_DEFINITE,
+  "a agenda"
+ IDS_BOOK_TYPE_PLURAL,
+  "agendas"
+ IDS_BOOK_TYPE_PRONOUN,
+ "la" // updated 120700 "a agenda"
+ IDS_CUBBY_TYPE_INDEFINITE,
+   // "Cubby" is the name small children give to the "cubby hole" where they
+   // put their things while at school.  Turns out some adults didn't know the word.
+   // So box is used now.
+  "uma caixa"
+ IDS_CUBBY_TYPE_DEFINITE,
+  "a caixa"
+ IDS_CUBBY_TYPE_PLURAL,
+  "caixas"
+ IDS_CUBBY_TYPE_PRONOUN,
+ "la" // updated 120700 "a caixa"
+ IDS_TOOLBOX_TYPE_INDEFINITE,
+  "Porta-Treco, a Caixa de Ferramentas"
+ IDS_TOOLBOX_TYPE_DEFINITE,
+  "Porta-Treco, a Caixa de Ferramentas"
+ IDS_TOOLBOX_TYPE_PLURAL,
+  "Porta-Treco, a Caixa de Ferramentas"
+ IDS_TOOLBOX_TYPE_PRONOUN,
+ "lo" // remove preceeding - on 110700
+ IDS_PICT_TYPE_INDEFINITE,
+  "uma imagem"
+ IDS_PICT_TYPE_DEFINITE,
+  "a imagem"
+ IDS_PICT_TYPE_PLURAL,
+  "imagens"
+ IDS_PICT_TYPE_PRONOUN,
+ "la"  // updated 120700 "a imagem"
+ IDS_BOMB_TYPE_INDEFINITE,
+  "uma bomba"
+ IDS_BOMB_TYPE_DEFINITE,
+  "a bomba"
+ IDS_BOMB_TYPE_PLURAL,
+  "bombas"
+ IDS_BOMB_TYPE_PRONOUN,
+ "la"  // updated 120700 "a bomba"
+ IDS_TEXT_TYPE_INDEFINITE,
+  "um bloco de texto"
+ IDS_TEXT_TYPE_DEFINITE,
+  "o bloco de texto"
+ IDS_TEXT_TYPE_PLURAL,
+  "blocos de texto"
+ IDS_TEXT_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o bloco de texto"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_INDEFINITE,
+  "um bloco de texto"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_DEFINITE,
+  "o bloco de texto"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_PLURAL,
+  "blocos de texto"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o bloco de texto"
+ IDS_REMOTE_PICTURE_TYPE_INDEFINITE,
+  // There are 2 kinds of remote controls in ToonTalk.
+  // Those for controlling pictures which are in the notebook on the back of a picture.
+  // And those for controlling and sensing global things like the keyboard or mouse (found on page 10 of the main notebook).
+  "um controle remoto"
+ IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+  "o controle remoto"
+ IDS_REMOTE_PICTURE_TYPE_PLURAL,
+  "controles remotos"
+ IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o controle remoto"
+ IDS_BLANK_NUMBER_TYPE_INDEFINITE,
+  "um bloco de números vazio"
+ IDS_BLANK_NUMBER_TYPE_DEFINITE,
+  "o bloco de números vazio"
+ IDS_BLANK_NUMBER_TYPE_PLURAL,
+  "blocos de números vazios"
+ IDS_BLANK_NUMBER_TYPE_PRONOUN,
+  "lo"  // updated 120700 "o bloco de números vazio"
+ IDS_BLANK_CUBBY_TYPE_INDEFINITE,
+  "uma caixa vazia"
+ IDS_LABELED_CUBBY_TYPE_INDEFINITE,
+  "uma caixa"
+ IDS_LABELED_CUBBY_TYPE_DEFINITE,
+  "a caixa"
+ IDS_LABELED_CUBBY_TYPE_PLURAL,
+  "caixas"
+ IDS_LABELED_CUBBY_TYPE_PRONOUN,
+  "la"  // updated 120700 "a caixa"
+ IDS_BLANK_PICTURE_TYPE_INDEFINITE,
+  "uma imagem vazia"
+ IDS_BLANK_PICTURE_TYPE_DEFINITE,
+  "a imagem vazia"
+ IDS_BLANK_PICTURE_TYPE_PLURAL,
+  "imagens vazias"
+ IDS_BLANK_PICTURE_TYPE_PRONOUN,
+ "la"  // updated 120700  "a imagem vazia"
+ IDS_BLANK_TEXT_TYPE_INDEFINITE,
+  "um bloco de texto vazio"
+ IDS_BLANK_TEXT_TYPE_DEFINITE,
+  "o bloco de texto vazio"
+ IDS_BLANK_TEXT_TYPE_PLURAL,
+  "blocos de texto vazios"
+ IDS_BLANK_TEXT_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o bloco de texto vazio"
+ IDS_PICT_WITH_INSIDES_TYPE_INDEFINITE,
+  "uma imagem"
+ IDS_PICT_WITH_INSIDES_TYPE_DEFINITE,
+  "a imagem"
+ IDS_PICT_WITH_INSIDES_TYPE_PLURAL,
+  "imagens"
+ IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+ "la"  // updated 120700  "a imagem"
+ IDS_REMOTE_INTEGER_TYPE_INDEFINITE,
+  "um sensor mostrando um número"
+ IDS_REMOTE_INTEGER_TYPE_DEFINITE,
+  "o sensor mostrando um número"
+ IDS_REMOTE_INTEGER_TYPE_PLURAL,
+  "sensores mostrando números"
+ IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o sensor mostrando um número"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_INDEFINITE,
+ // some remote controls display a picture, some text and some numbers
+ // nearly all of them are sensors only (e.g. the time)
+ // while a few like city size are both a sensor and a remote control
+  "um sensor mostrando um número"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_DEFINITE,
+  "o sensor mostrando um número"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PLURAL,
+  "sensores mostrando números"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o sensor mostrando um número"
+ IDS_SCALE_PICTURE_TYPE_INDEFINITE,
+  "uma balança"
+ IDS_SCALE_PICTURE_TYPE_DEFINITE,
+  "a balança"
+ IDS_SCALE_PICTURE_TYPE_PLURAL,
+  "balanças"
+ IDS_SCALE_PICTURE_TYPE_PRONOUN,
+ "la"  // updated 120700 "a balança"
+ IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+  // A very useful facility which enables a user object to change its appearance
+  // The remote control for the appearance of something looks just like the thing.
+  // To replace an appearance a user (or a robot) erases this kind of remote control
+  // and drops the new appearance on it.
+  "um controle remoto que controla a aparência de alguma coisa"
+ IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+  "o controle remoto que controla a aparência de alguma coisa"
+ IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+  "controles remotos que controlam as aparências das coisas"
+ IDS_REMOTE_APPEARANCE_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o controle remoto que controla a aparência de alguma coisa"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+  "uma imagem de algo"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_DEFINITE,
+  "a imagem de algo"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PLURAL,
+  "imagens de coisas"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PRONOUN,
+ "la"  // updated 120700  "a imagem de algo"
+ IDS_USER_PICTURE_TYPE_INDEFINITE,
+  "uma imagem de um arquivo do usuário"
+ IDS_USER_PICTURE_TYPE_DEFINITE,
+  "a imagem de um arquivo do usuário"
+ IDS_USER_PICTURE_TYPE_PLURAL,
+  "imagens de arquivos de usuários"
+ IDS_USER_PICTURE_TYPE_PRONOUN,
+ "la"  // updated 120700 "a imagem de um arquivo do usuário"
+
+ IDS_THE_ROBOTS_HAND, // as in "you can drop what is in the robot's hand by ... "
+  "a mão do robô"
+ IDS_YOUR_HAND, // "If you press F2 Dusty will run to your hand. "
+  "sua mão"  
+// IDS_BEGIN_THE_ROBOT_IS, // as in "The robot is holding a box. "
+//  "o robô está"
+ IDS_THE_ROBOT_IS,
+  "o robô está"
+// IDS_BEGIN_YOU_ARE,  // as in "You are holding a box. "
+//  "Você está"
+ IDS_YOU_ARE,
+  "você está"
+        
+  IDS_TEXT_WITH_ANYTHING,
+  "um bloco de texto com algo dentro"
+ IDS_BLANK_TEXT_PAD,
+  "um bloco de texto vazio"
+ IDS_PAD_WITH_TEXT,
+  "um bloco com o texto"
+ IDS_ON_IT,
+  "dentro"
+ IDS_NOTHING,
+  "nada"
+ IDS_ROBOT_WITHOUT_A_THOUGHT,
+  "um robô que não tem uma mente"
+ IDS_FIRST,
+  "primeiro"
+ IDS_SECOND,
+  "segundo"
+ IDS_THIRD,
+  "terceiro"
+ IDS_FOURTH,
+  "quarto"
+ IDS_FIFTH,
+  "quinto"
+ IDS_SIXTH,
+  "sexto"
+ IDS_SEVENTH,
+  "sétimo"
+ IDS_EIGHTH,
+  "oitavo"
+ IDS_NINTH,
+  "nono"
+ IDS_TENTH,
+  "décimo"
+ IDS_ELEVENTH,
+  "décimo primeiro"
+ IDS_TWELFTH,
+  "décimo segundo"
+ IDS_THIRTEENTH,
+  "décimo terceiro"
+// for ordinals after 13th we have
+ IDS_CARDINAL_MOD_IS_0,
+  "º" // e.g. 30th
+ IDS_CARDINAL_MOD_IS_1,
+  "º" // e.g. 21st
+ IDS_CARDINAL_MOD_IS_2,
+  "º" // e.g 42nd
+  IDS_CARDINAL_MOD_IS_3
+  "º" // e.g. 33rd
+  IDS_CARDINAL_MOD_IS_4,
+  "º" // e.g. 54th
+  IDS_CARDINAL_MOD_IS_5,
+  "º" // e.g. 85th
+  IDS_CARDINAL_MOD_IS_6,
+  "º" // e.g. 106th
+  IDS_CARDINAL_MOD_IS_7,
+  "º" // e.g. 117th
+  IDS_CARDINAL_MOD_IS_8,
+  "º" // e.g. 108th
+  IDS_CARDINAL_MOD_IS_9,
+  "º" // e.g. 19th
+
+ IDS_YOU_ARE_POINTING_TO,
+  "Você está apontando para "
+ IDS_YOU_ARE_HOLDING,
+  "Você está segurando "
+ IDS_UNDER,
+  "Sob "
+ IDS_IS, // as in "Under the wand is a number. " and "Inside a computer 6 is 110 in binary. "
+  " está "
+// IDS_TH,
+//  "th"
+ IDS_THE_RIGHT_MOUSE_BUTTON,
+  "o botão direito do mouse"
+
+ IDS_NEST_HATCHED_BIRD_HELP,
+  "O ovo irá chocar quando você baixar o ninho. "
+// IDS_NEST_RECEIVED_ITEM_FROM_BIRD_HELP,
+//  "If you give the bird something, she'll take it to her nest. "
+// The following 3 entries are combined to form either
+//  You can take things out of her nest by hand or by using Dusty the Vacuum.
+// or sentences like
+//  You can take the box out of her nest by hand or by using Dusty the Vacuum.
+ IDS_NEST_ITEM_REMOVED_HELP,
+  "Você pode tirar "
+ IDS_THINGS,
+  "objetos"
+ IDS_NEST_ITEM_REMOVED_HELP2,
+  " do ninho com a mão ou usando Asper, o aspirador. " // space added to beginning on 110700
+ IDS_NEST_ITEM_ADDED_HELP,
+  "Você pode colocar um objeto retangular no ninho simplesmente soltando-o. "
+ IDS_NEST_ITEM_ADDED_HELP2,
+  "No entanto, prefiro deixar que o próprio pombo faça isso. "
+ IDS_NEST_HELP_GIVEN_HELP,  // this is now said after the following
+  "Isso é tudo o que sei sobre ninhos. "
+ IDS_NEST_HELP_GIVEN_HELP2,
+  "Eu uso pombos e ninhos quando quero que robôs de casas diferentes trabalhem juntos. "
+ IDS_NEST_HELP_GIVEN_HELP3,
+  "Se você quiser que eu diga tudo o que sei sobre ninhos, aperte F1 duas vezes enquanto estiver apontando para um deles. " 
+ IDS_NEST_HELP_GIVEN_BIRDS,
+  "Falarei mais sobre pombos se você pressionar F1 duas vezes enquanto estiver apontando para um deles. "
+ 
+ IDS_BIRD_RECEIVED_ITEM_HELP,
+  "Se você der ao pombo algo retangular, ele levará para o ninho. "
+ IDS_BIRD_RECEIVED_ITEM_HELP2,
+  "Se você quiser que ele carregue outras coisas, coloque-as em uma caixa e entregue a ele. "
+ IDS_BIRD_HELP_GIVEN_HELP,
+  "Eu já disse tudo o que sei sobre pombos. "
+ IDS_BIRD_HELP_GIVEN_HELP2,
+  "Se você quiser que eu repita tudo o que sei sobre pombos, aperte F1 duas vezes enquanto estiver apontando para um deles. "
+ IDS_BIRD_HELP_GIVEN_NESTS,
+  "Falarei mais sobre ninhos se você pressionar F1 duas vezes enquanto estiver apontando para um ninho. " // was bird by mistake
+// IDS_WITH,
+//  " with "
+ IDS_ON_TOP,
+  " em cima" // as in "You are pointing to a nest with a number on top. "
+ IDS_BIRD_RECUR_ABORT, // as in "Didn't work because the bird was given something containing her nest. "
+  "foi dado para o pombo alguma coisa contendo seu ninho"
+
+ IDS_BOMB_USED_HOUSE_HELP,
+ // updated this and others like it on 120700 since "em o" = no and "em a" = na
+  "Você pode explodir esta casa inteira clicando em "
+ IDS_BOMB_USED_HOUSE_HELP2,
+  "Quando estiver segurando uma bomba dentro de uma casa, você poderá explodir a casa inteira clicando em "
+ IDS_BOMB_USED_HOUSE_HELP3,
+  "Você e suas ferramentas sairão sem nenhum arranhão e o Asper aspirará as coisas que sobrarem. "
+ IDS_BOMB_USED_HOUSE_HELP4,
+// I don't think of this as disarming a bomb.  These are bombs a la 1900 with a fuse that must be lit.
+// Clicking on the space bar lights the fuse.  Clicking the right mouse button releases the bomb without setting it off.
+  "Você pode se sentar em segurança clicando em "
+ IDS_BOMB_USED_TB_HELP,
+  "Você pode treinar este robô para explodir a casa em que ele estiver clicando em "
+ IDS_BOMB_USED_TB_HELP2,
+  "Quando estiver treinando um robô que tenha apanhado uma bomba, você poderá fazer com que ele exploda a casa em que se encontrar clicando em "
+ IDS_BOMB_USED_TB_HELP3,
+  "Isto irá terminar o treinamento do robô. "
+ IDS_BOMB_USED_TB_HELP4,
+  "Eu sempre guardo um robô treinado para usar bombas dentro da agenda antes de testá-lo. "
+ IDS_BOMB_HELP_GIVEN_HELP,
+  "Já lhe disse tudo o que sei sobre bombas. "
+ IDS_BOMB_HELP_GIVEN_HELP2,
+  "Se quiser que eu repita tudo novamente, pressione F1 duas vezes. "
+
+ +IDS_CUBBY_BAD_CONTENTS_ABORT,
+ // as in "A robot stopped because he tried to put something in a box that can't be put in boxes. "
+// was  "he tried to put something in a box that doesn't go"
+// It used to be that robots, notebooks, etc. couldn't be put in boxes.
+// For example, it used to be a robot could take a robot out of a notebook and drop it on a box and get this error.
+// Now only tools can't.  Only an internal ToonTalk error should generate this now.
+  "ele tentou colocar em uma caixa algo que não pode ser guardado em caixas"
+ IDS_CUBBY_BLANK_HELP,
+//was  "You can use blank boxes inside of thought bubbles, so the robot will be happy with a box with any number of holes. "
+ "Se um robô tiver uma caixa vazia dentro da mente, ele se contentará com caixas que tenham qualquer número de buracos. "
+// IDS_CUBBY_BLANKED_TB_HELP,
+//  "Since it is in a thought bubble, the robot will be happy with any box at the same place. "
+ IDS_CUBBY_BLANK_HELP2,
+  "É uma caixa vazia que combina com qualquer caixa. "
+ IDS_CUBBY_HOLE_FILLED_HELP,
+  "Para colocar um objeto em um buraco vazio de uma caixa é só soltar esse objeto sobre o buraco. "
+ IDS_CUBBY_CONTENTS_REMOVED_HELP,
+  // this is used together with the following entry to generate either
+  //  You can take something out of a hole with your hand or with Dusty. "  or
+  //  You can take something out of a hole with the robot's hand or with Dusty. "
+  "Você pode pegar algo de dentro de um buraco com "
+ IDS_CUBBY_CONTENTS_REMOVED_HELP2,
+  " ou com o Asper. " // "hand" removed
+ IDS_CUBBY_CONTENTS_REMOVED_HELP3,
+  "O objeto começará a se mexer quando estiver pronto. "
+ IDS_CUBBY_CONCATENATION_HELP,
+  "Você pode combinar duas caixas colocando uma sobre o lado da outra. "
+ IDS_CUBBY_SIZE_CHANGED_HELP,
+  "Você pode mudar a quantidade de buracos digitando um número de 0 a 9. "
+ IDS_CUBBY_SIZE_CHANGED_HELP2,
+  "Para conseguir caixas com mais de 9 buracos, combine caixas menores colocando uma sobre o lado da outra. " 
+ IDS_CUBBY_SIZE_CHANGED_HELP3,
+  "Se você apertar '+', um buraco será adicionado. "
+ IDS_CUBBY_SIZE_CHANGED_HELP4,
+  "Se você apertar '-' (menos), o buraco da direita será removido. " // updated 240904
+ IDS_CUBBY_SIZE_CHANGED_HELP5,
+  "Você pode usar o teclado para alterar o número de buracos enquanto estiver segurando uma caixa. "
+ IDS_CUBBY_LABELED_HELP,
+  "Para adicionar uma etiqueta a um buraco, basta apontar um pouco para baixo dele e digitar. "
+ IDS_CUBBY_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre caixas. "
+ IDS_CUBBY_HELP_GIVEN_HELP2,
+  "Se você quiser que eu repita tudo o que sei sobre caixas, pressione F1 duas vezes enquanto estiver apontando para uma delas. "
+ IDS_ANY_BOX,
+  "qualquer caixa"
+ IDS_BOX_WITH,
+  "uma caixa que tenha "
+ IDS_ONE_HOLE,
+  "um buraco"
+ IDS_HOLES,
+  " buracos"
+// IDS_WHOSE,  // stopped using these on 4/13/97
+//  " whose "
+// IDS_AND_WHOSE,
+//  " and whose "
+ IDS_HOLE_LABELED_WITH,
+  "buraco etiquetado com "
+ IDS_HOLE_CONTAINS,
+  "buraco contenha " // this and previous was "hole of a box contains "
+
+ IDS_AND_BEGIN_SENTENCE,
+  "E"
+// IDS_THE_LETTER, // as in "If given a box like that he will add the 'A' to the label of the first hole of the box he's working on. "
+//  " the "
+
+//All of the phrases from IDS_MOVE_TO to IDS_APPLY_GRASPED_NEST
+//are used to describe what the robot will do if given a box.
+//E.g.
+ IDS_MOVE_TO, // as in "If given a box like that he will move to the stack of text. "
+  "se mover para"
+ IDS_SELECT_COPIER,
+  "pegar uma varinha mágica"
+ IDS_APPLY_COPIER,
+  "usar a varinha mágica em"
+// IDS_APPLY_COPIER_NUMBER,
+//  "use the magic wand (with the number attached) on"
+ IDS_GRASP_EXPANDER, // added 12/3
+  "pegar uma bomba de bicicleta"
+ IDS_RELEASE_COPIER,
+  "soltar a varinha mágica"
+ IDS_GRASP_ITEM,
+  "pegar"
+ IDS_RELEASE_ITEM,
+  "colocar"
+// as in "He will drop the box on the floor. "
+ IDS_RELEASE_ITEM2,
+  " no chão"
+ // The following could be used where the something might be dropped on
+ // a hole of a box, a number pad, a text pad, or a notebook
+ IDS_RELEASE_ITEM_ON, // as in "And drop it on the first hole of the box he's working on. "
+  "colocar"
+ IDS_RELEASE_ITEM_ON2,
+  " sobre"
+  // currently only boxes can be dropped on the side of boxes and text pads on the side of text pads.
+ IDS_RELEASE_ITEM_LEFT_OF,
+  "colocar"
+ IDS_RELEASE_ITEM_LEFT_OF2,
+  " um pouquinho para a esquerda do"
+ IDS_RELEASE_ITEM_RIGHT_OF, // as in "And drop it just right of the box he's working on. "
+  "colocar"
+ IDS_RELEASE_ITEM_RIGHT_OF2,
+  " um pouquinho para a direita do"
+// IDS_APPLY_NUMBER,
+//  "push the number down on"
+ IDS_EXPANDER_APPLY, // added 12/3
+ // e.g. "The robot will robot use Pumpy for 100 milliseconds on the box. "
+  "usará a Soprana"
+ IDS_EXPANDER_APPLY2,
+  " para" 
+ IDS_SELECT_VACUUM, // as in "He will grab a copy of Dusty. "
+  "pegar uma cópia do Asper"
+ IDS_APPLY_VACUUM,
+  "usar o Asper para aspirar" // as in "The robot will use Dusty to vacuum the box. "
+ IDS_APPLY_VACUUM_RESTORE,
+  "ligar o Asper ao contrário para devolver" // as in "He will run Dusty in reverse to restore the number. "
+ IDS_RELEASE_VACUUM,
+  "soltar o Asper"
+ IDS_SEND_TO, // as in "He will push the 'a' key. "
+  "pressionar"
+ IDS_RELEASE_IN_NEST,
+  "soltar o ninho e esperar o ovo chocar"
+ IDS_GIVE_BIRD,
+  "dar"
+ IDS_GIVE_BIRD2,
+  " para o pombo"
+ IDS_RELEASE_IN_TRUCK,
+  "colocar"
+ IDS_RELEASE_IN_TRUCK2,
+  " dentro do caminhão"
+ IDS_DESTROY_HOUSE,
+  // As in "And pick up a bomb. And use it. And blow up the house he's in. "
+  // where the context is always that a robot is doing these things.
+  "explodir a casa em que ele se encontrar"
+ IDS_APPLY_ITEM_HELD,
+  "usar"
+// The following are when a robots adds letters to a label of a box
+// or a number or text pad.
+// e.g. "If given a box like that he will push '9' after moving
+// to the first hole of the box he's working on.  And push '7' while
+// pointing to the first hole of the box he's working on. "
+// or
+// "If given a box like that he will push 'B'
+// while pointing to the first hole of the box he's working on.  And push
+// 'C' while pointing to the first hole of the box he's working on.  And
+// add 'L' to the label of the first hole of the box he's working on. "
+ IDS_LABEL_CHARACTER,
+  "adicionar"
+ IDS_CHARACTER_AND_SELECT,
+  "pressionar"
+ IDS_GRASP_NEST,
+  "pegar"
+ IDS_NEW_MAIN_CUBBY,
+ // always followed by a description of some box
+ // E.g. The robot will switch to working on the new box.
+ // This happens, for example, when a robot is trained to take the box he is given
+ // and put it in a new box and maybe do more with that new box.
+  "ir trabalhar em"
+ IDS_COPIER_APPLY_NEST,
+ "usar a varinha mágica em "        
+ IDS_VACUUM_APPLY_NEST,
+ "usar o Asper para aspirar"   
+ IDS_APPLY_GRASPED_NEST,
+  "usar"
+ IDS_RELEASE_EXPANDER,
+  "colocar a Soprana"
+
+// The following are only used when describing what a robot does.
+// Hence the use of "he" rather than "I" as it originally was
+ IDS_WHAT_I_JUST_COPIED,
+  "o que ele acabou de copiar"
+ IDS_WHAT_IM_HOLDING, // misnamed -- used as "He will drop what he's holding. "
+  "o que ele estiver segurando"
+ IDS_EVENT_ARG1, // as in "He will drop it on the box he's working on. "
+  "a caixa em que ele estiver trabalhando" // "the box he's working on"
+ IDS_EVENT_ARG3,
+  "a varinha mágica"
+ IDS_EVENT_ARG4,
+  "Asper"
+ IDS_EVENT_ARG5,
+  "a pilha de números"
+ IDS_EVENT_ARG6,
+  "a pilha de texto"
+ IDS_EVENT_ARG7,
+  "a pilha de caixas"
+ IDS_EVENT_ARG8,
+  "a pilha de ninhos"
+ IDS_EVENT_ARG9,
+  "a pilha de caminhões"
+ IDS_EVENT_ARG10,
+  "a agenda principal"
+ IDS_EVENT_ARG11,
+  "a pilha de robôs"
+ IDS_EVENT_ARG12,
+  "a pilha de balanças"
+ IDS_EVENT_ARG13,
+  "a pilha de bombas"
+ IDS_EVENT_ARG14,  // e.g. "The robot will use what he is holding. "
+  "o que ele está segurando"
+ IDS_EVENT_ARG15,
+  "Soprana" // added 12/3
+
+ IDS_WHICH_IS,  // as in "He will give it to the bird which is the second thing he made or found. "
+  " o que for"
+ IDS_STACK_TYPE1,
+  "um número"
+ IDS_STACK_TYPE2,
+  "um bloco de texto" // was just "a text" prior to 5/22/98
+ IDS_STACK_TYPE3,
+  "uma caixa"
+ IDS_STACK_TYPE4,
+  "um ninho"
+ IDS_STACK_TYPE5,
+  "um caminhão"
+ IDS_STACK_TYPE6,
+  "um robô"
+ IDS_STACK_TYPE7,
+  "uma balança"
+ IDS_STACK_TYPE8,
+  "uma bomba"
+ IDS_THE_LAST_THING,  // as in "He will pick up the last thing he made or found. "
+  " a última coisa que ele fez ou encontrou"
+// IDS_THE,
+//  " the "
+
+ IDS_BYE1,
+  "Tchau!"
+ IDS_BYE2,
+  "Até breve. "
+ IDS_BYE3,
+  "Até logo! "
+ IDS_GOOD1,
+  "Bom. "
+ IDS_GOOD2,
+  "Tudo bem. "
+ IDS_GOOD3,
+  "Certo. "
+ IDS_PREFACE_HELP,
+  "Tudo bem. Veja tudo o que eu sei sobre "
+ IDS_SITTING_HELP,
+  "Você pode se sentar clicando em qualquer botão do mouse. Você pode voltar a ficar de pé pressionando a tecla 'Esc'. "
+ IDS_SITTING_HELP2, // only used in the American version and only for Intro.dmo
+  "Você pode se sentar clicando em qualquer botão do mouse. Você pode voltar a ficar de pé pressionando a tecla 'Esc'. "
+  IDS_RECALL_MARTIAN_HELP,
+  "Vou ficar por perto para ajudar. Se eu estiver incomodando, aperte a tecla F1 e irei embora. "
+ IDS_IDS_RECALL_MARTIAN_HELP2,
+  "Se eu não estiver por perto, F1 me trará de volta. "
+ IDS_LEAVE_FLOOR_HELP,
+  "Sabia que você pode se levantar do chão apertando a tecla 'Esc'? "
+ IDS_LEAVE_FLOOR_HELP2,
+  "Tente isso qualquer hora. "
+ IDS_LEAVE_TB_HELP,
+  "Quando você tiver acabado, pressione a tecla 'Esc' para retornar ao chão. "
+ IDS_HURRY_UP_HELP,
+  "Você sabia que a animação sendo executada irá terminar se você apertar F7? "
+ IDS_HURRY_UP_HELP2,
+  "E isso inclui até mesmo a minha fala! "
+ IDS_PAUSE_HELP,
+  "Para fazer uma pausa no ToonTalk, basta apertar a tecla Pause. "
+// IDS_PAUSE_HELP2,
+//  "Pushing it again will start things up again. "
+ IDS_TARGETED_HELP_HELP,
+  "Se quiser que eu fale tudo o que puder sobre alguma coisa, primeiro aperte F1 para se livrar de mim. Depois, aponte ou segure o que desejar e pressione F1 novamente. "
+ // on 120500 removed commas from end of translations below since code inserts them (or . or !)
+ IDS_HELLO1,
+  "Oi"
+ IDS_HELLO2,
+  "Bom ver você"
+ IDS_HELLO3,
+  "Olá"
+ IDS_HELLO4,
+  "Que bom ver você"
+ IDS_HELLO5,
+  "Oi"
+ IDS_HELLO6,
+  "Olá"
+ IDS_MARTIAN_INTRODUCTION,
+  "Eu sou o Márcio. "
+
+ IDS_ABORT_MOUSE_TROUBLES, // not currently used
+  "Bambam, o Rato, teve problemas com o martelo"
+
+ IDS_ABORT_NUMBER_TOO_LARGE,
+  "o número ficaria grande demais para o computador"
+ IDS_ABORT_NUMBER_TOO_SMALL,
+  "o número ficaria pequeno demais para o computador"
+ IDS_ABORT_NUMBER_TOO_SMALL_OR_BIG,
+  "o número ficaria grande ou pequeno demais para o computador"
+
+// I believe these 13 identifiers are not used anymore...
+// IDS_REMOTE_IDENTIFIER1,
+//  "left/right position"
+// IDS_REMOTE_IDENTIFIER2,
+//  "up/down position"
+// IDS_REMOTE_IDENTIFIER3,
+//  "right speed"
+// IDS_REMOTE_IDENTIFIER4,
+//  "up speed"
+// IDS_REMOTE_IDENTIFIER5,
+//  "width"
+// IDS_REMOTE_IDENTIFIER6,
+//  "height"
+// IDS_REMOTE_IDENTIFIER7,
+//  "picture number"
+// IDS_REMOTE_IDENTIFIER8,
+//  "hit or miss animation"
+// IDS_REMOTE_IDENTIFIER9,
+//  "colliding with who?"
+// IDS_REMOTE_IDENTIFIER10,
+//  "mouse's right speed"
+// IDS_REMOTE_IDENTIFIER11,
+//  "mouse's up speed"
+// IDS_REMOTE_IDENTIFIER12,
+//  "time since last frame in milliseconds (thousandths of a second)"
+// IDS_REMOTE_IDENTIFIER13,
+//  "random number"
+
+ IDS_A_REMOTE_CONTROL_FOR,
+  "um controle remoto que controla "
+ IDS_ANY_NUMBER,
+  "qualquer número"
+ IDS_BLANK_NUMBER_PAD,
+  "um bloco de número vazio"
+ IDS_THE_NUMBER,
+  "o número " // was o número prior to 160600 and restored from do número on 190600
+ IDS_SOMETHING_WHICH_WILL_MULTIPLY,
+ // as in "You are holding something which will multiply by 3. "
+ // You can create one of these by typing X while holding a 3.
+ // similarly for the entries up to IDS_SOMETHING_WHICH_WILL_XOR
+  "alguma coisa que irá multiplicar por "
+ IDS_SOMETHING_WHICH_WILL_DIVIDE,
+  "alguma coisa que irá dividir por "
+ IDS_AND_KEEP_REMAINDER,
+  " e simplesmente guardar o resto "
+ IDS_SOMETHING_WHICH_WILL_CHANGE_NUMBER,
+  "alguma coisa que irá mudar o número sobre o qual foi colocada para "
+ IDS_SOMETHING_WHICH_WILL_OR,
+  "alguma coisa que fará um OU LÓGICO (OR) dos bits do número que estiver por baixo com "
+ IDS_SOMETHING_WHICH_WILL_AND,
+  "alguma coisa que fará um E LÓGICO (AND) dos bits do número que estiver por baixo com "
+ IDS_SOMETHING_WHICH_WILL_XOR,
+  "alguma coisa que fará um OU EXCLUSIVO (XOR) dos bits do número que estiver por baixo com "
+ IDS_THE_OPERATION,
+  "a operação "
+ IDS_INTS_BLANK_HELP,
+  "Você pode usar blocos de números vazios na mente do robô. Dessa forma, ele se contentará com qualquer número em um bloco. "
+// IDS_INTS_BLANKED_TB_HELP,
+//  "Since it is in a thought bubble, the robot will be happy with any number at the same place. "
+ IDS_INTS_BLANK_HELP2,
+  "Um bloco de número vazio significa qualquer número. "
+ IDS_INTS_ADDITION_HELP,
+  "Você pode somar dois números colocando um sobre o outro. "
+ IDS_INTS_DIGITS_ADDED_HELP,
+  "Você pode digitar um número. "
+// IDS_INTS_DIGITS_ADDED_HELP2,
+//  " by typing a number now. "
+ IDS_INTS_DIGITS_ADDED_HELP3,
+  "Você também pode digitar um número enquanto estiver segurando um número. "
+// IDS_INTS_DIGITS_ADDED_HELP4,
+//
+ IDS_INTS_DIGITS_REMOVED_HELP,
+  "Você pode remover dígitos apertando a tecla 'Backspace'. "
+ IDS_INTS_DIGITS_REMOVED_HELP2,
+  "Se remover o último dígito, você ficará com 0. "
+ IDS_INTS_MADE_NEGATIVE_HELP,
+  // Together with the following entries generates sentences like
+  // "You can change 5 into -5 by pushing the minus key (right of 0). "
+  // "Then, if you drop -5 on another number you'll be subtracting by 5. "
+  "Você pode mudar o "
+ IDS_INTO,  // only used in this context
+  " para "
+ IDS_INTS_MADE_NEGATIVE_HELP2,
+  " apertando a tecla menos (à direita do 0). " // updated 240904
+ IDS_INTS_MADE_NEGATIVE_HELP3,
+  "Então, se você colocar o "
+ IDS_INTS_MADE_NEGATIVE_HELP4,
+  " sobre outro número, estará subtraindo por "
+ IDS_INTS_MULTIPLICATION_HELP,
+ // together with following entries makes
+ // "You can multiply by 7 by pushing the x key.
+ // Then you just drop it on the number you want to multiply by 7
+ // The X and * keys work just as well. "
+  "Você pode multiplicar por "
+ IDS_INTS_MULTIPLICATION_HELP2,
+  " pressionando a tecla x. "
+ IDS_INTS_MULTIPLICATION_HELP3, // followed by a number.
+  "Aí basta você colocá-lo sobre o número que quiser multiplicar por "
+ IDS_INTS_MULTIPLICATION_HELP4,
+  "O 'X' e o '*' funcionam da mesma forma. "
+ IDS_INTS_DIVISION_HELP,
+  "Você pode dividir por "
+ IDS_INTS_DIVISION_HELP2,
+  " pressionando a tecla '/'(à direita do .). "
+ IDS_INTS_DIVISION_HELP3,
+  "Depois você simplesmente o coloca sobre outro número. "
+ IDS_INTS_DIVISION_HELP4,
+  "O resto da divisão será ignorado. "
+ IDS_INTS_DIVISION_HELP5,
+  // This happens when you drop a "/0" on any number.
+  // The number refers to the number (together with operator) that you are dropping.
+  "A divisão não irá funcionar se o número for zero. "
+ IDS_INTS_MODULO_HELP,
+  "Para obter o resto (e ignorar o dividendo), use a tecla '%'('shift' e '5'). "
+// IDS_INTS_MODULO_HELP2, // using IDS_INTS_DIVISION_HELP5 instead
+//  "Since the number is zero, the division won't work. "
+ IDS_INTS_MODULO_HELP3,
+  "Para obter o resto da divisão por "
+ IDS_INTS_MODULO_HELP4,
+  " digite '%' (pressione 'shift' e '5'). "
+ IDS_INTS_MODULO_HELP5,
+  "Depois você o coloca sobre o outro número. "
+ IDS_INTS_BITWISE_HELP,
+  "Agora vem algo realmente avançado. "
+ IDS_INTS_BITWISE_HELP2,
+  "Você pode tratar um número como se fosse um conjunto de bits que assumem os valores 0 ou 1. "
+ IDS_INTS_BITWISE_HELP3,
+  "Este número é "
+ IDS_INTS_BITWISE_HELP4,
+  "Veja o que você pode fazer. "
+ IDS_INTS_BITWISE_HELP5,
+  "~ para o complemento. | para OU. & para E. E ^ para OU EXCLUSIVO. "
+ IDS_INTS_BITWISE_HELP56,
+  "Não se preocupe se não entender bem esses conceitos. Experimente. "
+ IDS_NUMBER_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre números. "
+ IDS_IDS_NUMBER_HELP_GIVEN_HELP2,
+  "Se quiser que eu repita tudo o que sei sobre números, aperte F1 duas vezes enquanto estiver apontando para um número. "  
+
+// This section describes the items found in the notebook which
+// flies out when you flip over a picture or number.
+ IDS_X_HELP,
+  "a distância a partir do lado esquerdo"
+ IDS_Y_HELP,
+  "a distância a partir do lado de baixo"
+ IDS_X_SPEED_HELP,
+  "a velocidade em direção à direita"
+ IDS_Y_SPEED_HELP,
+  "a velocidade para cima"
+ IDS_WIDTH_HELP,
+  "a largura"
+ IDS_HEIGHT_HELP,
+  "a altura"
+ IDS_PARAMETER_HELP, // had been commented out -- restored on 6/24/97
+  "qual imagem ou cor é mostrada"
+ IDS_COLLIDE_HELP,
+ // e.g. The hole contains a remote control for the detector which shows a simple cartoon of either a collision or a miss.
+ // changed "space button" to "space bar"
+  "o detector que mostra uma simples animação de um objeto colidindo ou não (acertou ou errou). Você pode transformar um acerto em um erro apontando para o detector e pressionando +" // changed on 170300 from "a barra de espaço"
+ IDS_COLLIDE_WHO_HELP,
+ // e.g. The hole contains a remote control for the display of what is colliding with this picture.
+  "o indicador que mostra com quem o objeto está colidindo"
+ IDS_MOUSE_X_HELP,
+  "a velocidade em que o mouse do computador está se movendo para a direita"
+ IDS_MOUSE_Y_HELP,
+  "a velocidade em que o mouse do computador está se movendo para cima"
+ IDS_TIMER_HELP,
+  "o número de milésimos de segundo desde o último quadro"
+ IDS_RANDOM_HELP,
+  "um número aleatório entre 0 e 1000"
+ IDS_X_COLLIDE_HELP,
+  "o detector de colisão ocorrida em um movimento direita/esquerda"
+ IDS_Y_COLLIDE_HELP,
+  "o detector de colisão ocorrida em um movimento cima/baixo"
+ IDS_APPEARANCE_HELP,
+  "a aparência"
+ IDS_VISIBLE_HELP, // as in "This sensor controls the visibility of the picture. "
+  "a visibilidade"
+ IDS_END_OF_ANIMATION_HELP,
+  "a resposta à pergunta \"Minha animação já parou?\""
+ IDS_GRASPED_HELP,
+// was  "whether held in a hand"
+  "a resposta à pergunta \"Estou sendo segurado por uma mão?\""
+  // the I above refers to the picture (sprite) whose remote control is being described
+  // could use "this picture" instead.  Ditto for the others below and above
+ IDS_SELECTED_HELP,
+// was  "whether wiggling and ready to be picked up or used"
+ "a resposta à pergunta \"Estou me mexendo porque uma mão está apontando para mim?\""
+ IDS_RELEASED_HELP,
+// was  "whether just dropped"
+ "a resposta à pergunta \"Acabei de ser largado?\""
+ IDS_MOUSE_LEFT_BUTTON_HELP,     
+  "se o botão esquerdo do mouse acabou de ser clicado"
+ IDS_MOUSE_MIDDLE_BUTTON_HELP,
+  "se o botão central do mouse acabou de ser clicado"
+ IDS_MOUSE_RIGHT_BUTTON_HELP,
+  "se o botão direito do mouse acabou de ser clicado"
+ IDS_MOUSE_LEFT_BUTTON_DOWN_HELP,
+  "se o botão esquerdo do mouse estiver pressionado"
+ IDS_MOUSE_MIDDLE_BUTTON_DOWN_HELP,
+  "se o botão central do mouse estiver pressionado"
+ IDS_MOUSE_RIGHT_BUTTON_DOWN_HELP,
+  "se o botão direito do mouse estiver pressionado"
+ IDS_KEYBOARD_BUTTON_HELP,
+  "a tecla que acabou de ser pressionada"
+ IDS_LAST_KEYSTROKE_HELP,
+  "a última tecla pressionada"
+ IDS_SHIFT_DOWN_HELP,
+  "se a tecla 'shift' estiver pressionada"
+ IDS_CONTROL_DOWN_HELP,
+  "se a tecla 'control' estiver pressionada"
+ IDS_HAND_VISIBLE_HELP,
+  "se a sua mão não estiver visível"
+ IDS_CLIPBOARD_HELP,
+  "a área de transferência para receber e passar coisas de e para outros programas"
+ IDS_AVENUE_HELP,
+  "qual a avenida (direção norte-sul) desta casa"
+ IDS_STREET_HELP,
+  "qual a rua (direção leste-oeste) desta casa"
+ IDS_SOUND_ON_HELP,
+  "se os efeitos sonoros estão habilitados"
+ IDS_LETTER_SIZE_HELP,
+  "o tamanho das letras em meus balões de fala (o normal é 100)"
+ IDS_READING_SPEED_HELP,
+  "quanto tempo demoro falando alguma coisa antes de mudar o que está em meu balão de fala (100 é o normal)"
+ IDS_MARTIAN_ADVICE_LEVEL_HELP,
+  "o quão falador eu sou"
+ IDS_PROGRAMMER_HEAD_HELP,
+  "se você é careca, tem cabelo comprido ou está usando um chapéu"
+ IDS_SCREEN_SIZE_HELP,
+  "o tamanho da janela"
+ IDS_SYSTEM_SPEED_HELP,
+  "a velocidade com que as coisas acontecem no ToonTalk (o normal é 100)"
+ IDS_CITY_SIZE_HELP,
+  "o tamanho da cidade"
+ IDS_SYSTEM_SLEEP_HELP,
+  "o número de milésimos de segundo que, se possível, cada quadro da animação deve durar"
+ IDS_MOUSE_BUTTONS_HELP,
+  "se os botões direito e central do mouse têm algum significado especial quando no chão"
+ IDS_LEGO_SERIAL_PORT_HELP,
+  "a porta serial em que está conectado um controlador HyperBot (tm)"  // was also LEGO
+ IDS_MARTIAN_FONT_HELP,
+  "o estilo de letra usado em meu balão de fala"
+ IDS_FILE_TO_PICTURE_HELP,
+  "um lugar para se colocar o nome de um arquivo de imagens que será transformado em uma imagem"
+ IDS_FILE_TO_SOUND_HELP,
+  "um lugar para se colocar o nome de um arquivo de som para ouvi-lo"
+
+
+ IDS_REMOTE_DESCRIPTION,
+ // e.g. This number is a remote control for the color of a rectangle.
+  "Este número é um controle remoto que controla "
+// IDS_REMOTE_SENSOR_DESCRIPTION,
+//   "This number is a sensor for "
+ IDS_REMOTE_COLOR_DESCRIPTION,
+  "O número é uma cor numerada de 0 a 255. "
+ IDS_REMOTE_PARAMETER_DESCRIPTION,
+  "O número seleciona a imagem que será mostrada. "
+ IDS_REMOTE_NUMBER_DESCRIPTION2,
+  "O número é "
+ IDS_OF_THE_PICTURE,
+   "da imagem"
+ IDS_REMOTE_NUMBER_DESCRIPTION3,
+  "Se você mudar o número, então "
+ IDS_REMOTE_NUMBER_DESCRIPTION4,
+  " irá mudar do mesmo jeito. "
+ IDS_REMOTE_NUMBER_DESCRIPTION5,
+  "Você pode alterar controles remotos como se fossem números comuns. "
+ IDS_REMOTE_NUMBER_DESCRIPTION6,
+// was  "This number is a remote display for "
+  "Este número é um sensor que indica "
+  // e.g. This number is a sensor for the speed the computer's mouse is moving to the right.
+ IDS_REMOTE_NUMBER_DESCRIPTION7,
+  "Você não pode alterá-lo como se fosse um número comum. "
+ IDS_REMOTE_NUMBER_DESCRIPTION8,
+  "Quando quero que ele pare de mudar, eu o coloco sobre um 0. "
+  // together these entries generate:
+  // "This number is a sensor for the speed the computer's mouse is moving to the right.
+  // You can't change it like ordinary numbers.
+  // When I want it to stop changing, I usually drop it on a 0. "
+
+ IDS_REMOTE_PICTURE_DESCRIPTION,
+  "Esta animação mostra se "
+ IDS_REMOTE_PICTURE_DESCRIPTION2,
+  " está colidindo com alguma outra coisa. "
+ IDS_REMOTE_PICTURE_DESCRIPTION3,
+  "Esta é uma imagem com que "
+ IDS_REMOTE_PICTURE_DESCRIPTION4,
+  " está colidindo. Ela fica preta se não há nenhuma colisão. "
+
+ IDS_SINCE,
+ // only used in the context:
+ // This number is a remote control for the picture of a rectangle.
+ // The number is the width of the picture.
+ // If you change the number, then the picture will change accordingly.
+ // Since the picture of a rectangle is flipped, you'll have to flip it back to try this out.
+  "Como "
+ IDS_REMOTE_NUMBER_DESCRIPTION9,
+  " está virada, você terá de desvirá-la para poder fazer um teste. "
+
+ IDS_BOOK_KEY_FORWARD_HELP,
+  "Você pode virar para a próxima página apertando tanto a tecla '+' quanto a de espaço. "
+ IDS_BOOK_KEY_BACKWARD_HELP,
+  "Você pode voltar para a página anterior apertando a tecla '-' (menos). "
+ IDS_BOOK_KEY_BACKWARD_HELP2,
+  // the "it" here always refers to a notebook
+  "Quando a agenda está na primeira página,"
+ IDS_BOOK_KEY_BACKWARD_HELP3,
+  "Se a agenda estiver na primeira página,"
+ IDS_BOOK_KEY_BACKWARD_HELP4,
+  " a tecla '-' (menos) levará para a última página. "
+ IDS_BOOK_KEY_NUMBER_HELP,
+  "Você pode virar para uma página específica digitando o número dela. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP,
+  "Você pode guardar qualquer coisa que fizer em uma página vazia da agenda. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP2,
+  "Basta colocar um objeto sobre uma página em branco que ele se transformará em uma pilha imensa de cópias dele mesmo. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP3,
+  "Qualquer coisa que você colocar na agenda permanecerá lá mesmo que você reinicie o computador. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP4,
+  "Asper, o aspirador, pode remover as coisas que você não quiser mais. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP5,
+  "Por que não virar para uma página em branco e fazer um teste? "
+ IDS_BOOK_PAGE_REMOVED_HELP,
+  "O Asper pode remover objetos de uma agenda. "
+ IDS_BOOK_PAGE_REMOVED_HELP2,
+  "Você pode chamá-lo pressionando a tecla F2. "
+ IDS_BOOK_PAGE_REMOVED_HELP3,
+  "Se você aspirar uma página por engano, o Asper poderá devolvê-la e assim você poderá colocá-la de volta. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP,
+  "Costumo usar as páginas da esquerda para textos ou imagens que descrevam o que estiver do lado direito. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP2,
+  "Basta colocar algum texto ou imagem lá. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP3,
+  "Depois você poderá voltar rapidamente para uma página colocando sobre a agenda o mesmo texto ou imagem que tenha sido utilizado para descrevê-la. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP4,
+  // as in "This page of the notebook is blank so you can drop something there. "
+  " está em branco. Assim você pode colocar alguma coisa nela. "
+ IDS_BOOK_PAGE_TOKEN_HELP,
+  "Uma boa forma de voltar à página "
+ IDS_BOOK_PAGE_TOKEN_HELP2,
+  " é colocando "
+ IDS_BOOK_PAGE_TOKEN_HELP3,
+  " sobre a agenda. "
+ IDS_BOOK_PAGE_TOKEN_HELP4,
+  "Você pode ir para uma página que não estiver em branco e fazer um teste. "
+ IDS_BOOK_PAGE_TOKEN_HELP5,
+  "Você pode virar para uma página que tenha texto colocando sobre a agenda um bloco que contenha o mesmo texto. "
+ IDS_BOOK_PAGE_TOKEN_HELP6,
+  "Se você colocar um bloco de texto, provavelmente não precisará digitar o texto inteiro. "
+ IDS_BOOK_PAGE_TOKEN_HELP7,
+ // Only used after preceeding entry.  So it refers to how much you need to type.
+  "Só o suficiente para encontrar a página desejada. "
+ IDS_BOOK_PAGE_NUMBER_HELP,
+  "Você também pode virar para uma página específica colocando um bloco de números sobre uma página que não esteja em branco. "
+ IDS_BOOK_CALLED_HELP,
+  "Quando você pressiona a tecla F4, a última agenda usada voará até você. "
+ IDS_BOOK_HELP_GIVEN_HELP,
+  "Já contei tudo o que sei sobre agendas. "
+ IDS_BOOK_HELP_GIVEN_HELP2,
+  "Se você quiser que eu repita tudo o que sei sobre agendas, aperte F1 duas vezes enquanto estiver apontando para uma delas. "
+ IDS_BOOK_CONTAINING,
+  "uma agenda" // used to be "a notebook containing "
+ IDS_BOOK_DESCRIPTION1,
+  // It here always refers to the notebook that lives inside of the Tool box.
+  "Ela guarda de tudo, inclusive outras agendas. "
+ IDS_BOOK_DESCRIPTION2,
+  "Esta agenda está cheia de imagens"
+ IDS_BOOK_DESCRIPTION3,
+  "Esta agenda está cheia de sensores e controles bastante úteis"
+ IDS_BOOK_DESCRIPTION4,
+  "Esta está cheia de exemplos de programas"
+ IDS_BOOK_DESCRIPTION5,
+  "Ela é guardada no arquivo " // followed by the file name
+ IDS_PAGES,
+  " páginas"
+ IDS_IT_CONTAINS_REMOTE,
+  "Ela contém controles remotos para "
+ IDS_BLANK_NOTEBOOK,
+  "Agenda\rem\r Branco"
+ IDS_MAIN_BOOK_DESCRIPTION,
+  "Esta agenda vive na caixa de ferramentas. Qualquer alteração que você fizer nela permanecerá, mesmo que desligue o computador"
+
+ IDS_MOVIES_NOTEBOOK,
+  "Imagens"
+ IDS_SENSORS_NOTEBOOK,
+  "Sensores"
+ IDS_BIRDS_NOTEBOOK,
+  "pombos\rÚteis"
+
+// This section is used to describe the pictures found in
+// notebook on page 2 of the main notebook.
+
+ IDS_RECTANGLE_PAGE,
+  "Retângulo"
+ IDS_BALL_PAGE,
+  "Bola"
+ IDS_PADDLE_PAGE,
+  "Rebatedor"
+ IDS_PERSON_WALK_PAGE,
+  "Pessoa\rAndando"
+ IDS_PERSON_DIZZY_PAGE1,
+  "Pessoa\rTonta"
+ IDS_PERSON_DIZZY_PAGE2,
+  "Pessoa\rTonta"
+ IDS_PERSON_DIZZY_PAGE3,
+  "Pessoa\rTonta"
+ IDS_PERSON_SIT_PAGE1,
+  "Pessoa\rSentando"
+ IDS_PERSON_SIT_PAGE2,
+  "Pessoa\rSentando"
+ IDS_PERSON_SIT_PAGE3,
+  "Pessoa\rSentando"
+ IDS_TOOLBOX_PAGE,
+  "Caixa\rde\rferramentas"
+ IDS_HELIOCOPTER_PAGE,
+  "Helicóptero"
+ IDS_HELICOPTER_LANDING_PAGE,
+  "Pousando"
+ IDS_EXPLOSION_PAGE,
+  "Explosão"
+ IDS_BOMB_PAGE,
+  "Bomba"
+ IDS_HOUSE_SIDE_PAGE1,
+  "Casa\rde\rLado"
+ IDS_HOUSE_TOP_PAGE1,
+  "Casa\rde\rCima"
+ IDS_HOUSE_SIDE_PAGE2,
+  "Casa\rde\rLado"
+ IDS_HOUSE_TOP_PAGE2,
+  "Casa\rde\rCima"
+ IDS_HOUSE_SIDE_PAGE3,
+  "Casa\rde\rLado"
+ IDS_HOUSE_TOP_PAGE3,
+  "Casa\rde\rCima"
+ IDS_ROBOT_PAGE,
+  "Robô"
+ IDS_NEST_PAGE,
+  "Ninho"
+ IDS_BIRD_PAGE,
+  "pombo"
+ IDS_MOUSE_PAGE,
+  "Rato"
+ IDS_VACUUM_PAGE,
+  "Aspirador"
+ IDS_EXPANDER_PAGE,
+  "Bomba\rde\rBicicleta"
+ IDS_COPIER_PAGE,
+  "Varinha"
+ IDS_MARTIAN_PAGE1,
+  "Marciano"
+ IDS_MARTIAN_PAGE2,
+  "Foguete"
+ IDS_TRUCK_PAGE1,
+  "Caminhão"
+ IDS_TRUCK_PAGE2,
+  "Caminhão"
+ IDS_TRUCK_PAGE3,
+  "Caminhão"
+ IDS_THOUGHT_BUBBLE_PAGE,
+  "Mente do robô"
+ IDS_TALK_BALLOON_PAGE,
+  "Mente do robô"
+ IDS_PLATE_PAGE, // changed 12/2/96
+  // this used to show a picture of a plate but now shows a picture of a button like those on Pumpy and Dusty
+  "Botão"
+ IDS_PAD_PAGE,
+  "Bloco"
+ IDS_BOOK_PAGE,
+  "Agenda"
+ IDS_FRAME_PAGE,
+  "Quadro"
+ IDS_ARM_PAGE,
+  "Braço"
+ IDS_HAND_PAGE1,
+  "Mão"
+ IDS_HAND_PAGE2,
+  "Mão"
+ IDS_SWITCH_PAGE,
+  "Interruptor"
+ IDS_WIRE_PAGE,
+  "Fio"
+ IDS_FLOWER_PAGE,
+        "Flor"
+ IDS_TREE_PAGE,
+        "Árvore"
+ IDS_TRAFFIC_LIGHT_PAGE,
+        "Sinal\rde\rTrânsito"
+
+// This section labels the contents of the sensor
+// notebook found on page 4 of the main notebook.
+// Each sensor is in a box with one of these labels.
+
+ IDS_MOUSE_X_SHORT_LABEL,
+  "Mouse para direita"
+ IDS_MOUSE_Y_SHORT_LABEL,
+  "Mouse para cima"
+ IDS_MOUSE_LEFT_BUTTON_SHORT_LABEL,
+  "Clique esquerdo"
+ IDS_MOUSE_MIDDLE_BUTTON_SHORT_LABEL,
+  "Clique central"
+ IDS_MOUSE_RIGHT_BUTTON_SHORT_LABEL,
+  "Clique direito"
+ IDS_MOUSE_LEFT_BUTTON_DOWN_SHORT_LABEL,
+  "Esquerda pressionado"
+ IDS_MOUSE_MIDDLE_BUTTON_DOWN_SHORT_LABEL,
+  "Central pressionado"
+ IDS_MOUSE_RIGHT_BUTTON_DOWN_SHORT_LABEL,
+  "Direita pressionado"
+ IDS_KEYBOARD_BUTTON_SHORT_LABEL,
+  "Tecla"
+ IDS_LAST_KEYSTROKE_SHORT_LABEL,
+  "Última tecla"
+ IDS_SHIFT_DOWN_SHORT_LABEL,
+  "'Shift' pressionado"
+ IDS_CONTROL_DOWN_SHORT_LABEL,
+  "'Control' pressionado"
+ IDS_TIMER_SHORT_LABEL,
+  "Timer"
+ IDS_RANDOM_SHORT_LABEL,
+  "Aleatório"
+ IDS_HAND_VISIBLE_SHORT_LABEL,
+  "Mão?" 
+ IDS_CLIPBOARD_SHORT_LABEL,
+  "Área de transferência"
+ IDS_AVENUE_SHORT_LABEL,
+  "Avenida"
+ IDS_STREET_SHORT_LABEL,
+  "Rua" 
+
+ IDS_SOUND_ON_SHORT_LABEL,
+  "Som?"
+ IDS_LETTER_SIZE_SHORT_LABEL,
+  "Tamanho da letra"
+ IDS_READING_SPEED_SHORT_LABEL,
+  "Velocidade da fala"
+ IDS_MARTIAN_ADVICE_LEVEL_SHORT_LABEL,
+  "Fala do Márcio"
+ IDS_PROGRAMMER_HEAD_SHORT_LABEL,
+  "Sua cabeça"
+ IDS_SCREEN_SIZE_SHORT_LABEL,
+  "Tamanho da janela"
+ IDS_SYSTEM_SPEED_SHORT_LABEL,
+  "Velocidade do ToonTalk"
+ IDS_CITY_SIZE_SHORT_LABEL
+  "Tamanho da cidade"
+ IDS_SYSTEM_SLEEP_SHORT_LABEL,
+  // this label is for a remote control for customization that allows one to set a
+  // minimum time for each internal cycle (or animation frame).  Its main use is to
+  // make demos (DMO files) on a fast machine for playback on slower machines.  Could
+  // also be used to force ToonTalk to sleep to provide more CPU time for other processes.
+  "Duração do quadro"
+ IDS_MOUSE_BUTTONS_SHORT_LABEL,
+  "Botões do mouse"
+ IDS_LEGO_SERIAL_PORT_SHORT_LABEL,
+  "Porta serial"
+ IDS_MARTIAN_FONT_SHORT_LABEL,
+  "Letra do Márcio"
+ IDS_FILE_TO_PICTURE_SHORT_LABEL,
+  "Imagem em"
+ IDS_FILE_TO_SOUND_SHORT_LABEL,
+  "Som em"
+
+
+// This section contains the short text objects
+// that describe the sensors in the notebook
+// of page 4 of the main notebook.  These
+// appear on the odd pages
+ IDS_MOUSE_X_LONG_LABEL,
+  "Velocidade\rdo Mouse\rpara Direita"
+ IDS_MOUSE_Y_LONG_LABEL,
+  "Velocidade\rdo Mouse\rpara Esquerda"
+ IDS_MOUSE_LEFT_BUTTON_LONG_LABEL,
+  "Botão\rEsquerdo\rdo Mouse\rClicado"
+ IDS_MOUSE_MIDDLE_BUTTON_LONG_LABEL,
+  "Botão\rCentral\rdo Mouse\rClicado"
+ IDS_MOUSE_RIGHT_BUTTON_LONG_LABEL,
+  "Botão\rDireito\rdo Mouse\rClicado"
+ IDS_MOUSE_LEFT_BUTTON_DOWN_LONG_LABEL,
+  "Botão\rEsquerdo\rdo Mouse\rApertado"
+ IDS_MOUSE_MIDDLE_BUTTON_DOWN_LONG_LABEL,
+  "Botão\rCentral\rdo mouse\rApertado"
+ IDS_MOUSE_RIGHT_BUTTON_DOWN_LONG_LABEL,
+  "Botão\rDireito\rdo mouse\rApertado"
+ IDS_KEYBOARD_BUTTON_LONG_LABEL,
+  "Tecla\rRecém\rApertada"
+ IDS_LAST_KEYSTROKE_LONG_LABEL,
+  "Última\rTecla\rApertada"
+ IDS_SHIFT_DOWN_LONG_LABEL,
+  "Tecla\rSHIFT\rApertada"
+ IDS_CONTROL_DOWN_LONG_LABEL,
+  "Tecla\rControl\rApertada"
+ IDS_TIMER_LONG_LABEL,
+  "Milé-\rsimos\rdesde\rÚltimo\rQuadro"
+ IDS_RANDOM_LONG_LABEL,
+  "Número\rentre\r1 e 1000"
+ IDS_HAND_VISIBLE_LONG_LABEL,
+  "Mão\rVisível?" 
+ IDS_CLIPBOARD_LONG_LABEL,
+  "De e para\routros\rProgramas"
+ IDS_AVENUE_LONG_LABEL,
+  "Minha\rAvenida"
+ IDS_STREET_LONG_LABEL,
+  "Minha\rRua"
+ IDS_SOUND_ON_LONG_LABEL,
+  "Som\rHabilitado?"
+ IDS_LETTER_SIZE_LONG_LABEL,
+  "Tamanho\rda Letra\rdo Márcio"
+ IDS_READING_SPEED_LONG_LABEL,
+  "Velocidade\rda Fala\rdo Márcio"
+ IDS_MARTIAN_ADVICE_LEVEL_LONG_LABEL,
+  "Nível\rda Fala\rdo Márcio"
+ IDS_PROGRAMMER_HEAD_LONG_LABEL,
+  "Aparência\rda Sua\rCabeça"
+ IDS_SCREEN_SIZE_LONG_LABEL,
+  "Tamanho\rda Janela"
+ IDS_SYSTEM_SPEED_LONG_LABEL,
+  "Velocidade do\rToonTalk"
+ IDS_CITY_SIZE_LONG_LABEL
+  "Tamanho\rda\rCidade"
+ IDS_SYSTEM_SLEEP_LONG_LABEL,
+  "Duração\rdo\rQuadro"    
+ IDS_MOUSE_BUTTONS_LONG_LABEL,
+  "Uso do\rBotão\rdo Mouse"
+ IDS_LEGO_SERIAL_PORT_LONG_LABEL,
+  "Porta\rSerial"
+ IDS_MARTIAN_FONT_LONG_LABEL,
+  "Letra\rdo\rMárcio"
+ IDS_FILE_TO_PICTURE_LONG_LABEL,
+  "Arquivo\rpara\rImagem"
+ IDS_FILE_TO_SOUND_LONG_LABEL,
+  "Arquivo\rpara\rSom"
+
+// IDS_MATH_LABEL,
+//  "Math"
+// IDS_MOUSE_LABEL,
+//  "Mouse"
+// IDS_SERIAL_PORT_LABEL,
+//  "Serial port"
+// IDS_CLOCK_LABEL,
+//  "Clock"
+
+ IDS_ANY_PICTURE,
+  "qualquer imagem"
+ IDS_PICT_OF,
+  "uma imagem de"
+ IDS_MOVIE_OF,
+  "uma animação de"
+ IDS_BLANK_PICTURE_OF, // revised on 12/20 (replaces the old IDS_BLANK_PICTURE)
+  "uma imagem vazia de"
+
+ IDS_PICT_DESCRIPTION1, // As in "You are hold a picture with 3 pictures on top. "
+  " imagens por cima"
+ IDS_PICT_DESCRIPTION2, // As in "You are hold a picture with one picture on top. "
+  " com uma imagem por cima"
+// IDS_BEGIN_THE, // just for English
+//  "The "
+// IDS_AND_THE,
+//  "And the "
+ IDS_ON_THE_BACK,
+ "atrás"
+
+
+
+ IDS_FLIPPING_MOVIE,
+  // this is used when Marty is describing a picture while it is being flipped over
+  // (It is named "movie" because I used to call pictures movies since some are animated.)
+  "uma imagem virando"
+ IDS_FLIP_SIDE_OF,
+  , "o lado virado da "
+// IDS_PICT_BLANKED_TB_HELP,
+//  "Since the blank picture is in a thought bubble, the robot will be happy with any picture at the same place. "
+ IDS_PICT_BLANKED_TB_HELP2,
+  "Imagens vazias são úteis dentro da mente do robô. "
+ IDS_PICT_BLANKED_TB_HELP3,
+  "O robô com uma imagem vazia em sua mente se contentará com qualquer imagem que esteja ocupando o mesmo buraco da caixa em que ele estiver trabalhando. " // of the box he's working on. "
+ IDS_PICT_ADDED_PICTURE_HELP,
+  "Você sabia que pode combinar duas imagens colocando uma sobre a outra? "
+// IDS_PICT_ADDED_PICTURE_HELP2,
+
+// IDS_PICT_ADDED_PICTURE_HELP3,
+
+ IDS_PICT_REMOVED_PICTURE_HELP,
+  "Você pode remover uma imagem de dentro de outra utilizando Asper, o aspirador. "
+ IDS_PICT_REMOVED_PICTURE_HELP2,
+  "Você pode chamar o Asper pressionando a tecla F2. "
+ IDS_PICT_CHANGED_KEY_HELP,
+  // as in "This picture is really 8 pictures. "
+  "Esta imagem é composta na realidade por "
+ IDS_PICT_CHANGED_KEY_HELP2,
+ // as in " You can switch between them by pressing the +, -, or space button when selected or held. "
+  "Você pode alternar entre elas "
+ IDS_PICT_CHANGED_KEY_HELP3,
+ // as in "Some pictures can be changed by pressing the +, -, or space button when selected or held. "
+  "Algumas imagens podem ser alteradas "
+ IDS_PICT_CHANGED_KEY_HELP4,
+  "pressionando as teclas '+', '-' (menos), ou a barra de espaço quando elas estiverem selecionadas ou na mão. "
+ IDS_MOVIES,
+  " animações" // was  " pictures"
+
+ // The following 2 sentences are said by Marty when he is describing a "synthetic" picture.
+ // I.e. a rectangle or circle but not a bitmap image of something
+ // For these kinds of pictures "+" or "-" changes their color.
+ // The first sentence is spoken in reference to a picture that is being held or pointed to
+ // while the second one may just be a useful tip that Marty provides at some point
+ // The third sentence always follows one of the following sentences.
+ IDS_PICT_COLOR_KEY_HELP,   // changed on 8/23/97
+//  "This picture is really a rectangle. "
+    "Esta imagem é uma forma geométrica colorida. "
+ IDS_PICT_COLOR_KEY_HELP2,
+//  "Some pictures are just rectangles. "
+   "Algumas imagens são formas geométricas coloridas. "
+ IDS_PICT_COLOR_KEY_HELP3,
+  "Você pode mudar a cor pressionando as teclas '+', '-' (menos) ou a barra de espaço. "
+ IDS_EXPANDER_ON_PICTURE_HELP,
+  "Soprana, a Bomba de Bicicleta, pode fazer com que as imagens fiquem maiores, menores ou mais estreitas. "
+ IDS_EXPANDER_ON_PICTURE_HELP2,
+  "Você pode chamá-la pressionando a tecla F3. "
+ IDS_PICT_TOSSED_HELP,
+  // as in "You can give this a toss by pressing any mouse button while holding down the control button (labeled 'Ctrl'). "
+  // the word "this" should always refer to a picture of something.
+  "Você pode dar um empurrão pressionando "
+ IDS_PICT_TOSSED_HELP2,
+  "Você pode empurrar uma imagem pressionando "
+// IDS_PICT_TOSSED_HELP3,
+
+// IDS_PICT_TOSSED_HELP4,
+
+ IDS_PICT_FLIPPED_HELP,
+  // The idea is that pictures can have robots working on the back.
+  // The user can flip the picture over to add or remove robots and
+  // then flip it back over to watch it behave.
+  "Você pode girar uma imagem pressionando "
+// IDS_NOW,
+//  " now"
+ IDS_PICT_FLIPPED_HELP2,
+  " quando você estiver segurando uma imagem. "
+ IDS_PICT_FLIPPED_BACK_HELP,
+  "Você pode girar uma imagem de volta pressionando "
+ IDS_AGAIN,
+  " novamente"
+ IDS_PICT_FLIPPED_BACK_HELP2,
+  " quando você estiver segurando uma imagem virada. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP,
+//  "The little notebook on the back contains remote controls for this picture. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP2,
+//  "The back of a picture contains a little notebook of remote controls. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP3,
+//  "If you try to pick it up, you'll get a copy. "
+ IDS_PICT_PROGRAM_ADDED_HELP,
+  "Os robôs podem trabalhar atrás das imagens. "
+ IDS_PICT_PROGRAM_ADDED_HELP2,
+  "Basta colocá-los atrás. E não esqueça das caixas para eles trabalharem. "
+ IDS_PICT_PROGRAM_ADDED_HELP3,
+  "Os robôs começarão a trabalhar quando você girar a imagem de novo e soltá-la. "
+ IDS_PICT_PROGRAM_ADDED_HELP4,
+  "É assim que eu faço imagens \"inteligentes\" que possam balançar, explodir, crescer ou fazer qualquer coisa que eu as programe para fazer. "
+ IDS_PICT_PROGRAM_REMOVED_HELP, // changed 8/23/97
+ //  "Dusty can remove the stuff you added to the back of a picture. "
+  "Você pode remover coisas de trás de uma imagem com sua mão ou com o Asper. "
+ IDS_PICT_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre imagens. "
+ IDS_PICT_HELP_GIVEN_HELP2,
+  "Se você quiser que eu repita tudo o que disse sobre imagens, pressione F1 duas vezes enquanto estiver apontando para uma delas. "
+ IDS_ABORT_CANT_FLIP_SCALE, // changed 8/23
+//  "the mouse buttons do nothing when holding a scale"
+  // like all of the entries that start IDS_ABORT_
+  // the phrase is preceeded by "it didn't work because"
+  "você não pode alterar uma balança clicando nos botões do mouse"
+
+ IDS_X_SHORT_LABEL,
+  "Direita"
+ IDS_Y_SHORT_LABEL,
+  "Cima"
+ IDS_X_SPEED_SHORT_LABEL,
+  "Velocidade para Direita"
+ IDS_Y_SPEED_SHORT_LABEL,
+  "Velocidade para Cima"
+ IDS_WIDTH_SHORT_LABEL,
+  "Largura"
+ IDS_HEIGHT_SHORT_LABEL,
+  "Altura"
+ IDS_PARAMETER_SHORT_LABEL,
+  // # as in short for "number"
+  "Imagem nº"
+ IDS_COLLIDE_SHORT_LABEL,
+  "Colide?"
+ IDS_COLLIDE_WHO_SHORT_LABEL,
+  "Bateu em?"
+// IDS_X_PENETRATION_SHORT_LABEL,
+//  "Right Inside"
+// IDS_Y_PENETRATION_SHORT_LABEL,
+//  "Up Inside"
+ IDS_X_COLLIDE_SHORT_LABEL,
+  "Colisão à direita?"
+ IDS_Y_COLLIDE_SHORT_LABEL,
+  "Colisão de Cima?"
+ IDS_APPEARANCE_SHORT_LABEL,
+  "Aparência"
+ IDS_VISIBLE_SHORT_LABEL,
+  "Visível?"
+ IDS_END_OF_ANIMATION_SHORT_LABEL,
+  "Terminou?"
+ IDS_GRASPED_SHORT_LABEL,
+  "Segurando?"
+ IDS_SELECTED_SHORT_LABEL,
+  "Selecionado?"
+ IDS_RELEASED_SHORT_LABEL,
+  "Colocado?"
+
+ IDS_X_LONG_LABEL,
+  "Do\rLado\rEsquerdo"
+ IDS_Y_LONG_LABEL,
+  "De\rBaixo"
+ IDS_X_SPEED_LONG_LABEL,
+  "Velocidade\rPara\rDireita"
+ IDS_Y_SPEED_LONG_LABEL,
+  "Velocidade\rPara\rCima"
+ IDS_WIDTH_LONG_LABEL,
+  "Largura"
+ IDS_HEIGHT_LONG_LABEL,
+  "Altura"
+ IDS_PARAMETER_LONG_LABEL,
+  "Qual\rImagem"
+ IDS_COLLIDE_LONG_LABEL,
+  "Colidindo?"
+ IDS_COLLIDE_WHO_LONG_LABEL,
+  "Batendo\rEm Quê?"
+// IDS_X_PENETRATION_LONG_LABEL,
+//  "Inside\rto Left"
+// IDS_Y_PENETRATION_LONG_LABEL,
+//  "Inside\rto Top"
+ IDS_X_COLLIDE_LONG_LABEL,
+  "Batida\rDireita\rEsquerda?"
+ IDS_Y_COLLIDE_LONG_LABEL,
+  "Batida\rCima\rBaixo?"
+ IDS_APPEARANCE_LONG_LABEL,
+  "Aparência"
+ IDS_VISIBLE_LONG_LABEL,
+  "Visível?"
+ IDS_END_OF_ANIMATION_LONG_LABEL,
+  "Animação\rTerminada?"
+ IDS_GRASPED_LONG_LABEL,
+  "Pego\rna\rMão?"
+ IDS_SELECTED_LONG_LABEL,
+  "Selecionado?"
+ IDS_RELEASED_LONG_LABEL,
+  "Colocado\rAgora?"
+
+ IDS_ABORT_PICTURE_FLIPPED_OVER, // changed 8/23/97
+//  "the picture is flipped over"
+   "você não pode colocar imagens atrás de uma imagem"
+ IDS_ABORT_PICTURE_NOT_FLIPPED_OVER,
+//  "the picture is not flipped over"
+   "você só pode colocar robôs e caixas atrás de uma imagem"
+
+ IDS_ABORT_ROBOT_CANT_FIND_TOOL,
+  "ele teve problemas para encontrar a ferramenta que iria usar"
+ IDS_ABORT_ROBOT_CANT_RELEASE,
+  "ele tentou soltar algo que não estava segurando"
+ IDS_ROBOT_PROBLEMS_RELEASING,
+  "ele teve problemas para soltar alguma coisa"
+ IDS_ROBOT_DESCRIBE1,
+  // Marty says this when describing a fresh untrained robot
+  "um robô sem uma mente"
+ IDS_ROBOT_DESCRIBE2,
+  // Marty says this when describing a trained robot
+  // this is followed by a description of the box in his thought bubble
+  "um robô que quer "
+ IDS_ROBOT_DESCRIBE3,
+  // this follows a IDS_ROBOT_DESCRIBE2
+  // it is followed by a description of what he was trained to do
+  "Ao receber uma caixa como esta, ele irá "
+ IDS_ROBOT_DESCRIBE4,
+  "Se não, ele entregará a caixa para o robô que estiver atrás dele na fila. " 
+ IDS_STACK_OF, // revised 12/21/96
+  "uma pilha de "
+ IDS_STACK_OF_DEFINITE, // added 12/21/96
+  "a pilha de "
+ IDS_STACK_OF_PLURAL, // added 12/21/96
+  "pilhas de "
+ IDS_STACK_OF_PRONOUN, // added 12/21/96
+  "a pilha de "
+
+ IDS_PICK_UP_HELP,
+// was  "You can pick up"
+ "Você pode pegá"  // changed since what follows might be "it" (or some noun phrase) - removed final - on 110700 since -lo already has a -
+ IDS_PICK_UP_HELP2,
+  "clicando"
+// IDS_HOLDING,  // noticed on 8/23/97 that it was no longer referred to
+//  " holding "
+ IDS_DROP_HELP,
+  "Você pode colocá" // was  "You can drop it by pushing" 10/4/96 - removed final - on 110700 since -lo already has a -
+
+ IDS_ABORT_TEXT_ALREADY_EMPTY,
+  // If, for example, you type rubout on empty text pad, Marty will say something like
+  // "Sorry, it didn't work because the text is already empty. "
+  "o texto já está vazio"
+ IDS_ABORT_TEXT_TOO_LONG,
+  // or if you are trying to increase a text beyond its maximum size (64K if running the 16 bit version of ToonTalk)
+  "o texto é longo demais"
+// IDS_TEXT_BLANKED_TB_HELP,
+//  "Since the empty text pad is in a thought bubble, the robot will be happy with any text at the same place. "
+ IDS_TEXT_BLANKED_TB_HELP2,
+  "Blocos de texto em branco são muito úteis dentro da mente do robô. "
+ IDS_TEXT_BLANKED_TB_HELP3,
+  "O robô com um bloco de texto em sua mente ficará feliz com qualquer texto que estiver em um bloco do mesmo buraco da caixa em que ele estiver trabalhando. " //of the box it is working on. "
+ IDS_TEXT_LETTERS_ADDED_HELP,
+  "Você pode adicionar letras ao bloco de texto digitando uma letra. "
+ IDS_TEXT_LETTERS_ADDED_HELP2,
+  // This is combined with the following phrase with either "the robot is" or "you are" in between
+  // depending upon whether you are training a robot or not
+  "Você também pode adicionar letras enquanto "
+ IDS_TEXT_LETTERS_ADDED_HELP3,
+  " segura um bloco de texto. "
+ IDS_TEXT_LETTERS_REMOVED_HELP,
+  "Você pode apagar letras pressionando a tecla 'Backspace'. "
+ IDS_TEXT_MADE_MULTIPLE_LINES_HELP,
+  "Você pode fazer com que o texto continue em outra linha pressionando a tecla 'Enter'. "
+ IDS_TEXT_CONCATENATION_HELP,
+  "Você pode combinar dois blocos de texto colocando um sobre o outro. "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP,
+   // or the first if you drop it at that end...
+  "Se você colocar um número sobre este, ele será adicionado ao texto. " // changed 2/1 was the text. "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP2,
+  "Por exemplo, se você colocar "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP3,
+  " sobre este, você obterá '"
+ IDS_TEXT_NUMBER_CONCATENATION_HELP4,
+  "'. "
+  // new semantics so following changed 8/23/96
+ IDS_TEXT_NUMBER_CONCATENATION_HELP5,
+  "Se você colocar um número sobre um bloco de texto, ele será adicionado à última letra. "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP6,
+  "Por exemplo, colocando 2 sobre ABC resultará em ABE. " // example changed 2/1
+ IDS_TEXT_HELP_GIVEN_HELP,
+  "Já falei tudo o que sei sobre blocos de texto. "
+ IDS_TEXT_HELP_GIVEN_HELP2,
+  "Se você quiser que eu repita novamente tudo o que sei sobre blocos de texto, pressione F1 duas vezes enquanto estiver apontando para um bloco de texto. "
+ IDS_ABORT_TEXT_BAD_INDEX,
+  "o número é maior do que o comprimento do texto"
+
+ // the following are no longer used since there is no longer a way to separate
+ // a thought bubble from a robot and get a description of just the thought bubble
+ // and describing a robot doesn't use this.
+ IDS_EMPTY_THOUGHT_BUBBLE_DESCRIPTION,
+  "mente de robô vazia"
+ IDS_THOUGHT_BUBBLE_DESCRIPTION,
+  // followed by a description of a box inside a thought bubble
+  "mente de robô contendo "
+
+// IDS_GENERIC_TOOL_HELP,
+//  "I'll tell you more about how to use "
+// IDS_GENERIC_TOOL_HELP2,
+//  " if you pick it up. "
+ IDS_EXPANDER_DESCRIPTION,
+  "Soprana, a Bomba de Bicicleta"
+ IDS_EXPANDER_DESCRIPTION1,
+  "Soprana"
+ IDS_EXPANDER_GREW_ITEM_HELP,
+  "A Soprana pode fazer com que as coisas fiquem grandes ou pequenas, altas ou baixas, largas ou finas. " // was "Pumpy can change the size of the item he is over" 10/4
+ IDS_EXPANDER_GREW_ITEM_HELP2,  // only for old input scheme
+  "Se você pressionar, "
+ IDS_EXPANDER_GREW_ITEM_HELP3,
+  "a Soprana fará com que"
+// IDS_BIGGER,
+//  " bigger"
+// IDS_EXPANDER_SHRUNK_ITEM_HELP,
+//  "If you hold down "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP2,
+//  " Pumpy will make "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP3,
+//  "But next time you push it down "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP4,
+//  " will get smaller. "
+// IDS_EXPANDER_GREW_Y_HELP,
+//  "If you press"
+//// IDS_EXPANDER_GREW_Y_HELP2,
+
+// IDS_EXPANDER_GREW_Y_HELP3,
+//  "will just get taller"
+//// IDS_EXPANDER_GREW_X_HELP,
+
+//// IDS_EXPANDER_GREW_X_HELP2,
+
+//// IDS_EXPANDER_GREW_X_HELP3,
+
+// IDS_EXPANDER_GREW_X_HELP4,
+//  "But next time it'll get wider instead. "
+ IDS_EXPANDER_CALLED_HELP,
+  "Toda vez que você quiser que a Soprana salte para "
+ IDS_EXPANDER_CALLED_HELP2,
+  ", basta chamá-la pressionando a tecla F3. " // hand removed
+ IDS_EXPANDER_CALLED_HELP3,
+  "Ela irá se apressar mais se você apertar F3 duas vezes. "
+ IDS_EXPANDER_HELP_GIVEN_HELP,
+  "Já contei tudo o que sei sobre a Soprana. "
+ IDS_EXPANDER_HELP_GIVEN_HELP2,
+  "Contarei novamente tudo o que sei sobre a Soprana se você pressionar F1 duas vezes enquanto estiver segurando a Soprana. "
+ IDS_VACUUM_DESCRIPTION,
+  "Asper, o Aspirador"
+ IDS_VACUUM_DESCRIPTION1,
+  "Asper"
+ IDS_VACUUM_RESTORE_HELP,
+  // The following are combined to form sentences like
+  // "Dusty can restore the last thing sucked up if you click on the right mouse button. "  or
+  // "Dusty can restore the number if you click on the right mouse button. "
+  "Asper pode devolver "
+ IDS_VACUUM_RESTORE_HELP2,
+  "a última coisa aspirada"
+ IDS_VACUUM_RESTORE_HELP3,
+  "se você clicar no"
+// IDS_VACUUM_RESTORE_HELP4, 10/4
+//  "Dusty spits things out when you try to suck up the floor. "
+ IDS_VACUUM_BLANK_HELP,
+  // as in  "Dusty will erase the number if you click on any mouse button. "
+  "O Asper irá apagar o conteúdo " // was will blank
+ IDS_VACUUM_BLANK_HELP2, // 10/4
+//  "a text or number pad or an empty box under it"
+  "do que estiver sob seu nariz" 
+ IDS_VACUUM_BLANK_HELP3,
+  "se você clicar sobre" // was "blank if you click on"
+ IDS_VACUUM_SUCK_HELP2, // this is now joined with IDS_VACUUM_SUCK_HELP4
+  " o Asper irá aspirar "
+// IDS_VACUUM_SUCK_HELP3,
+ IDS_VACUUM_SUCK_HELP4,
+  "o que estiver embaixo dele. "
+// IDS_VACUUM_SUCK_ITEM_HELP,
+//  "If you click down on "
+// IDS_VACUUM_SUCK_ITEM_HELP2,
+//  " Dusty will suck up "
+// IDS_VACUUM_SUCK_ITEM_HELP3,
+//  "He'll restore it if you try to suck up the floor. "
+// IDS_OUT_OF,
+//  " out of "
+ IDS_VACUUM_CALLED_HELP,
+  "Toda vez que você quiser que o Asper apareça e venha para "
+ IDS_VACUUM_CALLED_HELP2,
+  " aperte a tecla F2. " // hand removed
+ IDS_VACUUM_CALLED_HELP3,
+  "Se você apertar F2 duas vezes, ele virá mais rápido. "
+ IDS_VACUUM_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre o Asper. "
+ IDS_VACUUM_HELP_GIVEN_HELP2,
+  "Às vezes uso o Asper para mover objetos entre casas. "
+ IDS_VACUUM_HELP_GIVEN_HELP3,
+  "Se você quiser que eu repita novamente tudo o que sei sobre o Asper, pressione F1 duas vezes. "
+ IDS_COPIER_APPLIED_HELP,
+  "Você pode copiar "
+ IDS_COPIER_APPLIED_HELP2,
+  "o que estiver sob a ponta da varinha"
+ IDS_COPIER_APPLIED_HELP3,
+  " clicando em "
+ IDS_COPIER_RELEASED_HELP,
+  // as in "You can set down the box by clicking on any mouse button. "
+  "Você pode soltar "
+ IDS_COPIER_RELEASED_HELP2,
+  // as in "You can set down what you copy by clicking on any mouse button. "
+  "o que copiar"
+ IDS_COPIER_RELEASED_HELP3,
+  " clicando em"
+ IDS_COPIER_RELEASED_HELP4,
+  "Um segundo clique irá soltar a varinha mágica. "
+ IDS_COPIER_CALLED_HELP,
+  "Se alguma vez você quiser que a varinha mágica flutue diretamente para "
+ IDS_COPIER_CALLED_HELP2,
+  " , basta chamá-la pressionando o botão F5. "  // hand removed
+ IDS_COPIER_CALLED_HELP3,
+  "Ela virá rapidamente se você pressionar F5 duas vezes. "
+ IDS_COPIER_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre varinhas mágicas. "
+ IDS_COPIER_HELP_GIVEN_HELP2,
+  "Se você quiser que eu repita novamente, pressione F1 duas vezes. "
+
+ IDS_TRUCK_RECEIVED_CARGO_HELP,
+  "Depois que você carregar um caminhão com um robô e uma caixa para ele trabalhar, o caminhão sairá e os trabalhadores construirão uma casa nova. "
+ IDS_TRUCK_RECEIVED_ROBOT_HELP,
+  "Se você colocar um robô ou um grupo de robôs em um caminhão, eles serão dispostos no chão da nova casa para executar o trabalho. "
+ IDS_TRUCK_RECEIVED_CUBBY_HELP,
+  "Se você colocar uma caixa no caminhão, ela será posta no chão da nova casa. " 
+ IDS_TRUCK_RECEIVED_HOUSE_PICTURE_HELP, 
+  "Se você colocar a imagem de uma casa no caminhão, os trabalhadores do caminhão construirão uma casa como a da imagem. Você pode encontrar imagens de casas na agenda de imagens que está na página 2 de sua agenda principal. " // was type "of it"
+
+IDS_TRUCK_RECEIVED_ADDRESS_HELP, // this and next one was missing prior to 120700
+"Se você soltar o número da avenida ou da rua sobre o caminhão, os trabalhadores que estão lá construirão uma casa bem pertinho daquele endereço. Se você não der a eles um endereço, eles a construirão o mais perto possível. "
+IDS_TRUCK_RECEIVED_ADDRESS_HELP2,
+"Você pode encontrar o endereço da casa em que você está olhando a página quatro da sua agenda. Um endereço mudará se você colocar um número sobre ele. "
+
+IDS_TRUCK_RECEIVED_ROBOT_HELP2,
+  "Se você puser um robô ou uma fila de robôs no caminhão, eles serão deixados no chão da nova casa junto com a caixa que veio no caminhão. "
+ IDS_TRUCKS_CARGO_REMOVED_HELP,
+  "Você pode retirar a carga do caminhão com as mãos ou com a ajuda do Asper. "
+ IDS_TRUCK_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre caminhões. "
+ IDS_TRUCK_HELP_GIVEN_HELP2,
+  "Se você quiser que eu repita tudo o que disse, pressione F1 duas vezes apontando para um caminhão. "
+
+ IDS_WELCOME_MESSAGE,
+//  "Welcome to ToonTalk(tm)! Use mouse buttons to fly. This is beta test version number 6B. Copyright (c) 1992, 1997, Ken Kahn. All rights reserved. Please do not distribute. See the README.TXT file for more information. "
+  "(c) 2001. Ken Kahn. Todos os direitos reservados. "
+ IDS_VACUUM_SUCK_GENERIC,
+  "Para usar o Asper, mova a boca dele sobre alguma coisa. "
+ IDS_EXAMPLES_NOTEBOOK,
+  "Exemplos"
+ IDS_SAID_ENOUGH,
+  "... eu já falei o suficiente"
+// IDS_HIDE_HAND_HELP1,
+//  "The mouse sensor gets confused by your hand. "
+// IDS_HIDE_HAND_HELP2,                         
+//  "Press F9 to hide your hand and then the mouse sensors will start working. "
+// IDS_HIDE_HAND_HELP3,
+//  "Pressing F9 again will bring your hand back. "
+
+ IDS_SCALE_TO_LEFT,
+  "uma balança inclinada para a esquerda"
+ IDS_SCALE_TO_RIGHT,
+  "uma balança inclinada para a direita"
+ IDS_SCALE_BALANCED,
+  "uma balança equilibrada"
+ IDS_SCALE_MOVING,
+  "uma balança se equilibrando"
+ IDS_SCALE_USE1,
+  "As balanças podem ser usadas para comparar coisas. "
+ IDS_SCALE_USE2,
+  "Para ver como elas funcionam, coloque três caixas uma do lado da outra. Depois ponha a balança no buraco do meio. "
+ IDS_SCALE_USE3,
+  "Coloque os números nos buracos perto da balança e veja como ela se inclina. "
+ IDS_SCALE_USE4,
+  "As balanças também podem ser usadas para comparar texto. "
+ IDS_SCALE_KEYBOARD_HELP,
+  "Quando uma balança estiver se equilibrando você poderá alterar o modo com que ela se inclina pressionando a tecla de espaço. "
+
+ IDS_ROBOT_TRAIN1,
+  "Veja o que faço quando quero ensinar alguma coisa ao robô. "
+ IDS_ROBOT_TRAIN2,
+  "Eu começo dando a ele o tipo de caixa com que ele deverá trabalhar. "
+ IDS_ROBOT_TRAIN3,
+  "O robô irá então imaginar um mundo que só tenha aquela caixa, a caixa de ferramentas Porta-Treco e alguns amigos. "
+ IDS_ROBOT_TRAIN4,
+  "Então eu faço o robô executar aquilo que eu quiser que ele faça. Como mudar a caixa ou carregar um caminhão. "
+ IDS_ROBOT_TRAIN5,
+  "Quando acabar eu pressiono a tecla 'Esc' e o robô poderá então repetir o que acabei de ensinar. "
+ IDS_ROBOT_ACCEPTS,
+  "Este robô só irá aceitar "
+ IDS_ROBOT_ACCEPTS2,
+  "Um robô só aceitará uma caixa se ela combinar com a de seus pensamentos. "
+ IDS_ROBOT_LESS_FUSSY1,
+//  "You can make him less fussy by using Dusty on his thought bubble. "
+  "Você pode fazer com que fique menos confuso utilizando o Asper na mente dele. " // clearer version 12/23
+ // "his" refers to a robot
+ IDS_ROBOT_LESS_FUSSY2,
+  "O robô só irá trabalhar nos objetos que forem passados a ele dentro de uma caixa. " 
+ IDS_ROBOT_LESS_FUSSY3,
+  "Mas, se estiver faltando alguma coisa em sua mente, ele ficará feliz com qualquer objeto que esteja no mesmo buraco da caixa. "
+ IDS_ROBOT_TRY_OUT1,
+  "Eu normalmente testo um robô depois de treiná-lo. "
+ IDS_ROBOT_TRY_OUT2,
+  "Basta colocar sobre ele uma caixa que combine com a que ele tem na mente e ficar olhando o que ele faz.. "
+ IDS_ROBOT_TRY_OUT3,
+  "Se você quiser pará-lo, basta apanhá-lo com a mão. Ou, para parar todos os robôs, aperte F8. "
+ IDS_ROBOT_SAVE,
+  "Depois de testar um robô eu costumo guardá-lo colocando-o dentro de uma agenda. "
+ IDS_ROBOT_LOAD_TRUCK1,
+  "Freqüentemente quero um monte de robôs trabalhando para mim. "
+ IDS_ROBOT_LOAD_TRUCK2,
+  "Como ficaria muito bagunçado ter todos eles trabalhando aqui em volta, "
+ IDS_ROBOT_LOAD_TRUCK3,
+  "eu prefiro enviá-los para trabalhar em casas recém-construídas. "
+ IDS_ROBOTS_LINE_UP1,
+  "Os robôs não são muito inteligentes. "
+ IDS_ROBOTS_LINE_UP2,
+  "Eles só conseguem pensar em uma coisa de cada vez. "
+ IDS_ROBOTS_LINE_UP3,
+  "Eles só conseguem fazer aquilo que você os treinou para fazer. "
+ IDS_ROBOTS_LINE_UP4,
+  "Por sorte, um time de robôs é capaz de fazer coisas muito mais complicadas. "
+ IDS_ROBOTS_LINE_UP5,
+  // was it'll
+  "Se eu colocar um robô sobre outro, eles formarão uma fila. "
+ IDS_ROBOTS_LINE_UP6,
+  "Se um robô não gostar da caixa que receber, ele a entregará para o robô que estiver atrás dele na fila. "
+ IDS_ROBOTS_LINE_UP7,
+  "O primeiro robô da fila que gostar da caixa trabalhará nela. "
+ IDS_ROBOTS_LINE_UP8,
+  "E, quando ele acabar, entregará a caixa de volta ao primeiro robô da fila. Caso esteja trabalhando sozinho, o robô entregará a caixa para ele mesmo. "
+ IDS_ROBOTS_LINE_UP9,
+  "Se você olhar na página 6 da agenda, encontrará uma agenda repleta de times de robôs que treinei. "
+ IDS_ROBOT_HELP_GIVEN1,
+  "Isso é praticamente tudo o que eu me recordo sobre robôs. "
+ IDS_ROBOT_HELP_GIVEN2,
+  "Se você quiser que eu repita tudo o que sei sobre robôs, pressione F1 duas vezes enquanto aponta para um robô. "
+
+ IDS_ROBOT_BUSY,
+  // As in "You are pointing to a robot busy doing what he was trained to do. "
+  // Marty says this when you point to a running robot
+  "um robô ocupado fazendo aquilo que foi treinado para fazer"
+ IDS_ROBOT_WAITING_FOR_PICTURE,
+  "um robô atrás de uma imagem. Ele está esperando que a imagem seja desvirada"
+  // as in "You are pointing to a robot on the back of a picture.  
+  //  He is waiting for the picture to be flipped back over. "
+// was "a robot waiting for the picture he is on the back of to be flipped over"
+ IDS_ROBOT_WAITING_FOR_ROBOT,
+  "um robô esperando que outro robô termine"
+ IDS_ROBOT_TRAINED_TO,
+  "Ele foi treinado para"
+ IDS_ROBOT_WAITING_FOR_ITEM,
+  "um robô esperando para que alguma coisa apareça em "
+ // as in "You are holding a robot waiting for something to appear in the
+ // third hole of his box. "
+ IDS_HIS_BOX,
+  " sua caixa" 
+ IDS_HE_WILL_THEN,
+  "Aí ele irá "
+// IDS_ROBOT_WHO_WHEN_GIVEN,
+//  "robot who when given "
+// IDS_WILL_THEN,
+//  " will then "
+ IDS_MORE_ROBOT_SAID_ENOUGH,
+  "Há mais robôs, mas eu já disse o suficiente. "
+
+ IDS_PROGRAMMER_ABORT,
+  "Não funcionou porque "
+ IDS_ROBOT_ABORT,
+  "O robô parou porque "
+
+
+// the following are text item descriptions of
+// the sounds available to the user found in
+// the notebook on page 8 of the main notebook.
+// Some names are just approximations of how
+// they sound (like "Be Whop") while others are
+// descriptions of natural sound sources
+
+ IDS_HELICOPTER_SOUND,
+  "Helicóptero"
+ IDS_BIRD_HATCH_SOUND,
+  "pombo Nascendo"
+ IDS_BIRD_FLY_SOUND,
+  "pombo Voando"
+ IDS_TRUCK_ENGINE_SOUND,
+  "Motor de Caminhão"
+ IDS_MAGIC_SOUND,
+  "Mágica"
+ IDS_BE_WOP_SOUND,
+  "Be Whop"
+ IDS_BE_YAW_SOUND,
+  "Be Yaw"
+ IDS_SPIRAL_IN_SOUND,
+  "Espiralando"
+ IDS_SPIRAL_OUT_SOUND,
+  "Desespiralando"
+ IDS_BOOK_DROP_SOUND,
+  "Soltando o Livro"
+ IDS_DOOR_CREAK_SOUND,
+  "Porta Rangendo"
+ IDS_DUSTBUSTER_SOUND,
+  "Aspirando"
+ IDS_EXPLOSION_SOUND,
+  "Explosão"
+ IDS_HAND_PUMP_SOUND,
+  "Bomba de Mão"
+ IDS_OUCH_SOUND,
+  "Ai"
+ IDS_PLOP_SOUND,
+  "Plop"
+ IDS_POP_SOUND,
+  "Pop"
+ IDS_WALKING_INSIDE_SOUND,
+  "Passo no\rinterior"
+ IDS_TYPING_SOUND,
+  "Digitando"
+ IDS_TRAFFIC_SOUND
+  "Sons\rde\rtrânsito"
+ IDS_PAGE_TURNING_SOUND,
+  "Página\rVirando"
+// IDS_STEP_SOUND,
+//  "Step 1"
+ IDS_NEAT_EFFECT_SOUND,
+  "Efeito\rLegal"
+ IDS_TRUCK_DRIVE_SOUND,
+  "Caminhão\rAndando"
+ IDS_BIKE_BELL_SOUND,
+  "Buzina\rde\rBicicleta"
+ IDS_BOING1_SOUND,
+  "Boing"
+// IDS_BOING2_SOUND,
+//  "Boing 2"
+// IDS_BOING3_SOUND,
+//  "Boing 3"
+ IDS_CALCULATING_SOUND,
+  "Calculando"
+ IDS_LOTS_OF_SILLY_SOUNDS_SOUND,
+  "Barulhos\rEstranhos"
+ IDS_WHIT_SOUND,
+  "Whit"
+ IDS_DEFLATING_SOUND,
+  "Esvaziando"
+ IDS_DOOR_SOUND,
+  "Porta"
+// IDS_DOORKNOB_SOUND,
+//  "Doorknob"
+// IDS_STEP4_SOUND,
+//  "Step 2"
+// IDS_STEP3_SOUND,
+//  "Step 3"
+ IDS_STEP_SOUND,
+  "Passo\rexterno"
+ IDS_GLASS_HIGH_SOUND,
+  "Glass\rHigh"
+ IDS_GLASS_LOW_SOUND,
+  "Glass\rLow"
+// IDS_COUGH_SOUND,
+//  "Cough"
+// IDS_SAUCER_LANDING_SOUND,
+//  "Saucer Landing"
+ IDS_SHUTDOWN_SOUND,
+  "Desligando"
+ IDS_SPIT_SOUND,
+  "Cuspe"
+ IDS_SWITCH_SOUND,
+  "Interruptor"
+ IDS_TELEPORT_SOUND,
+  "Teleport"
+// IDS_HORSE_TROT_SOUND,
+//  "Horse Trot"
+ IDS_TWING_SOUND,
+  "Twing"
+
+
+IDS_EMPTY_NEST,
+ "um ninho vazio"
+IDS_COVERED_NEST,
+ "um ninho coberto com "
+IDS_AND,
+ "e"
+IDS_REMOVE_FROM_EMPTY_NEST,
+ "Atenção: um pombo tentou retirar uma pilha de dentro de um ninho vazio. "
+IDS_NEST_WITH_EGG,
+ "um ninho com um ovo dentro"
+IDS_CANT_ADD_TO_STACK_OF_NESTS,
+ "a pilha de ninhos não aceitará nada"
+IDS_CANT_ADD_TO_NEST,
+ "o ninho não aceitará nada"
+IDS_BIRD_TOO_BUSY,
+ "o pombo está muito ocupado para aceitar alguma coisa"
+IDS_BIRD_WONT_ACCEPT,
+ "o pombo só aceitará coisas que forem retangulares"
+//IDS_EXPECTED_BIRD_IN_BOX,
+// "Expected a bird to be in a box and something else is there. "
+IDS_BIRDS_NEST_IN_VACUUM,
+ "Era esperado um pombo na caixa, mas tem outra coisa dentro dela"
+IDS_BIRDS_NEST_IN_BUBBLE,
+ "o ninho do pombo está dentro de um aspirador"
+IDS_BIRD_CANT_FIND_NEST,
+ "um pombo quer voar para seu ninho, mas não consegue encontrá-lo. "
+IDS_BIRD_RETURNED_TO_OCCUPIED_CUBBY,
+// "A bird tried to return to her cubby hole but it's not empty. "
+ "Um pombo tentou voltar para o seu buraco na caixa, mas ele não estava vazio. " // revised 12/23
+
+IDS_BOX_WONT_ACCEPT,
+ "a caixa não aceitou algo que foi colocado sobre ela"
+IDS_TOO_MANY_BOXES_INSIDE_BOXES,
+ "Ignorada a ação de se colocar uma caixa dentro de outra. Já existem caixas demais umas dentro das outras. "
+IDS_ONLY_BLANK_BOX_CAN_ACCEPT,
+ "apenas caixas em branco podem aceitar textos ou números"
+IDS_BOX_INSIDE_SELF,
+ "Ops! De alguma forma estão tentando colocar uma caixa dentro dela mesma"
+IDS_CANT_ADD_NON_BOX,
+ "o robô pensou que teria uma caixa para adicionar a outra, mas, em vez disso, tem alguma coisa diferente"
+IDS_TEXT_OR_NUMBER_TO_BOX_HELP,
+ "Se você colocar um número ou um texto em uma caixa em branco, a caixa irá expandir o texto para ter uma letra por buraco. "
+IDS_VACUUM_TO_BLANK_HELP, // was misspelled as VACCUM
+ "Você pode usar Asper, o aspirador, para esvaziar uma caixa. "
+IDS_DROP_ON_NUMBER_TO_BREAK_HELP,
+ "Você pode quebrar uma caixa em duas partes colocando-a sobre um número. Uma parte terá a quantidade de buracos do número e a outra terá o que restar. "
+ IDS_CANT_ADD_TO_BOX_LABEL,
+ "você não pode adicionar nada à etiqueta da caixa"
+IDS_UNEXPECTED_NOT_IN_BOX,
+ "Há algo de errado com o ToonTalk. Algo interno perguntou pelo tamanho de alguma coisa que não se encontra em nenhum dos buracos da caixa"
+IDS_BOX_DOESNT_HAVE_EXPECTED_HOLE,
+  // As in "Sorry, didn't work because something wrong. ... "
+  // This is how ToonTalk responds to the equivalent of array-bounds errors
+ "Há algo errado. O ToonTalk está procurando por um buraco que a caixa não tem" // removed '. ' from the end on 061000
+IDS_REMOVE_FROM_BOX_BUT_NOT_THERE,
+ "Há algo errado. Ele tentou retirar algo de uma caixa que não é uma caixa"
+IDS_CUBBY_LABEL_TOO_LONG,
+ "Uma etiqueta de caixa em uma agenda tem de ter 255 caracteres ou menos"
+IDS_FILE_DESCRIBING_BOX_BAD,
+ "Há algo errado com um arquivo que descreve uma caixa. "
+
+IDS_ADD_TO_BACKGROUND_ALREADY_THERE,
+ "Problemas no ToonTalk. Ele tentou remover alguma coisa de um fundo que não sabia que estava lá. "
+//IDS_ADD_TO_BACKGROUND_BUT_ALREADY_THERE,
+// "ToonTalk has a problem because it just wasted time trying to add something to a background that already knew about it. "
+IDS_REMOVE_PART_BUT_NO_PARTS,
+ "Problemas com o ToonTalk desde que ele tentou remover a última parte de algo que não tinha mais nenhuma parte sobrando. "
+IDS_BOMB_WONT_ACCEPT,
+ "bombas não aceitam nada"
+
+//IDS_ROBOT_FILE_BAD,
+// "Something wrong with file describing what a robot does. Sorry. "
+IDS_ROBOT_TRAINING_LOST,
+ "O ToonTalk teve dificuldades para ler um arquivo de agenda. Um robô desta agenda perdeu o seu treinamento. "
+IDS_CONFUSED_ABOUT_ROBOT_DESCRIPTION,
+ "... Ah, desculpe, mas não estou conseguindo entender o que este robô deve fazer. "
+
+IDS_DO_NOTHING,
+  // as in "If given a box like that he will do nothing. "
+ "ficar sem fazer nada"
+IDS_VACUUM_TO_BLANK,
+ "utilizar o Asper para limpar"  // used to say blank but erase is better
+IDS_SPECIAL_MAGIC_WAND_USE,
+ //  as in "He will use the magic wand, while holding the control button down, on the box. "
+ "utilizar a varinha mágica, mantendo a tecla CONTROL pressionada, sobre"
+// "key " removed from the following 3 phrases
+IDS_KEY_WHILE_POINTING, // as in "He'll push 'b' while holding the number. "
+ " ao mesmo tempo em que aponta para"
+IDS_KEY_AFTER_MOVING, // as in "He'll push 'b' after moving to the number. "
+ " depois de se mover para"
+IDS_KEY_WHILE_HOLDING, // as in "He'll push 'b' to change what he is holding. "
+ " para mudar" 
+ 
+IDS_TO_LABEL_OF,
+  // As in "He will add 'c' to the label of the box. "
+  // NOTE -- currenly only boxes have labels.  If this is used for
+  // other things then in some languages it is gender dependent
+ " à etiqueta da"
+
+// Used only in English version ...
+//IDS_NEW,
+  // as in "He will drop it on the new box. "
+// "new"
+//IDS_FIRST_NEW,
+  // as in "He will drop it on the first new box. "
+//"first new"
+//IDS_NEWEST,
+  // as in "He will drop it on the newest box. "
+// "newest "
+//IDS_TO_LAST
+  // as in "He will drop it on the second to last box. "
+// "to last"
+
+IDS_ROBOT_IN_TRUCK,
+ "o robô no caminhão"
+IDS_BOX_IN_TRUCK,
+ "a caixa no caminhão"
+IDS_HOUSE_PICTURE_IN_TRUCK,
+ "a imagem de uma casa no caminhão"
+IDS_AVENUE_IN_TRUCK,
+ "o número da avenida no caminhão"
+IDS_STREET_IN_TRUCK,
+ "o número da rua no caminhão"
+IDS_UNKNOWN_IN_TRUCK,
+ "algo no caminhão" 
+IDS_WHATS_ON,
+ // as in "The robot picks up what's on the third page of the notebook. "
+ // NOTE:  This currently is only used as part of something that
+ // refers to a page of a notebook.  If it is ever used for more, it may
+ // have different translation
+ "o que estiver na"
+IDS_WHATS_IN,
+ // as in "The robot picks up what's in the second hole of the box. "
+ // NOTE:  This currently is only used as part of something that
+ // refers to a hole of a box.  If it is ever used for more, it may
+ // have different translation
+ "o que estiver dentro do"
+IDS_PAGE,
+ "página"
+//IDS_OF
+// as in "He dropped it on page of the notebook"
+// and "You are holding a picture of a ball. "
+// and "You are pointing to the button of Dusty. "
+// "of"
+IDS_ROBOT_COULDNT_FIND_ITEM,
+// was "it was"
+ "Um robô não conseguiu encontrar algo que ele estava indo pegar. "
+IDS_ROBOT_COULDNT_FIND_NEST,
+ // was "it was"
+ "Um robô não encontrou o ninho que ele estava indo pegar. "
+IDS_ROBOT_COULDNT_FIND_PLACE,
+// was "it was"
+ "Um robô não achou o lugar em que ia fazer alguma coisa. "
+IDS_ROBOT_COULDNT_FIND_BIRD,
+ // was "it expected"
+ "Atenção: um robô foi treinado para dar algo para um pombo, mas agora o pombo não está onde devia. De qualquer modo, o robô tentará continuar. "
+IDS_ROBOT_EXPECTED_BOX_BUT,
+ "O robô esperava uma caixa, mas, em vez disso, encontrou algo diferente. "
+IDS_COULDNT_FIND_SOMETHING,
+ "O ToonTalk está confuso! Ele não conseguiu encontrar alguma coisa. Desculpe. "
+IDS_ROBOT_DIDNT_FIND_ROBOT_IN_TRUCK,
+ "Um robô achou que encontraria outro robô no caminhão, mas não havia nenhum lá. "
+//IDS_ROBOT_DIDNT_FIND_BOX_IN_TRUCK,
+// "Um robô achou que encontraria uma caixa no caminhão, mas não havia nenhuma lá. "
+// IDS_ROBOT_DIDNT_FIND_HOUSE_PICTURE_IN_TRUCK,
+// "Um robô achou que encontraria dentro do caminhão a imagem de uma casa, mas não havia nenhuma lá. "
+//IDS_ROBOT_DIDNT_FIND_AVENUE_IN_TRUCK,
+// "Um robô achou que encontraria um número de avenida no caminhão, mas não havia nenhum lá. "
+//IDS_ROBOT_DIDNT_FIND_STREET_IN_TRUCK,
+// "Um robô achou que encontraria um número de rua no caminhão, mas não havia nenhum lá. "
+//IDS_ROBOT_DIDNT_FIND_UNKNOWN_IN_TRUCK,
+// "Um robô pensou que encontraria algo no caminhão, mas não achou nada lá. "
+
+IDS_ROBOT_COULDNT_USE_IN_VACUUM,
+ "Um robô ia usar algo que foi aspirado!"
+IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+ "Um robô ia colocar alguma coisa em algo, mas esta coisa foi aspirada. "
+IDS_ROBOT_THING_NOT_IN_ROOM,
+ "Um robô ia pôr alguma coisa em algo, mas um desses objetos não se encontra mais na sala. "
+IDS_SOMETHING_NOT_IN_NOTEBOOK,
+ "Atenção: um robô esperava encontrar algo em uma agenda, mas não conseguiu. "
+IDS_BOX_OR_NEST_MISSING,
+ "Atenção: um robô esperava encontrar uma caixa ou um ninho cheio, mas não encontrou. "
+IDS_TOO_MANY_HOLES_FOR_ROBOT,
+ "O robô não consegue lembrar mais do que 254 buracos. Desculpe. "
+
+IDS_EMPTY_TEXT,
+ "bloco de texto vazio"
+IDS_IN_THOUGHT_BUBBLE_HELP1,
+ "Você está agora na mente do robô. "
+IDS_IN_THOUGHT_BUBBLE_HELP2,
+ "Você pode treinar um robô mostrando a ele o que fazer. "
+IDS_LEFT_THOUGHT_BUBBLE_HELP,
+ "Para testar o robô, basta dar a ele uma caixa como a que ele tem na mente. "
+IDS_RIGHT_MOUSE_BUTTON_WITH_ONE_BUTTON,
+ "um botão do mouse enquanto estiver pressionando a tecla 'Shift',"
+IDS_LEFT_BUTTON_WITH_ONE_BUTTON,
+ "qualquer botão do mouse"
+IDS_THE_LEFT_MOUSE_BUTTON,
+ "o botão esquerdo do mouse"
+IDS_MIDDLE_BUTTON_WITH_THREE,
+ "o botão central do mouse"
+IDS_MIDDLE_BOTTON_WITH_TWO,
+ "o botão direito do mouse enquanto estiver pressionando a tecla CONTROL ('Ctrl')"
+IDS_MIDDLE_BUTTON_WITH_ONE,
+ "qualquer botão do mouse enquanto estiver pressionando a tecla CONTROL ('Ctrl')"
+
+IDS_ALL_HOUSES_DESTROYED,
+ "Você conseguiu destruir todas as casas. Por isso, eu construí mais algumas. "
+IDS_BAD_HOUSE_VIEW,
+ "Algo de errado com o ToonTalk - algumas casas podem estar faltando. "
+IDS_COMMAND_LINE_ODD_ARGS1,
+ // this is joined to together with the following fragment with a number
+ // in between
+ "Problemas com a linha de comando. Esperava-se um número par de itens, não "
+IDS_COMMAND_LINE_ODD_ARGS2,
+ " itens. Ignorando a linha de comando. "
+IDS_COMMAND_LINE_H_WRONG1,
+ "A linha de comando possui um -h "
+IDS_COMMAND_LINE_H_WRONG2,
+ " e o correto só poderia ser ou -h 0 (careca), -h 1 (com cabelo), ou -h 2 (com chapéu). "
+IDS_COMMAND_LINE_B_WRONG,
+  " é um número inválido de botões de mouse. O correto seria 1, 2, ou 3. "
+IDS_COMMAND_LINE_UNKNOWN_OPTION,
+ "A linha de comando tem uma opção não reconhecida: "
+IDS_NO_NAME_IS_YOUR_NAME,  // modified on 3/20/97
+ "Não peguei o seu nome. Assim, agora vou chamar você de"
+IDS_NO_NAME_IS_YOUR_NAME2,
+ "SemNome"
+IDS_NO_NAME_IS_YOUR_NAME3,
+ "e salvar tudo o que você fizer com esse nome. "
+IDS_TROUBLE_WANT_TO_CONTINUE,
+ "Apesar desses problemas de iniciação, você gostaria de continuar?"
+IDS_TIME_NEGATIVE,
+ "O ToonTalk está sendo executado há tanto tempo que irá reiniciar seu relógio interno. "
+IDS_OUT_OF_MEMORY,
+ "Desculpe, fiquei sem memória. Você terá de reiniciar. "
+IDS_MEMORY_LOW,
+ "Pouca memória. Reciclando 20% da memória usada na aceleração das coisas. "
+IDS_MEMORY_LOW2
+ "Pouca memória. Reciclando última parte da memória usada na aceleração das coisas. "
+IDS_F8_HELP1,
+ "Se você alguma vez precisar parar todos os robôs, basta apertar F8 para cortar a força. "
+IDS_F8_HELP2,
+ "Pressionando F8 novamente trará a força de volta. "
+IDS_F8_HELP3,
+ "O mesmo acontece com imagens em movimento e animações. "
+IDS_EXCUSE_ME1,
+ "Ah, me desculpe. "
+IDS_EXCUSE_ME2,
+ "Hum, desculpe interromper. "
+IDS_EXCUSE_ME3,
+ "Ah, desculpe. "
+
+IDS_MOUSE_DIDNT_COME_OUT,
+ "Bambam, o Rato, não saiu porque "
+IDS_TRUCK_DIDNT_LEAVE_BECAUSE,
+ "o caminhão não saiu para construir uma casa porque "
+
+IDS_NUMBER_STACK_WONT_ACCEPT,
+  // As in "The robot stopped because the stack of numbers would not accept something. "
+ "a pilha de números não aceitaria algo"
+IDS_NUMBER_WONT_ACCEPT,
+ "o número não aceitou alguma coisa"
+IDS_NUMBER_UNDERNEATH_IS_NEGATIVE,
+ "o número sob a caixa é negativo"
+IDS_NUMBER_UNDERNEATH_TOO_BIG,
+ "o número sob a caixa é maior que o número de buracos"
+IDS_ONLY_NUMBERS_ON_NUMBERS
+ "você só pode colocar números em cima de números, blocos de texto ou agendas"  // revised 4/15/97 to mention notebooks
+IDS_TOP_NUMBER_IS_BLANK,
+ "o número de cima está em branco"
+IDS_CANT_DIVIDE_BY_ZERO,
+ "você não pode dividir por zero"
+IDS_ANOTHER_MOUSE_SMASHING_IT,
+ "o número que está por baixo está prestes a ser martelado por outro rato"
+IDS_COMBINED_WITH,
+  // E.g.
+  // We just made a box with one hole which contains a remote control for a
+  // random number between 0 and 1000 which has been combined with something
+  // which will divide by 10 and the number -50.
+ "que foi combinado com"
+IDS_THOUSANDS_COMMA,
+ "."  // e.g. "1,000,000" // was ". " prior to 100700
+IDS_CONVERT_TO_NUMBER_HELP,
+ "Tudo o que for colocado em cima de um número em branco será convertido em um número, se isso for possível. "
+// For example, if you drop the text "123" it will be converted to the
+// number 123.
+
+IDS_EQUAL_OPERATOR_ON_NUMBERS,
+ "Se você digitar '=' e depois colocar o bloco de texto em cima de um outro número, ele se tornará"
+IDS_VACUUM_TO_BLANK_NUMBER,
+ "Você pode usar Asper, o aspirador, para esvaziar um bloco de números. " // was "number blank"
+//IDS_IF_YOU_PRESS,
+// "If you press "
+IDS_WHILE_HOLDING_A_NUMBER,
+// as in "If you hold shift while clicking a mouse button while
+// holding a number, it will flip over. "  -- where "it" refers to the number.
+ "enquanto estiver segurando um número, ele girará de volta. "
+IDS_PRESS_AGAIN_TO_FLIP_BACK,
+ "Se pressioná-lo novamente, ele girará de volta. "
+IDS_SENSOR_ARITHMETIC_PROBLEM,
+ "O sensor teve um problema fazendo aritmética porque "
+IDS_TROUBLE_NUMBER_REMOVED,
+ "O número que causou o problema foi removido. "
+//IDS_THIS_NUMBER,   // removed 5/31/97
+// "This number"
+IDS_A_SENSOR,
+ "um sensor"
+IDS_A_REMOTE_CONTROL,
+ "um controle remoto"
+IDS_FOR,
+ "que controla"
+IDS_AND_COMBINED_WITH,
+ // Used when describing remote sensors that have had numbers dropped on them.
+ // E.g. "This number is a sensor for a random number between 0 and 1000.
+// "And it was combined with something which will divide by 10 and the number -50. "
+ "E ele foi combinado com"
+IDS_SENSOR_UNDERNEATH,
+ "sensor está sob"
+IDS_CANT_CHANGE_SENSOR,
+ "não pode alterar o valor de um sensor"
+
+IDS_BALD,
+ "careca"
+IDS_LONG_HAIR,
+ "cabelo comprido"
+IDS_HAT,
+ "chapéu"
+IDS_NO_MOUSE_SHORTCUTS,
+ "sem atalhos\rde mouse"
+IDS_RIGHT_BUTTON_SHORTCUT,
+ "atalho de\rbotão\rdireito"
+IDS_RIGHT_AND_MIDDLE_SHORTCUTS,
+ "atalho\rde botão\rdireito e central"
+IDS_FULL_SCREEN,
+ "Tela Cheia"
+IDS_COLLIDING_SIDE_OR_NOT,
+ "está colidindo de lado com alguma coisa. "
+IDS_COLLIDING_TOP_OR_NOT,
+"está colidindo com uma parte de cima ou de baixo de alguma outra coisa. "
+IDS_IF_YOU_CHANGE_APPEARANCE,
+ "Se você alterar a aparência dessa imagem, então "
+IDS_CHANGE_SAME_WAY,
+ "irá se alterar do mesmo modo. "
+IDS_CONTROLLING_WHETHER,
+ // This is used together with the next phrase as in
+ //  "This is for controlling whether the picture of the ball
+ //   is visible, partly visible, or invisible. "
+ "Isto é para controlar se"
+IDS_VISIBLE_PART_OR_NOT,
+ "está visível, parcialmente visível, ou invisível. "
+IDS_SPACE_WILL_CHANGE_THEM,
+ "A barra de espaço irá mudar entre eles. "
+IDS_ANSWER_QUESTION_ANIMATION,
+ "Este responde se a animação de"
+IDS_IS_FINISHED
+ "já terminou. "
+IDS_WHETHER_HAND_VISIBLE,
+ "Este indica se sua mão está visível. "
+IDS_SPACE_WILL_SWITCH_IT,
+ "Enquanto estiver apontando para ele, a barra de espaço irá ligá-lo ou desligá-lo. "
+IDS_WHETHER_SOUND_ON,
+  // "This" refers to the remote control being pointed to.
+ "Este indica se os efeitos sonoros do ToonTalk serão executados ou não. "
+IDS_MIDDLE_AND_RIGHT_SHORTCUTS_ON,
+// "This" refers to the remote control being pointed to.
+ "Este muda o que os botões central e direito do mouse fazem quando você estiver no chão. "
+IDS_MAKE_RIGHT_BUTTON_SHORTCUT,
+ "Você pode fazer com que o botão direito do mouse seja um atalho para 'Shift' e clique. "
+IDS_AND_RIGHT_BUTTON_SHORTCUT,
+ "E você pode fazer com que o botão central do mouse seja um atalho para CONTROL e clique. "
+IDS_THIS_TEXT_PAD,
+ "Este bloco de texto é"  // as in  "This text pad is a remote control. "
+IDS_THIS_IS,
+ "Este é"  // as in "This is a remote sensor. "
+IDS_TURN_OFF_COLLISION_WITH_SPACE,
+ "Você pode transformar uma colisão em uma não-colisão apontando para o detector e pressionando +" // changed 170300 was "a barra de espaço. "
+
+IDS_BOOK_DESCRIPTION6,
+ "Este aqui está repleto de sons"
+IDS_BOOK_DESCRIPTION7,
+ "Este tem várias opções de sistema"
+IDS_CONTAINING,
+ "contendo"
+IDS_NOTEBOOK_IN_VACUUM,
+ "A agenda está dentro do Asper. Ele pode devolvê-la. "
+IDS_WARNING_FILE
+ "Atenção: o arquivo"
+IDS_COULDNT_OPEN,
+ "não pôde ser aberto. "
+IDS_CANT_ADD_TO_NOTEBOOK_IN_BUBBLE,
+ "Desculpe, mas não se pode inserir em uma agenda dentro de uma mente de robô. "
+IDS_TEMPORARY_USER_CANT_SAVE,
+ "Como você é um usuário temporário, não pode guardar nada na agenda principal. "
+IDS_ONLY_NOTEBOOKS_TO_MAIN,
+ "Desculpe, mas por enquanto você só pode colocar agendas dentro da agenda que vive dentro da caixa de ferramentas. "
+IDS_NOTEBOOK_PAGE_DIDNT_ACCEPT,
+ "a página de uma agenda não aceitou alguma coisa"
+IDS_NOTEBOOK_DIDNT_ACCEPT,
+ "uma agenda não aceitou alguma coisa"
+IDS_SOUNDS_NOTEBOOK,
+ "Sons"
+IDS_OPTIONS_NOTEBOOK,
+ "Opções"
+IDS_OUTLET,
+ "Saída"
+IDS_INLET,
+ "Entrada"
+IDS_COUNT,
+ "conta"
+IDS_SOUND,
+ "Som"
+IDS_SORRY_BUT_FILE,
+  "Desculpe, mas eu acho que o arquivo" 
+IDS_NOT_NOTEBOOK_FILE,
+"não é um arquivo que contenha uma agenda. "
+IDS_NOTEBOOK_FUTURE_VERSION,
+ "Desculpe, mas uma agenda foi criada com uma versão mais recente do ToonTalk!"
+IDS_THIS_VERSION_CANT
+ "Esta versão não consegue ler"
+IDS_GET_NEW_VERSION,
+ " - talvez você devesse obter uma versão mais recente. "
+IDS_TOONTALK_MIXED_UP,
+ "O ToonTalk está confuso. Desculpe. "
+IDS_COULDNT_RECOGNIZE_NOTEBOOK_FILE, // "for a notebook" removed on 3/10/98 
+ "Atenção: não foi possível reconhecer algo em um arquivo de uma agenda. "
+
+IDS_TOONTALK_OR_FILE_BAD,
+ "Ou há algo errado com o ToonTalk ou um arquivo contendo uma imagem está com problemas. "
+IDS_REMOTE_APPEARANCE_CONTROL,
+// This kind of remote control shows the appearance of a picture
+// It can be changed and the picture changes.
+ "um controle remoto que controla a aparência de uma imagem"
+IDS_WHICH_IS_INVISIBLE,
+ // E.g.  "You are holding a picture of a ball which is invisible. "
+ "que está invisível"
+IDS_WHICH_IS_PARTLY_VISIBLE,
+ "que está parcialmente visível"
+IDS_JUST_A_NOTEBOOK,
+ "é só uma agenda"
+IDS_ARE,
+ // only used in "And on the back are 5 things. "
+ "estão"
+IDS_WITH,
+ "com"
+IDS_PICTURE_ON_BLANK_PICTURE,
+ "Você pode alterar a aparência de uma imagem em branco colocando uma outra imagem sobre ela. "
+IDS_OR_NUMBER_OR_TEXT
+ "Ou um bloco de números ou de texto. "
+IDS_VACUUM_PICTURE_BLANK,
+ "Asper, o aspirador, pode esvaziar o conteúdo de uma imagem. " // was picture blank
+IDS_NOTEBOOK_OF_REMOTES_FLIES,
+ "Uma agenda contendo vários controles remotos para a imagem saltará para fora. "
+IDS_CANT_FLIP_REMOTES,
+ // flip here is used as in flipping a picture over to see its back
+ "você não pode girar novamente um controle remoto de aparência de uma imagem"
+IDS_IGNORED_DROP_TOO_MANY_LEVELS,
+ "A imagem colocada foi ignorada. Já existem imagens demais com imagens. "
+IDS_SCALES_CANT_ADD_TO_PICTURE,
+ "balanças não podem ser inseridas em imagens"
+IDS_UNFLIPPED_PICTURES_NOT_ON_FLIPPED_PICTURES, // revised on 8/23/97
+ "A parte da frente de uma imagem não pode ser colocada na parte de trás de uma imagem"
+// "unflipped pictures can't be added to a flipped picture"
+IDS_PICTURE_WONT_ACCEPT_SOMETHING,
+ "a imagem não aceitará nada"
+IDS_SCALE_TEXT_HELP1,
+ "Veja como utilizar uma balança para comparar textos. "
+IDS_SCALE_TEXT_HELP2,
+ "Primeiro, conecte três caixas uma do lado da outra. Coloque algumas palavras no primeiro e no terceiro buraco. "
+IDS_SCALE_HELP3,
+ "E uma balança no do meio. "
+IDS_SCALE_NUMBER_HELP1,
+ "Veja como utilizar uma balança para comparar números. "
+IDS_SCALE_NUMBER_HELP2,
+ "Primeiro, conecte três caixas uma do lado da outra. Coloque alguns números no primeiro e no terceiro buraco. "
+IDS_REMOTE_CANT_ACCEPT_THAT,
+ "controles remotos de aparência não podem aceitar aquele item"
+IDS_PICTURE_WAITING_FOR_MOUSE,
+ "a imagem que foi colocada está esperando por Bambam, o Rato"
+IDS_PICTURE_UNDERNEATH_WAITING_FOR_MOUSE,
+ "a imagem que está por baixo já está esperando por Bambam, o Rato. "
+IDS_PICTURE_DROPPED_IS_REMOTE,
+ "a imagem sendo colocada é um controle remoto"
+IDS_SORRY_WAIT_TIL_NEXT_TIME,
+ "Desculpe, mas as mudanças não serão efetivadas até a próxima vez em que o ToonTalk for reiniciado. "
+
+IDS_CONFUSED_ABOUT_PROGRAMMER,
+"O ToonTalk está confuso e não está conseguindo acompanhar o que o programador está fazendo. "
+IDS_F8_PRESSED_HELP,
+"Você acabou de desligar a força e parar todos os robôs. Pressionando F8 novamente eles voltarão a funcionar. "
+IDS_F9_PRESSED_HELP,
+ 
+"Sua mão agora está escondida. Para vê-la de novo, basta pressionar F9 novamente. "
+IDS_ONLY_PORTS_1_OR_2,
+"Só é possível abrir as portas seriais 1 e 2. "
+IDS_TROUBLES_OPENING_PORT,
+"Problemas ao abrir a porta serial. "
+IDS_SERIAL_PORT_PROBLEMS,
+ "Problemas com a porta serial. "
+IDS_COULDNT_FIND_CONTROLLER,
+ "Não foi possível encontrar a controladora HyperBot conectada à porta serial. "
+IDS_TROUBLES_USING_PORT,
+ "Problemas no envio de coisas pela porta serial. "
+
+
+//IDS_ROBOT_WHO_STOPPED,
+// "um robô que parou. "
+IDS_ROBOT_STOPPED_BY_F8,
+ "um robô parou devido ao desligamento da força. F8 irá ligar a força e ativá-lo novamente"
+IDS_A_HOLE,
+"um buraco"
+IDS_AND_THERE_ARE,
+ "E existem"
+IDS_ROBOTS_IN_FRONT,
+ "robôs em frente a ele"
+IDS_AND_ONE_ROBOT_IN_FRONT,
+ "E há um robô em frente a ele"
+IDS_ROBOTS_BEHIND,
+ "robôs atrás dele"
+IDS_AND_ONE_ROBOT_BEHIND,
+ "E há um robô atrás dele"
+IDS_ROBOT_LOST_TRACK,
+ // as in "A robot on the floor stopped because he lost track of stuff"
+ // this shouldn't really ever happen except if the programmer
+ // takes things away from a working robot
+ "um robô perdeu alguns objetos com que estava lidando"
+IDS_ROBOT_FILE_BAD,
+ "Algo de errado com o arquivo que guarda o robô na agenda. O robô foi perdido. Desculpe. "
+IDS_TROUBLES_LOADING_ROBOT,
+ "Problemas carregando um robô na agenda. Desculpe, mas ele foi perdido. "
+IDS_TROUBLE_FIGURING_OUT_ROBOT,
+ "Desculpe, mas estou tendo dificuldades para entender o que estes robôs fazem. "
+
+//IDS_WHEN_FINISHED_WILL_TELL_WHERE,
+// "When ToonTalk is finished, I'll be able to show you where it is. "
+IDS_ROBOTS_CANT_TRAIN_ROBOTS,
+ "Desculpe, mas robôs não podem treinar robôs. "
+
+IDS_FUSSY_ROBOT_HELP1,
+ "Ah, desculpe, mas robôs são bem enrolados. Eles só podem receber caixas. "
+IDS_FUSSY_ROBOT_HELP2,
+ "Ainda bem que você pode colocar coisas em caixas. "
+
+IDS_TOO_MANY_THINGS_ON_SCREEN,
+ "O ToonTalk tem de prestar atenção em tanta coisa na tela que não conseguiu acompanhar algumas. "
+IDS_DISPLAY_LOST_TRACK_OF_STUFF,
+ "A parte do ToonTalk que cuida do display perdeu o controle sobre algumas coisas. "
+
+ // the following are used to describe internal errors within ToonTalk
+ // They are only informative to the extent that someone uses them in a bug report.
+ // They shouldn't appear at all of course.
+IDS_TOONTALK_BROKEN,
+ "Oh, não! O ToonTalk está avariado. Ele está tentando destruir alguma coisa duas vezes. "
+IDS_TOONTALK_USED_AFTER_DESTROYING,
+ "Há algo de errado com o ToonTalk. Ele tentou usar alguma coisa depois de destruí-la. "
+IDS_TOONTALK_DESTROY_ON_FLOOR,
+ "Há algo de errado com o ToonTalk. Ele tentou destruir alguma coisa que ainda está no chão. "
+IDS_TOONTALK_DESTROY_PART_OF_SOMETHING,
+ "Há algo de errado com o ToonTalk. Ele tentou destruir uma parte de alguma coisa. "
+IDS_BAD_DAT_FILE,
+ // before 8/23/97 data was DAT
+ "Desculpe, mas parece que você tem um arquivo de dados antigo ou com problemas. " // broken in 2 on 8/13/97
+IDS_NEED_TO_REINSTALL,
+ "Talvez você precise reinstalar o ToonTalk. "
+IDS_PICK_NONEXISTENT_MOVIE,
+ "O ToonTalk fez algo de errado e tentou pegar uma animação que não existe. "
+//IDS_ONE,
+// "one"
+//IDS_IT,
+// "it"
+//IDS_UP,
+// "up"
+//IDS_CACHE_FREED_TWICE,
+// "Cache memory is being freed twice. Sorry, ToonTalk is confused. "
+IDS_FREEING_PROTECTED_CACHE,
+ "O ToonTalk está confuso e está tentando liberar uma memória cache que não devia. "
+IDS_CACHING_NON_SAVING,
+ "O ToonTalk está confuso. Ele colocou algo na memória cache que não economiza tempo nenhum. "
+IDS_DESTROYING_SAME_PICTURE_TWICE,
+ "Problemas. O ToonTalk está avariado e tentando destruir uma mesma imagem duas vezes. "
+IDS_CANT_FIND_FILE,
+ "Desculpe, mas parece que não estou conseguindo encontrar o arquivo "
+IDS_BUT_FILE_IS,
+ "Desculpe, mas o arquivo"
+IDS_FILE_DAMAGED,
+ "está danificado. Você terá de reinstalar. "
+IDS_CANT_FIND_RESIND,
+ "Desculpe, mas não consigo encontrar o arquivo RESIND.DAT "
+IDS_RESIND_DAMAGED,
+ "Desculpe, mas o arquivo RESIND.DAT está danificado. Favor instalar novamente. "
+IDS_NOT_ENOUGH_MEMORY_FOR_NEXT_SOUND,
+ "O ToonTalk está tendo dificuldades devido à falta de memória cache suficiente para o próximo som. "
+
+IDS_HAS_PARTS_BUT_DOESNT,
+ "O ToonTalk está confuso. Achou que um objeto tinha partes, mas não conseguiu encontrá-las. "
+IDS_HAS_PARTS_BUT_DOESNT2,
+ "Alguma coisa pode sair com lugar ou tamanho errados. Desculpe. "
+
+IDS_CONVERT_TO_TEXT_HELP,
+ "Você pode transformar alguma coisa em texto colocando-a sobre um bloco de texto em branco. "
+IDS_BACKSPACE_TO_REMOVE_EMPTY_LINE,
+ "A tecla 'Backspace' irá remover uma linha em branco. "
+//IDS_TEXT_SOUND_HELP1,
+// "Sometimes text spells out a sound like \"pop\". "
+//IDS_TEXT_SOUND_HELP2,
+// "When it does, you can make that sound by pressing "
+
+IDS_BLANK_TEXT_DIDNT_ACCEPT,
+ "o bloco de texto vazio não aceitou alguma coisa"
+IDS_ITEM_ON_TOP_IS_BLANK,
+ "o item do topo está em branco"
+ IDS_ONLY_TEXT_OR_NUMBERS_ON_TEXT,
+ "você só pode adicionar texto ou números a outro texto"
+IDS_TEXT_TOO_LONG,
+ "o texto é longo demais"
+
+IDS_IT_AS_COPY_WAND,
+ "a varinha mágica"
+//IDS_HIM_AS_NON_WAND_TOOL,
+// "him"
+//IDS_IF_YOU_PICK_HIM,
+// "if you pick him up. "
+//IDS_THEN,
+// "then"
+//IDS_AS_BEFORE,
+// "as before. "
+IDS_PUMP_IN_VACUUM_WHEN_CALLED,
+ "A Soprana foi aspirada pelo Asper, o aspirador. Ele pode devolvê-la. "
+IDS_CANT_BE_MADE_BLANK,
+ "algumas coisas não podem ser esvaziadas"
+IDS_VACUUM_SPIT_HELP, // changed 10/4
+// "If you try to suck up the floor, he'll spit out the stuff he's vacuumed. "
+ "Se você quiser que o Asper devolva as coisas que ele aspirou, pressione 'D'. "
+IDS_VACUUM_IN_VACUUM_HELP,
+ // This can happen if you make a copy of Dusty and then use the copy to suck
+ // up Dusty.  Then when you call for him (F2) you'll get this message
+ "O Asper foi sugado por outro aspirador. Esse aspirador pode devolvê-lo. "
+IDS_WAND_IN_VACUUM_WHEN_CALLED, // revised 3/16/97
+ "A varinha mágica foi sugada pelo Asper. Ele pode devolvê-la. "
+IDS_IF_YOU_PRESS,
+ "Se você pressionar"
+IDS_COPY_BLANKS_TO_NON_BLANKS,
+ "ela fará a cópia e trará o objeto para o estado em que ele estava antes de ser esvaziado. " // initial comma removed on 110700
+IDS_TOOLBOX_DIDNT_ACCEPT_SOMETHING,
+ "O Porta-Treco não aceitou alguma coisa"
+
+
+IDS_TRUCK_ALREADY_HAS_ROBOTS,
+ "o caminhão já foi carregado com robôs"
+IDS_TRUCK_ALREADY_HAS_BOX,
+ "o caminhão já foi carregado com uma caixa"
+IDS_TRUCK_HELP, // revised 3/16/97
+ "tudo o que você pode colocar em um caminhão é uma caixa, robôs, um endereço, uma agenda, um bloco de texto ou a imagem de uma casa"
+IDS_TRUCK_CANT_ACCEPT,  // revised 3/16/97
+ "alguma coisa diferente de um robô, caixa, endereço, agenda, bloco de texto ou imagem foi colocada sobre o caminhão"
+IDS_TRUCK_STOPPED_BECAUSE_CITY_FULL
+ "a cidade está completamente cheia de casas"
+IDS_VIDEO_MODE_BAD,
+  "Modo de vídeo não suportado. Talvez sua opção -v n esteja incorreta. "
+
+
+IDS_FULL_SCREEN_INITIALIZATION_PROBLEMS,
+ "Problemas na mudança para o modo de tela cheia. Desculpe. "
+IDS_FULL_SCREEN_PROBLEMS,
+ "Atenção: houve algum problema com o modo de tela cheia. "
+IDS_TOONTALK_WINDOW_TITLE,
+ "ToonTalk"
+//IDS_TOONTALK_WINDOW_TITLED_PAUSED,
+// "ToonTalk (press Pause to resume)"
+IDS_TOONTALK_BETTER_256,  // revised for clarity and mention of full-screen mode on 1/30/98
+ "O ToonTalk provavelmente rodará melhor se for executado no modo de tela cheia ou se você alterar o Windows para executar com 256 cores. "
+//IDS_TOONTAL_PAL_MISSING,
+// "The file TOONTALK.PAL is missing so the colors may be off. "
+//IDS_WINDOWS_NOT_256_BAD,  // obsolete
+// "Since Windows is not running with 256 colors, this may look bad. "
+IDS_ASK_NAME_FAILURE,
+ "Alguma coisa deu errado ao tentar criar uma caixa de diálogo para perguntar seu nome. "
+
+
+// These 3 entries are spoken one directly after the other.
+IDS_OPTIONS_NOTEBOOK_HELP1,
+ "Há várias coisas no ToonTalk que você pode alterar. "
+IDS_OPTIONS_NOTEBOOK_HELP2,
+ "Como, por exemplo, a forma como você aparece e a rapidez com que eu falo. Até mesmo o quanto eu falo! "
+IDS_OPTIONS_NOTEBOOK_HELP3,
+ "Para modificar as opções do ToonTalk, experimente as coisas da agenda de opções que se encontra na página 10 da sua agenda principal. "
+
+IDS_NO_HIGH_RES_IN_16_BITS,
+ "Desculpe, mas a alta resolução do ToonTalk só está disponível na versão de 32 bits do ToonTalk. "
+IDS_BAD_VIDEO_MODE1,
+ "Desculpe, mas o modo de vídeo"
+IDS_BAD_VIDEO_MODE2,
+ "não está disponível. Será usado o valor padrão. "
+
+
+IDS_NEED_CDROM_TO_CONTINUE,
+ "Se você inserir o CD-ROM do ToonTalk agora, o programa poderá continuar. "
+IDS_NEED_CDROM_FOR_NARRATION,
+ "Se inserir o CD-ROM do ToonTalk, você poderá ouvir a narração deste exemplo agora. "
+
+//IDS_EXPECTED_TO_FIND_SOMETHING_IN_NEST,
+// "Robot expected to find something in a nest but it was empty. "
+IDS_WHAT_IS_ON_TOP_OF,
+  // as in "He will then pick up what is on top of the nest. "
+  "o que estiver por cima do"
+//IDS_TOONTALK_PAUSED,
+//  "ToonTalk is now stopped. Click on OK when you want it to start again. "
+IDS_MAIN_CUBBY_IN_TRUCK_NO_LOOP,
+  "Este robô só funcionará uma vez e depois irá parar. Isso porque você o está treinando para colocar a caixa com a qual ele está trabalhando no caminhão. Quando o caminhão for embora, o robô não terá mais caixa para trabalhar. "
+//  "This robot will work once and then stop because you're training him to put the box he's working on in the truck so after the truck drives off he'll never see it again. "
+IDS_SCALE_WONT_ACCEPT,
+  "a balança não aceita nada que seja colocado sobre ela"
+
+// These should be translated since they will be seen by the user
+// when they paste things from the clipboard into a text program.
+// The system searches for IDS_UUENCODING_START_TOKEN so all
+// of this are considered comments when loaded into ToonTalk.
+IDS_UUENCODING_HEADER,
+  "   Este é o resultado de se \"colar\" um objeto do ToonTalk. Você pode incluí-lo"
+IDS_UUENCODING_HEADER2,
+  "em arquivos, mensagens de e-mail, ou em qualquer outra coisa. Para decodificar, basta usar qualquer programa"
+IDS_UUENCODING_HEADER3,
+  "que permita copiá-lo para a Área de Transferência do Windows. Por exemplo, você pode usar"
+IDS_UUENCODING_HEADER4,
+  "o Bloco de Notas ou o programa Write do Windows. Basta selecionar todo"
+IDS_UUENCODING_HEADER5,
+  "o código abaixo e depois pressionar o comando Copiar no menu Editar. "
+IDS_UUENCODING_HEADER6,
+  "Fazendo isso, o objeto selecionado aparecerá no ToonTalk dentro do controle remoto que cuida da Área de Transferência. "
+IDS_UUENCODING_HEADER7,
+  "Você pode encontrar o controle remoto que cuida da Área de Transferência na página 30 da agenda de sensor. "
+IDS_UUENCODING_HEADER8,
+  "Basta usar Asper, o aspirador, para retirá-lo da Área de Transferência. "
+IDS_UUENCODING_FOOTER,
+  // code is used here in the sense of "encoding"
+  "Este é o final do código do objeto do ToonTalk. "
+IDS_WHAT_FOLLOWS_IS_CODE,
+  "   O que segue é um código especial produzido pelo programa ToonTalk(tm) "
+IDS_FOLLOWING_IS,
+  "O que vem a seguir é "
+//IDS_TOONTALK_VERSION_NUMBER,
+//  "Versão Beta 1.04"
+
+//IDS_BETA4_FORMAT_WARNING,
+//  "Sorry but old ToonTalk programs probably won't run in Version 4. "
+IDS_BETA_TO_EXPIRE1, // changed  8/23/97
+  "Já é hora de obter uma nova versão do ToonTalk. (Visite www.toontalk.com.br.) "
+IDS_BETA_TO_EXPIRE2, // changed  8/23/97
+  // followed by a number
+  "Esta versão do ToonTalk expirará em"
+IDS_BETA_TO_EXPIRE3, // added 8/23/97
+  "dias. "
+IDS_FOR_EXAMPLE,
+  "por exemplo"
+IDS_WHICH_ORIGINALLY_WAS,
+  // as in "You are hold a blank number pad that originally was 42. "
+  "que originalmente era"
+
+IDS_AVENUE_HOUSE_IS_ON,
+  "Este é um sensor que mostra em que avenida (as avenidas estão dispostas na direção norte-sul) a casa se encontra. "
+IDS_YOU_CHANGE_IT_BY,
+  "Você pode alterá-lo colocando um número sobre ele. "
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_AVENUE_TO_BUILD,
+  "Se você colocar um desses controles sobre um caminhão, ele construirá uma casa no terreno vazio mais próximo nessa avenida. "
+IDS_STREET_HOUSE_IS_ON,
+  "Este é um sensor que mostra em que rua (as ruas estão dispostas na direção leste-oeste) a casa se encontra. "
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_STREET_TO_BUILD,
+  "Se você colocar um desses controles sobre um caminhão, ele construirá uma casa no terreno vazio mais próximo nessa rua. "
+//IDS_ABANDON_FULL_SCREEN,
+//  "ToonTalk crashed last time it was used. Maybe the problem is because ToonTalk was running in \"full screen mode\". This mode makes the animation look better but doesn't work on a few computers. "
+//IDS_ABANDON_FULL_SCREEN2,
+//  "The \"Screen Size\" option in the notebook on page 10 of your notebook can change this. Should I turn off this mode for you?"
+IDS_TOO_MANY_THINGS_FOR_ROBOT,
+  "Os robôs não conseguem se lembrar de tantas coisas. Este aí já ficou confuso. "
+
+IDS_LEFT,
+ "esquerda"
+IDS_RIGHT,
+ "direita"
+IDS_COULDNT_FIND_PAGE,
+ "não consegui encontrar a página na agenda"
+
+IDS_UNKNOWN_MCI_ERROR,
+// was "Something went wrong sending something to the Windows Media Control Interface, but I don't know what. Sorry. "
+ "Desculpe. Um erro ocorreu após enviar algo para a interface do Windows Media Control. "
+
+IDS_ROBOT_COULDNT_FIND_PLACE_TO_RELEASE,
+ "não pôde encontrar o lugar em que ia deixar alguma coisa"
+
+IDS_UNABLE_TO_OPEN_FILE,
+ "Incapaz de abrir o arquivo de log chamado"
+
+IDS_ITLL_SWITCH_TO_THE_NEXT_VALUE,
+ "ele irá mudar para o próximo valor. "
+IDS_ITLL_SWITCH_TO_THE_PREVIOUS_VALUE,
+ "ele irá mudar para o valor anterior. "
+IDS_IF_YOU_PICK_UP_AND_PRESS,
+ // as in "You are pointing to a remote control.  
+ // If you pick it up and press a mouse button while holding down shift
+ // or just the space button it'll switch to the previous value. "
+ "Se você pegá-lo com a mão e apertar"
+IDS_JUST_THE_SPACE_BUTTON,
+ "ou +" // updated on 170300 from "apenas a barra de espaço" // add "or" on 12/20
+IDS_OR_JUST, // combined IDS_OR and IDS_JUST on 12/20
+ // as in  "Or just press '-' to switch to the previous value. "
+ "ou apenas"
+
+IDS_IN,
+ // used only when describing robots that either give things
+ // to birds that are in boxes or put things in boxes that
+ // are in trucks.
+ // "He will give it to the bird in the first hole of the box. " or
+ // "He will drop it on the box in the truck. "
+ "no"
+IDS_WARNING,
+ "Atenção"
+IDS_BYTES,
+ "bytes"
+//IDS_MEMORY_IS_LOW,
+// "Warning. Memory is low. Memory used to speed things up shrunk by " 
+//IDS_IT_IS_NOW,
+// "It is now" 
+IDS_CANT_ADD_TO_SIDE_OF_BLANK_BOX,
+ // as in "A robot stopped because nothing will stick to the side of a blank box.
+ "nada poderá ser anexado no lado de uma caixa vazia"
+
+IDS_CITY_SIZE_CANT_BE_LESS_THAN,   // re-written on 8/23/97 for clarity
+// "The smallest you can make the city size is -255 for a 255 by 255 city randomly filled with houses. "
+  "O menor valor que você pode colocar no tamanho de uma cidade é -255 para uma cidade de 255 por 255 preenchida aleatoriamente com casas. "
+IDS_CITY_SIZE_CANT_BE_MORE_THAN,
+ "A maior cidade possível pode ter até 255 por 255 quarteirões. "
+
+//IDS_FULL_SCREEN_MODE_TOO_SLOW,
+// "Full screen mode is taking a surprisingly long time. You might want to try ToonTalk without it. "
+IDS_AVENUE,
+ "Avenida"
+IDS_STREET,
+ "Rua"
+
+IDS_TROUBLES_READING_PICTURE_FILE,
+ "Problemas lendo o arquivo"
+IDS_CANT_FLIP_USED_FILE_TO_PICTURE_REMOTE,
+ "este controle não pode ser girado. Você pode aspirar a imagem e girá-la de novo"
+IDS_CANT_FLIP_UNUSED_FILE_TO_PICTURE_REMOTE,
+ "este controle não pode ser girado de novo. A única coisa que você pode fazer é colocar sobre ele o nome de um arquivo que contenha a imagem desejada. "
+IDS_FILE_TO_SOUND_FULL_HELP,
+ "Este é para ouvir seus próprios efeitos sonoros e músicas. "
+IDS_FILE_TO_SOUND_FULL_HELP2,
+ "Basta colocar o nome de um arquivo WAVE ou MIDI sobre ele e este arquivo será tocado até o fim ou até que seja aspirado. "
+IDS_FILE_TO_PICTURE_FULL_HELP,
+ "Este é para mostrar suas próprias imagens dentro do ToonTalk. "
+IDS_FILE_TO_PICTURE_FULL_HELP2,
+ "Basta colocar sobre ele o nome de um arquivo que contenha uma imagem (em formato BMP) e depois aspirar o resultado. " 
+
+IDS_SORRY_USER_PICTURE_TOO_BIG,
+ "Desculpe, mas a versão de 16 bits do ToonTalk não consegue lidar com imagens maiores do que a tela. "
+IDS_TROUBLES_READING_SOUND_FILE,
+ "Desculpe, mas o ToonTalk teve problemas para ler o arquivo de som"
+IDS_REMEMBER_FILE,
+ // Marty says this if the user puts a picture created from a user file onto the clipboard.
+ // The following is followed by the file name.
+ "Lembre-se de que, para enviar este programa para outra pessoa, você também deverá enviar o arquivo"
+
+// added 8/23/96
+IDS_RESULT_OF_SAVING_ROOM,
+ "Este é o resultado de se salvar tudo de uma sala. "
+IDS_WHICH_CONTAINS,
+ "que contém"
+IDS_WHO_IS_HOLDING,
+ // as in "You are holding a robot who is holding a magic wand. " 
+ "que está segurando"
+IDS_WHO_CAN_ONLY_REMEMBER,
+ "que só pode recordar"
+IDS_ACTIONS,
+  "ações"
+//IDS_WHICH_IS_HELD_BY,
+// "which is held by"
+IDS_STEP
+ "Passo"
+IDS_STEPS,
+ "Passos"
+IDS_WHICH_HAS_ENOUGH_MAGIC,
+ // Together with the following words is used in
+ // "You are holding a magic wand which has enough magic for 4 uses. "
+ "que tem mágica suficiente para"
+IDS_USE,
+  "uso"
+IDS_USES,
+  "usos"
+//IDS_HIM,
+// "him"
+//IDS_HER,
+// "her"
+IDS_CANT_ADD_TO_REMOTE_NOTEBOOK,
+// was "Sorry, but you can't save anything in a picture's notebook. It is just for remote controls and sensors. "
+  // on 9/4/97 changed to
+  "Desculpe, mas você não pode modificar uma agenda de imagem. Ela só guarda controles remotos e sensores. "
+// new on 8/30
+// revised on 10/13
+IDS_PUZZLE_SINKING,
+//  "Zizzle Island is sinking. "
+"A Ilha Xis era um lugar bem agradável antes do desastre. Agora ela está começando a afundar!"
+IDS_PUZZLE_CRASH,
+//  "Marty comes to the rescue. "
+"Por sorte, Márcio, o Marciano, estava voando por perto. Ele conseguiu salvar todo mundo. "
+IDS_PUZZLE_HURT,
+//  "After rescuing everyone he crashes. "
+"O problema é que, quando ele já havia movido quase todas as casas para fora da ilha, ele teve um problema no motor e caiu. "
+IDS_PUZZLE_RESCUE,
+//"You volunteer to rescue Marty. "
+"Agora o Márcio precisa ser resgatado. Você foi voluntário para saltar de pára-quedas sobre a ilha a fim de ajudá-lo. "
+IDS_FIRST_PUZZLE_GREETING1,
+ "Oi. Eu sou o Márcio. "
+IDS_FIRST_PUZZLE_GREETING2,
+ "Você deve ser"
+IDS_FIRST_PUZZLE_GREETING3,
+ "Cara, que bom ver você!"
+IDS_RESTART_PUZZLE_GREETING1,
+ "Que bom encontrar você novamente. Lembro-me bem de onde estávamos. "
+IDS_RESTART_PUZZLE_GREETING2,
+ "Obrigado por voltar. Vamos continuar arrumando a nave. "
+IDS_RESTART_PUZZLE_GREETING3,
+ "É ótimo ver você de novo. Deixe-me ver onde estávamos. "
+IDS_TOO_WIDE_TO_SEE,
+ "Desculpe, mas está largo demais para ver tudo de uma vez. "
+IDS_TOO_NARROW_TO_SEE,
+ "Desculpe, mas está tão estreito que não consigo ver as letras. "
+// for puzzle engine
+IDS_BAD_PUZZLE_FILE,
+ "Ops! Há algo errado com o arquivo dos desafios. Desculpe. "
+IDS_ALL_HINTS_GIVEN1,
+ // The expression "a broken record" is from records (before there were CDs) that
+ // when scratched would repeat a phrase over and over again.  I'm not sure if it
+ // is clear to children of the 1990s.
+ // When translating these 3 versions IDS_ALL_HINTS_GIVEN just try to make them
+ // different but mean the same thing
+ "Sei que pareço um disco riscado, mas lá vou eu de novo. "
+IDS_ALL_HINTS_GIVEN2,
+ "Desculpe ficar me repetindo, mas não sei dizer outra coisa. "
+IDS_ALL_HINTS_GIVEN3,
+"Quem me dera saber como ajudar você. Mas só consigo pensar no que já disse da última vez. "
+IDS_NO_HINTS,
+ "Não. "  //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_NEGATIVE_AGE,
+ "Então você ainda não nasceu? " //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_VERY_YOUNG1,
+ "Impressionante! Eu não sabia que as crianças de"
+IDS_VERY_YOUNG2,
+ "anos da Terra eram tão espertas. "
+IDS_VERY_OLD1,
+ "Cara,"
+IDS_VERY_OLD2,
+ "anos. Você realmente tem idade! "
+IDS_LIKE_INSIDE_A_COMPUTER,  // was "Like inside a computer" prior to 8/25/97
+ "Dentro de um computador"
+IDS_SEE_IF_YOU_CAN_MAKE_THAT_NUMBER,
+ "Veja se você consegue fazer aquele número. "
+IDS_WE_NEED1,
+ "Nós precisamos"
+IDS_WE_NEED2,
+ "que nós precisamos" // added que on 080600
+IDS_SIT_DOWN_AND_GET,
+ "Sente-se na outra casa e obtenha"
+IDS_BASIC_HINT1,  // second "the" was missing -- added on 10/15/97
+ "Atravesse a porta da outra casa e aperte um botão do mouse. "
+IDS_BASIC_HINT2,
+ "Você pode pegar coisas apontando para elas e apertando o botão do mouse ao mesmo tempo. "
+IDS_WHILE_HOLDING,
+ "Enquanto estiver segurando"
+IDS_PRESS_ESC_AND_COME_BACK,
+ "aperte 'Esc' para ficar de pé e voltar aqui. "
+IDS_WE_DONT_NEED,
+  // As in "We don't need a number.  We need a box. " -- Marty says this in the puzzle game.
+ "Desculpe. Nós não precisamos" // removed " de" from the end on 160600
+IDS_SOMETHING_IS_MISSING,
+// was  "Something is missing from" // changed 1/20/97
+ "Alguma coisa está faltando na caixa. "
+IDS_SOMETHING_IS_MISSING2,
+ "Ou está no lugar errado. "  //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_NOT_IT1,
+ "Não. "
+IDS_NOT_IT2,
+ "Não é isso. "
+IDS_NOT_IT3,
+ "Desculpe, mas não é isso que precisamos. "
+//IDS_WRONG_TRY_AGAIN,
+// "Something's wrong with that. Try again. "
+IDS_SOMETHING_WRONG, // revised on 8/31/97 -- broke the two sentences apart
+ "Há alguma coisa errada com isso. "
+IDS_TRY_AGAIN1,
+ "Tente novamente. "
+IDS_TRY_AGAIN2,
+ "Vamos fazer de novo. "
+// new on 9/24
+IDS_CONGRATULATIONS,
+ "Bom trabalho"
+IDS_CONGRATULATIONS2,
+ "Muito bom"
+IDS_CONGRATULATIONS3,
+ "Excelente"
+IDS_CONGRATULATIONS4,
+ "Ótimo"
+IDS_CONGRATULATIONS5,
+ "Bom"
+IDS_CONGRATULATIONS6,
+ "Muito bem"
+
+// new on 10/3
+IDS_EXPANDER_KEY_COMMANDS,
+ // Each letter is a keyboard shortcut to put Pumpy's button in that state
+ // this (and the IDS_COPIER_KEY_COMMANDS and IDS_VACUUM_KEY_COMMANDS)
+ // should be as easy to remember as possible and must be unique
+ // IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2 documents this
+ "MVRNUTB" // for the first letter of Big, Tall, Wide, etc.
+IDS_WHO_IS_READY_TO,
+ "que pode"
+IDS_THAT_IS_READY_TO,
+  // only used to describe a magic wand
+  // following expressions are IDS_COPIER_STATE0, IDS_COPIER_STATE1, or
+  // IDS_COPIER_STATE2
+ "que pode"
+IDS_MAKE_THINGS,
+ "fazer com que as coisas fiquem"
+IDS_EXPANDER_STATE0,
+ "maiores"
+IDS_EXPANDER_STATE1,
+ "mais altas"  
+IDS_EXPANDER_STATE2,
+ "mais largas"  
+IDS_EXPANDER_STATE3,
+ "menores"  
+IDS_EXPANDER_STATE4,
+ "mais curtas"  
+IDS_EXPANDER_STATE5,
+ "mais estreitas"  
+IDS_EXPANDER_STATE6,
+ "de bom tamanho"  
+IDS_VACUUM_KEY_COMMANDS,
+ // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "ADI"  // was SRB before 12/14
+IDS_VACUUM_STATE0,
+ "aspirar as coisas"  
+IDS_VACUUM_STATE1,
+ "devolver as coisas que ele havia aspiradop"  
+IDS_VACUUM_STATE2,
+ "apagar coisas da superfície para esvaziar"  
+ // was "suck things off the surface to make things blank"  
+IDS_COPIER_KEY_COMMANDS,
+  // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "COZ"
+IDS_COPIER_STATE0,
+ "copiar coisas"
+IDS_COPIER_STATE1,
+ "copiar coisas e, caso elas estejam vazias ou em branco, devolvê-las ao seu estado original"
+IDS_COPIER_STATE2,
+ "copiar a si própria"
+IDS_BUTTON_TYPE_INDEFINITE,
+ "um botão"
+IDS_BUTTON_TYPE_DEFINITE,
+ "o botão"
+IDS_BUTTON_TYPE_PLURAL,
+ "botões"
+IDS_BUTTON_TYPE_PRONOUN,
+ "lo"  // updated 120700 "o botão"
+
+
+IDS_BUTTON_CLICKED_HELP1,
+"Você pode mudar"
+IDS_BUTTON_CLICKED_HELP2,
+"para um modo de funcionamento diferente se clicar no botão. "
+IDS_BUTTON_CYCLE_HELP1,
+"Você também pode mudar"
+IDS_BUTTON_CYCLE_HELP2,
+"para outro modo apertando as teclas '+', '-' (menos), ou a barra de espaço. "
+IDS_BUTTON_LETTER_TYPED_HELP1,
+"Você pode determinar o que"
+IDS_BUTTON_LETTER_TYPED_HELP2,
+"irá fazer digitando uma destas letras:"
+IDS_BUTTON_HELP_GIVEN_HELP1,
+"Isso é tudo o que sei sobre botões. "
+IDS_BUTTON_HELP_GIVEN_HELP2,
+"Se você quiser que eu repita tudo novamente, pressione F1 duas vezes ao mesmo tempo em que aponta para um botão. "
+IDS_BUTTON_HELP_GIVEN_HELP3,
+"Vou falar um pouco mais sobre"
+
+// on 8/23/97 changed this so that each tool can have a different gender
+// initial space added 8/23/97 so German version can provide the needed comma
+IDS_COPIER_BUTTON_HELP_GIVEN_HELP,
+// was IDS_BUTTON_HELP_GIVEN_HELP5
+  // as in "I'll tell you more about magic wands if you pick it up. "
+  // was "if you pick it up. "
+" se você pegá-la na mão. "
+IDS_EXPANDER_BUTTON_HELP_GIVEN_HELP,
+// was IDS_BUTTON_HELP_GIVEN_HELP5,
+  // as in "I'll tell you more about bike pumps if you pick him up. "
+  // was "if you pick him up. "
+" se você pegá-la na mão. "
+IDS_VACUUM_BUTTON_HELP_GIVEN_HELP,
+// was IDS_BUTTON_HELP_GIVEN_HELP5,
+" se você pegá-lo na mão. "
+
+IDS_EXPANDER_CHANGED_STATE_VIA_BUTTON_HELP,
+"Você pode mudar a Soprana para que ela faça com que as coisas fiquem menores, mais altas, ou mais gordas apertando o botão no peito dele. "
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP1,
+"Você pode mudar o funcionamento da Soprana apertando uma dessas teclas:"
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2,
+"'M' para aumentar, 'V' para elevar, 'R' para alargar, 'N' para diminuir, 'U' para encurtar, 'T' para estreitar e 'B' para bom tamanho. "
+IDS_EXPANDER_SELECTION_HELP,
+"o que quer que esteja embaixo do nariz dela"
+// following added on 8/23/97 so the pronoun depends upon the tool in question
+IDS_TURN_EXPANDER_ON_HELP,
+// was "You can also turn him on and off while holding him by pressing the space bar. "
+// "also" removed from following on 9/25/97
+"Você pode ligá-la ou desligá-la apertando a barra de espaço enquanto estiver com ela na mão. "
+IDS_TURN_VACUUM_ON_HELP,
+"Você pode ligá-lo ou desligá-lo apertando a barra de espaço enquanto estiver com ele na mão. "
+IDS_TURN_COPIER_ON_HELP,
+"Você pode ligá-la ou desligá-la apertando a barra de espaço enquanto estiver com ela na mão. "
+// was:
+//IDS_TURN_HIM_ON_HELP,
+//"You can also turn him on and off while holding him by pressing the space bar. "
+//IDS_TURN_IT_ON_HELP,
+//"You can also turn it on and off while holding it by pressing the space bar. "
+
+IDS_VACUUM_CHANGED_STATE_VIA_BUTTON_HELP,
+"Você pode alterar o funcionamento do Asper para que ele devolva as coisas aspiradas ou para que ele simplesmente aspire o que estiver por cima dos objetos. Basta apertar o botão que ele tem no nariz. "
+IDS_VACUUM_CHANGED_STATE_VIA_KEYBOARD_HELP,
+"Você pode alterar o modo de funcionamento do Asper apertando 'A' para aspirar, 'I' para limpar e 'D' para devolver (cuspir as coisas para fora). "
+IDS_COPIER_CHANGED_STATE_VIA_BUTTON_HELP,
+"Você pode alterar o funcionamento da varinha mágica para que ela copie objetos, copie a si própria ou restaure objetos apertando o botão na sua ponta. " 
+IDS_COPIER_CHANGED_STATE_VIA_KEYBOARD_HELP,
+"Você pode alterar o modo da varinha mágica apertando 'C' para copiar objetos, 'O' para copiar e voltar o objeto ao estado original e 'Z' para reproduzir, copiando a si própria. "
+//IDS_PUSH_R,
+//"push 'R'"
+//IDS_CHAR_O,
+//"'O'"
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP,
+"Pressionando a tecla 'PageDown' você pode fazer com que eu diga a próxima coisa. "
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP2,
+"E pressionando 'PageUp' eu repito a última coisa que disse. "
+
+
+//Added 10/7
+IDS_REPEAT1,
+"Eis aqui o que acabei de dizer. "
+IDS_REPEAT2,
+"Vou repetir o que disse. "
+IDS_REPEAT3,
+"Falarei tudo novamente. "
+IDS_BAD_DEMO_LOG,
+"Algo de errado com o log dos exemplos. Parando o replay. "
+IDS_TROUBLES_COPYING_FROM_CDROM,
+ // followed by a directory name (from TempDir in toontalk.ini)
+"O ToonTalk teve problemas para copiar arquivos temporários para "
+IDS_TROUBLES_COPYING_FROM_CDROM2,
+". Talvez não haja espaço livre suficiente no disco. "
+IDS_TROUBLES_COPYING_FROM_CDROM3,
+"O ToonTalk será executado a partir do CD-ROM. Ele poderá ficar lento. "
+
+// When translating the following please add a sentence naming and crediting the translators
+IDS_TOONTALK_CREDITS,
+"Animação de Greg Savoia, Kim Tempest e Brian Anderson. Versão brasileira: Divertire Melhoramentos. "
+IDS_TOONTALK_CREDITS2,
+"Todo o resto por Ken Kahn. Agradecimentos especiais para Markus, David e Mary. "
+
+IDS_JANUARY,
+"Janeiro"
+IDS_FEBRUARY,
+"Fevereiro"
+IDS_MARCH,
+"Março"
+IDS_APRIL,
+"Abril"
+IDS_MAY,
+"Maio"
+IDS_JUNE,
+"Junho"
+IDS_JULY,
+"Julho"
+IDS_AUGUST,
+"Agosto"
+IDS_SEPTEMBER,
+"Setembro"
+IDS_OCTOBER,
+"Outubro"
+IDS_NOVEMBER,
+"Novembro"
+IDS_DECEMBER,
+"Dezembro"
+IDS_NO_SUCH_MONTH,
+"Desculpe, mas não conheço nenhum mês chamado"
+IDS_BAD_DATE,
+"Nunca ouvi falar de uma data como"
+IDS_TODAY_IS,
+"Vamos ver. Hoje é"
+IDS_THANKS,
+"Obrigado"
+IDS_AND_YOU_WERE_BORN,
+"e você nasceu"
+IDS_SO_YOU_ARE,
+"então você tem"
+IDS_YEARS_AND,
+"anos e" 
+IDS_DAYS_OLD,
+"dias de idade"
+IDS_TODAY,
+"hoje" 
+IDS_OR_SENTENCE_START,
+"Ou"
+IDS_ITS_YOUR_BIRTHDAY,
+"Uau, você faz anos hoje. Feliz aniversário! "
+IDS_HAD_BIRTHDAY_RECENTLY,
+"Espero que você tenha tido um ótimo aniversário. "
+IDS_BIRTHDAY_SOON,
+"Legal! Seu aniversário já está bem pertinho. Espero que ele seja superbom. "
+IDS_COME_HERE_FOR_HINTS,
+"Se você quiser que eu ajude, chegue mais perto. "
+IDS_BOMB_TO_RESTART,
+"Você pode começar tudo de novo pegando a bomba e apertando a barra de espaço. "
+IDS_PUT_NEST_IN_BOX,
+"Você precisa colocar o ninho dentro da caixa. "
+IDS_NEED_ALL_7_DAYS,
+"Desculpe, mas precisamos de todos os 7 dias no ninho, não apenas"
+ // as in "Sorry, but we need all 7 days on the nest, not just 5. "
+IDS_NEED_NUMBERS_UNDERNEATH,
+ // as in "Sorry, but we need at least 5 numbers on the nest, not just 3. " 
+"Desculpe, mas precisamos de ao menos 5 números no ninho, não apenas" 
+IDS_NO_CHANGING_NUMBERS,
+"Desculpe, mas nenhum dos números deveria estar mudando. "
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+"Desculpe, mas todos os números têm de ser maiores do que 0. "
+IDS_LAST_NUMBER_WAS,
+"Hummm, da última vez foi o número"
+IDS_AFTER_WAITING_8_SECONDS,
+"depois de esperar 8 segundos. E agora o número é"
+IDS_AFTER_WAITING_14_SECONDS,
+"depois de 14 segundos. "
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"Meus sensores não estão mostrando nenhuma casa construída pelo pessoal do caminhão. Desculpe. "
+IDS_OUT_OF_MAGIC,
+"a varinha mágica está sem mágica"
+
+IDS_MILLISECONDS,  // added 12/3
+ "milésimo de segundos"      
+IDS_ON, // added 12/3
+  // only used for Pumpy
+ "no"  // as in "use Pumpy on"
+
+IDS_WANT_TO_PLAY_NOW,
+ "Olá! Quer brincar com o ToonTalk agora?"
+IDS_PLAY_DEMOS_OR_BUILD,
+ "Você deseja jogar, ver exemplos ou construir algo com o ToonTalk?"
+IDS_PICK_DEMO,
+ "Bem, temos vários exemplos. Escolha um. "
+IDS_INSTALL_FIRST,
+ "Legal, mas para continuar teremos de instalar o ToonTalk. Tudo bem?"
+
+IDS_AS_I_WAS_SAYING, // added 12/5
+ "Da última vez que você saiu ainda havia mais coisas que eu queria contar para você. "
+IDS_WHAT_DOTS_MEAN,
+  "Quando eu tiver mais coisas para falar você verá \"...\" (três pontinhos) na parte inferior do balão. "
+IDS_THATS_WHAT_I_WANTED_SAY, // added 12/5
+ "Isso é o que antes eu estava tentando dizer. "
+
+IDS_ORDER_OF_THINGS_MATTER, // added 12/12
+"Desculpe ser um pouco enrolado, mas a ordem das coisas nos buracos tem de estar correta. "
+IDS_BIGGER_THAN, // added 12/13
+"maior que"
+
+THE_LEFT_PAGE_OF, // added 12/13
+// should always be of some notebook
+// as in "If given a box like that he will pick up what's on
+// "the left page of the main notebook. "
+"a página à esquerda do"
+THE_RIGHT_PAGE_OF, // added 12/13
+"a página à direita do"
+
+IDS_PICT_OF_DEFINITE, // added 12/13
+ "a imagem de"
+IDS_MOVIE_OF_DEFINITE,
+ "a animação de"
+IDS_BLANK_PICTURE_OF_DEFINITE, // added 12/20
+ "a imagem vazia de"
+
+IDS_PICT_OF_PLURAL,
+ "imagens de"
+IDS_MOVIE_OF_PLURAL,
+ "animações de"
+IDS_BLANK_PICTURE_OF_PLURAL, // added 12/20
+ "imagens vazias de"
+
+IDS_PICT_OF_PRONOUN, // added 12/21
+ "a imagem"
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+ "a animação"
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+ "a imagem vazia"
+
+IDS_THING_ON_THE_BACK1,
+  "o"
+IDS_THING_ON_THE_BACK2,
+  "objeto que está atrás " // as in "The third thing on the back is a robot. "
+IDS_TO_LAST_THING1,  // new on 12/13
+ "o"
+// these combine to make "the second to last thing he made or found"
+IDS_TO_LAST_THING2,
+ "objeto a partir do último que ele fez ou encontrou"
+IDS_MADE_OR_FOUND1, // new on 12/13
+ "o"
+IDS_MADE_OR_FOUND2, // these combine to form "the third thing he made or found"
+ "objeto que ele fez ou encontrou"
+IDS_PAGE_OF1,
+ "a"
+ // as in "the first page of the notebook"
+IDS_PAGE_OF2,
+ "página da"
+ // as in "the fourth hole of the box"
+// the following 4 combine to generate things like
+// "the third hole inside the second hole of the box"
+IDS_HOLE_OF1,
+ "o"
+IDS_HOLE_OF2,
+ "buraco da"
+IDS_HOLE_INSIDE1, // added 8/23/97
+ "o"
+IDS_HOLE_INSIDE2, // added 8/23/97
+ "buraco dentro"
+IDS_THING_ON_TOP1,
+ "o"
+IDS_THING_ON_TOP2,
+ "objeto por cima é " // as in "The second thing on top is a number. "
+IDS_ROBOT_DESCRIBE5_1,
+ "o"
+IDS_ROBOT_DESCRIBE5_2, // as in "The second robot wants a box. "
+ "robô quer " 
+IDS_PICTURES,
+ " imagens"
+
+// and also translate the following:
+//" Ahh, sorry I can't remember what I was going to say... "
+
+
+IDS_NATURAL_LANGUAGE,
+"Brasileiro" // was "Português" prior to 131299 but needs to be different from Portugal version
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyz"
+
+// the following should not be translated
+
+IDS_PUZZLE_SUBDIRECTORY,
+ "BR"
+IDS_NARRATION_FILE_SUFFIX,
+ "BRN"
+IDS_SUBTITLES_FILE_SUFFIX,
+ "BRT"
+//IDS_START_TOONTALK_NAME,
+//"StartToonTalk"
+IDS_SPEECH_ENGINE_VOICE,
+"BrazilianMarty3"
+
+rcinclude "newer.rc"   // added 290999
+rcinclude "..\common.rc"
+
+rcinclude "..\sensors.rc"
+rcinclude "..\java.rc"
+
+}

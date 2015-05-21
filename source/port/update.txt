@@ -1,0 +1,348 @@
+New S000285 oval
+New S000326 arredondado
+New S000328 linha
+New S000385 pontilhada
+New S000405 enquanto
+New S000406 aperta
+New S000408 chamado
+New S000409 ouvi
+New S000410 removendo
+New S000411 parede
+New S000419 telhado
+New S000501 pressionado
+New S000503 partes
+New S000504 recipientes
+New S000506 mci
+New S000507 fala
+New S000510 eixo
+New S000511 me
+New S000512 dele
+New S000513 balões
+New S000514 traduzir
+New S000515 devolver
+New S000516 dias
+New S000517 horas
+New S000519 dia
+New S000520 minutos
+New S000521 joystick
+New S000522 retorno
+New S000523 direção
+New S000524 inapropriado
+New S000525 leitura
+New S000526 leia
+New S000527 mídia
+New S000528 controle
+New S000529 interface
+New S000530 decoração
+New S000531 windows
+New S000532 etiqueta
+New S000533 trilhão
+New S000534 bilhão
+New S000535 milhão
+New S000536 mil
+New S000537 cem
+New S000538 utilize
+New S000539 hmmm
+New S000541 clicaria
+New S000542 soltaria
+New S000543 mim
+New S000544 mostrar
+New S000545 transformar
+New S000546 precisamos
+New S000547 você clica
+New S000548 aquela presa
+New S000549 lo falado
+New S000550 movido para
+New S000551 estava clicado
+New S000552 maior que
+New S000554 um sensor
+New S000555 voltar aqui
+New S000556 tente novamente
+New S000557 robôs vazios
+New S000558 versão de
+New S000560 menos que
+New S000561 hora correta
+New S000562 quero dizer
+New S000563 próxima porta
+New S000564 para comemorar
+New S000570 já esperamos
+New S000572 idade de
+New S000578 em graus
+New S000579 serem lidas
+New S000580 para escrever
+New S000582 criar arquivo
+New S000586 texto pararfala
+New S000590 coloque apenas
+New S000592 parou porque
+New S000600 etiquetadas como
+New S000602 combina com
+New S000604 qualquer robô
+New S000605 asper aspirou
+New S000606 que aspirou
+New S000607 você pegou
+New S000608 apontaria para
+New S000609 eu apertaria
+New S000611 finalmente pegaria
+New S000612 do sensor
+New S000613 estava segurando
+New S000617 alguma coisa
+New S000635 apareça em
+New S000638 ou ambos
+New S000652 mais rápido
+New S000658 mais devagar
+New S000665 sua mente
+New S000676 ia colocar
+New S000677 ia pôr
+New S000678 ao texto
+New S000679 um lugar
+New S000768 milhões de
+New S000770 microsoft windows
+New S000771 estão colocadas
+New S000818 tente fazer
+New S000819 consegue inserir
+New S000820 consegue entrar
+New S000821 consegue fazer
+New S000822 que terá
+New S000823 começar tudo
+New S000824 que estava
+New S000825 consegue formar
+New S000826 vou falar
+New S000827 ao robô
+New S000828 eles trabalham
+New S000829 treinamento do robô
+New S000830 la de volta
+New S000831 mente do robô
+New S000832 maior do que
+New S000833 às vezes uso
+New S000834 há mais robôs
+New S000835 em algum lugar
+New S000836 se eu falar
+New S000837 media control interface
+New S000838 frente da casa
+New S000839 rotacionado para esquerda
+New S000840 rotacionado para cima
+New S000841 rotacionado para frente
+New S000842 força de volta
+New S000843 sensor está sob
+New S000844 balões de palavras
+New S000845 bit do toontalk
+New S000846 idioma marciano para
+New S000847 idioma terráqueo não
+New S000848 sempre tão fácil
+New S000849 seja como for
+New S000850 você verá aqui
+New S000851 segundos de idade
+New S000852 descobrir para mim
+New S000853 fato de ter
+New S000854 vamos esperar que
+New S000855 desisto do pombo
+New S000856 veja em www
+New S000857 uma linha ascendente
+New S000858 uma linha descendente
+New S000859 número de letras
+New S000860 escrita do arquivo
+New S000861 em cima disso
+New S000862 barra de espaços
+New S000863 mas foi aspirado
+New S000864 windows não sabia
+New S000865 você pode sentir
+New S000866 em seguida pegaria
+New S000867 em seguida colocaria
+New S000868 quando visse sair
+New S000869 caixa de volta
+New S000870 você pode treinar
+New S000871 em seguida daria
+New S000872 esperaria que ele
+New S000873 em seguida devolveria
+New S000874 resultado de volta
+New S000875 faria isso mais
+New S000876 dentro da mente
+New S000879 com dois buracos
+New S000880 que recebe respostas
+New S000881 pergunta quais imagens
+New S000882 pergunta estou preso
+New S000883 treine um robô
+New S000884 colocála no segundo
+New S000885 esperando para que
+New S000886 contendo seu ninho
+New S000887 errada com isso
+New S000888 novamente para desligálo
+New S000889 até que aparecesse
+New S000890 que puder sobre
+New S000892 que irá mudar
+New S000893 que fará um
+New S000897 boca dele sobre
+New S000898 web do toontalk
+New S000903 escrita para uma
+New S000911 levou algo para
+New S000913 me der algo
+New S000916 coloque os números
+New S000917 que eu retiraria
+New S000919 adicionar letras ao
+New S000922 tem uma mente
+New S000923 eu pareça engraçado
+New S000924 antes de mudar
+New S000927 se estiver faltando
+New S000928 se contentará com
+New S000929 uma mente de robô
+New S000930 próprio pombo faça isso
+New S000931 você pode multiplicar por
+New S000932 mente de robô vazia
+New S000933 mente de robô contendo
+New S000935 asper na mente dele
+New S000936 um time de robôs
+New S000946 um robô que quer
+New S000949 se os botões direito
+New S000955 um ninho coberto com
+New S000959 que os botões central
+New S000960 relógio estão funcionando agora
+New S000961 acho que posso terminar
+New S000962 vamos fazer de novo
+New S000963 espero que você entenda
+New S000964 controle remoto parecerá preto
+New S000965 esta não pode ser
+New S000966 vejo que você tem
+New S000967 você poderia ir até
+New S000968 quer começar de novo
+New S000969 ninho deveria estar vazio
+New S000972 número deveria estar mudando
+New S000973 selecionar voltar mais tarde
+New S000974 uma linha pontilhada ascendente
+New S000975 uma linha pontilhada descendente
+New S000976 primeiro buraco deve ter
+New S000977 ou abrir porta serial
+New S000978 houve problemas ao abrir
+New S000979 para enviar comandos para
+New S000981 este só funciona com
+New S000982 os pombos só começam
+New S000989 os robôs só começam
+New S000994 qual ele possa dá
+New S000998 vou me lembrar disso
+New S000999 isto me lembra de
+New S0001003 qualquer efeito de força
+New S0001004 quando terminou de treinar
+New S0001016 veja se consegue trazer
+New S0001018 segundo buraco deve conter
+New S0001020 se existir algo na
+New S0001026 voar de dentro de
+New S0001034 mas só posso falar
+New S0001036 estava indo colocar algo
+New S0001039 hora não pode incluir
+New S0001042 para adicionar ao arquivo
+New S0001045 que irá multiplicar por
+New S0001055 que irá dividir por
+New S0001147 com um ovo dentro
+New S0001148 ele não conseguiu encontrar
+New S0001162 está faltando na caixa
+New S0001164 botão pause enquanto segura
+New S0001166 uma extensão do toontalk
+New S0001171 foi uma mensagem apropriada
+New S0001175 terceiro buraco deverá conter
+New S0001193 são úteis dentro da
+New S0001196 quanto tempo demoro falando
+New S0001204 quando ninguém está olhando
+New S0001206 ela se inclina pressionando
+New S0001209 um pouco mais sobre
+New S0001211 um segundo clique irá soltar
+New S0001217 veja como ela se inclina
+New S0001223 este robô só irá aceitar
+New S0001224 que ele tem na mente
+New S0001225 pergunta o número do botão
+New S0001227 mas ele não estava vazio
+New S0001233 que este robô deve fazer
+New S0001240 para fazer seus próprios sons
+New S0001241 efeitos de força de retorno
+New S0001243 extensão de arquivo do toontalk
+New S0001244 primeiro buraco deve conter leitura
+New S0001246 primeiro buraco deveria conter escrita
+New S0001247 primeiro buraco deve conter abrir
+New S0001248 texto que você quer enviar
+New S0001249 texto que você quer ouvir
+New S0001250 não há nenhum robô para
+New S0001251 isto nos diz quais imagens
+New S0001252 aqui está uma cópia de
+New S0001254 um efeito de força apagado
+New S0001255 tente colocar os dois juntos
+New S0001257 você entrará na mente dele
+New S0001258 em seguida  pegaria tudo
+New S0001259 caixa que acabou de treinar
+New S0001260 esperaria até que ele terminasse
+New S0001261 esperou até que ele terminasse
+New S0001262 se eu pudesse me mexer
+New S0001263 esperaria até que ele concluísse
+New S0001264 se seu número possui um
+New S0001265 você deve dar ao pombo
+New S0001266 buracos cujo terceiro buraco contém
+New S0001267 que só ele pode usar
+New S0001269 ao primeiro robô da fila
+New S0001270 der ao pombo algo retangular
+New S0001271 ele teve problemas para soltar
+New S0001273 lugar em que ia fazer
+New S0001274 lugar em que ia deixar
+New S0001275 que voa fora do toontalk
+New S0001276 qualquer outra parte do asper
+New S0001277 você tenha nascido antes de
+New S0001278 são muito úteis dentro da
+New S0001279 soprana para que ela faça
+New S0001281 que faço quando quero ensinar
+New S0001282 segundo buraco deverá ter um
+New S0001284 ou uma fila de robôs
+New S0001285 ficará feliz com qualquer texto
+New S0001287 algumas coisas não podem ser esvaziadas
+New S0001288 este robô só funcionará uma vez
+New S0001289 você fez todos os desafios disponíveis
+New S0001290 número de robôs atrás deveria ser
+New S0001291 novos desafios podem ter sido adicionados
+New S0001293 este pombo leva mensagens de leitura
+New S0001294 ajuda do toontalk para mais informações
+New S0001295 eu faria isso até acabar com
+New S0001297 número na mente vazia do robô
+New S0001299 você lembrou de colocar de volta
+New S0001300 computador terá todos os números necessários
+New S0001301 na terceira posição da direita para
+New S0001302 um dos números de que precisará
+New S0001303 colocando os números de volta no
+New S0001305 toontalk teve problemas ao procurar um
+New S0001306 ou um grupo de robôs em
+New S0001307 primeiro robô da fila que gostar
+New S0001311 pombo está muito ocupado para aceitar
+New S0001312 os caminhões andam só se estiverem
+New S0001313 para têla de volta caso precise
+New S0001323 quando quero que ele pare de mudar
+New S0001325 texto para ter uma letra por buraco
+New S0001327 mensagens de arquivo devem conter caixas com
+New S0001329 este pombo irá receber outro pombo para
+New S0001331 usando os números que você me trouxe
+New S0001332 mais fácil iniciar com os números grandes
+New S0001334 repleta de times de robôs que treinei
+New S0001336 os sons do toontalk podem ser encontrados
+New S0001337 você vai encontrar uma lembrança no fim
+New S0001345 minha máquina de tradução às vezes faz
+New S0001346 mesmo que esteja falando sobre outra coisa
+New S0001347 direita ou zero se ele não possui rotação
+New S0001348 baixo ou zero se ele não possui rotação
+New S0001350 trás ou zero se ele não possui rotação
+New S0001351 talvez você deva fazer algo especial lá dentro
+New S0001352 às vezes tenho de treinar robôs para fazer
+New S0001353 muito diferente daquele que você acabou de treinar
+New S0001362 asper para remover algumas coisas da mente dele
+New S0001363 então pode trazer somente os dois últimos dígitos
+New S0001364 ocupado fazendo aquilo que foi treinado para fazer
+New S0001365 freqüentemente quero um monte de robôs trabalhando para mim
+New S0001366 mas você não pode treinar robôs para dar caixas
+New S0001368 eu me pergunto quantos segundos de vida você tem
+New S0001370 as menssagens para este pombo devem ser caixas com
+New S0001376 este pombo leva mensagens para criar ou abrir arquivos
+New S0001382 mais efeitos de força na agenda próxima ao final
+New S0001386 ninhos quando quero que robôs de casas diferentes trabalhem juntos
+New S0001387 mas todos os números têm de ser maiores do que
+New S0001389 número deve ter aumentado para mais de mil até agora
+New S0001390 treco não aparecerá já que ele está dentro do asper
+New S0001391 aparecerá no windows como um applet java no seu navegador
+New S0001392 as bombas só funcionam dentro das casas ou atrás de
+New S0001393 crescer ou fazer qualquer coisa que eu as programe para fazer
+New S0001394 eles só conseguem fazer aquilo que você os treinou para fazer
+New S0001396 mas esqueci de lhe dizer que precisaremos de algumas coisas que
+New S0001397 frente ou para trás ou zero se ele não for sensível
+New S0001398 com uma parte de cima ou de baixo de alguma outra coisa
+New S0001405 mas um applet java de algo que tem pombos inapropriados provavelmente não funcionará

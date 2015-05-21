@@ -1,0 +1,37 @@
+#define ENGLISH TRUE;
+#define SWEDISH FALSE;
+#define START_TOONTALK  "StartTT.EXE "
+#define STR_DOC_PATH "\\Doc\\English\\"
+//#define STR_INSTALL_DIALOG "IDD_DIALOG_US"
+//#define STR_DLG_DLL "tt_dlg_us.dll"
+
+// the following strings should be translated if the installation
+// program should be in another language
+
+#define STR_INVALID_PATH        "Es wurde ein falscher Pfadname eingegeben.\nBitte neuen Pfadnamen auswaehlen.\n"
+#define STR_TEXT1               "Setup installiert ToonTalk im folgenden Verzeichnis"
+#define STR_TEXT2               "\nEs wird auf der Festplatte neu erzeugt, falls nicht vorhanden."
+#define STR_DIR_READONLY        "Das zur Installation angegebene Verzeichnis\nkann nicht erzeugt werden.\n\nBitte waehlen Sie ein anderes Verzeichnis aus."
+#define STR_DIR_NOTCREATED      "Angebenes Verzeichnis kann nicht erzeugt werden,\nbitte neues Verzeichnis auswaehlen."
+#define STR_NOTENUFROOM         "\nbenoetigter Platz auf ausgewaehltem Laufwerk \nzur Installation mit gewaehlten Optionen. \n\n Bitte waehlen Sie andere Komponenten im Dialogfenster."
+#define STR_ERR_DECOMPRESS      "Es trat ein Fehler waehrend des Entpackens auf."
+#define STR_ERR_STRING          "Wegen eines Fehlers konnte das Setup nicht beendet werden.\n\nBitte beseitigen Sie die Fehlerursachen und versuchen Sie es noch einmal."
+
+#define STR_TITLE "ToonTalk Beta Version 5"
+#define STR_SETUP_POSTFIX 	" Setup...";
+#define STR_INSTALL_IE		"Zum Lesen der ToonTalk Dokumentation wird ein Web Browser benoetigt.  Auf Ihrem Computer ist wahrscheinlich kein Web Browser installiert. Sie haben jetzt die Moeglichkeit Microsoft's Internet Explorer zu installieren."
+#define STR_IE_DONT_RESTART	"Da noch weitere Komponenten installiert werden muessen, starten Sie den Computer bitte nicht neu nach der Installation von Internet Explorer.  Beenden Sie die  Installation des Internet Explorer vor der Installation von DirectX."
+#define STR_CANT_READ_MANUAL 	"Da auf Ihrem Computer wahrscheinlich kein Web Browser installiert ist, kann die ToonTalk Dokumentation nicht gelesen wird."
+#define STR_INSTALL_DIRECTX_NEXT	"Die 32 Bit Version benoetigt Microsoft's DirectX Erweiterungen, die jetzt installiert werden.  Klicken Sie auf Abbrechen falls die Erweiterungen schon installiert sind."
+
+#define STR_NOT_ENOUGH_DISK_SPACE 	"Zu wenig Speicherplatz auf der Festplatte" 
+#define STR_32BIT_95_OR_NT4		"Die 32 Bit Version ist leider nur fuer Windows 95 oder Windows NT 4.0 verfuegbar"
+#define STR_INSTALLING_FILES_TO		"Die Dateien werden in das folgende Verzeichnis kopiert"
+#define STR_UNABLE_TO_WRITE		"Anwendung kann keine Dateien in das Zielverzeichnis kopieren.";
+#define STR_INSUFFICIENT_SPACE		"Mangels Speicherplatz auf der Festplatte koennen keine Dateien in das Zielverzeichnis kopiert werden.\n\nFehler FS_OUTOFSPACE.";
+#define STR_COPY_ERROR		"Beim Kopieren und Dekomprimieren von Dateien trat ein Fehler auf."
+#define STR_INTERNAL_ERROR		"Interner Fehler. Custom Dialog kann nicht erzeugt werden.\nBeenden Sie das Installationsprogramm."
+#define STR_SURE_QUIT 	"Wollen Sie das Setup-Program wirklich verlassen?"
+
+
+#define STR_NO_NAME "No Name"  // added 12/21/96

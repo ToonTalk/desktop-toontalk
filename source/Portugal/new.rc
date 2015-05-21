@@ -1,0 +1,1122 @@
+// added 12/26/96 -- last updated on 040205
+
+IDS_SOUND_INDEFINITE,
+ "um som"
+IDS_SOUND_DEFINITE,
+ "o som"
+IDS_SOUND_PLURAL,
+ "sons"
+IDS_SOUND_PRONOUN,
+ "ele"
+  
+IDS_REMOTE_TEXT_PICTURE_TYPE_INDEFINITE,
+  "um controlo remoto"
+IDS_REMOTE_TEXT_PICTURE_TYPE_DEFINITE,
+  "o controlo remoto"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PLURAL,
+  "controlos remotos"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PRONOUN,
+ "ele"
+
+IDS_TYPING_SOUND_NAMES_OBSOLETE,
+ "É melhor escolher sons do caderno de sons. Se escreveres o nome de um som e o mandares para outro país pode não funcionar."
+
+IDS_SOUND_HELP, // added 1/14
+"Podes fazer esse som carregando " 
+
+IDS_ANY_SOUND, // add 1/16
+ "qualquer som"
+IDS_BLANK_SOUND, // add 1/16
+ "um som vazio"
+
+IDS_TURN_BOMB_ON_HELP,  // added 1/20
+// removed also on 9/26/97
+"Podes activar a bomba que estás a segurar carregando na barra de espaços. "
+
+IDS_MARTIAN_SPEAK_HELP, // added 3/26/97
+ "Eu falo, mostro os balões, ou faço ambas as coisas"
+IDS_MARTIAN_SPEAK,
+ "falar"
+IDS_MARTIAN_BALLOONS,
+ "balões"
+IDS_MARTIAN_SPEAK_AND_BALLOONS,
+ "falar e balões"
+IDS_MARTIAN_SPEAKS_ONLY_IN_32BITS,
+ "Desculpa, mas só posso falar se estiveres a correr a versão a 32 bits do ToonTalk."
+
+IDS_MARTIAN_SPEAK_REMOTE_LONG_LABEL,   // added 3/27/97
+ "Como \ro ET\rFala"
+IDS_MARTIAN_SPEAK_REMOTE_SHORT_LABEL,
+  "ET fala"
+
+IDS_MARTY_TALKS_FUNNY,  // added 4/8/97 -- only used if speech is enabled
+ "Traduzir de marciano para linguagem terrestre pode ser complicado. A minha máquina de tradução faz com que eu, às vezes, fale de maneira esquisita. Espero que me consigas entender. "
+
+IDS_CLIPBOARD_REMOTE_FULL_HELP1, // added 4/22/97
+ "Se alguma coisa estiver no álbum do Windows, então verás o que está lá aqui. Podes usar o Limpopó para aspirar e cuspir o que lá estiver. "
+IDS_CLIPBOARD_REMOTE_FULL_HELP2,
+ "Se o álbum estiver vazio, então o controlo remoto estará preto. Podes por alguma coisa no controlo remoto para a pores no álbum. "
+
+IDS_USER_PICTURE_NOT_256_COLORS, // added 5/8/97
+ "Desculpa, mas a versão de 16 bits do ToonTalk só pode ler imagens com 256 cores. "
+
+// added on 6/13-97
+IDS_CIRCLE_PAGE,
+ "Oval" // if width and height are same then is a circle otherwise is an ellipse -- oval is just non-technical name for this
+IDS_ROUNDED_RECTANGLE_PAGE,
+ "Rectângulo\rArredondado"
+IDS_LINE_TOWARDS_UPPER_RIGHT,
+ "Linha\ra subir"   // as you move to the right
+IDS_LINE_TOWARDS_LOWER_RIGHT,
+ "Linha\ra descer"
+IDS_HOLLOW_CIRCLE_PAGE,
+ "Linha\rOval"
+IDS_ROUNDED_HOLLOW_RECTANGLE_PAGE,
+ "Linha\rRectangular\rArredondada"
+IDS_DOTTED_LINE_TOWARDS_UPPER_RIGHT,
+ "Linha\rtracejada\ra subir"
+IDS_DOTTED_LINE_TOWARDS_LOWER_RIGHT,
+ "LInha\rtracejada\ra descer"
+IDS_HOLLOW_RECTANGLE,
+ "Linha\rRectangular"
+
+IDS_SYNTHETIC_RECTANGLE,
+ "um rectângulo"
+IDS_SYNTHETIC_OVAL,
+ "uma oval"
+IDS_SYNTHETIC_ROUNDED_RECTANGLE,
+ "um rectângulo arredondado"
+IDS_SYNTHETIC_LINE_UP,
+ "uma linha a subir"
+IDS_SYNTHETIC_LINE_DOWN,
+ "uma linha a descer"
+IDS_SYNTHETIC_HOLLOW_OVAL,
+ "uma linha oval"
+IDS_SYNTHETIC_ROUNDED_HOLLOW_RECTANGLE,
+ "uma linha rectangular arredondada"
+IDS_SYNTHETIC_DOTTED_LINE_UP,
+ "uma linha tracejada a subir"
+IDS_SYNTHETIC_DOTTED_LINE_DOWN,
+ "uma linha tracejada a descer"
+IDS_SYNTHETIC_HOLLOW_RECTANGLE,
+ "uma linha rectangular"
+
+// the following is now used to generate names for robots rather than the current numbers you see on their chests
+// The names are generated as strings of consonants-vowel repeated as necessary.
+// For English I am skipping "y" and "q" since they are a bit of problem.
+IDS_VOWELS_FOR_ROBOT_NAMES,  // added 6/24 for naming robots
+"aeiou" // y is pretty special
+IDS_CONSONANTS_FOR_ROBOT_NAMES,
+"bcdfgjlmnprstvxz"  // q is special
+
+// updated and moved here on 8/11/97
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL, // should be needed if -puzzle is used in unlikely ways or recovering from an error
+  "Opps! Não consigo fazer o próximo puzzle porque preciso das peças de puzzles anteriores.  Se estiveres de acordo vou recuar"  // some number
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL2,  // followed by
+ "puzzles?"
+
+IDS_LESS_THAN, // added 8/27/97
+"menos que"
+
+IDS_BAD_TIME, // added 8/28/97
+"Isto não pode ser um tempo correcto. O tempo não pode incluir um número como " // followed by a number and a period
+
+
+// Following combined to make the following (with numbers changed)
+// I see you are 0 seconds old.  I mean 1 seconds old.  No, it's 2 seconds old.
+// I wonder how many seconds until you are 3 seconds old. Could you please go next
+// door and figure it out for me?
+IDS_AGE_IN_SECONDS1,
+ "Vejo que tens" // followed by a number
+IDS_AGE_IN_SECONDS2,
+ "segundos de idade."
+IDS_AGE_IN_SECONDS3,
+ "Isto é"
+IDS_AGE_IN_SECONDS4,
+ "Não, tens"
+IDS_AGE_IN_SECONDS5,
+ "Estou a imaginar, quantos segundos faltam até teres"
+IDS_AGE_IN_SECONDS6,
+ "Podes ir à porta ao lado e tentar descobrir isso?"
+
+// Following combined to form
+// "Maybe you should do something special in 3 days and 4 hours to celebrate being 390 million seconds old. "
+IDS_MAYBE_YOU_SHOULD_DO_SOMETHING_SPECIAL,
+ "Talvez devesses fazer alguma coisa especial dentro de"
+IDS_TO_CELEBRATE_BEING,
+  "para celebrar"
+IDS_MILLIONS_OF_SECONDS_OLD,
+ "milhões de segundos de idade. "
+
+IDS_FINISHED_ALL_PUZZLES_START_AGAIN,
+ "Já resolveste todos os puzzles. Queres começar de novo?"
+
+IDS_WAIT_FOR_BIRD_TO_BRING_MESSAGE,
+ "Boa. Agora vamos esperar que o pássaro traga a mensagem. "
+IDS_GIVING_UP_ON_BIRD,
+ "Não vou esperar mais tempo pelo pássaro. Já esperámos demais. "
+IDS_NEST_SHOULD_BE_EMPTY,
+ "Desculpa, mas o ninho devia estar vazio. "
+
+IDS_NOT_CHANGING_FAST_ENOUGH,
+ "Desculpa, mas o número deveria estar a mudar mais depressa. "
+IDS_NOT_CHANGING_SLOW_ENOUGH,
+ "Desculpa, mas o número deveria estar a mudar mais devagar. "
+IDS_NOT_CHANGING_AT_ALL,
+ "Desculpa, mas o número deveria estar a mudar. "
+
+IDS_THE_NUMBER_OF_ROBOTS_ON_THE_BACK_SHOULD_BE,
+ "O número nas costas do robot deveria ser"  // followed by a number
+
+IDS_DAYS,
+"dias"
+IDS_HOURS,
+"horas"
+IDS_DAY,
+"dia"
+IDS_HOUR,
+"hora"
+IDS_MINUTES,
+"minutos"
+
+IDS_AGE_OF_LABEL,
+"Idade\r"
+
+IDS_SOLVED_ALL_PUZZLES,   // revised on 9/1/97
+// "Good job. You solved all the puzzles! Check the ToonTalk web page for more puzzles. "
+ "Boa. O computador e o relógio estão a funcionar. Muito obrigado. Acho que faço o resto sozinho. "
+IDS_SOLVED_ALL_PUZZLES2,
+ "Vais encontrar um pequeno presente no final do caderno que está na página 4 do teu caderno (na opção ""Brincar""). "
+IDS_CHECK_FOR_MORE_PUZZLES,
+"Talvez haja novos puzzles na página de Internet do ToonTalk. Vê www.toontalk.com. "
+
+IDS_WE_NEED_THE_NUMBER_THAT_WAS_ON_THE_FLOOR,
+ "Precisamos do número que estava no chão. "
+IDS_NUMBER_SHOULD_HAVE_GROWN_OVER_A_THOUSAND,
+ "O número já deve ser muito maior. "
+
+IDS_BAD_ROBOT_NAMES,  // these are generated names that are NOT used because they are in this list
+  // all names are consonant vowel consonant ... pattern
+" cum rape dago fag nad god sod nig sex sux sexo foda pila pipi caca coco cona fux lez pube pute "
+
+IDS_GENERATE_JAVA_APPLET_HELP,  // added 9/15/97
+ "Se pressionares na tecla Pause enquanto seguras num robot, numa imagem, ou num camião e depois escolheres ""Voltar mais tarde"", então uma cópia do que estás a segurar aparecerá no Windows como uma Java applet no teu navegador da Internet. "
+IDS_OK_IF_MARTY_SUGGESTS_STUFF_YOU_ONCE_DID,  // added 9/15/97
+ "Olá. Já passou muito tempo desde a última vez que utilizaste o ToonTalk. Importas-te que o ET te sugira algumas coisas que já te podes ter esquecido?"
+
+IDS_JOYSTICK_LABEL, // I use the word "joystick" but I've noticed that Microsoft switched from "joystick" to "game controller" since
+// that is more accurate -- this includes game pads, flying yokes, etc.
+ "Joystick "
+IDS_JOYSTICK_BUTTONS_LONG_LABEL,
+ "Botões do\rJoystick\rClicados"
+IDS_JOYSTICK_BUTTONS_DOWN_LONG_LABEL,
+ "Botões do\rJoystick\rPressionados"
+
+IDS_JOYSTICK_X_SPEED_SHORT_LABEL,
+ "Velocidade X"
+IDS_JOYSTICK_Y_SPEED_SHORT_LABEL,
+ "Velocidade Y"
+IDS_JOYSTICK_Z_SPEED_SHORT_LABEL,
+ "Velocidade Z"
+IDS_JOYSTICK_X_AXIS_SHORT_LABEL,
+ "Eixo X"
+IDS_JOYSTICK_Y_AXIS_SHORT_LABEL,
+ "Eixo Y"
+IDS_JOYSTICK_Z_AXIS_SHORT_LABEL,
+ "Eixo Z"
+IDS_JOYSTICK_X_SPEED_LONG_LABEL,
+ "Joystick\rVelocidade X"
+IDS_JOYSTICK_Y_SPEED_LONG_LABEL,
+ "Joystick\rVelocidade Y"
+IDS_JOYSTICK_Z_SPEED_LONG_LABEL,
+ "Joystick\rVelocidade Z"
+IDS_JOYSTICK_X_AXIS_LONG_LABEL,
+ "Joystick\rEixo X"
+IDS_JOYSTICK_Y_AXIS_LONG_LABEL,
+ "Joystick\rEixo Y"
+IDS_JOYSTICK_Z_AXIS_LONG_LABEL,
+ "Joystick\rEixo Z"
+
+IDS_JOYSTICK_SPEED_X_HELP,  // added 9/19/97
+ "a quantidade que um joystick se move da esquerda para a direita"
+IDS_JOYSTICK_SPEED_Y_HELP,
+"a quantidade que um joystick se move para cima ou para baixo"
+IDS_JOYSTICK_SPEED_Z_HELP,
+ "a quantidade que um joystick se move para a frente ou para trás (geralmente é o controlo de velocidade) ou zero se não usa isto"
+IDS_JOYSTICK_AXIS_ROTATION_X_HELP,
+ "a quantidade que um joystick é rodado à esquerda/direita, ou zero se não usa a rotação"
+IDS_JOYSTICK_AXIS_ROTATION_Y_HELP,
+ "a quantidade que um joystick é rodado a cima/baixo, ou zero se não usa a rotação"
+IDS_JOYSTICK_AXIS_ROTATION_Z_HELP,
+ "a quantidade que um joystick é rodado à frente/trás, ou zero se não sente a rotação"
+IDS_JOYSTICK_BUTTONS_HELP_START1, // used for all buttons and joysticks
+ "a resposta à pergunta ""Foi o botão número" // followed by a number
+IDS_JOYSTICK_BUTTONS_HELP_START2,
+ "clicado agora?"""
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START1,
+ "a resposta à pergunta ""O botão número" // followed by a number
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START2,
+ "pressionado?"""
+IDS_OF_JOYSTICK_NUMBER,
+ "do joystick número" // followed by a number
+
+IDS_TEXT_TO_MCI_FULL_HELP,
+ "Isto é para enviar comandos para o Microsoft Windows Media Control Interface (MCI). "
+IDS_TEXT_TO_MCI_FULL_HELP2,
+ "Experimenta largar o texto que queres mandar para ele. "
+IDS_TEXT_TO_SPEECH_FULL_HELP,
+ "Isto é para falar o texto. "
+IDS_TEXT_TO_SPEECH_FULL_HELP2,
+ "Isto só funciona com a versão 32-bit do ToonTalk. "
+IDS_TEXT_TO_SPEECH_FULL_HELP3,
+ "Experimenta largar o texto que queres ouvir nele. "
+IDS_TEXT_TO_MCI_HELP,
+ "um lugar para largar texto para o MCI"
+IDS_TEXT_TO_SPEECH_HELP,
+ "um lugar para largar texto para o ouvires"
+IDS_TEXT_TO_MCI_SHORT_LABEL,
+ "MCI"
+IDS_TEXT_TO_SPEECH_SHORT_LABEL,
+ "Falar"
+IDS_TEXT_TO_MCI_LONG_LABEL,
+ "Media\rControl\rInterface"
+IDS_TEXT_TO_SPEECH_LONG_LABEL,
+ "Texto para\rFalar"
+
+IDS_ON_TOP_OF_IT_IS,
+  // 9/24/97 -- "It" always refers to a remote control and it is followed by a description of what was dropped on it
+ "No cimo dele está"
+
+IDS_SOUNDS_ON_PAGE8,   // revised on 9/26/97
+// was "Sounds that work can be found on page 8 of your notebook. "
+"Os sons do ToonTalk podem ser encontrados na página 8 do teu caderno. Na página 4 há sensores para fazeres os teus próprios sons. "
+
+IDS_WANT_TO_LEARN_ABOUT_COMMAND_LINE, // add 9/26/97
+ "Queres aprender agora a trabalhar com as opções da linha de comandos?"
+IDS_THE_SPACE_BAR, // or is "the space button" more kid friendly?
+ "a barra de espaços"
+IDS_OR,
+ "ou"
+IDS_SECOND_JOYSTICK_BUTTON,
+  // used with the above as in "You can do that by pressing the space bar or the second joystick button."
+ "o segundo botão do joystick"
+
+IDS_DROP_ON_BLANK_NUMBER_TO_OBTAIN_ARITY_HELP, // revised on 9/26/97
+//  "You find out how many holes a box has by dropping it on a blank number pad. You can make a number pad blank by using Dusty the Vacuum. Just remember to use "
+  "Podes descobrir quantos buracos tem uma caixa, largando-a num número vazio. Podes fazer um número vazio usando o Limpopó. "
+
+IDS_VACUUM_SUCK_HELP, // revised on 9/26/97
+// was "If you click on "
+  "Se, enquanto o seguras, clicares em "
+
+IDS_LOG_REPLAY_ERROR,
+ "Desculpa, alguma coisa correu mal a reproduzir um exemplo. Por favor comunica este problema a Support@ToonTalk.com."
+
+IDS_ROBOT_ON_PICTURE_STOPPED, // revised on 10/8/97
+// "A robot on the back of a picture stopped because "
+"Um robot que está nas costas de uma imagem chamado"
+IDS_ROBOT_ON_FLOOR_STOPPED,
+// "A robot on the floor stopped because "
+"Um robot que está no chão chamado"
+IDS_REMOTE_ROBOT_ABORT,
+//  "A robot somewhere stopped because "
+ "Um robot não sei aonde chamado"
+IDS_STOPPED_BECAUSE_HE, // used only together with the above
+"parou porque"  // he removed on 11/12/97
+
+IDS_BOMBS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT, // added 10/10/97
+ "bombas só funcionam dentro de casas ou nas costas de uma imagem"
+IDS_TRUCKS_START_DRIVING_ONLY_INSIDE_OF_HOUSES_ABORT,
+ "camiões só se vão embora se estiverem dentro de uma casa ou nas costas de uma imagem"
+IDS_BIRDS_ONLY_START_FLYING_FROM_INSIDE_A_HOUSE_ABORT,
+ "pássaros só começam a voar dentro de casa ou nas costas de uma imagem"
+IDS_ROBOTS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT,
+ "robots só começam a trabalhar dentro de casas ou nas costas de uma imagem"
+
+IDS_ROBOT_HAS_NON_MATCHING_BOX, // revised on 10/15/97
+ // was "Uhm, excuse me but a robot has a box that doesn't match his thought bubble and there is no robot he can give it to. "
+ "Hum, desculpa-me mas o robot chamado" // followed by a robot name
+IDS_ROBOT_HAS_NON_MATCHING_BOX2,
+ "tem uma caixa que não condiz com a que ele tem no balão de pensamento e não há nenhum robot a que ele possa dá-la. "
+
+IDS_ABOUT_TO_GENERATE_JAVA_APPLET,
+ "ToonTalk está a fazer uma Java applet do que estás a segurar.\rSe tudo correr bem, dentro em breve o teu navegador mostrá-lo-á. "
+
+
+// added 10/27/97
+IDS_ROOM_DECORATION_HELP,
+ "adicionar e remover decoração a uma parede"
+IDS_HOUSE_DECORATION_HELP,
+ "adicionar e remover decoração à fachada de uma casa"
+IDS_ROOF_DECORATION_HELP,
+ "adicionar e remover decoração ao telhado"
+
+IDS_ROOM_DECORATION_SHORT_LABEL,
+"Quarto"
+IDS_HOUSE_DECORATION_SHORT_LABEL,
+"Casa"
+IDS_ROOF_DECORATION_SHORT_LABEL,
+"Telhado"
+
+IDS_ROOM_DECORATION_LONG_LABEL,
+ "Decoração\rdo Quarto"
+IDS_HOUSE_DECORATION_LONG_LABEL,
+ "Decoração\rda Casa"
+IDS_ROOF_DECORATION_LONG_LABEL,
+ "Decoração\rdo telhado"
+
+ // add 11/6/97
+IDS_TROUBLE_SHOOT_DISPDIB_ABNORMAL_EXIT,
+"Da última vez que utilizaste o ToonTalk não saíste como devia ser. Queres algum conselho sobre isso?"
+IDS_TROUBLE_SHOOT_GENERAL_ABNORMAL_EXIT,
+"A última vez que utilizaste o ToonTalk, este não fechou correctamente. Queres algum conselho? "
+IDS_TROUBLE_SHOOT_TOO_SLOW,
+"ToonTalk correu muito devagar. Queres algum conselho para correr mais depressa?"
+IDS_TROUBLE_SHOOT_VERY_FAST_IN_LOW_RESOLUTION,
+"Existe uma versão do ToonTalk que tem imagens de melhor qualidade. Queres aprender alguma coisa sobre isso?"
+IDS_TROUBLE_SHOOT_JOYSTICK_CALIBRATION,
+//IDS_JOYSTICK_STUCK,  // added 9/23/97
+ "O teu joystick enviou o helicóptero para o canto. Se isto é um erro, tens de calibrar o teu joystick. Queres aprender como é que isso se faz?"
+IDS_TROUBLE_SHOOT_DIRECTX,
+ "ToonTalk teve problemas a utilizar as extensões do DirectX para Windows. Queres saber o que podes fazer sobre isto?"
+IDS_TROUBLE_SHOOT_MOUSE,
+//IDS_MOUSE_MOVEMENT_WRONG, // just goes into the log for now
+"O Windows está a dizer-me que o rato se mexeu mais do que é possível. Isto acontece quando corres o ToonTalk num Mac que tem Windows. Desculpa. Tenta utilizar antes as setas."
+IDS_TROUBLE_SHOOT_BAD_DEMO,
+"O exemplo não conseguiu completar-se como devia ser. Queres aprender a resolver o problema?"
+IDS_BETA_EXPIRED,  // revised on 11/23/97
+  "Desculpa, mas esta versão beta ou de demonstração é demasiado antiga. Queres saber onde arranjar uma nova? "
+
+//IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+// "A robot was going to put something into something but it's been vacuumed. "
+IDS_ROBOT_MISSING_RECIPIENT_ABORT,  // just a shorter version of the above
+"ia pôr uma coisa noutra que foi aspirada"
+IDS_TROUBLES_LAUNCHING_BROWSER,
+"Desculpa. Alguma coisa correu mal ao tentar executar um navegador, como o Netscape Navigator ou Microsoft Internet Explorer."
+IDS_CITY_SAVED,
+" Cidade gravada."
+
+IDS_NO_FILE_NAME_FOR_USER_MEDIA_FILE,  // revised 12/15/97
+// was "ToonTalk is confused and is trying to get a picture and doesn't know the file name. "
+ "ToonTalk teve problemas a encontrar um ficheiro chamado"
+
+IDS_TROUBLE_SHOOT_QUIT_ON_FIRST_PUZZLE,   // added 2/1/98
+ "Queres ler algumas pistas?"
+IDS_TROUBLE_SHOOT_QUIT_ON_EARLY_ROBOT_PUZZLE,
+ "Queres ver algumas pistas de como lidar com os robots nos puzzles?"
+
+IDS_FORCE_FEEDBACK_JOYSTICK_LABEL, // added 2/27/98
+"Force\rFeedback\rJoystick "
+IDS_FORCE_FEEDBACK_DURATION_SHORT_LABEL,
+"Duração"
+IDS_FORCE_FEEDBACK_GAIN_SHORT_LABEL,
+"Força"
+IDS_FORCE_FEEDBACK_DIRECTION_SHORT_LABEL,
+"Direcção"
+
+// added 3/2/988
+
+IDS_FORCE_FEEDBACK_DURATION_REMOTE_HELP,
+ "a duração (em milésimos de segundo)"
+IDS_FORCE_FEEDBACK_GAIN_REMOTE_HELP,
+ "a força (100 é o máximo)"
+IDS_FORCE_FEEDBACK_DIRECTION_HELP,
+ "a direcção é em graus"
+ // all 3 of the above are followed 
+IDS_FORCE_FEEDBACK_EFFECT_HELP,
+ "do efeito force feedback chamado"
+
+IDS_CANT_MAKE_JAVA_APPLET_OF_PRIMITIVE_BIRD, // added 3/4/98
+ "Desculpa, mas uma Java applet de algo que tenha um pássaro estrangeiro nele é provável que não funcione."
+
+IDS_PRIMITIVE_BIRD_DIDNT_HANDLE, // added 3/5/98
+ "Um pássaro levou uma coisa para o Windows, mas o Windows não sabe o que fazer com ela. "
+
+IDS_PRIMITIVE_BIRD_LABEL,
+ "Pássaro\rEstrangeiro"
+
+IDS_A_PRIMITIVE_BIRD,
+ "um pássaro que voa para fora do ToonTalk"
+IDS_DLL_PRIMITIVE_BIRD_HELP,
+  "Deves dar ao pássaro uma caixa com 2 buracos. O primeiro buraco deve ter o nome da extensão do ToonTalk. O segundo buraco deve conter um pássaro a que será dado uma caixa com um novo pássaro."
+
+IDS_BIRD_TAKES_READ_AND_WRITE_MESSAGES,
+  "Este pássaro lê e escreve mensagens num ficheiro chamado "
+//IDS_NO_FILE_FOR_EXTENSION_FILE,
+// "Sorry. I couldn't find a ToonTalk extension file named "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION,
+ "Mensagens para ficheiros devem ser caixas com 3 buracos, em que o terceiro buraco contêm um pássaro que recebe as respostas. Para ler, o primeiro buraco deve conter ""Ler"" e o segundo o número de letras a ler. "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION2,
+ "Para escrever, o primeiro buraco deve conter ""Escrever"" e o segundo um bloco de texto para adicionar ao ficheiro. "
+IDS_READ_MANUAL_FOR_MORE_HELP,
+ "Lê a ajuda do ToonTalk para mais informações. "
+IDS_CREATE_FILE_HELP,
+ "Mensagens para este pássaro devem ter 3 buracos. O primeiro buraco deve conter ""Abre"", ""Cria Ficheiro"", ou ""Abre Porta Série"". "
+IDS_CREATE_FILE_HELP2,
+ "No segundo buraco deve estar um nome de um ficheiro. O terceiro buraco deve ter um pássaro. Este pássaro recebe outro pássaro para ler ou escreve do ficheiro. "
+IDS_IMPROPER_CREATE_FILE_MESSAGE,
+ "Um pássaro levou uma coisa para uma extensão do ToonTalk, mas a mensagem não era adequada. " 
+IDS_BIRD_TAKES_MESSAGE_TO_OPEN_A_FILE,
+ "Este pássaro leva mensagens para criar ou abrir ficheiros. "
+IDS_TROUBLE_OPENING_A_FILE,
+ "Teve problemas a abrir o ficheiro chamado "
+IDS_IMPROPER_READ_OR_WRITE_MESSAGE,
+ "Um pássaro levou alguma coisa para um ficheiro do Windows, mas não era uma mensagem própria. "
+
+IDS_TROUBLE_SHOOT_EXTENSION_NOT_INSTALLED, // added 3/20
+ "É preciso uma extensão do ToonTalk que não foi instalada. Queres aprender a instalar extensões? "
+IDS_TOO_MANY_HOLES, // added 3/30
+ "Desculpa, mas uma caixa não pode ter tantos buracos. Consulta www.toontalk.com/English/ttini.htm para aprenderes a mudar isto. "
+
+IDS_TRIAL_VERSION_CANT_SAVE, // added 5/1-98 but only used if "trial" version of ToonTalk
+ "Desculpa, mas isto é uma versão de demonstração do ToonTalk, por isso as alterações do teu caderno perder-se-ão quando saíres do ToonTalk."
+
+IDS_ROBOTS_CANT_GIVE_BOXES_TO_ROBOTS, // added 5/3/98
+ "Desculpa, mas não podes treinar robots para dar caixas a outros robots. Põe antes o robot e a caixa num camião. "
+
+IDS_CANT_SAVE_CITY, // added 5/11/98
+  "Desculpa, mas a versão de demonstração não pode gravar cidades."
+
+ // A blank robot is a robot that has been erased by Dusty
+ // only useful inside thought bubbles to express that the corresponding thing should be a robot, but any one will do
+  IDS_BLANK_ROBOT_TYPE_INDEFINITE, // added 5/21/98
+  "um robot vazio"
+ IDS_BLANK_ROBOT_TYPE_DEFINITE,
+  "o robot vazio"
+ IDS_BLANK_ROBOT_TYPE_PLURAL,
+  "robots vazios"
+ IDS_BLANK_ROBOT_TYPE_PRONOUN,
+ "ele"
+
+
+ IDS_ENGLISH_LIKE_ADJECTIVES_AND_PRONOUNS, // new on 5/22/98
+ "0" // should be "0" for languages which there is gender agreement between adjectives and nouns and only one form of "it"
+ // only if "1" does the following need to be translated as well
+ IDS_IT,
+ "it" 
+ IDS_NEW,
+ "new"
+ IDS_FIRST_NEW,
+ "first new"
+ IDS_NEWEST,
+ "newest"
+ IDS_TO_LAST,
+ "to last"
+ IDS_THE,
+ "the"
+ // end of special no gender section
+
+IDS_BAD_FLOOR_IN_CITY_FILE,
+ "Erro com uma parte do ficheiro da cidade que descreve o que está no chão de uma casa."
+IDS_BAD_ROOM_IN_CITY_FILE,
+ " Erro com uma parte do ficheiro da cidade que descreve o que está na parede de uma casa."
+
+IDS_TOO_BIG_TO_SAVE, // new on 5/27/98
+ "não pode ser gravado\rporque tem demasiadas coisas."
+
+IDS_NEST_TOO_FULL_TO_SAVE,
+ "Há mais de 1000 coisas no ninho que está a ser gravado. Algumas vão perder-se."
+IDS_SAVING_TOO_MANY_NESTS,
+"Não posso gravar tantos ninhos de uma vez. O máximo é 255 ninhos de cada vez, desculpa."
+IDS_LEGO_SERIAL_PORT_NOT_IN_32BIT,
+"Este interface da porta série não é suportado pela versão de 32-bit do ToonTalk. "
+
+// And translate "Queres ver o teu ficheiro de registo?"
+
+IDS_TROUBLE_SHOOT_TTS_SELECT_FAILURE, // added 6/12/98
+ "O motor Text-to-speech não arrancou correctamente. Queres saber como resolver isto?"
+
+IDS_TOONTALK_WEB_PAGE, // new on 8/19/98
+ "Para aprenderes mais sobre o ToonTalk vê www.toontalk.com."
+
+IDS_ROBOT_LOST_TRACK_OF_THINGS, // new on 10/16/98
+ "Um robot perdeu o rasto das coisas. Ele não esperava controlar tantas coisas ou mesmo tempo."
+IDS_EXPECTED_TO_KEEP_TRACK, // used to generate sentences like
+// A robot B expected to keep track of only 3 things.
+ "esperava apenas controlar"
+
+IDS_TRIAL_VERSION_DOES_NOT_GENERATE_JAVA, // added 10/21/98
+ "Desculpa, mas isto é uma versão de demonstração, não pode criar Java applets."
+
+ 
+IDS_A_ROBOT_NAMED, // split off from IDS_ROBOT_HAS_NON_MATCHING_BOX on 280199
+ "um robot chamado" // followed by a robot name
+
+// also on 280199 removed "a robot" from
+// IDS_ROBOT_COULDNT_FIND_ITEM, IDS_ROBOT_COULDNT_FIND_NEST, IDS_ROBOT_COULDNT_FIND_PLACE,
+// IDS_ROBOT_COULDNT_FIND_BIRD, IDS_ROBOT_COULDNT_FIND_PLACE_TO_RELEASE,
+// IDS_ROBOT_EXPECTED_BOX_BUT, IDS_ROBOT_DIDNT_FIND_ROBOT_IN_TRUCK,
+// IDS_ROBOT_COULDNT_USE_IN_VACUUM,IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+// IDS_ROBOT_THING_NOT_IN_ROOM, IDS_SOMETHING_NOT_IN_NOTEBOOK,
+
+// On 5/4/99 added the following:
+
+
+IDS_CHILDREN_HELP,
+ "resposta à pergunta ""Qual a imagem que está presa por cima de mim?"""
+IDS_ANCESTORS_HELP,
+ "a resposta à pergunta ""Qual a imagem onde estou preso em cima, e que imagem presa é aquela , e etc?"""
+IDS_CHILDREN_SHORT_LABEL,
+ "Partes"
+IDS_ANCESTORS_SHORT_LABEL,
+ "Contentores"
+IDS_CHILDREN_LONG_LABEL,
+ "Partes"
+IDS_ANCESTORS_LONG_LABEL,
+ "Contentores"
+IDS_AND_IT_HAS_THE_LABEL,
+ "e tem a etiqueta"
+IDS_ANSWER_CHILDREN_QUESTION,
+ "Isto diz-nos que imagens estão presas em cima de"
+IDS_ANSWER_ANCESTORS_QUESTION,
+ "Isto diz-nos que imagens"
+IDS_ANSWER_ANCESTORS_QUESTION2,
+  "está presa em cima"
+IDS_LABELED_BY,
+ "com o nome"
+IDS_ENCODING_MISSING_IN_PUZZLE,
+ "Não encontrei um objectivo no puzzle."
+IDS_PUZZLE_CONTAINED_NON_ROBOT_AFTER_GOAL,
+"O Puzzle tinha um não-robot depois do objectivo. Secção ignorada."
+IDS_NON_PICTURE_ON_TOP_OF_PICTURE,
+ "Uma não imagem no cimo de uma imagem, foi posta nas costas da imagem."
+IDS_GIVE_ME_AND_ILL_TALK_ABOUT_IT,
+ "Se me deres alguma coisa, eu falo sobre ela sempre que falar sobre" // followed by some ToonTalk object
+IDS_HERES_A_COPY_OF,
+"Uma cópia de" // followed by some ToonTalk object
+IDS_IT_GOES_WITH,
+"Tem" // followed by some ToonTalk object
+IDS_OK,
+"OK"
+IDS_ILL_REMEMBER_THAT,
+"Eu lembro-me disso"
+IDS_GOES_WITH,
+"vai com"
+
+
+IDS_TRILLION_SINGULAR,
+ "um trilião"
+IDS_TRILLION_PLURAL,
+ "triliões"
+IDS_BILLION_SINGULAR,
+ "um bilião"
+IDS_BILLION_PLURAL,
+ "biliões"
+IDS_MILLION_SINGULAR,
+ "um milhão"
+IDS_MILLION_PLURAL,
+ "milhões"
+IDS_THOUSAND_SINGULAR,
+ "mil"
+IDS_THOUSAND_PLURAL,
+ "mil"
+IDS_HUNDRED_SINGULAR,
+ "centena"
+IDS_HUNDRED_PLURAL,
+ "centenas"
+
+IDS_MY_BOX, // new on 290499
+"A minha caixa"
+
+IDS_THAT_REMINDS_ME_OF, // new on 290699
+ // for example, "You are holding a box that reminds me of the text "this is a comment"".
+ "que me faz lembrar"
+IDS_THAT_REMINDS_ME_OF2, // used after "this is a comment" above.
+ " "
+
+IDS_SOMETHING, // new on 300699
+"algo"
+
+IDS_ANY_ROBOT, // new on 090799
+"qualquer robot"
+
+IDS_ANY_FORCE_EFFECT, // new on 160799
+ "qualquer efeito de força"
+IDS_BLANK_FORCE_EFFECT,
+ "um efeito de força apagado"
+IDS_FORCE_EFFECT_TYPE_INDEFINITE,
+ "um efeito force feedback"
+IDS_FORCE_EFFECT_TYPE_DEFINITE,
+ "o efeito force feedback"
+IDS_FORCE_EFFECT_TYPE_PLURAL,
+ "efeitos force feedback"
+IDS_FORCE_EFFECT_TYPE_PRONOUN,
+ "lo"
+
+ // new on 200799
+IDS_KEYBOARD_ACCELERATORS,
+  // be sure that no letter occurs twice in the same situation in the following
+  // Each letter corresponds to a keyboard command:
+
+  // D - Down when in helicopter           B - Baixo 
+  // U - Up when in helicopter             C - Cima
+
+  // H - Helicopter when walking outside
+
+  // U - Standup if your hand is empty     L - Levantar
+  // P - Pickup what is under your finger  A - Apanhar
+  //     if your hand is empty
+  // F - Pickup and flip what is under     V - Virar
+  //     your finger if your hand is empty 
+
+  // F - Flip when holding picture or pad  V - Virar
+  // D - Drop what you are holding         L - Largar
+ "bchlavvl"
+
+// The following indicate what should seperate words in sentences.
+// In Japanese it should be "" 
+IDS_SPACE_BEFORE_PRONOUNS,
+ // in Portuguese is "-"
+ "-"
+IDS_DEFAULT_SPACE_BETWEEN_WORDS,
+ " "
+
+IDS_NOT_A_GOOD_DEMO_FILE,
+ "não é um bom ficheiro de registo do ToonTalk."
+IDS_DEMO_FILE_NEED_NEWER_VERSION_OF_TOONTALK,
+ "Este exemplo só corre em versões mais recentes do ToonTalk. Por favor actualiza o teu sistema. Visita www.toontalk.com."
+ 
+IDS_FORCE_EFFECT_HELP, // added 7/31/99
+ "podes sentir esse efeito carregando "
+IDS_FORCE_EFFECT_HELP2,
+ " "
+IDS_FORCE_EFFECTS_ON_PAGE4,
+ "Podes encontrar mais efeitos de força no teu caderno quase no fim do caderno dos sensores."
+
+IDS_UNKNOWN_PROBLEM_READING_A_URL, // new on 9/14/99
+ "Houve um problema a ler um ficheiro da Internet."
+IDS_SHOULD_TOONTALK_STOP_READING_URLS,
+ " Queres que o ToonTalk deixe de procurar ficheiros na Internet?"
+
+IDS_TOOLBOX_IN_VACUUM_HELP, // new on 170999
+ "A Engenhocas não vem porque está no Limpopó, o Aspirador. Utiliza o Limpopó para a cuspir. "
+
+IDS_MOUSE_RELEASED, // new on 311099
+"O ToonTalk já não está a utilizar o rato - Carrega em Ctrl-F8 para começar a usá-lo."
+ 
+IDS_MARTAIN_SPEAK_WITH_SUBTITLES, // new on 101199
+  "voz e legendas" // updated on 151203 in accordance with email from Leonel
+ 
+IDS_COPY_OF_ME, // new on 121199 
+  "Copia\rde mim"
+ 
+IDS_WANT_TO_SEE_LOG, // new on 221199
+ "Queres ver o ficheiro de registo?"
+ 
+IDS_LANGUAGE_SHORT_LABEL,
+ "Linguagem"
+IDS_LANGUAGE_LONG_LABEL,
+ "Linguagem\rUsada"
+IDS_LANGUAGE_HELP,
+ "que linguagem o ToonTalk está a utilizar"
+ 
+IDS_SPACE_NO_LONGER_CHANGES_PICTURES, // new on 221199
+ "Um robot está a carregar na barra de espaços a uma imagem que não parou. A barra de espaços já não altera uma imagem. Devo mudar os robots para carregarem em '+'?"
+IDS_SPACE_NO_LONGER_CHANGES_REMOTE_CONTROLS,
+ "Um robot está a carregar na barra de espaços a um controlo remoto que não parou. A barra de espaços já não o altera. Devo mudar estes robots para carregarem em '+'?"
+IDS_ROBOT_UPDATED_WHEN_RUN,
+ "Os robots vão ser arranjados a primeira vez que trabalharem. Deves gravar os robots arranjados para evitar que eu te volte a fazer a mesma pergunta."
+ 
+IDS_INTERNAL_ERROR_STARTING_TOONTALK, // new on 151299
+"Opps, ocorreu um erro interno ao iniciar o ToonTalk. Podem acontecer coisas estranhas."
+IDS_INTERNAL_ERROR,
+ "Opps, ocorreu um erro interno. Podem acontecer coisas estranhas."
+IDS_INTERNAL_ERROR_EXITING,
+"Erro interno ao fechar o ToonTalk."
+IDS_KEEP_GOING_DESPITE_INTERNAL_ERROR,
+" Queres que o ToonTalk tente continuar?"
+IDS_INTERNAL_ERROR_LOADING_CITY,
+"Opps, ocorreu um erro interno ao carregar uma cidade. Podem acontecer coisas estranhas."
+IDS_INTERNAL_ERROR_LOADING_PAGE,
+"Opps, ocorreu um erro interno ao carregar uma página de um caderno. Provavelmente está estragada."
+IDS_INTERNAL_ERROR_LOADING_ITEM,
+"Opps, ocorreu um erro interno ao carregar uma coisa. Deve estar estragada."
+
+IDS_ONE_HUNDRED_ALONE, // comma was missing prior to 100500
+"cem"
+IDS_ONE_HUNDRED,
+"cento"
+IDS_TWO_HUNDRED,
+"duzentos"
+IDS_THREE_HUNDRED,
+"trezentos"
+IDS_FOUR_HUNDRED,
+"quatrocentos"
+IDS_FIVE_HUNDRED,
+"quinhentos"
+IDS_SIX_HUNDRED,
+"seiscentos"
+IDS_SEVEN_HUNDRED,
+"setecentos"
+IDS_EIGHT_HUNDRED,
+"oitocentos"
+IDS_NINE_HUNDRED,
+"novecentos"
+
+IDS_PICTURE_ON_BACK_OF_REMOTE_LOOKS, // added 020500
+"Atenção. Coisas estranhas podem acontecer se puseres alguma coisa nas costas de um controlo remoto para a aparência dela."
+ 
+IDS_NETWORK_NEST_CREATED_WITH_DIFFERENT_IP_ADDRESS,
+"A carregar um ninho de rede que foi criado noutro computador com um endereço da Internet diferente. Os pássaros gravados não vão poder encontrar este ninho."
+
+IDS_LOAD_WAIT,
+ "A carregar. Espera por favor."
+
+ // translation of the following up to and including IDS_WANT_TO_UPDATE_TT_INI_TOONTALK32_2 added on 140801
+IDS_TROUBLE_SHOOT_DIRECTX_MEDIA, // new on 100600
+ "ToonTalk teve problemas a utilizar as extensões DirectX Media para carregar imagens. Queres ver o que podes fazer para resolver o problema?"
+
+IDS_JAVA_SENSOR_LIMITATIONS, // new on 120101
+ "Desculpa. Alguns sensores não funcionam em Java. O seguinte sensor ficará inactivo em Java: "
+
+IDS_M22_MISSING, // new on 130201
+ "Esta instalaçAo do ToonTalk não tem os ficheiros de dados de baixa resolução. Clica em 'Opções' para mudar para 640x480 ou superior ou contacta apoio@cnotinfor.com."
+
+IDS_TROUBLE_SHOOT_JAVA_APPLET, // new on 170201
+ "Ocorreu um erro ao compilar a Java applet. Queres ler como podes resolver isto?"
+
+IDS_ROBOT_VACUUMED_UP_HIS_BOX, // new on 180201
+ "Um robot aspirou a sua caixa."
+
+IDS_NO_IP_ADDRESS, // new on 010301
+ "ToonTalk não consegue encontrar um endereço IP neste computador. Os pássaros de longa distância não vão funcionar, a não ser que saias, te ligues a Internet, e tentes de novo."
+IDS_LOADING_FOREIGN_BIRD,
+ "ToonTalk está a carregar um passáro forasteiro que utiliza uma extensão ao ToonTalk (DLL)."
+IDS_ROBOT_USING_FOREIGN_BIRD,
+ "Um robot está para utilizar um passário forasteiro que utiliza uma extensão ao ToonTalk (DLL)."
+IDS_OK_TO_LOAD_DLL,
+ "Não há problema em carregar" // followed by a file name
+IDS_OK_TO_LOAD_DLL2,
+ " " // after the file name
+ 
+IDS_WANT_TO_UPDATE_TT_INI_TOONTALK32_1, // new on 170301
+ "ToonTalk foi instalado para executar" // followed by the name of an EXE file
+IDS_WANT_TO_UPDATE_TT_INI_TOONTALK32_2,
+ "Queres actualizá-lo para o executar em vez da versão que estás a executar?"
+
+// following translated by Leonel
+
+IDS_TOUCH_SENSTIVE_MOUSE_LABEL, // new on 150801
+ "Rato\rsensível\rao toque"
+
+//IDS_NEED_DIFFERENT_NUMBERS_UNDERNEATH, // new on 071201 (really belongs in puzzle.rc)
+//"Desculpa, mas têm de estar no ninho os números 2, 3, 4, 5, 6 e por aí fora. "
+
+// new on 100202
+
+IDS_INTEGER_PART,
+"Parte inteira"
+IDS_FRACTION_PART,
+"Parte fraccionária"
+IDS_NUMERATOR,
+"Numerador"
+IDS_DENOMINATOR,
+"Denominador"
+IDS_SINE,
+"Seno"
+IDS_COSINE,
+"Co-seno"
+IDS_TANGENT,
+"Tangente"
+IDS_ARCSINE,
+"Arco seno"
+IDS_ARCCOSINE,
+"Arco co-seno"
+IDS_ARCTANGENT,
+"Arco tangente"
+IDS_NATURAL_LOG,
+"Logaritmo natural"
+IDS_LOG10,
+"Logaritmo de base 10"
+
+IDS_SOMETHING_WHICH_WILL,
+ "algo que irá"
+IDS_SOMETHING_WHICH_WILL2, // part that comes after "something which will" "multiply by" ...
+ " "
+
+IDS_OPERATION_ADD,
+  "adicionar"
+IDS_OPERATION_SUBTRACT,
+  "subtrair"
+IDS_OPERATION_COMPUTE_THE_POWER,
+  "elevar aquilo em que se larga à potência de"
+IDS_OPERATION_INTEGER_PART,
+  "deixar a parte inteira"
+IDS_OPERATION_FRACTION_PART,
+  "deixar a parte fraccionária"
+IDS_OPERATION_NUMERATOR,
+  "deixar o numerador"
+IDS_OPERATION_DENOMINATOR,
+  "deixar o denominador"
+IDS_OPERATION_BITWISE_COMPLEMENT,
+  "complementar os bits"
+IDS_OPERATION_SINE,
+  "extrair o seno"
+IDS_OPERATION_COSINE,
+  "extrair o co-seno"
+IDS_OPERATION_TANGENT,
+  "extrair a tangente"
+IDS_OPERATION_ARCSINE,
+  "extrair o arco seno"
+IDS_OPERATION_ARCCOSINE,
+  "extrair o arco co-seno"
+IDS_OPERATION_ARCTANGENT,
+  "extrair o arco tangente"
+IDS_OPERATION_NATURAL_LOG,
+  "calcular o logaritmo natural"
+IDS_OPERATION_LOG10,
+  "calcular o logaritmo de base 10"
+
+IDS_BITWISE_XOR,
+"fazer o OU EXCLUSIVO dos bits"
+IDS_BITWISE_AND,
+"fazer o E dos bits"
+IDS_BITWISE_OR,
+"fazer o OU dos bits"
+
+IDS_THEN, // restored on 110202 - only used for phrases like "multiply by 10 then add 3 then divide by 7 ..."
+ "depois"
+
+ // following have been renamed and had "something which will" removed
+
+IDS_OPERATION_MULTIPLY_BY,
+ // as in "You are holding something which will multiply by 3."
+ // You can create one of these by typing X while holding a 3.
+ // similarly for the entries up to IDS_SOMETHING_WHICH_WILL_XOR
+  "multiplicar por"
+IDS_OPERATION_DIVIDE_BY,
+  "dividir por"
+IDS_OPERATION_CHANGE_NUMBER,
+  "alterar o número sobre o qual se larga"
+IDS_OPERATION_BITWISE_OR,
+  "fazer OU sobre os bits do número de baixo"
+IDS_OPERATION_BITWISE_AND,
+  "fazer E sobre os bits do número de baixo"
+IDS_OPERATION_BITWISE_XOR,
+  "fazer OU EXCLUSIVO sobre os bits do número de baixo"
+
+IDS_FRACTION_NUMBER_FORMAT,"Fracção"
+IDS_INTEGER_AND_PROPER_FRACTION_NUMBER_FORMAT,"Inteiro e\rfracção própria"
+IDS_EXACT_DECIMAL_OR_FRACTION_NUMBER_FORMAT,"Dízima finita\rou fracção"
+IDS_EXACT_DECIMAL_OR_INTEGER_AND_PROPER_FRACTION_NUMBER_FORMAT,"Dízima finita\rou inteiro e\rfracção própria"
+
+IDS_NUMBERS_AND_FUNCTIONS,
+"Números\re funções"
+
+IDS_ABORT_UNKNOWN_ARITHMETIC_EXCEPTION,
+"não foi possível calcular a expressão aritmética"
+
+
+IDS_INTS_BITWISE_HELP5, // updated on 130302
+//  "~ for complement. | for OR. & for AND. And ^ for exclusive or. "
+//	 "~ para o complemento. | para OU. & para E. E ^ para OU exclusivo. "
+  "~ para o complemento. | para OU. & para E."
+
+IDS_TROUBLE_SHOOT_BIG_NUMBERS_SLOW, // new on 270202
+ "O cálculo com números grandes pode ser muito lento, a ponto do ToonTalk congelar durante alguns segundos - ou mesmo minutos. Queres ler mais coisas sobre este assunto?"
+
+IDS_TWO_NUMBERS, // new on 030202
+"dois números"
+IDS_OPERATION_ADD2, // this comes after "add" "two numbers" if needed to be grammatical
+" "
+IDS_OPERATION_SUBTRACT2, // this comes after "subtract" "two numbers" if needed to be grammatical
+" "
+IDS_OPERATION_MULTIPLY,
+"multiplicar"
+IDS_OPERATION_MULTIPLY2,
+" "
+IDS_OPERATION_DIVIDE,
+"dividir"
+IDS_OPERATION_DIVIDE2,
+" "
+IDS_OPERATION_CHANGE_NUMBER_NO_VALUE,
+"fazer com que um número seja igual a outro"
+IDS_OPERATION_BITWISE_OR_NO_VALUE,
+"fazer OU sobre os bits de"
+IDS_OPERATION_BITWISE_OR_NO_VALUE2,
+" "
+IDS_OPERATION_BITWISE_AND_NO_VALUE,
+"fazer E sobre os bits de"
+IDS_OPERATION_BITWISE_AND_NO_VALUE2,
+" "
+IDS_OPERATION_BITWISE_XOR_NO_VALUE,
+"fazer OU EXCLUSIVO sobre os bits de"
+IDS_OPERATION_BITWISE_XOR_NO_VALUE2,
+" "
+IDS_OPERATION_COMPUTE_THE_POWER_NO_VALUE,
+"elevar um número à potência indicada por outro"
+
+IDS_CANT_FLIP_REMOTES,
+// flip here is used as in flipping a picture over to see its back
+"não podes virar controlos remotos deste tipo"
+
+IDS_SAVED_ON, // e.g. foo.tt saved on \My Documents\ToonTalk\Jane - new on 210303
+"guardado em"
+
+IDS_MARTAIN_WITH_SUBTITLES,
+"legendas" // new on 150903
+
+IDS_TROUBLE_SHOOT_TIME_TRAVEL_SLOW, // new on 131203
+"Acho que as viagens no tempo estão a encravar o ToonTalk de vez em quando. Queres saber como podes evitar isto?"
+
+// the following are used to construct "<file name> saved" (Or if the grammar of a language prefers it you can make it say "saved <file name>")
+IDS_SAVED, // new on 120204 - thanks Leonel
+"Foi guardado o ficheiro"
+IDS_SAVED2,
+" "
+
+IDC_DLL_WARNING,
+//"A DLL from an unknown or untrusted source might do damage and so might an
+//untrustworthy robot using a trusted DLL."
+"Uma DLL de origem desconhecida (ou de pouca confiança) pode causar danos. Também podem surgir danos quando se usa um robô proveniente de uma origem de pouca confiança, ainda que este recorra a uma DLL de confiança."
+
+IDC_DMO_CONTAINS_EXE_WARNING,
+//"This demo needs a different version of ToonTalk to run correctly. This
+//version isn't installed but is contained in the demo file. You should ONLY
+//proceed if you trust the person who supplied this file. Do you want to
+//continue?"
+"Este ficheiro de demonstração precisa de usar uma versão do ToonTalk diferente da que está instalada. Esta versão especial está incluida no ficheiro de demonstração. Só se deve continuar quando se confia PLENAMENTE na pessoa que forneceu este ficheiro. Deseja continuar?"
+
+IDS_MINUS,
+ "menos" // new on 091004 for speaking about the - key -- Leonel was the source of this
+
+IDS_WHILE_HOLDING_DOWN_THE_SHIFT_BUTTON, // new on 091004
+"enquanto carregas na tecla de Shift,"
+
+IDS_UNABLE_TO_WRITE_TO_FOLDER, 
+"O ToonTalk não consegue escrever na pasta" 
+
+IDS_SOME_MEDIA_MAY_BE_LOST,
+"Podem perder-se alguns sons ou imagens fornecidos pelo utilizador."
+
+IDS_CAN_SET_MEDIADIR,
+"Podes indicar uma pasta diferente, na entrada ""MediaDir"", que está na secção ""Directories"" do ficheiro toontalk.ini."
+
+IDS_TOONTALK_WILL_CONTINUE_BUT_UNABLE_TO_SAVE,
+"O ToonTalk vai tentar continuar, mas o mais certo é que não se consiga guardar o teu trabalho."
+
+IDS_UNABLE_TO_READ_FILE,
+"O ToonTalk não consegue ler o ficheiro"
+
+IDS_WILL_CONTINUE_BUT_MAYBE_MEDIA_WILL_BE_MISSING,
+"O ToonTalk vai tentar continuar, mas podem faltar algumas coisas (imagens ou sons)."
+
+IDS_UNABLE_TO_WRITE_FILE,
+"O ToonTalk não consegue escrever no ficheiro"
+
+IDS_EXPLAIN_WHY_UNABLE_TO_WRITE_FILE,
+"Talvez a pasta esteja cheia. Se estiver, tens de apagar alguns ficheiros. Mas também pode ser que tenhas de pedir autorização a um administrador para escrever nessa pasta ou nesse ficheiro."
+
+IDS_WINDOWS_ERROR_CODE,
+"O código de erro do Windows é"
+
+IDS_DESCRIBED_BY_WINDOWS_AS_FOLLOWS,
+"e é esta a descrição que o Windows dá:"
+
+IDS_OVER,
+"sobre" // as in 1/12 is pronounced "one over twelve"
+
+IDS_DIGITS, // new on 251104
+"algarismos" // only used when plural and proceeded by a number
+
+IDS_NEGATIVE_INTEGER_INDEFINITE,
+"um número inteiro negativo"
+
+IDS_POSITIVE_INTEGER_INDEFINITE,
+"um número inteiro"
+
+IDS_INTEGER_DEFINITE,
+"o número inteiro"
+
+IDS_FLOATING_POINT_DEFINITE,
+"o número aproximado"
+
+IDS_NEGATIVE_RATIONAL_INDEFINITE,
+"um número racional negativo"
+
+IDS_POSITIVE_RATIONAL_INDEFINITE,
+"um número racional"
+
+IDS_RATIONAL_DEFINITE,
+"o número racional"
+
+IDS_UNABLE_TO_DISPLAY1,
+"Não consigo mostrar"
+
+// used as: IDS_UNABLE_TO_DISPLAY1 <number> IDS_UNABLE_TO_DISPLAY2
+
+IDS_UNABLE_TO_DISPLAY2,
+"algarismos."
+
+IDS_UNABLE_TO_DISPLAY3,
+"O número deve estar bem. O ToonTalk pode mostrá-lo numa base que seja potência de 2."
+
+IDS_UNABLE_TO_DISPLAY_THIS_NUMBER,
+"Não consigo mostrar este número, porque tem demasiados algarismos."
+
+IDS_BOOK_CALLED_HELP,
+// "When you press the F4 button, the last notebook you used will fly to you. "
+"Se carregares na tecla F4 button, o teu caderno voa para junto de ti. " // updated 161204
+
+// following updated 181204
+
+IDS_FILE_TO_PICTURE_HELP,
+// "a place to drop the file name of a picture to turn it into a picture"
+"um lugar onde podes largar o nome de um ficheiro de imagem ou um URL, para obter um objecto do ToonTalk ou uma imagem"
+
+IDS_FILE_TO_PICTURE_LONG_LABEL,
+// "File to\rPicture"
+"Ficheiro\rcom\robjecto"
+
+IDS_FILE_TO_PICTURE_SHORT_LABEL,
+// "Picture in"
+"Objecto em"
+
+IDS_CANT_FLIP_USED_FILE_TO_PICTURE_REMOTE,
+// "can't flip this over. You can vacuum out the picture and flip it over"
+"não podes virar isto. Mas podes aspirar o objecto e virá-lo"
+
+IDS_CANT_FLIP_UNUSED_FILE_TO_PICTURE_REMOTE,
+// "can't flip this over. All you can do is drop a file name of a picture on it. "
+"não podes virar isto. Mas podes largar-lhe em cima o nome de um ficheiro. "
+
+IDS_FILE_TO_PICTURE_FULL_HELP,
+// "This is for showing your own pictures inside of ToonTalk. "
+"Isto serve para carregar ficheiros no ToonTalk. "
+
+IDS_FILE_TO_PICTURE_FULL_HELP2,
+// "Just drop the file name of picture (in BMP format) and then vacuum up the result. "
+"Basta largar o nome de um ficheiro ou um URL. Depois aspira e cospe o resultado. "
+
+IDS_PRESS_ESC_TO_INTERRUPT, // around 200105
+"Carrega na tecla Esc para interromper."
+
+//IDS_OBJECTS_LOADED, // new on 270105
+//
+//"objectos carregados."
+//
+//IDS_BYTES_READ_FROM_URL, // new on 290105
+//
+//"bytes lidos do URL."
+
+// the following are used IDS_OBJECTS_LOADED_PREFIX <some number> IDS_OBJECTS_LOADED
+
+// In English the prefix is empty -- in some languages the non-prefix 
+// part will be empty -- some will use both
+
+IDS_OBJECTS_LOADED, // new on 270105
+"objectos."
+
+IDS_BYTES_READ_FROM_URL, // new on 290105
+"bytes a partir do URL."
+
+IDS_OBJECTS_LOADED_PREFIX, // new on 030205
+"Já foram carregados"
+
+IDS_BYTES_READ_FROM_URL_PREFIX, // new on 030205
+"Já foram lidos"
+
+
+
+
+

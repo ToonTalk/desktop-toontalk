@@ -1,0 +1,251 @@
+Introductory tour of ToonTalk.
+
+1. Hi.  Welcome to Toontalk.  I'm Sally and I'll be glad to show you around.
+If you ever want to leave the tour just press the "escape" button.  
+
+2. If I hold down the right mouse button, we fly up.
+
+3. And if I hold the left button, we fly down.
+
+4. Tooly, the toolbox, follows us everywhere.
+
+5. Let's go inside.
+
+6. Hi Marty.  While its not too hard to read what you are saying,
+I'm looking forward to the day you start talking.
+
+7. Thanks Marty, I'll try that and pick up the number one.
+
+8. And now I'll drop it.
+
+9. Another good suggestion Marty.  Since I already know lots about ToonTalk,
+I'm going push F1 Marty and send you away.
+
+11. Bye.
+
+12. Ok, I'll drop a number on a number.
+
+13. I can use the keyboard to change numbers.
+
+14. The hammer of Bamer the mouse can do more than just add.
+Multiply, for example.
+
+15. Let me show you what this magic wand can do.
+To use anything I've picked up I just press a mouse button
+while I'm holding one of the shift buttons.
+I'll try it now while holding the wand.
+
+16. The wand makes copies of things.
+
+17. By clicking a mouse button, I'll drop the copy.
+
+18.  Now I'll show you how to make a really big number.
+I'll pick up Pumpy, the bike pump, and use him by holding down
+a shift button and a mouse button.
+
+19. Boy, I sure made a really big number.  I can make Pumpy shrink
+it by using him twice since he switches back and forth between putting in air
+and letting it out.
+
+20. I guess that's too small.
+
+21. Boxes are good for putting things in.
+
+22. I can put our number in this box.
+
+23. And I can take it out again.
+
+24. If I forgot what this is I can press F1 to call for Marty.  
+He'll see what I'm holding or pointing to and figures I want to hear 
+everything he knows about it.   Here watch.
+
+//25. By the way, if Marty talks too fast for you to read there is a 
+//complicated way to fix it.  To slow him down add -r 50 to the command line.
+//It can also be used to speed him up.
+//Some day there will be an options screen around here for this kind of stuff.
+
+25. By the way, if Marty talks too slow or too fast for you to read there is
+a way to change things.  You'll find a remote control for his reading
+speed on page 18 of the options notebook that you'll find on page 10 of your
+main notebook.  
+
+26. Sometimes Marty talks too slow so I push F7 to hurry him up.  
+Its also good for making him skip over some stuff.
+
+27. That's enough Marty, thanks.  Bye.
+
+28. Ok, lets see what its like to use Dusty.
+
+29. The neatest thing about ToonTalk is all the stuff you can train robots
+to do.
+
+30. Let's teach this one to count.
+
+31. First we have get a box for him to work on.
+Since he'll start counting from 1 we'll put a 1 in the box.
+
+32. And give it to him.
+
+33. As Marty is saying, we're now in the robot's thought bubble.  
+As I move the mouse, our robot moves.
+
+34. So, to count all he has to do is add 1 to the number 
+he's already gotten up to.
+
+35. That's all.  So I'll press the escape button now.
+
+36. As Marty was saying, to see if our robot learned what we taught him
+let's give him a box like the one he's thinking about.
+
+37. Not too smart, robot old boy.  You can only count up to two.
+
+38. Our problem is that this robot is just too fussy.  
+
+39. See.
+
+40. If only we can make him think about a box with any number in it.
+
+41. Let's try using Dusty to suck up the one in his thought bubble.
+This is a bit tricky.  I have to hold down the control button since
+I'm doing something special with him.  On most keyboards its labeled Ctrl. 
+
+42. Now when I press the mouse button, the number pad becomes blank.
+
+43. Our robot is now just thinking about a box with any number in it.
+Let's try him again.
+
+44. Hmm, he's counting ok but he sure is slow.
+
+45. Four.
+
+46. Five.
+
+47. Six.  Turns out that robots are real fast when no one is looking.
+I'm going to press the escape button so we stand up.
+
+48. By the way, when ToonTalk is finished you will see stuff on the floor.
+And you'll be able to move around to different places on the floor.
+Not yet though.
+
+49. Let's push a mouse button to sit.
+
+50. Wow -- he's gotten up 15,124.
+
+51. Let's stop him.
+
+52. Good.  Got him.
+
+53. I usually save robots I train and stuff I build in my notebook.
+
+54. I'm pointing to the whole notebook (see it quiver?).  When I hit the
+space bar, it flips to the next page.
+
+55. Good -- an empty page.
+
+56. Now he's saved forever -- unless I use Dusty to suck him out.
+
+57. I'll pick up a text pad and type "adds 1" and drop it here to
+remember what he does.
+
+58. Let's build a new house for our robot to work in.  These trucks have
+a construction crew in them.
+
+59. Let's drop our robot in the truck.
+
+60. The driver is waiting for a box to give the robot when the house 
+is built.
+
+61. Let's start him off counting from zero.
+
+62. Good.  Let's find the house they built.
+
+63. Why not take the helicopter?
+
+64. The block had only one house on it when we landed.  Let's go over to
+the new house and see what's going on inside.
+
+65. Our robot has been counting away since this house was built.
+
+66. Enough of this.  Let's stop all this. 
+
+67. And set off this bomb.
+
+68. Whooo
+
+69. All that's left to try out are the nests and scales.
+
+70. Let's take out a nest.
+
+71. Suppose I had no idea what birds do.  I can just try things or I can
+ask Marty.  
+
+72. I'll press F1 and ask Marty.
+
+73. Uh huh -- rectangular -- let's try number pads -- they're rectangular.
+
+74. And another.
+
+75. Let's clear off her nest.
+
+76. I wonder what our robot will do if we give him a box with a nest in it.
+
+77. Pretty smart.  He's hasn't given up on this box.  He's hoping a bird
+will come in and cover the nest with a number.
+
+78. Let's take the bird with us to another house.
+
+79. Now we'll spit her out.
+
+80. Let's give her a zero.
+
+81. Good -- and now we'll go back.
+
+82. Good.  Ever since she delivered the zero, our robot has been counting
+away.
+
+83. See -- the nest is still here.
+
+84. And now for scales.
+
+85. See, if we put a scale in a hole between two numbers it tilts towards
+the bigger or heavier number.  Scales work with text pads too.
+
+86. As the last part of our tour, let's see what's in the notebook.
+
+87. Here on page two is a notebook full of pictures and movies.
+
+88. You can take out pictures and combine them.
+
+89. If you press shift and click a mouse button while holding a picture it
+flips over.  And out comes a different notebook.  [take out dizzy guy]
+
+90. Let's take out two remote controls from the notebook. [x and width]
+
+91. And flip the picture back over.
+
+92. See how the number changes as I move the picture?  It's showing us
+the distance from the left edge.
+
+93. Watch what happens if we change the number. [drops 100 on it]
+
+94. It moves to the new position.
+
+95. The neatest thing about pictures is that robots can work on the back
+making them do things like grow or bounce or explode or whatever.
+
+96. Let's put our counting robot on the back and give it the box containing
+the remote control for the width.
+
+97. And flip it back over.
+
+98. He's getting pretty fat.
+
+99. Well that's all I was gonna show you.  Look for other tours or just
+start playing with ToonTalk yourself.  You might want to see what else
+is in these notebooks.  As with any of these tours press F8 at any time
+and you're in charge.  If you do nothing this will end in about 30 seconds. 
+Thanks for coming and see ya.
+
+
+
+

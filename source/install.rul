@@ -1,0 +1,149 @@
+// helping function shared by patch.rul and toontalk.rul
+
+function DefaultIniEntry(szSectionName, szKeyName, szValue)
+   begin
+     if (GetProfString(szInstallationAllUsersIniFile, szSectionName, szKeyName, szTemp) >= 0) then
+        // new on 020304 that all users overrides the current settings
+//MessageBox("DefaultIniEntry(" + szSectionName + ", " + szKeyName + ", " + szValue + ") " + szTemp, INFORMATION);
+        WriteProfString(szToonTalkIni, szSectionName, szKeyName, szTemp);
+        return -1;
+     endif;
+     if (GetProfString(szToonTalkIni, szSectionName, szKeyName, szIgnore) < 0) then
+         // there is no entry -- as of 020304 see if szInstallationNewUsersIniFile overrides the default from this script
+        if (GetProfString(szInstallationNewUsersIniFile, szSectionName, szKeyName, szTemp) >= 0) then
+//MessageBox("DefaultIniEntry(" + szSectionName + ", " + szKeyName + ", " + szValue + ") " + szTemp + " (2)", INFORMATION);
+           WriteProfString(szToonTalkIni, szSectionName, szKeyName, szTemp);
+       return -1;
+    endif;
+        WriteProfString(szToonTalkIni, szSectionName, szKeyName, szValue);
+//MessageBox("DefaultIniEntry(" + szSectionName + ", " + szKeyName + ", " + szValue + ") (3)", INFORMATION);
+        return -1;
+     endif;
+     return 0;
+ end;
+
+function UpdateToonTalkIni(szSectionName, szKeyName, szValue)
+   begin
+     if (GetProfString(szInstallationAllUsersIniFile, szSectionName, szKeyName, szTemp) >= 0) then
+        // new on 020304 that all users overrides the current settings
+//MessageBox("UpdateToonTalkIni(" + szSectionName + ", " + szKeyName + ", " + szValue + ") " + szTemp, INFORMATION);
+        WriteProfString(szToonTalkIni, szSectionName, szKeyName, szTemp);
+        return -1;
+     endif;
+     if (GetProfString(szInstallationNewUsersIniFile, szSectionName, szKeyName, szTemp) >= 0) then
+        // it would be more sensible if this info was in allusers.ini instead
+//MessageBox("UpdateToonTalkIni(" + szSectionName + ", " + szKeyName + ", " + szValue + ") " + szTemp + " (2)", INFORMATION);
+        WriteProfString(szToonTalkIni, szSectionName, szKeyName, szTemp);
+        return -1;
+     endif;
+//MessageBox("UpdateToonTalkIni(" + szSectionName + ", " + szKeyName + ", " + szValue + ") (3)", INFORMATION);
+     WriteProfString(szToonTalkIni, szSectionName, szKeyName, szValue);
+     return 0;
+ end;
+
+
+function CreateAndRegister(szKey, szName, szValue)
+   INT nvType;
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+     endif;
+     // set's value even if old
+     RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     return 0;
+end;
+
+function CreateAndRegisterIfNew(szKey, szName, szValue)
+   INT nvType;
+   STRING svOldValue;
+   NUMBER nvSize;
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+        // set's value only if new
+        RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     elseif (szKey[0] == '.') then
+       RegDBGetKeyValueEx (szKey, szName, nvType, svOldValue, nvSize);
+       if (StrCompare(szValue,svOldValue) = 0) then
+          return 0;
+       endif;
+//       if (StrCompare("ToonTalk",svOldValue) = 0) then
+       if (svOldValue % "ToonTalk" || svOldValue % "StartTT" || StrCompare("",svOldValue) = 0) then
+       // re-written on 060301 so if ToonTalk is a substring then don't worry about it or if old value is the empty string
+          // don't need to ask if it is an old ToonTalk binding
+          CreateAndRegister(szKey, szName, szValue);
+          return 0;
+       endif;
+       if (AskYesNo(@TOONTALK_DOUBLE_CLICK1 + " " + szKey +
+                    " " + @TOONTALK_DOUBLE_CLICK2 + " (" + svOldValue + ") " + @TOONTALK_DOUBLE_CLICK3,
+                    YES) = YES) then
+           CreateAndRegister(szKey, szName, szValue);
+       endif;
+     endif;
+   return 0;
+end;
+
+function AllUsersIniEntryInt(szSectionName, szKeyName)
+   INT nValue;
+ begin
+   GetProfInt(szInstallationAllUsersIniFile, szSectionName, szKeyName, nValue);
+   return nValue;
+ end;
+
+function AllUsersIniEntryString(szSectionName, szKeyName, szDefaultValue, szValue)
+ begin
+//MessageBox("Looking for entry: " + szInstallationAllUsersIniFile + " " + szSectionName + " " + szKeyName,INFORMATION);
+   if (GetProfString(szInstallationAllUsersIniFile, szSectionName, szKeyName, szValue) != 0) then
+//MessageBox("Failed to find entry",INFORMATION);
+      szValue = szDefaultValue;
+   endif;
+   return 0;
+ end;
+
+function unzip(ZipArchive, ZipArchiveDirectory, DestinationDirectory, TempFolderName)
+   INT Value;
+//STRING szValue; // just for debugging
+begin
+//   if (FindFile(ZipArchiveDirectory, ZipArchive, szTemp) < 0) then // didn't work
+//      return 0;
+//   endif;
+//   Enable(BACKGROUND);
+//   Enable(BACKGROUNDCAPTION);
+   AllUsersIniEntryString("Install", "UnZipMessage", "Extracting files. Please wait...", szTemp); // indicate that files are being extracted
+   SetTitle(szTemp, 24, WHITE);
+   Enable(HOURGLASS);
+   szTemp = ZipArchiveDirectory ^ ZipArchive;
+   if (UseDLL( SUPPORTDIR ^ "UnZipDLL.dll" ) < 0) then
+      MessageBox("Could not load the unzip DLL: " + SUPPORTDIR ^ "UnZipDLL.dll" + ". Please report this to support@toontalk.com",SEVERE);
+      if (FindFile(SUPPORTDIR, "UnZipDLL.dll", szTemp) == 0) then
+         MessageBox("And yet the file exists.",INFORMATION);
+      endif;
+      abort;
+   endif;
+//   Value = unzip_all(szTemp, DestinationDirectory ^ TempFolderName);
+   szTemp2 = SUPPORTDIR ^ TempFolderName;
+   Value = unzip_all(szTemp, szTemp2); // updated on 220404 to install to temp and xcopy (uninstall won't work otherwise)
+//NumToStr(szValue,Value);
+//MessageBox("Just unzipped " + szTemp + " to " + szTemp2 + " with return code = " + szValue, INFORMATION);
+   UnUseDLL( SUPPORTDIR ^ "unzipdll.dll" );
+   VarSave(SRCTARGETDIR);
+   Disable(HOURGLASS);
+   AllUsersIniEntryString("Install", "MainTitle", @TITLE_MAIN, szTemp); // restore
+   SetTitle(szTemp, 24, WHITE);
+   // following all new on 220404
+   SRCDIR = SUPPORTDIR ^ TempFolderName;
+//MessageBox(SRCDIR,INFORMATION);
+   TARGETDIR = DestinationDirectory;
+   AllUsersIniEntryString("Install", "InstallTTFilesText", "Copying ToonTalk files", szTemp);
+   SetStatusWindow( 0, szTemp);
+   Enable( STATUS );
+   StatusUpdate( ON, 100 ); // new on 080304
+   XCopyFile("*.*", "*.*", COMP_UPDATE_DATE | INCLUDE_SUBDIR);
+   VarRestore(SRCTARGETDIR);
+   Disable( STATUS );
+  return Value;
+end;
+
+

@@ -1,0 +1,2904 @@
+Comparing files phrase.ini and phrase.ini.old
+****** phrase.ini
+91=Õ
+92=dotdotdot
+93=entregue
+94=usará
+95=página
+****** phrase.ini.old
+91=Õ
+92=dusty
+93=pumpy
+94=marty
+95=página
+******
+
+****** phrase.ini
+113=aperte
+114=bambam
+115=você
+****** phrase.ini.old
+113=aperte
+114=ponha
+115=você
+******
+
+****** phrase.ini
+123=pegar
+124=use
+125=no
+****** phrase.ini.old
+123=pegar
+124=largar
+125=no
+******
+
+****** phrase.ini
+136=bom
+137=agenda
+138=certo
+****** phrase.ini.old
+136=bom
+137=ok
+138=certo
+******
+
+****** phrase.ini
+143=olá
+144=imagens
+145=rato
+****** phrase.ini.old
+143=olá
+144=bammer
+145=rato
+******
+
+****** phrase.ini
+151=apertando
+152=bloco
+153=digite
+****** phrase.ini.old
+151=apertando
+152=aí
+153=digite
+******
+
+****** phrase.ini
+158=se
+159=atrás
+160=la
+161=trabalho
+162=sobre
+****** phrase.ini.old
+158=se
+159=caderno
+160=la
+161=largando
+162=sobre
+******
+
+****** phrase.ini
+167=branco
+168=mova
+169=sensores
+****** phrase.ini.old
+167=branco
+168=figuras
+169=sensores
+******
+
+****** phrase.ini
+194=caminhão
+195=treco
+196=botão
+197=entregará
+198=quadro
+****** phrase.ini.old
+194=caminhão
+195=balão
+196=botão
+197=placa
+198=quadro
+******
+
+****** phrase.ini
+206=trânsito
+207=ai
+208=plop
+209=virando
+210=baixo
+211=efeito
+212=outra
+213=buzina
+214=soltá
+****** phrase.ini.old
+206=trânsito
+207=oval
+208=arredondado
+209=linha
+210=baixo
+211=pontilhada
+212=outra
+213=figura
+214=soltá
+******
+
+****** phrase.ini
+216=conteúdo
+217=boing
+218=barulhos
+219=isto
+****** phrase.ini.old
+216=conteúdo
+217=enquanto
+218=aperta
+219=isto
+******
+
+****** phrase.ini
+224=direita
+225=estranhos
+226=mas
+****** phrase.ini.old
+224=direita
+225=cole
+226=mas
+******
+
+****** phrase.ini
+227=construídas
+228=externo
+229=glass
+230=mágica
+****** phrase.ini.old
+227=construídas
+228=também
+229=chamado
+230=mágica
+******
+
+****** phrase.ini
+234=aspirando
+235=high
+236=pop
+****** phrase.ini.old
+234=aspirando
+235=ái
+236=pop
+******
+
+****** phrase.ini
+239=sons
+240=low
+241=calculando
+****** phrase.ini.old
+239=sons
+240=bóing
+241=calculando
+******
+
+****** phrase.ini
+246=cuspe
+247=teleport
+248=twing
+****** phrase.ini.old
+246=cuspe
+247=teleporte
+248=twing
+******
+
+****** phrase.ini
+253=distância
+254=mostrada
+255=largura
+****** phrase.ini.old
+253=distância
+254=velocidad
+255=largura
+******
+
+****** phrase.ini
+257=detector
+258=resposta
+259=aparência
+****** phrase.ini.old
+257=detector
+258=reposta
+259=aparência
+******
+
+****** phrase.ini
+261=careca
+262=colocado
+263=adicionando
+264=colisão
+265=utilizar
+266=mantendo
+267=imagem
+268=colide
+****** phrase.ini.old
+261=careca
+262=ouvi
+263=adicionando
+264=removendo
+265=parede
+266=telhado
+267=pressionado
+268=colide
+******
+
+****** phrase.ini
+271=selecionado
+272=girá
+273=visível
+274=lembro
+275=devolvê
+276=avenida
+****** phrase.ini.old
+271=selecionado
+272=largado
+273=visível
+274=partes
+275=recipientes
+276=avenida
+******
+
+****** phrase.ini
+280=aleatório
+281=agendas
+282=pego
+283=sala
+****** phrase.ini.old
+280=aleatório
+281=mci
+282=fala
+283=sala
+******
+
+****** phrase.ini
+284=velocidade
+285=cima
+aixo
+286=atenção
+****** phrase.ini.old
+284=velocidade
+285=eixo
+286=atenção
+******
+
+****** phrase.ini
+289=toontalk
+290=habilitado
+291=ah
+****** phrase.ini.old
+289=toontalk
+290=caracteres
+291=ah
+******
+
+****** phrase.ini
+316=existem
+317=encontrará
+318=coloque
+319=apenas
+320=ela
+****** phrase.ini.old
+316=existem
+317=me
+318=coloque
+319=deculpe
+320=ela
+******
+
+****** phrase.ini
+325=bytes
+326=grandes
+327=músicas
+328=necessários
+329=resultado
+****** phrase.ini.old
+325=bytes
+326=virá
+327=músicas
+328=fim
+329=resultado
+******
+
+****** phrase.ini
+337=impressionante
+338=duas vezes
+339=anos
+****** phrase.ini.old
+337=impressionante
+338=rapaz
+339=anos
+******
+
+****** phrase.ini
+347=menores
+348=agenda principal
+349=irei embora
+350=copiar
+****** phrase.ini.old
+347=menores
+348=sugar
+349=retorná
+350=copiar
+******
+
+****** phrase.ini
+384=caminhões
+385=minha fala
+386=caixas
+387=eu sou
+388=bombas
+****** phrase.ini.old
+384=caminhões
+385=cadernos
+386=caixas
+387=tooly
+388=bombas
+******
+
+****** phrase.ini
+391=botões
+392=se remover
+393=último dígito
+394=coloca sobre
+395=número dela
+396=basta colocá
+397=los atrás
+398=cara
+****** phrase.ini.old
+391=botões
+392=dele
+393=recomenda
+394=enviar
+395=balões
+396=traduzir
+397=devolver
+398=cara
+******
+
+****** phrase.ini
+399=mensagem
+400=asper apareça
+401=depois ponha
+402=be whop
+403=hora
+404=imagem nº
+405=esquerda pressionado
+406=central pressionado
+407=duração
+408=direita pressionado
+409=shift pressionado
+410=control pressionado
+411=etiqueta da
+412=do
+****** phrase.ini.old
+399=mensagem
+400=dias
+401=horas
+402=dia
+403=hora
+404=minutos
+405=joystick
+406=retorno
+407=duração
+408=direção
+409=inapropriado
+410=leitura
+411=leia
+412=do
+******
+
+****** phrase.ini
+418=terminada
+419=me desculpe
+420=na
+****** phrase.ini.old
+418=terminada
+419=pêgo
+420=na
+******
+
+****** phrase.ini
+430=minha
+431=se pressioná
+432=tamanho
+****** phrase.ini.old
+430=minha
+431=ligado
+432=tamanho
+******
+
+****** phrase.ini
+444=entre
+445=basta pressionar
+446=ela fará
+447=outra terá
+448=imagem desejada
+449=por
+****** phrase.ini.old
+444=entre
+445=mídia
+446=controle
+447=interface
+448=decoração
+449=por
+******
+
+****** phrase.ini
+454=décimo
+455=basta colocar
+456=tem
+457=depois aspirar
+458=para aumentar
+459=para elevar
+460=para alargar
+461=para diminuir
+462=para encurtar
+463=algo
+****** phrase.ini.old
+454=décimo
+455=windows
+456=tem
+457=etiqueta
+458=trilhão
+459=bilhão
+460=milhão
+461=mil
+462=cem
+463=algo
+******
+
+****** phrase.ini
+565=treinado
+566=para estreitar
+567=soltando
+****** phrase.ini.old
+565=treinado
+566=mim
+567=soltando
+******
+
+****** phrase.ini
+571=cheio
+572=para devolver
+573=virada
+****** phrase.ini.old
+571=cheio
+572=nela
+573=virada
+******
+
+****** phrase.ini
+574=comum
+575=para reproduzir
+576=há
+****** phrase.ini.old
+574=comum
+575=tijolinho
+576=há
+******
+
+****** phrase.ini
+583=quebrado
+584=vou repetir
+585=qualquer imagem
+586=imagem vazia
+587=pertinho
+****** phrase.ini.old
+583=quebrado
+584=mostrar
+585=movido
+586=nariz
+587=pertinho
+******
+
+****** phrase.ini
+593=receber
+594=imagens vazias
+595=esteja
+****** phrase.ini.old
+593=receber
+594=deles
+595=esteja
+******
+
+****** phrase.ini
+599=segura
+600=da fala
+601=rapidez
+****** phrase.ini.old
+599=segura
+600=largo
+601=rapidez
+******
+
+****** phrase.ini
+607=treinar
+608=os minutos
+609=der
+****** phrase.ini.old
+607=treinar
+608=duas
+609=der
+******
+
+****** phrase.ini
+611=mudam
+612=por fim
+613=despertador
+****** phrase.ini.old
+611=mudam
+612=fiquem
+613=despertador
+******
+
+****** phrase.ini
+614=modo
+615=soprana pode
+616=um deles
+617=para ouvi
+618=um fundo
+****** phrase.ini.old
+614=modo
+615=dela
+616=faz
+617=uma flôr
+618=um fundo
+******
+
+****** phrase.ini
+620=no entanto
+621=nela permanecerá
+622=dessa forma
+****** phrase.ini.old
+620=no entanto
+621=seu ninho
+622=dessa forma
+******
+
+****** phrase.ini
+627=ovo chocar
+628=qualquer botão
+629=que for
+****** phrase.ini.old
+627=ovo chocar
+628=caderno principal
+629=que for
+******
+
+****** phrase.ini
+631=até logo
+632=ainda maiores
+633=tecla pause
+****** phrase.ini.old
+631=até logo
+632=eis tudo
+633=tecla pause
+******
+
+****** phrase.ini
+634=que desejar
+635=as horas
+636=qualquer número
+****** phrase.ini.old
+634=que desejar
+635=seu martelo
+636=qualquer número
+******
+
+****** phrase.ini
+637=simplesmente guardar
+638=estiver pressionado
+639=para obter
+640=era esperado
+641=eu ajude
+642=de espaço
+****** phrase.ini.old
+637=simplesmente guardar
+638=desta forma
+639=para obter
+640=resto use
+641=larga sobre
+642=de espaço
+******
+
+****** phrase.ini
+646=página desejada
+647=ele precisará
+648=longo demais
+****** phrase.ini.old
+646=página desejada
+647=basta largá
+648=longo demais
+******
+
+****** phrase.ini
+651=basta chamá
+652=enquanto estava
+653=em frente
+654=fim do
+655=venha para
+****** phrase.ini.old
+651=basta chamá
+652=dusty devolverá
+653=você clica
+654=dusty apareça
+655=venha para
+******
+
+****** phrase.ini
+657=que disse
+658=que faz
+659=eis aqui
+****** phrase.ini.old
+657=que disse
+658=dusty mova
+659=eis aqui
+******
+
+****** phrase.ini
+664=por sorte
+665=ou minutos
+666=utilizando asper
+667=para executar
+668=praticamente tudo
+****** phrase.ini.old
+664=por sorte
+665=entregará para
+666=ele entregará
+667=robô entregará
+668=praticamente tudo
+******
+
+****** phrase.ini
+671=pássaro voando
+672=contendo vários
+673=be yaw
+****** phrase.ini.old
+671=pássaro voando
+672=be wop
+673=be yaw
+******
+
+****** phrase.ini
+674=porta rangendo
+675=específica colocando
+676=que treinei
+677=que são
+678=mas todos
+679=que precisava
+680=muitos zeros
+681=ele irá
+****** phrase.ini.old
+674=porta rangendo
+675=página virando
+676=efeito legal
+677=barulhos estranhos
+678=passo externo
+679=glass high
+680=glass low
+681=ele irá
+******
+
+****** phrase.ini
+682=número seleciona
+683=prefiro deixar que
+684=você poderá explodir
+685=isto irá terminar
+686=se possível
+687=você ficará com
+688=estará subtraindo por
+689=bateu em
+****** phrase.ini.old
+682=número seleciona
+683=resposta para
+684=que imagem
+685=aquela presa
+686=se possível
+687=lo falado
+688=figura nº
+689=bateu em
+******
+
+****** phrase.ini
+695=desculpe interromper
+696=depois você simplesmente
+697=que controla
+****** phrase.ini.old
+695=desculpe interromper
+696=lado inicial
+697=que controla
+******
+
+****** phrase.ini
+707=pode esvaziar
+708=asper poderá devolvê
+709=para vê
+710=quando você pressiona
+711=problemas com
+****** phrase.ini.old
+707=pode esvaziar
+708=figuras viradas
+709=para vê
+710=problemas abrindo
+711=problemas com
+******
+
+****** phrase.ini
+717=valor anterior
+718=já contei tudo
+719=inclusive outras agendas
+720=problemas lendo
+721=guardada no arquivo
+722=mesmo que desligue
+723=nós precisamos
+****** phrase.ini.old
+717=valor anterior
+718=ou apenas
+719=figura desejada
+720=problemas lendo
+721=basta largar
+722=então aspirar
+723=nós precisamos
+******
+
+****** phrase.ini
+724=tente novamente
+725=você pode chamar
+726=muito bom
+****** phrase.ini.old
+724=tente novamente
+725=bom trabalho
+726=muito bom
+******
+
+****** phrase.ini
+734=que pode
+735=pressionando as teclas
+736=para aspirar
+737=você pode colocá
+738=próxima coisa
+****** phrase.ini.old
+734=que pode
+735=para menor
+736=para aspirar
+737=para reverter
+738=próxima coisa
+******
+
+****** phrase.ini
+741=feliz aniversário
+742=já falei tudo
+743=soprana salte para
+744=contarei novamente tudo
+745=robô quer
+****** phrase.ini.old
+741=feliz aniversário
+742=não apenas
+743=qualquer figura
+744=page of
+745=robô quer
+******
+
+****** phrase.ini
+758=controle remoto
+759=asper pode devolver
+760=asper irá apagar
+761=asper irá aspirar
+762=você pode soltar
+763=ajuda do asper
+764=então eu faço
+765=que ele faz
+766=imagem seja desvirada
+767=aí ele irá
+768=robô parou porque
+769=coloco sobre um
+770=velocidade em direção
+771=fala do márcio
+772=há algo errado
+773=caracteres ou menos
+774=em quê
+****** phrase.ini.old
+758=controle remoto
+759=figura vazia
+760=robôs vazios
+761=qualquer som
+762=versão de
+763=menos que
+764=hora correta
+765=quero dizer
+766=próxima porta
+767=para comemorar
+768=já esperamos
+769=idade de
+770=em graus
+771=serem lidas
+772=para escrever
+773=criar arquivo
+774=em quê
+******
+
+****** phrase.ini
+777=da janela
+778=tecla control pressionada
+779=aparência dessa imagem
+780=ele pode devolvê
+781=imagem sendo colocada
+782=problemas ao abrir
+783=isso porque você
+784=que originalmente era
+785=por favor
+****** phrase.ini.old
+777=da janela
+778=texto pararfala
+779=coloque apenas
+780=parou porque
+781=etiquetadas como
+782=combina com
+783=qualquer robô
+784=efeito apertando
+785=por favor
+******
+
+****** phrase.ini
+874=ele mostra
+875=enquanto estiver segurando
+876=nova caixa
+877=aspirar as coisas
+878=de novo
+****** phrase.ini.old
+874=ele mostra
+875=caixa atrás
+876=nova caixa
+877=robô atrás
+878=de novo
+******
+
+****** phrase.ini
+890=colocouo sobre
+891=falarei tudo novamente
+892=utiliz aria
+893=dias no ninho
+894=qualquer alteração
+895=mentes de robô
+896=robô possui
+****** phrase.ini.old
+890=colocouo sobre
+891=em seu
+892=utiliz aria
+893=você encontrará
+894=qualquer alteração
+895=pumpy pode
+896=robô possui
+******
+
+****** phrase.ini
+898=para têla
+899=blocos de texto
+900=funcionamento da
+****** phrase.ini.old
+898=para têla
+899=apenas caixas
+900=funcionamento da
+******
+
+****** phrase.ini
+906=tipo de
+907=imagens de coisas
+908=você pode ligá
+909=que precisar
+910=la ou desligá
+911=consegue trazer
+****** phrase.ini.old
+906=tipo de
+907=conecte três
+908=alguma coisa
+909=que precisar
+910=que terá
+911=consegue trazer
+******
+
+****** phrase.ini
+912=só aceitará
+913=da mente dele
+914=mas parece
+****** phrase.ini.old
+912=só aceitará
+913=este representa
+914=mas parece
+******
+
+****** phrase.ini
+916=vamos preencher
+917=timer de minutos
+918=seu nariz
+919=timer de horas
+920=única coisa
+****** phrase.ini.old
+916=vamos preencher
+917=apareça em
+918=seu nariz
+919=ou ambos
+920=única coisa
+******
+
+****** phrase.ini
+921=nome de
+922=número de minutos
+923=número de horas
+924=colocála no
+****** phrase.ini.old
+921=nome de
+922=mais rápido
+923=mais devagar
+924=colocála no
+******
+
+****** phrase.ini
+934=consegue treinar
+935=número de dias
+936=consegue fazer
+****** phrase.ini.old
+934=consegue treinar
+935=sua mente
+936=consegue fazer
+******
+
+****** phrase.ini
+937=em segurança
+938=experimente as coisas
+939=dentro dela mesma
+940=eles serão dispostos
+941=com cabelo
+942=tem de ter
+943=você pode girar
+944=dígitos apertando
+945=há nenhuma colisão
+946=deve fazer
+947=computador vai precisar
+948=irá ligá
+****** phrase.ini.old
+937=em segurança
+938=ia colcar
+939=ia por
+940=caderno virando
+941=com cabelo
+942=de bicicletas
+943=apanhar uma
+944=dígitos apertando
+945=um lugar
+946=deve fazer
+947=robô esperava
+948=irá ligá
+******
+
+****** phrase.ini
+950=eu falo
+951=antes de testá
+952=se quiser que
+953=você pode empurrar
+954=ela virá rapidamente
+955=tente colocar
+****** phrase.ini.old
+950=eu falo
+951=estiver vazia
+952=milhões de
+953=microsoft windows
+954=estão colocadas
+955=tente colocar
+******
+
+****** phrase.ini
+969=em seguida
+970=com esse nome
+971=ao mesmo tempo
+972=aquele robô
+****** phrase.ini.old
+969=em seguida
+970=para acender
+971=atrás do
+972=aquele robô
+******
+
+****** phrase.ini
+980=esperava encontrar
+981=também está quebrado
+982=algo retangular
+****** phrase.ini.old
+980=esperava encontrar
+981=quiser que
+982=algo retangular
+******
+
+****** phrase.ini
+983=na fila
+984=assim que visse
+985=asper ao contrário
+986=sem uma mente
+987=estou conseguindo entender
+988=pode fazer
+****** phrase.ini.old
+983=na fila
+984=menor valor
+985=ainda bem
+986=específica soltando
+987=eles trabalham
+988=pode fazer
+******
+
+****** phrase.ini
+989=últimos dígitos
+990=agora está escondida
+991=coloque coisas
+****** phrase.ini.old
+989=últimos dígitos
+990=computador precisará
+991=coloque coisas
+******
+
+****** phrase.ini
+992=das caixas
+993=ela só guarda
+994=últimos fizeram
+****** phrase.ini.old
+992=das caixas
+993=trabalho que
+994=últimos fizeram
+******
+
+****** phrase.ini
+1007=você pode tirar
+1008=que tenha apanhado
+1009=foi dado para
+****** phrase.ini.old
+1007=você pode tirar
+1008=entregue para ele
+1009=foi dado para
+******
+
+****** phrase.ini
+1015=ir trabalhar em
+1016=são úteis dentro
+1017=você pode voltar
+1018=que combina com
+1019=para comparar números
+1020=enquanto estiver pressionando
+1021=você sabia que
+****** phrase.ini.old
+1015=ir trabalhar em
+1016=pilha de textos
+1017=você pode voltar
+1018=se eu incomodar
+1019=que irei embora
+1020=tente qualquer hora
+1021=você sabia que
+******
+
+****** phrase.ini
+1023=bom ver você
+1024=arquivo que descreve
+1025=teve problemas com
+1026=você pode colocar
+1027=ainda bem que
+1028=número for zero
+****** phrase.ini.old
+1023=bom ver você
+1024=eu sou marty
+1025=teve problemas com
+1026=se você remover
+1027=aí você simplesmente
+1028=número for zero
+******
+
+****** phrase.ini
+1032=você pode chamá
+1033=alguma coisa nela
+1034=quando quero que
+1035=suficiente para encontrar
+1036=repleta de times
+1037=controles bastante úteis
+1038=adicionar letras enquanto
+1039=ou um grupo
+1040=computador precisará de
+1041=lado virado da
+1042=balança mostrar que
+1043=menor valor que
+1044=barra de espaço
+1045=computador terá todos
+1046=casa larga de cima
+1047=um balão de fala
+1048=os robôs começarão
+****** phrase.ini.old
+1032=você pode chamá
+1033=dusty poderá cuspi
+1034=la para fora
+1035=suficiente para encontrar
+1036=inclusive outros cadernos
+1037=controles bastante úteis
+1038=guardado no arquivo
+1039=on the back
+1040=uma figura virando
+1041=lado virado da
+1042=apertando as teclas
+1043=realmente um retângulo
+1044=barra de espaço
+1045=bomba de bicleta
+1046=você pode dar
+1047=los no verso
+1048=os robôs começarão
+******
+
+****** phrase.ini
+1049=você pode pegá
+1050=já lhe disse tudo
+1051=ele será adicionado
+****** phrase.ini.old
+1049=você pode pegá
+1050=você pode largá
+1051=ele será adicionado
+******
+
+****** phrase.ini
+1054=largas ou finas
+1055=para adicionar uma etiqueta
+1056=que sei sobre
+****** phrase.ini.old
+1054=largas ou finas
+1055=pumpy salte para
+1056=que sei sobre
+******
+
+****** phrase.ini
+1057=última coisa aspirada
+1058=se eu estiver incomodando
+1059=me trará de volta
+1060=você pode copiar
+****** phrase.ini.old
+1057=última coisa aspirada
+1058=dusty irá apagar
+1059=dusty irá sugar
+1060=você pode copiar
+******
+
+****** phrase.ini
+1061=ponta da varinha
+1062=tente isso qualquer hora
+1063=quando você tiver acabado
+1064=você pode encontrar
+****** phrase.ini.old
+1061=ponta da varinha
+1062=você pode largar
+1063=construção será feita
+1064=você pode encontrar
+******
+
+****** phrase.ini
+1065=você pode retirar
+1066=qual foi colocada para
+1067=eu já falei
+****** phrase.ini.old
+1065=você pode retirar
+1066=ajuda do dusty
+1067=eu já falei
+******
+
+****** phrase.ini
+1069=eu começo dando
+1070=aí basta você colocá
+1071=de seus pensamentos
+****** phrase.ini.old
+1069=eu começo dando
+1070=aí eu faço
+1071=de seus pensamentos
+******
+
+****** phrase.ini
+1074=não funcionou porque
+1075=você pode virar para
+1076=motor de caminhão
+1077=provavelmente não precisará digitar
+1078=se você mudar
+1079=ela guarda de tudo
+1080=assim por diante
+****** phrase.ini.old
+1074=não funcionou porque
+1075=em algum lugar
+1076=motor de caminhão
+1077=buzina de bicicleta
+1078=se você mudar
+1079=seletor de figuras
+1080=assim por diante
+******
+
+****** phrase.ini
+1084=rua desta casa
+1085=uma forma geométrica colorida
+1086=cor pressionando as teclas
+1087=trabalhar quando você girar
+1088=mente de robô vazia
+1089=soprana fará com que
+1090=ele virá mais rápido
+1091=de sua agenda principal
+1092=que acabei de ensinar
+1093=área de transferência
+****** phrase.ini.old
+1084=rua desta casa
+1085=se eu falar
+1086=media control interface
+1087=frente da casa
+1088=rotacionado para esquerda
+1089=rotacionado para cima
+1090=rotacionado para frente
+1091=colisão de lado
+1092=colisão de cima
+1093=área de transferência
+******
+
+****** phrase.ini
+1095=mouse para cima
+1096=asper na mente dele
+1097=caixa irá expandir
+****** phrase.ini.old
+1095=mouse para cima
+1096=ao invés disso
+1097=caixa irá expandir
+******
+
+****** phrase.ini
+1109=se você alterar
+1110=caixa para ele mesmo
+1111=para controlar se
+****** phrase.ini.old
+1109=se você alterar
+1110=aparência desta figura
+1111=para controlar se
+******
+
+****** phrase.ini
+1114=colisão apontando para
+1115=ele está esperando que
+1116=um usuário temporário
+****** phrase.ini.old
+1114=colisão apontando para
+1115=dusty pode cuspi
+1116=um usuário temporário
+******
+
+****** phrase.ini
+1118=você pode alterar
+1119=imagem que será mostrada
+1120=toontalk for reiniciado
+****** phrase.ini.old
+1118=você pode alterar
+1119=figura sendo largada
+1120=toontalk for reiniciado
+******
+
+****** phrase.ini
+1123=controladora hyperbot conectada
+1124=um sensor que indica
+1125=arquivo que guarda
+****** phrase.ini.old
+1123=controladora hyperbot conectada
+1124=robôs em frente
+1125=arquivo que guarda
+******
+
+****** phrase.ini
+1127=em vez disso
+1128=você terá de desvirá
+1129=qual imagem ou cor
+1130=robô esperava uma caixa
+1131=ele girará de volta
+1132=depois irá parar
+****** phrase.ini.old
+1127=em vez disso
+1128=da sua agenda
+1129=dusty pode cuspí
+1130=lo para fora
+1131=então ela fará
+1132=depois irá parar
+******
+
+****** phrase.ini
+1134=uma parte terá
+1135=não pôde ser aberto
+1136=casa se encontra
+****** phrase.ini.old
+1134=uma parte terá
+1135=que inicalmente era
+1136=casa se encontra
+******
+
+****** phrase.ini
+1140=se você pegá
+1141=imagem saltará para fora
+1142=imagem colocada foi ignorada
+1143=você pode aspirar
+1144=controle sobre algumas coisas
+1145=se você quiser que
+1146=esse aspirador pode devolvê
+1147=vamos tentar novamente
+****** phrase.ini.old
+1140=se você pegá
+1141=você poderia tentar
+1142=toontalk sem ele
+1143=você pode aspirar
+1144=mas não sei
+1145=que mais dizer
+1146=tente de novo
+1147=vamos tentar novamente
+******
+
+****** phrase.ini
+1150=vamos continuar arrumando
+1151=está treinando para colocar
+1152=desculpe ficar me repetindo
+1153=você pode determinar
+1154=botão na sua ponta
+1155=pressionando pageup eu repito
+1156=você faz anos hoje
+1157=blocos de números vazios
+1158=dias de idade
+****** phrase.ini.old
+1150=vamos continuar arrumando
+1151=sugar as coisas
+1152=você pode mudá
+1153=você pode determinar
+1154=para mais alto
+1155=para mais curto
+1156=para mais estreito
+1157=eu vou repetir
+1158=dias de idade
+******
+
+****** phrase.ini
+1160=você precisa colocar
+1161=blocos de texto vazios
+1162=aparência de alguma coisa
+1163=botão no nariz dele
+1164=dia que você nasceu
+1165=parte da frente de
+1166=uma caixa vazia
+****** phrase.ini.old
+1160=você precisa colocar
+1161=balões de pensamento
+1162=balão de pensamento
+1163=tijolinhos de texto
+1164=tijolinhos numéricos vazios
+1165=tijolinho numérico vazio
+1166=uma caixa vazia
+******
+
+****** phrase.ini
+1167=sensores mostrando números
+1168=que vive dentro da
+1169=está apontando para mim
+1170=se um robô tiver
+1171=ele se contentará com
+1172=entender bem esses conceitos
+1173=fique menos confuso utilizando
+1174=em duas partes colocando
+1175=um pássaro tentou retirar
+1176=uma balança clicando nos
+1177=falarei mais sobre pássaros
+1178=falarei mais sobre ninhos
+1179=esta agenda vive na
+1180=lo como se fosse
+1181=coisas de trás de
+1182=foi sugada pelo asper
+1183=qual ele está trabalhando
+1184=sei dizer outra coisa
+1185=apagar coisas da superfície
+1186=ou restaure objetos apertando
+1187=conheço nenhum mês chamado
+1188=enquanto estiver apontando para
+1189=primeiro precisaremos consertar
+****** phrase.ini.old
+1167=sensores mostrando números
+1168=figuras de coisas
+1169=bit do toontalk
+1170=idioma marciano para
+1171=idioma terráqueo não
+1172=sempre tão fácil
+1173=seja como for
+1174=você verá aqui
+1175=la ou desativá
+1176=segundos de idade
+1177=descobrir para mim
+1178=fato de ter
+1179=desisto do pássaro
+1180=veja em www
+1181=uma linha ascendente
+1182=uma linha descendente
+1183=escrita do arquivo
+1184=em cima disso
+1185=barra de espaços
+1186=mas foi aspirado
+1187=windows não sabia
+1188=você pode sentir
+1189=primeiro precisaremos consertar
+******
+
+****** phrase.ini
+1312=leva coisas para
+1313=são muito úteis dentro
+1314=se você puser
+1315=mas está tão estreito
+1316=você pode remover
+****** phrase.ini.old
+1312=leva coisas para
+1313=eles serão postos
+1314=se você puser
+1315=que tenha pego
+1316=você pode remover
+******
+
+****** phrase.ini
+1317=grandes ou pequenas
+1318=consigo ver as letras
+1319=não se preocupe
+****** phrase.ini.old
+1317=grandes ou pequenas
+1318=as caixas emitem
+1319=não se preocupe
+******
+
+****** phrase.ini
+1322=de uma vez
+1323=freqüentemente quero um monte
+1324=as imagens fiquem maiores
+1325=são sensores remotos
+****** phrase.ini.old
+1322=de uma vez
+1323=com dois buracos
+1324=que recebe respostas
+1325=são sensores remotos
+******
+
+****** phrase.ini
+1326=mesmo buraco da
+1327=ela se inclina pressionando
+1328=você pode quebrar
+****** phrase.ini.old
+1326=mesmo buraco da
+1327=pergunta quais imagens
+1328=você pode quebrar
+******
+
+****** phrase.ini
+1332=esc para concluir
+1333=em que aponta para
+1334=mas isso também não
+1335=arquivo wave ou midi
+1336=computador deve ter todos
+1337=que você me trouxe
+1338=ela será posta
+****** phrase.ini.old
+1332=esc para concluir
+1333=caixa com apenas
+1334=balão de pensamentos
+1335=quer voar para
+1336=você pode virar
+1337=você pode desvirar
+1338=ela será posta
+******
+
+****** phrase.ini
+1344=ela fica preta
+1345=mais fácil iniciar com
+1346=que puder sobre alguma coisa
+1347=alguma coisa que irá mudar
+1348=alguma coisa que fará um
+1349=para comparar textos
+****** phrase.ini.old
+1344=ela fica preta
+1345=houver nenhuma colisão
+1346=pergunta estou preso
+1347=de qual imagem
+1348=eis como usar
+1349=para comparar textos
+******
+
+****** phrase.ini
+1353=teclado está funcionando
+1354=número que quiser multiplicar por
+1355=que esteja ocupando
+****** phrase.ini.old
+1353=teclado está funcionando
+1354=se contentará com
+1355=que esteja ocupando
+******
+
+****** phrase.ini
+1356=significa qualquer número
+1357=agenda está na primeira página
+1358=este indica se
+****** phrase.ini.old
+1356=significa qualquer número
+1357=um robô sem
+1358=este indica se
+******
+
+****** phrase.ini
+1359=estou conseguindo encontrar
+1360=agenda estiver na primeira página
+1361=uma boa forma de voltar
+1362=colocaria  no
+****** phrase.ini.old
+1359=estou conseguindo encontrar
+1360=como se fosse
+1361=bloco de texto
+1362=colocaria  no
+******
+
+****** phrase.ini
+1366=robô que quer
+1367=agenda um bloco que contenha
+1368=acabou de treinar
+1369=algumas imagens podem ser alteradas
+1370=você pode apagar letras pressionando
+1371=la para poder
+1372=sobre abc resultará em abe
+1373=não aceitará nada
+****** phrase.ini.old
+1366=robô que quer
+1367=esperando para que
+1368=acabou de treinar
+1369=respeito de pássaros
+1370=dusty no seu
+1371=la para poder
+1372=para passar receber
+1373=não aceitará nada
+******
+
+****** phrase.ini
+1375=não aceitaria algo
+1376=boca dele sobre alguma coisa
+1377=problemas carregando um
+****** phrase.ini.old
+1375=não aceitaria algo
+1376=repleto de sons
+1377=problemas carregando um
+******
+
+****** phrase.ini
+1378=item do topo
+1379=você só pode colocar robôs
+1380=pergunta acabei de ser largado
+1381=seu aniversário já
+1382=um lugar para se colocar
+1383=coloque algumas palavras no primeiro
+1384=pode pegar números
+****** phrase.ini.old
+1378=item do topo
+1379=ao memso tempo
+1380=errada com isso
+1381=seu aniversário já
+1382=de todos os
+1383=de ao menos
+1384=pode pegar números
+******
+
+****** phrase.ini
+1394=da mesma maneira
+1395=coloque alguns números no primeiro
+1396=não gostar da
+****** phrase.ini.old
+1394=da mesma maneira
+1395=um empurrão em
+1396=não gostar da
+******
+
+****** phrase.ini
+1398=treinou na parte
+1399=soprana foi aspirada pelo asper
+1400=ser martelado por outro rato
+1401=direita será removido
+1402=este arquivo será tocado até
+1403=me bem de onde estávamos
+1404=espero que ele seja superbom
+1405=você pode digitar
+****** phrase.ini.old
+1398=treinou na parte
+1399=enquanto estiver apontando
+1400=vazia em seu
+1401=direita será removido
+1402=que puder sobre
+1403=que irá mudar
+1404=que fará um
+1405=você pode digitar
+******
+
+****** phrase.ini
+1408=caixa que veio
+1409=mas precisamos de todos os
+1410=caixa ou carregar
+****** phrase.ini.old
+1408=caixa que veio
+1409=boca dele sobre
+1410=caixa ou carregar
+******
+
+****** phrase.ini
+1412=olhar na página
+1413=mas precisamos de ao menos
+1414=tentou voltar para
+****** phrase.ini.old
+1412=olhar na página
+1413=destacável que indica
+1414=tentou voltar para
+******
+
+****** phrase.ini
+1415=no do meio
+1416=na parte inferior do balão
+1417=havia nenhum lá
+1418=barra de espaços para acender
+1419=ótimo ver você
+****** phrase.ini.old
+1415=no do meio
+1416=agora está esondida
+1417=havia nenhum lá
+1418=ele só guarda
+1419=ótimo ver você
+******
+
+****** phrase.ini
+1421=arquivos de usuários
+1422=minutos  na hora correta
+1423=pergunta estou me mexendo porque
+1424=uma etiqueta de caixa em
+1425=você só pode colocar números
+1426=mas você não pode modificar
+1427=você não pode girar novamente
+1428=ela irá se apressar mais
+1429=você juntou essa
+****** phrase.ini.old
+1421=arquivos de usuários
+1422=embutido já apagado
+1423=uma imagem ou
+1424=escrita para uma
+1425=levou algo para
+1426=deve conter leitura
+1427=deveria conter escrita
+1428=deve conter abrir
+1429=você juntou essa
+******
+
+****** phrase.ini
+1440=colocariao de volta
+1441=coloque três caixas uma do
+1442=um dos zeros
+1443=conecte três caixas uma do
+1444=ou imagem foi colocada sobre
+1445=que combine com
+****** phrase.ini.old
+1440=colocariao de volta
+1441=minutos  na
+1442=um dos zeros
+1443=no caderno guardado
+1444=você deve dar
+1445=que combine com
+******
+
+****** phrase.ini
+1448=pausa no toontalk
+1449=asper pode remover objetos de
+1450=algum texto ou imagem lá
+1451=letras minúsculas de
+****** phrase.ini.old
+1448=pausa no toontalk
+1449=se apressar mais
+1450=um tijolinho numérico
+1451=letras minúsculas de
+******
+
+****** phrase.ini
+1455=enquanto aponta para
+1456=esperando que outro robô termine
+1457=será convertido em
+1458=pergunta estou sendo segurado por
+1459=para contar até
+****** phrase.ini.old
+1455=enquanto aponta para
+1456=se estiver faltando
+1457=será convertido em
+1458=são muito úteis
+1459=para contar até
+******
+
+****** phrase.ini
+1462=trabalhando para mim
+1463=quer voar para seu ninho
+1464=coisas em caixas
+****** phrase.ini.old
+1462=trabalhando para mim
+1463=antes de mudar
+1464=coisas em caixas
+******
+
+****** phrase.ini
+1465=você também pode
+1466=de lado com alguma coisa
+1467=você fez duas
+****** phrase.ini.old
+1465=você também pode
+1466=serem comparados nos
+1467=você fez duas
+******
+
+****** phrase.ini
+1469=agora estamos prontos
+1470=não pode guardar nada na
+1471=soprana apertando uma dessas teclas
+1472=texto para ter
+****** phrase.ini.old
+1469=agora estamos prontos
+1470=repleto de times
+1471=que eu treinei
+1472=texto para ter
+******
+
+****** phrase.ini
+1475=as coisas fiquem
+1476=como se fossem números comuns
+1477=retangular no ninho simplesmente soltando
+1478=nos buracos perto da balança
+1479=alguma coisa em texto colocando
+1480=pássaro alguma coisa contendo seu ninho
+1481=suas ferramentas sairão sem nenhum arranhão
+1482=ou uma fila
+****** phrase.ini.old
+1475=as coisas fiquem
+1476=atrás deveria ser
+1477=ele encontrará você
+1478=eu pareça engraçado
+1479=eu prefiro deixar
+1480=seus próprios sons
+1481=de muitos zeros
+1482=ou uma fila
+******
+
+****** phrase.ini
+1494=você está apontando para
+1495=asper aspirará as coisas que sobrarem
+1496=eu já disse tudo
+****** phrase.ini.old
+1494=você está apontando para
+1495=eu vou falar mais
+1496=eu já disse tudo
+******
+
+****** phrase.ini
+1497=casa inteira clicando em
+1498=combine caixas menores colocando uma sobre
+1499=um buraco será adicionado
+****** phrase.ini.old
+1497=casa inteira clicando em
+1498=isto irá terminar com
+1499=um buraco será adicionado
+******
+
+****** phrase.ini
+1502=ficar de pé pressionando
+1503=vou ficar por perto para ajudar
+1504=isso inclui até mesmo
+1505=alguma coisa que irá multiplicar por
+1506=alguma coisa que irá dividir por
+1507=você pode multiplicar por
+1508=última agenda usada voará até você
+1509=funcionam da mesma forma
+****** phrase.ini.old
+1502=ficar de pé pressionando
+1503=quando você tiver acabar
+1504=isso inclui até mesmo
+1505=qual foi largada para
+1506=você estará subtraindo por
+1507=você pode multiplicar por
+1508=aí basta você largá
+1509=funcionam da mesma forma
+******
+
+****** phrase.ini
+1513=assim você poderá colocá
+1514=esta agenda está cheia de imagens
+1515=composta na realidade por
+1516=esta agenda está cheia de sensores
+1517=algumas imagens são formas geométricas coloridas
+1518=texto já está vazio
+1519=você pode dar um empurrão pressionando
+1520=texto continue em outra linha pressionando
+1521=toda vez que você quiser que
+1522=se você clicar no
+****** phrase.ini.old
+1513=assim você poderá colocá
+1514=ele guarda de tudo
+1515=composta na realidade por
+1516=cor apertando as teclas
+1517=trabalhar quando você desvirar
+1518=texto já está vazio
+1519=se você segurar apertado
+1520=pumpy fará com que
+1521=eu contarei novamente tudo
+1522=se você clicar no
+******
+
+****** phrase.ini
+1524=que estiver embaixo dele
+1525=asper para mover objetos entre casas
+1526=se alguma vez você quiser que
+1527=uma balança inclinada para
+****** phrase.ini.old
+1524=que estiver embaixo dele
+1525=de seu caderno principal
+1526=nova casa será construída
+1527=uma balança inclinada para
+******
+
+****** phrase.ini
+1534=caso esteja trabalhando sozinho
+1535=os trabalhadores construirão uma casa nova
+1536=os robôs não são muito inteligentes
+1537=ele foi treinado para
+****** phrase.ini.old
+1534=caso esteja trabalhando sozinho
+1535=caixa para si próprio
+1536=um robô esperando que
+1537=ele foi treinado para
+******
+
+****** phrase.ini
+1539=ferramenta que iria usar
+1540=se os efeitos sonoros estão habilitados
+1541=uma cor numerada de
+1542=mas tem outra coisa dentro dela
+1543=você não pode alterá
+****** phrase.ini.old
+1539=ferramenta que iria usar
+1540=um robô que espera
+1541=uma cor numerada de
+1542=figura que será mostrada
+1543=você não pode alterá
+******
+
+****** phrase.ini
+1544=esta animação mostra se
+1545=ele não conseguiu encontrar alguma coisa
+1546=partir do lado esquerdo
+1547=você conseguiu destruir todas as casas
+1548=tecla shift estiver pressionada
+****** phrase.ini.old
+1544=esta animação mostra se
+1545=você terá que desvirá
+1546=partir do lado esquerdo
+1547=se está se mexendo
+1548=tecla shift estiver pressionada
+******
+
+****** phrase.ini
+1552=tem alguma coisa diferente
+1553=mesmo acontece com imagens em movimento
+1554=bombas não aceitam nada
+****** phrase.ini.old
+1552=tem alguma coisa diferente
+1553=há algo de errado
+1554=bombas não aceitam nada
+******
+
+****** phrase.ini
+1555=ficar sem fazer nada
+1556=este aqui está repleto de sons
+1557=um robô não encontrou
+****** phrase.ini.old
+1555=ficar sem fazer nada
+1556=usar dusty para apagar
+1557=um robô não encontrou
+******
+
+****** phrase.ini
+1558=um robô não achou
+1559=este tem várias opções de sistema
+1560=eu construí mais algumas
+****** phrase.ini.old
+1558=um robô não achou
+1559=qualquer botão do mouse
+1560=eu construí mais algumas
+******
+
+****** phrase.ini
+1562=se isso for possível
+1563=já existem imagens demais com imagens
+1564=ele foi combinado com
+****** phrase.ini.old
+1562=se isso for possível
+1563=ele virará de lado
+1564=ele foi combinado com
+******
+
+****** phrase.ini
+1565=valor de um sensor
+1566=mas estou tendo dificuldades para entender
+1567=asper foi sugado por outro aspirador
+1568=este controle não pode ser girado
+1569=próxima vez em que
+****** phrase.ini.old
+1565=valor de um sensor
+1566=não pode ser aberto
+1567=figura saltará para fora
+1568=figura largada foi ignorada
+1569=próxima vez em que
+******
+
+****** phrase.ini
+1576=que estes robôs fazem
+1577=fim ou até que seja aspirado
+1578=sei que pareço um disco riscado
+1579=forma como você aparece
+1580=há alguma coisa errada com isso
+1581=robô não terá mais
+****** phrase.ini.old
+1576=que estes robôs fazem
+1577=se vocie quiser que
+1578=este aspirador pode cuspi
+1579=forma como você aparece
+1580=do seu caderno principal
+1581=robô não terá mais
+******
+
+****** phrase.ini
+1584=que só pode recordar
+1585=para outro modo apertando as teclas
+1586=irá fazer digitando uma destas letras
+1587=você realmente tem idade
+****** phrase.ini.old
+1584=que só pode recordar
+1585=relógio estão funcionando agora
+1586=acho que posso terminar
+1587=você realmente tem idade
+******
+
+****** phrase.ini
+1593=objeto ao estado original
+1594=vou falar um pouco mais sobre
+1595=última coisa que disse
+****** phrase.ini.old
+1593=objeto ao estado original
+1594=apertando pageup eu repito
+1595=última coisa que disse
+******
+
+****** phrase.ini
+1596=que acabei de dizer
+1597=botão que ele tem no nariz
+1598=da última vez foi
+1599=modo de funcionamento do asper apertando
+1600=sensor mostrando um número
+1601=em sua mente se contentará com
+1602=há várias coisas no toontalk que
+1603=enquanto estiver com ela na mão
+1604=enquanto estiver com ele na mão
+1605=ia colocar alguma coisa em algo
+1606=ia pôr alguma coisa em algo
+1607=parou devido ao desligamento da força
+1608=ocupado fazendo aquilo que foi treinado
+1609=robôs de casas diferentes trabalhem juntos
+1610=têm de ser maiores do que
+1611=esta está cheia de exemplos de programas
+1612=os robôs podem trabalhar atrás das imagens
+1613=ele teve problemas para soltar alguma coisa
+1614=lugar em que ia fazer alguma coisa
+1615=balanças não podem ser inseridas em imagens
+1616=asper devolva as coisas que ele aspirou
+1617=lugar em que ia deixar alguma coisa
+1618=número que está por baixo está prestes
+1619=devolver as coisas que ele havia aspiradop
+1620=preenchida aleatoriamente com casas
+1621=nunca ouvi falar de uma data como
+1622=botão da soprana  até que apareça
+1623=de opções que se encontra na página
+1624=uma página que tenha texto colocando sobre
+1625=pode combinar duas imagens colocando uma sobre
+1626=esperando para que alguma coisa apareça em
+1627=sentese na outra sala
+****** phrase.ini.old
+1596=que acabei de dizer
+1597=eu falarei tudo novamente
+1598=da última vez foi
+1599=objeto que está atrás
+1600=sensor mostrando um número
+1601=ele poderá não funcionar
+1602=você também pode desativar
+1603=espero que você entenda
+1604=controle remoto parecerá preto
+1605=você também pode ligá
+1606=esta não pode ser
+1607=vejo que você tem
+1608=você poderia ir até
+1609=quer começar de novo
+1610=ninho deveria estar vazio
+1611=número deveria estar mudando
+1612=selecionar voltar mais tarde
+1613=uma linha pontilhada ascendente
+1614=uma linha pontilhada descendente
+1615=primeiro buraco deve ter
+1616=ou abrir porta serial
+1617=houve problemas ao abrir
+1618=para enviar comandos para
+1619=este só funciona com
+1620=preenchida aleatoriamente com casas
+1621=os pássaros só começam
+1622=os robôs só começam
+1623=qual ele possa dá
+1624=vou me lembrar disso
+1625=isto me lembra de
+1626=qualquer efeito de força
+1627=sentese na outra sala
+******
+
+****** phrase.ini
+1692=em seguida  retiraria
+1693=você não pode colocar imagens atrás de
+1694=eu iria  até
+****** phrase.ini.old
+1692=em seguida  retiraria
+1693=trabalho do robô terminou
+1694=eu iria  até
+******
+
+****** phrase.ini
+1709=asper  para limpar
+1710=arquivo de imagens que será transformado em
+1711=ele deve ser rápido
+****** phrase.ini.old
+1709=asper  para limpar
+1710=trabalho atrás do número
+1711=ele deve ser rápido
+******
+
+****** phrase.ini
+1724=se for de tarde
+1725=que faço quando quero ensinar alguma coisa
+1726=você pode querer usar
+****** phrase.ini.old
+1724=se for de tarde
+1725=use um número entre
+1726=você pode querer usar
+******
+
+****** phrase.ini
+1734=ele tentou colocar em
+1735=em ambos os lados são os mesmos
+1736=você pode combinar duas caixas colocando uma sobre
+1737=os trabalhadores do caminhão construirão uma casa como
+1738=faria  isso mais
+****** phrase.ini.old
+1734=ele tentou colocar em
+1735=segundo buraco deve conter
+1736=para se comparar números
+1737=minha máquina de tradução
+1738=faria  isso mais
+******
+
+****** phrase.ini
+1743=ação de se colocar
+1744=se estiver faltando alguma coisa em sua mente
+1745=pássaro está muito ocupado para aceitar alguma coisa
+1746=mudar coisas na caixa
+****** phrase.ini.old
+1743=ação de se colocar
+1744=treinando ele para colocar
+1745=se existir algo na
+1746=mudar coisas na caixa
+******
+
+****** phrase.ini
+1747=um robô que registre
+1748=imagem que foi colocada está esperando por bambam
+1749=mas não consegue encontrá
+****** phrase.ini.old
+1747=um robô que registre
+1748=um passarinho tentou retirar
+1749=mas não consegue encontrá
+******
+
+****** phrase.ini
+1752=que ele deverá trabalhar
+1753=para mostrar suas próprias imagens dentro do toontalk
+1754=ele tentou soltar algo
+****** phrase.ini.old
+1752=que ele deverá trabalhar
+1753=outro robô termine primeiro
+1754=ele tentou soltar algo
+******
+
+****** phrase.ini
+1757=não aceitou alguma coisa
+1758=que quer que esteja embaixo do nariz dela
+1759=espero que você tenha tido um ótimo aniversário
+1760=você pode soltálo clicando
+****** phrase.ini.old
+1757=não aceitou alguma coisa
+1758=mas só posso falar
+1759=estava indo colocar algo
+1760=você pode soltálo clicando
+******
+
+****** phrase.ini
+1762=ele pode  formar
+1763=menos que você tenha nascido  antes de
+1764=caixas que tenham qualquer
+****** phrase.ini.old
+1762=ele pode  formar
+1763=nova casa  do
+1764=caixas que tenham qualquer
+******
+
+****** phrase.ini
+1766=se ela combinar com
+1767=nova casa  do outro lado do foguete
+1768=quantidade de buracos digitando
+****** phrase.ini.old
+1766=se ela combinar com
+1767=as coisas que sobrarem
+1768=quantidade de buracos digitando
+******
+
+****** phrase.ini
+1769=uma página por engano
+1770=poderá voltar rapidamente para uma página colocando sobre
+1771=ou imagem que tenha sido utilizado para descrevê
+1772=em sua mente ficará feliz com qualquer texto
+1773=assim que eu faço imagens inteligentes que possam balançar
+1774=coisas que forem retangulares
+****** phrase.ini.old
+1769=uma página por engano
+1770=assim você pode colocar
+1771=este caderno vive na
+1772=ela virá bem rapidamente
+1773=lo como se fôsse
+1774=coisas que forem retangulares
+******
+
+****** phrase.ini
+1775=toontalk está procurando por
+1776=robô executar aquilo que eu quiser que ele faça
+1777=irá mudar entre eles
+1778=quanto tempo demoro falando alguma coisa antes de mudar
+1779=caminhão já foi carregado
+1780=caixa não aceitou algo que foi colocado sobre ela
+1781=você pode começar tudo
+1782=balança não aceita nada que seja colocado sobre ela
+1783=veja se você consegue
+****** phrase.ini.old
+1775=toontalk está procurando por
+1776=sob este este nome
+1777=irá mudar entre eles
+1778=um robô em frente
+1779=caminhão já foi carregado
+1780=que você pode colocar
+1781=você pode começar tudo
+1782=hora não pode incluir
+1783=veja se você consegue
+******
+
+****** phrase.ini
+1791=para testar as coisas
+1792=ordem das coisas nos buracos tem de estar correta
+1793=mas por enquanto você só pode colocar agendas dentro
+1794=virar para uma página
+****** phrase.ini.old
+1791=para testar as coisas
+1792=para executarem seu trabalho
+1793=tijolinhos numéricos vazios nos
+1794=virar para uma página
+******
+
+****** phrase.ini
+1796=fazem quando você estiver
+1797=casas na agenda de imagens que está na página
+1798=para retornar ao chão
+1799=eles trabalham mais rápido quando ninguém  está olhando
+1800=não pode ser colocada na parte de trás de
+1801=apontando para um caminhão
+****** phrase.ini.old
+1796=fazem quando você estiver
+1797=contendo um monte de
+1798=para retornar ao chão
+1799=que irá multiplicar por
+1800=que irá dividir por
+1801=apontando para um caminhão
+******
+
+****** phrase.ini
+1802=com alguma outra coisa
+1803=mas um desses objetos não se encontra mais na sala
+1804=um arquivo que contenha
+****** phrase.ini.old
+1802=com alguma outra coisa
+1803=ele não conseguiu encontrar
+1804=um arquivo que contenha
+******
+
+****** phrase.ini
+1806=só funcionará uma vez
+1807=imagem que está por baixo já está esperando por bambam
+1808=mas lá vou eu
+****** phrase.ini.old
+1806=só funcionará uma vez
+1807=lugar onde ia deixar
+1808=mas lá vou eu
+******
+
+****** phrase.ini
+1809=alguma coisa está faltando
+1810=para um modo de funcionamento diferente se clicar no botão
+1811=toontalk tem de prestar atenção em tanta coisa na tela
+1812=um arquivo do usuário
+1813=mas só consigo pensar no que já disse da última vez
+1814=como se fosse um conjunto de bits que assumem os valores
+1815=as caixas emitem um som  quando você coloca uma do
+1816=você pode guardar qualquer coisa que fizer em uma página vazia
+1817=leválos até os buracos
+****** phrase.ini.old
+1809=alguma coisa está faltando
+1810=funcionamento do dusty apertando
+1811=quiser que eu ajude
+1812=um arquivo do usuário
+1813=botão pause enquanto segura
+1814=uma extensão do toontalk
+1815=foi uma mensagem apropriada
+1816=terceiro buraco deverá conter
+1817=leválos até os buracos
+******
+
+****** phrase.ini
+1828=colocariao de  novo
+1829=costumo usar as páginas da esquerda para textos ou imagens que descrevam
+1830=que ele se transformará em uma pilha imensa de cópias dele mesmo
+1831=qualquer coisa que você colocar na agenda permanecerá lá mesmo que você reinicie
+1832=você pode se sentar
+****** phrase.ini.old
+1828=colocariao de  novo
+1829=casa você poderá explodir
+1830=ocupado fazendo aquilo que
+1831=um arquivo que descreve
+1832=você pode se sentar
+******
+
+****** phrase.ini
+1833=se pode inserir em
+1834=funcionamento do asper para que ele devolva as coisas aspiradas ou para que ele simplesmente aspire
+1835=achou que encontraria outro
+****** phrase.ini.old
+1833=se pode inserir em
+1834=figuras vazias são úteis
+1835=achou que encontraria outro
+******
+
+****** phrase.ini
+1838=irá remover uma linha
+1839=da última vez que você saiu ainda havia mais coisas que eu queria contar para você
+1840=experimentálo em um novo
+1841=até naves precisam de despertadores  para lembrálas  de  fazer  coisas
+1842=ele  só trabalhará em coisas exatamente iguais às  que ele está pensando
+1843=ainda está na sala
+****** phrase.ini.old
+1838=irá remover uma linha
+1839=que ele está trabalhando
+1840=experimentálo em um novo
+1841=basta soltar um objeto
+1842=voar de dentro de
+1843=ainda está na sala
+******
+
+****** phrase.ini
+1845=ele pare de mudar
+1846=acho  que estamos prontos para calcular quantas horas há em um ano
+1847=timer de  minutos
+****** phrase.ini.old
+1845=ele pare de mudar
+1846=ela se inclina apertando
+1847=timer de  minutos
+******
+
+****** phrase.ini
+1848=um  sensor sobre
+1849=com certeza os robôs facilitam  as coisas  de vez em quando
+1850=misterioso que já está treinado pa ra produzir uma palavra secreta quando
+1851=não podem ser esvaziadas
+****** phrase.ini.old
+1848=um  sensor sobre
+1849=toda vez que você
+1850=se alguma vez você
+1851=não podem ser esvaziadas
+******
+
+****** phrase.ini
+1856=soprana  para que
+1857=afastese até  não poder mais ouvir ou ver os pássa ros
+1858=animação do acertou ou errou
+****** phrase.ini.old
+1856=soprana  para que
+1857=quando eu quero que
+1858=animação do acertou ou errou
+******
+
+****** phrase.ini
+1860=se mexer quando estiver pronto
+1861=meus sensores não estão mostrando nenhuma casa construída pelo pessoal do caminhão
+1862=para se livrar de mim
+****** phrase.ini.old
+1860=se mexer quando estiver pronto
+1861=dusty ao contrário para devolver
+1862=para se livrar de mim
+******
+
+****** phrase.ini
+1864=número ficaria pequeno demais para
+1865=os robôs podem fazer mais se  trabalham  em grupos
+1866=resto da divisão será ignorado
+****** phrase.ini.old
+1864=número ficaria pequeno demais para
+1865=último dígito você ficará com
+1866=resto da divisão será ignorado
+******
+
+****** phrase.ini
+1868=agora vem algo realmente avançado
+1869=não gosta de trabalhar na mesma casa como um outro robô
+1870=de admirar que você possa fazer muita coisa em um ano
+1871=os robôs são extremamente rápidos quando ninguém está olhando para eles
+1872=caixa de letras era muito grande para ser vista por inteiro
+1873=você pode alternar entre elas
+1874=então eu pensaria em qual número adicionado  eu não queria
+1875=asper tenta se mostrar quando  acha que você precisa dele
+1876=ele construirá uma casa no terreno vazio mais próximo nessa rua
+1877=ele construirá uma casa no terreno vazio mais próximo nessa avenida
+1878=como ficaria muito bagunçado ter todos eles trabalhando aqui em volta
+1879=robô irá então imaginar um mundo que só tenha aquela caixa
+1880=para ver como elas funcionam
+****** phrase.ini.old
+1868=agora vem algo realmente avançado
+1869=caderno estiver na primeira página
+1870=caderno um tijolinho que contenha
+1871=você provavelmente não precisará digitar
+1872=você pode chamar dusty apertando
+1873=você pode alternar entre elas
+1874=algumas figuras podem ser alteradas
+1875=algumas figuras são apenas retângulos
+1876=ela um empurrão inicial apertando
+1877=você pode apagar letras apertando
+1878=sobre abc resultará em abf
+1879=já falei para você tudo
+1880=para ver como elas funcionam
+******
+
+****** phrase.ini
+1888=pergunta minha animação já parou
+1889=diminuíla  para que você possa ver todas as letras
+1890=treineo para que ele  seja capaz de  formar
+1891=você não pode adicionar nada
+****** phrase.ini.old
+1888=pergunta minha animação já parou
+1889=se acabou de ser largado
+1890=pergunta o número do botão
+1891=você não pode adicionar nada
+******
+
+****** phrase.ini
+1893=mas esta coisa foi aspirada
+1894=ele ficará feliz com qualquer objeto que esteja no mesmo
+1895=agora vamos tentar entender quantos segundos existem em uma hora
+1896=resposta deve ser encontrada no lugar em que  está
+1897=possível abrir as portas seriais
+****** phrase.ini.old
+1893=mas esta coisa foi aspirada
+1894=caderno foi sugado por dusty
+1895=ponha algumas palavras no primeiro
+1896=ponha alguns números no primeiro
+1897=possível abrir as portas seriais
+******
+
+****** phrase.ini
+1899=eles só podem receber caixas
+1900=os robôs são bons para realizar um mesmo trabalho repetidamente
+1901=procure os  uns  no número que você precisa
+1902=quantidade de buracos do número
+****** phrase.ini.old
+1899=eles só podem receber caixas
+1900=pumpy foi sugado pelo dusty
+1901=ou figura foi largada sobre
+1902=quantidade de buracos do número
+******
+
+****** phrase.ini
+1904=toontalk teve problemas para ler
+1905=eles só conseguem fazer aquilo que você os treinou
+1906=então você ainda não nasceu
+****** phrase.ini.old
+1904=toontalk teve problemas para ler
+1905=desculpe por ficar me repetindo
+1906=então você ainda não nasceu
+******
+
+****** phrase.ini
+1910=desculpe ser um pouco enrolado
+1911=crescer ou fazer qualquer coisa que eu as programe
+1912=você só precisa limpar as coisas que irão mudar
+1913=mas esqueci de lhe dizer que  precisaremos de
+1914=os efeitos sonoros do toontalk serão executados ou não
+1915=não conseguiu encontrar algo que ele estava indo pegar
+1916=as coisas balançam quando estão prontas para serem apanhadas
+1917=turma de trabalhadores naquele caminhão construiu uma casa nova
+1918=eu ficaria de pé quando cansasse  de esperar
+1919=seguir vamos calcular quantos segundos há em um dia
+1920=relógio precisará saber quantos segundos há em um dia
+1921=eu queria saber quantos segundos de vida você tem
+1922=obrigado por vir me ajudar
+****** phrase.ini.old
+1910=desculpe ser um pouco enrolado
+1911=efeitos de força de retorno
+1912=efeito de força de retorno
+1913=você pode colocar algo sobre
+1914=estou contente em te ver
+1915=página da web do toontalk
+1916=extensão de arquivo do toontalk
+1917=texto que você quer enviar
+1918=texto que você quer ouvir
+1919=não há nenhum robô para
+1920=isto nos diz quais imagens
+1921=um efeito de força apagado
+1922=obrigado por vir me ajudar
+******
+
+****** phrase.ini
+1973=você pode adicionar letras ao
+1974=computador colocar números juntos porque ele só usa uns
+1975=tenha certeza de que elas se sobreponham um pouquinho
+1976=quando eu tiver mais coisas para falar você verá
+1977=mas está largo demais para
+1978=os robôs não conseguem se lembrar de tantas coisas
+1979=ele descobriu parte da resposta
+****** phrase.ini.old
+1973=você pode adicionar letras ao
+1974=quando você coloca uma do
+1975=não entender bem esses conceitos
+1976=ele fique menos confuso usando
+1977=mas está largo demais para
+1978=buracos cujo terceiro buraco contém
+1979=ele descobriu parte da resposta
+******
+
+****** phrase.ini
+1986=anteriormente para subtrair  quando
+1987=estado em que ele estava antes de ser esvaziado
+1988=animação sendo executada irá terminar
+****** phrase.ini.old
+1986=anteriormente para subtrair  quando
+1987=eu falarei mais sobre ninhos
+1988=animação sendo executada irá terminar
+******
+
+****** phrase.ini
+1994=pode ser guardado em caixas
+1995=estilo de letra usado em meu balão de fala
+1996=têm algum significado especial quando
+****** phrase.ini.old
+1994=pode ser guardado em caixas
+1995=você só pode largar números
+1996=têm algum significado especial quando
+******
+
+****** phrase.ini
+1997=casa em que se encontrar
+1998=robô só irá trabalhar nos objetos que forem passados
+1999=as balanças também podem ser usadas para comparar texto
+2000=pode remover as coisas que você não quiser mais
+2001=sabia que você pode se levantar do chão apertando
+2002=contagem regressiva pode ser um membro do time
+2003=que mostra em que avenida
+****** phrase.ini.old
+1997=casa em que se encontrar
+1998=ele teve problemas para soltar
+1999=se está sendo segurado por
+2000=lugar onde ele ia fazer
+2001=atrás de uma imagem chamado
+2002=foi sugada pelo aspirador dusty
+2003=que mostra em que avenida
+******
+
+****** phrase.ini
+2005=caso elas estejam vazias ou
+2006=mas ele está em uma sala tão bagunçada
+2007=me levantaria por alguns segundos para dar tempo
+2008=você  lembrou de colocar
+****** phrase.ini.old
+2005=caso elas estejam vazias ou
+2006=precisamos do número que estava
+2007=que voa fora do toontalk
+2008=você  lembrou de colocar
+******
+
+****** phrase.ini
+2012=você pode pegar algo de
+2013=as varinhas podem ser utilizadas  para duplicar
+2014=todas as coisas que estão
+2015=eles só conseguem pensar em uma coisa de
+2016=lógico dos bits do número
+2017=os outros sensores sobre os  outros zeros
+2018=estou contente que você tenha entendido como fazer
+2019=mas observe  que quando os segundos ultrapassam
+2020=agora  temos um bom timer de milissegundos
+2021=você  colocou um dos robôs  sobre
+2022=as coisas acontecem no toontalk
+2023=segundos antes de sair voando com uma mensagem
+2024=com certeza há muitos segundos em um ano
+2025=muito diferente daquele que você
+****** phrase.ini.old
+2012=você pode pegar algo de
+2013=como se fôssem números comuns
+2014=todas as coisas que estão
+2015=ficará feliz com qualquer texto
+2016=lógico dos bits do número
+2017=frequentemente eu quero um monte
+2018=quanto tempo eu demoro falando
+2019=robô executar aquilo que eu
+2020=quando ninguém  está olhando
+2021=cheio de números que são
+2022=as coisas acontecem no toontalk
+2023=uma colisão em uma não
+2024=segundo buraco deverá ter um
+2025=muito diferente daquele que você
+******
+
+****** phrase.ini
+2026=está  na mente dele
+2027=podemos calcular quantos segundos há em um ano
+2028=os resultados do último buraco
+****** phrase.ini.old
+2026=está  na mente dele
+2027=soprana  até que apareça
+2028=os resultados do último buraco
+******
+
+****** phrase.ini
+2031=para conseguir caixas com mais de
+2032=devemos tentar algo  para parar nossos robôs
+2033=casa em que ele se encontrar
+****** phrase.ini.old
+2031=para conseguir caixas com mais de
+2032=combine caixas menores largando uma sobre
+2033=casa em que ele se encontrar
+******
+
+****** phrase.ini
+2035=se eu não estiver por perto
+2036=mas desta vez teremos de  utilizar robôs
+2037=soprana  fará as coisas ficarem mais larga
+2038=botão no nariz do asper  outra vez
+2039=um bloco vazio com nada escrito será suficiente
+2040=partir do último que ele fez ou encontrou
+2041=parte do toontalk que cuida do display perdeu
+2042=caminhão não saiu para construir uma casa porque
+2043=já existem caixas demais umas dentro das outras
+2044=tamanho das letras em meus balões de fala
+2045=detector de colisão ocorrida em um movimento cima
+2046=detector de colisão ocorrida em um movimento direita
+2047=los para trabalhar em casas recém
+****** phrase.ini.old
+2035=se eu não estiver por perto
+2036=número que você quiser multiplicar por
+2037=quando ele estiver na primeira página
+2038=dusty pode remover objetos do caderno
+2039=uma boa forma de se voltar
+2040=último caderno usado voará para você
+2041=eu já contei para você tudo
+2042=texto continue em outra linha apertando
+2043=dusty para mover objetos entre casas
+2044=seus passageiros construirão uma casa nova
+2045=mais perto possível do endereço dado
+2046=que eu acabei de lhe ensinar
+2047=los para trabalhar em casas recém
+******
+
+****** phrase.ini
+2048=que eu me recordo sobre robôs
+2049=as balanças podem ser usadas para comparar coisas
+2050=tecla que acabou de ser pressionada
+2051=os timers maiores antes de colocálos sobre
+2052=número de milésimos de segundo que
+****** phrase.ini.old
+2048=que eu me recordo sobre robôs
+2049=pronto para ser agarrado ou usado
+2050=tecla que acabou de ser pressionada
+2051=se os efeitos sonoros estão ligados
+2052=número de milésimos de segundo que
+******
+
+****** phrase.ini
+2054=número de milésimos de segundo desde
+2055=um acerto em um erro apontando para
+2056=ninho que ele estava indo pegar
+2057=ou de baixo de alguma outra coisa
+2058=de aparência não podem aceitar aquele item
+2059=você não pode dividir por zero
+****** phrase.ini.old
+2054=número de milésimos de segundo desde
+2055=mas eu não estou conseguindo entender
+2056=ninho que ele estava indo pegar
+2057=você coseguiu destruir todas as casas
+2058=mesmo acontece com figuras em movimento
+2059=você não pode dividir por zero
+******
+
+****** phrase.ini
+2060=irá se alterar do mesmo modo
+2061=em que está conectado um controlador hyperbot
+2062=consegue entrar na mente  do robô
+2063=mas robôs não podem treinar robôs
+2064=nada poderá ser anexado no lado de
+2065=cidade está completamente cheia de casas
+****** phrase.ini.old
+2060=irá se alterar do mesmo modo
+2061=você não pode virar de lado
+2062=já existem figuras demais com figuras
+2063=mas robôs não podem treinar robôs
+2064=dusty foi sugado por outro aspirador
+2065=cidade está completamente cheia de casas
+******
+
+****** phrase.ini
+2067=para ouvir seus próprios efeitos sonoros
+2068=quando elas estiverem selecionadas ou na mão
+2069=anos da terra eram tão espertas
+****** phrase.ini.old
+2067=para ouvir seus próprios efeitos sonoros
+2068=ou até que ele seja aspirado
+2069=anos da terra eram tão espertas
+******
+
+****** phrase.ini
+2070=aperte esc para ficar de pé
+2071=estou contente por você ter verificado como
+2072=sua mãe ou seu pai podem lembrar
+2073=você provavelmente não sabe quando  nasceu
+2074=que antes eu estava tentando dizer
+2075=você pode ajustar os timers de horas
+2076=objeto que ele fez ou encontrou
+2077=que tal um timer de minuto agora
+2078=número mudaria  de mil em mil
+2079=depois colocaria  um dos robôs sobre
+2080=ninho ninho  antes que ele entregue
+2081=maior cidade possível pode ter até
+2082=bom quando você pode simplificar desse jeito
+2083=se meu braço não estivesse quebrado
+****** phrase.ini.old
+2070=aperte esc para ficar de pé
+2071=eu me lembro aonde nós estávamos
+2072=irá fazer digitando uma dessas letras
+2073=espero que ele seja super bom
+2074=que antes eu estava tentando dizer
+2075=na parte de baixo do balão
+2076=objeto que ele fez ou encontrou
+2077=você fez todos os desafios disponíveis
+2078=novos desafios podem ter sido adicionados
+2079=este pássaro leva mensagens de leitura
+2080=ajuda do toontalk para mais informações
+2081=maior cidade possível pode ter até
+2082=ele precisará de números para funcionar
+2083=se meu braço não estivesse quebrado
+******
+
+****** phrase.ini
+2090=você lembrou de se levantar segurando
+2091=balança deve mostrar que eles são iguais
+2092=também pensaria na  diferença entre
+****** phrase.ini.old
+2090=você lembrou de se levantar segurando
+2091=computador terá todos os números necessários
+2092=também pensaria na  diferença entre
+******
+
+****** phrase.ini
+2111=então mudála para  finalmente colocála
+2112=calcular quantos minutos existem em um dia
+2113=clique no mesmo  até que apareça
+2114=aquilo realmente estava  difícil de ver
+2115=estiver se equilibrando você poderá alterar
+2116=mas ele também precisará de letras pequenas
+2117=para transformar um dos ds em um
+2118=os primeiros dois números são multiplicados
+****** phrase.ini.old
+2111=então mudála para  finalmente colocála
+2112=nele permanecerá mesmo que você desligue
+2113=está levando um tempo surpreendentemente longo
+2114=funcionamento diferente se clicar no botão
+2115=estiver se equilibrando você poderá alterar
+2116=você pode descobrir quantos buracos tem
+2117=assim que visse um bloco com
+2118=os primeiros dois números são multiplicados
+******
+
+****** phrase.ini
+2119=seu timer de milissegundos  sobre
+2120=robô fica atrapalhado quando você não usa
+2121=carga do caminhão com as mãos
+****** phrase.ini.old
+2119=seu timer de milissegundos  sobre
+2120=tem que ter menos do que
+2121=carga do caminhão com as mãos
+******
+
+****** phrase.ini
+2123=problemas no envio de coisas pela
+2124=parede verá que já conseguimos fazer metade
+2125=com certeza os robôs são muito prestativos
+2126=que controlam as aparências das coisas
+2127=esperar até que se transforme em um
+2128=nem sempre faz todas as mágicas
+****** phrase.ini.old
+2123=problemas no envio de coisas pela
+2124=que parou pelo desligamento da força
+2125=toontalk teve problemas ao procurar um
+2126=que controlam as aparências das coisas
+2127=você tenha nascido  antes de
+2128=nem sempre faz todas as mágicas
+******
+
+****** phrase.ini
+2130=foi treinado para dar algo para
+2131=você poderia entrar na casa ao lado
+2132=mas nenhum dos números deveria estar mudando
+2133=você pode pegar coisas apontando para elas
+2134=não foi possível reconhecer algo em
+****** phrase.ini.old
+2130=foi treinado para dar algo para
+2131=os caminhões andam só se estiverem
+2132=que eu faço quando quero ensinar
+2133=as coisas que estiverem embaixo do
+2134=não foi possível reconhecer algo em
+******
+
+****** phrase.ini
+2135=você pode ir para uma página
+2136=eu não sabia que as crianças de
+2137=quem me dera saber como ajudar você
+2138=basta apontar um pouco para baixo dele
+****** phrase.ini.old
+2135=você pode ir para uma página
+2136=passarinho está muito ocupado para aceitar
+2137=suas ferramentas conseguirão sair sem nenhum arranhão
+2138=basta apontar um pouco para baixo dele
+******
+
+****** phrase.ini
+2139=última coisa que ele fez ou encontrou
+2140=para enviar este programa para outra pessoa
+2141=número ficaria grande ou pequeno demais para
+2142=você só pode adicionar texto ou números
+2143=mas as mudanças não serão efetivadas até
+2144=sensor teve um problema fazendo aritmética porque
+2145=capaz de fazer coisas muito mais complicadas
+****** phrase.ini.old
+2139=última coisa que ele fez ou encontrou
+2140=eu vou ficar por perto para ajudar
+2141=número ficaria grande ou pequeno demais para
+2142=basta soltar algum texto ou figura lá
+2143=robôs podem trabalhar no verso das figuras
+2144=endereço será mostrado assim que você largá
+2145=capaz de fazer coisas muito mais complicadas
+******
+
+Resync failed.  Files are too different
+****** phrase.ini
+2147=mouse do computador está se movendo para
+2148=robô não consegue lembrar mais do que
+****** phrase.ini.old
+2147=mouse do computador está se movendo para
+2148=ao mesmo tempo em que aponta para
+2149=robô não consegue lembrar mais do que
+2150=sensor teve um problema fazendo aritmética porque
+2151=balanças não podem ser inseridas em figuras
+2152=figuras não viradas não podem ser adicionadas
+2153=mas as mudanças não serão efetivadas até
+2154=mas eu estou tendo dificuldades para entender
+2155=você só pode adicionar texto ou números
+2156=dusty devolva as coisas que ele aspirou
+2157=este controle não pode ser virado para
+2158=para enviar este programa para outra pessoa
+2159=eu sei que pareço um disco quebrado
+2160=quem me dera saber como ajudar você
+2161=eu não sabia que as crianças de
+2162=você pode pegar coisas apontando para elas
+2163=eu vou falar um pouco mais sobre
+2164=funcionamento do pumpy apertando uma dessas teclas
+2165=mas eu não conheço nenhum mês chamado
+2166=mas nenhum dos números deveria estar mudando
+2167=que fizer para alguém em outro país
+2168=do efeito da força de retorno chamado
+2169=mensagens de arquivo devem conter caixas com
+2170=este pássaro irá receber outro pássaro para
+2171=você poderia entrar na casa ao lado
+2172=esperar até que se transforme em um
+2173=computador vai precisar de números ainda maiores
+2174=com certeza os robôs são muito prestativos
+2175=parede verá que já conseguimos fazer metade
+2176=robô fica atrapalhado quando você não usa
+2177=usando os números que você me trouxe
+2178=mais fácil iniciar com os números grandes
+2179=para transformar um dos ds em um
+2180=mas ele também precisará de letras pequenas
+2181=aquilo realmente estava  difícil de ver
+2182=clique no mesmo  até que apareça
+2183=calcular quantos minutos existem em um dia
+2184=balança deve mostrar que eles são iguais
+2185=bom quando você pode simplificar desse jeito
+2186=ninho ninho  antes que ele entregue
+2187=depois colocaria  um dos robôs sobre
+2188=número mudaria  de mil em mil
+2189=que tal um timer de minuto agora
+2190=você pode ajustar os timers de horas
+2191=você provavelmente não sabe quando  nasceu
+2192=sua mãe ou seu pai podem lembrar
+2193=estou contente por você ter verificado como
+2194=uma página que tenha texto largando sobre
+2195=quando elas estiverem selecionadas ou na mão
+2196=nada poderá ser anexado no lado de
+2197=consegue entrar na mente  do robô
+2198=bombas dentro do caderno antes de testá
+2199=em que está conectado um controlador hyperbot
+2200=de aparência não podem aceitar aquele item
+2201=os sons do toontalk podem ser encontrados
+2202=não fazem nada enquanto você estiver segurando
+2203=casas no caderno de figuras que está
+2204=uma casa ou atrás de uma imagem
+2205=ou de baixo de alguma outra coisa
+2206=você pode colocar caixas vazias dentro do
+2207=um acerto em um erro apontando para
+2208=arquivo de figuras que será transformado em
+2209=os timers maiores antes de colocálos sobre
+2210=você pode combinar duas caixas largando uma sobre
+2211=os passageiros do caminhão construirão uma casa como
+2212=mais perto possível da casa onde você estiver
+2213=as balanças podem ser usadas para comparar coisas
+2214=detector de colisão ocorrida em um movimento direita
+2215=detector de colisão ocorrida em um movimento cima
+2216=tamanho das letras em meus balões de fala
+2217=direita ou zero se ele não possui rotação
+2218=baixo ou zero se ele não possui rotação
+2219=trás ou zero se ele não possui rotação
+2220=já existem caixas demais umas dentro das outras
+2221=you are now in the robot's thought bubble
+2222=caminhão não saiu para construir uma casa porque
+2223=este tem um monte de opções do sistema
+2224=você não pode guardar nada no caderno prncipal
+2225=figura que foi largada está esperando por bammer
+2226=parte do toontalk que cuida do display perdeu
+2227=para mostrar suas próprias figuras dentro do toontalk
+2228=eu nunca ouvi falar de uma data como
+2229=partir do último que ele fez ou encontrou
+2230=talvez você deva fazer algo especial lá dentro
+2231=um bloco vazio com nada escrito será suficiente
+2232=botão no nariz do asper  outra vez
+2233=computador deve ter todos os números que precisava
+2234=soprana  fará as coisas ficarem mais larga
+2235=mas desta vez teremos de  utilizar robôs
+2236=devemos tentar algo  para parar nossos robôs
+2237=podemos calcular quantos segundos há em um ano
+2238=com certeza há muitos segundos em um ano
+2239=segundos antes de sair voando com uma mensagem
+2240=você  colocou um dos robôs  sobre
+2241=agora  temos um bom timer de milissegundos
+2242=mas observe  que quando os segundos ultrapassam
+2243=estou contente que você tenha entendido como fazer
+2244=os outros sensores sobre os  outros zeros
+2245=você pode combinar duas figuras soltando uma sobre
+2246=há um monte de coisas do toontalk que
+******
+
+

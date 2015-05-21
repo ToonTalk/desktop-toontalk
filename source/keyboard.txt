@@ -1,0 +1,75 @@
+ToonTalk Keyboard commands.
+
+None of them are case sensitive.
+
+Any button will leave the opening screen/titles.
+
+Any button will pause a demo.
+
+Arrow keys for movement. (in all contexts)
+
+Flying and Landing:
+U toly up (higher)
+D to fly down
+
+Walking outside:
+H to bring the helicopter.
+
+Any button will sit you down in the room.
+
+On the floor or in a thought bubble:
+Escape to stand.
+
+If hand is empty:
+U to stand.
+P to pick up item under finger.
+F to pick up and flip.
+Note these shortcuts do not work if pointing to something (unless -b 0 is used).
+
+If holding anything (except text pads -- for them you need mouse or tricks).
+F to flip it over (if possible).
+D to drop it.
+
+If holding any tool:
+Space bar to turn it on and off.
+(The wand "turns itself off" after each use.)
+
+If holding Dusty:
+S to suck up things. (default)
+B to blank things.
+U to spit things out. (Undo)
+
+If holding Pumpy:
+B to make things bigger. (default)
+T to make things taller.
+W to make things wider.
+L to make things smaller. (little)
+N to make things narrower.
+S to make things shorter.
+
+If holding the Magic Wand:
+O to make a copy of the original of the item under the tip of the wand.
+C to make a copy of the item.
+
+Any key will set off the bomb if holding it.
+
+If holding a notebook or pointing to a notebook:
+- or Backspace to flip to previous page (last page if on first page).
++ or Space bar to flip to next page.
+0-9 to enter page number
+
+If holding a number or pointing to a number:
+0-9,+,-,/,*,x,%,^,&,|,= to enter number and operation.
+F to flip
+
+If holding a text pad:
+(or if pointing to a text pad -- unless -b 0)
+All keys (except extended keys like the function keys) add to the text.
+Except Backspace which removes last letter.
+
+If holding a picture or pointing to:
++ or Space to switch to next cycle or color or element.
+- or Backspace to go back
+F to flip
+
+

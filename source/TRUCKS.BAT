@@ -1,0 +1,12 @@
+call resiz256 trkside1 1 1 m25 1
+call resiz256 trkside2 1 1 m25 1
+call resiz256 trkside3 1 1 m25 1
+call resiz256 trkside4 1 1 m25 1
+call resiz256 trkside5 1 1 m25 1
+call resiz256 etrksid1 1 1 m25 1
+call resiz256 etrksid2 1 1 m25 1
+call resiz256 etrksid3 1 1 m25 1
+call resiz256 etrksid4 1 1 m25 1
+call resiz256 etrksid5 1 1 m25 1
+call resiz256 ntrksid1 1 1 m25 1
+call resiz256 strksid1 1 1 m25 1

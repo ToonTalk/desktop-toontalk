@@ -1,0 +1,109 @@
+#include "toontalk.h"
+#include <winuser.h> // new on 270104
+
+// following new as of 030304
+1 VERSIONINFO 
+FILEVERSION 1,50,3182,00
+PRODUCTVERSION 3,00,0,0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0xaL
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904e4"
+  {
+   VALUE "Comments", "This implements the Swedish ToonTalk string table. Copyright \251 Ken Kahn and Ekelunds AB. 1992-2006. All rights reserved.\0"
+   VALUE "CompanyName", "Animated Programs\0"
+   VALUE "FileDescription", "ToonTalk\0"
+   VALUE "FileVersion", "50.3183.0\0"
+   VALUE "InternalName", "Version 22 string table - Swedish\0"
+   VALUE "LegalCopyright", "Copyright \251 Ken Kahn and Ekelunds AB. 1992-2006\0"
+   VALUE "LegalTrademarks", "ToonTalk is a registered trademark of Animated Programs\0"
+   VALUE "OriginalFilename", "SeVer22.dll\0"
+   VALUE "ProductName", "ToonTalk 3\0"
+   VALUE "ProductVersion", "50.31832.0\0"
+  }
+ }
+}
+
+ASK_NAME_DIALOG DIALOG 6, 47, 181, 66
+STYLE DS_SYSMODAL | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Välkommen till ToonTalk"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "", IDC_EDIT1, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 38, 14, 104, 10
+ CONTROL "Hej! Skriv ditt namn här:", -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 32, 2, 117, 8
+ CONTROL "Och vilket utseende vill du ha?", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 40, 28, 100, 8
+ CONTROL "Långt hår", IDC_BUTTON1, "button", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 4, 44, 50, 14
+ CONTROL "Keps", IDC_BUTTON2, "button", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 68, 44, 40, 14
+ CONTROL "Skallig", IDC_BUTTON3, "button", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 174, 44, 50, 14
+}
+
+
+LOADING_WAIT DIALOG 24, 19, 77, 22
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_THICKFRAME
+CAPTION "Läser"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Laddar. Var god vänta.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 4, 6, 88, 9
+}
+
+//NOTEBOOK_PICTURES_OLD RCDATA "\tt\english\toontalk.o2"
+
+NOTEBOOK_PICTURES RCDATA "\\tt\\swedish\\toontalk.2"
+NOTEBOOK_GLOBAL_REMOTES RCDATA "\\tt\\swedish\\toontalk.4"
+NOTEBOOK_EXAMPLES RCDATA "\\tt\\swedish\\toontalk.6"
+NOTEBOOK_SOUNDS RCDATA "\\tt\\swedish\\toontalk.8"
+NOTEBOOK_OPTIONS RCDATA "\\tt\\swedish\\toontalk.10"
+NOTEBOOK_LOCAL_REMOTES RCDATA "\\tt\\swedish\\toontalk.rem"
+NOTEBOOK_MAIN RCDATA "\\tt\\swedish\\toontalk.bok"
+
+//NOTEBOOK_NICKY_SALLY RCDATA "\tt\nickysal.bok" // -- needed for the third part of the Pong demo
+
+PAUSED_NO_SAVE_DIALOG DIALOG 3, 31, 215, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk är stannat"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Tillbaka till ToonTalk", IDCONTINUETOONTALK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 0, 35, 70, 14
+ CONTROL "Komma tillbaka senare", IDMINIMIZETOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 35, 75, 14
+ CONTROL "Lämna ToonTalk", IDQUITTOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 152, 35, 61, 14
+ CONTROL "ToonTalk har blivit stannat. ", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 6, 9, 191, 19
+}
+
+PAUSED_DIALOG DIALOG 2, 31, 225, 67
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk Paused"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Tillbaka till ToonTalk", IDCONTINUETOONTALK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 3, 20, 73, 14
+ CONTROL "Komma tillbaka senare", IDMINIMIZETOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 80, 20, 76, 14
+ CONTROL "Lämna ToonTalk", IDQUITTOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 160, 20, 61, 14
+ CONTROL "ToonTalk har blivit stannat. ", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 4, 4, 191, 12
+ CONTROL "Spara Allt", ID_SAVE_EVERYTHING, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 4, 44, 216, 12
+}
+
+INTERRUPTED_DIALOG DIALOG 2, 31, 178, 51
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk är stannat"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Komma tillbaka senare", IDMINIMIZETOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 52, 28, 75, 14
+ CONTROL "ToonTalk har blivit stannat. ", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 6, 9, 191, 19
+}
+
+DEMO_PAUSED_DIALOG DIALOG 2, 31, 204, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk Demo är stannat"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Tillbaka till Demo", IDCONTINUETOONTALK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 5, 35, 63, 14
+ CONTROL "Ta kontrollen", IDQUITDEMO, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 35, 59, 14
+ CONTROL "Lämna Demo", IDQUITTOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 138, 35, 61, 14
+ CONTROL "ToonTalk Demo har stannats.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 46, 11, 111, 19
+}
+
+

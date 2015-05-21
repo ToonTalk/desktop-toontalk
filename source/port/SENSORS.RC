@@ -1,0 +1,201 @@
+
+// this file generates sensors in different languages
+
+#define AMERICAN 0
+#define SWEDISH 1
+#define BRAZILIAN_PORTUGUESE 2
+#define GERMAN 3
+
+IDS_YES,
+ "yes"
+IDS_NO,
+ "no"
+
+// the remote control for the visibility of a picture
+// can display one of the following states:
+
+IDS_VISIBLE_REMOTE_STATE1,
+   "SEE ALL"
+IDS_VISIBLE_REMOTE_STATE2,
+   "SEE SOME"
+IDS_VISIBLE_REMOTE_STATE3,
+   "SEE NOTHING"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME,
+ "Home"
+IDS_VK_END,
+ "End"
+IDS_VK_PRIOR,
+ "Page up"
+IDS_VK_NEXT,
+ "Page down"
+IDS_VK_LEFT,
+ "Left arrow"
+IDS_VK_RIGHT,
+ "Right arrow"
+IDS_VK_UP,
+ "Up arrow"
+IDS_VK_DOWN,
+ "Down arrow"
+IDS_VK_DELETE,
+ "Delete"
+IDS_VK_INSERT,
+ "Insert"
+           
+IDS_OTHER_SPECIAL_KEY,
+ "Special key"
+IDS_SAMPLE_CONTROL_LETTER,
+ "Control-a"
+IDS_BACKSPACE_KEY,
+ "Backspace key" // key added on 5/22/98
+IDS_ENTER_KEY,
+ "Enter"
+IDS_ESCAPE_KEY,
+ "Escape"
+IDS_SOME_KEY,
+ "Some key"
+
+// now the Swedish version 
+
+IDS_YES+(SWEDISH*2),
+"ja"
+IDS_NO+(SWEDISH*2),
+"nej"
+
+IDS_VISIBLE_REMOTE_STATE1+(SWEDISH*3),
+"SE ALLT"
+IDS_VISIBLE_REMOTE_STATE2+(SWEDISH*3),
+"SE LITE"
+IDS_VISIBLE_REMOTE_STATE3+(SWEDISH*3),
+"INTE SE NÅGONTING"
+
+IDS_VK_HOME+(SWEDISH*16),
+"Hem"
+IDS_VK_END+(SWEDISH*16),
+"Slut"
+IDS_VK_PRIOR+(SWEDISH*16),
+"Page up"
+IDS_VK_NEXT+(SWEDISH*16),
+"Page down"
+IDS_VK_LEFT+(SWEDISH*16),
+"Pil vänster"
+IDS_VK_RIGHT+(SWEDISH*16),
+"Pil höger"
+IDS_VK_UP+(SWEDISH*16),
+"Pil upp"
+IDS_VK_DOWN+(SWEDISH*16),
+"Pil ner"
+IDS_VK_DELETE+(SWEDISH*16),
+"Delete"
+IDS_VK_INSERT+(SWEDISH*16),
+"Insert"
+IDS_OTHER_SPECIAL_KEY+(SWEDISH*16),
+"Speciell tangent"
+IDS_SAMPLE_CONTROL_LETTER+(SWEDISH*16),
+"Kontroll-a"
+IDS_BACKSPACE_KEY+(SWEDISH*16),
+"Sudd-tangenten"
+IDS_ENTER_KEY+(SWEDISH*16),
+"Enter"
+IDS_ESCAPE_KEY+(SWEDISH*16),
+"Escape"
+IDS_SOME_KEY+(SWEDISH*16),
+"Någon tangent"
+
+
+IDS_YES+(BRAZILIAN_PORTUGUESE*2),
+ "sim"
+IDS_NO+(BRAZILIAN_PORTUGUESE*2),
+ "não"
+
+IDS_VISIBLE_REMOTE_STATE1+(BRAZILIAN_PORTUGUESE*3),
+        "VER TUDO"
+IDS_VISIBLE_REMOTE_STATE2+(BRAZILIAN_PORTUGUESE*3),
+        "VER PARTE" 
+IDS_VISIBLE_REMOTE_STATE3+(BRAZILIAN_PORTUGUESE*3),
+        "NÃO VER"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME+(BRAZILIAN_PORTUGUESE*16),
+ "Home"
+IDS_VK_END+(BRAZILIAN_PORTUGUESE*16),
+ "End"
+IDS_VK_PRIOR+(BRAZILIAN_PORTUGUESE*16),
+ "Page up"
+IDS_VK_NEXT+(BRAZILIAN_PORTUGUESE*16),
+ "Page down"
+IDS_VK_LEFT+(BRAZILIAN_PORTUGUESE*16),
+ "Seta para a esquerda" 
+IDS_VK_RIGHT+(BRAZILIAN_PORTUGUESE*16),
+ "Seta para a direita "
+IDS_VK_UP+(BRAZILIAN_PORTUGUESE*16),
+ "Seta para cima"
+IDS_VK_DOWN+(BRAZILIAN_PORTUGUESE*16),
+ "Seta para baixo"
+IDS_VK_DELETE+(BRAZILIAN_PORTUGUESE*16),
+ "Delete"
+IDS_VK_INSERT+(BRAZILIAN_PORTUGUESE*16),
+ "Insert"
+
+IDS_OTHER_SPECIAL_KEY+(BRAZILIAN_PORTUGUESE*16),
+ "Tecla especial"
+IDS_SAMPLE_CONTROL_LETTER+(BRAZILIAN_PORTUGUESE*16),
+ "Control-A"
+IDS_BACKSPACE_KEY+(BRAZILIAN_PORTUGUESE*16),
+ "Backspace"
+IDS_ENTER_KEY+(BRAZILIAN_PORTUGUESE*16),
+ "Enter"
+IDS_ESCAPE_KEY+(BRAZILIAN_PORTUGUESE*16),
+ "Escape"
+IDS_SOME_KEY+(BRAZILIAN_PORTUGUESE*16),
+ "Alguma tecla"        
+
+IDS_YES+(GERMAN*2),
+ "Ja"
+IDS_NO+(GERMAN*2),
+ "Nein"
+
+
+IDS_VISIBLE_REMOTE_STATE1+(GERMAN*3),
+        "Alles Sehen"
+IDS_VISIBLE_REMOTE_STATE2+(GERMAN*3),
+        "Einiges Sehen"
+IDS_VISIBLE_REMOTE_STATE3+(GERMAN*3),
+        "Nichts Sehen"
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME+(GERMAN*16),
+ "Home"
+IDS_VK_END+(GERMAN*16),
+ "Ende"
+IDS_VK_PRIOR+(GERMAN*16),
+ "Seite nach oben"
+IDS_VK_NEXT+(GERMAN*16),
+ "Seite nach unten"
+IDS_VK_LEFT+(GERMAN*16),
+ "Pfeil links"
+IDS_VK_RIGHT+(GERMAN*16),
+ "Pfeil rechts"
+IDS_VK_UP+(GERMAN*16),
+ "Pfeil oben"
+IDS_VK_DOWN+(GERMAN*16),
+ "Pfeil unten"
+IDS_VK_DELETE+(GERMAN*16),
+ "Löschen"
+IDS_VK_INSERT+(GERMAN*16),
+ "Einfügen"
+           
+IDS_OTHER_SPECIAL_KEY+(GERMAN*16),
+ "Spezial-Taste"
+IDS_SAMPLE_CONTROL_LETTER+(GERMAN*16),
+ "Strg-a"
+IDS_BACKSPACE_KEY+(GERMAN*16),
+ "Zurück"
+IDS_ENTER_KEY+(GERMAN*16),
+ "Eingabe"
+IDS_ESCAPE_KEY+(GERMAN*16),
+ "Esc"
+IDS_SOME_KEY+(GERMAN*16),
+ "Eine Taste"
+        

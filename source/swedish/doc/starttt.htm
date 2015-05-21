@@ -1,0 +1,82 @@
+  <html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Vad vill du g&ouml;ra i ToonTalk?</title>
+		<script id="clientEventHandlersJS" language="javascript">
+function sendBack(message) {
+    window.returnValue = message; 
+    window.close();
+}
+		</script>
+		<link rel="stylesheet" type="text/css" href="../dialog.css">
+	</head>
+
+	<body background="../wallpap.jpg">
+		<center>
+			<table id="wholeTable" border="0" width="300" align="center">
+				<tr>
+					<td width="280">
+						<center>
+							<input type="image" name="Play Puzzle Game" src="../playpzl.jpg" width="256" height="192" onclick="sendBack('-next_puzzle 1')"></center>
+					</td>
+					<td width="33%">
+						<table id="DemoTable" border="0" cellpadding="5" cellspacing="2" align="center">
+							<tr>
+								<td><input type="image" src="../intro8.gif" width="80" height="60" onclick="sendBack('-I intro')"></td>
+								<td><input type="image" src="../explode8.gif" width="80" height="60" onclick="sendBack('-I explode')"></td>
+							</tr>
+							<tr>
+								<td><input type="image" src="../swap8.gif" width="80" height="60" onclick="sendBack('-I swap')"></td>
+								<td><input type="image" src="../pong1_8.gif" width="80" height="60" onclick="sendBack('-I pongact1')"></td>
+							</tr>
+							<tr>
+								<td><input type="image" src="../pong2_8.gif" width="80" height="60" onclick="sendBack('-I pongact2')"></td>
+								<td><input type="image" src="../pong3_8.gif" width="80" height="60" onclick="sendBack('-I pongact3')"></td>
+							</tr>
+							<tr>
+								<td><input type="image" src="../fibs8.gif" width="80" height="60" onclick="sendBack('-I fibs')"></td>
+								<td><input type="image" src="../fact8.gif" width="80" height="60" onclick="sendBack('-I fact')"></td>
+							</tr>
+							<tr>
+								<td><input type="image" src="../account8.gif" width="80" height="60" onclick="sendBack('-I account')"></td>
+								<td><input type="image" src="../append8.gif" width="80" height="60" onclick="sendBack('-I append')"></td>
+							</tr>
+						</table>
+					</td>
+					<td width="34%"><input type="image" src="../freeplay.jpg" width="256" height="192" onclick="sendBack('-next_puzzle 0')"></td>
+				</tr>
+				<tr>
+					<td width="280">
+						<center>
+							<input type="button" value="G&ouml;ra Uppdrag" onclick="sendBack('-next_puzzle 1')"></center>
+					</td>
+					<td width="33%">
+						<center>
+							<input type="button" value="Se Demos" onclick="sendBack('-next_dialog pickdemo.htm')"></center>
+					</td>
+					<td width="34%">
+						<center>
+							<input type="button" value="Leka fritt" onclick="sendBack('-next_puzzle 0')"></center>
+					</td>
+				</tr>
+				<tr height="60">
+					<td width="280" height="60" valign="bottom">
+						<center>
+							<input type="button" value="V&auml;lja Alternativ" onclick="sendBack('-next_dialog option1.htm')"></center>
+					</td>
+					<td width="33%" height="60" valign="bottom">
+						<center>
+							<input type="button" value="Om ToonTalk" onclick="sendBack('-next_dialog about.htm')"></center>
+					</td>
+					<td width="34%" height="60" valign="bottom">
+						<center>
+							<input type="button" value="Hj&auml;lp" onclick="sendBack('-help 1')"></center>
+					</td>
+				</tr>
+			</table>
+		</center>
+	</body>
+
+</html>

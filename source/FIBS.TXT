@@ -1,0 +1,6 @@
+This is a replay of when I trained a robot to produce a
+sequence of Fibonacci numbers.  Each number is the sum
+of the two numbers to its right.  Another robot was trained
+to start things off with one and one.
+If you want to play with these robots you'll find them in the
+notebook of examples on page 6.

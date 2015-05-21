@@ -1,0 +1,151 @@
+Hi.  Happy New Year!  I hope you had a nice vacation.  
+
+The fellow who translated ToonTalk to Swedish suggested that
+it might be useful for you all to communicate via email.  If
+that's fine with you I'll send your email address to the others
+and if its ok with the others I'll send you their email addresses.
+
+I was working on generating the Portuguese version of the program
+that starts ToonTalk (gives the user a choice of playing the game,
+free play or demos) but I couldn't find the file.  Just in case, I am
+attaching the file again to the end of this message.  It is an RC
+file where again only the parts within "..." need be translated.
+
+Also the following 3 sentences are spoken by ToonTalk.  If you could
+record someone saying them as a WAV file that would be great.
+
+Sorry, but the narration for this demo has not been installed.
+OK.
+OK, I'll pick one.
+
+If I have all the files I need I should be able to make and send you
+a CDROM next week.  How's that?
+
+Thanks again,
+
+  -ken
+
+----------------
+sttbr.rc (originally sttus.rc)
+
+//Microsoft Visual C++ generated resource script.
+//
+//#define BITMAP_4	4
+//#define BITMAP_3	3
+
+#include "..\starttt.rch"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "..\starttt.h"
+#include "ver.h"
+
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""AutoRun.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+{
+ IDM_CONTINUE, "Free Play"
+ IDM_SEE_DEMOS, "See Demos"
+ IDM_RUN_PUZZLES, "Play Game"
+ IDS_NARRATION_FILE_SUFFIX, "SPK"
+ IDS_SPEAKERS_ON,
+   "Please make sure the computer's speakers are on.  ToonTalk demos are much easier to understand with narration."
+
+}
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+
+STRINGTABLE
+{
+ IDS_INTRO_DEMO, "Introductory Tour"
+ IDS_EXPLODE_DEMO, "Exploding Houses Demo"
+ IDS_SWAP_DEMO, "Swap if Bigger Demo"
+ IDS_PONG1_DEMO, "Build Ping Pong (Part 1)"
+ IDS_PONG2_DEMO, "Build Ping Pong (Part 2)"
+ IDS_PONG3_DEMO, "Build Ping Pong (Part 3)"
+ IDS_FIBONACCI_DEMO, "Fibonacci Numbers Demo"
+ IDS_FACTORIAL_DEMO, "Factorial Demo"
+ IDS_BANK_DEMO, "Bank Account Demo"
+ IDS_APPEND_DEMO, "Append Lists Demo"
+// IDS_EXPLODE_INSTRUCTIONS, "Build your own exploding bricks"
+ IDS_PLAY_PUZZLE_GAME, "Play Puzzle Game"
+ IDS_FREE_PLAY, "Free Play"
+ IDS_CONFIRM_PRINT, "The instructions can be viewed and printed by Microsoft's Word Viewer.  (Colors may look wrong, but it should print right.)  Ready to view the instructions?"
+ IDS_CONFIRM_PRINT2, "Ready for the other half of the instructions?"
+ IDS_WINDOW_TITLE, "Start ToonTalk"
+ IDS_FORGET_IT, "Quit"
+
+// not to be translated:
+ IDS_INTRO_DEMO_FILE, "Intro"
+ IDS_EXPLODE_DEMO_FILE, "Explode"
+ IDS_SWAP_DEMO_FILE, "Swap"
+ IDS_PONG1_DEMO_FILE, "PongAct1"
+ IDS_PONG2_DEMO_FILE, "PongAct2"
+ IDS_PONG3_DEMO_FILE, "PongAct3"
+ IDS_FIBONACCI_DEMO_FILE, "Fibs"
+ IDS_FACTORIAL_DEMO_FILE, "Fact"
+ IDS_BANK_DEMO_FILE, "Account"
+ IDS_APPEND_DEMO_FILE, "Append"
+// IDS_EXPLODE_INSTRUCTIONS_FILE1, "explode1.doc"
+// IDS_EXPLODE_INSTRUCTIONS_FILE2, "explode2.doc"
+}
+
+
+DEMOFREE16 BITMAP "dmofre16.bmp"
+PICKONE16 BITMAP "pckdm16.bmp"
+DEMOFREE BITMAP "demofree.bmp"
+PICKONE BITMAP "pickone.bmp"
+NOSPEAK_WAVE RCDATA "..\english\nospeak.wav"
+ILL_PICK_WAVE RCDATA "..\english\pickone.wav"
+OK_WAVE RCDATA "..\english\ok.wav"
+

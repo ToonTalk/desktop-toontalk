@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Att v&auml;lja r&ouml;st i ToonTalk</title>
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script language="javascript" src="../common.js"></script>
+		<script id="clientEventHandlersJS" language="javascript">
+var oneVoiceInstalledString = "Only one voice has been installed."; // needs translation
+var voiceWantedString = "I want ToonTalk to use the voice named ";
+var noVoicesInstalledString = "No voices have been installed on this computer that ToonTalk can use.";
+var nextDialog = "soundfx.htm";
+var category = "Voice";
+		</script>
+		<link rel="stylesheet" type="text/css" href="../dialog.css">
+	</head>
+
+	<body>
+		Vill du &auml;ndra den r&ouml;st ToonTalk anv&auml;nder?
+		<p>
+		<form name="Buttons" id="Form1">
+		<script><!--
+var availableVoicesString = currentParameter("Voices");
+            if (availableVoicesString == "" || availableVoicesString == null) {
+               document.writeln("<p>" + noVoicesInstalledString + "</p>");
+            } else { 
+               var availableVoices = availableVoicesString.split('{');
+               for (var i = 0; i < availableVoices.length; i++) {
+                  document.writeln('<P><INPUT id="Radio1" type="radio" name="RadioGroup" value="' + (i+1) + '"');
+                  if (i == 0 && availableVoices.length == 1) { // first one check if only one
+                     document.writeln(" CHECKED");
+                  }; 
+                  document.writeln('>&nbsp;' + voiceWantedString + availableVoices[i] + '.</P>');
+               };
+               if (availableVoices.length == 1) {
+                  document.writeln(oneVoiceInstalledString);
+               };
+           };
+// -->
+		</script>
+		</P>
+		</form>
+		<p>ToonTalk kan anv&auml;nda olika r&ouml;ster som finns installerade p&aring; din dator. Detta  &auml;ndrar den r&ouml;st Marty anv&auml;nder.</p>
+		<p>
+		<script language="javascript" src="BNCD.js"></script>
+	</body>
+
+</html>

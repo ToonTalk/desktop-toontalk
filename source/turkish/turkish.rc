@@ -1,0 +1,4394 @@
+//####################
+// This is not the complete file. Sorry for the mess.
+// I have put "..." to denote some sentences should be divided accordingly.
+// Some sentences might not make any sense in the end at all.
+// Since I have initialy used search-replace command , you could see some Turkish words
+// inside the sentences waiting to be translated.
+// I have found Turkish correspondence for words like
+// Dusty ->Tozcuk ...
+// Since I could not find the file  "string.h", I could not compile it!
+// That is all for now.
+//####################
+// Copyright (c) 1992,1997. Ken Kahn, Animated Programs, All rights reserved
+
+#include "strings.h"
+
+// To translate this file simply replace the items within quotes.
+// leave the upper case items alone.
+// Anything following two /s is just a comment and can be ignored.
+// Spaces within quotes are important and should be retained.
+
+
+STRINGTABLE {
+
+ IDS_TOOLBOX_FROM_SIDE,
+   "Tooly - yandan"
+//   "Tooly from side"
+ IDS_TOOLBOX_FROM_ABOVE,
+   "Tooly - yukaridan"
+//   "Tooly from above"
+ IDS_PERSON_WALKING,
+   "bir kisi yuruyor"
+//   "a person walking"
+ IDS_WIRE,
+   "bir tel"
+//   "a wire"
+ IDS_HELICOPTER_FLYING,
+   "bir helikopter ucuyor"
+//   "a helicopter flying"
+ IDS_PICT_FRAME,
+  "bir resim cercevesi"
+//  "a picture frame"
+ IDS_HELICOPTER_LANDING,
+  "bir helikopter iniyor"
+//  "a helicopter landing"
+ IDS_PERSON_SITTING,
+   "bir kisi oturuyor"
+//   "a person sitting"
+ IDS_TALL_HOUSE_ABOVE,
+   "yuksek bina - yukaridan"
+//   "the tall house from above"
+ IDS_TALL_HOUSE_SIDE,
+  "Yuksek bina- yandan"
+//  "the tall house from side"
+ IDS_TALL_HOUSE_DOOR,
+   " yuksek binaya bakan kapi"
+//   "the door of the tall house"
+ IDS_BIG_HOUSE_DOOR,
+  " buyuk binaya bakan kapi"
+//  "the door of the big house"
+ IDS_NUMBER_PAD,
+   "bir sayi pad"
+//   "a number pad"
+ IDS_SCALE,
+  "bir olcek"
+//  "a scale"
+ IDS_VACUUM,
+   "Tozcuk"
+//   "Dusty"
+ IDS_EXPANDER,
+   "Pompacik"
+//   "Pumpy"
+ IDS_COPIER,
+   "bir buyulu sopa"
+//   "a magic wand"
+ IDS_THOUGHT_BUBBLE,
+  "bir dusunce kopugu"
+//  "a thought bubble"
+ IDS_ROBOT,
+   "bir robot"
+//   "a robot"
+ IDS_NEST,
+   "bir yuva"
+//   "a nest"
+ IDS_BIRD,
+   "bir kus"
+//   "a bird"
+ IDS_BOMB,
+  "bir bomba"
+//  "a bomb"
+ IDS_NOTEBOOOK,
+  "bir defter"
+//    "a notebook"
+ IDS_BOX,
+   "bir kutu"
+//    "a box"
+ IDS_MOUSE_WITH_HAMMER,
+   "cekicli bir fare"
+//     "a mouse with a hammer"
+ IDS_ARM,
+  "bir kol"
+//   "an arm"
+ IDS_HAND,
+  "bir el"
+//    "a hand"
+ IDS_HAND_HOLDING_WAND,
+  "buyucu sopasi tutan bir el"
+//   "a hand holding a magic wand"
+// IDS_PICTURES_SPRITE,
+//   "some resim or other"
+ IDS_PUMP_BUTTON, // new 10/19
+   "pompa dugmeli bir bisiklet"
+   //   "a bike pump button"
+ IDS_HEAD_WITH_HAIR,
+   "sacli bir kafa"
+  //    "a head with hair"
+ IDS_HEAD_WITH_HAT,
+   "sapkali bir kafa"
+ //    "a head with a hat"
+// IDS_PLATFORM,
+//   "bir platform"
+ IDS_VACUUM_BUTTON,  // new on 12/13
+   "bir supurge dugmesi"
+   //     "a vacuum button"
+ IDS_SWITCH,
+   "bir tus"
+  //  "a switch"
+ IDS_PERSON_WITH_HAT_SITTING,
+  "oturan sapkali bir kisi"
+  // "a person with a hat sitting"
+ IDS_PERSON_HAIR_SITTING,
+  "oturan sacli bir kisi"
+  //   "a person with a hair sitting"
+ IDS_BIG_HOUSE_SIDE,
+   "buyuk ev - yandan"
+  //    "the big house from side"
+ IDS_BIG_HOUSE_ABOVE,
+   "buyuk ev - yukaridan"
+  // "the big house from above"
+ IDS_WIDE_HOUSE_SIDE,
+   "genis ev - yandan"
+  //    "the wide house from side"
+ IDS_WIDE_HOUSE_ABOVE,
+    "genis ev - yukaridan"
+  //     "the wide house from above"
+ IDS_WIDE_HOUSE_DOOR,
+     "genis eve bakan kapi"
+  //      "the door to the wide house"
+ IDS_MARTIAN,
+   "Marti"
+ IDS_TRUCK_INSIDE_HOUSE,
+   "evin icindeki bir kamyon"
+   //   "a truck inside house"
+ IDS_TRUCK_ABOVE,
+    "bir kamyon- yukaridan"
+  //     "a truck from above"
+ IDS_TRUCK_SIDE,
+     "bir kamyon- yandan"
+  //    "a truck from side"
+ IDS_TALK_BALLOON,
+   "bir konusma balonu"
+  //    "a talk balloon"
+// IDS_LETTER_PLATE,
+//   "bir letter plate"
+ IDS_COPIER_BUTTON, // revised 10/19 -- really the wand button but ok...
+   "bir buyucu sopasi dugmesi"
+//   "a magic wand button" // revised again 12/16
+ IDS_TEXT_PAD,
+   "bir metin pad"
+  //   "a text pad"
+ IDS_BOOK_PAGE_TURNING,
+   "bir defter sayfasi cevriliyor"
+  //    "a notebook page turning"
+ IDS_DIZZY_PERSON,
+   "bir sersem kisi"
+  //    "a dizzy person"
+ IDS_DIZZY_PERSON_WITH_HAIR,
+   "sacli bir sersem kisi"
+   //    "a dizzy person with hair"
+ IDS_DIZZY_PERSON_WITH_HAT,
+   "sapkali bir sersem kisi"
+   //    "a dizzy person with a hat"
+ IDS_EXPLOSION,
+   "bir patlama"
+   //    "an explosion"
+// IDS_MARTIAN_TALKING,
+//   "Marty talking"
+ IDS_BROKEN_ROCKET_DOOR,
+   "bozuk rokete bakan bir kapi"
+   //    "a door to a broken rocket"
+ IDS_HIT_OR_MISS, // this is the little animation which shows either a hit or a miss for the collision detector
+   " vuran veya kacan cizgifilm"
+   //      "the hit or miss cartoon"
+ IDS_BALL,
+   "bir top"
+  //    "a ball"
+ IDS_PADDLE,
+  "bir pedal"
+  //   "a paddle"
+ IDS_PERSON_WALKING_PICTURE,
+   "yuruyen bir kisi"
+  //    "a person walking"
+ IDS_FLOWER_SPRITE,
+   "bir cicek"
+  //    "a flower"
+ IDS_TREE_SPRITE,  // this and some of the following are used for decoration and can be found in the Pictures notebook
+   "bir agac"
+  //    "a tree"
+ IDS_TRAFFIC_LIGHT_SPRITE,
+   "bir trafik isigi"
+   //   "a traffic light"
+ IDS_ROCKET_SPRITE,
+   "bir roket"
+   //   "a rocket"
+ IDS_RECTANGLE,
+   "bir dikdortgen"
+  //    "a rectangle"
+ IDS_BACKGROUND,
+   "bir arkaplan"
+  //    "a background"
+ IDS_USER_SPRITE,// used to describe a picture that a user imported using the "File to Picture" remote control
+   "bir dosyadan bir resim"  // E.g.E.g. "bir dosyadan bir resmi tutuyorsunuz"
+//   "a picture from a file"  // E.g. "You are holding a picture from a file."
+
+ IDS_PAGE_BEGIN_SENTENCE,
+  "Sayfa"
+//  "Page"
+ IDS_CONTAINS,
+  "Icerir "
+//   "contains "
+
+  // many ToonTalk data types have 4 entries:
+  // indefinite singular. As in "You are holding A NUMBER."
+  // definite singular.  As in "You can drop THE NUMBER by clicking a mouse button."
+  // plural.  As in "You are pointing to a stack of NUMBERS."
+  // pronoun (accusative, i.e. used as the object not subject)
+  // As in "You are holding a number.  You can drop IT by clicking a mouse button."
+  // Note if the pronoun is troublesome (e.g. due to word order) you may wish
+  // to just repeat the definite singular for the pronoun entry.
+
+ IDS_NUMBER_TYPE_INDEFINITE,
+  "bir sayi"
+//  "a number"
+ IDS_NUMBER_TYPE_DEFINITE,
+  " sayi"
+//   "the number"
+ IDS_NUMBER_TYPE_PLURAL,
+  "sayilar"
+//   "numbers"
+ IDS_NUMBER_TYPE_PRONOUN,
+ "o"
+//  "it"
+ IDS_EXPANDER_TYPE_INDEFINITE,
+  "Pompacik  bisiklet pompasi"
+ //   "Pumpy the Bike Pump"
+ IDS_EXPANDER_TYPE_DEFINITE,
+  "Pompacik  Bisiklet Pompasi"
+ //   "Pumpy the Bike Pump"
+  IDS_EXPANDER_TYPE_PLURAL,
+  "Pompacik  bisiklet pompasi"
+ //   "Pumpy the Bike Pump"
+ IDS_EXPANDER_TYPE_PRONOUN,
+ "onu"
+// "him"
+ IDS_VACUUM_TYPE_INDEFINITE,
+  "Tozcuk  supurge"
+//  "Dusty the Vacuum"
+  IDS_VACUUM_TYPE_DEFINITE,
+  "Tozcuk  supurge"
+//  "Dusty the Vacuum"
+  IDS_VACUUM_TYPE_PLURAL,
+  "Tozcuk  supurge"
+//  "Dusty the Vacuum"
+  IDS_VACUUM_TYPE_PRONOUN,
+ "onu"
+// "him"
+ IDS_COPIER_TYPE_INDEFINITE,
+  "bir buyulu sopa"
+//  "a magic wand"
+ IDS_COPIER_TYPE_DEFINITE,
+  " buyulu sopa"
+//  "the magic wand"
+ IDS_COPIER_TYPE_PLURAL,
+  "buyulu sopas"
+//  "magic wands"
+ IDS_COPIER_TYPE_PRONOUN,
+ "o"
+// "it"
+ IDS_THOUGHT_BUBBLE_TYPE_INDEFINITE,
+  "bir dusunce kopugu"
+//  "a thought bubble"
+ IDS_THOUGHT_BUBBLE_TYPE_DEFINITE,
+  " dusunce kopugu"
+//   "the thought bubble"
+ IDS_THOUGHT_BUBBLE_TYPE_PLURAL,
+  "dusunce kopukleri"
+// "thought bubbles"
+ IDS_THOUGHT_BUBBLE_TYPE_PRONOUN,
+ "o"
+// "it"
+ IDS_ROBOT_TYPE_INDEFINITE,
+  "bir robot"
+//   "a robot"
+ IDS_ROBOT_TYPE_DEFINITE,
+  " robot"
+//   "the robot"
+ IDS_ROBOT_TYPE_PLURAL,
+  "robotlar"
+//    "robots"
+ IDS_ROBOT_TYPE_PRONOUN,
+  "onu"
+// "him"
+
+ IDS_NEST_TYPE_INDEFINITE,
+  "bir yuva"
+//  "a nest"
+ IDS_NEST_TYPE_DEFINITE,
+  " yuva"
+//   "the nest"
+ IDS_NEST_TYPE_PLURAL,
+   "yuvalar"
+//  "nests"
+ IDS_NEST_TYPE_PRONOUN,
+ "o"
+// "it"
+ IDS_BIRD_TYPE_INDEFINITE,
+  "bir kus"
+ //"a bird"
+ IDS_BIRD_TYPE_DEFINITE,
+  " kus"
+//  "the bird"
+ IDS_BIRD_TYPE_PLURAL,
+   "kuslar"
+//  "birds"
+ IDS_BIRD_TYPE_PRONOUN,
+  "onu"
+// "her"
+ IDS_TRUCK_TYPE_INDEFINITE,
+  "bir kamyon"
+//  "a truck"
+ IDS_TRUCK_TYPE_DEFINITE,
+  " kamyon"
+//  "the truck"
+ IDS_TRUCK_TYPE_PLURAL,
+  "kamyonlar"
+//  "the trucks"
+ IDS_TRUCK_TYPE_PRONOUN,
+ "o"
+ // "it"
+ IDS_BOOK_TYPE_INDEFINITE,
+  "bir defter"
+//  "a notebook"
+ IDS_BOOK_TYPE_DEFINITE,
+  " defter"
+//  "the notebook"
+ IDS_BOOK_TYPE_PLURAL,
+  "defterler"
+//  "notebooks"
+ IDS_BOOK_TYPE_PRONOUN,
+ "o"
+ // "it"
+ IDS_CUBBY_TYPE_INDEFINITE,
+    // "Cubby" is the name small children give to the "cubby hole" where they
+   // put there things while at school.  Turns out some adults didn't know the word.
+   // So box is used now.
+  "bir kutu"
+//  "a box"
+ IDS_CUBBY_TYPE_DEFINITE,
+  " kutu"
+//  "the box"
+ IDS_CUBBY_TYPE_PLURAL,
+  "kutular"
+//  "boxes"
+ IDS_CUBBY_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_TOOLBOX_TYPE_INDEFINITE,
+  "Tooly - AletlerKutusu"
+//  "Tooly the Toolbox"
+ IDS_TOOLBOX_TYPE_DEFINITE,
+  "Tooly - AletlerKutusu"
+//  "Tooly the Toolbox"
+ IDS_TOOLBOX_TYPE_PLURAL,
+  "Tooly - AletlerKutusu"
+//  "Tooly the Toolbox"
+ IDS_TOOLBOX_TYPE_PRONOUN,
+  "onu"
+// "him"
+ IDS_PICT_TYPE_INDEFINITE,
+  "bir resim"
+//  "a picture"
+ IDS_PICT_TYPE_DEFINITE,
+  " resim"
+//  "the picture"
+ IDS_PICT_TYPE_PLURAL,
+  "resimler"
+//  "pictures"
+ IDS_PICT_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_BOMB_TYPE_INDEFINITE,
+  "bir bomba"
+//  "a bomb"
+ IDS_BOMB_TYPE_DEFINITE,
+  " bomba"
+//  "the bomb"
+ IDS_BOMB_TYPE_PLURAL,
+  "bombalar"
+//  "bombs"
+ IDS_BOMB_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_TEXT_TYPE_INDEFINITE,
+  "bir metin pad"
+//  "a text pad"
+ IDS_TEXT_TYPE_DEFINITE,
+  " metin pad"
+//  "the text pad"
+ IDS_TEXT_TYPE_PLURAL,
+  "metin pads"
+//  "text pads"
+ IDS_TEXT_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_REMOTE_PICTURE_TYPE_INDEFINITE,
+  // There are 2 kinds of remote controls in ToonTalk.
+  // Those for controlling pictures which are in the notebook on the back of a picture.
+  // And those for controlling and sensing global pictures like the keyboard or mouse (found on Page 10 of the main notebook).
+  "bir uzaktan kumanda"
+//  "a remote control"
+ IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+  " uzaktan kumanda"
+//  "the remote control"
+ IDS_REMOTE_PICTURE_TYPE_PLURAL,
+  "uzaktan kumandalar"
+//  "remote controls"
+ IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_BLANK_NUMBER_TYPE_INDEFINITE,
+  "bir bos sayi pad"
+//  "a blank number pad"
+ IDS_BLANK_NUMBER_TYPE_DEFINITE,
+  " bos sayi pad"
+//  "the blank number pad"
+ IDS_BLANK_NUMBER_TYPE_PLURAL,
+  "bos sayi pads"
+//  "blank number pads"
+ IDS_BLANK_NUMBER_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_BLANK_CUBBY_TYPE_INDEFINITE,
+  "bir bos kutu"
+//  "a blank box"
+ IDS_LABELED_CUBBY_TYPE_INDEFINITE,
+  "bir kutu"
+//  "a blank box"
+ IDS_LABELED_CUBBY_TYPE_DEFINITE,
+  " kutu"
+//  "the box"
+ IDS_LABELED_CUBBY_TYPE_PLURAL,
+  "kutular"
+//  "boxes"
+ IDS_LABELED_CUBBY_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_BLANK_PICTURE_TYPE_INDEFINITE,
+  "bir bos resim"
+//  "a blank picture"
+ IDS_BLANK_PICTURE_TYPE_DEFINITE,
+  " bos resim"
+//  "the blank picture"
+ IDS_BLANK_PICTURE_TYPE_PLURAL,
+  "bos resimler"
+//  "blank pictures"
+ IDS_BLANK_PICTURE_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_BLANK_TEXT_TYPE_INDEFINITE,
+  "bir bos metin pad"
+//  "a blank text pad"
+ IDS_BLANK_TEXT_TYPE_DEFINITE,
+  " bos metin pad"
+//  "the blank text pad"
+ IDS_BLANK_TEXT_TYPE_PLURAL,
+  "bos metin pads"
+//  "blank text pads"
+ IDS_BLANK_TEXT_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_PICT_WITH_INSIDES_TYPE_INDEFINITE,
+  "bir resim"
+//  "a picture"
+ IDS_PICT_WITH_INSIDES_TYPE_DEFINITE,
+  " resim"
+//  "the picture"
+ IDS_PICT_WITH_INSIDES_TYPE_PLURAL,
+  "resimler"
+//  "pictures"
+ IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_REMOTE_INTEGER_TYPE_INDEFINITE,
+  "bir sayi gostergeli alici"
+//"a sensor with a number display"
+ IDS_REMOTE_INTEGER_TYPE_DEFINITE,
+  " sayi gostergeli alici"
+//"the sensor with a number display"
+ IDS_REMOTE_INTEGER_TYPE_PLURAL,
+  "sayi gostergeli alicilar"
+//"sensors with a number display"
+ IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_INDEFINITE,
+// some remote controls display a picture, some text and some numbers
+ // nearly all of them are sensors only (e.g. the time)
+ // while a few like city size are both a sensor and a remote control
+//  "a sensor with a number display"
+"bir sayi gostergeli alici"
+//"a sensor with a number display"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_DEFINITE,
+  "sayi gostergeli  alici"
+//"the sensor with a number display"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PLURAL,
+  "sayi gostergeli alicilar"
+//"sensors with a number display"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_SCALE_PICTURE_TYPE_INDEFINITE,
+  "bir olcek"
+//"a scale"
+ IDS_SCALE_PICTURE_TYPE_DEFINITE,
+  " olcek"
+//"the scale"
+ IDS_SCALE_PICTURE_TYPE_PLURAL,
+  "scales"
+//"scales"
+ IDS_SCALE_PICTURE_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+// A very useful facility which enables a user object to change its appearance
+  // The remote control for the appearance of something looks just like the thing.
+  // To replace an appearance a user (or a robot) erases this kind of remote control
+  // and drops the new appearance on it.
+
+  "Bir seyin nasil gozuktugu icin bir uzaktan kumanda"
+//"a remote control for how something looks"
+ IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+"Bir seyin nasil gozuktugu icin   uzaktan kumanda"
+//"the remote control for how something looks"
+ IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+"Bir seyin nasil gozuktugu icin uzaktan kumandalar"
+//"remote controls for how something looks"
+
+IDS_REMOTE_APPEARANCE_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+"bir seyin resmi"
+//"a picture of something"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_DEFINITE,
+"bir seyin  resmi"
+//"the picture of something"
+
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PLURAL,
+"bir seyin resimleri"
+//"pictures of something"
+
+IDS_PICTURE_WITH_INDIRECTION_TYPE_PRONOUN,
+ "o"
+  // "it"
+ IDS_USER_PICTURE_TYPE_INDEFINITE,
+  "bir kullanici dosyasindan bir resim "
+// "a picture from a user file"
+
+ IDS_USER_PICTURE_TYPE_DEFINITE,
+"bir kullanici dosyasindan  resim "
+// "the picture from a user file"
+
+IDS_USER_PICTURE_TYPE_PLURAL,
+"kullanici dosyalarindan resimler"
+// "pictures from a user files"
+
+IDS_USER_PICTURE_TYPE_PRONOUN,
+ "o"
+  // "it"
+
+ IDS_THE_ROBOTS_HAND, // as in "you can drop what is in the robot's hand by ... "
+  " robotun eli"
+//"the robot's hand"
+
+ IDS_YOUR_HAND, // "If you press F2 Dusty will run to your hand. "
+ "elinize"
+//  "your hand"
+ IDS_BEGIN_THE_ROBOT_IS, // as in "The robot is holding a box. "
+  "Robot"
+//  "The robot is"
+ IDS_THE_ROBOT_IS,
+  " robot is"
+ IDS_BEGIN_YOU_ARE,  // as in "You are holding a box. "
+  "Sen"
+// "You are"
+ IDS_YOU_ARE,
+"Sen"
+//  "you are"
+
+  IDS_TEXT_WITH_ANYTHING,
+  "uzerinde herhangi bir thing olan bir metin pad "
+//"a text pad with anything on it"
+
+ IDS_BLANK_TEXT_PAD,
+  "bir bos metin pad"
+//"a blank text pad"
+
+ IDS_PAD_WITH_TEXT,
+  " metinli bir pad "
+//"a pad with the text"
+
+ IDS_ON_IT,
+  "uzerinde"
+//"on it"
+ IDS_NOTHING,
+  "hicbirsey"
+//"nothing"
+
+ IDS_ROBOT_WITHOUT_A_THOUGHT,
+  "dusuncesi olmayan bir robot "
+//"a robot that doesn't have a thought"
+
+ IDS_FIRST,
+  "birinci"
+//"first"
+ IDS_SECOND,
+  "ikinci"
+//"second"
+ IDS_THIRD,
+    "ucuncu"
+//"third"
+ IDS_FOURTH,
+  "dorduncu"
+//""fourth"
+ IDS_FIFTH,
+ "besinci"
+//" "fifth"
+ IDS_SIXTH,
+ "altinci"
+//" "sixth"
+ IDS_SEVENTH,
+ "yedinci"
+//" "seventh"
+ IDS_EIGHTH,
+"sekizinci"
+//"  "eighth"
+ IDS_NINTH,
+"dokuzuncu"
+//"  "ninth"
+ IDS_TENTH,
+"onuncu"
+//"  "tenth"
+ IDS_ELEVENTH,
+"onbirinci"
+//"  "eleventh"
+ IDS_TWELFTH,
+"onikinci"
+//"  "twelfth"
+ IDS_THIRTEENTH,
+"onucuncu"
+//"  "thirteenth"
+ IDS_CARDINAL_MOD_IS_0,
+"uncu"
+//"  "th" // e.g. 30th
+ IDS_CARDINAL_MOD_IS_1,
+"inci"
+//"  "st" // e.g. 21st
+ IDS_CARDINAL_MOD_IS_2,
+"inci"
+//"  "nd" // e.g 42nd
+  IDS_CARDINAL_MOD_IS_3
+"uncu"
+//"  "rd" // e.g. 33rd
+  IDS_CARDINAL_MOD_IS_4,
+"uncu"
+//"  "th" // e.g. 54th
+  IDS_CARDINAL_MOD_IS_5,
+"inci"
+//"  "th" // e.g. 85th
+  IDS_CARDINAL_MOD_IS_6,
+"nci"
+//"  "th" // e.g. 106th
+  IDS_CARDINAL_MOD_IS_7,
+"nci"
+//"  "th" // e.g. 117th
+  IDS_CARDINAL_MOD_IS_8,
+  "inci"
+//""th" // e.g. 108th
+  IDS_CARDINAL_MOD_IS_9,
+"uncu"
+//"  "th" // e.g. 19th
+
+ IDS_YOU_ARE_POINTING_TO,
+//  "You are pointing to "
+"isaret ediyorsunuz "
+// "Xe isaret ediyorsunuz " "Yye isaret ediyorsunuz "
+IDS_YOU_ARE_HOLDING,
+//  "You are holding "
+"tutuyorsunuz"
+//"Xi tutuyorsunuz" "Yyi tutuyorsunuz"
+ IDS_UNDER,
+//  "Under "
+"Altinda"
+ IDS_IS, // as in "Under the wand is a number. " and "Inside a computer 6 is 110 in binary. "
+//  " is "
+"dir" // usage is different!!!
+
+// IDS_TH,
+//  "th"
+ IDS_THE_RIGHT_MOUSE_BUTTON,
+//"the right mouse button"
+" sag fare tusu"
+
+ IDS_NEST_HATCHED_BIRD_HELP,
+//  "The egg in the nest will hatch when you set the nest down. "
+"yuvadaki yumurta  sag fare tusuna basilinca acilacak"
+
+// IDS_NEST_RECEIVED_ITEM_FROM_BIRD_HELP,
+//  "If you give the bird something, she'll take o to her nest. "
+ IDS_NEST_ITEM_REMOVED_HELP,
+  "Alabilirsiniz "
+//  "You can take "
+ IDS_THINGS,
+//  "things"
+"seyler"
+ IDS_NEST_ITEM_REMOVED_HELP2,
+//  " out of her nest by hand or using Dusty the Vacuum. "
+ " Supurge Tozcuk'u kullanarak veya el ile yuvasindan " //## might cause problem
+ IDS_NEST_ITEM_ADDED_HELP,
+//  "You can put a rectangular thing in her nest by dropping it there. "
+" Dikdortgensel birseyi yuvasina oraya birakarak koyabilirsiniz. "
+ IDS_NEST_ITEM_ADDED_HELP2,
+//  "I usually let the bird do this instead. "
+"Genellikle onun yerine kusa yaptiririm. "
+ IDS_NEST_HELP_GIVEN_HELP,  // this is now said after the following
+//  "I've said all I know about nests. "
+"Yuvalar hakkinda bildigim herseyi anlattim. "
+ IDS_NEST_HELP_GIVEN_HELP2,
+//  "I use birds and nests when I want robots in different houses to work together. "
+"Robotlarin farkli evlerde birlikte calismasini istedigimde kuslari ve yuvalari kullanirim. "
+ IDS_NEST_HELP_GIVEN_HELP3,
+//  "If you want me to repeat all I know about nests, then press F1 twice while pointing to a nest. "
+"Eger yuvalar hakkinda bildigim herseyi tekrarlamami istiyorsan, bir yuvaya isaret ederken F1 tusuna iki kere bas. "
+ IDS_NEST_HELP_GIVEN_BIRDS,
+//  "I'll tell you more about birds if you press F1 twice while pointing to a bird. "
+ "Bir kusa isaret ederken F1 tusuna iki kere basarsaniz, size kuslar hakkinda daha fazla bilgi verebilrim. "
+ IDS_BIRD_RECEIVED_ITEM_HELP,
+//  "If you give the bird something rectangular, she'll take it to her nest. "
+"Eger kusa dikdortgensel bir sey veririsen, onu yuvasina goturur. "
+ IDS_BIRD_RECEIVED_ITEM_HELP2,
+//  "If you want her to carry other things, put them in a box and give her the box. "
+"Eger daha baska seyler tasimasini istiyorsan, onlari bir kutuya koy ve kutuyu ona ver. "
+ IDS_BIRD_HELP_GIVEN_HELP,
+//  "I've told you all that I know about birds. "
+"Kuslar hakkinda bildigim herseyi sana anlattim. "
+ IDS_BIRD_HELP_GIVEN_HELP2,
+//  "If you want me to repeat all I know about birds, then press F1 twice while pointing to a bird. "
+"Eger kuslar hakkinda bildigim herseyi tekrarlamami istiyorsan, bir kusa isaret ederken F1 tusuna iki kere bas. "
+ IDS_BIRD_HELP_GIVEN_NESTS,
+//  "I'll tell you more about nests if you press F1 twice while pointing to a nest. " // was bird by mistake
+  "Bir yuvaya isaret ederken F1 tusuna iki kere basarsaniz, size yuvalar hakkinda daha fazla bilgi verebilrim. "
+// IDS_WITH,
+//  " with "
+ IDS_ON_TOP,
+//  " on top" // as in "You are pointing to a nest with a sayi on top. "
+" ustteki" //##
+ IDS_BIRD_RECUR_ABORT, // as in "Didn't work because the bird was given something containing her nest. "
+//  " bird was given something containing her nest"
+" kusa yuvasini iceren birsey verildi" //##
+
+ IDS_BOMB_USED_HOUSE_HELP,
+  "Bu evi bir klik ile havaya ucurabilirsiniz"
+   IDS_BOMB_USED_HOUSE_HELP2,
+  "Evin icerisinde bir bomba tasirken,bir klik ile icinde bulundugunuz evi havaya ucurabilirsiniz"
+ IDS_BOMB_USED_HOUSE_HELP3,
+  // When you are inside a house that blows up all the tools jump into Tooly who makes o out with you.
+  // Also Tozcuk sucks up everything left on the floor.
+//  "You and your tools will make o out OK, and Tozcuk will suck up everything else. "
+
+//  "You and your tools will make o out OK, and Tozcuk will suck up everything left on the floor. "
+  "Sen ve aletlerin onu tamam yapacak , ve Tozcuk zeminde kalan herseyi emecek. "//##
+ IDS_BOMB_USED_HOUSE_HELP4,
+// I don't think of this as disarming a bomb.  These are bombs a la 1900 with a fuse that must be lit.
+// Clicking on the space bar lights the fuse.  Clicking the right mouse tus releases the bomb without setting o off.
+//  "You can set it down safely by clicking on "
+"... uzerine klikleyerek onu emniyetli hale getirebilrisin"
+ IDS_BOMB_USED_TB_HELP,
+  "Bu robotu bir klik ile icinde bulundugu evi havaya ucurtacak sekilde egitebilirsin"
+ IDS_BOMB_USED_TB_HELP2,
+  " Bomba alan bir robotu egitirken, bir klik ile icinde bulundugu evi havaya ucurtabilirsiniz"
+ IDS_BOMB_USED_TB_HELP3,
+  "Bu robotun egitimini bitirecek. "
+ IDS_BOMB_USED_TB_HELP4,
+  "Bomba kullanmak icin egitilmis bir robotu denemeden once herzaman bir deftere koyarim."
+ IDS_BOMB_HELP_GIVEN_HELP,
+  "Bombalar hakkinda bildigim herseyi sana anlattim. "
+ IDS_BOMB_HELP_GIVEN_HELP2,
+  "Bombalar hakkinda sana anlattigim herseyi tekrarlamami istiyorsan, sadece F1 tusuna iki kere bas"
+
+
+ IDS_CUBBY_BAD_CONTENTS_ABORT,
+ // as in "A robot stopped because he tried to put something in a box that can't be put in boxes. "
+// was  "he tried to put something in a box that doesn't go"
+// It used to be that robots, defterler, etc. couldn't be put in boxes.
+// For example, o used to be a robot could take a robot out of a notebook and drop o on a box and get this error.
+// Now only tools can't.  Only an internal ToonTalk error should generate this now.
+  "Kutulara konulamayacak bir seyi kutuya koymaya calisti"
+   IDS_CUBBY_BLANK_HELP,
+//was  "You can use bos boxes inside of dusunce kopugu, so the robot will be happy with a box with any sayi of holes. "
+ "Eger bir robotun dusunce kopugunde bir kutu varsa, then he'll be happy to work on any box no matter how many holes o has. "
+// IDS_CUBBY_BLANKED_TB_HELP,
+//  "Since it is in a dusunce kopugu, the robot will be happy with any box at the same place. "
+ IDS_CUBBY_BLANK_HELP2,
+  "O butun kutulara uyabilen bir patron kutudur"
+//  "It is a bos box which can match any box. "
+ IDS_CUBBY_HOLE_FILLED_HELP,
+  "Bir kutunun bir bos deligine herhangi bir seyi uzerinden gecirmek suretiyle koyabilirsiniz"
+ // "You can put something in an empty hole of a box by letting go of o over the hole. "
+ IDS_CUBBY_CONTENTS_REMOVED_HELP,
+  // this is used together with the following entry to generate either
+  //  You can take something out of a hole with your hand or with Dusty. "  or
+    "Delikten bir seyi elinizle veya Tozcuk ile alabilirsiniz"
+  //  You can take something out of a hole with the robot's hand or with Dusty. "
+
+ //"You can take something out of a hole with "
+  "Delikten bir seyi ... ile alabilirsiniz"
+// "Delikten bir seyi eliniz ile alabilirsiniz" or
+// "Delikten bir seyi Tozcuk(Dusty) ile alabilirsiniz"
+
+ IDS_CUBBY_CONTENTS_REMOVED_HELP2,
+//  " or with Tozcuk. " // "hand" removed
+  " veya Tozcuk ile. " // "hand" removed
+ IDS_CUBBY_CONTENTS_REMOVED_HELP3,
+   "Hazir oldugu zaman hareket edecek. "
+//  "It will wiggle when it's ready. "
+ IDS_CUBBY_CONCATENATION_HELP,
+ "Iki kutuyu birini digerinin uzerine birakarak birlestirebilirsiniz"
+ //  "You can combine two boxes by dropping one on the side of another. "
+ IDS_CUBBY_SIZE_CHANGED_HELP,
+  "Delik sayisini 0 ile 9 arasinda bir sayiya basarak degistirebilirsiniz"
+//  You can change the number of holes by pressing a sayi from 0 to 9. "
+//  "You can change the number of holes by pressing a sayi from 0 to 9. "
+ IDS_CUBBY_SIZE_CHANGED_HELP2,
+//  "If you want a box with more than 9 holes drop one on the side of another. "
+ "Eger 9'dan fazla delikli bir kutu istiyorsan, birini digerinin yanina birak. " //##
+ IDS_CUBBY_SIZE_CHANGED_HELP3,
+//  "If you press + a hole will be added. "
+"'+' tusuna basarsaniz, bir delik eklenir. "
+ IDS_CUBBY_SIZE_CHANGED_HELP4,
+//  "If you press - the hole on the right will be removed. "
+"'-' tusuna basarsaniz,sagdaki  bir delik cikartilir. "
+ IDS_CUBBY_SIZE_CHANGED_HELP5,
+//  "You can use the keyboard to change the number of holes while you are holding a box. "
+"Bir kutuyu tutarken delik sayisini degistirmek icin klavyeyi kullanabilirsiniz. "
+ IDS_CUBBY_LABELED_HELP,
+//  "You can add a label to a hole by pointing just below it and typing. "
+"Bir delige onun altina  isaret edip yazarak bir etiket ekleyebilirsiniz. "
+ IDS_CUBBY_HELP_GIVEN_HELP,
+//  "I've told you all that I know about boxes. "
+"Kutular hakkinda bildigim herseyi anlattim. "
+ IDS_CUBBY_HELP_GIVEN_HELP2,
+//  "If you want me to repeat all I've told you about boxes, then press F1 twice while pointing to a box. "
+"Eger kutular hakkinda bildigim herseyi tekrarlamami istiyorsan, bir kutuya isaret ederken F1 tusuna iki kere bas. "
+ IDS_ANY_BOX,
+//  "any box"
+"herhangi bir kutu"
+ IDS_BOX_WITH,
+//  "a box with "
+"bir kutu " //#might cause problem
+ IDS_ONE_HOLE,
+//  "one hole"
+"bir delik"
+ IDS_HOLES,
+//  " holes"
+" delikler"
+// IDS_WHOSE,  // stopped using these on 4/13/97
+//  " whose "
+// IDS_AND_WHOSE,
+//  " and whose "
+ IDS_HOLE_LABELED_WITH,
+//  "hole labeled with"
+ "... ile etiketlenmis bir delik "
+ IDS_HOLE_CONTAINS,
+//  "hole contains " // this and previous was "hole of a box contains "
+ "... iceren delik "
+ IDS_AND_BEGIN_SENTENCE,
+//  "And"
+"Ve"
+// IDS_THE_LETTER, // as in "If given a box like that he will add the 'A' to the label of the birinci hole of the box he's working on. "
+//  " the "
+
+//All of the phrases from IDS_MOVE_TO to IDS_APPLY_GRASPED_NEST
+//are used to describe what the robot will do if given a box.
+//E.g.
+ IDS_MOVE_TO, // as in "If given a box like that he will move to the stack of metin. "
+  //"move to"
+  "gider" //##might caus problems
+ IDS_SELECT_COPIER,
+//  "grab a buyulu sopa"
+ "bir buyulu sopa kap"
+ IDS_APPLY_COPIER,
+//  "use the buyulu sopa on"
+"... uzerinde buyulu sopayi kullan"
+// IDS_APPLY_COPIER_NUMBER,
+//  "use the buyulu sopa (with the number attached) on"
+ IDS_GRASP_EXPANDER, // added 12/3
+//  "grab a bike pump"
+"bir bisiklet pompasi kap"
+ IDS_RELEASE_COPIER,
+//  "release the buyulu sopa"
+"buyulu sopayi birak"
+ IDS_GRASP_ITEM,
+//  "pick up"
+"Kaldir"
+ IDS_RELEASE_ITEM,
+//  "drop"
+"birak"
+// as in "He will drop the box on the floor. "
+ IDS_RELEASE_ITEM2,
+//  " on the floor"
+" zemindeki "
+ // The following could be used where the something might be dropped on
+ // a hole of a box, a sayi pad, a metin pad, or a notebook
+ IDS_RELEASE_ITEM_ON, // as in "And drop o on the birinci hole of the box he's working on. "
+//  "drop"
+"birak"
+ IDS_RELEASE_ITEM_ON2,
+//  " on"
+" uzerinde" //##
+  // currently only boxes can be dropped on the side of boxes and metin pads on the side of metin pads.
+ IDS_RELEASE_ITEM_LEFT_OF,
+//  "drop"
+"birak"
+ IDS_RELEASE_ITEM_LEFT_OF2,
+//  " just left of"
+ "...  hemen solunda"
+ IDS_RELEASE_ITEM_RIGHT_OF, // as in "And drop o just right of the box he's working on. "
+//  "drop"
+ "birak"
+ IDS_RELEASE_ITEM_RIGHT_OF2,
+//  " just right of"
+ "...  hemen saginda"
+// IDS_APPLY_NUMBER,
+//  "push the number down on"
+ IDS_EXPANDER_APPLY, // added 12/3
+ // e.g. "The robot will robot use Pumpy for 100 milliseconds on the box. "
+//  "use Pumpy"
+"Pompacigi kullan"
+ IDS_EXPANDER_APPLY2,
+//  " for"
+ " icin" //##
+ IDS_SELECT_VACUUM, // as in "He will grab a copy of Tozcuk. "
+//  "grab a copy of Tozcuk"
+"Tozcuk'un bir kopyasini kap"
+ IDS_APPLY_VACUUM,
+//  "use Tozcuk to vacuum" // as in "The robot will use Tozcuk to vacuum the box. "
+"Supurge Tozcuk'u kullan"
+ IDS_APPLY_VACUUM_RESTORE,
+//  "run Tozcuk in reverse to restore" // as in "He will run Tozcuk in reverse to restore the number. "
+"Restore etmek icin Tozcuk'u tersten kullan"
+ IDS_RELEASE_VACUUM,
+"Tozcuk'u birak"
+//  "release Dusty"
+ IDS_SEND_TO, // as in "He will push the 'a' key. "
+//  "push"
+"it"
+ IDS_RELEASE_IN_NEST,
+//  "release the nest and watch a bird hatch"
+"Yuvayi birak ve kusun yumurtadan cikmasini gozle"
+ IDS_GIVE_BIRD,
+//  "give"
+"ver"
+ IDS_GIVE_BIRD2,
+//  " to the bird"
+" kusa" //##
+ IDS_RELEASE_IN_TRUCK,
+//  "drop"
+"birak"
+ IDS_RELEASE_IN_TRUCK2,
+//  " into the kamyon"
+" kamyona" //##
+ IDS_DESTROY_HOUSE,
+  // As in "And pick up a bomb. And use it. And have blown up the house he's in. "
+  // where the context is always that a robot is doing these things.
+ // I admit not the best way to say this.
+//  "have blown up the house he's in"
+"Icinde bulundugu evi havaya ucurdu"
+ IDS_APPLY_ITEM_HELD,
+//  "use"
+"kullan"
+// The following are when a robots adds letters to a label of a box
+// or a sayi or metin pad.
+// e.g. "If given a box like that he will push '9' after moving
+// to the birinci hole of the box he's working on.  And push '7' while
+// pointing to the birinci hole of the box he's working on. "
+// or
+// "If given a box like that he will push 'B'
+// while pointing to the birinci hole of the box he's working on.  And push
+// 'C' while pointing to the birinci hole of the box he's working on.  And
+// add 'L' to the label of the birinci hole of the box he's working on. "
+ IDS_LABEL_CHARACTER,
+//  "birdd"
+"kus"
+ IDS_CHARACTER_AND_SELECT,
+//  "push"
+"it"
+ IDS_GRASP_NEST,
+//  "pick up"
+"kaldir"
+ IDS_NEW_MAIN_CUBBY,
+ // always followed by a description of some box
+ // E.g. The robot will switch to working on the new box.
+ // This happens, for example, when a robot is trained to take the box he is given
+ // and put o in a new box and maybe do more with that new box.
+//  "switch to working on"
+"... uzerinde calismaya don"
+ IDS_COPIER_APPLY_NEST,
+// "use the buyulu sopa on"
+"Buyulu sopayi ... uzerinde kullan"
+ IDS_VACUUM_APPLY_NEST,
+// "use Tozcuk to vacuum"
+"Supurge Tozcuk'u kullan"
+ IDS_APPLY_GRASPED_NEST,
+//  "use"
+"kullan"
+ IDS_RELEASE_EXPANDER,
+//  "drop Pumpy"
+"Pompacik'i birak"
+// The following are only used when describing what a robot does.
+// Hence the use of "he" rather than "I" as o originally was
+ IDS_WHAT_I_JUST_COPIED,
+//  "what he just copied"
+"az once kopyladigi"
+ IDS_WHAT_IM_HOLDING, // misnamed -- used as "He will drop what he's holding. "
+//  "what he's holding"
+"tutmakta oldugu"
+ IDS_EVENT_ARG1, // as in "He will drop o on the box he's working on. "
+//  "his box" // " box he's working on"
+"kutusu"
+ IDS_EVENT_ARG3,
+  " buyulu sopa"
+ IDS_EVENT_ARG4,
+  "Tozcuk"
+ IDS_EVENT_ARG5,
+//  " stack of numbers"
+" sayilarin yigini" //##
+ IDS_EVENT_ARG6,
+//  " stack of metin"
+" metinlerin yigini "//##
+ IDS_EVENT_ARG7,
+//  " stack of boxes"
+" kutularin yigini "//##
+ IDS_EVENT_ARG8,
+//  " stack of nests"
+" yuvalarin yigini "//##
+ IDS_EVENT_ARG9,
+//  " stack of kamyonlar"
+" kamyonlarin yigini "//##
+ IDS_EVENT_ARG10,
+//  " main defter"
+"ana defter"
+ IDS_EVENT_ARG11,
+//  " stack of robots"
+" robotlarin yigini "//##
+ IDS_EVENT_ARG12,
+//  " stack of scales"
+" olceklerin yigini "//##
+ IDS_EVENT_ARG13,
+//  " stack of bombs"
+" bomabalrin yigini"//##
+ IDS_EVENT_ARG14,  // e.g. "The robot will use what he is holding."
+//  "what he is holding"
+"tuttugu"
+ IDS_EVENT_ARG15,
+//  "Pumpy" // added 12/3
+ "Pompacik"
+ IDS_WHICH_IS,  // as in "He will give o to the bird which is the second thing he made or found. "
+//  " which is "
+" olan " //##
+ IDS_STACK_TYPE1,
+  "bir sayi"
+ IDS_STACK_TYPE2,
+  "bir metin"
+ IDS_STACK_TYPE3,
+  "bir kutu"
+ IDS_STACK_TYPE4,
+  "bir yuva"
+ IDS_STACK_TYPE5,
+  "bir kamyon"
+ IDS_STACK_TYPE6,
+  "bir robot"
+ IDS_STACK_TYPE7,
+  "bir olcek"
+ IDS_STACK_TYPE8,
+  "bir bomba"
+ IDS_THE_LAST_THING,  // as in "He will pick up the son thing he made or found."
+//  " the last thing he made or found"
+ "yaptigi veya buldugu son sey"
+// IDS_THE,
+//  " the "
+
+ IDS_BYE1,
+  "Hoscakalin"
+  //"Bye!"
+ IDS_BYE2,
+  //"So long. "
+  "Gorusmek uzere. "
+ IDS_BYE3,
+//  "See you. "
+"Gorusuruz. "
+ IDS_GOOD1,
+  "Guzel. "
+ IDS_GOOD2,
+  "OK. "
+ IDS_GOOD3,
+//  "Right. "
+"Evet. "
+ IDS_PREFACE_HELP,
+//  "OK, here's all I know about "
+"Evet, iste ... hakkinda bildigim hersey"
+
+ IDS_SITTING_HELP,
+//  "You can sit down by clicking any mouse tus. You can get up again by pressing the 'Esc' button. "
+"Herhagi bir fare tusuna basarak oturabilirsiniz. 'ESc' tusuna basarak ta kalkabilirsiniz. "
+ IDS_RECALL_MARTIAN_HELP,
+//  "I'll stay around to help you. If I bother you, just push the F1 button and I'll go. "
+"Size yardim etmek icin etrafta olacagim. Sizi rahatsiz edersem,sadece F1 tusuna basin ve ben giderim. "
+ IDS_IDS_RECALL_MARTIAN_HELP2,
+//  "If I'm gone, then F1 will call me back. "
+"Eger gitmissem, F1 beni geri cagirir. "
+ IDS_LEAVE_FLOOR_HELP,
+//  "Did you know that you can get up from the floor by pushing the 'Esc' button? "
+"Yeden F1 tusuna basarak yerden kalkabileceginizi biliyor muydunuz?"
+ IDS_LEAVE_FLOOR_HELP2,
+//  "Try it sometime. "
+ "Bazen bir dene. "
+ IDS_LEAVE_TB_HELP,
+//  "When you are done, just press the 'Esc' key to return to the floor. "
+"Isiniz bittiginde, 'Esc' tusuna basarak yere donebilrisiniz. "
+ IDS_HURRY_UP_HELP,
+//  "Did you know that animations in progress will finish if you press F7? "
+"Oynamkata olan animasyonun F7 tusuna basarak bitirilebilecegini biliyor muydunuz?"
+
+ IDS_HURRY_UP_HELP2,
+//  "That even includes my talking! "
+"Hatta benim konusmami da icerir! "
+ IDS_PAUSE_HELP,
+//  "If you ever want to pause ToonTalk, just push the Pause tus. "
+"Eger ToonTalk'u durdurmak isterseniz, Pause tusuna basiniz. "
+// IDS_PAUSE_HELP2,
+//  "Pushing o again will start things up again. "
+ IDS_TARGETED_HELP_HELP,
+//  "If you want me to tell you all I can about something, then get rid of me by pressing F1, point to or grab what you want, and push F1 again. "
+"Bir sey hakkinda bildigim herseyi ogrenmek istiyorsaniz, F1'e basarak benden kurtulun, istediginize isaret edin veya alin ,ve F1'e tekrar basin. "
+ IDS_HELLO1,
+//  "Hi"
+"Selam"
+ IDS_HELLO2,
+//  "Howdy"
+"Nasil gidiyor?"
+ IDS_HELLO3,
+//  "Hello"
+  "Merhaba"
+ IDS_HELLO4,
+  "Merhaba"
+ IDS_HELLO5,
+//  "Greetings"
+"Hurmetler"
+ IDS_HELLO6,
+//  "Hello there"
+  "Merhabalar"
+ IDS_MARTIAN_INTRODUCTION,
+//  "Marty here. "
+"Iste Marsli. "
+
+ IDS_ABORT_MOUSE_TROUBLES,
+//  "Bammer the Mouse had troubles with its hammer"
+ "Fare Bammerin cekic ile bir sorunu var"
+ IDS_ABORT_NUMBER_TOO_LARGE,
+//  "the number would get too large for the computer"
+"bu sayi bilgisayar icin cok buyuk olacak"
+ IDS_ABORT_NUMBER_TOO_SMALL,
+//  "the number would get too small for the computer"
+"bu sayi bilgisayar icin cok kucuk olacak"
+ IDS_ABORT_NUMBER_TOO_SMALL_OR_BIG,
+//  "the number would get too big or small for the computer"
+"bu sayi bilgisayar icin cok buyuk veya kucuk olacak"
+
+// I believe these 13 identifiers are not used anymore...
+// IDS_REMOTE_IDENTIFIER1,
+//  "left/right position"
+// IDS_REMOTE_IDENTIFIER2,
+//  "up/down position"
+// IDS_REMOTE_IDENTIFIER3,
+//  "right speed"
+// IDS_REMOTE_IDENTIFIER4,
+//  "up speed"
+// IDS_REMOTE_IDENTIFIER5,
+//  "width"
+// IDS_REMOTE_IDENTIFIER6,
+//  "height"
+// IDS_REMOTE_IDENTIFIER7,
+//  "resim sayi"
+// IDS_REMOTE_IDENTIFIER8,
+//  "hit or miss animation"
+// IDS_REMOTE_IDENTIFIER9,
+//  "colliding with who?"
+// IDS_REMOTE_IDENTIFIER10,
+//  "mouse's right speed"
+// IDS_REMOTE_IDENTIFIER11,
+//  "mouse's up speed"
+// IDS_REMOTE_IDENTIFIER12,
+//  "time since son frame in milliseconds (thousandths of a second)"
+// IDS_REMOTE_IDENTIFIER13,
+//  "random sayi"
+
+ IDS_A_REMOTE_CONTROL_FOR,
+  "... icin bir uzaktan kumanda" //##
+ IDS_ANY_NUMBER,
+  "herhangi bir sayi"
+ IDS_BLANK_NUMBER_PAD,
+  "bir bos sayi pad"
+ IDS_THE_NUMBER,
+  " sayi "
+ IDS_SOMETHING_WHICH_WILL_MULTIPLY,
+ // as in "You are holding something which will multiply by 3."
+ // You can create one of these by typing X while holding a 3.
+ // similarly for the entries up to IDS_SOMETHING_WHICH_WILL_XOR
+//  "something which will multiply by "
+ "... ile carpilabilecek birsey"
+ IDS_SOMETHING_WHICH_WILL_DIVIDE,
+//  "something which will divide by "
+ "... ile bolunebilecek birsey"
+ IDS_AND_KEEP_REMAINDER,
+//  " and just keep the remainder"
+" ve kalani sadece tut"
+ IDS_SOMETHING_WHICH_WILL_CHANGE_NUMBER,
+//  "something which will change the number it is dropped on to "
+"... uzerine birakildigi sayiyi degistirecek birsey"
+ IDS_SOMETHING_WHICH_WILL_OR,
+//  "something which will OR the bits of the number underneath with "
+"... ile altindaki sayinin bitlerini Veya'layacak bir sey"
+ IDS_SOMETHING_WHICH_WILL_AND,
+//  "something which will AND the bits of the number underneath with "
+"... ile altindaki sayinin bitlerini Ve'leyecek bir sey"
+ IDS_SOMETHING_WHICH_WILL_XOR,
+//  "something which will EXCLUSIVE OR the bits of the number underneath with "
+"... ile altindaki sayinin bitlerini ##EXCLUSIVE Veya'layacak bir sey"
+ IDS_THE_OPERATION,
+//  " operation "
+" islem " //##
+ IDS_INTS_BLANK_HELP,
+//  "You can use bos sayi pads inside of dusunce kopugu, so the robot will be happy with any sayi on a pad. "
+"Dusunce kopugundeki bas sayi pad'larini kullanabilrisiniz, boylece robot pad uzerindeki her sayidan memnun olur. "
+// IDS_INTS_BLANKED_TB_HELP,
+//  "Since it is in a dusunce kopugu, the robot will be happy with any sayi at the same place. "
+ IDS_INTS_BLANK_HELP2,
+//  "A bos sayi means it is any sayi. "
+"Bos sayi herhangi bir sayi demektir. "
+ IDS_INTS_ADDITION_HELP,
+//  "You can add two numbers by dropping one on another. "
+"Iki sayiyi birini digerinin uzerine birakarak toplayabilirsiniz. "
+ IDS_INTS_DIGITS_ADDED_HELP,
+//  "You can type a sayi. ";
+"Bir sayiyi yazabilirsiniz. "
+// IDS_INTS_DIGITS_ADDED_HELP2,
+//  " by typing a sayi now. "
+ IDS_INTS_DIGITS_ADDED_HELP3,
+//  "You can also type a sayi while holding a sayi. "
+"Bir sayiyi bir sayi tutarken de yazabilirsiniz. "
+// IDS_INTS_DIGITS_ADDED_HELP4,
+//
+ IDS_INTS_DIGITS_REMOVED_HELP,
+//  "You can remove digits by pushing the 'Backspace' key. "
+"'Backspace' tusuna basarak rakamlari silebilirsiniz. "
+ IDS_INTS_DIGITS_REMOVED_HELP2,
+//  "If you remove the son digit you'll get 0. "
+"Eger son sayiyida silerseniz Sifir elde edersiniz. "
+ IDS_INTS_MADE_NEGATIVE_HELP,
+  // Together with the following entries generates sentences like
+  // "You can change 5 into -5 by pushing the minus key (right of 0). "
+  // "Then, if you drop -5 on another sayi you'll be subtracting by 5."
+//  "You can change "
+"Degistirebilirsiniz " //##
+ IDS_INTO,  // only used in this context
+//  " into "
+ " e " //##
+ IDS_INTS_MADE_NEGATIVE_HELP2,
+//  " by pushing the minus key (right of 0). "
+ " eksi harfine (sifirin saginda) basarak" //##
+ IDS_INTS_MADE_NEGATIVE_HELP3,
+//  "Then, if you drop "
+"Daha sonra,  ... birakirsaniz"
+ IDS_INTS_MADE_NEGATIVE_HELP4,
+//  " on another sayi you'll be subtracting by "
+ " diger bir sayi uzerine ... , .... ile cikartmis olursunuz" //##
+ IDS_INTS_MULTIPLICATION_HELP,
+ // together with following entries makes
+ // "You can multiply by 7 by pushing the x key.
+ // Then you just drop o on the number you want to multiply by 7
+ // The X and * keys work just as well. "
+//  "You can multiply by "
+"... ile carpabilirsiniz"
+ IDS_INTS_MULTIPLICATION_HELP2,
+//  " by pushing the x key. "
+" x harfine basarak" //##
+ IDS_INTS_MULTIPLICATION_HELP3,
+//  "Then you just drop it on the number you want to multiply by "
+  "Sonra,  ... ile carpmak istediginiz sayinin uzerine birakiniz"
+ IDS_INTS_MULTIPLICATION_HELP4,
+//  "The X and * keys work just as well. "
+"X ve * harflerinin ikiside ayni calisir. "
+ IDS_INTS_DIVISION_HELP,
+//  "You can divide by "
+"... ile bolebilirsiniz"
+ IDS_INTS_DIVISION_HELP2,
+//  " by pushing the / key (right of .). "
+ " / harfine (.noktanin sagindaki) basarak" //##
+ IDS_INTS_DIVISION_HELP3,
+//  "Then you just drop it on another sayi. "
+"Sonra baska bir syai uzerine birakin. "
+ IDS_INTS_DIVISION_HELP4,
+//  "The remainder is ignored. "
+"Kalan ihmal edildi."
+ IDS_INTS_DIVISION_HELP5,
+  // This happens when you drop a "/0" on any sayi.
+  // The sayi refers to the number (together with operator) that you are dropping.
+//  "Since the number is zero, the division won't work. "
+"Sayi sifir oldugundan ,bolme islemi calismaz. "
+ IDS_INTS_MODULO_HELP,
+//  "To get the remainder (and ignore the dividend) use the % key (shift 5). "
+"(Bolumu ihmal ederk) kalani elde etmek icin % harfini (shift 5) kullanin. "
+// IDS_INTS_MODULO_HELP2, // using IDS_INTS_DIVISION_HELP5 instead
+//  "Since the number is zero, the division won't work. "
+ IDS_INTS_MODULO_HELP3,
+//  "To get the remainder of dividing by "
+ "... ile bolerek kalani elde etmek icin"
+ IDS_INTS_MODULO_HELP4,
+//  " type % (push shift and 5). "
+ "% harfini yazin (shift ve 5 harflerine basin). "
+ IDS_INTS_MODULO_HELP5,
+//  "Then you just drop it on the other sayi. "
+"Daha sonra baska bir sayi uzerine birakin"
+ IDS_INTS_BITWISE_HELP,
+//  "Here's a real advanced thing. "
+"Iste gayet ileri bir sey. "
+ IDS_INTS_BITWISE_HELP2,
+//  "You can treat a sayi like a bunch of bits that are either 0 or 1. "
+"Bir sayiyi 0 veya 1 olan bitlerin toplulugu olarak muamele edebilirsiniz. "
+ IDS_INTS_BITWISE_HELP3,
+//  "This sayi is "
+"Bu sayi ... dir"
+ IDS_INTS_BITWISE_HELP4,
+//  "Here's what you can do. "
+"Iste yapabileceginiz sey. "
+ IDS_INTS_BITWISE_HELP5,
+//  "~ for complement. | for OR. & for AND. And ^ for exclusive or. "
+"~ ##complement icin. | Veya icin ,& Ve icin. Ve ^ ##Exclusive Veya icin. "
+ IDS_INTS_BITWISE_HELP56,
+//  "Don't worry if you don't know what these are. Just try them. "
+"Bunlarin ne oldugunu bilmiyorsaniz uzulmeyin. Sadece onlari deneyin. "
+ IDS_NUMBER_HELP_GIVEN_HELP,
+//  "I've told you all that I know about numbers. "
+"Sayilar hakkinda bildigim herseyi anlattim. "
+ IDS_IDS_NUMBER_HELP_GIVEN_HELP2,
+//  "If you want me to tell you again all I know about numbers, then press F1 twice while pointing to a sayi. "
+"Eger sayilar hakkinda bildigim herseyi tekrarlamami istiyorsan, bir sayiya isaret ederken F1 tusuna iki kere bas. "
+
+// This section describes the items found in the notebook which
+// flies out when you flip over a picture or sayi.
+ IDS_X_HELP,
+//  " distance from the left side"
+" sol kenardan mesafe"
+ IDS_Y_HELP,
+//  " distance from the bottom side"
+" sag kenardan mesafe"
+ IDS_X_SPEED_HELP,
+//  " speed towards the right"
+"saga dogru hiz"
+ IDS_Y_SPEED_HELP,
+//  " speed towards the top"
+"uste dogru hiz"
+ IDS_WIDTH_HELP,
+//  " width"
+" genislik"
+ IDS_HEIGHT_HELP,
+//  " height"
+" yukseklik"
+ IDS_PARAMETER_HELP, // had been commented out -- restored on 6/24/97
+//  "which resim or color is shown"
+"hangi resim veya rengin gosterildigi"
+ IDS_COLLIDE_HELP,
+ // e.g. The hole contains a uzaktan kumanda for the detector which shows a simple cartoon of either a collision or a miss.
+ // changed "space button" to "space bar"
+//  " detector which shows a simple cartoon of either a collision or a miss. You can turn a collision into a miss by pointing to the detector and pressing the space bar"
+" bir isabet veya karavana karikaturunu  gosteren bir ##detector. Detectore isaret ederek veya sapcebara basarak bir isabeti karavanaya donusturebilirsiniz. "
+ IDS_COLLIDE_WHO_HELP,
+ // e.g. The hole contains a uzaktan kumanda for the display of what is colliding with this resim.
+// was  " indicator of who it is colliding with"
+//  " display of what is colliding with this resim"
+" bu resimle cakisan seyi gosterimi"
+ IDS_MOUSE_X_HELP,
+//  " speed the computer's mouse is moving to the right"
+"Bilgisayar faresi Hizli saga gidiyor"
+ IDS_MOUSE_Y_HELP,
+//  " speed the computer's mouse is moving to the top"
+"Bilgisayar faresi Hizli uste gidiyor"
+ IDS_TIMER_HELP,
+//  " sayi of milliseconds (one thousandths of a second) since son frame"
+" son cerceveden beri gecen milisaniye (bir saniyenin binde biri) sayisi"
+ IDS_RANDOM_HELP,
+//  "bir random sayi between 0 and 1000"
+"0 ile 1000 arasinda bir rstgele sayi"
+ IDS_X_COLLIDE_HELP,
+//  " left/right movement collision detector"
+ " sol/sag hareket cakisma detektoru"
+  IDS_Y_COLLIDE_HELP,
+//  " up/down movement collision detector"
+" yukari/asagi hareket cakisma detektoru"
+ IDS_APPEARANCE_HELP,
+//  " looks"
+" benzer" //##
+ IDS_VISIBLE_HELP, // as in "This alici controls the visibility of the resim. "
+//  " visibility"
+" gorunebilirlik"
+ IDS_END_OF_ANIMATION_HELP,
+  " answer to the question \"Has my animation stopped?\""
+ IDS_GRASPED_HELP,
+// was  "whether held in a hand"
+//  " answer to the question \"Am I being held?\""
+" soruyu cevaplayin\"Tutuluyormuyum>\"" //##
+  // the I above refers to the resim (sprite) whose uzaktan kumanda is being described
+  // could use "this resim" instead.  Ditto for the others below and above
+ IDS_SELECTED_HELP,
+// was  "whether wiggling and ready to be picked up or used"
+ " answer to the question \"Am I wiggling because a hand is pointing to me?\""
+ " soruyu cevaplayin\"Bir el bana isarete ttigi icin sallaniyormuyum?\""
+ IDS_RELEASED_HELP,
+// was  "whether just dropped"
+// " answer to the question \"Was I just dropped?\""
+  " soruyu cevaplayin\"Az once ben mi birakildim?\""
+ IDS_MOUSE_LEFT_BUTTON_HELP,
+ // "whether the mouse's left tus was just clicked"
+"farenin sol tusunun kliklenip kliklenmedigi"
+ IDS_MOUSE_MIDDLE_BUTTON_HELP,
+//  "whether the mouse's middle tus was just clicked"
+"farenin orta tusunun kliklenip kliklenmedigi"
+ IDS_MOUSE_RIGHT_BUTTON_HELP,
+//  "whether the mouse's right tus was just clicked"
+"farenin sag tusunun kliklenip kliklenmedigi"
+ IDS_MOUSE_LEFT_BUTTON_DOWN_HELP,
+//  "whether the mouse's left tus is down"
+"farenin sol tusunun basili olup olmadigi"
+ IDS_MOUSE_MIDDLE_BUTTON_DOWN_HELP,
+  "whether the mouse's middle tus is down"
+"farenin orta tusunun basili olup olmadigi"
+ IDS_MOUSE_RIGHT_BUTTON_DOWN_HELP,
+//  "whether the mouse's right tus is down"
+"farenin sag tusunun basili olup olmadigi"
+ IDS_KEYBOARD_BUTTON_HELP,
+//  " key just pressed"
+" harf yeni basildi"
+ IDS_LAST_KEYSTROKE_HELP,
+//  " son key pressed"
+" son harf basildi"
+ IDS_SHIFT_DOWN_HELP,
+//  "whether the shift key is down"
+"shift harfinin basili olup olmadigi"
+ IDS_CONTROL_DOWN_HELP,
+//  "whether the control key is down"
+"control harfinin basili olup olmadigi"
+ IDS_HAND_VISIBLE_HELP,
+//  "whether your hand is hidden"
+"elinizin sakli olup olmadigi"
+ IDS_CLIPBOARD_HELP,
+//  " clipboard for pasting stuff to and from other programs"
+" baska programlara ve baska programlardan bir seyler kopyalamak icin klipbord" //##
+ IDS_AVENUE_HELP,
+//  "which avenue (runs north/south) this house is on"
+"bu evin hangi bulvarda ( kuzey/guney dogrultusunda) oldugu" //##
+ IDS_STREET_HELP,
+//  "which street (runs east/west) this house is on"
+"bu evin hangi bulvarda ( dogu/bati dogrultusunda) oldugu" //##
+ IDS_SOUND_ON_HELP,
+//  "whether sound effects are on"
+"ses efektlerinin acik olup olmadigi"
+ IDS_LETTER_SIZE_HELP,
+//  " size of letters in my talk balloons (100 is normal)"
+" konusma balonumdaki harflerin bedeni (100 normaldir)"
+ IDS_READING_SPEED_HELP,
+//  "how long I say something before changing what's in my talk balloon (100 is normal)"
+"konusma balonumdaki birseyi degistirmeden once ne kadar surede soyledigim (100 normaldir)"
+ IDS_MARTIAN_ADVICE_LEVEL_HELP,
+//  "how talkative I am"
+ "ne kadarda gevezeyim"
+ IDS_PROGRAMMER_HEAD_HELP,
+//  "whether you have a hat, long hair or are bald"
+"bir sapkan veya  uzun sacin oldugunu veya kel olup olmadiigni"//# sentence structure should change!
+ IDS_SCREEN_SIZE_HELP,
+//  " window size"
+" cerceve bedeni"
+ IDS_SYSTEM_SPEED_HELP,
+//  " speed things happen in ToonTalk (100 is normal)"
+" Toontalk'ta olaylarin olma hizi (100 normaldir)"
+ IDS_CITY_SIZE_HELP,
+//  " size of the city"
+" sehrin boyutu"
+ IDS_SYSTEM_SLEEP_HELP,
+//  " sayi of milliseconds, if possible, each animation frame should take"
+"mumkunse her animasyon cercevesinin surecegi milisecon sayisi"
+ IDS_MOUSE_BUTTONS_HELP,
+//  "whether the right and middle tus have special meaning when on the floor"
+"zeminde iken sag ve orta tuslarin ozel bir anlami olup olmadigi"
+ IDS_LEGO_SERIAL_PORT_HELP,
+//  "which serial port a HyperBot controller is connected to"  // was also LEGO
+" HyperBot denetleyicisinin hangi seri porta bagli oldugu"
+ IDS_MARTIAN_FONT_HELP,
+//  " letter style used in my talk balloons"
+" konusma balonumda kullnadigim harf stili"
+ IDS_FILE_TO_PICTURE_HELP,
+//  "bir place to drop the dosya name of a picture to turn o into a picture"
+"bir resim dosyasinin  isminin resme donusturulebilmesi icin birakilabilecegi bir yer"
+ IDS_FILE_TO_SOUND_HELP,
+//  "bir place to drop the dosya name of a sound to hear o"
+"bir ses dosyasinin isminin  dinlenebilmesi icin birakilabilecegi bir yer"
+
+ IDS_REMOTE_DESCRIPTION,
+ // e.g. This sayi is a uzaktan kumanda for the color of a rectangle.
+//  "This sayi is a uzaktan kumanda for "
+" Sayi ... icin bir uzaktan kumandadir."
+// IDS_REMOTE_SENSOR_DESCRIPTION,
+//   "This sayi is a alici for "
+ IDS_REMOTE_COLOR_DESCRIPTION,
+//  "The sayi is a color numbered from 0 to 255. "
+"Sayi 0 ile 255 arasinda numaralanmis bir renktir. "
+ IDS_REMOTE_PARAMETER_DESCRIPTION,
+//  "The sayi selects which resim is displayed. "
+"Sayi hangi resmin gosterilecegini belirler. "
+ IDS_REMOTE_NUMBER_DESCRIPTION2,
+//  "The sayi is"
+"Sayi ... dir"
+ IDS_OF_THE_PICTURE,
+//   "of the resim"
+"resmin" //##
+ IDS_REMOTE_NUMBER_DESCRIPTION3,
+//  "If you change the number, then "
+"Eger sayiyi degistiriseniz, daha sonra "
+ IDS_REMOTE_NUMBER_DESCRIPTION4,
+//  " will change accordingly. "
+" benzer sekilde degisir. "
+ IDS_REMOTE_NUMBER_DESCRIPTION5,
+//  "You can change uzaktan kumandalar just like ordinary numbers. "
+"Uzaktan kumandalari normal sayilar gibi degistirebilirsiniz."
+ IDS_REMOTE_NUMBER_DESCRIPTION6,
+// was  "This sayi is a remote display for "
+//  "This sayi is a alici for "
+"Bu sayi ... icin alicidir"
+  // e.g. This sayi is a alici for the speed the computer's mouse is moving to the right.
+ IDS_REMOTE_NUMBER_DESCRIPTION7,
+//  "You can't change o like ordinary numbers. "
+"Onu normal sayilar gibi degistiremezsiniz. "
+ IDS_REMOTE_NUMBER_DESCRIPTION8,
+//  "When I want it to stop changing, I usually drop o on a 0. "
+"Degismesini durdurmak istedigimde, genellikle onu sifirin uzerine birakirim. "
+  // together these entries generate:
+  // "This sayi is a alici for the speed the computer's mouse is moving to the right.
+  // You can't change o like ordinary numbers.
+  // When I want o to stop changing, I usually drop o on a 0. "
+
+ IDS_REMOTE_PICTURE_DESCRIPTION,
+ // "This movie shows whether "
+ "Bu film .... gosterir"
+ IDS_REMOTE_PICTURE_DESCRIPTION2,
+//  " is colliding with something else. "
+"baska birseyle cakisiyor."
+ IDS_REMOTE_PICTURE_DESCRIPTION3,
+//  "This is a picture of what "
+" Bu ... resmidir"
+ IDS_REMOTE_PICTURE_DESCRIPTION4,
+//  " is colliding with. It is black if there is no collision. "
+" cakisiyor. Cakisma yoksa siyahtir. "
+
+ IDS_SINCE,
+ // only used in the context:
+ // This sayi is a uzaktan kumanda for the resim of a rectangle.
+ // The sayi is the width of the resim.
+ // If you change the number, then the resim will change accordingly.
+ // Since the resim of a rectangle is flipped, you'll have to flip o back to try this out.
+  "Since "
+ IDS_REMOTE_NUMBER_DESCRIPTION9,
+  " is flipped, you'll have to flip o back to try this out. "
+
+ IDS_BOOK_KEY_FORWARD_HELP,
+  "You can flip to the next sayfa by pushing the '+' or space button. "
+ IDS_BOOK_KEY_BACKWARD_HELP,
+  "You can flip to the previous sayfa by pushing the '-' tus. "
+ IDS_BOOK_KEY_BACKWARD_HELP2,
+  // the "o" here always refers to a notebook
+//  "Since it's on the birinci sayfa,"
+"Birinci sayfada oldugu icin,"
+ IDS_BOOK_KEY_BACKWARD_HELP3,
+//  "If the defter is on the birinci sayfa,"
+"Eger defter birinci sayfada ise,"
+ IDS_BOOK_KEY_BACKWARD_HELP4,
+//  " pushing the - tus will turn to the son sayfa. "
+"- tusuna basmak son sayfaya cevirir."
+ IDS_BOOK_KEY_NUMBER_HELP,
+//  "You can flip to a sayfa by typing the sayfa sayi. "
+"Bir sayfayi numarasini yazarak cevirebilirsiniz. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP,
+//  "You can store anything you make on a bos sayfa. "
+"Bos sayfa uzerinde yaptiginiz herseyi kaydedebilirsiniz. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP2,
+//  "Just drop something on a bos sayfa and it'll turn into a huge stack of copies. "
+"Bos bir sayfaya birsey birakin ve o buyuk kopyalama yiginlarina doner. "//##
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP3,
+//  "Anything you add to a defter will be there even if you restart the computer. "
+"Deftere eklediginiz birsey bilgisayari kapatsaniz bile orada kalir. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP4,
+//  "Tozcuk can remove things you no longer want. "
+"Tozcuk artik istemediginiz seyleri silebilir. "
+ IDS_BOOK_RIGHT_PAGE_ADDED_HELP5,
+//  "Why not turn to a bos sayfa and try o? "
+"Niye bos bir sayfaya donup onu denemiyorsunuz?"
+ IDS_BOOK_PAGE_REMOVED_HELP,
+//  "Tozcuk can remove things from a defter. "
+"Tozcuk defterden birseyler silebilir. "
+ IDS_BOOK_PAGE_REMOVED_HELP2,
+//  "You can call him by pressing the F2 tus. "
+"F2 tusuna basarak onu cagirabilirsiniz. "
+ IDS_BOOK_PAGE_REMOVED_HELP3,
+//  "If you remove a sayfa by mistake, Tozcuk can spit o out and you can put o back. "
+" Eger bir sayfayi yanlislikla silerseniz, Tozcuk onu disari cikartabilir ve onu geri koyabilirsiniz. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP,
+//  "I usually use the left sayfas for metin or resimler that describe the right side. "
+"Ben genellikle sol sayfalari sag sayfalari tarif eden resimler veya metinler icin kullanirim. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP2,
+//  "Just drop some metin or a picture there. "
+"Yalnizca bir parca metni veya bir resmi oraya birakin. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP3,
+//  "You can quickly find a sayfa by dropping the same metin or resim later. "
+"Bir sayfayi ayni metni veya resmi sonradan birakarak hizlica bulabilirsiniz. "
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP4,
+  // as in "This sayfa of the notebook is bos so you can drop something there. "
+//  " is bos so you can drop something there. "
+   "bostur boylece oraya birsey birakabilirsiniz. "
+ IDS_BOOK_PAGE_TOKEN_HELP,
+//  "A neat way of coming back to sayfa "
+" sayfa ... geri donenin iyi bir yolu"
+ IDS_BOOK_PAGE_TOKEN_HELP2,
+ // " is by dropping "
+ " birakarak " //##
+ IDS_BOOK_PAGE_TOKEN_HELP3,
+//  " on the defter. "
+" defter uzerinde. "//##
+ IDS_BOOK_PAGE_TOKEN_HELP4,
+  "You can flip to a sayfa with something on it and try it. "
+ IDS_BOOK_PAGE_TOKEN_HELP5,
+  "You can flip to a sayfa with metin on it by dropping a pad with the same metin on the defter. "
+ IDS_BOOK_PAGE_TOKEN_HELP6,
+//  "If you drop metin, you usually don't need to type the whole thing. "
+"Eger metni birakirsaniz, genellikle butun herseyi yazmak zorunda kalmazsiniz. "
+ IDS_BOOK_PAGE_TOKEN_HELP7,
+ // Only used after preceeding entry.  So o refers to how much you need to type.
+//  "Only enough to find the sayfa. "
+"Sadece sayfayi bulabilmeye yetecek kadar. "
+ IDS_BOOK_PAGE_NUMBER_HELP,
+//  "You can also flip to a sayfa by dropping a sayi pad on a sayfa with something on it. "
+"Ayrica. bir sayfayi uzerinde birsey olan bir sayfadaki bir sayi pad'ini sayfaya birakarak ters cevirebilirsiniz" //##
+ IDS_BOOK_CALLED_HELP,
+//  "When you press the F4 tus, the son defter you used will fly to you. "
+"F4 tusuna basinca, kullandiginiz son defter size dogru ucacak. "
+ IDS_BOOK_HELP_GIVEN_HELP,
+//  "I've told you all that I know about defterler. "
+"Defterler hakkinda bildigim herseyi anlattim. "
+ IDS_BOOK_HELP_GIVEN_HELP2,
+//  "If you want me to repeat all I know about defterler, then press F1 twice while pointing to a defter. "
+"Eger defterler hakkinda bildigim herseyi tekrarlamami istiyorsan, bir deftere isaret ederken F1 tusuna iki kere bas. "
+ IDS_BOOK_CONTAINING,
+  "bir defter" // used to be "bir defter containing "
+ IDS_BOOK_DESCRIPTION1,
+  // It here always refers to the defter that lives inside of the Tool box.
+//  "It stores everything including other defterler"
+"Diger defterler de dahil olmak uzere herseyi saklar"
+ IDS_BOOK_DESCRIPTION2,
+//  "This defter is full of resimler"
+"Bu defter resimler ile doludur"
+ IDS_BOOK_DESCRIPTION3,
+//  "This defter is full of useful alicilar and uzaktan kumandalar"
+"Bu defter faydali alicilar ve uzaktan kumandalar ile doludur"
+ IDS_BOOK_DESCRIPTION4,
+//  "It is full of sample programs"
+"Ornek programlarla doludur"
+ IDS_BOOK_DESCRIPTION5,
+//  "It is stored in the dosya "
+"... dosyasinda saklanir"
+ IDS_PAGES,
+//  " sayfas"
+" sayfalar"
+ IDS_IT_CONTAINS_REMOTE,
+ // "It contains uzaktan kumandalar for "
+ "... icin uzaktan kumandalar icerir"
+ IDS_BLANK_NOTEBOOK,
+//  "Blank\rNotebook"
+ "Bos\rDegter"
+ IDS_MAIN_BOOK_DESCRIPTION,
+//  "This defter lives in the tool box. Any changes you make to it will remain even if you turn off the computer"
+" Bu defter alet kutusunda yasar. Ona yapilan degisiklikler bilgisayari kapatsaniz bile ayni kalir"
+ IDS_MOVIES_NOTEBOOK,
+//  "Pictures"
+"Resimler"
+ IDS_SENSORS_NOTEBOOK,
+//  "Sensors"
+"Alicilar"
+ IDS_BIRDS_NOTEBOOK,
+//  "Useful\rBirds"
+"Faydali\rKuslar"
+
+// This section is used to describe the resimler found in
+// defter on sayfa 2 of the main defter.
+
+ IDS_RECTANGLE_PAGE,
+//  "Rectangle"
+"Dikdortgen"
+ IDS_BALL_PAGE,
+//  "Ball"
+"Top"
+ IDS_PADDLE_PAGE,
+//  "Paddle"
+"Pedal"
+ IDS_PERSON_WALK_PAGE,
+//  "Person\rWalk"
+"Kisi\rYuru"
+ IDS_PERSON_DIZZY_PAGE1,
+//  "Person\rDizzy"
+"Kisi\rSersem"
+ IDS_PERSON_DIZZY_PAGE2,
+//  "Person\rDizzy"
+"Kisi\rSersem"
+ IDS_PERSON_DIZZY_PAGE3,
+//  "Person\rDizzy"
+"Kisi\rSersem"
+ IDS_PERSON_SIT_PAGE1,
+//  "Person\rSit"
+"Kisi\rOtur"
+ IDS_PERSON_SIT_PAGE2,
+//  "Person\rSit"
+"Kisi\rOtur"
+ IDS_PERSON_SIT_PAGE3,
+//  "Person\rSit"
+"Kisi\rOtur"
+ IDS_TOOLBOX_PAGE,
+  "Toolbox"
+ IDS_HELIOCOPTER_PAGE,
+//  "Helicopter"
+  "Helikopter"
+ IDS_HELICOPTER_LANDING_PAGE,
+//  "Landing"
+"Iniyor"
+ IDS_EXPLOSION_PAGE,
+//  "Explosion"
+"Patlama"
+ IDS_BOMB_PAGE,
+//  "Bomb"
+"Bomba"
+ IDS_HOUSE_SIDE_PAGE1,
+//  "House\rSide"
+"Ev\rYan"
+ IDS_HOUSE_TOP_PAGE1,
+//  "House\rTop"
+"Ev\rUst"
+ IDS_HOUSE_SIDE_PAGE2,
+//  "House\rSide"
+"Ev\rYan"
+ IDS_HOUSE_TOP_PAGE2,
+//  "House\rTop"
+"Ev\rUst"
+ IDS_HOUSE_SIDE_PAGE3,
+//  "House\rSide"
+"Ev\rYan"
+ IDS_HOUSE_TOP_PAGE3,
+//  "House\rTop"
+"Ev\rUst"
+ IDS_ROBOT_PAGE,
+//  "Robot"
+  "Robot"
+ IDS_NEST_PAGE,
+//  "Nest"
+ "Yuva"
+ IDS_BIRD_PAGE,
+//  "Bird"
+"Kus"
+ IDS_MOUSE_PAGE,
+//  "Mouse"
+"Fare"
+ IDS_VACUUM_PAGE,
+//  "Vacuum"
+"Supurge"
+ IDS_EXPANDER_PAGE,
+//  "Pump"
+"Pompa"
+ IDS_COPIER_PAGE,
+//  "Wand"
+"Sopa"
+ IDS_MARTIAN_PAGE1,
+//  "Martian"
+"Marsli"
+ IDS_MARTIAN_PAGE2,
+//  "Rocket"
+"Roket"
+ IDS_TRUCK_PAGE1,
+//  "Truck"
+"Kamyon"
+ IDS_TRUCK_PAGE2,
+//  "Truck"
+"Kamyon"
+ IDS_TRUCK_PAGE3,
+//  "Truck"
+"Kamyon"
+ IDS_THOUGHT_BUBBLE_PAGE,
+//  "Bubble"
+"Kopuk"
+ IDS_TALK_BALLOON_PAGE,
+//  "Balloon"
+"Balon"
+ IDS_PLATE_PAGE, // changed 12/2/96
+//  "Button"
+"Tus"
+ IDS_PAD_PAGE,
+  "Pad"
+ IDS_BOOK_PAGE,
+//  "Notebook"
+"Defter"
+ IDS_FRAME_PAGE,
+//  "Frame"
+"Cerceve"
+ IDS_ARM_PAGE,
+//  "Arm"
+"Kol"
+ IDS_HAND_PAGE1,
+//  "Hand"
+"El"
+ IDS_HAND_PAGE2,
+//  "Hand"
+"El"
+ IDS_SWITCH_PAGE,
+//  "Switch"
+"Dugme"
+ IDS_WIRE_PAGE,
+//  "Wire"
+"Tel"
+ IDS_FLOWER_PAGE,
+//        "Flower"
+"Cicek"
+ IDS_TREE_PAGE,
+//        "Tree"
+"Agac"
+ IDS_TRAFFIC_LIGHT_PAGE,
+//        "Traffic\rLight"
+        "Trafik\rIsigi"
+
+// This section labels the contents of the alici
+// defter found on sayfa 4 of the main defter.
+// Each alici is in a box with one of these labels.
+
+ IDS_MOUSE_X_SHORT_LABEL,
+//  "Mouse right"
+  "Fare saga"
+ IDS_MOUSE_Y_SHORT_LABEL,
+//  "Mouse up"
+"Fare yukari"
+ IDS_MOUSE_LEFT_BUTTON_SHORT_LABEL,
+//  "Left click"
+"Sol klik"
+ IDS_MOUSE_MIDDLE_BUTTON_SHORT_LABEL,
+//  "Middle click"
+"Orta klik"
+ IDS_MOUSE_RIGHT_BUTTON_SHORT_LABEL,
+//  "Right click"
+"sag klik"
+ IDS_MOUSE_LEFT_BUTTON_DOWN_SHORT_LABEL,
+//  "Left down"
+"Sol basili"
+ IDS_MOUSE_MIDDLE_BUTTON_DOWN_SHORT_LABEL,
+//  "Middle down"
+"Orta basili"
+ IDS_MOUSE_RIGHT_BUTTON_DOWN_SHORT_LABEL,
+//  "Right down"
+"Sag basili"
+ IDS_KEYBOARD_BUTTON_SHORT_LABEL,
+//  "Key"
+"Tus"
+ IDS_LAST_KEYSTROKE_SHORT_LABEL,
+//  "Last Key"
+"Son Tus"
+ IDS_SHIFT_DOWN_SHORT_LABEL,
+//  "Shift down"
+"Shift basili"
+ IDS_CONTROL_DOWN_SHORT_LABEL,
+//  "Control down"
+"Control basili"
+ IDS_TIMER_SHORT_LABEL,
+//  "Timer"
+"Zamanlayici"
+ IDS_RANDOM_SHORT_LABEL,
+//  "Random"
+"Rastgele"
+ IDS_HAND_VISIBLE_SHORT_LABEL,
+//  "Hand?"
+"El?"
+ IDS_CLIPBOARD_SHORT_LABEL,
+ // "Clipboard"
+ "Klipbord"
+ IDS_AVENUE_SHORT_LABEL,
+  "Bulvar"
+ IDS_STREET_SHORT_LABEL,
+  "Cadde"
+ IDS_SOUND_ON_SHORT_LABEL,
+//  "Sound?"
+"Ses?"
+ IDS_LETTER_SIZE_SHORT_LABEL,
+//  "Letter size"
+"Harf bedeni"
+ IDS_READING_SPEED_SHORT_LABEL,
+//  "Talk speed"
+"Konusma hizi"
+ IDS_MARTIAN_ADVICE_LEVEL_SHORT_LABEL,
+//  "Marty talk"
+"Marsli konus"
+ IDS_PROGRAMMER_HEAD_SHORT_LABEL,
+//  "Your head"
+"Basiniz"
+ IDS_SCREEN_SIZE_SHORT_LABEL,
+//  "Window size"
+"Pencere bedeni"
+ IDS_SYSTEM_SPEED_SHORT_LABEL,
+//  "ToonTalk speed"
+  "ToonTalk hizi"
+ IDS_CITY_SIZE_SHORT_LABEL
+//  "City size"
+  "Sehir bedeni"
+ IDS_SYSTEM_SLEEP_SHORT_LABEL,
+//  "Frame duration"
+"Cerceve suresi"
+ IDS_MOUSE_BUTTONS_SHORT_LABEL,
+  "Fare tuslari"
+ IDS_LEGO_SERIAL_PORT_SHORT_LABEL,
+  "Seri port"
+ IDS_MARTIAN_FONT_SHORT_LABEL,
+//  "Marty's font"
+   "Marslinin  fontu"
+ IDS_FILE_TO_PICTURE_SHORT_LABEL,
+//  "Picture in"
+ "Resim dahil"
+ IDS_FILE_TO_SOUND_SHORT_LABEL,
+//  "Sound in"
+"Ses dahil"
+
+
+// This section contains the short metin objects
+// that describe the alicilar in the defter
+// of sayfa 4 of the main defter.  These
+// appear on the odd sayfas
+ IDS_MOUSE_X_LONG_LABEL,
+//  "Mouse's\rRight\rSpeed"
+"Farenin\rSag\rHizi"
+ IDS_MOUSE_Y_LONG_LABEL,
+//  "Mouse's\rUp\rSpeed"
+"Farenin\rYukari\rHizi"
+ IDS_MOUSE_LEFT_BUTTON_LONG_LABEL,
+//  "Mouse's\rLeft\rButton\rClicked"
+"Farenin\rSol\rTusu\rKliklendi"
+ IDS_MOUSE_MIDDLE_BUTTON_LONG_LABEL,
+//  "Mouse's\rMiddle\rButton\rClicked"
+"Farenin\rOrta\rTusu\rKliklendi"
+ IDS_MOUSE_RIGHT_BUTTON_LONG_LABEL,
+//  "Mouse's\rRight\rButton\rClicked"
+"Farenin\rSag\rTusu\rKliklendi"
+ IDS_MOUSE_LEFT_BUTTON_DOWN_LONG_LABEL,
+//  "Mouse's\rLeft\rButton\rDown"
+"Farenin\rSol\rTusu\rAsagida"
+ IDS_MOUSE_MIDDLE_BUTTON_DOWN_LONG_LABEL,
+//  "Mouse's\rMiddle\rButton\rDown"
+"Farenin\rOrta\rTusu\rAsagida"
+ IDS_MOUSE_RIGHT_BUTTON_DOWN_LONG_LABEL,
+//  "Mouse's\rRight\rButton\rDown"
+"Farenin\rSag\rTusu\rAsagida"
+ IDS_KEYBOARD_BUTTON_LONG_LABEL,
+//  "Key\rJust\rPressed"
+"Tus\ryeni\rbasildi"
+ IDS_LAST_KEYSTROKE_LONG_LABEL,
+//  "Last\rKeystroke"
+"Son\rTus"
+ IDS_SHIFT_DOWN_LONG_LABEL,
+//  "Shift\rButton\rDown"
+  "Shift\rTusu\rAsagida"
+ IDS_CONTROL_DOWN_LONG_LABEL,
+//  "Control\rButton\rDown"
+  "Control\rTusu\rAsagida"
+ IDS_TIMER_LONG_LABEL,
+//  "Milli-\rseconds\rsince\rLast\rFrame"
+   "Son\rCerceveden\rbuyana\rmili-\rsaniye"
+ IDS_RANDOM_LONG_LABEL,
+//  "Number\rbetween\r0 and 1000"
+  "0 ile 1000\r arasindaki\rsayi"
+ IDS_HAND_VISIBLE_LONG_LABEL,
+//  "Hand\rVisible?"
+"El\rGorulebilir?"
+ IDS_CLIPBOARD_LONG_LABEL,
+  "To and from\rother\rPrograms"
+ IDS_AVENUE_LONG_LABEL,
+//  "My\rAddress"
+"Benim\rAdresim"
+ IDS_STREET_LONG_LABEL,
+  "My\rAddress"
+"Benim\rAdresim"
+ IDS_SOUND_ON_LONG_LABEL,
+//  "Sound\rOn?"
+  "Ses\rAcik?"
+ IDS_LETTER_SIZE_LONG_LABEL,
+//  "Marty's\rLetters\rSize"
+ "Marslinin\rHarf\nbedeni"
+ IDS_READING_SPEED_LONG_LABEL,
+//  "Marty's\rTalking\rSpeed"
+ "Marslinin\rkonusma\rhizi"
+ IDS_MARTIAN_ADVICE_LEVEL_LONG_LABEL,
+//  "Marty's\rTalk\rLevel"
+"Marslinin\rKonusma\rSeviyesi"
+ IDS_PROGRAMMER_HEAD_LONG_LABEL,
+//  "Your\rHead's\rLooks"
+"Sizin\rBasinizin\rgorunusu"
+ IDS_SCREEN_SIZE_LONG_LABEL,
+//  "Window\rSize"
+"cerceve\rBedeni"
+ IDS_SYSTEM_SPEED_LONG_LABEL,
+//  "Speed of\rToonTalk"
+"ToonTalk'un\rHizi"
+ IDS_CITY_SIZE_LONG_LABEL
+//  "City\rSize"
+"Sehir\rBedeni"
+ IDS_SYSTEM_SLEEP_LONG_LABEL,
+//  "Frame\rDuration"
+"Cerceve\rSuresi"
+ IDS_MOUSE_BUTTONS_LONG_LABEL,
+//  "Mouse\rButton\rUse"
+"Fare\rTusu\rKullanimi"
+ IDS_LEGO_SERIAL_PORT_LONG_LABEL,
+//  "Serial\rPort"
+"Ser\rPort"
+ IDS_MARTIAN_FONT_LONG_LABEL,
+//  "Marty's\rFont"
+"Marslinin\rOnu"
+ IDS_FILE_TO_PICTURE_LONG_LABEL,
+//  "File to\rPicture"
+"Resme\rdosya"
+ IDS_FILE_TO_SOUND_LONG_LABEL,
+//  "File to\rSound"
+"Sese\rDosya"
+
+// IDS_MATH_LABEL,
+//  "Math"
+// IDS_MOUSE_LABEL,
+//  "Mouse"
+// IDS_SERIAL_PORT_LABEL,
+//  "Serial port"
+// IDS_CLOCK_LABEL,
+//  "Clock"
+
+ IDS_ANY_PICTURE,
+  "herhangi bir resim"
+ IDS_PICT_OF,
+  "bir resmi"//  "... bir resmi"
+//  "a picture of a cat" "bir kedinin bir resmi"
+ IDS_MOVIE_OF,
+  "bir filmi" //  "... bir filmi"
+ IDS_BLANK_PICTURE_OF, // revised on 12/20 (replaces the old IDS_BLANK_PICTURE)
+  "bir bos resmi" //  "... bir bos resmi"
+
+ IDS_PICT_DESCRIPTION1, // As in "You are hold a picture with 3 resimler on top. "
+  " ustteki resimler"
+ IDS_PICT_DESCRIPTION2, // As in "You are hold a picture with one resim on top. "
+  " ustteki bir resim ile"
+// IDS_BEGIN_THE, // just for English
+//  "The "
+// IDS_AND_THE,
+//  "And the "
+ IDS_ON_THE_BACK,
+ "on the back"
+
+
+
+ IDS_FLIPPING_MOVIE,
+  // this is used when Marty is describing a picture while it is being flipped over
+//  "a flipping picture"
+  "bir degisen resim"
+ IDS_FLIP_SIDE_OF,
+  " flip side of "
+// IDS_PICT_BLANKED_TB_HELP,
+//  "Since the bos resim is in a dusunce kopugu, the robot will be happy with any resim at the same place. "
+ IDS_PICT_BLANKED_TB_HELP2,
+  "Dusunce kopugundeki bos resimler faydalidir. "
+ IDS_PICT_BLANKED_TB_HELP3,
+  "Dusunce kopugunde bos bir resim bulunan bir robot, kutusundaki ayni delikteki her resim ile uyusur. "
+
+ IDS_PICT_ADDED_PICTURE_HELP,
+  "Iki resmi bir resmi digerinin uzerine getirerek birlestirebileceginizi biliyor mudunuz?"
+// IDS_PICT_ADDED_PICTURE_HELP2,
+
+// IDS_PICT_ADDED_PICTURE_HELP3,
+
+ IDS_PICT_REMOVED_PICTURE_HELP,
+ // "You can remove a picture from a picture by using Dusty the Vacuum. "
+ "Bir resmi diger resimden Supurge Tozcuk'u kullanarak silebilirsiniz. "
+ IDS_PICT_REMOVED_PICTURE_HELP2,
+//  "You can call Tozcuk to you by pressing the F2 tus. "
+"F2 tusuna basarak Tozcuk'u  kensinize cagirabilirsiniz. "
+ IDS_PICT_CHANGED_KEY_HELP,
+  // as in "This resim is really 8 resimler. "
+//  "This resim is really "
+"Bu resim gayet ... dir"
+ IDS_PICT_CHANGED_KEY_HELP2,
+ // as in " You can switch between them by pressing the +, -, or space button when selected or held. "
+//  "You can switch between them "
+ "Aralarinda .... degistirebilirsin"
+ IDS_PICT_CHANGED_KEY_HELP3,
+ // as in "Some resimler can be changed by pressing the +, -, or space button when selected or held. "
+//  "Some resimler can be changed "
+"Bazi resimler ... degistirilebilir"
+ IDS_PICT_CHANGED_KEY_HELP4,
+//  "by pressing the +, -, or space button when selected or held. "
+"secildigi veya tutuldugu zaman +, - veya spacebar tuslarina basarak"
+ IDS_MOVIES,
+//  " movies" // was  " resimler"
+" filmler"
+ IDS_PICT_COLOR_KEY_HELP,
+//  "This resim is really a rectangle. "
+"Bu resim sahiden bir dikdortgendir. "
+ IDS_PICT_COLOR_KEY_HELP2,
+//  "Some resimler are just rectangles. "
+"Bazi resimler sadece dikdortgendir. "
+ IDS_PICT_COLOR_KEY_HELP3,
+//  "You can change the color by pushing the +, - or space key. "
+"+,- veya spacebar tuslarina basarak rengi degistirebilirsiniz. "
+ IDS_EXPANDER_ON_PICTURE_HELP,
+//  "Pumpy the Bike Pump can grow, shrink, and stretch resimler. "
+"Bisiklet pompasi Pompacik buyuyebilir,kuculebilir ve resimleri gerebilir. "
+ IDS_EXPANDER_ON_PICTURE_HELP2,
+//  "You can call for him by pressing the F3 tus. "
+"F3 tusuna basarak onu cagirabilirsiniz. "
+ IDS_PICT_TOSSED_HELP,
+  // as in "You can give this a toss by pressing control while releasing the button. "
+  // the word "this" should always refer to a picture of something.
+//  "You can give this a toss by pressing "
+ "Buna ... basarak ileri geri goturebilirsiniz"// ##
+ IDS_PICT_TOSSED_HELP2,
+//  "You can toss a picture by pressing "
+"Bir resmi ... basarak ileri geri goturebilirsiniz" //##
+// IDS_PICT_TOSSED_HELP3,
+
+// IDS_PICT_TOSSED_HELP4,
+
+ IDS_PICT_FLIPPED_HELP,
+  "You can flip a picture over by pressing "
+// IDS_NOW,
+//  " now"
+ IDS_PICT_FLIPPED_HELP2,
+//  " when you are holding a picture. "
+" bir resmi tutarken "
+ IDS_PICT_FLIPPED_BACK_HELP,
+  "You can flip a picture back over by pressing "
+ IDS_AGAIN,
+//  " again"
+" yeniden"
+ IDS_PICT_FLIPPED_BACK_HELP2,
+  " when you are holding a flipped resim. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP,
+//  "The little defter on the back contains uzaktan kumandalar for this resim. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP2,
+//  "The back of a picture contains a little defter of uzaktan kumandalar. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP3,
+//  "If you try to pick o up, you'll get a copy. "
+ IDS_PICT_PROGRAM_ADDED_HELP,
+//  "Robots can work on the back of resimler. "
+"Robotlar resimlerin arkasinda calisabilirler. "
+ IDS_PICT_PROGRAM_ADDED_HELP2,
+//  "Just drop them on the back. And boxes for them to work on too. "
+"Sadece onlari arkalarina birakin. Ve calisacaklari kutulari da. "
+ IDS_PICT_PROGRAM_ADDED_HELP3,
+//  "The robots will start working when you flip the resim back over and drop it. "
+"Robotlar resimleri degistirdiginizde ve biraktiginizda calismaya baslayacak. "
+ IDS_PICT_PROGRAM_ADDED_HELP4,
+//  "That's how I make \"smart\" resimler that can bounce, explode, grow, or whatever I program them to do. "
+"Iste boyle ziplayan, patlayan, buyuyen veya daha baska seyler yapmasi icin programladigim \"akilli\" resimleri yapis seklim. "
+ IDS_PICT_PROGRAM_REMOVED_HELP,
+//  "Tozcuk can remove the stuff you added to the back of a picture. "
+"Tozcuk resimlerin arkasina eklediginiz seyleri silebilir. "
+ IDS_PICT_HELP_GIVEN_HELP,
+//  "I've told you all that I know about resimler. "
+"Resimler hakkinda bildigim herseyi anlattim. "
+ IDS_PICT_HELP_GIVEN_HELP2,
+//  "If you want me to repeat all I've told you about resimler, then press F1 twice while pointing to a picture. "
+"Eger resimler hakkinda bildigim herseyi tekrarlamami istiyorsan, bir resme isaret ederken F1 tusuna iki kere bas. "
+ IDS_ABORT_CANT_FLIP_SCALE,
+  " mouse tuslar do nothing when holding a olcek"
+
+ IDS_X_SHORT_LABEL,
+  "Right"
+ IDS_Y_SHORT_LABEL,
+  "Up"
+ IDS_X_SPEED_SHORT_LABEL,
+  "Right Speed"
+ IDS_Y_SPEED_SHORT_LABEL,
+  "Up Speed"
+ IDS_WIDTH_SHORT_LABEL,
+  "Genislik"
+ IDS_HEIGHT_SHORT_LABEL,
+  "Yukseklik"
+ IDS_PARAMETER_SHORT_LABEL,
+  // # as in short for "sayi"
+//  "Picture #"
+"Resim #"
+ IDS_COLLIDE_SHORT_LABEL,
+//  "Collide?"
+"Cakisik?"
+ IDS_COLLIDE_WHO_SHORT_LABEL,
+//  "Hit Who?"
+"Kime Carpti?"
+// IDS_X_PENETRATION_SHORT_LABEL,
+//  "Right Inside"
+// IDS_Y_PENETRATION_SHORT_LABEL,
+//  "Up Inside"
+ IDS_X_COLLIDE_SHORT_LABEL,
+//  "Right Collide?"
+"Sag Cakisik?"
+ IDS_Y_COLLIDE_SHORT_LABEL,
+//  "Up Collide?"
+"Yukari Cakisik?"
+ IDS_APPEARANCE_SHORT_LABEL,
+//  "Looks"
+"Benzer"
+ IDS_VISIBLE_SHORT_LABEL,
+  "Gorunebilir?"
+ IDS_END_OF_ANIMATION_SHORT_LABEL,
+//  "Finished?"
+"Bitti?"
+ IDS_GRASPED_SHORT_LABEL,
+//  "Held?"
+"Tutuldu?"
+ IDS_SELECTED_SHORT_LABEL,
+  "Secildi?"
+ IDS_RELEASED_SHORT_LABEL,
+//  "Dropped?"
+ "Birakildi?"
+ IDS_X_LONG_LABEL,
+  "From\rLeft\rSide"
+ IDS_Y_LONG_LABEL,
+  "From\rBottom"
+ IDS_X_SPEED_LONG_LABEL,
+  "Speed\rto\rRight"
+ IDS_Y_SPEED_LONG_LABEL,
+  "Speed\rto\rTop"
+ IDS_WIDTH_LONG_LABEL,
+  "Genislik"
+ IDS_HEIGHT_LONG_LABEL,
+  "Yukseklik"
+ IDS_PARAMETER_LONG_LABEL,
+  "Which\rPicture"
+ IDS_COLLIDE_LONG_LABEL,
+  "Colliding?"
+ IDS_COLLIDE_WHO_LONG_LABEL,
+  "Hitting\rWho?"
+// IDS_X_PENETRATION_LONG_LABEL,
+//  "Inside\rto Left"
+// IDS_Y_PENETRATION_LONG_LABEL,
+//  "Inside\rto Top"
+ IDS_X_COLLIDE_LONG_LABEL,
+  "Left\rRight\rhit?"
+ IDS_Y_COLLIDE_LONG_LABEL,
+  "Up\rDown\rhit?"
+ IDS_APPEARANCE_LONG_LABEL,
+  "Looks"
+ IDS_VISIBLE_LONG_LABEL,
+  "Gorunebilir?"
+ IDS_END_OF_ANIMATION_LONG_LABEL,
+  "Animation\rFinished?"
+ IDS_GRASPED_LONG_LABEL,
+  "Held\rin\rHand?"
+ IDS_SELECTED_LONG_LABEL,
+  "Secildi?"
+ IDS_RELEASED_LONG_LABEL,
+  "Just\rDropped?"
+
+ IDS_ABORT_PICTURE_FLIPPED_OVER,
+  " resim is flipped over"
+ IDS_ABORT_PICTURE_NOT_FLIPPED_OVER,
+  " resim is not flipped over"
+
+ IDS_ABORT_ROBOT_CANT_FIND_TOOL,
+  "he had problems finding the tool to apply"
+ IDS_ABORT_ROBOT_CANT_RELEASE,
+  "he tried to release something he wasn't holding"
+ IDS_ROBOT_PROBLEMS_RELEASING,
+  "he had problems releasing something"
+ IDS_ROBOT_DESCRIBE1,
+  "bir robot without a dusunce kopugu"
+ IDS_ROBOT_DESCRIBE2,
+  "bir robot who wants "
+ IDS_ROBOT_DESCRIBE3,
+  "If given a box like that he will "
+ IDS_ROBOT_DESCRIBE4,
+  "Otherwise, he'll give the box to the robot behind him in line. " 
+ IDS_STACK_OF, // revised 12/21
+  "bir stack of "
+ IDS_STACK_OF_DEFINITE, // added 12/21
+  " stack of "
+ IDS_STACK_OF_PLURAL, // added 12/21
+  "stacks of "
+ IDS_STACK_OF_PRONOUN, // added 12/21
+  "o"
+
+ IDS_PICK_UP_HELP,
+// was  "You can pick up"
+ "You can grab"  // changed since what follows might be "o" (or some noun phrase)
+ IDS_PICK_UP_HELP2,
+  "by clicking"
+ IDS_HOLDING,
+  " holding "
+ IDS_DROP_HELP,
+  "You can drop" // was  "You can drop o by pushing" 10/4
+
+ IDS_ABORT_TEXT_ALREADY_EMPTY,
+  " metin is already empty"
+ IDS_ABORT_TEXT_TOO_LONG,
+  " metin is too long"
+// IDS_TEXT_BLANKED_TB_HELP,
+//  "Since the empty metin pad is in a dusunce kopugu, the robot will be happy with any metin at the same place. "
+ IDS_TEXT_BLANKED_TB_HELP2,
+  "Blank metin pads are useful inside of dusunce kopugu. "
+ IDS_TEXT_BLANKED_TB_HELP3,
+  "The robot with a bos metin pad in its dusunce kopugu will be happy with any metin on a pad in the same hole in his box. " //of the box it is working on. "
+ IDS_TEXT_LETTERS_ADDED_HELP,
+  "You can add letters to that metin pad by typing a letter. "
+ IDS_TEXT_LETTERS_ADDED_HELP2,
+  "You can also add letters while "
+ IDS_TEXT_LETTERS_ADDED_HELP3,
+  " holding a metin pad. "
+ IDS_TEXT_LETTERS_REMOVED_HELP,
+  "You can remove letters by pushing the 'Backspace' key. "
+ IDS_TEXT_MADE_MULTIPLE_LINES_HELP,
+  "You can make the metin go on another line by pressing the 'Enter' key. "
+ IDS_TEXT_CONCATENATION_HELP,
+  "You can combine two metin pads by dropping one on another. "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP,
+   // or the birinci if you drop o at that end...
+  "If you drop a sayi on this, it'll be added to the son letter. " // changed 2/1 was the metin. "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP2,
+  "For example, if you drop "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP3,
+  " onto this, you will get '"
+ IDS_TEXT_NUMBER_CONCATENATION_HELP4,
+  "'. "
+  // new semantics so following changed 8/23/96
+ IDS_TEXT_NUMBER_CONCATENATION_HELP5,
+  "If you drop a sayi on a metin pad, it'll be added to the son letter. "
+ IDS_TEXT_NUMBER_CONCATENATION_HELP6,
+  "For example, dropping 2 on ABC will result in ABE. " // example changed 2/1
+ IDS_TEXT_HELP_GIVEN_HELP,
+//  "I've told you all that I know about metin pads. "
+"Metin pad'lari hakkinda bildigim herseyi anlattim. "
+ IDS_TEXT_HELP_GIVEN_HELP2,
+//  "If you want me to tell you again all I know about metin pads, then press F1 twice while pointing to a metin pad. "
+"Eger metin pad'lari hakkinda bildigim herseyi tekrarlamami istiyorsan, bir metin pad'e isaret ederken F1 tusuna iki kere bas. "
+ IDS_ABORT_TEXT_BAD_INDEX,
+  " sayi is daha buyuk than the number of letters on the metin pad"
+
+ IDS_EMPTY_THOUGHT_BUBBLE_DESCRIPTION,
+  "empty dusunce kopugu"
+ IDS_THOUGHT_BUBBLE_DESCRIPTION,
+  "dusunce kopugu containing "
+
+// IDS_GENERIC_TOOL_HELP,
+//  "I'll tell you more about how to use "
+// IDS_GENERIC_TOOL_HELP2,
+//  " if you pick o up. "
+ IDS_EXPANDER_DESCRIPTION,
+  "Pumpy the Bike Pump"
+ IDS_EXPANDER_DESCRIPTION1,
+  "Pumpy"
+ IDS_EXPANDER_GREW_ITEM_HELP,
+  "Pumpy can make things big or small, tall or short, and wide or thin. " // was "Pumpy can change the size of the item he is over" 10/4
+ IDS_EXPANDER_GREW_ITEM_HELP2,
+  "If you hold down "
+ IDS_EXPANDER_GREW_ITEM_HELP3,
+  "Pumpy will make"
+// IDS_BIGGER,
+//  " daha buyuk"
+// IDS_EXPANDER_SHRUNK_ITEM_HELP,
+//  "If you hold down "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP2,
+//  " Pumpy will make "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP3,
+//  "But next time you push o down "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP4,
+//  " will get smaller. "
+// IDS_EXPANDER_GREW_Y_HELP,
+//  "If you press"
+//// IDS_EXPANDER_GREW_Y_HELP2,
+
+// IDS_EXPANDER_GREW_Y_HELP3,
+//  "will just get daha uzun"
+//// IDS_EXPANDER_GREW_X_HELP,
+
+//// IDS_EXPANDER_GREW_X_HELP2,
+
+//// IDS_EXPANDER_GREW_X_HELP3,
+
+// IDS_EXPANDER_GREW_X_HELP4,
+//  "But next time it'll get daha genis instead. "
+ IDS_EXPANDER_CALLED_HELP,
+  "If you ever want Pumpy to jump into "
+ IDS_EXPANDER_CALLED_HELP2,
+  " just call him by pressing the F3 tus. " // hand removed
+ IDS_EXPANDER_CALLED_HELP3,
+  "He'll really hurry if you push F3 twice. "
+ IDS_EXPANDER_HELP_GIVEN_HELP,
+  "I've told you all I can about Pumpy. "
+ IDS_EXPANDER_HELP_GIVEN_HELP2,
+  "I'll tell you all I've told you about Pumpy over again if you press F1 twice while holding Pumpy. "
+ IDS_VACUUM_DESCRIPTION,
+  "Dusty the Vacuum"
+ IDS_VACUUM_DESCRIPTION1,
+  "Tozcuk"
+ IDS_VACUUM_RESTORE_HELP,
+  "Tozcuk can restore "
+ IDS_VACUUM_RESTORE_HELP2,
+  " son thing sucked up"
+ IDS_VACUUM_RESTORE_HELP3,
+  "if you click on"
+// IDS_VACUUM_RESTORE_HELP4, 10/4
+//  "Tozcuk spits things out when you try to suck up the floor. "
+ IDS_VACUUM_BLANK_HELP,
+  // as in  "Tozcuk will erase the number if you click on any mouse tus. "
+  "Tozcuk will erase " // was will bos
+ IDS_VACUUM_BLANK_HELP2, // 10/4
+//  "bir metin or sayi pad or an empty box under o"
+  "something under his nose"
+ IDS_VACUUM_BLANK_HELP3,
+  "if you click on" // was "bos if you click on"
+ IDS_VACUUM_SUCK_HELP,
+  "If you click on "
+ IDS_VACUUM_SUCK_HELP2, // this is now joined with IDS_VACUUM_SUCK_HELP4
+  " Tozcuk will suck up "
+// IDS_VACUUM_SUCK_HELP3,
+//  "He'll spit o out again if you try to vacuum the floor. "
+ IDS_VACUUM_SUCK_HELP4,
+  "what's under him. "
+// IDS_VACUUM_SUCK_ITEM_HELP,
+//  "If you click down on "
+// IDS_VACUUM_SUCK_ITEM_HELP2,
+//  " Tozcuk will suck up "
+// IDS_VACUUM_SUCK_ITEM_HELP3,
+//  "He'll restore o if you try to suck up the floor. "
+// IDS_OUT_OF,
+//  " out of "
+ IDS_VACUUM_CALLED_HELP,
+  "If you ever want Tozcuk to come and run into "
+ IDS_VACUUM_CALLED_HELP2,
+  " just push the F2 tus. " // hand removed
+ IDS_VACUUM_CALLED_HELP3,
+  "If you push F2 twice he'll come real fast. "
+ IDS_VACUUM_HELP_GIVEN_HELP,
+  "I've told you all I know about Tozcuk. "
+ IDS_VACUUM_HELP_GIVEN_HELP2,
+  "I sometimes use him to move things between houses. "
+ IDS_VACUUM_HELP_GIVEN_HELP3,
+  "If you want me to tell you all about Tozcuk over again, just press F1 twice. "
+ IDS_COPIER_APPLIED_HELP,
+  "You can copy "
+ IDS_COPIER_APPLIED_HELP2,
+  "what is under the tip of the wand"
+ IDS_COPIER_APPLIED_HELP3,
+  " by clicking on "
+ IDS_COPIER_RELEASED_HELP,
+  // as in "You can set the box down by clicking on any mouse tus. "
+  "You can set "
+ IDS_COPIER_RELEASED_HELP2,
+  // as in "You can set what you copy down by clicking on any mouse tus. "
+  "what you copy"
+ IDS_COPIER_RELEASED_HELP3,
+  " down by clicking on"
+ IDS_COPIER_RELEASED_HELP4,
+  "A second click will set the wand down. "
+ IDS_COPIER_CALLED_HELP,
+  "If you ever want the buyulu sopa to float into "
+ IDS_COPIER_CALLED_HELP2,
+  " just call o by pressing the F5 tus. "  // hand removed
+ IDS_COPIER_CALLED_HELP3,
+  "It'll really hurry if you push F5 twice. "
+ IDS_COPIER_HELP_GIVEN_HELP,
+  "That's about all I can tell you about buyulu sopas. "
+ IDS_COPIER_HELP_GIVEN_HELP2,
+  "If you want me to repeat all I've told you about wands just push F1 twice. "
+
+ IDS_TRUCK_RECEIVED_CARGO_HELP,
+  "After you load up a kamyon with a robot and box for him to work on, the kamyon's crew will drive off and build a new house. "
+ IDS_TRUCK_RECEIVED_ROBOT_HELP,
+  "If you drop a robot or a team of robots on the kamyon, they'll be put on the floor of the new house. "
+ IDS_TRUCK_RECEIVED_CUBBY_HELP,
+  "If you drop a box on the kamyon, it'll be put on the floor of the new house. "
+ IDS_TRUCK_RECEIVED_HOUSE_PICTURE_HELP,
+  "If you drop a picture of a house on the kamyon, then the kamyon's crew will build a house that looks like that. You can find resimler of houses in the defter on sayfa 2 of your defter. "
+ IDS_TRUCK_RECEIVED_ADDRESS_HELP,
+  "If you drop an Bulvar sayi or Cadde sayi on the kamyon, the kamyon's crew will build a house as close to that address they can. If you don't give them an address they'll build o as nearby as possible. "
+ IDS_TRUCK_RECEIVED_ADDRESS_HELP2,
+  "You can find the address of the house you're in, in the defter on sayfa 4 of your defter. An address will change if you drop a sayi on it. "  // was type "of o"
+
+ IDS_TRUCK_RECEIVED_ROBOT_HELP2,
+  "If you drop a robot or line of robots on the kamyon, the crew will put the robots on the floor of the new house and give them the box from the kamyon. "
+ IDS_TRUCKS_CARGO_REMOVED_HELP,
+  "You can take stuff out of a kamyon by hand or with Tozcuk's help. "
+ IDS_TRUCK_HELP_GIVEN_HELP,
+  "I've told you all I that I know about kamyonlar. "
+ IDS_TRUCK_HELP_GIVEN_HELP2,
+//  "If you want me to repeat all I've told you about kamyonlar, then press F1 twice while pointing to a kamyon. "
+"Eger kamyonlar hakkinda bildigim herseyi tekrarlamami istiyorsan, bir kamyona isaret ederken F1 tusuna iki kere bas. "
+ IDS_WELCOME_MESSAGE,
+//  "Welcome to ToonTalk(tm)! Use mouse tuslar to fly. This is beta test version sayi 6B. Copyright (c) 1992, 1997, Ken Kahn. All rights reserved. Please do not distribute. See the README.TXT dosya for more information. "
+  "(c) 1992, 1997. Ken Kahn. All rights reserved."
+ IDS_BETA_EXPIRED,
+  "Afedersiniz this won't run. It is a beta version and is more than 2 months old. Please obtain a new one. See the README.TXT dosya. "
+ IDS_VACUUM_SUCK_GENERIC,
+  "To use Tozcuk move his mouth over something. "
+ IDS_EXAMPLES_NOTEBOOK,
+  "Examples"
+ IDS_SAID_ENOUGH,
+  "... I've said enough. "
+// IDS_HIDE_HAND_HELP1,
+//  "The mouse alici gets confused by your hand. "
+// IDS_HIDE_HAND_HELP2,                         
+//  "Press F9 to hide your hand and then the mouse alicilar will start working. "
+// IDS_HIDE_HAND_HELP3,
+//  "Pressing F9 again will bring your hand back. "
+
+ IDS_SCALE_TO_LEFT,
+  "sola kaymis bir olcek sola kaydi"
+ IDS_SCALE_TO_RIGHT,
+  "saga kaymis bir olcek"
+ IDS_SCALE_BALANCED,
+  "bir dengeli olcek"
+ IDS_SCALE_MOVING,
+  "bir tottering olcek"
+ IDS_SCALE_USE1,
+ // "Scales can be used to compare things. "
+ "Olcekler iki seyi karsilastirmak icin kullanilabilir. "
+ IDS_SCALE_USE2,
+//  "To try it out connect three boxes together. Then put a scale in a middle hole. "
+"Denemek icin uc kutuyu birlestirin. Daha sonra orta delige bir olcek koyun. "
+ IDS_SCALE_USE3,
+//  "Drop numbers in the holes next to the olcek and watch how the olcek tilts. "
+"Olcegin yanindaki delige sayilar birakin ve olcegin nasil sallandigini gozleyin. "
+ IDS_SCALE_USE4,
+"Metinleri karsilastirmada da kullanilabilir. "
+ IDS_SCALE_KEYBOARD_HELP,
+  "If a olcek is tottering, you can change which way the olcek tilts by pressing the space button. "
+
+ IDS_ROBOT_TRAIN1,
+//  "Here's what I do when I want to teach a robot something. "
+"Iste bir robota bir sey ogretmek istedigimde yaptigim sey. "
+ IDS_ROBOT_TRAIN2,
+//  "I start by giving him the kind of box I want him to work on. "
+"Ona uzerinde calismak istedigim kutunun cinsini vererek baslarim. "
+ IDS_ROBOT_TRAIN3,
+//  "The robot will then imagine a world with just that box and Tooly the Toolbox and friends in it. "
+"Robot o zaman o kutunun Tooly ToolBox'in ve arkadaslarinin bulundugu bir dunya hayal eder. "
+ IDS_ROBOT_TRAIN4,
+//  "I then make the robot do whatever I want him to do. Like change the box or load up a truck. "
+"Daha sonra robotun yapmasini istedigim seyi yaptirtirim.. Mesela kutuyu degistirmek veya bir kamyonu tulemek gibi. "
+ IDS_ROBOT_TRAIN5,
+//  "When I'm done, I press the 'Esc' button and the robot can now repeat what I taught him. "
+ "Bitirdigim zaman, 'Esc' tusuna"
+ IDS_ROBOT_ACCEPTS,
+  "This robot will only accept "
+ IDS_ROBOT_ACCEPTS2,
+  "A robot will only accept a box if o matches his thoughts. "
+ IDS_ROBOT_LESS_FUSSY1,
+//  "You can make him less fussy by using Tozcuk on his dusunce kopugu. "
+  "You can make him less fussy by using Tozcuk to remove things from his dusunce kopugu. " // clearer version 12/23
+ // "his" refers to a robot
+ IDS_ROBOT_LESS_FUSSY2,
+  "Anything in his thoughts have to be in the box before he'll work on it. "
+ IDS_ROBOT_LESS_FUSSY3,
+  "But if his dusunce kopugu is missing anything, then he'll be happy with anything in the same place in the box. "
+ IDS_ROBOT_TRY_OUT1,
+  "I usually try out a robot after training him. "
+ IDS_ROBOT_TRY_OUT2,
+  "Just drop a box on him that he'll like and watch him go. "
+ IDS_ROBOT_TRY_OUT3,
+  "If you want to stop him, just grab him. Or to stop all robots press F8. "
+ IDS_ROBOT_SAVE,
+  "After I've tested a robot, I usually save him by dropping him in a defter. "
+ IDS_ROBOT_LOAD_TRUCK1,
+  "Often I want lots of robots working for me. "
+ IDS_ROBOT_LOAD_TRUCK2,
+  "It would get too messy to have them all running around on the floor. "
+ IDS_ROBOT_LOAD_TRUCK3,
+  "So I send them off to brand new houses by dropping them in kamyonlar. "
+ IDS_ROBOTS_LINE_UP1,
+  "Robots are pretty stupid. "
+ IDS_ROBOTS_LINE_UP2,
+  "They can only think about one thing. "
+ IDS_ROBOTS_LINE_UP3,
+  "They can only do the one thing you trained them to do. "
+ IDS_ROBOTS_LINE_UP4,
+  "Luckily a TEAM of robots can do pretty much anything. "
+ IDS_ROBOTS_LINE_UP5,
+  // was it'll
+  "If I drop a robot on another robot, he'll get in line behind the other. "
+ IDS_ROBOTS_LINE_UP6,
+  "If a robot doesn't like a box he's been given, then he'll give o to the robot behind him. "
+ IDS_ROBOTS_LINE_UP7,
+  "The birinci robot in line to like a box will work on it. "
+ IDS_ROBOTS_LINE_UP8,
+  "And when he's done, he'll give o back to the birinci robot in line. He'll give o to himself if he's working alone. "
+ IDS_ROBOTS_LINE_UP9,
+  "If you look in your defter on sayfa 6, you'll find a defter full of robot teams I've trained. "
+ IDS_ROBOT_HELP_GIVEN1,
+  "That's pretty much all that I can think of to tell you about robots. "
+ IDS_ROBOT_HELP_GIVEN2,
+//  "If you want me to repeat all I know about robots, press F1 twice while pointing to a robot. "
+"Eger robotlar hakkinda bildigim herseyi tekrarlamami istiyorsan, bir robota isaret ederken F1 tusuna iki kere bas. "
+ IDS_ROBOT_BUSY,
+  "bir robot busy doing what he was trained to do"
+ IDS_ROBOT_WAITING_FOR_PICTURE,
+  "bir robot on the back of a picture. He is waiting for the resim to be flipped back over"
+  // as in "You are pointing to a robot on the back of a picture.
+  //  He is waiting for the resim to be flipped back over. "
+// was "bir robot waiting for the resim he is on the back of to be flipped over"
+ IDS_ROBOT_WAITING_FOR_ROBOT,
+  "bir robot waiting for another robot to finish birinci"
+ IDS_ROBOT_TRAINED_TO,
+  "He has been trained to"
+ IDS_ROBOT_WAITING_FOR_ITEM,
+  "bir robot waiting for something to appear in"
+ // as in "You are holding a robot waiting for something to appear in the
+ // third hole of his box. "
+ IDS_HIS_BOX,
+  " his box" 
+ IDS_HE_WILL_THEN,
+  "Then he will "
+// IDS_ROBOT_WHO_WHEN_GIVEN,
+//  "robot who when given "
+// IDS_WILL_THEN,
+//  " will then "
+ IDS_MORE_ROBOT_SAID_ENOUGH,
+  "There are more robots, but I've said enough. "
+
+ IDS_PROGRAMMER_ABORT,
+  "It didn't work because "
+ IDS_ROBOT_ABORT,
+  "The robot stopped because "
+ IDS_REMOTE_ROBOT_ABORT,
+  "A robot somewhere stopped because "
+
+// the following are metin item descriptions of
+// the sounds available to the user found in
+// the defter on sayfa 8 of the main defter.
+// Some names are just approximations of how
+// they sound (like "Be Wop") while others are
+// descriptions of natural sound sources
+
+ IDS_HELICOPTER_SOUND,
+//  "Helicopter"
+  "Helikopter"
+ IDS_BIRD_HATCH_SOUND,
+//  "Bird\rHatch"
+"Kus\rYumuratadan cikma"
+ IDS_BIRD_FLY_SOUND,
+//  "Bird\rFly"
+"Kus\rUcma"
+ IDS_TRUCK_ENGINE_SOUND,
+//  "Truck\rEngine"
+"Kamyon\rMotor"
+ IDS_MAGIC_SOUND,
+//  "Magic"
+"Buyu"
+ IDS_BE_WOP_SOUND,
+  "Be Wop"
+ IDS_BE_YAW_SOUND,
+  "Be Yaw"
+ IDS_SPIRAL_IN_SOUND,
+  "Spiral\rIn"
+ IDS_SPIRAL_OUT_SOUND,
+  "Spiral\rOut"
+ IDS_BOOK_DROP_SOUND,
+  "Book\rDrop"
+ IDS_DOOR_CREAK_SOUND,
+  "Door\rCreak"
+ IDS_DUSTBUSTER_SOUND,
+  "Vacuum"
+ IDS_EXPLOSION_SOUND,
+//  "Explosion"
+"Patlama"
+ IDS_HAND_PUMP_SOUND,
+  "Hand\rPump"
+ IDS_OUCH_SOUND,
+  "Ouch"
+ IDS_PLOP_SOUND,
+  "Plop"
+ IDS_POP_SOUND,
+  "Pop"
+ IDS_WALKING_INSIDE_SOUND,
+  "Indoors\rstep"
+ IDS_TYPING_SOUND,
+  "Typing"
+ IDS_TRAFFIC_SOUND
+  "Traffic\rsounds"
+ IDS_PAGE_TURNING_SOUND,
+  "Page\rTurning"
+// IDS_STEP_SOUND,
+//  "Adim 1"
+ IDS_NEAT_EFFECT_SOUND,
+  "Neat\rEffect"
+ IDS_TRUCK_DRIVE_SOUND,
+  "Truck\rDrive"
+ IDS_BIKE_BELL_SOUND,
+  "Bike\rBell"
+ IDS_BOING1_SOUND,
+  "Boing"
+// IDS_BOING2_SOUND,
+//  "Boing 2"
+// IDS_BOING3_SOUND,
+//  "Boing 3"
+ IDS_CALCULATING_SOUND,
+  "Calculating"
+ IDS_LOTS_OF_SILLY_SOUNDS_SOUND,
+  "Lots Of\rSilly Sounds"
+ IDS_WHIT_SOUND,
+  "Whit"
+ IDS_DEFLATING_SOUND,
+  "Deflating"
+ IDS_DOOR_SOUND,
+  "Door"
+// IDS_DOORKNOB_SOUND,
+//  "Doorknob"
+// IDS_STEP4_SOUND,
+//  "Adim 2"
+// IDS_STEP3_SOUND,
+//  "Adim 3"
+ IDS_STEP_SOUND,
+  "Outdoors\rstep"
+ IDS_GLASS_HIGH_SOUND,
+  "Glass\rHigh"
+ IDS_GLASS_LOW_SOUND,
+  "Glass\rLow"
+// IDS_COUGH_SOUND,
+//  "Cough"
+// IDS_SAUCER_LANDING_SOUND,
+//  "Saucer Landing"
+ IDS_SHUTDOWN_SOUND,
+  "Shutdown"
+ IDS_SPIT_SOUND,
+  "Spit"
+ IDS_SWITCH_SOUND,
+  "Switch"
+ IDS_TELEPORT_SOUND,
+  "Teleport"
+// IDS_HORSE_TROT_SOUND,
+//  "Horse Trot"
+ IDS_TWING_SOUND,
+  "Twing"
+
+
+IDS_EMPTY_NEST,
+// "an empty nest"
+ "bir bos yuva"
+IDS_COVERED_NEST,
+// "bir nest covered with "
+ "... ile kaplanmis bir yuva"
+IDS_AND,
+ "and"
+IDS_REMOVE_FROM_EMPTY_NEST,
+ "Uyari: a bird tried to remove a stack from an empty nest. "
+IDS_NEST_WITH_EGG,
+ "bir nest with an egg in o"
+IDS_CANT_ADD_TO_STACK_OF_NESTS,
+ " stack of nests won't accept anything"
+IDS_CANT_ADD_TO_NEST,
+ " nest won't accept anything"
+IDS_BIRD_TOO_BUSY,
+ " bird is too busy to accept anything"
+IDS_BIRD_WONT_ACCEPT,
+ " bird only accepts things that are rectangular"
+IDS_EXPECTED_BIRD_IN_BOX,
+ "Expected a bird to be in a box and something else is there. "
+IDS_BIRDS_NEST_IN_VACUUM,
+ " bird's nest is inside a vacuum"
+IDS_BIRDS_NEST_IN_BUBBLE,
+ " bird's nest is inside a dusunce kopugu"
+IDS_BIRD_CANT_FIND_NEST,
+ "A bird wants to fly to her nest but she can't find it. "
+IDS_BIRD_RETURNED_TO_OCCUPIED_CUBBY,
+// "A bird tried to return to her cubby hole but it's not empty. "
+ "A bird tried to return to a box hole but it's not empty. " // revisied 12/23
+
+IDS_BOX_WONT_ACCEPT,
+ " box did not accept something dropped on it"
+IDS_TOO_MANY_BOXES_INSIDE_BOXES,
+ "Ignored dropping a box into box since there is already a box inside a box inside a box inside a box and so on. "
+IDS_ONLY_BLANK_BOX_CAN_ACCEPT,
+ "only a bos box can accept metin or numbers"
+IDS_BOX_INSIDE_SELF,
+ "Oh boy! Somehow trying to put a box into itself"
+IDS_CANT_ADD_NON_BOX,
+ "robot thought he would have a box to add to another box but has something else instead"
+IDS_TEXT_OR_NUMBER_TO_BOX_HELP,
+ "If you drop a sayi or metin on a bos box, the box will expand the metin to have one letter per hole. "
+IDS_VACUUM_TO_BLANK_HELP, // was misspelled as VACCUM
+ "You can use Tozcuk, the vacuum, to make a bos box. "
+IDS_DROP_ON_NUMBER_TO_BREAK_HELP,
+ "You can break a box into two pieces by dropping o on a sayi. One piece will have the number of holes of the number and the other what is left over. "
+ IDS_CANT_ADD_TO_BOX_LABEL,
+ "you can't add to the box's label"
+IDS_UNEXPECTED_NOT_IN_BOX,
+ "something wrong with ToonTalk. Inside a box was asked for size of something not in one of its holes"
+IDS_BOX_DOESNT_HAVE_EXPECTED_HOLE,
+ "something wrong. ToonTalk looking for a hole that a box doesn't have"
+IDS_REMOVE_FROM_BOX_BUT_NOT_THERE,
+ "something is wrong with ToonTalk because o tried to remove something from a box that isn't in a box"
+IDS_CUBBY_LABEL_TOO_LONG,
+ "A box label in a defter has to be 255 characters or less"
+IDS_FILE_DESCRIBING_BOX_BAD,
+ "Something wrong with a dosya describing a box. "
+
+IDS_ADD_TO_BACKGROUND_ALREADY_THERE,
+ "ToonTalk problem. ToonTalk just tried to remove something from a background that didn't know o was there. "
+IDS_ADD_TO_BACKGROUND_BUT_ALREADY_THERE,
+ "ToonTalk has a problem because o just wasted time trying to add something to a background that already knew about it. "
+IDS_REMOVE_PART_BUT_NO_PARTS,
+ "Problem with ToonTalk since o tried to remove son part of something that didn't have any parts left. "
+IDS_BOMB_WONT_ACCEPT,
+ "bombs don't accept anything"
+
+//IDS_ROBOT_FILE_BAD,
+// "Something wrong with dosya describing what a robot does. Afedersiniz. "
+IDS_ROBOT_TRAINING_LOST,
+ "ToonTalk had troubles reading a defter dosya. A robot in the defter has lost its training. "
+IDS_CONFUSED_ABOUT_ROBOT_DESCRIPTION,
+ "... Ah, sorry but I'm having troubles figuring out what this robot does. "
+
+IDS_DO_NOTHING,
+  // as in "If given a box like that he will do nothing. "
+// "do nothing"
+"hicbirsey yapma"
+IDS_VACUUM_TO_BLANK,
+// "use Tozcuk to erase"  // used to say bos but erase is better
+"silmek icin Tozcuk'u kullan"
+IDS_SPECIAL_MAGIC_WAND_USE,
+ //  as in "He will use the buyulu sopa, while holding the control tus down, on the box. "
+// "use the buyulu sopa, while holding the control tus down, on"
+"buyulu sopayi control tusunu basili tutarken ... uzerinde kullan"
+// "key " removed from the following 3 phrases
+IDS_KEY_WHILE_POINTING, // as in "He'll push 'b' while holding the number. "
+// " while pointing to"
+" isaret ederken" //##
+IDS_KEY_AFTER_MOVING, // as in "He'll push 'b' after moving to the number. "
+// " after moving to"
+" ... tasidiktan sonra"
+IDS_KEY_WHILE_HOLDING, // as in "He'll push 'b' to change what he is holding. "
+// " to change"
+" degistirmek" //##
+
+IDS_TO_LABEL_OF,
+  // As in "He will add 'c' to the label of the box. "
+  // NOTE -- currenly only boxes have labels.  If this is used for
+  // other things then in some languages it is gender dependent
+// " to the label of"
+"... etiketine"//##
+
+// Used only in English version ...
+//IDS_NEW,
+  // as in "He will drop o on the new box. "
+// "new"
+//IDS_FIRST_NEW,
+  // as in "He will drop o on the birinci new box. "
+//"birinci new"
+//IDS_NEWEST,
+  // as in "He will drop o on the newest box. "
+// "newest "
+//IDS_TO_LAST
+  // as in "He will drop o on the second to son box. "
+// "to son"
+
+IDS_ROBOT_IN_TRUCK,
+// " robot in the kamyon"
+" kamyondaki robot"
+IDS_BOX_IN_TRUCK,
+// " box in the kamyon"
+ " kamyondaki kutu"
+IDS_HOUSE_PICTURE_IN_TRUCK,
+// " resim of a house in the kamyon"
+ " kamyondaki bir evin resmi"
+IDS_AVENUE_IN_TRUCK,
+// " Bulvar sayi in the kamyon"
+ " kamyondaki bulvar sayisi"
+IDS_STREET_IN_TRUCK,
+// " Cadde sayi in the kamyon"
+ " kamyondaki cadde sayisi"
+IDS_UNKNOWN_IN_TRUCK,
+// "something in the kamyon"
+ " kamyondaki birsey"
+IDS_WHATS_ON,
+ // as in "The robot picks up what's on the third sayfa of the defter. "
+ // NOTE:  This currently is only used as part of something that
+ // refers to a sayfa of a defter.  If ever used for more may
+ // have different translation
+// "what's on"
+"uzerinde olan"
+IDS_WHATS_IN,
+ // as in "The robot picks up what's in the second hole of the box. "
+ // NOTE:  This currently is only used as part of something that
+ // refers to a hole of a box.  If ever used for more may
+ // have different translation
+// "what's in"
+"icinde olan"
+IDS_PAGE,
+ "sayfa"
+//IDS_OF
+// as in "He dropped o on sayfa of the defter"
+// and "You are holding a picture of a ball. "
+// and "You are pointing to the button of Tozcuk. "
+// "of"
+IDS_ROBOT_COULDNT_FIND_ITEM,
+// was "o was"
+// "A robot couldn't find something he was going to pick up. "
+"Robot almak uzere oldugu birseyi bulamadi. "
+IDS_ROBOT_COULDNT_FIND_NEST,
+ // was "o was"
+ "A robot couldn't find a nest he was going to pick up. "
+IDS_ROBOT_COULDNT_FIND_PLACE,
+// was "o was"
+// "A robot couldn't find the place he was going to do something. "
+"Robot bir sey yapmak uzere oldugu yeri bulamadi. "
+IDS_ROBOT_COULDNT_FIND_BIRD,
+ // was "o expected"
+// "Uyari: a robot was trained to give a bird something and now the bird isn't where he expected. He'll try to keep gidiyor anyway. "
+"Uyari: bir robot bir kusa birsey vermek icin egitildi ve kus beklenidigi yerde degil. Her halukarda devam etmeye calisacak. "
+IDS_ROBOT_EXPECTED_BOX_BUT,
+// "Robot expected a box and found something else instead. "
+"Robot bir kutu bekledi ve yerine baska birsey buldu. "
+IDS_COULDNT_FIND_SOMETHING,
+// "ToonTalk confused! It couldn't find something. Afedersiniz. "
+"ToonTal'un kafasi karisti. Birseyi bulamadi. Afedersiniz. "
+IDS_ROBOT_DIDNT_FIND_ROBOT_IN_TRUCK,
+// "A robot thought he would find a robot in the kamyon and there wasn't one there. "
+"Robot kamyonda bir robot bulacagini sandi fakat orada hic yoktu. "
+IDS_ROBOT_DIDNT_FIND_BOX_IN_TRUCK,
+// "A robot thought he would find a box in the kamyon and there wasn't one there. "
+"Robot kamyonda bir kutu bulacagini sandi fakat orada hic yoktu. "
+ IDS_ROBOT_DIDNT_FIND_HOUSE_PICTURE_IN_TRUCK,
+// "A robot thought he would find a picture of a house in the kamyon and there wasn't one there. "
+"Robot kamyonda bir resim bulacagini sandi fakat orada hic yoktu. "
+IDS_ROBOT_DIDNT_FIND_AVENUE_IN_TRUCK,
+// "A robot thought he would find an avenue sayi in the kamyon and there wasn't one there. "
+"Robot kamyonda bir bulvar sayisi bulacagini sandi fakat orada hic yoktu. "
+IDS_ROBOT_DIDNT_FIND_STREET_IN_TRUCK,
+// "A robot thought he would find a street sayi in the kamyon and there wasn't one there. "
+"Robot kamyonda bir cadde sayisi bulacagini sandi fakat orada hic yoktu. "
+IDS_ROBOT_DIDNT_FIND_UNKNOWN_IN_TRUCK,
+// "A robot thought he would find something in the kamyon and o wasn't there. "
+"Robot kamyonda birsey bulacagini sandi fakat orada hicbirsey yoktu. "
+
+ IDS_ROBOT_COULDNT_USE_IN_VACUUM,
+//"A robot was going to use something but it's been vacuumed up!"
+"Bir robot birsey kullanacakti fakat o emilmis!"
+IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+// "A robot was going to put something into something but it's been vacuumed. "
+"Bir robot birseyi berseye koyacakti fakat o emilmis!"
+IDS_ROBOT_THING_NOT_IN_ROOM,
+// "A robot was going to put something into something but it's not in the room anymore. "
+ "Bir robot birseyi berseye koyacakti fakat o artik odada degil. "
+IDS_SOMETHING_NOT_IN_NOTEBOOK,
+// "Uyari: a robot expected to find something in a defter and didn't. "
+ "Uyari: bir robot defterde birsey bulmayi bekledi fakat bulamadi. "
+IDS_BOX_OR_NEST_MISSING,
+// "Uyari: a robot expected to find a box or filled nest and didn't. "
+ "Uyari: bir robot bir kutu veya dolu bir yuva bulmayi bekledi fakat bulamadi. "
+IDS_TOO_MANY_HOLES_FOR_ROBOT,
+// "Robot can't remember more than 254 holes. Afedersiniz. "
+  "Robot 254 ten fazla delik hatirlayamaz. Afedersiniz. "
+IDS_EMPTY_TEXT,
+ "bos metin pad"
+IDS_IN_THOUGHT_BUBBLE_HELP1,
+// "You are now in the robot's dusunce kopugu. "
+"Su anda robotun dusunce kopugundesiniz. "
+IDS_IN_THOUGHT_BUBBLE_HELP2,
+// "You can train the robot by showing him what to do. "
+"Bir robotu ne yapmasi gerektigini gostererek egitebilirsiniz. "
+IDS_LEFT_THOUGHT_BUBBLE_HELP,
+// "To test the robot, just give him a box like the one in his dusunce kopugu. "
+"Robotu denemek icin, one dusunce kopugundekine benzer bir kutu verin. " 
+IDS_RIGHT_MOUSE_BUTTON_WITH_ONE_BUTTON,
+// "bir mouse tus while holding the shift tus down"
+ "shift tusu basili tutulurken herhangi bir fare tusu"
+IDS_LEFT_BUTTON_WITH_ONE_BUTTON,
+// "any mouse tus"
+"herhangi bir fare tusu"
+IDS_THE_LEFT_MOUSE_BUTTON,
+// " left mouse tus"
+" sol fare tusu"
+IDS_MIDDLE_BUTTON_WITH_THREE,
+// " middle mouse tus"
+" orta fare tusu"
+IDS_MIDDLE_BOTTON_WITH_TWO,
+// " right tus while holding down the control tus (labeled 'Ctrl')"
+ " (Ctrl ile etiketlenmis) control tusu basili tutulurken sag tus"
+IDS_MIDDLE_BUTTON_WITH_ONE,
+// "any mouse tus while holding down the control tus (labeled 'Ctrl')"
+ " (Ctrl ile etiketlenmis) control tusu basili tutulurken herhangi bir fare tusu"
+IDS_ALL_HOUSES_DESTROYED,
+ "Butun evleri tahrip etmeyi basardiniz,Bu nedenle ben birkac tane daha insa ettim"
+// "You managed to destroy all the houses, so I built some more. "
+IDS_BAD_HOUSE_VIEW,
+ "Toontalk ta bir yanlislik var. Belki evler kayip olabilir"
+ // "Something wrong inside ToonTalk. Houses may be missing. "
+IDS_COMMAND_LINE_ODD_ARGS1,
+ "Komut satiri hatasi. Cift sayida madde bekliyor, ... degil"
+ // "Command line problem. Expecting an even number of items, not "
+IDS_COMMAND_LINE_ODD_ARGS2,
+ //" items. Ignoring the command line. "
+" maddeler. Komut satirini ihmal ediyor"
+//# "items" at the end does not make sense
+
+IDS_COMMAND_LINE_H_WRONG1,
+// "Command line has -h "
+ "Komut satirinda -h ... var "
+IDS_COMMAND_LINE_H_WRONG2,
+// " and it can only be -h 0 (bald), -h 1 (hair), or -h 2 (hat). "
+ " ve o sadece  -h 0 (kel), -h 1 (sac), or -h 2 (sapka) olabilir. "
+IDS_COMMAND_LINE_B_WRONG,
+//  " is wrong number of mouse buttons. 1, 2, or 3 is OK. "
+  " yanlis sayida fare dugmesini gosteririr. 1, 2, veya 3 uygundur."
+IDS_COMMAND_LINE_UNKNOWN_OPTION,
+// "Command line has unrecognized option: "
+ "Komut satirinda bilinmeyen secenek var: "
+IDS_NO_NAME_IS_YOUR_NAME,  // modified on 3/20/97
+// "I didn't get your name so for now I'll call you"
+ "Su ana kadar ismini ogrenemedim. Sana bundan sonra ... diyecegim"
+IDS_NO_NAME_IS_YOUR_NAME2,
+// "NoName"
+ "Adsiz"
+IDS_NO_NAME_IS_YOUR_NAME3,
+// "and save anything you do under that name. "
+ "ve o isim altinda yaptigin herseyi kaydeder. "
+IDS_TROUBLE_WANT_TO_CONTINUE,
+ "Ortaya cikmaya baslayan puruzlere ragmen devam etmek istermisiniz?"
+// "Despite these troubles getting started do you want to continue?"
+IDS_TIME_NEGATIVE,
+ "ToonTalk cok uzuun suredir calisiyor, Dolayisiyla saatini yeniden ayarliyor. "
+ // "ToonTalk has been running so long, it is resetting its internal clock. "
+IDS_OUT_OF_MEMORY,
+// "Sorry, ran out of memory. You'll have to restart. "
+ "Afedersiniz, yeterli hafiza yok. Yeniden calistirmalisiniz. "
+IDS_MEMORY_LOW,
+ "Hafiza dusuk.Hizi artirmak icin kullanilan %20 hafizayi kullanima hazirliyor. "
+// "Memory low. Recycling 20% of memory used to speed things up. "
+IDS_MEMORY_LOW2
+// "Memory low. Recycling son part of memory used to speed things up. "
+ "Hafiza dusuk.Hizi artirmak icin kullanilan hafizanin bir kismini kullanima hazirliyor. "
+IDS_F8_HELP1,
+// "If you ever want to stop all the robots just push F8 to cut off the power. "
+ "Eger robotlari durdurmak isterseniz, gucu kesmek icin sadece F8 tusuna basiniz. "
+ IDS_F8_HELP2,
+// "Pushing it again will start them up again. "
+ "Tekrar itmeniz onlari yeniden baslatacak. "
+IDS_F8_HELP3,
+ "Hareket eden resimler ve filmler ile ayni sey. " //# does not make sense
+ // "Same thing with moving pictures and movies. "
+IDS_EXCUSE_ME1,
+// "Uh, excuse me. "
+ "Uh, afedersiniz. "
+IDS_EXCUSE_ME2,
+// "Umm, sorry to interrupt. "
+ "Umm, boldugum icin ozur dilerim. "
+IDS_EXCUSE_ME3,
+// "Uh, sorry. "
+ "Uh, afedersiniz. "
+IDS_ROBOT_ON_PICTURE_STOPPED,
+// "A robot on the back of a picture stopped because "
+ "Resmin arkasindaki bir robot durdu cunku"
+IDS_ROBOT_ON_FLOOR_STOPPED,
+// "A robot on the floor stopped because "
+ "Zemindeki bir robot durdu cunku"
+IDS_MOUSE_DIDNT_COME_OUT,
+// "Bammer the Mouse didn't come out because "
+"Fare Bammer ortaya cikmadi cunku "
+IDS_TRUCK_DIDNT_LEAVE_BECAUSE,
+// " kamyon didn't drive away to build a house because "
+ "Kamyon bir ev insa etmek icin uzaklara gitmedi cunku "
+ IDS_NUMBER_STACK_WONT_ACCEPT,
+ //" stack of numbers would not accept something"
+ " sayilar yigini birseyi babul etmez" //##
+IDS_NUMBER_WONT_ACCEPT,
+// " sayi did not accept something"
+ " sayil birseyi babul etmez" //##
+IDS_NUMBER_UNDERNEATH_IS_NEGATIVE,
+// " sayi underneath the box is negative"
+ "kutunun altindaki sayi eksidir"
+IDS_NUMBER_UNDERNEATH_TOO_BIG,
+// " sayi underneath the box is larger than sayi of holes"
+ "kutunun altindaki sayi delik sayisindan buyuktur"
+IDS_ONLY_NUMBERS_ON_NUMBERS
+// "you can only drop numbers on numbers, metin pads, or defterler"  // revised 4/15/97 to mention defterler
+ "sayilari ancak sayilar,metin pad'lari veya defterler uzerine birakabilrisiniz"
+IDS_TOP_NUMBER_IS_BLANK,
+// " sayi on top is bos"
+" ustteki sayi bos"
+IDS_CANT_DIVIDE_BY_ZERO,
+// "you can't divide by zero"
+"Sifira bolemezsiniz"
+IDS_ANOTHER_MOUSE_SMASHING_IT,
+// " sayi underneath is about to be smashed by another mouse"
+"alttaki sayi baska bir fare tarafindan ezilmek uzere"
+IDS_COMBINED_WITH,
+// "which has been combined with"
+ "... ile birlestirilmis olan"
+IDS_THOUSANDS_COMMA,
+ ","  // e.g. "1,000,000"
+IDS_CONVERT_TO_NUMBER_HELP,
+ "If you drop something on a bos sayi, it will be converted to a sayi if possible. "
+// For example, if you drop the metin "123" it will be converted to the
+// sayi 123.
+
+IDS_EQUAL_OPERATOR_ON_NUMBERS,
+ "If you type '=' and then drop this on another sayi, it'll become"
+IDS_VACUUM_TO_BLANK_NUMBER,
+ "You can use Tozcuk, the vacuum, to make a bos sayi. " // was "sayi bos"
+//IDS_IF_YOU_PRESS,
+// "If you press "
+IDS_WHILE_HOLDING_A_NUMBER,
+// as in "If you hold shift while clicking a mouse tus while
+// holding a sayi, it will flip over. "  -- where "o" refers to the number.
+ "while holding a sayi, it will flip over. "
+IDS_PRESS_AGAIN_TO_FLIP_BACK,
+ "Pressing o again will flip o back. "
+IDS_SENSOR_ARITHMETIC_PROBLEM,
+ "Sensor had a problem doing arithmetic because "
+IDS_TROUBLE_NUMBER_REMOVED,
+ "The sayi that made trouble was removed. "
+//IDS_THIS_NUMBER,   // removed 5/31/97
+// "This sayi"
+IDS_A_SENSOR,
+ "bir alici"
+IDS_A_REMOTE_CONTROL,
+ "bir uzaktan kumanda"
+IDS_FOR,
+ "for"
+IDS_AND_COMBINED_WITH,
+ "And o was combined with"
+IDS_SENSOR_UNDERNEATH,
+ "alici is underneath"
+IDS_CANT_CHANGE_SENSOR,
+ "can't change the value of a alici"
+
+IDS_BALD,
+// "bald"
+"kel"
+IDS_LONG_HAIR,
+// "long hair"
+"uzun sac"
+IDS_HAT,
+// "hat"
+"sapka"
+IDS_NO_MOUSE_SHORTCUTS,
+// "no mouse\rshortcuts"
+ "fare yok\rkisa yolar"
+IDS_RIGHT_BUTTON_SHORTCUT,
+ "sag tus\rkisa yol"
+IDS_RIGHT_AND_MIDDLE_SHORTCUTS,
+// "middle & right\rbuttons shortcuts"
+ "orta ve sag\r tus kisa yollari"
+IDS_FULL_SCREEN,
+// "Full Screen"
+"Tam ekran"
+IDS_COLLIDING_SIDE_OR_NOT,
+// "is colliding on the side with something. "
+"yandan bir seyle ile cakisiyor. "
+IDS_COLLIDING_TOP_OR_NOT,
+"is colliding with a top or bottom of something else. "
+//"baska bir seyin ustu veta alti ile cakisiyor. "
+IDS_IF_YOU_CHANGE_APPEARANCE,
+// "If you change the appearance of this picture, then "
+"Bu resmin gorunusunu degistiriseniz, daha sonra "
+IDS_CHANGE_SAME_WAY,
+// "will change the same way. "
+"ayni sekilde degisir. "
+IDS_CONTROLLING_WHETHER,
+// "This is for controlling whether"
+ "Bu ... denetlemek icindir"
+IDS_VISIBLE_PART_OR_NOT,
+// "is visible, partly visible, or invisible. "
+ "gorulebilir, kismen gorulebilri , veya gorulemez. "
+IDS_SPACE_WILL_CHANGE_THEM,
+// "The space button will change between them. "
+ "Uzay dugumesi aralarinda degisecek"
+IDS_ANSWER_QUESTION_ANIMATION,
+// "This answers the question whether the animation of"
+ "Bu .... animasyonu mu oldugunu cevaplar"
+IDS_IS_FINISHED
+// "is finished. "
+" bitti. "
+IDS_WHETHER_HAND_VISIBLE,
+// "This shows whether your hand is visible. "
+"Bu elinizin gorulebilir olup olmadigini gosterir. "
+IDS_SPACE_WILL_SWITCH_IT,
+ "The space button while pointing to it will switch o on and off. "
+IDS_WHETHER_SOUND_ON,
+  // "This" refers to the uzaktan kumanda being pointed to.  
+ "This shows whether ToonTalk sound effects will be made. "
+IDS_MIDDLE_AND_RIGHT_SHORTCUTS_ON,
+ "This changes what the middle and right mouse tuslar do when you are on the floor. "
+IDS_MAKE_RIGHT_BUTTON_SHORTCUT,
+ "You can make the right mouse tus be a shortcut for shift and click. "
+IDS_AND_RIGHT_BUTTON_SHORTCUT,
+ "And you can make the middle tus be a shortcut for control and click. "
+IDS_THIS_TEXT_PAD,
+ "This metin pad is"  // as in  "This metin pad is a uzaktan kumanda. "
+IDS_THIS_IS,
+ "This is"  // as in "This is a remote alici. "
+IDS_TURN_OFF_COLLISION_WITH_SPACE,
+ "You can turn a collision into a miss by pointing to the detector and pressing the space button. "
+
+IDS_BOOK_DESCRIPTION6,
+// "This one is full of sounds"
+ "Bu degisik sesler ile dolu"
+IDS_BOOK_DESCRIPTION7,
+// "This one is full of system options"
+ "Bu degisik sistem secenekleri ile dolu"
+ IDS_CONTAINING,
+ //"containing"
+ "iceren" //# does not make sense in full sentence!
+IDS_NOTEBOOK_IN_VACUUM,
+ "The notebook is in Dusty the vacuum. Tozcuk can spit o out. "
+IDS_WARNING_FILE
+ "Uyari: dosya"
+IDS_COULDNT_OPEN,
+ "could not be opened. "
+IDS_CANT_ADD_TO_NOTEBOOK_IN_BUBBLE,
+ "Afedersiniz, but can't add to a defter inside a dusunce kopugu. "
+IDS_TEMPORARY_USER_CANT_SAVE,
+ "Since you are a temporary user, you can't save this in the main defter. "
+IDS_ONLY_NOTEBOOKS_TO_MAIN,
+ "Afedersiniz, but for now, you can only add defterler to your defter that lives in the toolbox. "
+IDS_NOTEBOOK_PAGE_DIDNT_ACCEPT,
+ " sayfa of a defter did not accept something"
+IDS_NOTEBOOK_DIDNT_ACCEPT,
+ "bir defter did not accept something"
+IDS_SOUNDS_NOTEBOOK,
+ "Sounds"
+IDS_OPTIONS_NOTEBOOK,
+ "Options"
+IDS_OUTLET,
+ "Outlet"
+IDS_INLET,
+ "Inlet"
+IDS_COUNT,
+ "count"
+IDS_SOUND,
+ "Sound"
+IDS_SORRY_BUT_FILE,
+  "Afedersiniz, but I think that the dosya"
+IDS_NOT_NOTEBOOK_FILE,
+"is not a defter dosya. "
+IDS_NOTEBOOK_FUTURE_VERSION,
+ "Afedersiniz, but a defter was created with a later version of ToonTalk!"
+IDS_THIS_VERSION_CANT
+ "This version can't read"
+IDS_GET_NEW_VERSION,
+ ".  Maybe you should get a newer version. "
+IDS_TOONTALK_MIXED_UP,
+ "ToonTalk mixed up. Afedersiniz. "
+IDS_COULDNT_RECOGNIZE_NOTEBOOK_FILE,
+ "Uyari: couldn't recognize something in a dosya for a defter. "
+
+IDS_TOONTALK_OR_FILE_BAD,
+ "Something wrong with ToonTalk or else a dosya containing a picture is bad. "
+IDS_REMOTE_APPEARANCE_CONTROL,
+// This kind of uzaktan kumanda shows the appearance of a picture
+// It can be changed and the resim changes.
+ "bir uzaktan kumanda for another's looks"
+IDS_WHICH_IS_INVISIBLE,
+// "which is invisible"
+"gorunmeyen"
+IDS_WHICH_IS_PARTLY_VISIBLE,
+ "which is partly visible"
+"kismen gorunen"
+IDS_JUST_A_NOTEBOOK,
+// "is just a defter"
+"sadece bir defterdir"
+IDS_ARE,
+ // only used in "And on the back are 5 things. "
+// "are"
+"dir" //##
+IDS_WITH,
+// "with"
+"ile"
+IDS_PICTURE_ON_BLANK_PICTURE,
+// "You can change the appearance of a bos resim by dropping another resim on top. "
+"Bir resmin gorunusunu baska bir resmi uzerine burakarak degistirebilirsiniz. "
+IDS_OR_NUMBER_OR_TEXT
+// "Or a sayi or metin pad. "
+"Veya bir sayi veya metin pad. "
+IDS_VACUUM_PICTURE_BLANK,
+// "Tozcuk, the vacuum, can make a bos resim. " // was resim bos
+"Supurge Tozcuk bos bir resim yapabilir. "
+IDS_NOTEBOOK_OF_REMOTES_FLIES,
+// "A defter full of uzaktan kumandalar for the resim will fly out. "
+"Uzaktam kunadalar ile dolu bir defter uzaklara ucar. "
+IDS_CANT_FLIP_REMOTES,
+ "you can't flip over a uzaktan kumanda for another's looks"
+IDS_IGNORED_DROP_TOO_MANY_LEVELS,
+ "Ignored drop on resim since there are too many resimler with resimler. "
+IDS_SCALES_CANT_ADD_TO_PICTURE,
+// "scales can't be added to a picture"
+"Olcekler resimlere eklenemez"
+IDS_UNFLIPPED_PICTURES_NOT_ON_FLIPPED_PICTURES,
+ "unflipped resimler can't be added to a flipped resim"
+IDS_PICTURE_WONT_ACCEPT_SOMETHING,
+// " resim would not accept something"
+" resim birsey kabul etmez"
+IDS_SCALE_TEXT_HELP1,
+// "Here's how you can use a olcek to compare metin. "
+"Iste bir olcekle nasil metinleri karsilastiracagina bir ornek. "
+IDS_SCALE_TEXT_HELP2,
+// "First connect three boxes together. Put some words in the birinci and third holes. "
+"Once uc kutuyu birbiriyle iliskilendir. Birince ve ucuncu deliklere bazi kelimeler koy. "
+IDS_SCALE_HELP3,
+// "And a olcek in the middle hole. "
+"Ve orta delikte bir olcek. "
+IDS_SCALE_NUMBER_HELP1,
+// "Here's how you can use a olcek to compare numbers. "
+"Iste bir olcekle nasil sayilari karsilastiracagina bir ornek. "
+IDS_SCALE_NUMBER_HELP2,
+// "First connect three boxes together. Put some numbers in the birinci and third holes. "
+"Once uc kutuyu birbiriyle iliskilendir. Birince ve ucuncu deliklere bazi sayilar koy. "
+IDS_REMOTE_CANT_ACCEPT_THAT,
+ " uzaktan kumanda for how something looks can't accept that item"
+IDS_PICTURE_WAITING_FOR_MOUSE,
+// " resim being dropped is waiting for Bammer the Mouse"
+" birakilan resim Bammer Fareyi bekliyor"
+IDS_PICTURE_UNDERNEATH_WAITING_FOR_MOUSE,
+// " resim underneath is already waiting for Bammer the Mouse"
+ " alttaki resim henuz Bammer Fareyi bekliyor"
+IDS_PICTURE_DROPPED_IS_REMOTE,
+// " resim being dropped is a uzaktan kumanda"
+" birakilan resim bir uzaktan kumandadir"
+IDS_SORRY_WAIT_TIL_NEXT_TIME,
+// "Afedersiniz, this won't take effect until next time you start ToonTalk. "
+"Afedersiniz, bu islem ToonTalk'u bir daha calistirana kadar etkisini gostermeyecek. "
+
+IDS_CONFUSED_ABOUT_PROGRAMMER,
+
+//"ToonTalk confused and lost track of what the programmer is doing. "
+"ToonTalk sasirdi ve programcinin ne yapmakta oldugunu unuttu. "
+IDS_F8_PRESSED_HELP,
+// "You just turned off the power and stopped all robots. Pressing F8 again will start them up again. "
+"Simdi gucu kestiniz ve butun robotlari durdurdunuz. F8 'e basmak onlari yeniden calistirir "
+IDS_F9_PRESSED_HELP,
+//"Your hand is now hidden. To see it again just press F9 again. "
+ "Eliniz su anda sakli. Yeniden gormek icin F9'a basiniz"
+IDS_ONLY_PORTS_1_OR_2,
+// "Only able to open serial ports 1 and 2. "
+ "Sadece 1 ve 2 nolu seri portlari acabiliyor. "
+ IDS_TROUBLES_OPENING_PORT,
+//"Trouble opening serial port. "
+"Seri portlari acmda bir sorun var. "
+IDS_SERIAL_PORT_PROBLEMS,
+// "Serial port problems. "
+ "Seri port sorunlari. "
+IDS_COULDNT_FIND_CONTROLLER,
+// "Couldn't find a HyperBot controller connected to the computer's serial port. "
+"Bilgisayarin seri portalrina baglanmis bir HyperBot denetleyicisi bulunamadi. "
+
+IDS_TROUBLES_USING_PORT,
+// "Trouble sending things out on serial port. "
+  "Seri portlara bir sey gondermede sorun. "
+
+//IDS_ROBOT_WHO_STOPPED,
+// "a robot who stopped. "
+// "duran bir robot"
+IDS_ROBOT_STOPPED_BY_F8,
+// "a robot stopped by power off. F8 will turn on the power and start him up again"
+"Guc kesimi sonucu duran bir robot. F8'e basmak gucu acar ve onlari tekrar calistirir"
+IDS_A_HOLE,
+//"a hole"
+"bir delik"
+IDS_AND_THERE_ARE,
+// "And there are"
+"ve ... vardir"
+IDS_ROBOTS_IN_FRONT,
+// "robots in front of him"
+"onun onundeki robotlar"
+IDS_AND_ONE_ROBOT_IN_FRONT,
+// "And there is one robot in front of him"
+"ve onunde bir robot var"
+IDS_ROBOTS_BEHIND,
+// "robots behind him"
+"arkasindaki robotlar"
+IDS_AND_ONE_ROBOT_BEHIND,
+// "And there is one robot behind him"
+"Ve arkasinda bir robot var"
+IDS_ROBOT_LOST_TRACK,
+ // as in "A robot on the floor stopped because he lost track of stuff"
+ // this shouldn't really ever happen except if the programmer
+ // takes things away from a working robot
+// "a robot lost track of stuff"
+ "bir robot esyalarini kaybetti"
+IDS_ROBOT_FILE_BAD,
+// "Something wrong with file storing a robot in a notebook. Robot is lost. Sorry. "
+ "Robotu deftere kaydedecek dosyada bir sorun var. Robot kayboldu. Afedersiniz. "
+IDS_TROUBLES_LOADING_ROBOT,
+"Robotu defterden yuklemede sorun. Afedersiniz ama robot kayboldu. "
+IDS_TROUBLE_FIGURING_OUT_ROBOT,
+ "Afedersiniz, ancak bu robotlarin ne is yaptigini anlmakta zorlaniyorum. "
+IDS_ROBOT_HAS_NON_MATCHING_BOX,
+"Uhm, afedersiniz, bir robot dusunce kopugu ile uyusmayan bir kutuya sahip ve ona .... verebilecek hicbir robot yok."
+IDS_WHEN_FINISHED_WILL_TELL_WHERE,
+// "When ToonTalk is finished, I'll be able to show you where it is. "
+ "ToonTalk bittiginde, onun nerede oldugunu sana gosterecegim. "
+IDS_ROBOTS_CANT_TRAIN_ROBOTS,
+// "Afedersiniz, but robots can't train robots. "
+ "Afedersiniz, ancak  robotlar robotlari egitemez. "
+IDS_FUSSY_ROBOT_HELP1,
+// "Ah, sorry but robots are real fussy. They only take boxes. "
+"Ah, afedersiniz ancak robotlar telaslidir. Onlar sadece robotlari alirlar. "
+IDS_FUSSY_ROBOT_HELP2,
+// "Luckily you can put things in boxes. "
+"Kutulara birseyler koyabilirsiniz. "
+
+IDS_TOO_MANY_THINGS_ON_SCREEN,
+// "ToonTalk can only keep track of so many things on the screen and it's lost track of some. "
+"ToonTalk ekrandaki bircokseyin yerini tesbit edebiliyor ancak  bazilarinin yerini kaybetti. "
+IDS_DISPLAY_LOST_TRACK_OF_STUFF,
+// "ToonTalk's display stuff lost track of some things. "
+"ToonTalk'un gosterim unitesi  bazi seylerin yerini kaybetti. "
+
+IDS_TOONTALK_BROKEN,
+// "Oh nuts! ToonTalk is broken. It is trying to destroy something twice. "
+ "Oh nuts! ToonTalk bozuldu. Birseyi iki defa yoketmeye calsiiyor. "
+ IDS_TOONTALK_USED_AFTER_DESTROYING,
+// "Something is wrong with ToonTalk. It tried to use something after destroying it. "
+"ToonTalk'ta bir sorun var. Bir seyi yokettikten sonra kullanmaya calisti. "
+IDS_TOONTALK_DESTROY_ON_FLOOR,
+// "Something is wrong with ToonTalk. It tried to destroy something that is still on the floor. "
+"ToonTalk'ta bir sorun var. Halen yerde olan birseyi yoketmeye calisti. "
+IDS_TOONTALK_DESTROY_PART_OF_SOMETHING,
+// "ToonTalk has something wrong with it. It tried to destroy a part of something. "
+"ToonTalk'ta bir sorun var. Birseyin belli bir kismini yoketmeye calisti. "
+IDS_BAD_DAT_FILE,
+ "Afedersiniz, eski veya bozuk bir DAT dosyaniz var. "
+IDS_NEED_TO_REINSTALL,
+ "ToonTalk'u yeniden yuklemek zorunda olabilirsiniz. "
+IDS_PICK_NONEXISTENT_MOVIE,
+// "ToonTalk mixed up and tried to pick an animation loop that didn't exist. "
+"Toontalk'un kafasi karisti ve mevcut omayan bir animasyon dongusunu almaya calsiiti. "
+
+//IDS_ONE,
+// "one"
+//IDS_IT,
+// "o"
+//IDS_UP,
+// "up"
+//IDS_CACHE_FREED_TWICE,
+// "Cache memory is being freed twice. Afedersiniz, ToonTalk is confused. "
+IDS_FREEING_PROTECTED_CACHE,
+// "ToonTalk is confused and trying to free some cache memory that o shouldn't. "
+"Toontalk sasirdi ve yapmamasi gerektigi halde bazi hafiza kaselerini bosaltmaya calisiyor. "
+IDS_CACHING_NON_SAVING,
+ "ToonTalk confused because it cached something that didn't save any time. "
+ "Toontalk sasirdi cunku zaman kazandirmayan bir seyi kaseledi. "
+ IDS_DESTROYING_SAME_PICTURE_TWICE,
+ //"Nuts, ToonTalk is broken and trying to destroy a picture twice. "
+  "#, ToonTalk bozuldu ve bir remi iki kez yok etmeye calisiyor. "
+IDS_CANT_FIND_FILE,
+ "Afedersiniz, dosyayi bulamiyor gozukuyorum. "
+IDS_BUT_FILE_IS,
+ "Afedersiniz, ancak bahsedilen dosya"
+IDS_FILE_DAMAGED,
+// "is damaged. You'll have to re-install. "
+"bozulmus. Yeniden yuklemek zorundasiniz. "
+IDS_CANT_FIND_RESIND,
+ "Afedersiniz, ihtiyacim olan RESIND.DAT adli dosyayi bulamiyorum. "
+IDS_RESIND_DAMAGED,
+ "Afedersiniz, RESIND.DAT dosyasi bozulmus. Lutfen yeniden yukleyin. "
+ IDS_NOT_ENOUGH_MEMORY_FOR_NEXT_SOUND,
+ //"ToonTalk is having problems because there is not enough cache memory to hold the next sound. "
+  "ToonTalk bir sonraki ses icin gerekli yeterli kase hafizasi olmadigi icin  sorunla karsilasti. "
+IDS_HAS_PARTS_BUT_DOESNT,
+// "ToonTalk is mixed up and thought something had parts and then couldn't find them. "
+"ToonTalkun kafasi karisti ve birseyin bazi parcalari oldugunu dusundu fakat onlari bulamadi. "
+IDS_HAS_PARTS_BUT_DOESNT2,
+// "Something might end up the wrong size or place. Afedersiniz. "
+"Bisey yanlis yerde ve bedende olabilir. Afedersiniz. "
+
+IDS_CONVERT_TO_TEXT_HELP,
+ "Bir seyi bos bir metin pad'ine birakarak metin icine ekleyebilirsiniz. "
+IDS_BACKSPACE_TO_REMOVE_EMPTY_LINE,
+// "Backspace will remove an empty line. "
+ "Backspace bos bir satiri yok eder. "
+//IDS_TEXT_SOUND_HELP1,
+// "Sometimes metin spells out a sound like \"pop\". "
+//IDS_TEXT_SOUND_HELP2,
+// "When o does, you can make that sound by pressing "
+IDS_SOUNDS_ON_PAGE8,
+"Calisan sesler defterinizin 8. sayfasinda bulunabilir. "
+IDS_BLANK_TEXT_DIDNT_ACCEPT,
+ "Bos metin padi hicbirseyi kabul etmez. "
+IDS_ITEM_ON_TOP_IS_BLANK,
+ " en ustteki madde bostur"
+ IDS_ONLY_TEXT_OR_NUMBERS_ON_TEXT,
+ " matni veya sayilari ancak metne ekeleyebilirsiniz"
+IDS_TEXT_TOO_LONG,
+ "context got to be too long"
+ "metin cok uzun olamli"
+IDS_IT_AS_COPY_WAND,
+ "o"
+//IDS_HIM_AS_NON_WAND_TOOL,
+// "him"
+//IDS_IF_YOU_PICK_HIM,
+// "if you pick him up. "
+//IDS_THEN,
+// "bahsedilenn"
+//IDS_AS_BEFORE,
+// "birs before. "
+IDS_PUMP_IN_VACUUM_WHEN_CALLED,
+// "Pumpy is in Dusty the Vacuum. Tozcuk can spit him out. "
+ "Pomapcik Supurge Tozcukta. Tozcuk onu disari atabilir. "
+IDS_CANT_BE_MADE_BLANK,
+// "some things can't be erased"
+"bazi seyler silinemez."
+IDS_VACUUM_SPIT_HELP, // changed 10/4
+// "If you try to suck up the floor, he'll spit out the stuff he's vacuumed. "
+// "If you want Tozcuk to spit out stuff he's sucked up, then press 'R'. "
+"Tozcukun yuttugu seyleri disari atmasini istiyorsaniz, 'R' tusuna basiniz. "
+IDS_VACUUM_IN_VACUUM_HELP,
+// "Dusty is in another vacuum. That vacuum can spit him out. "
+"Tozcuk baska bir supurge icinde. Supurge onu disari atabilir. "
+IDS_WAND_IN_VACUUM_WHEN_CALLED, // revised 3/16/97
+// "The magic wand is in Dusty the Vacuum. Tozcuk can spit o out. "
+"Buyulu sopa Supurge Tozcukta. Tozcuk onu disari atabilir. "
+IDS_IF_YOU_PRESS,
+// "If you press"
+ "Eger basarsaniz"
+IDS_COPY_BLANKS_TO_NON_BLANKS,
+ "bahsedilenn it will copy and restore erased things to the way they were before. "
+
+IDS_TOOLBOX_DIDNT_ACCEPT_SOMETHING,
+ //"Tooly did not accept something"
+"Tooly hicbirsey kabul etmez"
+
+IDS_TRUCK_ALREADY_HAS_ROBOTS,
+ " kamyonda halihazirda robotlar var"
+IDS_TRUCK_ALREADY_HAS_BOX,
+ " kamyonda halihazirda bir kutu var"
+IDS_TRUCK_HELP, // revised 3/16/97
+ " Kamyona koyabileceginiz seyler bir kutu, robotlar , bir adres ,bir defter, bir metin pad, ve bir evin resmidir"
+IDS_TRUCK_CANT_ACCEPT,  // revised 3/16/97
+ "Kamyona robot,kutu,adres, defter, metin pad,veya  bir evin  resmi olmayan birsey birakildi."
+IDS_TRUCK_STOPPED_BECAUSE_CITY_FULL
+// " city is completely full of houses"
+" sehir tamamen evle doludur"
+IDS_VIDEO_MODE_BAD,
+//  "Video mode not supported. Perhaps your -v n entry is wrong. "
+"Video modu desteklenmiyor. Belki -v entriniz yanlistir. "
+
+
+IDS_FULL_SCREEN_INITIALIZATION_PROBLEMS,
+// "Some problem getting into full screen mode. Afedersiniz. "
+"Tam ekran moduna geciste bazi sorunlar var. Afedersiniz. "
+IDS_FULL_SCREEN_PROBLEMS,
+ //"Uyari some problem with full screen mode. "
+"uYARI, Tam ekran modunda bazi sorunlar var. "
+IDS_TOONTALK_WINDOW_TITLE,
+ "ToonTalk"
+//IDS_TOONTALK_WINDOW_TITLED_PAUSED,
+// "ToonTalk (press Pause to resume)"
+IDS_TOONTALK_BETTER_256,
+// "Hi. ToonTalk runs much better if you change Windows to run with 256 colors. "
+"Merhaba. ToonTalk Windows'u 256 renk ile calistiracak sekilde ayarlarsaniz daha iyi calsiir. "
+//IDS_TOONTAL_PAL_MISSING,
+// "The dosya TOONTALK.PAL is missing so the colors may be off. "
+IDS_WINDOWS_NOT_256_BAD,
+// "Since Windows is not running with 256 colors, this may look bad. "
+"Windows 256 renk ile calismadigindan, bu kotu gorulebilir. "
+IDS_ASK_NAME_FAILURE,
+// "Something went wrong trying to create dialog box to ask your name. "
+"Isminizi sormak icin bir diyalog kutusu olusturulmaya calisilirken  bir sorun meydana geldi. "
+
+
+IDS_OPTIONS_NOTEBOOK_HELP1,
+// "There are lots of things about ToonTalk that you can change. "
+"Toontalk'ta degistirebileceginiz bircok sey mevcuttur. "
+IDS_OPTIONS_NOTEBOOK_HELP2,
+// "Like how you look or how fast I talk. Even how much I talk! "
+"Mesela nasil gorundugunu veya ne kadar hizli konustugum. Hatta ne kadar konustugum! "
+IDS_OPTIONS_NOTEBOOK_HELP3,
+// "To change things just try the things in the defter of options on sayfa 10 of your defter. "
+"Birseyleri degistirmek iicn, Defterinizin 10. sayfasindaki secenekler defterindeki seyleri deneyiniz. "
+
+IDS_NO_HIGH_RES_IN_16_BITS,
+// "Afedersiniz, but the high resolution of ToonTalk is only available when running the 32 bit version of ToonTalk. "
+"Afedersiniz,ancak ToonTalk'un yuksek resolution'u ancak ToonTalk un 32 bit surumunu calistirirken mevcuttur. "
+IDS_BAD_VIDEO_MODE1,
+// "Afedersiniz, but the video mode"
+ "Afedersiniz, bancak video modu"
+IDS_BAD_VIDEO_MODE2,
+// "is not available. Default value used. "
+ "mevcut degildir. Eski deger kullanildi. "
+
+IDS_NEED_CDROM_TO_CONTINUE,
+// "If you insert the ToonTalk CDROM now, ToonTalk will be able to continue. "
+"Eger ToonTalk CDROM'u surerseniz, ToonTalk devam edebilecek. "
+IDS_NEED_CDROM_FOR_NARRATION,
+// "If you insert the ToonTalk CDROM now, you will be able to hear the narration for this demo. "
+"Eger ToonTalk CDROM'u surerseniz, bu ornegin anlatimini dinleyebileceksiniz. "
+//IDS_EXPECTED_TO_FIND_SOMETHING_IN_NEST,
+// "Robot expected to find something in a nest but o was empty. "
+IDS_WHAT_IS_ON_TOP_OF,
+  // as in "He will then pick up what is on top of the nest. "
+//  "what is on top of"
+"in uzerinde olan seyi" //"Xin uzerinde olan seyi"
+//IDS_TOONTALK_PAUSED,
+//  "ToonTalk is now stopped. Click on OK when you want o to start again. "
+IDS_MAIN_CUBBY_IN_TRUCK_NO_LOOP,
+//  "This robot will work once. Then he'll stop because you're training him to put his box in the kamyon.  After the kamyon drives off he'll never see o again. "
+"Bu robot sadece bir defa calisacak. "
+//  "This robot will work once and then stop because you're training him to put the box he's working on in the kamyon so after the kamyon drives off he'll never see o again. "
+IDS_SCALE_WONT_ACCEPT,
+//  " olcek does not accept anything dropped on it"
+" olcek uzerine birakilan hicbirseyi kabul etmez"
+
+// These should be translated since they will be seen by the user
+// when they paste things from the clipboard into a metin program.
+// The system searches for IDS_UUENCODING_START_TOKEN so all
+// of this are considered comments when loaded into ToonTalk.
+IDS_UUENCODING_HEADER,
+//  "   This is the result of \"pasting\" a ToonTalk object. You can include"
+" Bu bir ToonTalk nesnesini \"yapistirmanin\" sonucudur. ... icerebilirsiniz"
+IDS_UUENCODING_HEADER2,
+//  "this in files, email, or whatever. To decode it just use any program"
+"bu dosyada, emailde veya baska bir seydedir. Bunu okamak icin baska bir program kullaniniz"
+IDS_UUENCODING_HEADER3,
+//  "that can copy this to Window's clipboard. For example, you can use"
+"su bunu Window'un klipborduna kopyalayabilir. Mesela, ... kullanabilrisiniz."
+IDS_UUENCODING_HEADER4,
+//  "Window's notepad or write program. Just be sure your selection includes"
+"Window'un notepad veya write programlari. Seceneginizin ... icerdigine emin olunuz"
+IDS_UUENCODING_HEADER5,
+//  " code below and then select the Copy command in the Edit menu. "
+" asagidaki kod ve daha sonra Edit menusunden Copy komutunu secinuz. " //##
+IDS_UUENCODING_HEADER6,
+//  "Then it will appear in the ToonTalk uzaktan kumanda for the clipboard. "
+"Daha sonra klipbord icin ToonTalk'un uzaktan kumandasinda gorunecek. "
+IDS_UUENCODING_HEADER7,
+//  "Just use Tozcuk to vacuum o off the clipboard. "
+"Onu klipbordtan temizlemek icin Tozcuk'u kullanin. "
+IDS_UUENCODING_FOOTER,
+//  "This is the end of the code for the ToonTalk object. "
+"Bu ToonTalk nesnesi icin gerekli kodun sonudur. "
+IDS_WHAT_FOLLOWS_IS_CODE,
+//  "   What follows is in a special code and was produced by ToonTalk(tm) "
+" Takip eden ozel bir kodtur ve ToonTalk(tm) tarafindan uretilmistir "
+IDS_FOLLOWING_IS,
+//  "The following is "
+"Takip eden ...dir"
+IDS_TOONTALK_VERSION_NUMBER,
+//  "Beta Version 8. "
+"Beta Surum 8."
+
+//IDS_BETA4_FORMAT_WARNING,
+//  "Afedersiniz but old ToonTalk programs probably won't run in Version 4. "
+IDS_BETA_TO_EXPIRE_SOON, // changed on 4/7/97
+ // "It is time to get a new version of ToonTalk. This beta version will stop working at the beginning of next month. "
+ "ToonTalk'un yeni surumunu elde etmenin zamanidir. Bu beta surum gelecek ayin sonundan itibaren  calismayacak. "
+IDS_FOR_EXAMPLE,
+  "for example"
+  "mesela"
+IDS_WHICH_ORIGINALLY_WAS,
+  // as in "You are hold a bos sayi pad that originally was 42. "
+//  "which originally was"
+ "ki aslen ... idi"
+
+IDS_AVENUE_HOUSE_IS_ON,
+//  "This is a alici which shows which avenue (runs north to south) that this house is on. "
+"Bu alici bu evin hangi bulvarda  (kuzey guney dogrultusunda) oldugunu gosterir. "
+IDS_YOU_CHANGE_IT_BY,
+//  "You can change o by dropping numbers on it. "
+"Onu uzerine sayilar birakarak degistirebilirsiniz. "
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_AVENUE_TO_BUILD,
+//  "If you drop one of these into a kamyon then the crew in the kamyon will build a house on the nearest free lot on this avenue. "
+"Eger bunlardan birini kamyonun uzerine birakirsaniz, kamyondaki murettebat bu bulvar uzerindeki en yakin musait yere bir ev insa eder. "
+IDS_STREET_HOUSE_IS_ON,
+//  "This is a alici which shows which street (runs east to west) that this house is on. "
+"Bu alici bu evin hangi bulvarda  (dogu bati dogrultusunda) oldugunu gosterir. "
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_STREET_TO_BUILD,
+//  "If you drop one of these into a kamyon then the crew in the kamyon will build a house on the nearest free lot on this street. "
+"Eger bunlardan birini kamyonun uzerine birakirsaniz, kamyondaki murettebat bu cadde uzerindeki en yakin musait yere bir ev insa eder. "
+IDS_DROP_ON_BLANK_NUMBER_TO_OBTAIN_ARITY_HELP,
+//  "You find out how many holes a box has by dropping o on a bos sayi pad. You can make a sayi pad bos by using Dusty the Vacuum. Just remember to use "
+"Bir kutuda kac tane delik oldugunu bos bir sayi pad'inin uzerine birakarak bulabilirsiniz. Bir sayi pad'ini Supurge Tozcuk'u kullanarak bos hale getirebilirsiniz. ... kullanmayi unutmayin."
+IDS_ABANDON_FULL_SCREEN,
+//  "ToonTalk crashed son time o was used. Maybe the problem is because ToonTalk was running in \"full screen mode\". This mode makes the animation look better but breaks on a few computers. "
+"ToonTalk son kullanildigi zaman duzgun calismamis. Nedeni Tontalk'un \"Tam ekran modu\"nda calisiyor olmasi olabilir. Bu kod animasyonu daha iyi gosteriri ancak bazi bilgisayrlarda calismaz. "
+IDS_ABANDON_FULL_SCREEN2,
+//  "The \"Screen Size\" option in the defter on sayfa 10 of your defter can change this. Should I turn off this mode for you?"
+"Defterinizdeki defterin 10. sayfasindaki \"Ekran Genisligi\" secenegi bunu degistirebilir. Sizin icin bu modu kapatayim mi?"
+IDS_TOO_MANY_THINGS_FOR_ROBOT,
+//  "Robot's can only keep track of so many things. This one has gotten confused since there are so many things. "
+"Robotlar bircok seyi takip edebilirler. Ancak, bunun cok fazla seyi takip ettigi icin kafasi karisti. "
+IDS_LEFT,
+// "left"
+"sol"
+IDS_RIGHT,
+// "right"
+"sag"
+IDS_COULDNT_FIND_PAGE,
+// "couldn't find sayfa in defter"
+"defterde sayfayi bulamadi"
+
+IDS_UNKNOWN_MCI_ERROR,
+// "Something went wrong talking to Window's Media Controller, but I don't know what. Afedersiniz. "
+"Windows Media Controller ile haberlesmede bir sorun cikti,fakat ne oldugunu bilmiyorum. Afedersiniz. "
+
+IDS_ROBOT_COULDNT_FIND_PLACE_TO_RELEASE,
+// "couldn't find the place he was going to drop something"
+"Bir seyi birakacagi mekani bulamadim"
+
+IDS_UNABLE_TO_OPEN_FILE,
+// "Unable to open log dosya called"
+"adli kayit dosyasini bulamadim" //#"Xadli kayit dosyasini bulamadim"
+
+IDS_ITLL_SWITCH_TO_THE_NEXT_VALUE,
+// "it'll switch to the next value. "
+"bir sonraki degere degisir. "
+IDS_ITLL_SWITCH_TO_THE_PREVIOUS_VALUE,
+// "it'll switch to the previous value. "
+ "bir onceki degere degisir. "
+IDS_IF_YOU_PICK_UP_AND_PRESS,
+ // as in "You are pointing to a uzaktan kumanda.
+ // If you pick o up and press a mouse tus while holding down shift
+ // or just the space button it'll switch to the previous value. "
+// "If you pick it up and press"
+"Eger kaldirir ve ... basarsaniz"
+IDS_JUST_THE_SPACE_BUTTON,
+// "or just the space button" // add "or" on 12/20
+"veya sadece sapcebar tusu" //##
+IDS_OR_JUST, // combined IDS_OR and IDS_JUST on 12/20
+ // as in  "Or just press '-' to switch to the previous value. "
+// "or just"
+"veya sadece"
+
+IDS_IN,
+ // used only when describing robots that either give things
+ // to birds that are in boxes or put things in boxes that
+ // are in kamyonlar.
+ // "He will give o to the bird in the birinci hole of the box. " or
+ // "He will drop o on the box in the kamyon. "
+ "in"
+IDS_WARNING,
+ "Uyari"
+IDS_BYTES,
+ "bytes"
+//IDS_MEMORY_IS_LOW,
+// "Uyari. Memory is low. Memory used to speed things up shrunk by "
+//IDS_IT_IS_NOW,
+// "It is now"
+IDS_CANT_ADD_TO_SIDE_OF_BLANK_BOX,
+ // as in "A robot stopped because nothing will stick to the side of a bos box.
+// "nothing will stick to the side of a bos box"
+"bos bir kutunun yanina hicbirsey yapismaz"
+
+IDS_CITY_SIZE_CANT_BE_LESS_THAN,
+// "En kucuk you can make the city size is -255 for a 255 by 255 city randomly filled with houses. "
+"Bir sehirin buyuklugunu en kucuk -255 yapabilirsiniz ,rastgele evlerle doldurulmus 255'e 255 bir sehir. "//##
+IDS_CITY_SIZE_CANT_BE_MORE_THAN,
+// "En buyuk a city can be is 255 blocks by 255 blocks. "
+"Bir sehir en fazla 255 bloka 255 blok buyuklugunde olabilir. "
+
+IDS_FULL_SCREEN_MODE_TOO_SLOW,
+// "Full screen mode is taking a surprising long time. You might want to try ToonTalk without it. "
+"tam ekran modu sasiracak derecede uzun zaman aliyor. ToonTalk'u onsuz denemek isteyebilrisiniz. "
+IDS_AVENUE,
+ "Bulvar"
+IDS_STREET,
+ "Cadde"
+IDS_NO_FILE_NAME_FOR_USER_PICTURE,
+// "ToonTalk is confused and is trying to get a picture and doesn't know the dosya name. "
+"Toontalk'un kafasi karisti ve bir resim getirmeye  calsiiyor ve dosya ismini bilmiyor. "
+IDS_TROUBLES_READING_PICTURE_FILE,
+// "Had some problems reading the dosya "
+"Dosya ...  okunurken bazi sorunlarla karsilasildi "
+IDS_CANT_FLIP_USED_FILE_TO_PICTURE_REMOTE,
+// "can't flip this over. You can vacuum out the resim and flip o over"
+"bunu ters ceviremez. Resmi  disari cikartip ters cevirebilrsiniz"
+IDS_CANT_FLIP_UNUSED_FILE_TO_PICTURE_REMOTE,
+// "can't flip this over. All you can do is drop a dosya name of a picture on it. "
+"bunu ters ceviremez. Yapabileceginiz tek sey  resmin uzerine bir dosya ismi birakmak. "
+IDS_FILE_TO_SOUND_FULL_HELP,
+// "This is for playing your own sound effects and music. Just drop the name of a WAVE or MIDI dosya on it and it'll play until finished or vacuumed up. "
+"Bu kendi ses effektlerinizi ve muzik calmak icindir. Sadece bir WAVE veya MIDI dosya ismini uzerine birakin ve o bitine dek veya emilene dek calar. "
+IDS_FILE_TO_PICTURE_FULL_HELP,
+// "This is for showing your own resimler inside of ToonTalk. Just drop the dosya name of resim (in BMP format) and then vacuum up the result. "
+"Bu ToonTalk icindeki kendi resimleriniz gostermek icindir. Sadece bir resim  dosya ismini (BMP formatindaki) uzerine birakin ve sonucu emin. "
+IDS_SORRY_USER_PICTURE_TOO_BIG,
+// "Uzgunum fakat the 16 bit version of ToonTalk can't deal with resimler daha buyuk than the screen. "
+ "Uzgunum fakat ToonTalk'un 16 bit surumu ekrandan buyuk resimler ile bas edemez. "
+IDS_TROUBLES_READING_SOUND_FILE,
+ "Afedersiniz, ToonTalk ses dosyasini okumakta zorlaniyor"
+IDS_REMEMBER_FILE,
+// "Remember that if you send this to someone on another computer to also send them the dosya"
+ "Unutmayin, eger bunu baska bir bilgisayardaki birine gondeririseniz ,ona dosyayi da gonderin"
+// added 8/23/96
+IDS_RESULT_OF_SAVING_ROOM,
+// "This is the result of saving everything in a room. "
+"Bu odadaki herseyi kaydetmenin sonucudur. "
+IDS_WHICH_CONTAINS,
+// "which contains"
+"iceren" //##
+IDS_WHO_IS_HOLDING,
+ // as in "You are holding a robot who is holding a buyulu sopa. "
+// "who is holding"
+"tutan"//##
+IDS_WHO_CAN_ONLY_REMEMBER,
+// "who can only remember"
+"sadece hatirlayabilen" //##
+IDS_ACTIONS,
+//  "actions"
+"hareketler"
+//IDS_WHICH_IS_HELD_BY,
+// "which is held by"
+IDS_STEP
+ "Adim"
+IDS_STEPS,
+ "Adimlar"
+IDS_WHICH_HAS_ENOUGH_MAGIC,
+ // Together with the following words is used in
+ // "You are holding a buyulu sopa which has enough magic for 4 uses. "
+// "which has enough magic for"
+"... icin yeterli buyusu olan" //##
+IDS_USE,
+//  "use"
+"kullan"
+IDS_USES,
+//  "uses"
+"kullan"
+//IDS_HIM,
+// "him"
+//IDS_HER,
+// "her"
+IDS_CANT_ADD_TO_REMOTE_NOTEBOOK,
+// "Afedersiniz, but you can't save anything in a picture's notebook. It is just for uzaktan kumandalar and alicilar. "
+ "Afedersiniz,ancak resmin defterine hicbirsey kaydedemezsiniz. Bu sadece  uzaktan kumandalar ve alicilar icindir. "
+// new on 8/30
+// revised on 10/13
+IDS_PUZZLE_SINKING,
+//  "Zizzle Island is sinking. "
+//"Zizzle Island was a nice place before disaster struck. It's starting to sink!"
+"Zizzle adasi felaketten once guzel bir yerdi. O simdi batmaya basliyor!"
+IDS_PUZZLE_CRASH,
+//  "Marty comes to the rescue. "
+///"Marty the Martian just happens to be flying by. He rescues everyone. "
+"Marsli Marti tesadufen ##. O herkesi kurtarir."
+IDS_PUZZLE_HURT,
+//  "After rescuing everyone he crashes. "
+//"He moves almost all of the houses off the island but then he gets engine trouble and crashes. "
+"Neredeyse butun evleri adadan uzaklastirir ancak sonardan motor sorunlari ile karsilasir ve bozulur. "
+IDS_PUZZLE_RESCUE,
+//"You volunteer to rescue Marty. "
+//"Marty the rescuer needs to be rescued. You volunteer to parachute down to help him. "
+"Kurtarici Marti kurtarilmalidir. Onu yardim etmek icin parasutle atlamaya gonullu ol. "
+IDS_FIRST_PUZZLE_GREETING1,
+// "Hi. I'm Marty. "
+"Merhaba. Ben Marti. "
+IDS_FIRST_PUZZLE_GREETING2,
+// "You must be"
+ "Siz ... olmalisiniz"
+// "You must be X" "You must be Y"
+// "Siz X olmalisiniz" "Siz Y olmalisiniz"
+IDS_FIRST_PUZZLE_GREETING3,
+// "Boy, am I glad to see you!"
+ "Evlat, seni gordugume sevindim mi!" //##
+IDS_RESTART_PUZZLE_GREETING1,
+// "I'm glad to see you again. I remember where we were. "
+"Seni tekrar gordugume sevindim. Nere kaldigimizi hatirliyorum."
+IDS_RESTART_PUZZLE_GREETING2,
+// "Thanks for coming back. Let's get back to fixing the ship. "
+"Geri geldigin icin mutesekkirim. Haydi gemiyi tamir etmeye devam edelim."
+IDS_RESTART_PUZZLE_GREETING3,
+// "It's great to see you again. Let's see, where were we. "
+"Seni tekrar gormek cok muhtesem. Nerede kaldigimiza bir bakalim. "
+IDS_TOO_WIDE_TO_SEE,
+// "Sorry, that's too wide to see all at once. "
+"Afedersiniz,bu bir kere de gorulemeyecek kadar genis. "
+IDS_TOO_NARROW_TO_SEE,
+// "Sorry, that's so narrow I can't see the letters. "
+ "Afedersiniz,bu o kadar dar ki harfleri goremiyorum. "
+ // for puzzle engine
+IDS_BAD_PUZZLE_FILE,
+// "Oh, boy. Something wrong with the puzzle dosya. Afedersiniz. "
+"Aman evaldim. Bilmece dosyasinda bir yanlislik var. Afedersin. "
+IDS_SOLVED_ALL_PUZZLES,
+// "Guzel job. You solved all the puzzles! Check the ToonTalk web sayfa for more puzzles. "
+"Guzel is. Butun bilmeceleri cozdun! Daha fazla bilmece icin ToonTalk'un web sayfasina bir goz at. "
+IDS_ALL_HINTS_GIVEN1,
+// "I know I sound like a broken record but here I go again. "
+"Bozuk bir plaga benzemek istemem ancak bir defa daha deniyorum. "
+IDS_ALL_HINTS_GIVEN2,
+// "Afedersiniz about repeating myself but I don't know what else to say. "
+"Kendimi tekrarladigim icin beni bagislayin ancak baska ne diyecegimi bilmiyorum." //kestiremiyorum. "
+IDS_ALL_HINTS_GIVEN3,
+//"I wish I knew how to help you. All I can think of is what I said son time. "
+"Size naisl yardim edecegimi bilmek isterdim. Dusunebildigim tek sey son soyledigim idi. "
+
+IDS_NO_HINTS,
+// "Nope. Try again. "
+"Hayir. Tekrar deneyin. "
+IDS_NEGATIVE_AGE,
+// "So you aren't born yet? Try again. "
+ "Demek daha dogmadin! Tekrar deneyin. "
+IDS_VERY_YOUNG1,
+// "Amazing! I didn't know that"
+"Ilginc. Onu bilmiyordum"
+IDS_VERY_YOUNG2,
+// "year old Earth children were so smart. "
+"yasindaki Dunya cocuklari cok akilli idi. "
+IDS_VERY_OLD1,
+// "Boy,"
+"Evlat,"
+IDS_VERY_OLD2,
+// "years old. You sure are old! Let's do it again. "
+ "yasinda. Sen cok buyuksun. Haydi bir daha deneyelim. "
+IDS_LIKE_INSIDE_A_COMPUTER,
+// "Like inside a computer"
+"Bir bilgisarin icindeki gibi"
+IDS_SEE_IF_YOU_CAN_MAKE_THAT_NUMBER,
+// "See if you can make that number. "
+"O sayiyi yapip yapamayacagini gorelim. "
+IDS_WE_NEED1,
+// "We need"
+"... ihtiyacimiz var"
+//## "We need X" "We need Y"
+//"X ihtiyacimiz var" "Y ihtiyacimiz var"
+IDS_WE_NEED2,
+// "we need"
+"... ihtiyacimiz var" //##
+IDS_SIT_DOWN_AND_GET,
+// "Sit down in the other house and get"
+"Diger evde otur ve ... al"
+//"Diger evde otur ve X al" "Diger evde otur ve Y al"
+IDS_BASIC_HINT1,
+// "Walk through the door of other house and then press a mouse button. "
+"Diger evin kapsindan iceri yuru ve daha sonra bir fare tusuna bas. "
+IDS_BASIC_HINT2,
+// "You can pick something up by clicking the mouse tus while pointing to it. "
+"Bir seyi ona isaret ederken fare tusuna basarak alabilirsin. "
+IDS_WHILE_HOLDING,
+// "While holding"
+"tutar iken"
+IDS_PRESS_ESC_AND_COME_BACK,
+// "press 'Esc' to stand up and come back here. "
+"Ayaga kalkmak ve buraya geri gelmek icin 'Esc' tusuna basiniz. "
+IDS_WE_DONT_NEED,
+ "Afedersiniz. Ihtiyacimiz yok"
+IDS_SOMETHING_IS_MISSING,
+// was  "Something is missing from" // changed 1/20/97
+// "Something is missing from the box. "
+"Kutudan bir sey eksik. "
+IDS_SOMETHING_IS_MISSING2,
+// "Or it's in the wrong place. Try again. "
+"Veya o yanlis bir yerde. Tekrar deneyin. "
+IDS_NOT_IT1,
+// "Nope. "
+"Hayir. "
+IDS_NOT_IT2,
+// "That's not it. "
+"Bu o degil. "
+IDS_NOT_IT3,
+// "Afedersiniz, that's not what we need. "
+"afedersiniz, bu ihtiyacimiz olan degil. "
+IDS_WRONG_TRY_AGAIN,
+// "Something's wrong with that. Try again. "
+"Bunda bir yanlislik var. Tekrar deneyin. "
+// new on 9/24
+IDS_CONGRATULATIONS,
+// "Guzel job"
+ "Guzel is"
+IDS_CONGRATULATIONS2,
+// "Nice"
+"Hos"
+IDS_CONGRATULATIONS3,
+ "Guzel gidiyor"
+IDS_CONGRATULATIONS4,
+ "Muhtesem"
+IDS_CONGRATULATIONS5,
+ "Guzel"
+IDS_CONGRATULATIONS6,
+//"Well done"
+ "Aferin"
+
+// new on 10/3
+IDS_EXPANDER_KEY_COMMANDS,
+ // this (and the IDS_COPIER_KEY_COMMANDS and IDS_VACUUM_KEY_COMMANDS)
+ // should be as easy to remember as possible and must be unique
+ // IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2 documents this
+ "BTWLSNG"
+IDS_WHO_IS_READY_TO,
+// "who can"
+ "yapabilen" //## might cause problems
+IDS_THAT_IS_READY_TO,
+  // only used to describe a buyulu sopa
+  // following expressions are IDS_COPIER_STATE0, IDS_COPIER_STATE1, or
+  // IDS_COPIER_STATE2
+// "that can"
+ "yapabilen" //## might cause problems
+IDS_MAKE_THINGS,
+// "make things"
+"seyler yapan"//## might cause problems
+IDS_EXPANDER_STATE0,
+ "daha buyuk"
+IDS_EXPANDER_STATE1,
+ "daha uzun"
+IDS_EXPANDER_STATE2,
+ "daha genis"
+IDS_EXPANDER_STATE3,
+// "smaller"
+"daha kucuk"
+IDS_EXPANDER_STATE4,
+// "shorter"
+"daha kisa"
+IDS_EXPANDER_STATE5,
+// "narrower"
+"daha dar"
+IDS_EXPANDER_STATE6,
+// "a good size"
+"iyi bir beden"
+IDS_VACUUM_KEY_COMMANDS,
+ "SRE"  // was SRB before 12/14
+IDS_VACUUM_STATE0,
+// "suck things up"
+"herseyi yutar"
+IDS_VACUUM_STATE1,
+// "spit out things he has sucked up"
+"yuttugu seyleri disari cikartir"
+IDS_VACUUM_STATE2,
+// "erase things from the surface to make things empty"
+ "bosaltmak icin herseyi yuzeyden siler"
+ // was "suck things off the surface to make things empty"
+IDS_COPIER_KEY_COMMANDS,
+ "COS"
+IDS_COPIER_STATE0,
+// "copy things"
+"kopyalama yapar"
+IDS_COPIER_STATE1,
+// "copy things and if blank restore them to the way they used to be"
+"kopyalama yapar ve bos ise daha onceki olan sekline geri dondurur"
+IDS_COPIER_STATE2,
+// "copy itself"
+"kendini kopyalar"
+IDS_BUTTON_TYPE_INDEFINITE,
+ "bir tus"
+IDS_BUTTON_TYPE_DEFINITE,
+ " tus"
+IDS_BUTTON_TYPE_PLURAL,
+ "tuslar"
+IDS_BUTTON_TYPE_PRONOUN,
+ "o"
+
+
+IDS_BUTTON_CLICKED_HELP1,
+"Degistirebilirsiniz"
+IDS_BUTTON_CLICKED_HELP2,
+//"to do something different if you click on the button. "
+"eger dugmeye basarsaniz farkli bir sey yapmak icin. " //# does not make sense!
+IDS_BUTTON_CYCLE_HELP1,
+"Ayrica degistirebilirsiniz"
+IDS_BUTTON_CYCLE_HELP2,
+"to do something different if you press the +, -, or space button. "
+IDS_BUTTON_LETTER_TYPED_HELP1,
+//"You can pick what"
+"Alabilirsiniz" //#does not make sense
+IDS_BUTTON_LETTER_TYPED_HELP2,
+//"will do by typing one of these letters:"
+"bu harflerden birini yazarak yapacak" //#does not make sense
+IDS_BUTTON_HELP_GIVEN_HELP1,
+//"I've told you all that I know about buttons. "
+"Tuslar hakkinda bildigim herseyi sana anlattim. "
+IDS_BUTTON_HELP_GIVEN_HELP2,
+//"If you want me to repeat all I know about tuslar, then press F1 twice while pointing to a tus. "
+"Tuslar hakkinda bildiklerimi tekrarlamami istiyorsaniz, bir dugmeye isaret ederken F1 tusuna iki kere basiniz"
+IDS_BUTTON_HELP_GIVEN_HELP3,
+//"I'll tell you more about"
+"... hakkinda size daha cok sey anlatacagim"
+IDS_BUTTON_HELP_GIVEN_HELP4,
+  // only used for wands now.
+  // as in "I'll tell you more about buyulu sopas if you pick o up. "
+//"if you pick it up. "
+"eger onu alirsaniz. " //#does not make sense
+IDS_BUTTON_HELP_GIVEN_HELP5,
+  // as in "I'll tell you more about bike pumps if you pick him up. "
+"if you pick him up. "
+"eger onu alirsaniz. " //#does not make sense
+IDS_EXPANDER_CHANGED_STATE_VIA_BUTTON_HELP,
+//"You can change Pumpy so he makes things smaller, or taller, or fatter by pushing the button on his chest. "
+"Pompacigi karnindaki dugmeye basarak esyalari daha kucuk, dah uzun veya daha sisman yapacak sekilde degistirebilrisiniz. "
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP1,
+//"You can change Pumpy by pressing one of these keys"
+"Pompacigi asagidaki tuslardan birine basarak degistirebilirsiniz. "
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2,
+//"'B' for big, 'T' for tall, 'W' for wide, 'L' for little, 'S' for short, 'N' for narrow, and 'G' for a good size. "
+"buyuk icin 'B', uzun icin 'T', genis icin 'W',kucuk icin 'L',kisa icin 'S',dar icin 'N' ,ve uygun beden icin 'G' . "
+IDS_EXPANDER_SELECTION_HELP,
+//"whatever is under the end of his hose"
+"bu hortumun ucundaki her ne ise"
+IDS_TURN_HIM_ON_HELP,
+//"You can also turn him on and off while holding him by pressing the space bar. "
+"Onu tutarken #space bar'a basarak acip kapatabilirsiniz. "
+IDS_TURN_IT_ON_HELP,
+//"You can also turn it on and off while holding o by pressing the space bar. "
+"Onu tutarken #space bar'a basarak acip kapatabilirsiniz. "
+IDS_VACUUM_CHANGED_STATE_VIA_BUTTON_HELP,
+//"You can change Dusty so he spits things out or just sucks things off the top of things by pushing the button on his nose. "
+"Tozcugun burnundaki dugmeye basarak esyalari yutacak veya disariya atacak sekilde degistirebilirsiniz. "
+IDS_VACUUM_CHANGED_STATE_VIA_KEYBOARD_HELP,
+//"You can change Dusty by pressing 'S' for sucking, 'E' for erasing, and 'R' for reverse (spitting out). "
+"Tozcugun 'S' (suck) harfi ile emmesini, 'E' (erase) harfi ile silmesini 'R' (reverse) harfi ile disariya atmasini saglayabilirsiniz. "
+IDS_COPIER_CHANGED_STATE_VIA_BUTTON_HELP,
+//"You can change the Magic Wand so it copies itself or copies things and restores them by pushing the button on its tip. "
+"Buyulu sopayi ucundaki dugmeye basarak kendini veya baska seyleri kopyalayacak veya onlari eski haline dondurecek sekilde degistirebilirsiniz. "
+
+IDS_COPIER_CHANGED_STATE_VIA_KEYBOARD_HELP,
+//"You can change the Magic Wand by pressing 'C' for copy, 'O' for copy and make original, and 'S' for copy self. "
+"Buyulu sopnain 'C' (copy) harfi ile kopyalamasini , 'O' harfi ile kopyalamasini ve orijinal yapmasini, ve 'S' (self) harfi ile kendisini kopyalamasini saglayabilrisiniz. "
+//IDS_PUSH_R,
+//"push 'R'"
+//IDS_CHAR_O,
+//"'O'"
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP,
+//"You can get me to say the next thing by pressing the 'PageDown' button. "
+"PageDown tusuna basarak bir sonraki seyi soylememi saglayabilirsiniz. "
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP2,
+//"And pressing PageUp will get me to repeat the last thing I said. "
+"PageUp tusuna basmak en son soyledigim seyi tekraralamami saglar. "
+
+//Added 10/7
+IDS_REPEAT1,
+"Simdi soyledigim sey suydu. "
+IDS_REPEAT2,
+"Kendimi bir kere daha tekrarlayacagim. "
+IDS_REPEAT3,
+"Onu bir daha soyleyecegim. "
+IDS_BAD_DEMO_LOG,
+//"Something wrong with demo log. Stopping replay. "
+ "Ornek kaydinda bir sorun var. Calistirmayi durduruyorum. "
+ IDS_TROUBLES_COPYING_FROM_CDROM,
+//"ToonTalk had troubles copying temporary files to "
+"ToonTalk gecici dosyalari ... 'a kopyalamada sorunla karsilasti."
+IDS_TROUBLES_COPYING_FROM_CDROM2,
+". Belki yeterli miktarda bos disket yeri yok. "
+IDS_TROUBLES_COPYING_FROM_CDROM3,
+//"ToonTalk will run off the CDROM. It may be slow. "
+"ToonTalk CDROM 'suz calisacak. Belki yavas olabilir. "
+
+// When translating the following please add a sentence naming and crediting the translators
+IDS_TOONTALK_CREDITS,
+//"Animation by Greg Savoia, Kim Tempest, and Brian Anderson. Everysey else by Ken Kahn. "
+"Animasyon Greg Savoia, Kim Tempest, ve Brian Anderson. Diger hersey Ken Kahn. "
+IDS_TOONTALK_CREDITS2,
+"Markus, David, ve Mary 'e ozel tesekkurler. "
+
+IDS_JANUARY,
+"Ocak"
+IDS_FEBRUARY,
+"Subat"
+IDS_MARCH,
+"Mart"
+IDS_APRIL,
+"Nisan"
+IDS_MAY,
+"Mayis"
+IDS_JUNE,
+"Haziran"
+IDS_JULY,
+"Temmuz"
+IDS_AUGUST,
+"Agustos"
+IDS_SEPTEMBER,
+"Eylul"
+IDS_OCTOBER,
+"Ekim"
+IDS_NOVEMBER,
+"Kasim"
+IDS_DECEMBER,
+"Aralik"
+IDS_NO_SUCH_MONTH,
+"Afedersiniz, Bahsedilen ayi bilmiyorum"
+IDS_BAD_DATE,
+"Oyle bir tarihi hic duymadim"
+IDS_TODAY_IS,
+"Haydi gorelim. Bugun"
+IDS_THANKS,
+"Tesekkurler"
+IDS_AND_YOU_WERE_BORN,
+"ve sen dogdun"
+IDS_SO_YOU_ARE,
+"ve sen"
+IDS_YEARS_AND,
+"yillar ve"
+IDS_DAYS_OLD,
+"gunler ve"
+IDS_TODAY,
+"bugun"
+IDS_OR_SENTENCE_START,
+"Veya"
+IDS_ITS_YOUR_BIRTHDAY,
+"Wow, bugun senin dogumgunun. Mutlu yillar! "
+IDS_HAD_BIRTHDAY_RECENTLY,
+"Umarim mutlu bir dogumgunu gecirmissindir. "
+IDS_BIRTHDAY_SOON,
+"Dogum gunun yaklasiyor. Umarim iyi gecer"
+//"Neat! Your birthday is coming real soon. Hope you have a good one. "
+IDS_COME_HERE_FOR_HINTS,
+"Sana yardim etmemi istiyorsan, buraya gel. "
+IDS_BOMB_TO_RESTART,
+" Bombayi alarak veya #spacebar basarak yeniden baslayabilirsin. "
+IDS_PUT_NEST_IN_BOX,
+"Yuvayi kutuya koyman gerekiyor. "
+IDS_NEED_ALL_7_DAYS,
+"Afedersiniz, yuvada butun 7 gune de ihtiyacimiz var. Sadece"  //
+//"Afedersiniz, yuvada butun 7 gune de ihtiyacimiz var. Sadece 7 tane yeterli degil"  //
+ // as in "Afedersiniz, but we need all 7 days on the nest, not just 5. "
+IDS_NEED_NUMBERS_UNDERNEATH,
+ // as in "Afedersiniz, but we need at least 5 numbers on the nest, not just 3. "
+"Afedersiniz, yuvada butun 5 gune de ihtiyacimiz var. Sadece"
+//"Afedersiniz, yuvada butun 5 gune de ihtiyacimiz var. Sadece 5 tane yeterli degil"  //
+IDS_NO_CHANGING_NUMBERS,
+"Afedersiniz,sayilarin hicbiri degismemeli. "
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+"Afedersiniz, sayilarin hepsi sifirdan buyuk olmali. "
+IDS_LAST_NUMBER_WAS,
+"Hmmm, gecen sefer sayi"
+// "Hmmm, gecen sefer sayi 5 idi"
+IDS_AFTER_WAITING_8_SECONDS,
+"8 saniye bekledikten sonra.  simdi sayi"
+IDS_AFTER_WAITING_14_SECONDS,
+"14 saniye bekledikten sonra. "
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"Alicilarim murettebat tarafindan yeni bir ev insa edildigini gostermiyor. Ozur dilerim"
+IDS_OUT_OF_MAGIC,
+" Magic Wand buyusu gitti"
+
+IDS_MILLISECONDS,  // added 12/3
+ "mili saniye" //milliseconds
+IDS_ON, // added 12/3
+  // only used for Pumpy
+"bircik" // "on"  // as in "use Pumpy on"
+
+IDS_WANT_TO_PLAY_NOW,
+ "Merhaba! Simdi ToonTalk ile oynamak istermisiniz?"
+IDS_PLAY_DEMOS_OR_BUILD,
+ "Toontalk ile oynamak, ornekleri izlemek veya bir sey insa etek istermisiniz?"
+ // "Do you want to play, see demos, or build something with ToonTalk?"
+IDS_PICK_DEMO,
+ "Iyi, Bircok ornegimiz var. Bir tane secin"
+IDS_INSTALL_FIRST,
+ "Guzel, ancak devam etmek icin ToonTalk'u yuklememeiz gerekiyor. Tamam mi?"
+/// "Guzel, but to continue we're gidiyor to have to install ToonTalk. OK?"
+
+IDS_AS_I_WAS_SAYING, // added 12/5
+ "Gecen sefer ayrildiginda , sana daha cok soyleyeceklerim vardi"
+ // "When you left last time there was more I wanted to tell you. "
+IDS_WHAT_DOTS_MEAN,
+ // "When I have more to say you'll see \"...\" at the bottom. "
+  "Daha cok soyleyeceklerim oldugunda, en altta  \"...\" ifadesini goreceksiniz"
+IDS_THATS_WHAT_I_WANTED_SAY, // added 12/5
+// "That was what I was trying to say earlier. "
+ "O tamamiyle daha onceden soylemeye calistigim seydi"
+ IDS_ORDER_OF_THINGS_MATTER, // added 12/12
+ "Mudahele ettigim icin ozur dilerim, ancak deliklerdeki seylerin sirasi dogru olmak zorunda. "
+//"Afedersiniz to be fussy, but the order of things in the holes has to be just right. "
+IDS_BIGGER_THAN, // added 12/13
+"daha buyuk" //#might be som eproblems!
+THE_LEFT_PAGE_OF, // added 12/13
+" soldaki ... sayfanin"
+//" soldaki 12inci sayfanin"
+THE_RIGHT_PAGE_OF, // added 12/13
+" sagdaki ... sayfanin"
+//" sagdaki 12inci sayfanin"
+
+IDS_PICT_OF_DEFINITE, // added 12/13
+ " resmin"
+IDS_MOVIE_OF_DEFINITE,
+ " filmin"
+IDS_BLANK_PICTURE_OF_DEFINITE, // added 12/20
+ " bos resmin"
+
+IDS_PICT_OF_PLURAL,
+ "resimleri"
+IDS_MOVIE_OF_PLURAL,
+ "filmleri"
+IDS_BLANK_PICTURE_OF_PLURAL, // added 12/20
+ "bos resimlerin"
+
+IDS_PICT_OF_PRONOUN, // added 12/21
+ "o"
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+ "o"
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+ "o"
+
+IDS_THING_ON_THE_BACK1,
+  ""
+IDS_THING_ON_THE_BACK2,
+//"The third thing on the back is a robot. "
+ "Arkadan ucuncu sey "
+//#"Arkadan ucuncu sey robottur"
+IDS_TO_LAST_THING1,  // new on 12/13
+ ""
+// these combine to make " second to son thing he made or found"
+IDS_TO_LAST_THING2,
+ "yaptigi veya buldugu son sey"
+IDS_MADE_OR_FOUND1, // new on 12/13
+ ""
+IDS_MADE_OR_FOUND2, // these combine to form " third thing he made or found"
+// "thing he made or found"
+ "yaptigi veya buldugu son sey"
+IDS_PAGE_OF1,
+ ""
+IDS_PAGE_OF2,
+ "sayfanin"
+IDS_HOLE_OF1,
+ ""
+IDS_HOLE_OF2,
+ ".. deligi"
+IDS_THING_ON_TOP1,
+ ""
+IDS_THING_ON_TOP2,
+ "Ustteki ...  sey" // as in "The second thing on top is a sayi. "
+// "Ustteki ikinci sey"
+IDS_ROBOT_DESCRIBE5_1,
+ ""
+IDS_ROBOT_DESCRIBE5_2, // as in "The second robot wants a box. "
+ "robot istiyor "
+IDS_PICTURES,
+ " resimler"
+
+// and also translate the following:
+//" Ahh, sorry I can't remember what I was going to say... "
+
+
+IDS_NATURAL_LANGUAGE,
+"English" //American"
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyz"
+
+// the following should not be translated
+
+IDS_PUZZLE_SUBDIRECTORY,
+"English"
+IDS_NARRATION_FILE_SUFFIX,
+ "SPK"
+IDS_SUBTITLES_FILE_SUFFIX,
+ "UST"
+//IDS_START_TOONTALK_NAME,
+//"StartToonTalk"
+IDS_SPEECH_ENGINE_VOICE,
+" "
+
+rcinclude "new.rc"
+rcinclude "..\common.rc"
+
+rcinclude "..\sensors.rc"
+rcinclude "..\java.rc"
+
+}

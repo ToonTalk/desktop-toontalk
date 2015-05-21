@@ -1,0 +1,13 @@
+IDS_EXPANDER_KEY_COMMANDS,
+ // Each letter is a keyboard shortcut to put Pumpy's button in that state
+ // this (and the IDS_COPIER_KEY_COMMANDS and IDS_VACUUM_KEY_COMMANDS)
+ // should be as easy to remember as possible and must be unique
+ // IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2 documents this
+ "MVRNUTB" // for the letter of auMentar, eleVar, alaRgar, dimiNuir, encUrtar,
+esTreitar, Bom
+IDS_VACUUM_KEY_COMMANDS,
+ // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "ADI"  // for Aspirar, Devolver, lImpar
+IDS_COPIER_KEY_COMMANDS,
+  // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "COZ" // For Copiar, Original, ReproduZir

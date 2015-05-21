@@ -1,0 +1,623 @@
+// Copyright (c) 1992-2002. Ken Kahn, Animated Programs, All rights reserved.
+
+// This file contains those ToonTalk string entries used by the puzzle game
+// some entries are also used in Free Play and demos.
+
+// To translate this file simply replace the items within quotes.
+// leave the upper case items alone.
+// Anything following two /s is just a comment and can be ignored.
+// Spaces within quotes are important and should be retained.
+//
+
+IDS_JANUARY,
+"Enero"
+IDS_FEBRUARY,
+"Febrero"
+IDS_MARCH,
+"Marzo"
+IDS_APRIL,
+"Abril"
+IDS_MAY,
+"Mayo"
+IDS_JUNE,
+"Junio"
+IDS_JULY,
+"Julio"
+IDS_AUGUST,
+"Agosto"
+IDS_SEPTEMBER,
+"Septiembre"
+IDS_OCTOBER,
+"Octubre"
+IDS_NOVEMBER,
+"Noviembre"
+IDS_DECEMBER,
+"Diciembre"
+IDS_NO_SUCH_MONTH,
+"Lo siento, no conozco ningun mes que se llame asi"
+IDS_BAD_DATE,
+"Yo nunca he escuchado esa fecha"
+IDS_TODAY_IS,
+"Dejame ver. Hoy es"
+IDS_THANKS,
+"Gracias"
+IDS_AND_YOU_WERE_BORN,
+"and you were born"
+IDS_SO_YOU_ARE, // used in "so you are 3104 days old"
+"asi que tienes" 
+IDS_SO_YOU_ARE2, // used after "3104 days old" in the example above
+" "
+IDS_YEARS_AND,
+"años y" 
+IDS_DAYS_OLD,
+"dias atrasados"
+IDS_TODAY,
+"hoy" 
+IDS_OR_SENTENCE_START,
+"O"
+IDS_ITS_YOUR_BIRTHDAY,
+"Guau, Es tu cumpleaños. Feliz Cumpleaños! "
+IDS_HAD_BIRTHDAY_RECENTLY,
+"Yo realmente espero que  tengas un Feliz Cumpleaños. "
+IDS_BIRTHDAY_SOON,
+"Neat! Tu cumpleaños esta realmente cerca. Espero que tengas uno muy bueno. "
+IDS_COME_HERE_FOR_HINTS,
+"Si quieres que te ayude ven aqui. "
+IDS_BOMB_TO_RESTART,
+"Tu puedes comenzar otra vez escogiendo la bomba y presionando la barra espaciadora. "
+IDS_PUT_NEST_IN_BOX,
+"Tu necesitas poner el nest en la caja. "
+IDS_NEED_ALL_7_DAYS,
+"Lo siento, pero nosotros necesitamos los 7 dias on the nest, no  solo"
+ // as in "Sorry, but we need all 7 days on the nest, not just 5. "
+IDS_NEED_NUMBERS_UNDERNEATH,
+ // as in "Sorry, but we need at least 5 numbers on the nest, not just 3. " 
+"Sorry, but we need at least 5 numbers on the nest, not just" 
+IDS_NEED_DIFFERENT_NUMBERS_UNDERNEATH, // new on 071201
+" Lo siento pero necesitamos 2, 3, 4, 5, 6, and so on on the nest. "
+IDS_NO_CHANGING_NUMBERS,
+"Lo siento pero ningun numero debe ser cambiado. "
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+"Lo siento pero todos los numeros deben ser mayores que 0. "
+IDS_LAST_NUMBER_WAS,
+"Hmmm, la ultima vez el numero fue"
+IDS_AFTER_WAITING_8_SECONDS,
+"Estoy esperando hace 8 segundos.  Y ahora el numero es"
+IDS_AFTER_WAITING_14_SECONDS,
+"Estoy esperando hace catorce segundos. "
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"Mis sensores no me estan mostrando una nueva casa construida por  the crew in the truck. Lo siento. "
+IDS_OUT_OF_MAGIC,
+"LA varita magica ya no tiene magia"
+
+IDS_MILLISECONDS,  // added 12/3
+ "milisegundos"
+ 
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyz"
+
+IDS_SOLVED_ALL_PUZZLES,   // revised on 9/1/97
+// "Buen trabajo. Tu resolviste todos los puzzles!. Revisa la pagina de ToonTalk para nuevos puzzles. "
+ "Grandioso. El computador y el reloj estan trabajando ahora. Gracias. Yo pienso que puedo terminar el resto por mi mismo. "
+IDS_SOLVED_ALL_PUZZLES2,
+ "Tu encontraras un regalito al final del libro de notas, en la pagina 4. (in ""Free Play""). "
+IDS_CHECK_FOR_MORE_PUZZLES,
+"New puzzles might have been added to the ToonTalk web page. See www.toontalk.com. "
+
+IDS_WE_NEED_THE_NUMBER_THAT_WAS_ON_THE_FLOOR,
+ "Nosotros necesitamos el numero que estaba en el piso. "
+IDS_NUMBER_SHOULD_HAVE_GROWN_OVER_A_THOUSAND,
+ "The number should have grown to over a thousand by now. "
+
+ // updated and moved here on 8/11/97
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL, // should be needed if -puzzle is used in unlikely ways or recovering from an error
+  "Oh boy! I can't make the next puzzle since it needs stuff from earlier puzzles.  Is it OK if I send you back"  // some number
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL2,  // followed by
+ "puzzles?"
+
+IDS_LESS_THAN, // added 8/27/97
+"menos que"
+
+IDS_BAD_TIME, // added 8/28/97
+"Esta no puede ser una hora correcta. La hora no pude incluir un numero como" // followed by a number and a period
+
+
+// Following combined to make the following (with numbers changed)
+// I see you are 0 seconds old.  I mean 1 seconds old.  No, it's 2 seconds old.
+// I wonder how many seconds until you are 3 seconds old. Could you please go next
+// door and figure it out for me?
+IDS_AGE_IN_SECONDS1,
+ "Veo que tu estas" // followed by a number
+IDS_AGE_IN_SECONDS2,
+ "segundos tarde."
+IDS_AGE_IN_SECONDS3,
+ "Quiero decir"
+IDS_AGE_IN_SECONDS4,
+ "No, no es"
+IDS_AGE_IN_SECONDS5,
+ "yo me pregunto cuantos segundos hasta que estes"
+IDS_AGE_IN_SECONDS6,
+ "Podrias por favor ir a la proxima puerta y resolverlo para mi"
+
+// Following combined to form
+// "Maybe you should do something special in 3 days and 4 hours to celebrate being 390 million seconds old. "
+IDS_MAYBE_YOU_SHOULD_DO_SOMETHING_SPECIAL,
+ "Quizas debas hacer algo especial"
+IDS_TO_CELEBRATE_BEING,
+  "por estar celebrando"
+IDS_MILLIONS_OF_SECONDS_OLD,
+ "millones de segundos mas viejo. "
+
+IDS_FINISHED_ALL_PUZZLES_START_AGAIN,
+ "Tu has resuelto todos los puzzles disponibles. Quieres comenzar de nuevo?"
+
+IDS_WAIT_FOR_BIRD_TO_BRING_MESSAGE,
+ "Bien. Let's wait for the bird to bring the message. "
+IDS_GIVING_UP_ON_BIRD,
+ "I'm giving up on that bird. We've waited long enough. "
+IDS_NEST_SHOULD_BE_EMPTY,
+ "Sorry, but the nest should be empty. "
+
+IDS_NOT_CHANGING_FAST_ENOUGH,
+ "Sorry, but the number should be changing faster. "
+IDS_NOT_CHANGING_SLOW_ENOUGH,
+ "Sorry, but the number should be changing slower. "
+IDS_NOT_CHANGING_AT_ALL,
+ "Sorry, but the number should be changing. "
+
+IDS_THE_NUMBER_OF_ROBOTS_ON_THE_BACK_SHOULD_BE,
+ "El numero de robots en el fondo debe ser"  // followed by a number
+
+IDS_DAYS,
+"dias"
+IDS_HOURS,
+"horas"
+IDS_DAY,
+"dia"
+IDS_HOUR,
+"hora"
+IDS_MINUTES,
+"minutos"
+
+IDS_AS_I_WAS_SAYING, // added 12/5
+ "When you left last time there was more I wanted to tell you. "
+IDS_WHAT_DOTS_MEAN,
+ "Cuando tenga mas que decirte veras ""..."" en la linea inferior. "
+IDS_THATS_WHAT_I_WANTED_SAY, // added 12/5
+ "That was what I was trying to say earlier. "
+
+IDS_ORDER_OF_THINGS_MATTER, // added 12/12
+"Sorry to be fussy, but the order of things in the holes has to be just right. "
+IDS_BIGGER_THAN, // added 12/13
+"mas grande que"
+
+  // many ToonTalk data types have 4 entries:
+  // indefinite singular. As in "You are holding A NUMBER."
+  // definite singular.  As in "You can drop THE NUMBER by clicking a mouse button."
+  // plural.  As in "You are pointing to a stack of NUMBERS."
+  // pronoun (accusative, i.e. used as the object not subject)
+  // As in "You are holding a number.  You can drop IT by clicking a mouse button."
+  // Note if the pronoun is troublesome (e.g. due to word order) you may wish
+  // to just repeat the definite singular for the pronoun entry.
+
+ IDS_NUMBER_TYPE_INDEFINITE,
+  "un numero"
+ IDS_NUMBER_TYPE_DEFINITE,
+  "el numero"
+ IDS_NUMBER_TYPE_PLURAL,
+  "numeros"
+ IDS_NUMBER_TYPE_PRONOUN,
+ "este"
+ IDS_EXPANDER_TYPE_INDEFINITE,
+  "Pumpy el inflador de bicicleta"
+ IDS_EXPANDER_TYPE_DEFINITE,
+  "Pumpy un inflador de bicicleta"
+  IDS_EXPANDER_TYPE_PLURAL,
+  "Pumpy los infladores de bicicleta"
+ IDS_EXPANDER_TYPE_PRONOUN,
+ "este"
+ IDS_VACUUM_TYPE_INDEFINITE,
+  "Dusty la aspiradora"
+  IDS_VACUUM_TYPE_DEFINITE,
+  "Dusty una aspiradora"
+  IDS_VACUUM_TYPE_PLURAL,
+  "Dusty las aspiradoras"
+  IDS_VACUUM_TYPE_PRONOUN,
+ "esta"
+ IDS_COPIER_TYPE_INDEFINITE,
+  "una varita magica"
+ IDS_COPIER_TYPE_DEFINITE,
+  "la varita magica"
+ IDS_COPIER_TYPE_PLURAL,
+  "varitas magicas"
+ IDS_COPIER_TYPE_PRONOUN,
+ "esto"
+ IDS_THOUGHT_BUBBLE_TYPE_INDEFINITE,
+  "una burbuja con ideas"
+ IDS_THOUGHT_BUBBLE_TYPE_DEFINITE,
+  "la burbuja con ideas"
+ IDS_THOUGHT_BUBBLE_TYPE_PLURAL,
+  "burbujas con ideas"
+ IDS_THOUGHT_BUBBLE_TYPE_PRONOUN,
+ "estas"
+ IDS_ROBOT_TYPE_INDEFINITE,
+  "un  robot"
+ IDS_ROBOT_TYPE_DEFINITE,
+  "el robot"
+ IDS_ROBOT_TYPE_PLURAL,
+  "los robots"
+ IDS_ROBOT_TYPE_PRONOUN,
+ "este"
+ IDS_NEST_TYPE_INDEFINITE,
+  "un nido"
+ IDS_NEST_TYPE_DEFINITE,
+  "el nido"
+ IDS_NEST_TYPE_PLURAL,
+  "los nidos"
+ IDS_NEST_TYPE_PRONOUN,
+ "estos"
+ IDS_BIRD_TYPE_INDEFINITE,
+  "un pajaro"
+ IDS_BIRD_TYPE_DEFINITE,
+  "el pajaro"
+ IDS_BIRD_TYPE_PLURAL,
+  "los pajaros"
+ IDS_BIRD_TYPE_PRONOUN,
+ "este"
+ IDS_TRUCK_TYPE_INDEFINITE,
+  "a truck"
+ IDS_TRUCK_TYPE_DEFINITE,
+  "the truck"
+ IDS_TRUCK_TYPE_PLURAL,
+  "trucks"
+ IDS_TRUCK_TYPE_PRONOUN,
+ "it"
+ IDS_BOOK_TYPE_INDEFINITE,
+  "una libreta de apuntes"
+ IDS_BOOK_TYPE_DEFINITE,
+  "la libreta de apuntes"
+ IDS_BOOK_TYPE_PLURAL,
+  "libretas de apuntes"
+ IDS_BOOK_TYPE_PRONOUN,
+ "estas"
+ IDS_CUBBY_TYPE_INDEFINITE,
+   // "Cubby" is the name small children give to the "cubby hole" where they
+   // put their things while at school.  Turns out some adults didn't know the word.
+   // So box is used now.
+  "una caja"
+ IDS_CUBBY_TYPE_DEFINITE,
+  "la caja"
+ IDS_CUBBY_TYPE_PLURAL,
+  "cajas"
+ IDS_CUBBY_TYPE_PRONOUN,
+ "esta"
+ IDS_TOOLBOX_TYPE_INDEFINITE,
+  "Tooly una caja de herramientas"
+ IDS_TOOLBOX_TYPE_DEFINITE,
+  "Tooly la caja de herramientas"
+ IDS_TOOLBOX_TYPE_PLURAL,
+  "Tooly las cajas de herramientas"
+ IDS_TOOLBOX_TYPE_PRONOUN,
+ "estas"
+ IDS_PICT_TYPE_INDEFINITE,
+  "una imagen"
+ IDS_PICT_TYPE_DEFINITE,
+  "la imagen"
+ IDS_PICT_TYPE_PLURAL,
+  "imagenes"
+ IDS_PICT_TYPE_PRONOUN,
+ "estas"
+ IDS_BOMB_TYPE_INDEFINITE,
+  "una bomba"
+ IDS_BOMB_TYPE_DEFINITE,
+  "la bomba"
+ IDS_BOMB_TYPE_PLURAL,
+  "bombas"
+ IDS_BOMB_TYPE_PRONOUN,
+ "estas"
+ IDS_TEXT_TYPE_INDEFINITE,
+  "un cuadro de texto"
+ IDS_TEXT_TYPE_DEFINITE,
+  "el cuadro de texto"
+ IDS_TEXT_TYPE_PLURAL,
+  "los cuadros de texto"
+ IDS_TEXT_TYPE_PRONOUN,
+ "estos"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_INDEFINITE,
+  "un cuadro de texto"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_DEFINITE,
+  "el cuadro de texto"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_PLURAL,
+  "los cuadros de texto"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_PRONOUN,
+ "estos"
+ IDS_REMOTE_PICTURE_TYPE_INDEFINITE,
+  // There are 2 kinds of remote controls in ToonTalk.
+  // Those for controlling pictures which are in the notebook on the back of a picture.
+  // And those for controlling and sensing global things like the keyboard or mouse (found on page 10 of the main notebook).
+  "un control remoto"
+ IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+  "el  control remoto"
+ IDS_REMOTE_PICTURE_TYPE_PLURAL,
+  "los controles remotos"
+ IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "estos"
+ IDS_BLANK_NUMBER_TYPE_INDEFINITE,
+  "un cuadro numerico en blanco"
+ IDS_BLANK_NUMBER_TYPE_DEFINITE,
+  "el cuadro numerico en blanco"
+ IDS_BLANK_NUMBER_TYPE_PLURAL,
+  "los cuadros numericos en blanco"
+ IDS_BLANK_NUMBER_TYPE_PRONOUN,
+ "estos"
+ IDS_BLANK_CUBBY_TYPE_INDEFINITE,
+  "una caja vacia"
+ IDS_LABELED_CUBBY_TYPE_INDEFINITE,
+  "la caja vacia"
+ IDS_LABELED_CUBBY_TYPE_DEFINITE,
+  "la caja vacia"
+ IDS_LABELED_CUBBY_TYPE_PLURAL,
+  "las cajas vacias"
+ IDS_LABELED_CUBBY_TYPE_PRONOUN,
+ "estas"
+ IDS_BLANK_PICTURE_TYPE_INDEFINITE,
+  "una imagen en blanco"
+ IDS_BLANK_PICTURE_TYPE_DEFINITE,
+  "la imagen en blanco"
+ IDS_BLANK_PICTURE_TYPE_PLURAL,
+  "las imagenes en blanco"
+ IDS_BLANK_PICTURE_TYPE_PRONOUN,
+ "estas"
+ IDS_BLANK_TEXT_TYPE_INDEFINITE,
+  "un cuadro de texto en blanco"
+ IDS_BLANK_TEXT_TYPE_DEFINITE,
+  "el cuadro de texto en blanco"
+ IDS_BLANK_TEXT_TYPE_PLURAL,
+  "los cuadros de texto en blanco"
+ IDS_BLANK_TEXT_TYPE_PRONOUN,
+ "estos"
+ IDS_PICT_WITH_INSIDES_TYPE_INDEFINITE,
+  "una imagen"
+ IDS_PICT_WITH_INSIDES_TYPE_DEFINITE,
+  "la imagen"
+ IDS_PICT_WITH_INSIDES_TYPE_PLURAL,
+  "imagenes"
+ IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+ "estas"
+ IDS_REMOTE_INTEGER_TYPE_INDEFINITE,
+  "un sensor mostrando un numero"
+ IDS_REMOTE_INTEGER_TYPE_DEFINITE,
+  "el sensor mostrando un numero"
+ IDS_REMOTE_INTEGER_TYPE_PLURAL,
+  "los sensores mostrando un numero"
+ IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+ "este"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_INDEFINITE,
+ // some remote controls display a picture, some text and some numbers
+ // nearly all of them are sensors only (e.g. the time)
+ // while a few like city size are both a sensor and a remote control
+  "un sensor mostrando un numero"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_DEFINITE,
+  "el sensor mostrando un numero"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PLURAL,
+  "los sensores mostrando un numero"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+ "el"
+ IDS_SCALE_PICTURE_TYPE_INDEFINITE,
+  "una balanza"
+ IDS_SCALE_PICTURE_TYPE_DEFINITE,
+  "la balanza"
+ IDS_SCALE_PICTURE_TYPE_PLURAL,
+  "las balanzas"
+ IDS_SCALE_PICTURE_TYPE_PRONOUN,
+ "esta"
+ IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+  // A very useful facility which enables a user object to change its appearance
+  // The remote control for the appearance of something looks just like the thing.
+  // To replace an appearance a user (or a robot) erases this kind of remote control
+  // and drops the new appearance on it.
+  "un control remoto que se vea parecido"
+ IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+  "el control remoto que se vea parecido"
+ IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+  "los controles remotos que se ven parecidos"
+ IDS_REMOTE_APPEARANCE_TYPE_PRONOUN,
+ "este"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+  "una imagen de algo"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_DEFINITE,
+  "la imagen de algo"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PLURAL,
+  "las imagenes de algo"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PRONOUN,
+ "esta"
+ IDS_USER_PICTURE_TYPE_INDEFINITE,
+  "una imagen obtenida desde el archivo del usuario"
+ IDS_USER_PICTURE_TYPE_DEFINITE,
+  "la imagen obtenida desde el archivo del usuario"
+ IDS_USER_PICTURE_TYPE_PLURAL,
+  "las imagenes  obtenidas desde el archivo del usuario"
+ IDS_USER_PICTURE_TYPE_PRONOUN,
+ "esta"
+
+ // new on 8/30
+// revised on 10/13
+IDS_PUZZLE_SINKING,
+//  "Zizzle Island esta hundiendose. "
+"Zizzle Islandfue un hermoso lugar hasta que la golpea el desatre.. Está comenzando a hundirse!"
+IDS_PUZZLE_CRASH,
+//  "Marty viene al rescate. "
+"Marty pasa volando apenas. El rescata a todos. "
+IDS_PUZZLE_HURT,
+//  "Después de rescatar a todos él choca. "
+"Él mueve casi todas las casas fuera de la isla pero entonces él tiene problemas con su motor y se estrella."
+IDS_PUZZLE_RESCUE,
+//"You volunteer to rescue Marty. "
+"Marty el Rescatador necesita ser rescatado. Tu te ofreces voluntariamente para lanzarte en paracaidas y ayudarlo."
+IDS_FIRST_PUZZLE_GREETING1,
+ "Hola. Yo soy Marty. "
+IDS_FIRST_PUZZLE_GREETING2,
+ "Tu debes ser"
+IDS_FIRST_PUZZLE_GREETING3,
+ "niño, me alegro de verte!"
+IDS_RESTART_PUZZLE_GREETING1,
+ "Me alegro de verte otra vez. Ya recuerdo donde estabamos. "
+IDS_RESTART_PUZZLE_GREETING2,
+ "Gracias por regresar. Volvamos a arreglar la nave. "
+IDS_RESTART_PUZZLE_GREETING3,
+ "Es grandioso verte otra vez. Dejame ver, donde estabamos? "
+IDS_TOO_WIDE_TO_SEE,
+ "Lo siento, esto es demasiado ancho para verlo de una sola mirada. "
+IDS_TOO_NARROW_TO_SEE,
+ "Lo siento, esto es demasiado angosto y  no puedo ver las letras. "
+// for puzzle engine
+IDS_BAD_PUZZLE_FILE,
+ "Oh no, Algo esta mal en el archivo del puzzle. Lo siento. "
+IDS_ALL_HINTS_GIVEN1,
+ // The expression "a broken record" is from records (before there were CDs) that
+ // when scratched would repeat a phrase over and over again.  I'm not sure if it
+ // is clear to children of the 1990s.
+ // When translating these 3 versions IDS_ALL_HINTS_GIVEN just try to make them
+ // different but mean the same thing
+ "Ya se que sueno como un disco rayado pero aqui voy otra vez. "
+IDS_ALL_HINTS_GIVEN2,
+ "Lo siento si estoy repìtiendome pero no sé que mas decir. "
+IDS_ALL_HINTS_GIVEN3,
+"Yo desearia saber como ayudarte, pero todo lo que se es lo que  dije la ultima vez. "
+IDS_NO_HINTS,
+ "Nooo."  //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_NEGATIVE_AGE,
+ "Asi que usted no nace todavia? " //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_VERY_YOUNG1,
+ "Asombroso, yo no sabia eso"
+IDS_VERY_YOUNG2,
+ "los ninos mayores de la tierra eran tan inteligentes. "
+IDS_VERY_OLD1,
+ "Niño,"
+IDS_VERY_OLD2,
+ "años de edad. asegurese de que es mayor! "
+IDS_LIKE_INSIDE_A_COMPUTER,  // was "Like inside a computer" prior to 8/25/97
+ "Dentro de un computador"
+IDS_SEE_IF_YOU_CAN_MAKE_THAT_NUMBER,
+ "vea si usted puede hacer ese numero. "
+IDS_WE_NEED1,
+ "necesitamos"
+IDS_WE_NEED2,
+ "necesitamos"
+IDS_SIT_DOWN_AND_GET,
+ "sientate en la otra casa  y consigue"
+IDS_BASIC_HINT1,  // second "the" was missing -- added on 10/15/97
+ "Atraviese la puerta de la otra casa y entonces apriete un botón del ratón. "
+IDS_BASIC_HINT2,
+ "Usted puede recoger algo pulsando el botón el botón del ratón mientras está apuntandolo. "
+IDS_WHILE_HOLDING,
+ "mientras esta esperando"
+IDS_PRESS_ESC_AND_COME_BACK,
+ "presione 'Escape'para ponerse de pie y regresar aquí.. "
+IDS_WE_DONT_NEED,
+  // As in "We don't need a number.  We need a box." -- Marty says this in the puzzle game.
+ "Lo siento . No necesitamos "
+IDS_SOMETHING_IS_MISSING,
+// was  "Something is missing from" // changed 1/20/97
+ "Algo falta en la caja. "
+IDS_SOMETHING_IS_MISSING2,
+ "O este no es el lugar correcto. "  //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_NOT_IT1,
+ "No. "
+IDS_NOT_IT2,
+ "esto no es. "
+IDS_NOT_IT3,
+ "Lo siento, esto no es lo que necesitamos. "
+//IDS_WRONG_TRY_AGAIN,
+// "Algo anda mal aqui. Intenta de nuevo. "
+IDS_SOMETHING_WRONG, // revised on 8/31/97 -- broke the two sentences apart -- used when aborting for an unknown reason starting 050201
+ "Algo está mal aqui. "
+IDS_TRY_AGAIN1,
+ "Intenta otra vez. "
+IDS_TRY_AGAIN2,
+ "Hagamoslo otra vez. "
+// new on 9/24
+IDS_CONGRATULATIONS,
+ "Buen trabajo"
+IDS_CONGRATULATIONS2,
+ "Hermoso"
+IDS_CONGRATULATIONS3,
+ "Bien hecho"
+IDS_CONGRATULATIONS4,
+ "Grandioso"
+IDS_CONGRATULATIONS5,
+ "Bien"
+IDS_CONGRATULATIONS6,
+ "Muy bien hecho"
+
+IDS_TROUBLE_SHOOT_QUIT_ON_FIRST_PUZZLE,   // added 2/1/98
+ "Te gustaria leer algunos consejos?"
+IDS_TROUBLE_SHOOT_QUIT_ON_EARLY_ROBOT_PUZZLE,
+ "te gustaria ver algunas sugerencias acerca de como tratar a los robots en los puzzles"
+
+
+// following moved here from english.rc and new.rc on 300699
+IDS_HELLO1,
+  "Hola"
+ IDS_HELLO2,
+  "Hola"
+ IDS_HELLO3,
+  "Hola"
+ IDS_HELLO4,
+  "Hola por allí"
+ IDS_HELLO5,
+  "Saludos"
+ IDS_HELLO6,
+  "Hola por aqui"
+ IDS_MARTIAN_INTRODUCTION,
+  "Marty esta aqui. "
+
+  //Added 10/7
+IDS_REPEAT1,
+"Aqui esta lo que dije recien. "
+IDS_REPEAT2,
+"Yo solo repetire. "
+IDS_REPEAT3,
+"repetire esto una vez mas "
+
+// following is combined as "a box with one hole" or "a box with 4 holes"
+ IDS_BOX_WITH,
+  "una caja con "
+ IDS_BOX_WITH2, // after 4 holes in example above
+  " "
+ IDS_ONE_HOLE,
+  "un agujero"
+ IDS_HOLES,
+  " agujeros" 
+ IDS_HOLES0, // before 4 holes in example above
+  " "
+
+ IDS_MARTY_TALKS_FUNNY,  // added 4/8/97 -- only used if speech is enabled
+ "Traducir Marciano al idioma de la tierra no siempre es facil. Mi maquina traductora algunas veces me hace sonar un poco comico. Espero que puedas comprenderme de todos modos. "
+
+ IDS_WE_DONT_NEED2,
+  // The X in "We don't need a number X."
+  // Si este "cualquiera" falla mantener el espacio vacio. Patricio Acevedo escribio aqui
+" cualquiera"
+
+IDS_THOUSANDS_COMMA,
+ // unfortunately if you change this to " " it will show a million as 1000000. Any other value will work. Changing it to "  " (2 spaces) will print as 1  000  000.
+ // En Español el separador de miles es el punto. PAtricio Acevedo escribio aqui.
+ "."  // e.g. "1,000,000"
+
+
+IDS_EXPANDER_KEY_COMMANDS,
+ // Each letter is a keyboard shortcut to put Pumpy's button in that state
+ // this (and the IDS_COPIER_KEY_COMMANDS and IDS_VACUUM_KEY_COMMANDS)
+ // should be as easy to remember as possible and must be unique
+ // IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2 documents this
+ // Usare entonces Grande, Alto, aNcho, Pequeño, Corto, Estrecho, Redimenzionador (creo, GANPCER) 
+ "GANPCER" // for the first letter of Big, Tall, Wide, Little, Short, Narrow, Good-Size
+IDS_VACUUM_KEY_COMMANDS,
+ // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "ADB"  // for Suck, Reverse, Erase. Entonces usare Aspirar, Devolver y Borrar
+IDS_COPIER_KEY_COMMANDS,
+  // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "COS" // For Copy, copy-and-restore-Original, copy-Self( lo dejamos igual por ahora

@@ -1,0 +1,157 @@
+// added 12/26/96
+
+IDS_BUILT_IN_SOUND_INDEFINITE,
+ "bir ses"
+// "a sound"
+IDS_BUILT_IN_SOUND_DEFINITE,
+ "bahsedilen ses"
+// "the sound"
+IDS_BUILT_IN_SOUND_PLURAL,
+ "sesler"
+// "sounds"
+IDS_BUILT_IN_SOUND_PRONOUN,
+ "o"
+// "it"
+
+IDS_REMOTE_TEXT_PICTURE_TYPE_INDEFINITE,
+  "bir uzaktan kumanda"
+//  "a remote control"
+IDS_REMOTE_TEXT_PICTURE_TYPE_DEFINITE,
+  "bahsedilen uzaktan kumanda"
+//  "the remote control"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PLURAL,
+  "uzaktan kumandalar"
+//  "remote controls"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PRONOUN,
+ "o"
+// "it"
+
+IDS_TYPING_SOUND_NAMES_OBSOLETE,
+ " Sesler defterinden ses almak daha iyidir. Eger bir sesin adini yazar ve baska ulkedeki birine gonderirseniz calismayabilir"
+ //"It is better to take sounds from the sounds notebook.  If you type the name of a sound and you send this to someone in another country it might not work."
+
+IDS_BUILT_IN_SOUND_HELP, // added 1/14
+"O sesi su tusa basarak elde edebilirsiniz"
+//"You can make that sound by pressing "
+
+IDS_ANY_SOUND, // add 1/16
+ "her ses"
+// "any sound"
+IDS_BLANK_BUILT_IN_SOUND, // add 1/16
+"bir silinmis built in ses"
+ //"an erased built in sound"
+
+IDS_TURN_BOMB_ON_HELP,  // added 1/20
+"Elinizdeki bir bombayi spacebar tusuna basarak da patlatabilirsiniz"
+//"You can also set off a bomb you are holding by pressing the space bar. "
+
+IDS_MARTIAN_SPEAK_HELP, // added 3/26/97
+ "ister konusayim , ister kelime balonlarini gostereyim veya her ikisini de yapayim"
+// "whether I speak, show word balloons, or both"
+IDS_MARTIAN_SPEAK,
+ "konusma"
+// "speak"
+IDS_MARTIAN_BALLOONS,
+ "kelime balonlari"
+// "word balloons"
+IDS_MARTIAN_SPEAK_AND_BALLOONS,
+ "konusma ve balonlar"
+// "speak and balloons"
+IDS_MARTIAN_SPEAKS_ONLY_IN_32BITS,
+ "Afedersiniz,ancak sadece ToonTalk'un 32 bit surumunu calistiriyorsaniz konusabilirim"
+ // "Sorry, but I can speak only if you are running the 32 bit version of ToonTalk."
+
+IDS_MARTIAN_SPEAK_REMOTE_LONG_LABEL,   // added 3/27/97
+  "Marty\rNasil\rKonusur"
+ //#If you are not using it as a whole sentence, the correct order is "Nasil\rMarty\rKonusur".
+ //# But it does not make quite sense.
+ //"How\rMarty\rTalks"
+IDS_MARTIAN_SPEAK_REMOTE_SHORT_LABEL,
+   "Marty Konusur"
+//  "Marty Talks"
+
+IDS_MARTY_TALKS_FUNNY,  // added 4/8/97 -- only used if speech is enabled
+ "Marscayi Dunya dillerine tercume etmek her zaman o kadar kolay degildir. Tercume makinem bazen gulunc gelebilir. Umarim anlarsiniz."
+// "Translating Martian to Earth languages isn't always so easy.  My translation machine sometimes makes me sound kind of funny. I hope you can understand me anyway. "
+
+IDS_CLIPBOARD_REMOTE_FULL_HELP1, // added 4/22/97
+ "Eger birsey Windows'un Clipboard'unda ise onu gorursunuz. Buradakileri silmek veya buraya bir sey eklemek icin Tozcuk'u kullanabilirsiniz"
+// "If something is on the clipboard of Windows, then you'll see it here.  You can use Dusty to vacuum it off and spit it out again. "
+IDS_CLIPBOARD_REMOTE_FULL_HELP2,
+ "Eger Clipboard bos ise, o zaman uzaktan kumanda siyah gozukur. Bir seyi Clipboard'a eklemek icin uzaktan kumandanin uzerine birakabilirsiniz"
+// "If the clipboard is empty, then the remote control will look black.  You can drop something on the remote control to put it on the clipboard. "
+
+IDS_USER_PICTURE_NOT_256_COLORS, // added 5/8/97
+ "Afedersiniz, ancak ToonTalk'un 16 bit surumu yalniz 256 renkli resimleri okuyabilir"
+// "Sorry, but the 16 bit version of ToonTalk can only read pictures with 256 colors. "
+
+// added on 6/13-97
+IDS_CIRCLE_PAGE,
+ //# this might be same!
+ "Oval" // if width and height are same then is a circle otherwise is an ellipse -- oval is just non-technical name for this
+IDS_ROUNDED_RECTANGLE_PAGE,
+  "Yuvarlak\rDikdortgen"
+// "Rounded\rRectangle"
+IDS_LINE_TOWARDS_UPPER_RIGHT,
+  "Cizgi\rYukari"
+// "Line\rup"   // as you move to the right
+IDS_LINE_TOWARDS_LOWER_RIGHT,
+  "Cizgi\rAsagi"
+// "Line\rdown"
+IDS_HOLLOW_CIRCLE_PAGE,
+ "Oyuk\rOval"
+// "Hollow\rOval"
+IDS_ROUNDED_HOLLOW_RECTANGLE_PAGE,
+ "Oyuk\rYuvarlak\rDikdortgen"
+// "Hollow\rRounded\rRectangle"
+IDS_DOTTED_LINE_TOWARDS_UPPER_RIGHT,
+ "Noktali\rcizgi yukari"
+// "Dotted\rline up"
+IDS_DOTTED_LINE_TOWARDS_LOWER_RIGHT,
+ "Noktali\rcizgi asagi"
+// "Dotted\rline down"
+IDS_HOLLOW_RECTANGLE,
+ "Oyuk\rDikdortgen"
+// "Hollow\rRectangle"
+
+IDS_SYNTHETIC_RECTANGLE,
+  "bir dikdortgen"
+// "a rectangle"
+IDS_SYNTHETIC_OVAL,
+ "bir oval"
+ // "an oval"
+IDS_SYNTHETIC_ROUNDED_RECTANGLE,
+ "bir yuvarlak dikdortgen"
+ //"a rounded rectangle"
+IDS_SYNTHETIC_LINE_UP,
+ "yukari giden bir cizgi"
+// "a line going up"
+IDS_SYNTHETIC_LINE_DOWN,
+ "asagi giden bir cizgi"
+// "a line going down"
+IDS_SYNTHETIC_HOLLOW_OVAL,
+ "bir oyuk oval"
+// "a hollow oval"
+IDS_SYNTHETIC_ROUNDED_HOLLOW_RECTANGLE,
+ "bir yuvarlak oyuk dikdortgen"
+// "a rounded hollow rectangle"
+IDS_SYNTHETIC_DOTTED_LINE_UP,
+ "yukari giden noktali bir cizgi"
+// "a dotted line going up"
+IDS_SYNTHETIC_DOTTED_LINE_DOWN,
+ "asagi giden noktali bir cizgi"
+// "a dottled line going down"
+IDS_SYNTHETIC_HOLLOW_RECTANGLE,
+ "bir oyuk dikdortgen"
+// "a hollow rectangle"
+
+
+// the following will soon be used to generate names for robots rather than the current numbers you see on their chests
+// The names are generated as strings of constant-vowel repeated as necessary.
+// For English I am skipping "y" and "q" since they are a bit of problem.
+IDS_VOWELS_FOR_ROBOT_NAMES,  // added 6/24 for naming robots
+"aeiou" // y is pretty special
+IDS_CONSONANTS_FOR_ROBOT_NAMES,
+"bcdfghjklmnprstvwxz"  // q is special
+
+

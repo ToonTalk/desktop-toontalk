@@ -1,0 +1,240 @@
+<html>
+<head>
+<title>ToonTalk - Pedido</title>
+<link rel="stylesheet" type="text/css" href="../toontalk.css">
+</head>
+
+<body link="#0000ff" vlink="#800080" bgcolor="#ffffff">
+
+<div align="center">
+<a name="topo"></a>
+<table width=468 cellspacing=0 cellpadding=0 border=0><tr><td>
+
+<p>
+<table width=460 cellspacing=0 cellpadding=0 border=0><tr><td>
+<div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a>
+<hr size=1>
+    </td></tr>
+</table>
+
+<h2>Toon Talk &#150; Pedido</h2>
+
+<script>
+    function processForm(form) {
+        var checkBlanks = "First_Name Last_Name Address City State Zip Country Quantity";
+        for (var i = 0; i < form.elements.length; i++) {
+           if (form.elements[i].type == "text" &&
+               checkBlanks.indexOf(form.elements[i].name) != -1 &&
+               form.elements[i].value == "") {
+              alert("You need to fill in the " + form.elements[i].name + " field.");
+              form.elements[i].focus();
+//              form.elements[i].select();
+              return false;
+           } else if (form.elements[i].name == "Quantity") {
+              var number = parseInt(form.elements[i].value,10);
+              if (isNaN(number) || number < 1) {
+                 alert("The Quantity field must be a number greater than zero.");
+                 form.elements[i].focus();
+                 form.elements[i].select();
+                 return false;
+              }
+           } else if (form.elements[i].name == "Email" && 
+                      form.elements[i].value != "" &&
+                      form.elements[i].value.indexOf('@', 0) == -1) {
+              alert("The email address you entered does not contain @.");
+              form.elements[i].focus();
+              form.elements[i].select();
+              return false;
+           } else if (form.elements[i].name == "Payment_Method") {
+              var index = form.elements[i].selectedIndex;
+              if (index == 0) {
+                 alert("Please choose a payment method.");
+                 form.elements[i].focus();
+                 return false;
+              } else if (index >= 1 && index <= 4) { // credit card
+                 for (var j = i+1; j < i+3; j++) { // make sure next 2 elements are not blank
+                    if (form.elements[j].value == "") {
+                       alert("For credit card orders, you need to fill in the " + 
+                             form.elements[j].name + " field.");
+                       form.elements[j].focus();
+                       return false;
+                    }
+                 }
+              } else if (index == 5) { // phone me for credit card info
+                 if (form.elements[2].value == "") { // 2 is phone number
+                    alert("You need to fill in your phone number so we can call you for credit card information.");
+                    form.elements[2].focus();
+                    return false;
+                 }
+              }
+           }
+        }
+        alert("The form can now be printed out by clicking on your browser's Print button.  Please fax it to 510-548-7117.");
+        return false; // since not really submitting anything
+     }
+</script>
+
+<p>Todos os itens em <font color="#FF0000">vermelho</font>
+(com <font color="#FF0000">*</font>) precisam ser preenchidos.
+Não utilize este formulário se o Toon Talk for distribuído para Europa, África, Austrália, Nova Zelândia, Hong Kong, Singapura, Índia ou Malásia. Visite o endereço <a href="http://www.toontalk.com/English/buy.htm">www.toontalk.com/English/buy.htm</a> para obter mais detalhes. 
+
+<form name="Form" onsubmit="return processForm(this)">
+<table border="0" width=468>
+    <tr>
+      <td align=right><font color="#FF0000"><p>Nome * </font></td>
+      <td><input type="text" size="20" name="First_Name"></font></td>
+    </tr>
+    <tr>
+      <td align=right><font color="#FF0000"><p>Sobrenome * </font></td>
+      <td><input type="text" size="20" name="Last_Name"></font></td>
+    </tr>
+    <tr>
+      <td align=right><p>Telefone </font></td>
+      <td><input type="text" size="20" name="Phone_Number"></font></td>
+    </tr>
+    <tr>
+      <td align=right><p>Empresa ou Escola </font></td>
+      <td><input type="text" size="20" name="Company_Name"></font></td>
+    </tr>
+    <tr>
+      <td align=right><p>E-mail </font></td>
+      <td><input type="text" size="20" name="Email"></font></td>
+    </tr>
+    <tr>
+      <td align=right><p>Fax </font></td>
+      <td><input type="text" size="20" name="Fax"></font></td>
+    </tr>
+    <tr>
+      <td align=right><font color="#FF0000"><p>Endereço para
+        Entrega * </font></td>
+      <td><input type="text" size="20" name="Address"></font></td>
+    </tr>
+    <tr>
+      <td align=right><p>Endereço Complementar </font></td>
+      <td><input type="text" size="20" name="Address2"></font></td>
+    </tr>
+    <tr>
+      <td align=right><font color="#FF0000"><p> Cidade
+      *</font></td>
+      <td><input type="text" size="20" name="City"></font></td>
+    </tr>
+    <tr>
+      <td align=right><font color="#FF0000"><p>Estado * </font></td>
+      <td><input type="text" size="20" name="State"></font></td>
+    </tr>
+    <tr>
+      <td align=right><font color="#FF0000"><p>Cep * </font></td>
+      <td><input type="text" size="20" name="Zip"></font></td>
+    </tr>
+    <tr>
+      <td align=right><font color="#FF0000"><p>País * </font></td>
+      <td><input type="text" size="20" name="Country"></font></td>
+    </tr>
+  </table>
+
+  <p>As informações acima serão utilizadas somente para a entrega do Toon Talk ou para informá-lo (via e-mail ou correspondência normal) sobre novidades dos produtos Toon Talk.
+  
+  <p><input type="checkbox" name="Shipping_Address_Residence?" value="ON">
+Por favor, marque esta caixa de seleção se o endereço mencionado é uma residência.
+
+  <p><input type="checkbox" name="Credit_statement_to_ship_to_address?" value="ON">Marque esta caixa de seleção se o método de pagamento é cartão de crédito e se a fatura é  encaminhada para esse endereço.
+  
+  <p>Por favor, escolha um método de pagamento abaixo. Imprima este formulário e envie-o por fax ao número 1-510-559-4190.
+Ou mande uma correspondência para Software Shippers, 805 Camelia St, Berkeley, CA 94710, USA. Caso queira receber uma Nota Fiscal, você precisará mandar seu pedido para nós por fax utilizando um papel timbrado da sua empresa.
+  <p><select name="Escolha o Método de Pagamento" size="1">
+    <option selected>Escolha o Método de Pagamento</option>
+    <option>Visa</option>
+    <option>MasterCard</option>
+    <option>American Express</option>
+    <option>Discover or Novus</option>
+    <option>Please call me for credit card info</option>
+    <option>Sending a check made out to Animated Programs</option>
+  </select>
+
+  <table border="0" width=460>
+  <tr><td><p>Número do Cartão de Crédito </td>
+      <td><p><input type="text" size="20"
+      name="Credit_Card_Number"></td>
+  </tr>
+  <tr><td><p>Data de Validade do Cartão (mês/ano) .... </td>
+      <td><p><input type="text" size="20"
+      name="Credit_Card_Expiration_Month_Year"></td>
+    </tr>
+  <tr><td><p>Nome no Cartão de Crédito (caso seja diferente) ....... </td>
+      <td><p><input type="text" size="20"
+      name="Credit_Card_Name_if_different"></td>
+  </tr>
+  </table>
+
+  <p>Entrega e manuseio custam US$ 5 para entrega First Class pelo serviço de correios norte-americano dentro dos Estados Unidos.
+Você pode escolher outras opções de entrega dentre as relacionadas abaixo; a diferença será cobrada nos custos de entrega. Pedidos feitos de segunda a sexta-feira até as 13:00 (Pacific Standard Time) serão entregues no mesmo dia.
+  <p><select name="Shipping_Method" size="1">
+    <option selected>US Postal Service First Class</option>
+    <option>US Postal Service Priority Mail</option>
+    <option>US Postal Service Express Mail</option>
+    <option>International Air Mail</option>
+    <option>UPS Express International</option>
+    <option>UPS Ground</option>
+    <option>UPS Third Day Delivery</option>
+    <option>UPS Blue</option>
+    <option>UPS Red</option>
+    <option>Federal Express</option>
+    <option>Other (please specify in special instructions section)</option>
+  </select>
+  <p>O CD-Rom Toon Talk e o manual custam US$49.95. Cópias adicionais saem por US$ 29.95. Pedidos de 10 cópias ou mais custam US$ 24.95 por cópia.
+O CD-ROM e o manual não são vendidos separadamente em quantidades menores que 10. Se for uma entrega para um endereço na Califórnia, serão incluídas as taxas do serviço de correios desse estado.
+  <p><font color="#FF0000">Quantidade do Pedido:</font>
+  <input type="text" size="4" name="Quantity" value="1"></font>
+
+  <p>
+  <select name="How_heard" size="1">
+  <option selected>Por favor, diga-nos como tomou conhecimento do Toon Talk</option>
+  <option>World Wide Web</option>
+  <option>Newspaper or magazine</option>
+  <option>Friend or relative</option>
+  <option>Teacher or lecturer</option>
+  <option>Television</option>
+  <option>Other</option>
+  </select>
+  <p>
+Caso queira que lhe enviemos sua encomenda de um modo especial, por favor, utilize o espaço abaixo para descrever.
+Por exemplo, se estiver enviando o Toon Talk como um presente, por favor, informe abaixo e forneça um endereço diferente para cobrança. Se preferir, podemos escrever um pequeno recado à mão e incluí-lo junto com o produto.
+
+  <div align="left">
+  <p>
+  <textarea name="Special_Instructions" rows="6" cols="50" wrap="virtual"></textarea>
+  </div>
+  <div align="left">
+  <p>
+  <input type="submit" name="CheckForm" value="Confirmar">
+  </div>
+
+
+<p>
+<hr size=1><div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a></div></td>
+
+</tr></table>
+</div>
+</body></html>
+
+<!--  FuturArte Editora Ltda.                                     Divertire  -->  </div>

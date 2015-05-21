@@ -1,0 +1,51 @@
+#define ENGLISH FALSE;
+#define SWEDISH FALSE;
+#define PORTUGUESE TRUE;
+#define STR_LANGUAGE_NAME "Portuguese"
+
+#define STR_IE_WIN95_PATH "\\IE30\\brie302.exe"
+#define STR_IE_WIN31_PATH "\\IEWin31\\setup.exe";
+#define STR_FLOPPY_EXECUTABLE "ttbeta7b";
+#define STR_FLOPPY_DEMO_EXECUTABLE "ttbeta7b";
+
+#define START_TOONTALK  "StartTT.EXE "
+#define STR_DOC_PATH "\\Doc\\English\\"
+
+//#define STR_INSTALL_DIALOG "IDD_DIALOG_US"
+//#define STR_DLG_DLL "tt_dlg_us.dll"
+
+#define STR_DATA_FILE_SUFFIX    "bt7"
+#define STR_SUBTITLES_SUFFIX    "UST"
+#define STR_WELCOME_EXE         "CLICADO"
+
+// the following strings should be translated if the installation
+// program should be in another language
+
+#define STR_INVALID_PATH        "O caminho que você especificou não é válido.\nFavor especificar um outro.\n"
+#define STR_TEXT1               "O Setup irá instalar o ToonTalk no diretório"
+#define STR_TEXT2               "\nque será criado, se necessário, em seu disco rígido."
+#define STR_DIR_READONLY         "Não é permitido escrever no diretório que você especificou para o programa de instalação.\n\nFavor escolher um novo diretório."
+#define STR_DIR_NOTCREATED       "Não foi possível criar o diretório especificado,\nfavor escolher um outro."
+#define STR_NOTENUFROOM          "O Setup descobriu que você não tem o \n o espaço de disco necessário no drive \nselecionado para a instalação das opções selecionadas. \n\n Escolha um conjunto diferente de componentes no diálogo de Instalação Personalizada (Custom Installation)."
+#define STR_ERR_DECOMPRESS       "Ocorreu um erro durante a descompressão."
+#define STR_ERR_STRING          "A instalação não pôde ser concluída devido a alguns erros. \n\nPor favor, resolva a causa destes erros e tente novamente."
+
+#define STR_TITLE "ToonTalk Beta Version 7B (Brazilian Portuguese)"
+#define STR_SETUP_POSTFIX 	" Instalação...";
+#define STR_INSTALL_IE		"É necessário um navegador para se ler a documentação do ToonTalk. Parece que seu computador não possui nenhum navegador instalado. Agora você terá a oportunidade de instalar o Internet Explorer da Microsoft."
+#define STR_IE_DONT_RESTART		"Como ainda há mais coisas para serem instaladas, NÃO concorde em reiniciar sua máquina depois da instalação do Internet Explorer.  Termine a instalação do Internet Explorer e então prossiga para a instalação do DirectX."
+#define STR_CANT_READ_MANUAL 	"Parece que seu computador não tem um navegador instalado. Isto dificultará a leitura do manual do ToonTalk. Desculpe."
+#define STR_INSTALL_DIRECTX_NEXT	"A versão 32 bits do ToonTalk precisa de extensões do DirectX da Microsoft.  Nós iremos instalá-las agora. Clique na opção cancelar (cancel) se elas já tiverem sido instaladas."
+
+#define STR_NOT_ENOUGH_DISK_SPACE 	"Espaço Insuficiente em Disco " 
+#define STR_32BIT_95_OR_NT4		"Desculpe, a versão 32 bits só está disponível para Windows 95 ou Windows NT 4.0"
+#define STR_INSTALLING_FILES_TO		"Instalando arquivos em "
+#define STR_UNABLE_TO_WRITE		"Não foi possível escrever no local de destino.";
+#define STR_INSUFFICIENT_SPACE		"Não foi possível copiar os arquivos para o destino devido à falta de espaço em disco.\n\nErro FS_OUTOFSPACE.";
+#define STR_COPY_ERROR		"Ocorreu um erro durante a cópia e descompressão dos arquivos."
+#define STR_INTERNAL_ERROR		"Erro interno. Não foi possível criar o diálogo personalizado. \nSaindo do programa de instalação."
+#define STR_SURE_QUIT 	"Você tem certeza de que quer sair do programa de instalação?"
+
+#define STR_NO_NAME "SemNome"
+
+

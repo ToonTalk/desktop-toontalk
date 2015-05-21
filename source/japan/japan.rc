@@ -1,0 +1,4496 @@
+// Copyright (c) 1992,1999. Ken Kahn, Animated Programs, All rights reserved
+
+#include "..\strings.h"
+
+// to get this to work in non-Japanese Windows
+// strings contains  (the character) needed to be replaced by the escape sequence \216 and preceeded by L
+// and the LANGUAGE and pragma below need to be commented out
+
+// To translate this file simply replace the items within quotes.
+// leave the upper case items alone.
+// Anything following two /s is just a comment and can be ignored.
+// Spaces within quotes are important and should be retained.
+
+// Japanese resources
+
+//#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+//LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+//#pragma code_page(932)
+#endif //_WIN32
+
+STRINGTABLE {   
+
+IDS_TOOLBOX_FROM_SIDE,
+  //"Tooly from side"
+  "‰¡‚©‚çŒ©‚½ƒc[ƒŠƒB"
+IDS_TOOLBOX_FROM_ABOVE,
+  //"Tooly from above"
+  "ã‚©‚çŒ©‚½ƒc[ƒŠƒB"
+IDS_PERSON_WALKING,
+  // "a person walking"
+   "•à‚¢‚Ä‚¢‚él"
+IDS_WIRE,
+  // "a wire"
+  "ƒƒCƒ„"
+IDS_HELICOPTER_FLYING,
+  // "a helicopter flying"
+  "‹ó‚ğ”ò‚ÔƒwƒŠƒRƒvƒ^["
+IDS_PICT_FRAME,
+  // "a picture frame"
+  "ƒsƒNƒ`ƒƒƒtƒŒ[ƒ€"
+IDS_HELICOPTER_LANDING,
+  // "a helicopter landing"
+  "’…—¤‚·‚éƒwƒŠƒRƒvƒ^["
+IDS_PERSON_SITTING,
+  // "a person sitting"
+  "À‚Á‚Ä‚¢‚él"
+IDS_TALL_HOUSE_ABOVE,
+  // "the tall house from above"
+  "ã‚©‚çŒ©‚½”w‚Ì‚‚¢‰Æ"
+IDS_TALL_HOUSE_SIDE,
+  // "the tall house from side"
+  "‰¡‚©‚çŒ©‚½”w‚Ì‚‚¢‰Æ"
+IDS_TALL_HOUSE_DOOR,
+  // "the door of the tall house"
+  "”w‚Ì‚‚¢‰Æ‚ÌƒhƒA"
+IDS_BIG_HOUSE_DOOR,
+  // "the door of the big house"
+  "‘å‚«‚È‰Æ‚ÌƒhƒA"
+IDS_NUMBER_PAD,
+  // "a number pad"
+  L"”\216šƒpƒbƒh"
+IDS_SCALE,
+  // "a scale"
+  "ƒXƒP[ƒ‹"
+IDS_VACUUM,
+  // "Dusty"
+  "ƒ_ƒXƒe²"
+  IDS_EXPANDER,
+  // "Pumpy"
+   "ƒpƒ“ƒs["
+IDS_COPIER,
+  // "a magic wand"
+  "–‚–@‚Ì‚Â‚¦"
+IDS_THOUGHT_BUBBLE,
+  // "a thought bubble"
+  L"\216vl"
+IDS_ROBOT,
+  // "a robot"
+  "ƒƒ{ƒbƒg"
+IDS_NEST,
+  // "a nest"
+  "’¹‚Ì‘ƒ"
+IDS_BIRD,
+  // "a bird"
+  "¬’¹"
+IDS_BOMB,
+  // "a bomb"
+  "”š’e"
+IDS_NOTEBOOOK,
+  // "a notebook"
+  "ƒm[ƒg"
+IDS_BOX,
+  // "a box"
+  "ƒ{ƒbƒNƒX"
+IDS_MOUSE_WITH_HAMMER,
+  // "a mouse with a hammer"
+  L"ƒnƒ“ƒ}[‚ğ\216‚ÂƒlƒYƒ~"
+IDS_ARM,
+  // "an arm"
+  "‚¤‚Å"
+IDS_HAND,
+  //"a hand"
+  L"\216è"
+IDS_HAND_HOLDING_WAND,
+  //"a hand holding a magic wand"
+  L"–‚–@‚Ì‚Â‚¦‚ğ\216‚Â\216è"
+// IDS_PICTURES_SPRITE,
+//   "some picture or other"
+
+IDS_PUMP_BUTTON, // new 10/19
+  //"a bike pump button"
+  L"\216©“]\216Ôƒ|ƒ“ƒv‚Ìƒ{ƒ^ƒ“"
+IDS_HEAD_WITH_HAIR,
+  //"a head with hair"
+  "”¯‚Ì–Ñ‚Ì‚ ‚é“ª"
+IDS_HEAD_WITH_HAT,
+  //"a head with a hat"
+  L"–X\216q‚ğ‚©‚Ô‚Á‚½“ª"
+// IDS_PLATFORM,
+//   "a platform"
+
+IDS_VACUUM_BUTTON,  // new on 12/13
+  //"a vacuum button"
+  "‚»‚¤‚¶‹@‚Ìƒ{ƒ^ƒ“"
+IDS_SWITCH,
+  //"a switch"
+  "ƒXƒCƒbƒ`"
+IDS_PERSON_WITH_HAT_SITTING,
+  //"a person with a hat sitting"
+  L"À‚Á‚Ä‚¢‚é–X\216q‚ğ‚©‚Ô‚Á‚½l"
+IDS_PERSON_HAIR_SITTING,
+  //"a person with hair sitting"
+  "À‚Á‚Ä‚¢‚é”¯‚Ì–Ñ‚Ì‚ ‚él"
+IDS_BIG_HOUSE_SIDE,
+  //"the big house from side"
+  "‰¡‚©‚çŒ©‚½‘å‚«‚È‰Æ"
+IDS_BIG_HOUSE_ABOVE,
+  //"the big house from above"
+  "ã‚©‚çŒ©‚½‘å‚«‚È‰Æ"
+IDS_WIDE_HOUSE_SIDE,
+  //"the wide house from side"
+  "‰¡‚©‚çŒ©‚½•‚ÌL‚¢‰Æ"
+IDS_WIDE_HOUSE_ABOVE,
+  //"the wide house from above"
+ "ã‚©‚çŒ©‚½•‚ÌL‚¢‰Æ"
+IDS_WIDE_HOUSE_DOOR,
+  //"the door to the wide house"
+  "•‚ÌL‚¢‰Æ‚ÌƒhƒA"
+IDS_MARTIAN,
+  //"Marty"
+  "ƒ}[ƒeƒB"
+IDS_TRUCK_INSIDE_HOUSE,
+  //"a truck inside a house"
+  "‰Æ‚Ì’†‚Ìƒgƒ‰ƒbƒN"
+IDS_TRUCK_ABOVE,
+  //"a truck from above"
+  "ã‚©‚çŒ©‚½ƒgƒ‰ƒbƒN"
+IDS_TRUCK_SIDE,
+  //"a truck from side"
+  "‰¡‚©‚çŒ©‚½ƒgƒ‰ƒbƒN"
+IDS_TALK_BALLOON,
+  //"a talk balloon"
+  "‚«o‚µ"
+// IDS_LETTER_PLATE,
+//   "a letter plate"
+IDS_COPIER_BUTTON, // revised 10/19 -- really the wand button but ok...
+  //"a magic wand button" // revised again 12/16
+  "–‚–@‚Ì‚Â‚¦‚Ìƒ{ƒ^ƒ“"
+IDS_TEXT_PAD,
+  //"a text pad"
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_BOOK_PAGE_TURNING,
+  //"a notebook page turning"
+  "ƒy[ƒW‚ğ‚ß‚­‚éƒm[ƒg"
+IDS_DIZZY_PERSON,
+  //"a dizzy person"
+  "–Ú‚ğ‚Ü‚í‚·l"
+IDS_DIZZY_PERSON_WITH_HAIR,
+  //"a dizzy person with hair"
+  "”¯‚Ì–Ñ‚Ì‚ ‚é–Ú‚ğ‰ñ‚·l"
+IDS_DIZZY_PERSON_WITH_HAT,
+  //"a dizzy person with a hat"
+  L"–X\216q‚ğ‚©‚Ô‚Á‚½–Ú‚ğ‰ñ‚·l"
+IDS_EXPLOSION,
+  //"an explosion"
+  "”š”­"
+// IDS_MARTIAN_TALKING,
+//   "Marty talking"
+IDS_BROKEN_ROCKET_DOOR,
+//"a door to a broken rocket"
+  "‚±‚í‚ê‚½ƒƒPƒbƒg‚Ö‚ÌƒhƒA"
+IDS_HIT_OR_MISS, // this is the little animation which shows either a hit or a miss for the collision detector
+  //"the hit or miss cartoon"
+  "‚µ‚å‚¤‚Æ‚ÂŒŸoƒAƒjƒ"
+IDS_BALL,
+  //"a ball"
+  "ƒ{[ƒ‹"
+IDS_PADDLE,
+  //"a paddle"
+  "ƒpƒhƒ‹"
+IDS_PERSON_WALKING_PICTURE,
+  //"a person walking"
+  "•à‚¢‚Ä‚¢‚él"
+IDS_FLOWER_SPRITE,
+  //"a flower"
+  "‰Ô"
+IDS_TREE_SPRITE,  // this and some of the following are used for decoration and can be found in the Pictures notebook
+  //"a tree"
+  "–Ø" 
+IDS_TRAFFIC_LIGHT_SPRITE,
+  //"a traffic light"
+  "M†"
+IDS_ROCKET_SPRITE,
+  //"a rocket"
+  "ƒƒPƒbƒg"
+IDS_RECTANGLE,
+  //"a rectangle"
+  L"’·\216lŠp"
+IDS_BACKGROUND,
+  //"a background"
+  "”wŒi"
+IDS_USER_SPRITE,  // used to describe a picture that a user imported using the "File to Picture" remote control
+  //"a picture from a file"  // E.g. "You are holding a picture from a file."
+  "ƒtƒ@ƒCƒ‹‚©‚ç‚ÌƒsƒNƒ`ƒƒ"
+IDS_PAGE_BEGIN_SENTENCE,
+  //"Page"
+  "ƒy[ƒW"
+IDS_THE_ROBOTS_HAND, // as in "you can drop what is in the robot's hand by ... "
+  //"the robot's hand"
+  L"ƒƒ{ƒbƒg‚Ì\216è"
+IDS_YOUR_HAND, // "If you press F2 Dusty will run to your hand. "
+  //"your hand"  
+  L"ŒN‚Ì\216è"
+// IDS_BEGIN_THE_ROBOT_IS, 
+//  "The robot is"
+IDS_THE_ROBOT_IS, // as in "The robot is holding a box. "
+  //"the robot is"
+  "ƒƒ{ƒbƒg‚Í"
+IDS_THE_ROBOT_IS2, // used after "holding a box" above
+  //" "
+  L"‚ğ\216‚Á‚Ä‚¢‚é"
+// IDS_BEGIN_YOU_ARE,  
+//  "You are"
+IDS_YOU_ARE, // as in "You are holding a box. "
+  //"you are"
+  "ŒN‚Í"
+IDS_YOU_ARE2, // used after "holding a box" above
+  " "
+  //L"‚ğ\216‚Á‚Ä‚¢‚é"
+IDS_TEXT_WITH_ANYTHING,
+  //"a text pad with anything on it"
+  "‰½‚ğ‚Ì‚¹‚Ä‚à‚¢‚¢ƒeƒLƒXƒgƒpƒbƒh"
+IDS_BLANK_TEXT_PAD,
+  //"a blank text pad"
+  "ƒuƒ‰ƒ“ƒNƒeƒLƒXƒgƒpƒbƒh"
+IDS_PAD_WITH_TEXT,
+  //"a pad with the text"
+  "ƒeƒLƒXƒg•t‚«ƒpƒbƒh"
+IDS_ON_IT,
+  //"on it"
+  "‚»‚Ìã‚É"
+IDS_NOTHING,
+  //"nothing"
+  "‚È‚É‚à‚È‚¢"
+IDS_ROBOT_WITHOUT_A_THOUGHT,
+  //"a robot that doesn't have a thought"
+  L"\216vl‚Ì‚È‚¢ƒƒ{ƒbƒg"
+IDS_FIRST,
+  //"first"
+  "‚P”Ô–Ú‚Ì"
+IDS_SECOND,
+  //"second"
+  "‚Q”Ô–Ú‚Ì"
+IDS_THIRD,
+  //"third"
+  "‚R”Ô–Ú‚Ì"
+IDS_FOURTH,
+  //"fourth"
+  "‚S”Ô–Ú‚Ì"
+IDS_FIFTH,
+  //"fifth"
+  "‚T”Ô–Ú‚Ì"
+IDS_SIXTH,
+  //"sixth"
+  "‚U”Ô–Ú‚Ì"
+IDS_SEVENTH,
+  //"seventh"
+  "‚V”Ô–Ú‚Ì"
+IDS_EIGHTH,
+  //"eighth"
+  "‚W”Ô–Ú‚Ì"
+IDS_NINTH,
+  //"ninth"
+  "‚X”Ô–Ú‚Ì"
+IDS_TENTH,
+  //"tenth"
+  "‚P‚O”Ô–Ú‚Ì"
+IDS_ELEVENTH,
+  //"eleventh"
+  "‚P‚P”Ô–Ú‚Ì"
+IDS_TWELFTH,
+  //"twelfth"
+  "‚P‚Q”Ô–Ú‚Ì"
+IDS_THIRTEENTH,
+  //"thirteenth"
+  "‚P‚R”Ô–Ú‚Ì"
+
+// for ordinals after 13th we have
+IDS_CARDINAL_MOD_IS_0,
+  //"th" // e.g. 30th
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_1,
+  //"st" // e.g. 21st
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_2,
+  //"nd" // e.g 42nd
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_3
+  //"rd" // e.g. 33rd
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_4,
+  //"th" // e.g. 54th
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_5,
+  //"th" // e.g. 85th
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_6,
+  //"th" // e.g. 106th
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_7,
+  //"th" // e.g. 117th
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_8,
+  //"th" // e.g. 108th
+  "”Ô–Ú‚Ì"
+IDS_CARDINAL_MOD_IS_9,
+  //"th" // e.g. 19th
+  "”Ô–Ú‚Ì"
+IDS_YOU_ARE_POINTING_TO,
+  //"You are pointing to "
+  L"ŒN‚ª \216w‚µ‚Ä‚¢‚é‚Ì‚ÍA"
+IDS_YOU_ARE_POINTING_TO2,
+  //" "
+  " " 
+IDS_YOU_ARE_HOLDING,
+  //"You are holding "
+  "ŒN‚ª ‚à‚Á‚Ä‚¢‚é‚Ì‚ÍA"
+IDS_YOU_ARE_HOLDING2,
+  //" "
+  " "
+IDS_UNDER,
+  //"Under "
+  " "
+IDS_IS, // as in "Under the wand is a number. " and "Inside a computer 6 is 110 in binary. "
+  //" is "
+  "‚Í"
+IDS_UNDER_TOOL_IS2,
+  //" " // used after "a number" in the example above
+  "‚¾"
+// IDS_TH,
+//  "th"
+IDS_THE_RIGHT_MOUSE_BUTTON,
+  // "the right mouse button"
+  "ƒ}ƒEƒX‰Eƒ{ƒ^ƒ“"
+IDS_NEST_HATCHED_BIRD_HELP,
+  //"The egg in the nest will hatch when you set the nest down. "
+//  "‘ƒ‚ğ‚¨‚ë‚·‚Æ’†‚Ì—‘‚ª‚Ó‰»‚·‚é‚æB"
+  "‘ƒ‚ğ ‚¨‚ë‚·‚Æ ¬’¹‚ª ¶‚Ü‚ê‚éB"
+// IDS_NEST_RECEIVED_ITEM_FROM_BIRD_HELP,
+//  "If you give the bird something, she'll take it to her nest. "
+// The following 3 entries are combined to form either
+//  You can take things out of her nest by hand or by using Dusty the Vacuum.
+// or sentences like
+//  You can take the box out of her nest by hand or by using Dusty the Vacuum.
+IDS_NEST_ITEM_REMOVED_HELP,
+  // "You can take "
+  "ŒN‚ÍA"
+IDS_THINGS,
+  //"things"
+  "‚à‚Ì"
+IDS_NEST_ITEM_REMOVED_HELP2,
+  // " out of her nest by hand or by using Dusty the Vacuum. "
+  L"‚ğ \216è‚â ƒ_ƒXƒeƒB‚ğ \216g‚Á‚Ä ‘ƒ‚©‚ç ŠO‚Ö\216æ‚èo‚¹‚éB"
+IDS_NEST_ITEM_ADDED_HELP,
+  //"You can put a rectangular thing in her nest by dropping it there. "
+  L"’·\216lŠp‚ğ ‘ƒ‚Ì’†‚É “ü‚ê‚é‚É‚Í ‚»‚ê‚ğ ‘ƒ‚Ì’†‚É —\216‚Æ‚·‚ñ‚¾B"
+IDS_NEST_ITEM_ADDED_HELP2,
+  //"I usually let the bird do this instead. "
+  "‚í‚½‚µ‚¾‚Á‚½‚ç ¬’¹‚É ‚±‚ê‚ğ ‚â‚ç‚¹‚éB"
+IDS_NEST_HELP_GIVEN_HELP,  // this is now said after the following
+  //"I've said all I know about nests. "
+  "‘ƒ‚É‚Â‚¢‚Ä ’m‚Á‚Ä‚¢‚é‚±‚Æ‚Í ‘S•”˜b‚µ‚½B" 
+IDS_NEST_HELP_GIVEN_HELP2,
+  //"I use birds and nests when I want robots in different houses to work together. "
+  L"•ÊX‚Ì ‰Æ‚É‚¢‚é ƒƒ{ƒbƒg‚ğ ‚¢‚Á‚µ‚å ‚É“­‚©‚¹‚é‚É‚Í ’¹‚â‘ƒ‚ğ \216g‚¤‚ñ‚¾B"
+IDS_NEST_HELP_GIVEN_HELP3,
+  //"If you want me to repeat all I know about nests, then press F1 twice while pointing to a nest. "
+  L"‘ƒ‚É‚Â‚¢‚Ä ‚í‚½‚µ‚Ì ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çA‘ƒ‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_NEST_HELP_GIVEN_BIRDS,
+  //"I'll tell you more about birds if you press F1 twice while pointing to a bird. "
+  L"¬’¹‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x‰Ÿ‚¹‚ÎA¬’¹‚É‚Â‚¢‚Ä ‚à‚Á‚Æ ‹³‚¦‚Ä‚ ‚°‚éB"
+IDS_BIRD_RECEIVED_ITEM_HELP,
+  //"If you give the bird something rectangular, she'll take it to her nest. "
+  L"¬’¹‚É ‰½‚© ’·\216lŠp‚Ì‚à‚Ì‚ğ ‚ ‚°‚é‚Æ ‚»‚ê‚ğ \216©•ª‚Ì‘ƒ‚É ‰^‚ÔB"
+IDS_BIRD_RECEIVED_ITEM_HELP2,
+  //"If you want her to carry other things, put them in a box and give her the box. "
+  "‘¼‚Ì‚à‚Ì‚ğ ‰^‚Î‚¹‚½‚©‚Á‚½‚ç ‚»‚ê‚ğ ƒ{ƒbƒNƒX‚É “ü‚êA¬’¹‚É —^‚¦‚é‚ñ‚¾B"
+IDS_BIRD_HELP_GIVEN_HELP,
+  //"I've told you all that I know about birds. "
+  "¬’¹‚É‚Â‚¢‚Ä ’m‚Á‚Ä‚¢‚é‚±‚Æ‚Í ‘S•”˜b‚µ‚½B"
+IDS_BIRD_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I know about birds, then press F1 twice while pointing to a bird. "
+  L"¬’¹‚Ì ‚±‚Æ‚ğ ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çA¬’¹‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_BIRD_HELP_GIVEN_NESTS,
+  //"I'll tell you more about nests if you press F1 twice while pointing to a nest. " // was bird by mistake
+  L"‘ƒ‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x‰Ÿ‚¹‚ÎA‘ƒ‚É‚Â‚¢‚Ä ‚à‚Á‚Æ‹³‚¦‚Ä ‚ ‚°‚éB"
+// IDS_WITH,
+//  " with "
+IDS_ON_TOP,
+  //" on top" // only used in sentences like in "You are pointing to a nest with a number on top. "
+  "ã‚É"
+IDS_BIRD_RECUR_ABORT, // as in "Didn't work because the bird was given something containing her nest. "
+  //"the bird was given something containing her nest"
+  L"¬’¹‚Í ‰½‚© \216©•ª‚Ì‘ƒ‚à “ü‚Á‚Ä‚¢‚é‚à‚Ì‚ğ —^‚¦‚ç‚½"
+IDS_BOMB_USED_HOUSE_HELP,
+  //"You can blow up this house by clicking on "
+  " "
+IDS_BOMB_USED_HOUSE_HELP_2,
+  //" "
+  "‚ğ ƒNƒŠƒbƒN ‚·‚é‚ÆA‚±‚Ì‰Æ‚ğ ”š”j‚Å‚«‚é"
+IDS_BOMB_USED_HOUSE_HELP2,
+  //"When holding a bomb inside a house, you can blow up the house by clicking on "
+  L"‰Æ‚Ì’†‚Å ”š’e‚ğ \216‚Á‚ÄA"
+IDS_BOMB_USED_HOUSE_HELP2_2,
+  //" "
+  "‚ğ ƒNƒŠƒbƒN ‚·‚é‚Æ ‚»‚Ì‰Æ‚ğ ”š”j‚Å‚«‚é"
+IDS_BOMB_USED_HOUSE_HELP3,
+  //"You and your tools will make it out OK, and Dusty will suck up everything left on the floor. "
+  L"ŒN‚ª “¹‹ï‚ğ \216g‚Á‚Ä ‚»‚ê‚ğ ‚¤‚Ü‚­ì‚èã‚°‚é‚ÆAƒ_ƒXƒeƒB‚ª °‚É \216c‚Á‚½‚à‚Ì ‚·‚×‚Ä‚ğ ‹z‚¢‚ŞB"
+IDS_BOMB_USED_HOUSE_HELP4,
+  // I don't think of this as disarming a bomb.  These are bombs a la 1900 with a fuse that must be lit.
+  // Clicking on the space bar lights the fuse.  Clicking the right mouse button releases the bomb without setting it off.
+  //"You can set it down safely by clicking on "
+  "ƒNƒŠƒbƒN‚·‚é‚Æ ˆÀ‘S‚É ‚»‚ê‚ğ ‚¨‚ë‚¹‚é ƒ{ƒ^ƒ“‚ÍA"
+IDS_BOMB_USED_TB_HELP,
+  //"You can train this robot to blow up the house he's in by clicking on "
+  L"ƒNƒŠƒbƒN‚·‚é‚Æ ƒƒ{ƒbƒg‚É \216©•ª‚Ì‚¢‚é‰Æ‚ğ ”š”j‚·‚é‚±‚Æ‚ğ ‹³‚¦‚ç‚ê‚é ƒL[‚ÍA"
+IDS_BOMB_USED_TB_HELP2,
+  //"When training a robot that has picked up a bomb, you can have him blow up the house he's in by clicking on "
+  L"ƒƒ{ƒbƒg‚ª ”š’e‚ğ \216‚¿ã‚°‚½\216‚ÉAƒNƒŠƒbƒN‚·‚é‚Æ \216©•ª‚Ì‚¢‚é‰Æ‚ğ ”š”j‚·‚é‚±‚Æ‚ğ ‹³ˆç‚Å‚«‚é ƒL[‚ÍA"
+IDS_BOMB_USED_TB_HELP3,
+  //"This will end the robot's training. "
+  "‚±‚ê‚Å ƒƒ{ƒbƒg‚Ì ‹³ˆç‚Í ‚¨‚µ‚Ü‚¢B"
+IDS_BOMB_USED_TB_HELP4,
+  //"I always put a robot trained to use a bomb into the notebook before testing it. "
+  L"‚í‚½‚µ‚Í ‚¢‚Â‚Å‚àA”š’e‚ğ \216g‚¦‚é ƒƒ{ƒbƒg‚ğ ƒm[ƒg‚É “ü‚ê‚Ä‚¨‚­B" 
+IDS_BOMB_HELP_GIVEN_HELP,
+  //"I've told you all I know about bombs. "
+  "”š’e‚É‚Â‚¢‚Ä ‚í‚½‚µ‚ª ’m‚Á‚Ä‚¢‚é‚±‚Æ‚Í ‘S•”˜b‚µ‚½B"
+IDS_BOMB_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I've told you about bombs, just push F1 twice. "
+  "”š’e‚Ì‚±‚Æ‚ğ ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAF1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_CUBBY_BAD_CONTENTS_ABORT,
+  // as in "A robot stopped because he tried to put something in a box that can't be put in boxes. "
+  // was  "he tried to put something in a box that doesn't go"
+  // It used to be that robots, notebooks, etc. couldn't be put in boxes.
+  // For example, it used to be a robot could take a robot out of a notebook and drop it on a box and get this error.
+  // Now only tools can't.  Only an internal ToonTalk error should generate this now.
+  //"he tried to put something in a box that can't be put in boxes"
+  "”Ş‚Í ƒ{ƒbƒNƒX‚É “ü‚ê‚ç‚ê‚È‚¢‚à‚Ì‚ğ “ü‚ê‚æ‚¤‚Æ‚µ‚½B"
+IDS_CUBBY_BLANK_HELP,
+  //was  "You can use blank boxes inside of thought bubbles, so the robot will be happy with a box with any number of holes. "
+  //"If a robot has a blank box in his thought bubble, then he'll be happy to work on any box no matter how many holes it has. "
+  L"ƒƒ{ƒbƒg‚ª \216vl‚Ì’†‚É ƒuƒ‰ƒ“ƒNƒ{ƒbƒNƒX‚ğ \216‚Á‚Ä‚¢‚½‚çAƒƒ{ƒbƒg‚Í Šì‚ñ‚Å \216d\216–‚ğ ‚·‚éB"
+// IDS_CUBBY_BLANKED_TB_HELP,
+//  "Since it is in a thought bubble, the robot will be happy with any box at the same place. "
+IDS_CUBBY_BLANK_HELP2,
+  //"It is a blank box which can match any box. "
+  L"‚»‚ê‚ÍA‚Ç‚Ì‚æ‚¤‚É‚à \216g‚¦‚é ƒuƒ‰ƒ“ƒNƒ{ƒbƒNƒX‚¾B" 
+IDS_CUBBY_HOLE_FILLED_HELP,
+  //"You can put something in an empty hole of a box by letting go of it over the hole. "
+  "ƒ{ƒbƒNƒX‚Ì ‚©‚ç‚Ì ŒŠ‚É ‰½‚©‚à‚Ì‚ğ “ü‚ê‚½‚©‚Á‚½‚çA‚»‚ÌŒŠ‚Ìã‚É ‚»‚ê‚ğ ‰^‚Ô‚ñ‚¾B"
+IDS_CUBBY_CONTENTS_REMOVED_HELP,
+  // this is used together with the following entry to generate either
+  //  You can take something out of a hole with your hand or with Dusty. "  or
+  //  You can take something out of a hole with the robot's hand or with Dusty. "
+  //"You can take something out of a hole with "
+  "ƒ{ƒbƒNƒX‚Ì ŒŠ‚©‚ç"
+IDS_CUBBY_CONTENTS_REMOVED_HELP2,
+  //" or with Dusty. " // "hand" removed
+  L"‚â ƒ_ƒXƒeƒB‚ğ \216g‚Á‚Ä‰½‚©‚ğ \216æ‚èo‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_CUBBY_CONTENTS_REMOVED_HELP3,
+  //"It will wiggle when it's ready. "
+  "€”õ‚ª ‚Å‚«‚é‚Æ ‚ä‚ç‚ä‚ç —h‚ê‚éB"
+IDS_CUBBY_CONCATENATION_HELP,
+  //"You can combine two boxes by dropping one on the side of another. "
+  "“ñ‚Â‚Ì ƒ{ƒbƒNƒX‚ğ ‚Â‚È‚°‚½‚¢‚Æ‚«‚Í ‚·‚®‚Æ‚È‚è‚É •À‚×‚Ä‚¨‚­‚ñ‚¾B"
+IDS_CUBBY_SIZE_CHANGED_HELP,
+  //"You can change the number of holes by pressing a number from 0 to 9. "
+  L"ŒŠ‚Ì”‚ğ •Ï‚¦‚½‚¢‚Æ‚«‚Í ‚O‚©‚ç‚X‚Ü‚Å‚Ì ”\216š‚ğ‰Ÿ‚·‚±‚ÆB"
+IDS_CUBBY_SIZE_CHANGED_HELP2,
+  //"If you want a box with more than 9 holes drop one on the side of another. "
+  "9ŒÂˆÈã‚Ì ŒŠ‚Ì ‚ ‚éƒ{ƒbƒNƒX‚ª ‚Ù‚µ‚¯‚ê‚ÎA‚Æ‚È‚è‚Éƒ{ƒbƒNƒX‚ğ ‚¨‚Æ‚·‚ñ‚¾B"
+IDS_CUBBY_SIZE_CHANGED_HELP3,
+  //"If you press + a hole will be added. "
+  "'{'ƒL[‚ğ ‰Ÿ‚·‚ÆAŒŠ‚ª ‘‚¦‚éB" 
+IDS_CUBBY_SIZE_CHANGED_HELP4,
+  //"If you press - the hole on the right will be removed. "
+  "'|'ƒL[‚ğ ‰Ÿ‚·‚Æ ‰E‘¤‚Ì ŒŠ‚ª ‚È‚­‚È‚éB"
+IDS_CUBBY_SIZE_CHANGED_HELP5,
+  //"You can use the keyboard to change the number of holes while you are holding a box. "
+  L"ƒ{ƒbƒNƒX‚ğ \216‚Á‚½‚Ü‚Ü ƒL[ƒ{[ƒh‚ğ \216g‚Á‚Ä ŒŠ‚Ì”\216š‚ğ •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_CUBBY_LABELED_HELP,
+  //"You can add a label to a hole by pointing just below it and typing. "
+  L"ŒŠ‚É ƒ‰ƒxƒ‹‚ğ ‰Á‚¦‚½‚¢\216‚ÍAŒŠ‚Ì ‚·‚®‰º‚ğ \216w‚µ‚È‚ª‚ç ƒ^ƒCƒv‚·‚é‚ñ‚¾B"
+IDS_CUBBY_HELP_GIVEN_HELP,
+  //"I've told you all that I know about boxes. "
+  "ƒ{ƒbƒNƒX‚É‚Â‚¢‚Ä ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‘S•”˜b‚µ‚½B"
+IDS_CUBBY_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I've told you about boxes, then press F1 twice while pointing to a box. "
+  L"ƒ{ƒbƒNƒX‚Ì ‚±‚Æ‚ğ ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAƒ{ƒbƒNƒX‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_ANY_BOX,
+  //"any box"
+  "ƒ{ƒbƒNƒX"
+// following is combined as "a box with one hole" or "a box with 4 holes"
+IDS_BOX_WITH,
+  //"a box with "
+  " " 
+IDS_BOX_WITH2, // after 4 holes in example above
+  //" "
+  "‚Ì‚ ‚éƒ{ƒbƒNƒX"
+IDS_ONE_HOLE,
+  //"one hole"
+  "ˆê‚Â‚ÌŒŠ"
+IDS_HOLES,
+  //" holes" 
+  "ŒÂ‚ÌŒŠ"
+IDS_HOLES0, // before 4 holes in example above
+  " "
+
+IDS_CONTAINS, 
+  // used in sentences like "The hole labeled with "X" contains the number 2."
+  //"contains "
+  "‚É‚Í" 
+IDS_CONTAINS2, // after the "number 2" in the example above
+  //" "
+  "‚ª“ü‚é"
+IDS_HOLE_LABELED_WITH,
+  //"hole labeled with " 
+  "‚Ìƒ‰ƒxƒ‹•t‚«‚ÌŒŠ"
+IDS_HOLE_CONTAINS,
+  //"hole contains " // this and previous was "hole of a box contains " 
+  "ŒŠ‚É‚Í"
+  // Example: "The first hole contains the number 2."
+IDS_HOLE_CONTAINS2, // after the "number 2" in the example above
+  //" "
+  "‚ª“ü‚é"
+
+IDS_AND_BEGIN_SENTENCE,
+  //"And"
+  "‚»‚µ‚Ä"
+// IDS_THE_LETTER, // as in "If given a box like that he will add the 'A' to the label of the first hole of the box he's working on. "
+//  " the "
+
+//All of the phrases from IDS_MOVE_TO to IDS_APPLY_GRASPED_NEST
+//are used to describe what the robot will do if given a box.
+//E.g.
+IDS_MOVE_TO, // as in "If given a box like that he will move to the stack of text. "
+  //"move to"
+  "ˆÚ‚·"
+IDS_SELECT_COPIER,
+  //"grab a magic wand"
+  "–‚–@‚Ì‚Â‚¦‚ğ ‚Â‚©‚Ş"
+IDS_APPLY_COPIER,
+  //"use the magic wand on"
+  L"–‚–@‚Ì‚Â‚¦‚ğ \216g‚¤"
+// IDS_APPLY_COPIER_NUMBER,
+//  "use the magic wand (with the number attached) on"
+IDS_GRASP_EXPANDER, // added 12/3
+  //"grab a bike pump"
+  L"\216©“]\216Ô‹ó‹C“ü‚ê‚ğ ‚Â‚©‚Ş"
+IDS_RELEASE_COPIER,
+  //"release the magic wand"
+  "–‚–@‚Ì‚Â‚¦‚ğ •ú‚·"
+IDS_GRASP_ITEM,
+  //"pick up"
+  "‚Ğ‚ë‚¤"
+IDS_RELEASE_ITEM,
+  //"drop"
+  "°‚Ìã‚É"
+// as in "He will drop the box on the floor. "
+IDS_RELEASE_ITEM2,
+  //" on the floor"
+  L"‚ğ—\216‚Æ‚·"
+  // The following could be used where the something might be dropped on
+  // a hole of a box, a number pad, a text pad, or a notebook
+IDS_RELEASE_ITEM_ON, // as in "And drop it on the first hole of the box he's working on. "
+  //"drop"
+  L"—\216‚Æ‚·"
+IDS_RELEASE_ITEM_ON2,
+  //" on"
+  "‚Ìã‚É"
+  // currently only boxes can be dropped on the side of boxes and text pads on the side of text pads.
+IDS_RELEASE_ITEM_LEFT_OF,
+  //"drop"
+  L"—\216‚Æ‚·"
+IDS_RELEASE_ITEM_LEFT_OF2,
+  //" just left of"
+  "‚ğ ‚·‚®¶‚É"
+IDS_RELEASE_ITEM_RIGHT_OF, // as in "And drop it just right of the box he's working on. "
+  //"drop"
+  L"—\216‚Æ‚·‚ñ‚¾"
+IDS_RELEASE_ITEM_RIGHT_OF2,
+  //" just right of"
+  "‚ğ ‚·‚®‰E‚É"
+// IDS_APPLY_NUMBER,
+//  "push the number down on"
+IDS_EXPANDER_APPLY, // added 12/3
+  // e.g. "The robot will robot use Pumpy for 100 milliseconds on the box. "
+  //"use Pumpy"
+  " "
+IDS_EXPANDER_APPLY2,
+  //" for" 
+  L"ŠÔƒpƒ“ƒsƒB‚ğ\216g‚¤"
+IDS_SELECT_VACUUM, // as in "He will grab a copy of Dusty. "
+  //"grab a copy of Dusty"
+  "ƒ_ƒXƒeƒB‚Ì ƒRƒs[‚ğ ‚Â‚©‚Ş"
+IDS_APPLY_VACUUM,
+  //"use Dusty to vacuum" // as in "The robot will use Dusty to vacuum the box. "
+  "ƒ_ƒXƒeƒB‚Å ‹z‚¢‚Ş"
+IDS_APPLY_VACUUM_RESTORE,
+  //"run Dusty in reverse to restore" // as in "He will run Dusty in reverse to restore the number. "
+  "ƒ_ƒXƒeƒB‚É ‚Í‚«o‚³‚¹‚é"
+IDS_RELEASE_VACUUM,
+  //"release Dusty"
+  "ƒ_ƒXƒeƒB‚ğ •ú‚·"
+IDS_SEND_TO, // as in "He will push the 'a' key. "
+  //"push"
+  "‰Ÿ‚·"
+IDS_RELEASE_IN_NEST,
+  //"release the nest and watch a bird hatch"
+  "‘ƒ‚ğ •ú‚µ‚Ä ¬’¹‚ª‚¤‚Ü‚ê‚é‚Ì‚ğ Œ©‚é"
+IDS_GIVE_BIRD,
+  //"give"
+  "‚»‚Ì ¬’¹‚É"
+IDS_GIVE_BIRD2,
+  //" to the bird"
+  "‚ğ —^‚¦‚é"
+IDS_RELEASE_IN_TRUCK,
+  //"drop"
+  "ƒgƒ‰ƒbƒN‚Ì’†‚É"
+IDS_RELEASE_IN_TRUCK2,
+  //" into the truck"
+  L"‚ğ—\216‚Æ‚·"
+IDS_DESTROY_HOUSE,
+  // As in "And pick up a bomb. And use it. And blow up the house he's in. "
+  // where the context is always that a robot is doing these things.
+  //"blow up the house he's in"
+  "‰Æ‚ğ ‚±‚í‚·"
+IDS_APPLY_ITEM_HELD,
+  //"use"
+  L"\216g‚¤"
+// The following are when a robots adds letters to a label of a box
+// or a number or text pad.
+// e.g. "If given a box like that he will push '9' after moving
+// to the first hole of the box he's working on.  And push '7' while
+// pointing to the first hole of the box he's working on. "
+// or
+// "If given a box like that he will push 'B'
+// while pointing to the first hole of the box he's working on.  And push
+// 'C' while pointing to the first hole of the box he's working on.  And
+// add 'L' to the label of the first hole of the box he's working on. "
+IDS_LABEL_CHARACTER,
+  //"add"
+  "‰Á‚¦‚é"
+IDS_CHARACTER_AND_SELECT,
+  //"push"
+  "‰Ÿ‚·"
+IDS_GRASP_NEST,
+  //"pick up"
+  "‚Ğ‚ë‚¤"
+IDS_NEW_MAIN_CUBBY,
+  // always followed by a description of some box
+  // E.g. The robot will switch to working on the new box.
+  // This happens, for example, when a robot is trained to take the box he is given
+  // and put it in a new box and maybe do more with that new box.
+  //"switch to working on"
+  "Ø‚è‘Ö‚¦‚é"
+IDS_COPIER_APPLY_NEST,
+  //"use the magic wand on"        
+  L"–‚–@‚Ì‚Â‚¦‚ğ \216g‚¤"
+IDS_VACUUM_APPLY_NEST,
+  //"use Dusty to vacuum"   
+  "ƒ_ƒXƒeƒB‚Å ‹z‚¢‚Ş"
+IDS_APPLY_GRASPED_NEST,
+  //"use"
+  L"\216g‚¤"
+IDS_RELEASE_EXPANDER,
+  //"drop Pumpy"
+  L"ƒpƒ“ƒsƒB‚ğ —\216‚Æ‚·"
+
+// The following are only used when describing what a robot does.
+// Hence the use of "he" rather than "I" as it originally was
+IDS_WHAT_I_JUST_COPIED,
+  //"what he just copied"
+  "”Ş‚ª ƒRƒs[‚µ‚½‚à‚Ì"
+IDS_WHAT_IM_HOLDING, // misnamed -- used as "He will drop what he's holding. "
+  //"what he's holding"
+  L"”Ş‚ª \216‚Á‚Ä‚¢‚é‚à‚Ì"
+IDS_EVENT_ARG1, // as in "He will drop it on the box he's working on. "
+  //"his box" // "the box he's working on"
+  "”Ş‚Ì ƒ{ƒbƒNƒX"
+IDS_EVENT_ARG3,
+  //"the magic wand"
+  "–‚–@‚Ì‚Â‚¦"
+IDS_EVENT_ARG4,
+  //"Dusty"
+  "ƒ_ƒXƒeƒB"
+IDS_EVENT_ARG5,
+  //"the stack of numbers"
+  L"”\216š‚Ì\216R"
+IDS_EVENT_ARG6,
+  //"the stack of text"
+  L"ƒeƒLƒXƒg‚Ì\216R"
+IDS_EVENT_ARG7,
+  //"the stack of boxes"
+  L"ƒ{ƒbƒNƒX‚Ì\216R"
+IDS_EVENT_ARG8,
+  //"the stack of nests"
+  L"‘ƒ‚Ì\216R"
+IDS_EVENT_ARG9,
+  //"the stack of trucks"
+  L"ƒgƒ‰ƒbƒN‚Ì\216R"
+IDS_EVENT_ARG10,
+  //"the main notebook"
+  "ƒƒCƒ“ƒm[ƒg"
+IDS_EVENT_ARG11,
+  //"the stack of robots"
+  L"ƒƒ{ƒbƒg‚Ì\216R"
+IDS_EVENT_ARG12,
+  //"the stack of scales"
+  L"ƒXƒP[ƒ‹‚Ì\216R"
+IDS_EVENT_ARG13,
+  //"the stack of bombs"
+  L"”š’e‚Ì\216R"
+IDS_EVENT_ARG14,  // e.g. "The robot will use what he is holding."
+//  "what he is holding"
+  L"”Ş‚ª\216‚Á‚Ä‚¢‚é‚à‚Ì"
+IDS_EVENT_ARG15,
+  //"Pumpy" // added 12/3
+  "ƒpƒ“ƒs["
+
+IDS_WHICH_IS,  // as in "He will give it to the bird which is the second thing he made or found. "
+  //" which is"
+  "‚»‚ê‚Í"
+IDS_STACK_TYPE1,
+  //"a number"
+  L"”\216š"
+IDS_STACK_TYPE2,
+  //"a text pad" // was just "a text" prior to 5/22/98
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_STACK_TYPE3,
+  //"a box"
+  "ƒ{ƒbƒNƒX"
+IDS_STACK_TYPE4,
+  //"a nest"
+  "‘ƒ"
+IDS_STACK_TYPE5,
+  //"a truck"
+  "ƒgƒ‰ƒbƒN"
+IDS_STACK_TYPE6,
+  //"a robot"
+  "ƒƒ{ƒbƒg"
+IDS_STACK_TYPE7,
+  //"a scale"
+  "ƒXƒP[ƒ‹"
+IDS_STACK_TYPE8,
+  //"a bomb"
+  "”š’e"
+IDS_THE_LAST_THING,  // as in "He will pick up the last thing he made or found."
+  //" the last thing he made or found"
+  "”Ş ‚ªì‚Á‚½‚è Œ©‚Â‚¯‚½‚è‚µ‚½ ÅŒã‚Ì‚à‚Ì"
+// IDS_THE,
+//  " the "
+
+IDS_BYE1,
+  //"Bye!"
+  "‚³‚æ‚¤‚È‚çB"
+IDS_BYE2,
+  //"So long. "
+  "‚Ü‚½‚ËB"
+IDS_BYE3,
+  //"See you. "
+  "‚¶‚á‚ ‚ËB"
+IDS_GOOD1,
+  //"Good. "
+  "‚æ‚ë‚µ‚¢B"
+IDS_GOOD2,
+  //"OK. "
+  "ƒI[ƒP[B"
+IDS_GOOD3,
+  //"Right. "
+  "‚»‚Ì’Ê‚èB"
+IDS_PREFACE_HELP,
+  //"OK, here's all I know about "		
+  "ƒI[ƒP[A"	
+IDS_PREFACE_HELP2,
+  //" "
+  "‚É‚Â‚¢‚Ä ‚±‚ê‚ª ‚í‚½‚µ‚Ì ’m‚Á‚Ä‚¢‚é ‚·‚×‚Ä‚¾"
+IDS_SITTING_HELP,
+  //"You can sit down by clicking any mouse button. You can get up again by pressing the 'Escape' button (labeled 'Esc' in the upper corner of your keyboard). "
+  "ƒ}ƒEƒX‚ğ ƒNƒŠƒbƒN‚·‚é‚Æ À‚éBEscƒL[iƒL[ƒ{[ƒh‚Ì¶ãj‚ğ ‰Ÿ‚·‚Æ ‚Ü‚½ —§‚¿ã‚ª‚éB"
+IDS_SITTING_HELP2, // only used in the American version and only for Intro.dmo
+  //"You can sit down by clicking any mouse button. You can get up again by pressing the 'Escape' button. "
+  "ƒ}ƒEƒX‚ğ ƒNƒŠƒbƒN‚·‚é‚Æ À‚éBEscƒL[‚ğ ‰Ÿ‚·‚Æ ‚Ü‚½ —§‚¿ã‚ª‚éB"
+IDS_RECALL_MARTIAN_HELP,
+  //"I'll stay around to help you. If I bother you, just push the F1 button and I'll go. "
+  "‚í‚½‚µ‚Í ŒN‚Ì‚»‚Î‚Å •‚¯‚Ä ‚ ‚°‚éB‚¶‚á‚Ü‚¾‚Á‚½‚ç F1ƒL[‚ğ ‰Ÿ‚·‚±‚ÆA‚»‚¤‚µ‚½‚çA‚í‚½‚µ‚Í Á‚¦‚éB"
+IDS_IDS_RECALL_MARTIAN_HELP2,
+  //"If I'm gone, then F1 will call me back. "
+  "‚í‚½‚µ‚ª Á‚¦‚Ä‚µ‚Ü‚Á‚Ä‚àAF1ƒL[‚Å ŒÄ‚Ñ–ß‚¹‚éB"
+IDS_LEAVE_FLOOR_HELP,
+  //"Did you know that you can get up from the floor by pushing the 'Escape' button? "
+  "EscƒL[‚ğ ‰Ÿ‚·‚Æ °‚©‚ç —§‚¿ã‚ê‚é‚Ì‚ğ ’m‚Á‚Ä‚½H"
+IDS_LEAVE_FLOOR_HELP2,
+  //"Try it sometime. "
+  L"‚Ü‚½‚¢‚Â‚©\216\216‚µ‚Ä‚²‚ç‚ñB"
+IDS_LEAVE_TB_HELP,
+  //"When you are done, just press the 'Escape' key to return to the floor. "
+  "I‚í‚Á‚½‚ç EscƒL[‚ğ ‰Ÿ‚µ‚Ä•”‰®‚É –ß‚é‚ñ‚¾B"
+IDS_HURRY_UP_HELP,
+  //"Did you know that animations in progress will finish if you press F7? "
+  "F7ƒL[‚ğ ‰Ÿ‚·‚Æ ƒAƒjƒ‚ª I‚í‚é‚Ì‚ğ ’m‚Á‚Ä‚½H"
+IDS_HURRY_UP_HELP2,
+  //"That even includes my talking! "
+  "‚»‚ê‚É‚Í ‚í‚½‚µ‚ª ˜b‚µ‚½‚±‚Æ‚à ŠÜ‚Ü‚ê‚Ä‚¢‚éB"
+IDS_PAUSE_HELP,
+  //"If you ever want to pause ToonTalk, just push the Pause button. "
+  "ToonTalk‚ğ ‹x‚İ‚½‚©‚Á‚½‚çAPAUSEƒL[‚ğ ‰Ÿ‚·‚ñ‚¾B"
+// IDS_PAUSE_HELP2,
+//  "Pushing it again will start things up again. "
+IDS_TARGETED_HELP_HELP,
+  //"If you want me to tell you all I can about something, then get rid of me by pressing F1, point to or grab what you want, and push F1 again. "
+  L"‚í‚½‚µ‚É ‰½‚©•·‚«‚½‚©‚Á‚½‚çA‚Ü‚¸ F1ƒL[‚Å ‚í‚½‚µ‚ğÁ‚µA\216Ÿ‚É ŒN‚Ì‚Ù‚µ‚¢‚à‚Ì‚ğ \216w‚·‚È‚èA‚Â‚©‚Ş‚È‚è‚µ‚Ä ‚à‚¤ˆê“x F1ƒL[‚ğ ‰Ÿ‚·‚ñ‚¾B"
+IDS_HELLO1,
+  //"Hi"
+  "‚±‚ñ‚É‚¿‚Í"
+IDS_HELLO2,
+  //"Howdy"
+  "‚â‚ "
+IDS_HELLO3,
+  //"Hello"
+  "ƒnƒ["
+IDS_HELLO4,
+  //"Hi there"
+  "‚â‚ A‚±‚ñ‚É‚¿‚Í"
+IDS_HELLO5,
+  //"Greetings"
+  "¡“ú‚Í"
+IDS_HELLO6,
+  //"Hello there"
+  "‚¢‚ç‚Á‚µ‚á‚¢"
+IDS_MARTIAN_INTRODUCTION,
+  //"Marty here. "
+  "‚í‚½‚µ‚Íƒ}[ƒeƒBB"
+
+IDS_ABORT_MOUSE_TROUBLES, // not currently used
+  //"Bammer the Mouse had troubles with her hammer"
+  "ƒlƒYƒ~‚Ì ƒoƒ“ƒ}[‚ÍAƒnƒ“ƒ}[‚Ì‚±‚Æ‚Å ¢‚Á‚Ä‚¢‚éB"
+
+IDS_ABORT_NUMBER_TOO_LARGE,
+  //"the number would get too large for the computer"
+  L"ƒRƒ“ƒsƒ…[ƒ^‚É‚Í ‘å‚«‚·‚¬‚é”\216š‚¾‚æB"
+IDS_ABORT_NUMBER_TOO_SMALL,
+  //"the number would get too small for the computer"
+  L"ƒRƒ“ƒsƒ…[ƒ^‚É‚Í ¬‚³‚·‚¬‚é”\216š‚¾‚æB" 
+IDS_ABORT_NUMBER_TOO_SMALL_OR_BIG,
+  //"the number would get too big or small for the computer"
+  L"ƒRƒ“ƒsƒ…[ƒ^‚É‚Í\216g‚¦‚È‚¢”\216š‚¾‚æB" 
+
+// I believe these 13 identifiers are not used anymore...
+// IDS_REMOTE_IDENTIFIER1,
+//  "left/right position"
+// IDS_REMOTE_IDENTIFIER2,
+//  "up/down position"
+// IDS_REMOTE_IDENTIFIER3,
+//  "right speed"
+// IDS_REMOTE_IDENTIFIER4,
+//  "up speed"
+// IDS_REMOTE_IDENTIFIER5,
+//  "width"
+// IDS_REMOTE_IDENTIFIER6,
+//  "height"
+// IDS_REMOTE_IDENTIFIER7,
+//  "picture number"
+// IDS_REMOTE_IDENTIFIER8,
+//  "hit or miss animation"
+// IDS_REMOTE_IDENTIFIER9,
+//  "colliding with who?"
+// IDS_REMOTE_IDENTIFIER10,
+//  "mouse's right speed"
+// IDS_REMOTE_IDENTIFIER11,
+//  "mouse's up speed"
+// IDS_REMOTE_IDENTIFIER12,
+//  "time since last frame in milliseconds (thousandths of a second)"
+// IDS_REMOTE_IDENTIFIER13,
+//  "random number"
+
+IDS_A_REMOTE_CONTROL_FOR,
+  //"a remote control for "
+  "ƒŠƒ‚ƒRƒ“"
+IDS_ANY_NUMBER,
+  //"any number"
+  L"”\216š"
+IDS_BLANK_NUMBER_PAD,
+  //"a blank number pad"
+  L"ƒuƒ‰ƒ“ƒN”\216šƒpƒbƒh"
+IDS_THE_NUMBER,
+  //"the number "
+  L"”\216š"
+IDS_SOMETHING_WHICH_WILL_MULTIPLY,
+  // as in "You are holding something which will multiply by 3."
+  // You can create one of these by typing X while holding a 3.
+  // similarly for the entries up to IDS_SOMETHING_WHICH_WILL_XOR
+  //"something which will multiply by "
+  L"\216Ÿ‚Ì ”\216š‚Å Š|‚¯‚ç‚ê‚é‰½‚©F"					// ********************************
+IDS_SOMETHING_WHICH_WILL_DIVIDE,
+  //"something which will divide by "
+  L"\216Ÿ‚Ì ”\216š‚Å Š„‚ç‚ê‚é‰½‚©F"						// ********************************
+IDS_AND_KEEP_REMAINDER,
+  //" and just keep the remainder"
+  L"‚»‚µ‚Ä ‚»‚Ì\216c‚è‚ğ \216‚Á‚Ä‚¢‚é‚ñ‚¾"
+IDS_SOMETHING_WHICH_WILL_CHANGE_NUMBER,
+  "something which will change the number it is dropped on to "
+  //L"‚»‚Ìã‚É—\216‚Æ‚³‚ê‚é‚±‚Æ‚Å‚»‚Ì”\216š‚ğ•Ï‚¦‚é‰½‚©"
+IDS_SOMETHING_WHICH_WILL_OR,
+  "something which will OR the bits of the number underneath with "
+  //L"‚ ‚é”\216š‚Ìã‚É—\216‚Æ‚³‚ê‚é‚±‚Æ‚Å‚»‚Ì”\216š‚ğ•Ï‚¦‚é‚à‚Ì"
+IDS_SOMETHING_WHICH_WILL_AND,
+  "something which will AND the bits of the number underneath with "
+  //L"‚ ‚é”\216š‚Ìã‚É—\216‚Æ‚³‚ê‚é‚±‚Æ‚Å‚»‚Ì”\216š‚ğ•Ï‚¦‚é‚à‚Ì"
+IDS_SOMETHING_WHICH_WILL_XOR,
+  "something which will EXCLUSIVE OR the bits of the number underneath with "
+  //L"‚ ‚é”\216š‚Ìã‚É—\216‚Æ‚³‚ê‚é‚±‚Æ‚Å‚»‚Ì”\216š‚ğ•Ï‚¦‚é‚à‚Ì"
+IDS_THE_OPERATION,
+  //"the operation "
+  L"Œv\216Z"
+IDS_INTS_BLANK_HELP,
+  //"You can use blank number pads inside of thought bubbles, so the robot will be happy with any number on a pad. "
+  L"\216vl‚Ì’†‚Å ƒuƒ‰ƒ“ƒN”\216šƒpƒbƒh‚ğ \216g‚¦‚éBƒƒ{ƒbƒg‚Í ƒpƒbƒh‚É ‚Ç‚Ì”\216š‚Å‚à \216g‚¦‚Ä•Ö—˜‚¾‚æB"  
+// IDS_INTS_BLANKED_TB_HELP,
+//  "Since it is in a thought bubble, the robot will be happy with any number at the same place. "
+IDS_INTS_BLANK_HELP2,
+  //"A blank number means it is any number. "
+  L"ƒuƒ‰ƒ“ƒN‚Ì ”\216š‚Æ‚ÍA‚Ç‚ñ‚È”\216š‚Å‚à ‚¢‚¢‚Æ‚¢‚¤ ˆÓ–¡‚¾B"
+IDS_INTS_ADDITION_HELP,
+  //"You can add two numbers by dropping one on another. "
+  L"‚Ğ‚Æ‚Â‚Ì ”\216š‚Ì ã‚É •Ê‚Ì ”\216š‚ğ —\216‚Æ‚·‚Æ “ñ‚Â‚Ì”\216š‚ğ ‚½‚¹‚éB"
+IDS_INTS_DIGITS_ADDED_HELP,
+  //"You can type a number. "
+ L"”\216š‚ğ ’¼Ú ƒ^ƒCƒv ‚Å‚«‚éB"
+// IDS_INTS_DIGITS_ADDED_HELP2,
+//  " by typing a number now. "
+IDS_INTS_DIGITS_ADDED_HELP3,
+  //"You can also type a number while holding a number. "
+  L"”\216š‚ğ \216‚Á‚½‚Ü‚Ü‚Å ”\216š‚ğ ƒ^ƒCƒv‚·‚é‚±‚Æ‚à ‚Å‚«‚éB"
+// IDS_INTS_DIGITS_ADDED_HELP4,
+//
+IDS_INTS_DIGITS_REMOVED_HELP,
+  //"You can remove digits by pushing the 'Backspace' key. "
+  L"Back SpaceƒL[‚Å ”\216š‚ğ Á‚¹‚éB"
+IDS_INTS_DIGITS_REMOVED_HELP2,
+  //"If you remove the last digit you'll get 0. "
+  "ÅŒã‚Ì Œ…‚ğ Á‚·‚Æ ‚O‚É ‚È‚éB"
+IDS_INTS_MADE_NEGATIVE_HELP,
+  // Together with the following entries generates sentences like
+  // "You can change 5 into -5 by pushing the minus key (right of 0). "
+  // "Then, if you drop -5 on another number you'll be subtracting by 5."
+  //"You can change "
+  "ƒ}ƒCƒiƒXƒL[i‚O‚Ì‰Ej‚ğ ‰Ÿ‚·‚Æ"
+IDS_INTO,  // only used in this context
+  //" into "
+  "‚ğ"
+IDS_INTS_MADE_NEGATIVE_HELP2,
+  //" by pushing the minus key (right of 0). "
+  "‚ÉA•ÏX‚Å‚«‚éB"
+IDS_INTS_MADE_NEGATIVE_HELP3,
+  //"Then, if you drop "
+  "‚»‚ê‚©‚çA"
+IDS_INTS_MADE_NEGATIVE_HELP4,
+  //" on another number, you'll be subtracting by "
+  L"‚ğ •Ê‚Ì ”\216š‚Ìã‚É —\216‚Æ‚¹‚ÎA‚Ğ‚«\216Z‚ª ‚Å‚«‚é: |" 
+IDS_INTS_MULTIPLICATION_HELP,
+  // together with following entries makes
+  // "You can multiply by 7 by pushing the x key.
+  // Then you just drop it on the number you want to multiply by 7
+  // The X and * keys work just as well. "
+  //"You can multiply by "
+  "XƒL[‚ğ ‰Ÿ‚·‚Æ"
+
+IDS_INTS_MULTIPLICATION_HELP2,
+  //" by pushing the x key. "
+  L"‚Ì ‚©‚¯\216Z‚ª ‚Å‚«‚éB"
+IDS_INTS_MULTIPLICATION_HELP3, // followed by a number.
+  //"Then you just drop it on the number you want to multiply by "
+  L"‚©‚¯‚½‚¢”\216š‚Ì ã‚É ‚»‚ê‚ğ —\216‚Æ‚·‚ñ‚¾F x"
+IDS_INTS_MULTIPLICATION_HELP4,
+  //"The X and * keys work just as well. "
+  "X‚Æ–ƒL[‚Í “¯‚¶‚¾B"
+IDS_INTS_DIVISION_HELP,
+  //"You can divide by "
+  "‰E‰º‚Ì Šp‚É‚ ‚é /ƒL[‚ğ ‰Ÿ‚·‚Æ"
+IDS_INTS_DIVISION_HELP2,
+  //" by pushing the / key (lower right corner). "
+  L"‚Ì ‚í‚è\216Z‚ª ‚Å‚«‚éB"
+IDS_INTS_DIVISION_HELP3,
+  //"Then you just drop it on another number. "
+  L"‚í‚è‚½‚¢”\216š‚Ì ã‚É ‚»‚ê‚ğ —\216‚Æ‚·‚ñ‚¾B"
+IDS_INTS_DIVISION_HELP4,
+  //"The remainder is ignored. "
+  L"—]‚è‚Í –³\216‹‚³‚ê‚éB"
+IDS_INTS_DIVISION_HELP5,
+  // This happens when you drop a "/0" on any number.
+  // The number refers to the number (together with operator) that you are dropping.
+  //"Since the number is zero, the division won't work. "
+  L"‚»‚Ì”\216š‚Í ‚O‚È‚Ì‚ÅAŠ„‚è\216Z‚Í ‚Å‚«‚È‚¢B"
+IDS_INTS_MODULO_HELP,
+  //"To get the remainder (and ignore the dividend) use the % key (shift 5). "
+  L"—]‚è‚Í  “ƒL[iShift+‚Tj‚ğ \216g‚¤‚ñ‚¾B"
+
+// IDS_INTS_MODULO_HELP2, // using IDS_INTS_DIVISION_HELP5 instead
+//  "Since the number is zero, the division won't work. "
+IDS_INTS_MODULO_HELP3,
+  //"To get the remainder of dividing by "
+  " "
+IDS_INTS_MODULO_HELP4,
+  //" type % (push shift and 5). "
+  L"‚Å Š„‚Á‚½‚Æ‚«‚Ì —]‚è‚Í “‚ğ \216g‚¤‚ñ‚¾iShift‚Æ‚T‚ğ‰Ÿ‚·jB"
+IDS_INTS_MODULO_HELP5,
+  //"Then you just drop it on the other number. "
+  L"‚»‚ê‚©‚ç ‚»‚ê‚ğ ‚à‚¤ˆê•û‚Ì ”\216š‚Ì ã‚É —\216‚Æ‚·‚¾‚¯‚¾B"
+IDS_INTS_BITWISE_HELP,
+  //"Here's a really advanced thing. "
+  "‚±‚ê‚Í –{“–‚É ã‹‰‚Ì ‚à‚Ì‚¾B"
+IDS_INTS_BITWISE_HELP2,
+  //"You can treat a number like a bunch of bits that are either 0 or 1. "
+  L"‚Ğ‚Æ‚Â‚Ì ”\216š‚ğ ‚O‚©‚P‚¾‚¯‚©‚ç‚È‚é ƒrƒbƒg‚Ì W‡‚Æ‚µ‚Ä ˆµ‚¤‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_INTS_BITWISE_HELP3,
+  //"This number is "
+  L"‚±‚Ì ”\216š‚Í"
+IDS_INTS_BITWISE_HELP4,
+  //"Here's what you can do. "
+  "‚±‚ê‚ª ŒN‚É ‚Å‚«‚é‚±‚Æ‚¾B"
+IDS_INTS_BITWISE_HELP5,
+  //"~ for complement. | for OR. & for AND. And ^ for exclusive or. "
+  "~‚Í•â”A|‚Í˜_—˜a,•‚Í˜_—Ï‚ğ•\‚í‚µA^‚Í”r‘¼“I˜_—˜a‚ğ•\‚í‚·B"
+IDS_INTS_BITWISE_HELP56,
+  //"Don't worry if you don't know what these are. Just try them. "
+  L"‰½‚¾‚© ‚í‚©‚ç‚È‚­‚Ä‚à S”z‚µ‚È‚­‚Ä ‚¢‚¢‚æB‚½‚¾ \216\216‚µ‚Ä ‚²‚ç‚ñB"
+IDS_NUMBER_HELP_GIVEN_HELP,
+  //"I've told you all that I know about numbers. "
+  L"”\216š‚É‚Â‚¢‚Ä ‚í‚½‚µ‚Ì ’m‚Á‚Ä‚¢‚é‚±‚Æ‚Í ‘S•”˜b‚µ‚½B"
+IDS_IDS_NUMBER_HELP_GIVEN_HELP2,
+  //"If you want me to tell you again all I know about numbers, then press F1 twice while pointing to a number. "
+  L"”\216š‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çA”\216š‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+
+
+// This section describes the items found in the notebook which
+// flies out when you flip over a picture or number.
+IDS_X_HELP,
+  //"the distance from the left side"
+  "¶‘¤‚©‚ç‚Ì‹——£"
+IDS_Y_HELP,
+  //"the distance from the bottom side"
+  "‰º‚©‚ç‚Ì‹——£"
+IDS_X_SPEED_HELP,
+  //"the speed towards the right"
+  "‰E‚ÖŒü‚©‚¤ƒXƒs[ƒh"
+IDS_Y_SPEED_HELP,
+  //"the speed towards the top"
+  "ã‚ÖŒü‚©‚¤ƒXƒs[ƒh"
+IDS_WIDTH_HELP,
+  //"the width"
+  "•"
+IDS_HEIGHT_HELP,
+  //"the height"
+  "‚‚³"  
+IDS_PARAMETER_HELP, // had been commented out -- restored on 6/24/97
+  //"which picture or color is shown"
+  "Œ©‚¦‚Ä‚¢‚éƒsƒNƒ`ƒƒ‚âF"
+IDS_COLLIDE_HELP,
+  // e.g. The hole contains a remote control for the detector which shows a simple cartoon of either a collision or a miss.
+  // changed "space button" to "space bar"
+  //"the detector which shows a simple cartoon of either a collision or a miss. You can turn a collision into a miss by pointing to the detector and pressing the space bar"
+  L"‚µ‚å‚¤‚Æ‚Â‚© ƒ~ƒX‚È‚Ì‚©‚ğ ƒAƒjƒ‚Å ‹³‚¦‚éŒŸoŠíBŒŸoŠí‚ğ \216w‚µ‚È‚ª‚ç ½Íß°½ÊŞ°‚ğ ‰Ÿ‚¹‚ÎA‚µ‚å‚¤‚Æ‚Â‚ğ ƒ~ƒX‚É •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_COLLIDE_WHO_HELP,
+  // e.g. The hole contains a remote control for the display of what is colliding with this picture.
+  //"the display of what is colliding with this picture"
+  L"‚±‚Ì ƒsƒNƒ`ƒƒ‚Æ ‚µ‚å‚¤‚Æ‚Â‚µ‚Ä‚¢‚é‚à‚Ì‚Ì •\\216¦"
+IDS_MOUSE_X_HELP,
+  //"the speed the computer's mouse is moving to the right"
+  "ƒRƒ“ƒsƒ…[ƒ^‚Ì ƒ}ƒEƒX‚ª ‰E‚Ö “®‚­ ‘¬‚³"
+IDS_MOUSE_Y_HELP,
+  //"the speed the computer's mouse is moving to the top"
+  "ƒRƒ“ƒsƒ…[ƒ^‚Ì ƒ}ƒEƒX‚ª ã‚Ö “®‚­ ‘¬‚³"
+IDS_TIMER_HELP,  
+  //"the number of milliseconds (one thousandths of a second) since last frame"
+  "ÅŒã‚Ì ƒtƒŒ[ƒ€‚©‚ç ‚P^‚P‚O‚O‚O•b" 
+IDS_RANDOM_HELP,
+  //"a random number between 0 and 1000"
+  "‚O‚©‚ç ‚P‚O‚O‚O‚Ü‚Å‚Ì —”"
+IDS_X_COLLIDE_HELP,
+  //"the left/right movement collision detector"
+  "¶‰E‰^“®‚Ì ‚µ‚å‚¤‚Æ‚ÂŒŸoŠí"
+IDS_Y_COLLIDE_HELP,
+  //"the up/down movement collision detector"
+  "ã‰º‰^“®‚Ì ‚µ‚å‚¤‚Æ‚ÂŒŸoŠí"
+IDS_APPEARANCE_HELP,
+  //"the looks"
+  "ŠOŒ©"
+IDS_VISIBLE_HELP, // as in "This sensor controls the visibility of the picture. "
+  //"the visibility"
+  L"‰Â\216‹«"
+IDS_END_OF_ANIMATION_HELP,
+  //"the answer to the question ""Has my animation stopped?"""
+  L"‚í‚½‚µ‚Ì ƒAƒjƒ‚Í \216~‚Ü‚Á‚Ä‚µ‚Ü‚Á‚½‚ÌH‚Æ‚¢‚¤\216¿–â‚É ‘Î‚·‚é “š‚¦"
+ IDS_GRASPED_HELP,
+// was  "whether held in a hand"
+  //"the answer to the question ""Am I being held?"""
+  L"‚í‚½‚µ‚Í •ß‚Ü‚¦‚ç‚ê‚Ä‚¢‚é‚ÌH‚Æ‚¢‚¤\216¿–â‚É ‘Î‚·‚é “š‚¦"
+  // the I above refers to the picture (sprite) whose remote control is being described
+  // could use "this picture" instead.  Ditto for the others below and above
+IDS_SELECTED_HELP,
+  // was  "whether wiggling and ready to be picked up or used"
+  //"the answer to the question ""Am I wiggling because a hand is pointing to me?"""
+  L"\216è‚ª ‚í‚½‚µ‚ğ \216w‚µ‚Ä‚¢‚é‚Ì‚Å ‚í‚½‚µ‚Í—h‚ê‚Ä‚¢‚é‚ÌH‚Æ‚¢‚¤\216¿–â‚É ‘Î‚µ‚Ä‚Ì “š‚¦"
+IDS_RELEASED_HELP,
+  // was  "whether just dropped"
+  //"the answer to the question ""Was I just dropped?"""
+  L"‚í‚½‚µ‚Í —\216‚Æ‚³‚ê‚½‚ÌH‚Æ‚¢‚¤\216¿–â‚É ‘Î‚µ‚Ä‚Ì “š‚¦"
+IDS_MOUSE_LEFT_BUTTON_HELP,     
+  //"whether the mouse's left button was just clicked"
+  "ƒ}ƒEƒX‚Ì ¶ƒ{ƒ^ƒ“‚ª ƒNƒŠƒbƒN‚³‚ê‚½‚Ì‚© ‚Ç‚¤‚©"
+IDS_MOUSE_MIDDLE_BUTTON_HELP,
+  //"whether the mouse's middle button was just clicked"
+  "ƒ}ƒEƒX‚Ì ’†ƒ{ƒ^ƒ“‚ª ƒNƒŠƒbƒN‚³‚ê‚½‚Ì‚© ‚Ç‚¤‚©" 
+IDS_MOUSE_RIGHT_BUTTON_HELP,
+  //"whether the mouse's right button was just clicked"
+  "ƒ}ƒEƒX‚Ì ‰Eƒ{ƒ^ƒ“‚ª ƒNƒŠƒbƒN‚³‚ê‚½‚Ì‚© ‚Ç‚¤‚©" 
+IDS_MOUSE_LEFT_BUTTON_DOWN_HELP,
+  //"whether the mouse's left button is down"
+  "ƒ}ƒEƒX‚Ì ¶ƒ{ƒ^ƒ“‚ª ‰Ÿ‚³‚ê‚Ä‚¢‚é‚Ì‚© ‚Ç‚¤‚©" 
+IDS_MOUSE_MIDDLE_BUTTON_DOWN_HELP,
+  //"whether the mouse's middle button is down"
+  "ƒ}ƒEƒX‚Ì ’†ƒ{ƒ^ƒ“‚ª ‰Ÿ‚³‚ê‚Ä‚¢‚é‚Ì‚© ‚Ç‚¤‚©" 
+IDS_MOUSE_RIGHT_BUTTON_DOWN_HELP,
+  //"whether the mouse's right button is down"
+  "ƒ}ƒEƒX‚Ì ‰Eƒ{ƒ^ƒ“‚ª ‰Ÿ‚³‚ê‚Ä‚¢‚é‚Ì‚© ‚Ç‚¤‚©"
+IDS_KEYBOARD_BUTTON_HELP,
+  //"the key just pressed"
+  "¡ ‰Ÿ‚³‚ê‚½ƒL["
+IDS_LAST_KEYSTROKE_HELP,
+  //"the last key pressed"
+  "ÅŒã‚É ‰Ÿ‚³‚ê‚½ƒL["
+IDS_SHIFT_DOWN_HELP,
+  //"whether the shift key is down"
+  "ƒVƒtƒgƒL[‚ª ‰Ÿ‚³‚ê‚Ä‚¢‚é‚© ‚Ç‚¤‚©" 
+IDS_CONTROL_DOWN_HELP,
+  //"whether the control key is down"
+  "ƒRƒ“ƒgƒ[ƒ‹ƒL[‚ª ‰Ÿ‚³‚ê‚Ä‚¢‚é‚© ‚Ç‚¤‚©" 
+IDS_HAND_VISIBLE_HELP,
+  //"whether your hand is hidden"
+  L"ŒN‚Ì\216è‚ª Œ©‚¦‚È‚¢‚© ‚Ç‚¤‚©"
+IDS_CLIPBOARD_HELP,
+  //"the clipboard for pasting stuff to and from other programs"
+  L"‘¼‚Ì ƒvƒƒOƒ‰ƒ€‚Æ ƒf[ƒ^‚ğ ‚â‚è\216æ‚è‚·‚é‚½‚ß‚Ì ƒNƒŠƒbƒvƒ{[ƒh"
+IDS_AVENUE_HELP,
+  //"which avenue (runs north/south) this house is on"
+  "‚±‚Ì‰Æ‚ª‚ ‚é ƒAƒxƒjƒ…[(“ì–k‚É‘–‚éj‚Ì"
+IDS_STREET_HELP,
+  //"which street (runs east/west) this house is on"
+  "‚±‚Ì‰Æ‚Ì‚ ‚é ƒXƒgƒŠ[ƒgi“Œ¼‚É‘–‚éj‚Ì"
+IDS_SOUND_ON_HELP,
+  //"whether sound effects are on"
+  "ƒTƒEƒ“ƒhŒø‰Ê‚ª ƒIƒ“‚É ‚È‚Á‚Ä‚¢‚é‚© ‚Ç‚¤‚©"
+IDS_LETTER_SIZE_HELP,
+  //"the size of letters in my talk balloons (100 is normal)"
+  L"‚«o‚µ‚Ì \216š‚Ì ƒTƒCƒYi100‚ª’Êíj" 
+IDS_READING_SPEED_HELP,
+  //"how long I say something before changing what's in my talk balloon (100 is normal)"
+  L"‚«o‚µ‚Ì Ø‚è‘Ö‚¦\216ŠÔi100‚ª’Êíj"
+IDS_MARTIAN_ADVICE_LEVEL_HELP,
+  //"how talkative I am"
+  "‚í‚½‚µ‚Í ‚È‚ñ‚Æ ‚¨‚µ‚á‚×‚è ‚È‚ñ‚Å‚µ‚å‚¤B"
+IDS_PROGRAMMER_HEAD_HELP,
+  //"whether you have a hat, long hair or are bald"
+  L"ŒN‚Í –X\216q‚©A’·‚Í‚Â‚©A‚»‚ê‚Æ‚à ƒXƒLƒ“ƒwƒbƒh‚©"
+IDS_SCREEN_SIZE_HELP,
+  //"the window size"
+  "ƒEƒBƒ“ƒh[‚Ì ƒTƒCƒY"
+IDS_SYSTEM_SPEED_HELP,
+  //"the speed things happen in ToonTalk (100 is normal)"
+  "ToonTalk‚Å ‚à‚Ì‚²‚Æ‚ª ‹N‚±‚éƒXƒs[ƒhq100‚ª’Êíj"
+IDS_CITY_SIZE_HELP,
+  //"the size of the city"
+  "ŠX‚Ì ‘å‚«‚³"
+IDS_SYSTEM_SLEEP_HELP,
+  //"the number of milliseconds, if possible, each animation frame should take"
+  L"‚»‚ê‚¼‚ê‚Ì ƒAƒjƒƒtƒŒ[ƒ€‚ª \216g‚¤‚P^‚P‚O‚O‚O•b‚Ì ”\216š"
+IDS_MOUSE_BUTTONS_HELP,
+  //"whether the right and middle button have special meanings when on the floor"
+  L"‰E‚â ’†ƒ{ƒ^ƒ“‚ª •”‰®‚Ì’†‚ÅA“Á•Ê‚È ˆÓ–¡‚ğ \216‚Â‚Ì‚©‚Ç‚¤‚©"
+IDS_LEGO_SERIAL_PORT_HELP,
+  //"which serial port a HyperBot controller is connected to"  // was also LEGO
+  "ƒnƒCƒp[ƒ{ƒbƒgƒRƒ“ƒgƒ[ƒ‰[‚ª ‚Â‚È‚ª‚Á‚Ä‚¢‚éƒVƒŠƒAƒ‹ƒ|[ƒg"
+IDS_MARTIAN_FONT_HELP,
+  //"the letter style used in my talk balloons"
+  L"‚«o‚µ‚Å \216g‚í‚ê‚é \216š‘Ì"
+IDS_FILE_TO_PICTURE_HELP,
+  //"a place to drop the file name of a picture to turn it into a picture"
+  L"ƒsƒNƒ`ƒƒ‚É •Ï‚¦‚é‚½‚ß‚É ƒsƒNƒ`ƒƒƒtƒ@ƒCƒ‹–¼‚ğ —\216‚Æ‚·êŠ"
+IDS_FILE_TO_SOUND_HELP,
+  //"a place to drop the file name of a sound to hear it"
+  L"ƒTƒEƒ“ƒh‚ğ •·‚­‚½‚ß‚É ƒTƒEƒ“ƒhƒtƒ@ƒCƒ‹–¼‚ğ —\216‚Æ‚·êŠ"
+
+IDS_REMOTE_DESCRIPTION,
+  // e.g. This number is a remote control for the color of a rectangle.
+  //"This number is a remote control for "
+  L"‚±‚Ì”\216š‚Í"
+IDS_REMOTE_DESCRIPTION2,
+  //" " // used after "the color of a rectangle" in the example above
+  "‚Ì ƒŠƒ‚ƒRƒ“—p‚¾B"
+// IDS_REMOTE_SENSOR_DESCRIPTION,
+//   "This number is a sensor for "
+IDS_REMOTE_COLOR_DESCRIPTION,
+  //"The number is a color numbered from 0 to 255. "
+  L"‚»‚Ì”\216š‚Í ‚O‚©‚ç255‚Ü‚Å‚Å •\‚í‚³‚ê‚éF‚ğ \216¦‚·B"
+IDS_REMOTE_PARAMETER_DESCRIPTION,
+  //"The number selects which picture is displayed. "
+  L"‚»‚Ì”\216š‚Í •\\216¦‚·‚é ƒsƒNƒ`ƒƒ‚ğ ‘I‚ÔB"
+IDS_REMOTE_NUMBER_DESCRIPTION2,
+  //"The number is"
+  L"‚»‚Ì”\216š‚Í"
+IDS_OF_THE_PICTURE, // only used with IDS_REMOTE_NUMBER_DESCRIPTION2
+  //"of the picture"
+  "ƒsƒNƒ`ƒƒ‚Ì"
+IDS_REMOTE_NUMBER_DESCRIPTION3,
+  //"If you change the number, then "
+  L"”\216š‚ğ •Ï‚¦‚é‚ÆA"
+IDS_REMOTE_NUMBER_DESCRIPTION4,
+  //" will change accordingly. "
+  "‚ª ‚»‚ê‚É ‡‚í‚¹‚Ä •Ï‚í‚éB"
+IDS_REMOTE_NUMBER_DESCRIPTION5,
+  //"You can change remote controls just like ordinary numbers. "
+  L"•’Ê‚Ì ”\216š‚Ì‚æ‚¤‚É ƒŠƒ‚ƒRƒ“‚ğ •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_REMOTE_NUMBER_DESCRIPTION6,
+  // was  "This number is a remote display for "
+  //"This number is a sensor for "
+  L"‚±‚Ì”\216š‚Í"
+  // e.g. This number is a sensor for the speed the computer's mouse is moving to the right.
+IDS_REMOTE_NUMBER_DESCRIPTION62,
+  //" " // used after "the speed the computer's mouse is moving to the right" in the example above
+  "‚Ì ƒZƒ“ƒT[—p‚¾B"
+IDS_REMOTE_NUMBER_DESCRIPTION7,
+  //"You can't change it like ordinary numbers. "
+  L"‚»‚ê‚ğ •’Ê‚Ì ”\216š‚Ì‚æ‚¤‚É •Ï‚¦‚é‚±‚Æ‚Í ‚Å‚«‚È‚¢B"
+IDS_REMOTE_NUMBER_DESCRIPTION8,
+  //"When I want it to stop changing, I usually drop it on a 0. "
+  L"‚»‚ê‚ª •Ï‰»‚·‚é‚Ì‚ğ ‚Æ‚ß‚½‚¢‚Æ‚«‚ÍA‚¢‚Â‚à‚Í ‚»‚ê‚ğ ‚O‚Ìã‚É —\216‚Æ‚·B"
+  // together these entries generate:
+  // "This number is a sensor for the speed the computer's mouse is moving to the right.
+  // You can't change it like ordinary numbers.
+  // When I want it to stop changing, I usually drop it on a 0. "
+
+IDS_REMOTE_PICTURE_DESCRIPTION,
+  //"This movie shows whether "
+  "‚±‚Ìƒ€[ƒr[‚Í"
+IDS_REMOTE_PICTURE_DESCRIPTION2,
+  //" is colliding with something else. "
+  "‚ª ‘¼‚Ì‚à‚Ì‚Æ ‚µ‚å‚¤‚Æ‚Â‚µ‚Ä‚¢‚é‚© ‚Ç‚¤‚©‚ğ ‹³‚¦‚Ä‚­‚ê‚éB"
+IDS_REMOTE_PICTURE_DESCRIPTION3,
+  //"This is a picture of what "
+  "‚±‚ê‚Í"
+IDS_REMOTE_PICTURE_DESCRIPTION4,
+  //" is colliding with. It is black if there is no collision. "
+  L"‚ª ‚µ‚å‚¤‚Æ‚Â‚µ‚Ä‚é\216‚Ì ƒsƒNƒ`ƒƒ‚¾B‚µ‚å‚¤‚Æ‚Â‚ª ‚È‚¢‚Æ‚«‚Í ƒuƒ‰ƒ“ƒN‚¾B"
+
+IDS_SINCE,
+  // only used in the context:
+  // This number is a remote control for the picture of a rectangle.
+  // The number is the width of the picture.
+  // If you change the number, then the picture will change accordingly.
+  // Since the picture of a rectangle is flipped, you'll have to flip it back to try this out.
+  //"Since "
+  " "
+IDS_REMOTE_NUMBER_DESCRIPTION9,
+  //" is flipped, you'll have to flip it back to try this out. "
+  L"‚ÍA‚¤‚ç‚ª‚¦‚³‚ê‚Ä ‚¢‚é‚Ì‚ÅA‚±‚ê‚ğ \216\216‚·‚É‚Í Œ³‚É–ß‚³‚È‚¯‚ê‚Î‚È‚ç‚È‚¢B"
+
+IDS_BOOK_KEY_FORWARD_HELP,
+  //"You can flip to the next page by pushing the + or space button. "
+  L"'{'ƒL[‚© ƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚·‚Æ \216Ÿ‚Ì ƒy[ƒW‚É i‚ŞB"
+IDS_BOOK_KEY_BACKWARD_HELP,
+  //"You can flip to the previous page by pushing the - button. "
+  "'|'ƒL[‚ğ ‰Ÿ‚·‚Æ ‘O‚Ì ƒy[ƒW‚É –ß‚éB"
+IDS_BOOK_KEY_BACKWARD_HELP2,
+  // the "it" here always refers to a notebook
+  //"Since it's on the first page,"
+  "ƒm[ƒg‚Í æ“ª‚Ì ƒy[ƒW‚È‚Ì‚Å"
+IDS_BOOK_KEY_BACKWARD_HELP3,
+  //"If the notebook is on the first page,"
+  "ƒm[ƒg‚ª æ“ª‚Ì ƒy[ƒW‚È‚ç" 
+IDS_BOOK_KEY_BACKWARD_HELP4,
+  //" pushing the - button will turn to the last page. "
+  "'|'ƒL[‚ğ ‰Ÿ‚·‚Æ ÅŒã‚Ìƒy[ƒW‚É ‚È‚éB"
+IDS_BOOK_KEY_NUMBER_HELP,
+  //"You can flip to a page by typing the page number. "
+  "ƒy[ƒW”‚ğ ƒ^ƒCƒv‚·‚é‚Æ ‚»‚±‚Éi‚ŞB"
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP,
+  //"You can store anything you make on a blank page. "
+  "ƒuƒ‰ƒ“ƒNƒy[ƒW‚É‚Í ì‚Á‚½‚à‚Ì‚ğ ‚È‚ñ‚Å‚à •Û‘¶‚Å‚«‚éB"
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP2,
+  //"Just drop something on a blank page and it'll turn into a huge stack of copies. "
+  L"ƒuƒ‰ƒ“ƒNƒy[ƒW‚É ‰½‚© —\216‚Æ‚µ‚Ä ‚²‚ç‚ñA‚»‚ê‚Í ‘å‚«‚È ƒRƒs[‚Ì \216R‚É •Ï‚í‚éB"
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP3,
+  //"Anything you add to a notebook will be there even if you restart the computer. "
+  "ƒm[ƒg‚É ‰Á‚¦‚½‚à‚Ì‚Í ‰½‚Å‚àA‚½‚Æ‚¦ ƒRƒ“ƒsƒ…[ƒ^‚ğ ÄƒXƒ^[ƒg‚³‚¹‚Ä‚à ‚»‚±‚É ‚ ‚é‚Í‚¸‚¾B"
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP4,
+  //"Dusty can remove things you no longer want. "
+  "ƒ_ƒXƒeƒB‚Í ŒN‚ª ‚à‚¤ ‚¢‚ç‚È‚­‚È‚Á‚½ ‚à‚Ì‚ğ Á‚µ‚Ä‚­‚ê‚éB"
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP5,
+  //"Why not turn to a blank page and try it? "
+  L"ƒuƒ‰ƒ“ƒNƒy[ƒW‚ğ ‚ß‚­‚Á‚ÄA\216\216‚µ‚Ä‚²‚ç‚ñB"
+IDS_BOOK_PAGE_REMOVED_HELP,
+  //"Dusty can remove things from a notebook. "
+  "ƒ_ƒXƒeƒB‚Í ƒm[ƒg‚©‚ç ‚à‚Ì‚ğ Á‚µ‚Ä‚­‚ê‚éB"
+IDS_BOOK_PAGE_REMOVED_HELP2,
+  //"You can call him by pressing the F2 button. "
+  "‚e‚Qƒ{ƒ^ƒ“‚ğ ‰Ÿ‚·‚Æ ”Ş‚ğ ŒÄ‚Ño‚¹‚éB"
+IDS_BOOK_PAGE_REMOVED_HELP3,
+  //"If you remove a page by mistake, Dusty can spit it out and you can put it back. "
+  "‚Ü‚¿‚ª‚Á‚Ä ƒy[ƒW‚ğ Á‚µ‚Ä‚µ‚Ü‚Á‚Ä‚àAƒ_ƒXƒeƒB‚Í ‚»‚ê‚ğ ‚Í‚«o‚·‚±‚Æ‚ª ‚Å‚«‚é‚Ì‚ÅAŒ³‚É –ß‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_BOOK_LEFT_PAGE_ADDED_HELP,
+  //"I usually use the left pages for text or pictures that describe the right side. "
+  L"‚í‚½‚µ‚Í ‚¢‚Â‚àA¶‚Ì ƒy[ƒW‚ğ ƒeƒLƒXƒg‚©AƒsƒNƒ`ƒƒ‚É \216g‚¤BƒsƒNƒ`ƒƒ‚Í ‰E‘¤‚Ìà–¾‚ğ ‚·‚éB"
+IDS_BOOK_LEFT_PAGE_ADDED_HELP2,
+  //"Just drop some text or a picture there. "
+  L"ƒeƒLƒXƒg‚© ƒsƒNƒ`ƒƒ‚ğ ‚»‚±‚É —\216‚Æ‚·‚ñ‚¾B"
+IDS_BOOK_LEFT_PAGE_ADDED_HELP3,
+  //"You can quickly find a page by dropping the same text or picture later. "
+  L"“¯‚¶ ƒeƒLƒXƒg‚© ƒsƒNƒ`ƒƒ‚ğ —\216‚Æ‚·‚Æ ‘¬‚­ƒy[ƒW‚ğ ’T‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_BOOK_LEFT_PAGE_ADDED_HELP4,
+  // as in "This page of the notebook is blank so you can drop something there. "
+  //" is blank so you can drop something there. "
+  L"‚Í ƒuƒ‰ƒ“ƒN‚È‚Ì‚ÅA‚È‚ñ‚Å‚à ‚»‚±‚É —\216‚Æ‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_BOOK_PAGE_TOKEN_HELP,
+  //"A neat way of coming back to page "
+  L"ƒy[ƒW‚É –ß‚é ã\216è‚È •û–@‚Í"
+IDS_BOOK_PAGE_TOKEN_HELP2,
+  //" is by dropping "
+  " "
+IDS_BOOK_PAGE_TOKEN_HELP3,
+  //" on the notebook. "
+  L"‚ğ ƒm[ƒg‚Ì ã‚É —\216‚Æ‚·‚±‚Æ‚¾B"
+IDS_BOOK_PAGE_TOKEN_HELP4,
+  //"You can flip to a page with something on it and try it. "
+  L"ƒm[ƒg‚Ì ã‚Ì ‰½‚©‚Å ƒy[ƒW‚ğ ‚¤‚ç‚ª‚¦‚µA\216\216‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_BOOK_PAGE_TOKEN_HELP5,
+  //"You can flip to a page with text on it by dropping a pad with the same text on the notebook. "
+  L"“¯‚¶ƒeƒLƒXƒg‚Ì ‚ ‚éƒpƒbƒh‚ğ —\216‚Æ‚·‚ÆA‚»‚ÌƒeƒLƒXƒg‚Ì‚ ‚é ƒy[ƒW‚ğ ‚ß‚­‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_BOOK_PAGE_TOKEN_HELP6,
+  //"If you drop text, you usually don't need to type the whole thing. "
+  L"ƒeƒLƒXƒg‚ğ —\216‚Æ‚·‚ÆA‘S‘Ì‚ğ ƒ^ƒCƒv‚µ‚È‚¢‚Å ‚·‚ŞB"
+IDS_BOOK_PAGE_TOKEN_HELP7,
+  // Only used after preceeding entry.  So it refers to how much you need to type.
+  //"Only enough to find the page. "
+  "ƒy[ƒW‚ğ Œ©‚Â‚¯‚é‚Ì‚É •K—v‚È‚¾‚¯‚Å ‚¢‚¢B"
+IDS_BOOK_PAGE_NUMBER_HELP,
+  //"You can also flip to a page by dropping a number pad on a page with something on it. "
+  L"ƒy[ƒW‚Ì ã‚É ‚ ‚é‰½‚©‚Æ ˆê‚ÉA”\216šƒpƒbƒh‚ğ —\216‚Æ‚µ‚Ä ƒy[ƒW‚ğ ‚ß‚­‚é‚±‚Æ‚à ‚Å‚«‚éB"
+IDS_BOOK_CALLED_HELP,
+  //"When you press the F4 button, the last notebook you used will fly to you. "
+  L"F4ƒ{ƒ^ƒ“‚ğ ‰Ÿ‚·‚ÆAŒN‚ª ÅŒã‚É \216g‚Á‚½ ƒm[ƒg‚ª ‚â‚Á‚Ä‚­‚éB"
+IDS_BOOK_HELP_GIVEN_HELP,
+  //"I've told you all that I know about notebooks. "
+  "ƒm[ƒg‚É‚Â‚¢‚Ä ‚í‚½‚µ‚Ì ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‘S•”˜b‚µ‚½B" 
+IDS_BOOK_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I know about notebooks, then press F1 twice while pointing to a notebook. "
+  L"ƒm[ƒg‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAƒm[ƒg‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_BOOK_CONTAINING,
+  //"a notebook" // used to be "a notebook containing "
+  "ƒm[ƒg" 
+IDS_BOOK_DESCRIPTION1,
+  //"It stores everything including other notebooks"
+  "‚»‚ê‚Í ‘¼‚Ì ƒm[ƒg‚à ŠÜ‚ß‚ÄA‚·‚×‚Ä‚Ì ‚à‚Ì‚ğ ‹L˜^‚·‚éB"
+IDS_BOOK_DESCRIPTION2,
+  //"This notebook is full of pictures"
+  "‚±‚Ì ƒm[ƒg‚Í ƒsƒNƒ`ƒƒ‚Å ‚¢‚Á‚Ï‚¢‚¾B"
+IDS_BOOK_DESCRIPTION3,
+  //"This notebook is full of useful sensors and remote controls"
+  "‚±‚Ì ƒm[ƒg‚Í –ğ‚É—§‚Â ƒZƒ“ƒT[‚Æ ƒŠƒ‚ƒRƒ“‚Å ‚¢‚Á‚Ï‚¢‚¾B"
+IDS_BOOK_DESCRIPTION4,
+  //"It is full of sample programs"
+  "‚»‚ê‚Í ƒvƒƒOƒ‰ƒ€ƒTƒ“ƒvƒ‹‚Å ‚¢‚Á‚Ï‚¢‚¾B"
+IDS_BOOK_DESCRIPTION5,
+  //"It is stored in the file " // followed by the file name
+  "‚»‚ê‚ª ‹L˜^‚³‚ê‚Ä‚¢‚é ƒtƒ@ƒCƒ‹‚ÍA"
+IDS_PAGES,
+  //" pages"
+  "ƒy[ƒW‚ ‚é"
+IDS_IT_CONTAINS_REMOTE,
+  //"It contains remote controls for "
+  "‚»‚ê‚Ì ƒŠƒ‚ƒRƒ“‚ÍF"  		// *************************
+IDS_BLANK_NOTEBOOK,
+  //"Blank\rNotebook"
+  "ƒuƒ‰ƒ“ƒN\rƒm[ƒg"
+IDS_MAIN_BOOK_DESCRIPTION,
+  //"This notebook lives in the tool box. Any changes you make to it will remain even if you turn off the computer"
+  L"‚±‚Ì ƒm[ƒg‚Í “¹‹ï” ‚Ì ’†‚É Z‚ñ‚Å‚¢‚éB‰½‚©‚ğ •Ï‚¦‚é‚ÆA‚½‚Æ‚¦ ƒRƒ“ƒsƒ…[ƒ^‚ğ ƒIƒt‚µ‚Ä‚à Á‚¦‚¸‚É \216c‚é"
+IDS_MOVIES_NOTEBOOK,
+  //"Pictures"
+  "ƒsƒNƒ`ƒƒ"
+IDS_SENSORS_NOTEBOOK,
+  //"Sensors"
+  "ƒZƒ“ƒT["
+IDS_BIRDS_NOTEBOOK,
+  //"Useful\rBirds"
+  "–ğ‚É—§‚Â\r¬’¹"
+
+// This section is used to describe the pictures found in
+// notebook on page 2 of the main notebook.
+
+IDS_RECTANGLE_PAGE,
+  //"Rectangle"
+  L"’·\216lŠp"
+IDS_BALL_PAGE,
+  //"Ball"
+  "ƒ{[ƒ‹"
+IDS_PADDLE_PAGE,
+  //"Paddle"
+  "ƒpƒhƒ‹"
+IDS_PERSON_WALK_PAGE,
+  //"Person\rWalk"
+  "lŠÔ\r•à‚­"
+IDS_PERSON_DIZZY_PAGE1,
+  //"Person\rDizzy"
+   "lŠÔ\r–Ú‚ª‰ñ‚é"
+IDS_PERSON_DIZZY_PAGE2,
+  //"Person\rDizzy"
+   "lŠÔ\r–Ú‚ª‰ñ‚é"
+IDS_PERSON_DIZZY_PAGE3,
+  //"Person\rDizzy"
+  "lŠÔ\r–Ú‚ª‰ñ‚é"
+IDS_PERSON_SIT_PAGE1,
+  //"Person\rSit"
+  "lŠÔ\rÀ‚é"
+IDS_PERSON_SIT_PAGE2,
+  //"Person\rSit"
+  "lŠÔ\rÀ‚é"
+IDS_PERSON_SIT_PAGE3,
+  //"Person\rSit"
+  "lŠÔ\rÀ‚é"
+IDS_TOOLBOX_PAGE,
+  //"Toolbox"
+  "“¹‹ï” "
+IDS_HELIOCOPTER_PAGE,
+  //"Helicopter"
+  "ƒwƒŠƒRƒvƒ^["
+IDS_HELICOPTER_LANDING_PAGE,
+  //"Landing"
+  "’…—¤"
+IDS_EXPLOSION_PAGE,
+  //"Explosion"
+  "”š”­"
+IDS_BOMB_PAGE,
+  //"Bomb"
+  "”š’e"
+IDS_HOUSE_SIDE_PAGE1,
+  //"House\rSide"
+  "‰Æ\r‘¤–Ê"
+IDS_HOUSE_TOP_PAGE1,
+  //"House\rTop"
+  "‰Æ\rã–Ê"
+IDS_HOUSE_SIDE_PAGE2,
+  //"House\rSide"
+  "‰Æ\r‘¤–Ê"
+IDS_HOUSE_TOP_PAGE2,
+  //"House\rTop"
+  "‰Æ\rã–Ê"
+IDS_HOUSE_SIDE_PAGE3,
+  //"House\rSide"
+  "‰Æ\r‘¤–Ê"
+IDS_HOUSE_TOP_PAGE3,
+  //"House\rTop"
+  "‰Æ\rã–Ê"
+IDS_ROBOT_PAGE,
+  //"Robot"
+  "ƒƒ{ƒbƒg"
+IDS_NEST_PAGE,
+  //"Nest"
+  "’¹‚Ì‘ƒ"
+IDS_BIRD_PAGE,
+  //"Bird"
+  "¬’¹"
+IDS_MOUSE_PAGE,
+  //"Mouse"
+  "ƒlƒYƒ~"
+IDS_VACUUM_PAGE,
+  //"Vacuum"
+  "‚»‚¤‚¶‹@"
+IDS_EXPANDER_PAGE,
+  //"Pump"
+  "ƒ|ƒ“ƒv"
+IDS_COPIER_PAGE,
+  //"Wand"
+  "‚Â‚¦"
+IDS_MARTIAN_PAGE1,
+  //"Martian"
+  "‰Î¯l"
+IDS_MARTIAN_PAGE2,
+  //"Rocket"
+  "ƒƒPƒbƒg"
+IDS_TRUCK_PAGE1,
+  //"Truck"
+  "ƒgƒ‰ƒbƒN"
+IDS_TRUCK_PAGE2,
+  //"Truck"
+  "ƒgƒ‰ƒbƒN"
+IDS_TRUCK_PAGE3,
+  //"Truck"
+  "ƒgƒ‰ƒbƒN"
+IDS_THOUGHT_BUBBLE_PAGE,
+  //"Bubble"
+  L"\216vl"
+IDS_TALK_BALLOON_PAGE,
+  //"Balloon"
+  "‚«o‚µ"
+IDS_PLATE_PAGE, // changed 12/2/96
+  // this used to show a picture of a plate but now shows a picture of a button like those on Pumpy and Dusty
+  //"Button"
+  "ƒ{ƒ^ƒ“"
+IDS_PAD_PAGE,
+  //"Pad"
+  "ƒpƒbƒh"
+IDS_BOOK_PAGE,
+  //"Notebook"
+  "ƒm[ƒg"
+IDS_FRAME_PAGE,
+  //"Frame"
+  "ƒtƒŒ[ƒ€"
+IDS_ARM_PAGE,
+  //"Arm"
+  "‚¤‚Å"
+IDS_HAND_PAGE1,
+  //"Hand"
+  L"\216è"
+IDS_HAND_PAGE2,
+  //"Hand"
+  L"\216è"
+IDS_SWITCH_PAGE,
+  //"Switch"
+  "ƒXƒCƒbƒ`"
+IDS_WIRE_PAGE,
+  //"Wire"
+  "j‹à"
+IDS_FLOWER_PAGE,
+  //"Flower"
+  "‰Ô"
+IDS_TREE_PAGE,
+  //"Tree"
+  "–Ø"
+IDS_TRAFFIC_LIGHT_PAGE,
+  //"Traffic\rLight"
+  "M†"
+
+// This section labels the contents of the sensor
+// notebook found on page 4 of the main notebook.
+// Each sensor is in a box with one of these labels.
+
+IDS_MOUSE_X_SHORT_LABEL,
+  //"Mouse right"
+  "ƒ}ƒEƒX‰E"
+IDS_MOUSE_Y_SHORT_LABEL,
+  //"Mouse up"
+  "ƒ}ƒEƒXã"
+IDS_MOUSE_LEFT_BUTTON_SHORT_LABEL,
+  //"Left click"
+  "¶ƒNƒŠƒbƒN"
+IDS_MOUSE_MIDDLE_BUTTON_SHORT_LABEL,
+  //"Middle click"
+  "’†ƒNƒŠƒbƒN"
+IDS_MOUSE_RIGHT_BUTTON_SHORT_LABEL,
+  //"Right click"
+  "‰EƒNƒŠƒbƒN"
+IDS_MOUSE_LEFT_BUTTON_DOWN_SHORT_LABEL,
+  //"Left down"
+  "¶‚ğ‰Ÿ‚·"
+IDS_MOUSE_MIDDLE_BUTTON_DOWN_SHORT_LABEL,
+  //"Middle down"
+  "’†‚ğ‰Ÿ‚·"
+IDS_MOUSE_RIGHT_BUTTON_DOWN_SHORT_LABEL,
+  //"Right down"
+  "‰E‚ğ‰Ÿ‚·"
+IDS_KEYBOARD_BUTTON_SHORT_LABEL,
+  //"Key"
+  "ƒL["
+IDS_LAST_KEYSTROKE_SHORT_LABEL,
+  //"Last Key"
+  "ÅŒã‚ÌƒL["
+IDS_SHIFT_DOWN_SHORT_LABEL,
+  //"Shift down"
+  "ƒVƒtƒgƒL[‚ğ‰Ÿ‚·"
+IDS_CONTROL_DOWN_SHORT_LABEL,
+  //"Control down"
+  "ƒRƒ“ƒgƒ[ƒ‹ƒL[‚ğ‰Ÿ‚·"
+IDS_TIMER_SHORT_LABEL,
+  //"Timer"
+  "ƒ^ƒCƒ}["
+IDS_RANDOM_SHORT_LABEL,
+  //"Random"
+  "ƒ‰ƒ“ƒ_ƒ€‚É"
+IDS_HAND_VISIBLE_SHORT_LABEL,
+  //"Hand?" 
+  L"\216èH"
+IDS_CLIPBOARD_SHORT_LABEL,
+  //"Clipboard"
+  "ƒNƒŠƒbƒvƒ{[ƒh"
+IDS_AVENUE_SHORT_LABEL,
+  //"Avenue"
+  "ƒAƒxƒjƒ…["
+IDS_STREET_SHORT_LABEL,
+  //"Street" 
+  "ƒXƒgƒŠ[ƒg"
+
+IDS_SOUND_ON_SHORT_LABEL,
+  //"Sound?"
+  "ƒTƒEƒ“ƒhH"
+IDS_LETTER_SIZE_SHORT_LABEL,
+  //"Letter size"
+  "ƒeƒLƒXƒgƒTƒCƒY"
+IDS_READING_SPEED_SHORT_LABEL,
+  //"Talk speed"
+  "˜b‚·ƒXƒs[ƒh"
+IDS_MARTIAN_ADVICE_LEVEL_SHORT_LABEL,
+  //"Marty talk"
+  "ƒ}[ƒeƒB‚Ì˜b‚µ"
+IDS_PROGRAMMER_HEAD_SHORT_LABEL,
+  //"Your head"
+  "ŒN‚Ì“ª"
+IDS_SCREEN_SIZE_SHORT_LABEL,
+  //"Window size"
+  "ƒEƒCƒ“ƒh[ƒTƒCƒY"
+IDS_SYSTEM_SPEED_SHORT_LABEL,
+  //"ToonTalk speed"
+  "ToonTalk‚ÌƒXƒs[ƒh"
+IDS_CITY_SIZE_SHORT_LABEL
+  //"City size"
+  "ŠXƒTƒCƒY"
+IDS_SYSTEM_SLEEP_SHORT_LABEL,
+  // this label is for a remote control for customization that allows one to set a
+  // minimum time for each internal cycle (or animation frame).  Its main use is to
+  // make demos (DMO files) on a fast machine for playback on slower machines.  Could
+  // also be used to force ToonTalk to sleep to provide more CPU time for other processes.
+  //"Frame duration"
+  "ƒtƒŒ[ƒ€ŠÔŠu"
+IDS_MOUSE_BUTTONS_SHORT_LABEL,
+  //"Mouse buttons"
+  "ƒ}ƒEƒXƒ{ƒ^ƒ“"
+IDS_LEGO_SERIAL_PORT_SHORT_LABEL,
+  //"Serial port"
+  "ƒVƒŠƒAƒ‹ƒ|[ƒg"
+IDS_MARTIAN_FONT_SHORT_LABEL,
+  //"Marty's font"
+  "ƒ}[ƒeƒB‚ÌƒtƒHƒ“ƒg" 
+IDS_FILE_TO_PICTURE_SHORT_LABEL,
+  //"Picture in"
+  "ƒsƒNƒ`ƒƒ"
+IDS_FILE_TO_SOUND_SHORT_LABEL,
+  //"Sound in"
+  "ƒTƒEƒ“ƒh"
+
+// This section contains the short text objects
+// that describe the sensors in the notebook
+// of page 4 of the main notebook.  These
+// appear on the odd pages
+IDS_MOUSE_X_LONG_LABEL,
+  //"Mouse's\rRight\rSpeed"
+  "ƒ}ƒEƒX‚Ì\r‰E•ûŒü\rƒXƒs[ƒh"
+IDS_MOUSE_Y_LONG_LABEL,
+  //"Mouse's\rUp\rSpeed"
+  "ƒ}ƒEƒX‚Ì\rã•ûŒü\rƒXƒs[ƒh"
+IDS_MOUSE_LEFT_BUTTON_LONG_LABEL,
+  //"Mouse's\rLeft\rButton\rClicked"
+  "ƒNƒŠƒbƒN‚³‚ê‚½\rƒ}ƒEƒX‚Ì\r¶ƒ{ƒ^ƒ“"
+IDS_MOUSE_MIDDLE_BUTTON_LONG_LABEL,
+  //"Mouse's\rMiddle\rButton\rClicked"
+  "ƒNƒŠƒbƒN‚³‚ê‚½\rƒ}ƒEƒX‚Ì\r’†ƒ{ƒ^ƒ“"
+IDS_MOUSE_RIGHT_BUTTON_LONG_LABEL,
+  //"Mouse's\rRight\rButton\rClicked"
+  "ƒNƒŠƒbƒN‚³‚ê‚½\rƒ}ƒEƒX‚Ì\r‰Eƒ{ƒ^ƒ“"
+IDS_MOUSE_LEFT_BUTTON_DOWN_LONG_LABEL,
+  //"Mouse's\rLeft\rButton\rDown"
+  "‰Ÿ‚³‚ê‚½\rƒ}ƒEƒX‚Ì\r¶ƒ{ƒ^ƒ“"
+IDS_MOUSE_MIDDLE_BUTTON_DOWN_LONG_LABEL,
+  //"Mouse's\rMiddle\rButton\rDown"
+  "‰Ÿ‚³‚ê‚½\rƒ}ƒEƒX‚Ì\r’†ƒ{ƒ^ƒ“"
+IDS_MOUSE_RIGHT_BUTTON_DOWN_LONG_LABEL,
+  //"Mouse's\rRight\rButton\rDown"
+  "‰Ÿ‚³‚ê‚½\rƒ}ƒEƒX‚Ì\r‰Eƒ{ƒ^ƒ“"
+IDS_KEYBOARD_BUTTON_LONG_LABEL,
+  //"Key\rJust\rPressed"
+  "‚¿‚å‚¤‚Ç\r‰Ÿ‚³‚ê‚½\rƒL["
+IDS_LAST_KEYSTROKE_LONG_LABEL,
+  //"Last\rKeystroke"
+  "ÅŒã‚Ì\rƒL["
+IDS_SHIFT_DOWN_LONG_LABEL,
+  //"Shift\rButton\rDown"
+  "‰Ÿ‚³‚ê‚½\rƒVƒtƒg\rƒL["
+IDS_CONTROL_DOWN_LONG_LABEL,
+  //"Control\rButton\rDown"
+  "‰Ÿ‚³‚ê‚½\rƒRƒ“ƒgƒ[ƒ‹\rƒL["
+IDS_TIMER_LONG_LABEL,
+  //"Milli-\rseconds\rsince\rLast\rFrame"
+  "ÅŒã‚Ì\rƒtƒŒ[ƒ€‚©‚ç‚Ì\rŒo‰ßƒ~ƒŠ•b"
+IDS_RANDOM_LONG_LABEL,
+  //"Number\rbetween\r0 and 1000"
+  L"0‚©‚ç1000‚Ì\r”\216š"
+IDS_HAND_VISIBLE_LONG_LABEL,
+  //"Hand\rVisible?"
+  L"Œ©‚¦‚é\r\216èH"
+IDS_CLIPBOARD_LONG_LABEL,
+  //"To and from\rother\rPrograms"
+  "•Ê‚Ì\rƒvƒƒOƒ‰ƒ€\r"
+IDS_AVENUE_LONG_LABEL,
+  //"My\rAddress"
+  "‚í‚½‚µ‚Ì\rƒAƒhƒŒƒX"
+IDS_STREET_LONG_LABEL,
+  //"My\rAddress"
+  "‚í‚½‚µ‚Ì\rƒAƒhƒŒƒX"
+IDS_SOUND_ON_LONG_LABEL,
+  //"Sound\rOn?"
+  "ƒTƒEƒ“ƒh\r‚ ‚èH"
+IDS_LETTER_SIZE_LONG_LABEL,
+  //"Marty's\rLetters\rSize"
+  L"ƒ}[ƒeƒB‚Ì\r•¶\216šƒTƒCƒY"
+IDS_READING_SPEED_LONG_LABEL,
+  //"Marty's\rTalking\rSpeed"
+  "ƒ}[ƒeƒB‚Ì\r‰ï˜bƒXƒs[ƒh"
+IDS_MARTIAN_ADVICE_LEVEL_LONG_LABEL,
+  //"Marty's\rTalk\rLevel"
+  "ƒ}[ƒeƒB‚Ì\r‰ï˜bƒŒƒxƒ‹"
+IDS_PROGRAMMER_HEAD_LONG_LABEL,
+  //"Your\rHead's\rLooks"
+  L"ŒN‚Ì\r\216è‚Ì\rŠOŒ©"
+IDS_SCREEN_SIZE_LONG_LABEL,
+  //"Window\rSize"
+  "ƒEƒBƒ“ƒh[\rƒTƒCƒY"
+IDS_SYSTEM_SPEED_LONG_LABEL,
+  //"Speed of\rToonTalk"
+  "ToonTalk‚Ì\rƒXƒs[ƒh"
+IDS_CITY_SIZE_LONG_LABEL
+  //"City\rSize"
+  "ŠX‚Ì\r‘å‚«‚³"
+IDS_SYSTEM_SLEEP_LONG_LABEL,
+  //"Frame\rDuration"    
+  "ƒtƒŒ[ƒ€\rŠÔŠu"
+IDS_MOUSE_BUTTONS_LONG_LABEL,
+  //"Mouse\rButton\rUse"
+  L"ƒ}ƒEƒX\rƒ{ƒ^ƒ“\r\216g—p"
+IDS_LEGO_SERIAL_PORT_LONG_LABEL,
+  //"Serial\rPort"
+  "ƒVƒŠƒAƒ‹\rƒ|[ƒg"
+IDS_MARTIAN_FONT_LONG_LABEL,
+  //"Marty's\rFont"
+  "ƒ}[ƒeƒB‚Ì\rƒtƒHƒ“ƒg"
+IDS_FILE_TO_PICTURE_LONG_LABEL,
+  //"File to\rPicture"
+  "ƒsƒNƒ`ƒƒ‚Ö‚Ì\rƒtƒ@ƒCƒ‹"
+IDS_FILE_TO_SOUND_LONG_LABEL,
+  //"File to\rSound"
+  "ƒTƒEƒ“ƒh‚Ö‚Ì\rƒtƒ@ƒCƒ‹"
+
+// IDS_MATH_LABEL,
+//  "Math"
+// IDS_MOUSE_LABEL,
+//  "Mouse"
+// IDS_SERIAL_PORT_LABEL,
+//  "Serial port"
+// IDS_CLOCK_LABEL,
+//  "Clock"
+
+IDS_ANY_PICTURE,
+  //"any picture"
+  "‚Ç‚ñ‚ÈƒsƒNƒ`ƒƒ‚Å‚à"
+IDS_PICT_OF, // used to make "a picture of a tree"
+  //"a picture of"
+  " "
+IDS_PICT_OF2, // used after "a tree" above
+  //" "
+  "‚ÌƒsƒNƒ`ƒƒ"
+
+IDS_MOVIE_OF, // used to make "a movie of an explosion"
+  //"a movie of"
+  " "
+IDS_MOVIE_OF2, // used after "an explosion" above
+  //" "
+  "‚Ìƒ€[ƒr["
+IDS_BLANK_PICTURE_OF, // revised on 12/20 (replaces the old IDS_BLANK_PICTURE)
+  //"a blank picture of"
+  " "
+IDS_BLANK_PICTURE_OF2,
+  //" "
+  "‚Ìƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ"
+
+IDS_PICT_DESCRIPTION1, // As in "You are hold a picture with 3 pictures on top. "
+  //" pictures on top"
+  "•\‚É‚ ‚éƒsƒNƒ`ƒƒ"
+IDS_PICT_DESCRIPTION2, // As in "You are hold a picture with one picture on top. "
+  //" with one picture on top"
+  "•\‚É‚ ‚éˆê–‡‚ÌƒsƒNƒ`ƒƒ"
+// IDS_BEGIN_THE, // just for English
+//  "The "
+// IDS_AND_THE,
+//  "And the "
+IDS_ON_THE_BACK,
+  //"on the back"
+  "‚¤‚ç‚É"
+
+
+
+IDS_FLIPPING_MOVIE,
+  // this is used when Marty is describing a picture while it is being flipped over
+  // (It is named "movie" because I used to call pictures movies since some are animated.)
+  //"a flipping picture"
+  "‚¤‚ç‚ª‚¦‚µ‚É‚È‚é ƒsƒNƒ`ƒƒ"
+IDS_FLIP_SIDE_OF,
+  //"the flip side of " // E.g. "You are holding the flip side of a picture of a tree."
+  " "
+IDS_FLIP_SIDE_OF2, // used after "a picture of a tree" in the example above
+  //" "
+  "‚Ì‚¤‚ç‘¤"
+// IDS_PICT_BLANKED_TB_HELP,
+//  "Since the blank picture is in a thought bubble, the robot will be happy with any picture at the same place. "
+IDS_PICT_BLANKED_TB_HELP2,
+  //"Blank pictures are useful inside of thought bubbles. "
+  L"ƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ‚Í ƒƒ{ƒbƒg‚Ì \216vl‚Ì’†‚Å –ğ‚É—§‚ÂB"
+IDS_PICT_BLANKED_TB_HELP3,
+  //"The robot with a blank picture in his thought bubble will be happy with any picture in the same hole in his box. " // of the box he's working on. "
+  L"\216vl‚Ì’†‚É ƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ‚ğ \216‚Á‚½ ƒƒ{ƒbƒg‚ÍA‚»‚Ìƒ{ƒbƒNƒX‚Ì “¯‚¶ŒŠ‚É ‰½‚© ƒsƒNƒ`ƒƒ‚ª “ü‚é‚Æ Šì‚ÔB"
+IDS_PICT_ADDED_PICTURE_HELP,
+  //"Did you know that you can combine two pictures by dropping one picture on another? "
+  L"‚Ğ‚Æ‚Â‚Ì ƒsƒNƒ`ƒƒ‚Ì ã‚É •Ê‚Ì ƒsƒNƒ`ƒƒ‚ğ —\216‚Æ‚·‚ÆA‚»‚ê‚ª ˆê‚Â‚É ‚È‚é‚±‚Æ‚ğ ’m‚Á‚Ä‚½H"
+
+// IDS_PICT_ADDED_PICTURE_HELP2,
+// IDS_PICT_ADDED_PICTURE_HELP3,
+
+IDS_PICT_REMOVED_PICTURE_HELP,
+  //"You can remove a picture from a picture by using Dusty the Vacuum. "
+  L"‚»‚¤‚¶‹@‚Ì ƒ_ƒXƒeƒB‚ğ \216g‚¤‚Æ ƒsƒNƒ`ƒƒ‚ğ Á‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_PICT_REMOVED_PICTURE_HELP2,
+  //"You can call Dusty to you by pressing the F2 button. "
+  "F2ƒL[‚ğ ‰Ÿ‚·‚Æ ƒ_ƒXƒeƒB‚ğ ŒÄ‚Ño‚¹‚éB"
+IDS_PICT_CHANGED_KEY_HELP,
+  // as in "This picture is really 8 pictures. "
+  //"This picture is really "
+  L"‚±‚Ì ƒsƒNƒ`ƒƒ‚Í \216ÀÛ‚É‚Í"
+IDS_PICT_CHANGED_KEY_HELP2,
+  // as in " You can switch between them by pressing the +, -, or space button when selected or held. "
+  //"You can switch between them "
+  L"‚»‚ê‚ç‚ğ ‚¨Œİ‚¢‚É \216æ‚è‘Ö‚¦‚é‚É‚ÍA"
+IDS_PICT_CHANGED_KEY_HELP3,
+  // as in "Some pictures can be changed by pressing the +, -, or space button when selected or held. "
+  //"Some pictures can be changed "
+  //"•Ï‚¦‚é‚±‚Æ‚Ì‚Å‚«‚é ƒsƒNƒ`ƒƒ‚à ‚ ‚é"
+  "ƒsƒNƒ`ƒƒ‚ğ•Ï‚¦‚é‚É‚ÍA"
+IDS_PICT_CHANGED_KEY_HELP4,
+  //"by pressing the '+' or '-' button when selected or held. "
+  L"‘I‚ñ‚¾‚èA\216‚Á‚½‚è‚µ‚½\216‚É'+'ƒL[  ‚ ‚é‚¢‚Í'-'ƒL[‚ğ ‰Ÿ‚·B"
+IDS_MOVIES,
+  //" movies" // was  " pictures"
+  "ƒ€[ƒr["
+
+// The following 2 sentences are said by Marty when he is describing a "synthetic" picture.
+// I.e. a rectangle or circle but not a bitmap image of something
+// For these kinds of pictures "+" or "-" changes their color.
+// The first sentence is spoken in reference to a picture that is being held or pointed to
+// while the second one may just be a useful tip that Marty provides at some point
+// The third sentence always follows one of the following sentences.
+IDS_PICT_COLOR_KEY_HELP,   // changed on 8/23/97
+  //  "This picture is really a rectangle. "
+  //"This picture is a colored geometric shape. "
+  "‚±‚Ì ƒsƒNƒ`ƒƒ‚Í F•t‚«‚Ì Šô‰½Šw–Í—l‚¾B"
+IDS_PICT_COLOR_KEY_HELP2,
+  //  "Some pictures are just rectangles. "
+  //"Some pictures are colored geometric shapes. "
+  "F•t‚«‚Ì Šô‰½Šw–Í—l‚à ‚ ‚éB"
+IDS_PICT_COLOR_KEY_HELP3,
+  //"You can change the color by pushing the '+' or '-'. "
+  "'+'‚© '-' ƒL[‚ğ ‰Ÿ‚·‚Æ F‚ª •Ï‚¦‚ç‚éB"
+IDS_EXPANDER_ON_PICTURE_HELP,
+  //"Pumpy the Bike Pump can grow, shrink, and stretch pictures. "
+  "ƒpƒ“ƒs[‚Í ƒsƒNƒ`ƒƒ‚ğ ‘å‚«‚­‚µ‚½‚èAk‚Ü‚¹‚½‚èAˆø‚«L‚Î‚µ‚½‚è‚Å‚«‚éB"
+IDS_EXPANDER_ON_PICTURE_HELP2,
+  //"You can call for him by pressing the F3 button. "
+  "F3ƒ{ƒ^ƒ“‚ğ ‰Ÿ‚·‚Æ ”Ş‚ğ ŒÄ‚Ño‚¹‚éB"
+IDS_PICT_TOSSED_HELP,
+  // as in "You can give this a toss by pressing any mouse button while holding down the control button (labeled 'Ctrl'). "
+  // the word "this" should always refer to a picture of something.
+  //"You can give this a toss by pressing "
+  " "
+IDS_PICT_TOSSED_HELP_2,
+  //" "
+  "‚ğ ‰Ÿ‚·‚Æ ‚»‚ÌƒsƒNƒ`ƒƒ‚ğ “Š‚°‚é‚±‚Æ‚ª‚Å‚«‚é"
+IDS_PICT_TOSSED_HELP2,
+  //"You can toss a picture by pressing "		
+  " "
+IDS_PICT_TOSSED_HELP2_2,
+  //" "		
+  "‚ğ ‰Ÿ‚¹‚Î ƒsƒNƒ`ƒƒ‚ğ “Š‚°‚ç‚ê‚éB"
+
+IDS_PICT_FLIPPED_HELP,
+  // The idea is that pictures can have robots working on the back.
+  // The user can flip the picture over to add or remove robots and
+  // then flip it back over to watch it behave.
+  //"You can flip a picture over by pressing "
+  L"ƒsƒNƒ`ƒƒ‚ğ \216‚Á‚Ä‚¢‚é\216A"
+IDS_PICT_FLIPPED_HELP2,
+  //" when you are holding a picture. "
+  "‚ğ ‰Ÿ‚·‚Æ ƒsƒNƒ`ƒƒ‚ğ ‚¤‚ç‚ª‚¦‚¹‚éB"
+IDS_PICT_FLIPPED_BACK_HELP,
+  //"You can flip a picture back over by pressing "
+  L"‚¤‚ç‚ª‚¦‚µ‚Ì ƒsƒNƒ`ƒƒ‚ğ \216‚Á‚Ä‚¢‚é ‚Æ‚«A"
+IDS_AGAIN,
+  //" again"
+  "‚à‚¤ˆê“x"
+IDS_PICT_FLIPPED_BACK_HELP2,
+  //" when you are holding a flipped picture. "
+  "‚ğ ‰Ÿ‚·‚Æ ƒsƒNƒ`ƒƒ‚ğ Œ³‚É –ß‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+// IDS_PICT_NOTEBOOK_COPIED_HELP,
+//  "The little notebook on the back contains remote controls for this picture. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP2,
+//  "The back of a picture contains a little notebook of remote controls. "
+// IDS_PICT_NOTEBOOK_COPIED_HELP3,
+//  "If you try to pick it up, you'll get a copy. "
+IDS_PICT_PROGRAM_ADDED_HELP,
+  //"Robots can work on the back of pictures. "
+  "ƒƒ{ƒbƒg‚Í ƒsƒNƒ`ƒƒ‚Ì Œã‚ë‚Å “­‚¯‚éB"
+IDS_PICT_PROGRAM_ADDED_HELP2,
+  //"Just drop them on the back. And boxes for them to work on too. "
+  L"‚»‚ê‚ğ ‚¤‚ç‚ª‚í‚É —\216‚Æ‚µ‚Ä ‚²‚ç‚ñB‚»‚ê‚©‚çAƒƒ{ƒbƒg‚ª“­‚­‚½‚ß‚Ìƒ{ƒbƒNƒX‚à‚ËB"
+IDS_PICT_PROGRAM_ADDED_HELP3,
+  //"The robots will start working when you flip the picture back over and drop it. "
+  L"ƒsƒNƒ`ƒƒ‚ğ Œ³‚É –ß‚µA—\216‚Æ‚µ‚Ä‚â‚é‚ÆAƒƒ{ƒbƒg‚Í “­‚«\216n‚ß‚éB"
+IDS_PICT_PROGRAM_ADDED_HELP4,
+  //"That's how I make ""smart"" pictures that can bounce, explode, grow, or whatever I program them to do. "
+  "‚»‚¤‚·‚ê‚ÎA‚Í‚¸‚ñ‚¾‚èA”š”­‚µ‚½‚èA‘å‚«‚­‚È‚Á‚½‚èA‚È‚ñ‚Å‚à ƒvƒƒOƒ‰ƒ€‚Å‚«‚ée“ª‚Ì—Ç‚¢fƒsƒNƒ`ƒƒ‚ğ ì‚ê‚éB"
+IDS_PICT_PROGRAM_REMOVED_HELP, // changed 8/23/97
+  //  "Dusty can remove the stuff you added to the back of a picture. "
+  //"You can remove things from the back of a picture with your hand or with Dusty. "
+  L"ŒN‚Ì\216è‚©Aƒ_ƒXƒeƒB‚ğ \216g‚¤‚Æ ƒsƒNƒ`ƒƒ‚Ì Œã‚ë‚©‚ç ‚à‚Ì‚ğ Á‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_PICT_HELP_GIVEN_HELP,
+  //"I've told you all that I know about pictures. "
+  "ƒsƒNƒ`ƒƒ‚É‚Â‚¢‚Ä ‚í‚½‚µ‚Ì ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‘S•”˜b‚µ‚½B"
+IDS_PICT_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I've told you about pictures, then press F1 twice while pointing to a picture. "
+  L"ƒsƒNƒ`ƒƒ‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAƒsƒNƒ`ƒƒ‚ğ \216w‚µ‚½‚Ü‚Ü  F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_ABORT_CANT_FLIP_SCALE, // changed 8/23
+  //  "the mouse buttons do nothing when holding a scale"
+  // like all of the entries that start IDS_ABORT_
+  // the phrase is preceeded by "it didn't work because"
+  //"you can't change a scale by clicking mouse buttons"
+  "ƒ}ƒEƒX‚Ì ƒ{ƒ^ƒ“‚ğ ƒNƒŠƒbƒN‚µ‚Ä‚à ƒXƒP[ƒ‹‚Í •Ï‚¦‚ç‚ê‚È‚¢B"
+
+IDS_X_SHORT_LABEL,
+  //"Right"
+  "‰E"
+IDS_Y_SHORT_LABEL,
+  //"Up"
+  "ã"
+IDS_X_SPEED_SHORT_LABEL,
+  //"Right Speed"
+  "‰EƒXƒs[ƒh"
+IDS_Y_SPEED_SHORT_LABEL,
+  //"Up Speed"
+  "ãƒXƒs[ƒh"
+IDS_WIDTH_SHORT_LABEL,
+  //"Width"
+  "•"
+IDS_HEIGHT_SHORT_LABEL,
+  //"Height"
+  "‚‚³"
+IDS_PARAMETER_SHORT_LABEL,
+  // # as in short for "number"
+  //"Picture #"
+  "ƒsƒNƒ`ƒƒƒiƒ“ƒo["
+IDS_COLLIDE_SHORT_LABEL,
+  //"Collide?"
+  "‚µ‚å‚¤‚Æ‚ÂH"
+IDS_COLLIDE_WHO_SHORT_LABEL,
+  //"Hit Who?"
+  "‚¾‚ê‚ğ‚½‚½‚­H"
+// IDS_X_PENETRATION_SHORT_LABEL,
+//  "Right Inside"
+// IDS_Y_PENETRATION_SHORT_LABEL,
+//  "Up Inside"
+IDS_X_COLLIDE_SHORT_LABEL,
+  //"Right Collide?"
+  "‰E‚µ‚å‚¤‚Æ‚ÂH"
+IDS_Y_COLLIDE_SHORT_LABEL,
+  //"Up Collide?"
+  "ã‚µ‚å‚¤‚Æ‚ÂH"
+IDS_APPEARANCE_SHORT_LABEL,
+  //"Looks"
+  "ŠOŒ©"
+IDS_VISIBLE_SHORT_LABEL,
+  //"Visible?"
+  "Œ©‚¹‚éH"
+IDS_END_OF_ANIMATION_SHORT_LABEL,
+  //"Finished?"
+  "I‚í‚èH"
+IDS_GRASPED_SHORT_LABEL,
+  //"Held?"
+  L"\216‚Á‚½H"
+IDS_SELECTED_SHORT_LABEL,
+  //"Selected?"
+  "‘I‚ñ‚¾H" 
+IDS_RELEASED_SHORT_LABEL,
+  //"Dropped?"
+  L"—\216‚Æ‚µ‚½H"
+
+IDS_X_LONG_LABEL,
+  //"From\rLeft\rSide"
+  "¶‚©‚ç"
+IDS_Y_LONG_LABEL,
+  //"From\rBottom"
+  "‰º‚©‚ç"
+IDS_X_SPEED_LONG_LABEL,
+  //"Speed\rto\rRight"
+  "‰EƒXƒs[ƒh"
+IDS_Y_SPEED_LONG_LABEL,
+  //"Speed\rto\rTop"
+  "¶ƒXƒs[ƒh"
+IDS_WIDTH_LONG_LABEL,
+  //"Width"
+  "•"
+IDS_HEIGHT_LONG_LABEL,
+  //"Height"
+  "‚‚³"
+IDS_PARAMETER_LONG_LABEL,
+  //"Which\rPicture"
+  "‚Ç‚Ì\rƒsƒNƒ`ƒƒ"
+IDS_COLLIDE_LONG_LABEL,
+  //"Colliding?"
+  "‚µ‚å‚¤‚Æ‚Â‚µ‚Ä‚éH"
+IDS_COLLIDE_WHO_LONG_LABEL,
+  //"Hitting\rWho?"
+  "‚¾‚ê‚ğ\r‚½‚½‚¢‚Ä‚éH"
+// IDS_X_PENETRATION_LONG_LABEL,
+//  "Inside\rto Left"
+// IDS_Y_PENETRATION_LONG_LABEL,
+//  "Inside\rto Top"
+IDS_X_COLLIDE_LONG_LABEL,
+  //"Left\rRight\rhit?"
+  "¶‰EƒqƒbƒgH"
+IDS_Y_COLLIDE_LONG_LABEL,
+  //"Up\rDown\rhit?"
+  "ã‰ºƒqƒbƒgH"
+IDS_APPEARANCE_LONG_LABEL,
+  //"Looks"
+  "ŠOŒ©"
+IDS_VISIBLE_LONG_LABEL,
+  //"Visible?"
+  "Œ©‚¹‚éH"
+IDS_END_OF_ANIMATION_LONG_LABEL,
+  //"Animation\rFinished?"
+  "ƒAƒjƒ\rI—¹H"
+IDS_GRASPED_LONG_LABEL,
+  //"Held\rin\rHand?"
+  L"\216è‚Ì’†‚É\r‚ ‚éH"
+IDS_SELECTED_LONG_LABEL,
+  //"Selected?"
+  "‘I‘ğ‚µ‚½H"
+IDS_RELEASED_LONG_LABEL,
+  //"Just\rDropped?"
+  L"‚¿‚å‚¤‚Ç\r—\216‚Æ‚µ‚½H"
+
+IDS_ABORT_PICTURE_FLIPPED_OVER, // changed 8/23/97
+  //  "the picture is flipped over"
+  //"you can't add pictures to the backside of a picture"
+  "ƒsƒNƒ`ƒƒ‚Ì ‚¤‚ç‘¤‚É •Ê‚Ì ƒsƒNƒ`ƒƒ‚ğ ‰Á‚¦‚é‚±‚Æ‚Í ‚Å‚«‚È‚¢B"
+IDS_ABORT_PICTURE_NOT_FLIPPED_OVER,
+  //  "the picture is not flipped over"
+  //"you can only add robots and boxes to the backside of a picture"
+  "ƒsƒNƒ`ƒƒ‚Ì ‚¤‚ç‘¤‚É‚Í ƒƒ{ƒbƒg‚Æ ƒ{ƒbƒNƒX‚¾‚¯ ‰Á‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+
+IDS_ABORT_ROBOT_CANT_FIND_TOOL,
+  //"he had problems finding the tool to apply"
+  L"”Ş‚Í \216g‚¦‚é“¹‹ï‚ğ ’T‚¹‚È‚©‚Á‚½B"
+IDS_ABORT_ROBOT_CANT_RELEASE,
+  //"he tried to release something he wasn't holding"
+  L"”Ş‚Í \216‚Á‚Ä‚¢‚È‚¢ ‚à‚Ì‚ğ \216Ì‚Ä‚æ‚¤‚Æ‚µ‚½B"
+IDS_ROBOT_PROBLEMS_RELEASING,
+  //"he had problems releasing something"
+  L"”Ş‚Í ‰½‚©‚ğ \216Ì‚Ä‚æ‚¤‚Æ‚µ‚Ä ¢‚Á‚Ä‚¢‚½B" 
+IDS_ROBOT_DESCRIBE1,
+  // Marty says this when describing a fresh untrained robot
+  //"a robot without a thought bubble"
+  L"\216vl‚Ì ‚È‚¢ ƒƒ{ƒbƒg"
+IDS_ROBOT_DESCRIBE2,
+  // Marty says this when describing a trained robot
+  // this is followed by a description of the box in his thought bubble
+  //"a robot who wants "
+  "ƒƒ{ƒbƒg"
+IDS_ROBOT_DESCRIBE3,
+  // this follows a IDS_ROBOT_DESCRIBE2
+  // it is followed by a description of what he was trained to do
+  //"If given a box like that he will "
+  "‚»‚Ì‚æ‚¤‚È ƒ{ƒbƒNƒX‚ğ —^‚¦‚ç‚ê‚é‚Æ ”Ş‚Í"
+IDS_ROBOT_DESCRIBE32, // used after describing what he will do above
+   "‚·‚éB"
+IDS_ROBOT_DESCRIBE4,
+  //"Otherwise, he'll give the box to the robot behind him in line. " 
+  "‚¶‚á‚È‚¢‚Æ ”Ş‚Í Œã‚ë‚É •À‚ñ‚¾ƒƒ{ƒbƒg‚É ‚»‚Ìƒ{ƒbƒNƒX‚ğ ‚ ‚°‚Ä‚µ‚Ü‚¤B"
+IDS_STACK_OF, // revised 12/21/96
+  //"a stack of "
+  " "
+IDS_STACK_OF2, // used after describing what it is "a stack of"
+  //" "
+  L"‚Ì\216R"
+IDS_STACK_OF_DEFINITE, // added 12/21/96
+  //"the stack of "
+  " "
+IDS_STACK_OF_DEFINITE2,
+  //" "
+  L"‚Ì\216R"
+IDS_STACK_OF_PLURAL, // added 12/21/96
+  //"stacks of "
+  " "
+IDS_STACK_OF_PLURAL2,
+  //" "
+  L"‚Ì\216R"
+IDS_STACK_OF_PRONOUN, // added 12/21/96
+  //"it"
+  "‚»‚ê"
+
+IDS_PICK_UP_HELP,
+  // was  "You can pick up"
+  //"You can grab"  // changed since what follows might be "it" (or some noun phrase)
+  " "
+IDS_PICK_UP_HELP2,
+  //"by clicking" // used with the above to generate sentences like "You can grab a number by clicking any mouse on."
+  "‚ğ ‚Â‚©‚Ş ‚É‚Í"
+IDS_PICK_UP_HELP3,
+  //" " // used after "any mouse button" in the example above
+  "‚ğ ƒNƒŠƒbƒN‚·‚é"
+
+// IDS_HOLDING,  // noticed on 8/23/97 that it was no longer referred to
+//  " holding "
+IDS_DROP_HELP,
+  // for example - "you can drop it by clicking the left mouse button" (followed by IDS_PICK_UP_HELP3)
+  //"You can drop" // was  "You can drop it by pushing" 10/4/96
+  " "			
+
+IDS_ABORT_TEXT_ALREADY_EMPTY,
+  // If, for example, you type rubout on empty text pad, Marty will say something like
+  // "Sorry, it didn't work because the text is already empty."
+  //"the text is already empty"
+  "‚»‚ÌƒeƒLƒXƒg‚Í ‚à‚¤ ‚©‚ç‚¾"
+IDS_ABORT_TEXT_TOO_LONG,
+  // or if you are trying to increase a text beyond its maximum size (64K if running the 16 bit version of ToonTalk)
+  //"the text is too long"
+  "‚»‚ÌƒeƒLƒXƒg‚Í ’·‚·‚¬‚é"
+// IDS_TEXT_BLANKED_TB_HELP,
+//  "Since the empty text pad is in a thought bubble, the robot will be happy with any text at the same place. "
+IDS_TEXT_BLANKED_TB_HELP2,
+  //"Blank text pads are useful inside of thought bubbles. "
+  L"ƒuƒ‰ƒ“ƒNƒeƒLƒXƒgƒpƒbƒh‚Í ƒƒ{ƒbƒg‚Ì \216vl‚Ì’†‚Å –ğ‚É—§‚ÂB"
+IDS_TEXT_BLANKED_TB_HELP3,
+  //"The robot with a blank text pad in his thought bubble will be happy with any text on a pad in the same hole in his box. " //of the box it is working on. "
+  L"ƒuƒ‰ƒ“ƒNƒeƒLƒXƒgƒpƒbƒh‚ğ \216vl‚Ì’†‚É \216‚Á‚Ä‚¢‚é ƒƒ{ƒbƒg‚ÍA\216©•ª‚Ì ƒ{ƒbƒNƒX‚Ì “¯‚¶ ŒŠ‚É‰½‚© ƒeƒLƒXƒg‚ª ‚ ‚é‚Æ Šì‚ÔB"
+IDS_TEXT_LETTERS_ADDED_HELP,
+  //"You can add letters to that text pad by typing a letter. "
+  "ƒeƒLƒXƒg‚ğ ƒ^ƒCƒv‚·‚é‚Æ ƒeƒLƒXƒgƒpƒbƒh‚É ‰Á‚¦‚ç‚ê‚éB"
+IDS_TEXT_LETTERS_ADDED_HELP2,
+  // This is combined with the following phrase with either "the robot is" or "you are" in between
+  // depending upon whether you are training a robot or not
+  //"You can also add letters while "
+  " "
+IDS_TEXT_LETTERS_ADDED_HELP3,
+  //" holding a text pad. "
+  L"ƒeƒLƒXƒgƒpƒbƒh‚ğ \216‚Á‚Ä‚¢‚éŠÔ‚É ƒeƒLƒXƒg‚ğ ‰Á‚¦‚é‚±‚Æ‚à ‚Å‚«‚éB"
+IDS_TEXT_LETTERS_REMOVED_HELP,
+  //"You can remove letters by pushing the 'Backspace' key. "
+  "Back SpaceƒL[‚ğ ‰Ÿ‚·‚Æ ƒeƒLƒXƒg‚ğ Á‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_TEXT_MADE_MULTIPLE_LINES_HELP,
+  //"You can make the text go on another line by pressing the 'Enter' key. "
+  L"EnterƒL[‚ğ ‰Ÿ‚·‚Æ \216Ÿ‚Ìs‚É i‚ß‚éB"
+IDS_TEXT_CONCATENATION_HELP,
+  //"You can combine two text pads by dropping one on another. "
+  L"ƒeƒLƒXƒgƒpƒbƒh‚ğ •Ê‚Ì ƒeƒLƒXƒgƒpƒbƒh‚É —\216‚Æ‚·‚Æ ‚Â‚È‚°‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_TEXT_NUMBER_CONCATENATION_HELP,
+  // or the first if you drop it at that end...
+  //"If you drop a number on this, it'll be added to the last letter. " // changed 2/1 was the text. "
+  L"‚±‚Ìã‚É ”\216š‚ğ —\216‚Æ‚·‚Æ ÅŒã‚Ì ƒeƒLƒXƒg‚É ‚»‚ê‚ª ‰Á‚¦‚ç‚ê‚éB"
+IDS_TEXT_NUMBER_CONCATENATION_HELP2,
+  //"For example, if you drop "
+  "—á‚¦‚ÎA"
+IDS_TEXT_NUMBER_CONCATENATION_HELP3,
+  //" onto this, you will get '"
+  L"‚ğ ‚±‚Ìã‚É —\216‚Æ‚·‚ÆA"
+IDS_TEXT_NUMBER_CONCATENATION_HELP4,
+  //"'. "
+  "‚ª ‚Å‚«‚éB" 
+  // new semantics so following changed 8/23/96
+IDS_TEXT_NUMBER_CONCATENATION_HELP5,
+  //"If you drop a number on a text pad, it'll be added to the last letter. "
+  L"ƒeƒLƒXƒgƒpƒbƒh‚Ì ã‚É ”\216š‚ğ —\216‚Æ‚·‚Æ ÅŒã‚Ì ƒeƒLƒXƒg‚É ‚»‚ê‚ª ‰Á‚¦‚ç‚ê‚éB"
+IDS_TEXT_NUMBER_CONCATENATION_HELP6,
+  //"For example, dropping 2 on ABC will result in ABE. " // example changed 2/1
+  L"—á‚¦‚ÎAABC‚Ì ã‚É ‚Q‚ğ —\216‚Æ‚·‚Æ ABE‚Æ ‚È‚éB"
+IDS_TEXT_HELP_GIVEN_HELP,
+  //"I've told you all that I know about text pads. "
+  "ƒeƒLƒXƒgƒpƒbƒh‚É‚Â‚¢‚Ä ‚í‚½‚µ‚ª ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‘S•”˜b‚µ‚½B"
+IDS_TEXT_HELP_GIVEN_HELP2,
+  //"If you want me to tell you again all I know about text pads, then press F1 twice while pointing to a text pad. "
+  L"ƒeƒLƒXƒgƒpƒbƒh‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAƒeƒLƒXƒgƒpƒbƒh‚ğ \216w‚µ‚½‚Ü‚Ü F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_ABORT_TEXT_BAD_INDEX,
+  //"the number is bigger than the number of letters on the text pad"
+  L"‚»‚Ì”\216š‚Í ƒeƒLƒXƒgƒpƒbƒh‚Ì ƒeƒLƒXƒg”‚æ‚è ‘å‚«‚¢B"
+
+ // the following are no longer used since there is no longer a way to separate
+ // a thought bubble from a robot and get a description of just the thought bubble
+ // and describing a robot doesn't use this.
+IDS_EMPTY_THOUGHT_BUBBLE_DESCRIPTION,
+  //"empty thought bubble"
+  L"‚©‚ç‚Ì \216vl"
+IDS_THOUGHT_BUBBLE_DESCRIPTION,
+  // followed by a description of a box inside a thought bubble
+  //"thought bubble containing "
+  L"\216vl"				// *************************************************
+
+// IDS_GENERIC_TOOL_HELP,
+//  "I'll tell you more about how to use "
+// IDS_GENERIC_TOOL_HELP2,
+//  " if you pick it up. "
+IDS_EXPANDER_DESCRIPTION,
+  //"Pumpy the Bike Pump"
+  L"\216©“]\216Ô‚Ì ‹ó‹C“ü‚ê ƒpƒ“ƒs["
+IDS_EXPANDER_DESCRIPTION1,
+  //"Pumpy"
+  "ƒpƒ“ƒs["
+IDS_EXPANDER_GREW_ITEM_HELP,
+  //"Pumpy can make things big or small, tall or short, and wide or thin. " // was "Pumpy can change the size of the item he is over" 10/4
+  "ƒpƒ“ƒs[‚Í ‚à‚Ì‚ğ‘å‚«‚­A¬‚³‚­A‚‚­A’á‚­AL‚­A‹·‚­‚·‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_EXPANDER_GREW_ITEM_HELP2,  // only for old input scheme
+  //"If you hold down "
+  "‚»‚ê‚ğ ~‚ë‚·‚Æ"
+IDS_EXPANDER_GREW_ITEM_HELP3,
+  //"Pumpy will make"
+  "ƒpƒ“ƒs[‚Í"
+// IDS_BIGGER,
+//  " bigger"
+// IDS_EXPANDER_SHRUNK_ITEM_HELP,
+//  "If you hold down "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP2,
+//  " Pumpy will make "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP3,
+//  "But next time you push it down "
+// IDS_EXPANDER_SHRUNK_ITEM_HELP4,
+//  " will get smaller. "
+// IDS_EXPANDER_GREW_Y_HELP,
+//  "If you press"
+//// IDS_EXPANDER_GREW_Y_HELP2,
+
+// IDS_EXPANDER_GREW_Y_HELP3,
+//  "will just get taller"
+//// IDS_EXPANDER_GREW_X_HELP,
+
+//// IDS_EXPANDER_GREW_X_HELP2,
+
+//// IDS_EXPANDER_GREW_X_HELP3,
+
+// IDS_EXPANDER_GREW_X_HELP4,
+//  "But next time it'll get wider instead. "
+IDS_EXPANDER_CALLED_HELP,
+  //"If you ever want Pumpy to jump into "
+  " "
+IDS_EXPANDER_CALLED_HELP2,
+  //" just call him by pressing the F3 button. " // hand removed
+  "‚É ƒpƒ“ƒs[‚ğ ŒÄ‚Ño‚µ‚½‚¯‚ê‚ÎAF3ƒL[‚ğ ‰Ÿ‚·‚ñ‚¾B"
+IDS_EXPANDER_CALLED_HELP3,
+  //"He'll really hurry if you push F3 twice. "
+  "F3ƒL[‚ğ “ñ“x ‰Ÿ‚·‚Æ ”Ş‚Í ‚·‚®‚É ‚â‚Á‚Ä—ˆ‚éB"
+IDS_EXPANDER_HELP_GIVEN_HELP,
+  //"I've told you all I can about Pumpy. "
+  "ƒpƒ“ƒs[‚É‚Â‚¢‚Ä ‚í‚½‚µ‚ª ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‘S•”˜b‚µ‚½B"
+IDS_EXPANDER_HELP_GIVEN_HELP2,
+  //"I'll tell you all I've told you about Pumpy over again if you press F1 twice while holding Pumpy. "
+  L"ƒpƒ“ƒs[‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAƒpƒ“ƒs[‚ğ \216w‚µ‚½‚Ü‚Ü F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_VACUUM_DESCRIPTION,
+  //"Dusty the Vacuum"
+  "‚»‚¤‚¶‹@ ƒ_ƒXƒeƒB"
+IDS_VACUUM_DESCRIPTION1,
+  //"Dusty"
+  "ƒ_ƒXƒeƒB"
+IDS_VACUUM_RESTORE_HELP,
+  // The following are combined to form sentences like
+  // "Dusty can restore the last thing sucked up if you click on the right mouse button."  or
+  // "Dusty can restore the number if you click on the right mouse button."
+  //"Dusty can restore "
+  "ƒ_ƒXƒeƒB‚ÍA"
+IDS_VACUUM_RESTORE_HELP2,
+  //"the last thing sucked up"
+  //"‹z‚¢‚ñ‚¾‚à‚Ì‚ğ ‚Í‚«‚¾‚·‚±‚Æ‚ª ‚Å‚«‚éA"
+  " "
+IDS_VACUUM_RESTORE_HELP3,
+  //"if you click on"
+  "‚ğ ƒNƒŠƒbƒN ‚·‚ê‚ÎAÅŒã‚É ‹z‚¢‚ñ‚¾ ‚à‚Ì‚ğ ‚Í‚«‚¾‚·‚±‚Æ‚ª ‚Å‚«‚éA"		
+IDS_VACUUM_RESTORE_HELP4,
+  //" "
+  "‚ğ ƒNƒŠƒbƒN ‚·‚ê‚ÎAÅŒã‚É ‹z‚¢‚ñ‚¾ ‚à‚Ì‚ğ ‚Í‚«‚¾‚·‚±‚Æ‚ª ‚Å‚«‚éA"		
+// IDS_VACUUM_RESTORE_HELP4, 10/4
+//  "Dusty spits things out when you try to suck up the floor. "
+IDS_VACUUM_BLANK_HELP,
+  // as in  "Dusty will erase the number if you click on any mouse button. "
+  //"Dusty will erase " // was will blank
+  "ƒ_ƒXƒeƒB‚ÍA"
+IDS_VACUUM_BLANK_HELP2, // 10/4
+  //  "a text or number pad or an empty box under it"
+  //"something under his nose" 
+  "”Ş‚Ì •@‚Ì ‰º‚É ‚ ‚é‚à‚Ì‚ğ Á‚·¤"
+IDS_VACUUM_BLANK_HELP3,
+  //"if you click on" // was "blank if you click on"
+  "ƒNƒŠƒbƒN‚·‚é ƒL[‚Í"						
+IDS_VACUUM_SUCK_HELP2, // this is now joined with IDS_VACUUM_SUCK_HELP4
+  //" Dusty will suck up "
+  //"ƒ_ƒXƒeƒB‚ÍA”Ş‚Ì ‰º‚É ‚ ‚é"
+  "‚ğ ƒNƒŠƒbƒN ‚·‚é‚Æ ƒ_ƒXƒeƒB‚ÍA”Ş‚Ì ‰º‚É ‚ ‚é"
+// IDS_VACUUM_SUCK_HELP3,
+IDS_VACUUM_SUCK_HELP4,
+  //"what's under him. "
+  "‚à‚Ì‚ğ ‹z‚¢‚ŞB"
+
+// IDS_VACUUM_SUCK_ITEM_HELP,
+//  "If you click down on "
+// IDS_VACUUM_SUCK_ITEM_HELP2,
+//  " Dusty will suck up "
+// IDS_VACUUM_SUCK_ITEM_HELP3,
+//  "He'll restore it if you try to suck up the floor. "
+// IDS_OUT_OF,
+//  " out of "
+IDS_VACUUM_CALLED_HELP,
+  //"If you ever want Dusty to come and run into "
+  " "
+IDS_VACUUM_CALLED_HELP2,
+  //" just push the F2 button. " // hand removed
+  "‚É ƒ_ƒXƒeƒB‚ğ ŒÄ‚Ño‚µ‚½‚¯‚ê‚ÎAF2ƒL[‚ğ ‰Ÿ‚·‚ñ‚¾B"
+IDS_VACUUM_CALLED_HELP3,
+  //"If you push F2 twice he'll come really fast. "
+  "F2ƒL[‚ğ “ñ“x ‰Ÿ‚µ‚½‚ç ”Ş‚Í ‚·‚®‚É ‚â‚Á‚Ä—ˆ‚éB"
+IDS_VACUUM_HELP_GIVEN_HELP,
+  //"I've told you all I know about Dusty. "
+  "ƒ_ƒXƒeƒB‚É‚Â‚¢‚Ä ‚í‚½‚µ‚ª ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‘S•”˜b‚µ‚½B"
+IDS_VACUUM_HELP_GIVEN_HELP2,
+  //"I sometimes use him to move things between houses. "
+  L"‚í‚½‚µ‚Í \216X ”Ş‚ğ ‰Æ‚Æ‰Æ‚ÌŠÔ‚Å ‚à‚Ì‚ğ “®‚©‚·‚Ì‚É \216g‚¤B"
+IDS_VACUUM_HELP_GIVEN_HELP3,
+  //"If you want me to tell you all about Dusty over again, just press F1 twice. "
+  "ƒ_ƒXƒeƒB‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAF1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_COPIER_APPLIED_HELP,
+  //"You can copy "
+  " "
+IDS_COPIER_APPLIED_HELP2,
+  //"what is under the tip of the wand"
+  " "
+IDS_COPIER_APPLIED_HELP3,
+  //" by clicking on "
+  " "
+IDS_COPIER_APPLIED_HELP3_2,
+  //" by clicking on "
+  "‚ğ ƒNƒŠƒbƒN ‚·‚ê‚ÎA‚Â‚¦‚Ì æ‚Ì ‰º‚É ‚ ‚é‚à‚Ì‚ğ ƒRƒs[‚Å‚«‚é"
+IDS_COPIER_RELEASED_HELP,
+  // as in "You can set down the box by clicking on any mouse button. "
+  //"You can set down "
+  " "
+IDS_COPIER_RELEASED_HELP2,
+  // as in "You can set down what you copy by clicking on any mouse button. "
+  //"what you copy"
+  " "
+IDS_COPIER_RELEASED_HELP3,
+  //" by clicking on"
+  " "	
+IDS_COPIER_RELEASED_HELP3_2,
+  //" by clicking on"
+  "‚ğ ƒNƒŠƒbƒN ‚·‚ê‚ÎAƒRƒs[‚µ‚½‚à‚Ì‚ğ ‚¨‚ë‚·‚±‚Æ‚ª ‚Å‚«‚é"	
+IDS_COPIER_RELEASED_HELP4,
+  //"A second click will set the wand down. "
+  "“ñ“x‚ß‚Ì ƒNƒŠƒbƒN‚Å ‚Â‚¦‚ğ ‚¨‚ë‚·B"
+IDS_COPIER_CALLED_HELP,
+  //"If you ever want the magic wand to float into "
+  " "
+IDS_COPIER_CALLED_HELP2,
+  //" just call it by pressing the F5 button. "  // hand removed
+  "‚É –‚–@‚Ì‚Â‚¦‚ğ ŒÄ‚Ño‚µ‚½‚¯‚ê‚ÎAF5ƒL[‚ğ ‰Ÿ‚·‚ñ‚¾B"
+IDS_COPIER_CALLED_HELP3,
+  //"It'll really hurry if you push F5 twice. "
+  "F5ƒL[‚ğ “ñ“x ‰Ÿ‚·‚Æ ‚·‚®‚É ‚â‚Á‚Ä—ˆ‚éB"
+IDS_COPIER_HELP_GIVEN_HELP,
+  //"That's about all I can tell you about magic wands. "
+  "‚±‚ê‚ª –‚–@‚Ì‚Â‚¦‚É‚Â‚¢‚Ä ’m‚Á‚Ä‚¢‚é‚±‚Æ ‚·‚×‚Ä‚¾B"
+IDS_COPIER_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I've told you about wands, just push F1 twice. "
+  "–‚–@‚Ì‚Â‚¦‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAF1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"  
+
+IDS_TRUCK_RECEIVED_CARGO_HELP,
+  //"After you load up a truck with a robot and box for him to work on, the truck's crew will drive off and build a new house. "
+  L"ƒgƒ‰ƒbƒN‚É ƒƒ{ƒbƒg‚Æ ƒ{ƒbƒNƒX‚ğ Ï‚İ‚ñ‚¾ŒãAƒgƒ‰ƒbƒN‚Ì ƒƒ“ƒo[‚Í ƒgƒ‰ƒbƒN‚ğ ”­\216Ô‚³‚¹AV‚µ‚¢‰Æ‚ğ Œš‚Ä\216n‚ß‚éB" 
+IDS_TRUCK_RECEIVED_ROBOT_HELP,
+  //"If you drop a robot or a team of robots on the truck, they'll be put on the floor of the new house. "
+  L"ƒgƒ‰ƒbƒN‚Ì ã‚É ƒƒ{ƒbƒg‚ğ —\216‚Æ‚·‚ÆA”Ş‚ç‚Í V‚µ‚¢‰Æ‚Ì °‚Ìã‚É ‚¨‚©‚ê‚éB"
+IDS_TRUCK_RECEIVED_CUBBY_HELP,
+  //"If you drop a box on the truck, it'll be put on the floor of the new house. "
+  L"ƒgƒ‰ƒbƒN‚É ƒ{ƒbƒNƒX‚ğ —\216‚Æ‚·‚ÆA‚»‚ê‚Í V‚µ‚¢‰Æ‚Ì °‚Ìã‚É ‚¨‚©‚ê‚éB"
+IDS_TRUCK_RECEIVED_HOUSE_PICTURE_HELP,
+  //"If you drop a picture of a house on the truck, then the truck's crew will build a house that looks like that. You can find pictures of houses in the notebook on page 2 of the main notebook. "
+  L"ƒgƒ‰ƒbƒN‚Ì ã‚É ‰Æ‚Ì ƒsƒNƒ`ƒƒ‚ğ —\216‚Æ‚·‚ÆAƒgƒ‰ƒbƒN‚Ì ƒƒ“ƒo[‚Í ‚»‚ÌƒsƒNƒ`ƒƒ‚É \216—‚½‰Æ‚ğ ì‚éB‰Æ‚Ì ƒsƒNƒ`ƒƒ‚Í ƒƒCƒ“ƒm[ƒg‚Ì 2ƒy[ƒW‚É ‚ ‚éB"
+IDS_TRUCK_RECEIVED_ADDRESS_HELP,
+  //"If you drop an Avenue number or Street number on the truck, the truck's crew will build a house as close to that address they can. If you don't give them an address they'll build it as near by as possible. "
+  L"ƒgƒ‰ƒbƒN‚É ƒAƒxƒjƒ…[‚Æ‚© ƒXƒgƒŠ[ƒg‚Ì”Ô†‚ğ —\216‚Æ‚·‚ÆAƒgƒ‰ƒbƒN‚Ì ƒƒ“ƒo[‚Í ‚»‚ÌZŠ‚É ˆê”Ô‹ß‚¢Š‚É ‰Æ‚ğ Œš‚Ä‚éBZŠ‚ğ ‹³‚¦‚È‚¢‚Æ ”Ş‚ç‚Í ˆê”Ô‹ß‚¢‚Æ‚±‚ë‚É ‰Æ‚ğ Œš‚Ä‚éB"
+IDS_TRUCK_RECEIVED_ADDRESS_HELP2,
+  //"You can find the address of the house you're in, in the notebook on page 4 of your notebook. An address will change if you drop a number on it. "  // was type "of it"
+  L"\216©•ª‚Ì ‚¢‚éZŠ‚Í ŒN‚Ìƒm[ƒg‚Ì 4ƒy[ƒW‚Å ‚í‚©‚éBZŠ‚Í ‚»‚Ìã‚É ”\216š‚ğ —\216‚Æ‚·‚Æ •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+
+IDS_TRUCK_RECEIVED_ROBOT_HELP2,
+  //"If you drop a robot or line of robots on the truck, the crew will put the robots on the floor of the new house and give them the box from the truck. "
+  L"ƒgƒ‰ƒbƒN‚Ì ã‚É ƒƒ{ƒbƒg‚© ƒƒ{ƒbƒg‚Ì —ñ‚ğ —\216‚Æ‚·‚Æ ƒgƒ‰ƒbƒN‚Ì ƒƒ“ƒo[‚Í V‚µ‚¢‰Æ‚Ì °‚É ‚»‚Ìƒƒ{ƒbƒg’B‚ğ ‚¨‚­B"
+IDS_TRUCKS_CARGO_REMOVED_HELP,
+  //"You can take stuff out of a truck by hand or with Dusty's help. "
+  L"ƒgƒ‰ƒbƒN‚©‚ç ‚à‚Ì‚ğ \216æ‚èo‚·‚É‚Í \216è‚© ƒ_ƒXƒeƒB‚ğ \216g‚¤B"
+IDS_TRUCK_HELP_GIVEN_HELP,
+  //"I've told you all I that I know about trucks. "
+  "ƒgƒ‰ƒbƒN‚É‚Â‚¢‚Ä ‚í‚½‚µ‚ª ’m‚Á‚Ä‚¢‚é‚±‚Æ‚ğ ‘S•”˜b‚µ‚½B"
+IDS_TRUCK_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I've told you about trucks, then press F1 twice while pointing to a truck. "
+  L"ƒgƒ‰ƒbƒN‚Ì ‚±‚Æ‚ğ ‚à‚¤ˆê“x ˜b‚µ‚Ä‚Ù‚µ‚©‚Á‚½‚çAƒgƒ‰ƒbƒN‚ğ \216w‚µ‚½‚Ü‚Ü F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+
+IDS_WELCOME_MESSAGE,
+  "(c) 1992-2000. Ken Kahn. All rights reserved."
+IDS_VACUUM_SUCK_GENERIC,
+  //"To use Dusty move his mouth over something. "
+  L"ƒ_ƒXƒeƒB‚ğ \216g‚¤‚É‚ÍA”Ş‚ÌŒû‚ğ ‰½‚©‚Ì ã‚É “®‚©‚·‚ñ‚¾B"
+IDS_EXAMPLES_NOTEBOOK,
+  //"Examples"
+  "Œ©–{"
+IDS_SAID_ENOUGH,
+  //"... I've said enough. "
+  "DDD‚í‚½‚µ‚Í \•ª˜b‚µ‚½‚æB" 
+// IDS_HIDE_HAND_HELP1,
+//  "The mouse sensor gets confused by your hand. "
+// IDS_HIDE_HAND_HELP2,                         
+//  "Press F9 to hide your hand and then the mouse sensors will start working. "
+// IDS_HIDE_HAND_HELP3,
+//  "Pressing F9 again will bring your hand back. "
+
+IDS_SCALE_TO_LEFT,
+  //"a scale tipped to the left"
+  "¶‚ÉŒX‚¢‚½ƒXƒP[ƒ‹"
+IDS_SCALE_TO_RIGHT,
+  //"a scale tipped to the right"
+  "‰E‚ÉŒX‚¢‚½ƒXƒP[ƒ‹"
+IDS_SCALE_BALANCED,
+  //"a balanced scale"
+  "ƒoƒ‰ƒ“ƒX‚Ì‚Æ‚ê‚½ƒXƒP[ƒ‹"
+IDS_SCALE_MOVING,
+  //"a tottering scale"
+  "—h‚ê‚Ä‚¢‚éƒXƒP[ƒ‹"
+IDS_SCALE_USE1,
+  //"Scales can be used to compare things. "
+  L"ƒXƒP[ƒ‹‚Í‚à‚Ì‚ğ”ä‚×‚é‚Ì‚É\216g‚¤B"
+IDS_SCALE_USE2,
+  //"To try it out connect three boxes together. Then put a scale in the middle hole. "
+  L"\216\216‚µ‚Ä‚İ‚é‚É‚Í 3ŒÂ‚Ì ƒ{ƒbƒNƒX‚ğ ‚­‚Á‚Â‚¯‚ÄAƒXƒP[ƒ‹‚ğ ‚Ü‚ñ’†‚Ì ŒŠ‚É “ü‚ê‚é‚ñ‚¾B"
+IDS_SCALE_USE3,
+  //"Drop numbers in the holes next to the scale and watch how the scale tilts. "
+  L"ƒXƒP[ƒ‹‚Ì ‚Æ‚È‚è‚Ì ŒŠ‚É ”\216š‚ğ —\216‚Æ‚µ‚Ä ƒXƒP[ƒ‹‚ª ‚Ç‚¤‚È‚é‚©ŠÏ\216@‚µ‚Ä‚²‚ç‚ñB"
+IDS_SCALE_USE4,
+  //"It works to compare text too. "
+  L"ƒXƒP[ƒ‹‚Í ƒeƒLƒXƒg‚ğ ”ä‚×‚é‚Ì‚É‚à \216g‚¦‚éB"
+IDS_SCALE_KEYBOARD_HELP,
+  //"If a scale is tottering, you can change which way the scale tilts by pressing the space button. "
+  "ƒXƒP[ƒ‹‚ª ‚®‚ç‚®‚ç‚µ‚Ä‚¢‚½‚çAƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚µ‚Ä ‚Ç‚¿‚ç‚Ì•û‚É ‚©‚½‚Ş‚©‚¹‚é‚© •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+
+IDS_ROBOT_TRAIN1,
+  //"Here's what I do when I want to teach a robot something. "
+  L"‚±‚ê‚ª ƒƒ{ƒbƒg‚É ‰½‚© ‹³‚¦‚½‚¢\216‚É ‚â‚é‚±‚Æ‚¾B"
+IDS_ROBOT_TRAIN2,
+  //"I start by giving him the kind of box I want him to work on. "
+  L"‚Ü‚¸ ƒƒ{ƒbƒg‚É \216d\216–‚ğ ‚·‚é‚½‚ß‚Ì ƒ{ƒbƒNƒX‚ğ —^‚¦‚éB" 
+IDS_ROBOT_TRAIN3,
+  //"The robot will then imagine a world with just that box and Tooly the Toolbox and friends in it. "
+  L"ƒƒ{ƒbƒg‚Í ƒ{ƒbƒNƒX‚Æ “¹‹ï” ‚Ì ƒc[ƒŠƒB‚Æ ‚»‚Ì’†‚Ì —F’B‚¾‚¯‚ğ \216g‚Á‚Ä¢ŠE‚ğ ƒCƒ[ƒW‚·‚éB"
+IDS_ROBOT_TRAIN4,
+  //"I then make the robot do whatever I want him to do. Like change the box or load up a truck. "
+  L"‚»‚ê‚©‚çA‚â‚Á‚Ä‚Ù‚µ‚¢‚±‚Æ‚ğ ‚È‚ñ‚Å‚à ƒƒ{ƒbƒg‚É ‚â‚ç‚¹‚é‚ñ‚¾Bƒ{ƒbƒNƒX‚ğ \216æ‚è‘Ö‚¦‚é‚Æ‚©Aƒgƒ‰ƒbƒN‚É ‰×•¨‚ğ Ï‚Ş‚Æ‚©‚ËB"
+IDS_ROBOT_TRAIN5,
+  //"When I'm done, I press the 'Escape' button and the robot can now repeat what I taught him. "
+  "I‚í‚Á‚½‚ç EscƒL[‚ğ ‰Ÿ‚·B‚·‚é‚Æ ƒƒ{ƒbƒg‚Í ‹³‚¦‚½‚±‚Æ‚ğ ŒJ‚è•Ô‚µ‚Ä ‚â‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_ROBOT_ACCEPTS,
+  //"This robot will only accept "
+  L"‚±‚Ìƒƒ{ƒbƒg‚Í ‚½‚¾ \216ó‚¯\216æ‚é‚¾‚¯‚¾‚æB"
+IDS_ROBOT_ACCEPTS2,
+  //"A robot will only accept a box if it matches his thoughts. "
+  L"ƒƒ{ƒbƒg‚Í \216©•ª‚Ì l‚¦‚É ‡‚Á‚½\216‚¾‚¯ ƒ{ƒbƒNƒX‚ğ \216ó‚¯\216æ‚éB"
+IDS_ROBOT_LESS_FUSSY1,
+  //  "You can make him less fussy by using Dusty on his thought bubble. "
+  //"You can make him less fussy by using Dusty to remove things from his thought bubble. " // clearer version 12/23
+  L"ƒƒ{ƒbƒg‚Ì \216vl‚Ì’†‚É ‚ ‚é‚à‚Ì‚ğ ƒ_ƒXƒeƒB‚Å Á‚·‚ÆAƒƒ{ƒbƒg‚Ì ƒ‚ƒ„ƒ‚ƒ„‚ğ Œ¸‚ç‚¹‚éB"
+  // "his" refers to a robot
+IDS_ROBOT_LESS_FUSSY2,
+  //"Anything in his thoughts has to be in the box before he'll work on it. " 
+  L"ƒƒ{ƒbƒg‚Ì l‚¦‚é‚±‚Æ‚Í ‚È‚ñ‚Å‚àA\216d\216–‚ğ ‚·‚é‘O‚É ƒ{ƒbƒNƒX‚Ì ’†‚É ‚È‚¯‚ê‚Î ‚¢‚¯‚È‚¢B"
+IDS_ROBOT_LESS_FUSSY3,
+  //"But if his thought bubble is missing anything, then he'll be happy with anything in the same place in the box. "
+  L"\216vl‚Ì’†‚É ‰½‚©‚½‚è‚È‚¢\216A‚»‚Ìƒ{ƒbƒNƒX‚Ì “¯‚¶êŠ‚É ‚ ‚é‚à‚Ì‚È‚ç ‚È‚ñ‚Å‚àŠì‚ÔB"
+IDS_ROBOT_TRY_OUT1,
+  //"I usually try out a robot after training him. "
+  L"‚Ó‚Â‚¤‚Í ‹³ˆç‚µ‚½‚ ‚ÆAƒƒ{ƒbƒg‚ğ \216\216‚·‚ñ‚¾B"
+IDS_ROBOT_TRY_OUT2,
+  //"Just drop a box on him that he'll like and watch him go. "
+  L"”Ş‚Ì ã‚ÉA”Ş‚Ì ‹C‚É“ü‚è‚»‚¤‚È ƒ{ƒbƒNƒX‚ğ —\216‚Æ‚µA”Ş‚ª ‚â‚é‚±‚Æ‚ğ Œ©‚é‚ñ‚¾B"
+IDS_ROBOT_TRY_OUT3,
+  //"If you want to stop him, just grab him. Or to stop all robots press F8. "
+  "”Ş‚ğ ‚Æ‚ß‚½‚©‚Á‚½‚çA”Ş‚ğ ‚Â‚©‚Ş‚±‚ÆB‚Ü‚½ ‚·‚×‚Ä‚Ì ƒƒ{ƒbƒg‚ğ ‚Æ‚ß‚é‚É‚Í F8ƒL[‚ğ ‰Ÿ‚·‚ñ‚¾B"
+IDS_ROBOT_SAVE,
+  //"After I've tested a robot, I usually save him by dropping him in a notebook. "
+  L"‚Ó‚Â‚¤‚ÍAƒƒ{ƒbƒg‚ğ ƒeƒXƒg‚µ‚½ŒãA”Ş‚ğ ƒm[ƒg‚Ì ’†‚É —\216‚Æ‚µ‚Ä ‹L˜^‚·‚éB"
+IDS_ROBOT_LOAD_TRUCK1,
+  //"Often I want lots of robots working for me. "
+  L"\216©•ª‚Ì ‚½‚ß‚É “­‚¢‚Ä‚­‚ê‚é ƒƒ{ƒbƒg‚ª ‚½‚­‚³‚ñ‚Ù‚µ‚¢B"
+IDS_ROBOT_LOAD_TRUCK2,
+  //"It would get too messy to have them all running around on the floor. "
+  L"”Ş‚ç‚ª °‚Ìã‚ğ ‘–‚è‰ñ‚é‚ÆA‚Æ‚Ä‚à \216U‚ç‚©‚éB"
+IDS_ROBOT_LOAD_TRUCK3,
+  //"So I send them off to brand new houses by dropping them in trucks. "
+  L"‚»‚ê‚Å ‚í‚½‚µ‚Í ”Ş‚ç‚ğ ƒgƒ‰ƒbƒN‚É —\216‚Æ‚µ‚Ä V‚µ‚¢‰Æ‚É ‘—‚èo‚·‚ñ‚¾B"
+IDS_ROBOTS_LINE_UP1,
+  //"Robots are pretty stupid. "
+  "ƒƒ{ƒbƒg’B‚Í ‚Æ‚Ä‚à ‚ª‚ñ‚±‚È‚ñ‚¾B"
+IDS_ROBOTS_LINE_UP2,
+  //"They can only think about one thing. "
+  "”Ş‚ç‚Í ‚Ğ‚Æ‚Â‚Ì ‚±‚Æ‚µ‚© l‚¦‚ç‚ê‚È‚¢B"
+IDS_ROBOTS_LINE_UP3,
+  //"They can only do the one thing you trained them to do. "
+  "”Ş‚ç‚Í ‹³‚¦‚½ ‚Ğ‚Æ‚Â‚Ì ‚±‚Æ‚µ‚© ‚Å‚«‚È‚¢B"
+IDS_ROBOTS_LINE_UP4,
+  //"Luckily a TEAM of robots can do pretty much anything. "
+  "‚¤‚Ü‚¢‚±‚Æ‚É ƒƒ{ƒbƒg‚Ì ƒ`[ƒ€‚Í ‚©‚È‚è ‚½‚­‚³‚ñ‚Ì ‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_ROBOTS_LINE_UP5,
+  // was it'll
+  //"If I drop a robot on another robot, he'll get in line behind the other. "
+  L"‚ ‚é ƒƒ{ƒbƒg‚ğ •Ê‚Ì ƒƒ{ƒbƒg‚Ì ã‚É —\216‚Æ‚·‚ÆA‚»‚Ì ƒƒ{ƒbƒg‚Ì Œã‚ë‚É •À‚ÔB"
+IDS_ROBOTS_LINE_UP6,
+  //"If a robot doesn't like a box he's been given, then he'll give it to the robot behind him. "
+  "ƒƒ{ƒbƒg‚Í ‹C‚É“ü‚ç‚È‚¢ ƒ{ƒbƒNƒX‚ğ “n‚³‚ê‚é‚ÆAŒã‚ë‚Ì ƒƒ{ƒbƒg‚É ‚»‚Ìƒ{ƒbƒNƒX‚ğ ‚ ‚°‚Ä‚µ‚Ü‚¤B"
+IDS_ROBOTS_LINE_UP7,
+  //"The first robot in line to like a box will work on it. "
+  L"•À‚ñ‚Å‚¢‚é ƒƒ{ƒbƒg‚Ì ’†‚Å Å‰‚É ƒ{ƒbƒNƒX‚ğ ‹C‚É“ü‚Á‚½ ƒƒ{ƒbƒg‚ª ‚»‚ê‚Å\216d\216–‚ğ ‚·‚éB"
+IDS_ROBOTS_LINE_UP8,
+  //"And when he's done, he'll give it back to the first robot in line. He'll give it to himself if he's working alone. "
+  L"‚»‚µ‚Ä ”Ş‚ª I‚í‚é‚Æ ‚»‚ê‚ğ —ñ‚Ì Å‰‚Ì ƒƒ{ƒbƒg‚É –ß‚·B‚à‚µ ”Ş‚ª ˆêl‚Å “­‚¢‚Ä‚¢‚½‚çA‚»‚ê‚ğ \216©•ª‚É “n‚·B"
+IDS_ROBOTS_LINE_UP9,
+  //"If you look in your notebook on page 6, you'll find a notebook full of robot teams I've trained. "
+  "ŒN‚Ì ƒm[ƒg‚Ì ‚Uƒy[ƒW‚ÉA‚í‚½‚µ‚Ì ‹³ˆç‚µ‚½ ƒƒ{ƒbƒg‚ª ‚½‚­‚³‚ñ‚¢‚é ƒm[ƒg‚ª ‚ ‚éB"
+IDS_ROBOT_HELP_GIVEN1,
+  //"That's pretty much all that I can think of to tell you about robots. "
+  "‚±‚ê‚ª ƒƒ{ƒbƒg‚É‚Â‚¢‚Ä ‚í‚½‚µ‚ª ˜b‚»‚¤‚Æ ‚µ‚½‚±‚Æ‚¾B"
+IDS_ROBOT_HELP_GIVEN2,
+  //"If you want me to repeat all I know about robots, press F1 twice while pointing to a robot. "
+  L"ƒƒ{ƒbƒg‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚©‚Á‚½‚çAƒƒ{ƒbƒg‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+
+IDS_ROBOT_BUSY,
+  // As in "You are pointing to a robot busy doing what he was trained to do."
+  // Marty says this when you point to a running robot
+  //"a robot busy doing what he was trained to do"
+  L"‹³ˆç‚³‚ê‚½‚±‚Æ‚ğ \216Às‚µ‚Ä‚¢‚Ä –Z‚µ‚¢ ƒƒ{ƒbƒg"
+IDS_ROBOT_WAITING_FOR_PICTURE,
+  //"a robot on the back of a picture. He is waiting for the picture to be flipped back over"
+  "ƒsƒNƒ`ƒƒ‚Ì ‚¤‚ç‘¤‚É‚¢‚é ƒƒ{ƒbƒgB”Ş‚Í ƒsƒNƒ`ƒƒ‚ª ‚à‚¤ˆê“x Œ³‚É–ß‚³‚ê‚é‚Ì‚ğ ‘Ò‚Á‚Ä‚¢‚éB"
+  // as in "You are pointing to a robot on the back of a picture.  
+  //  He is waiting for the picture to be flipped back over. "
+  // was "a robot waiting for the picture he is on the back of to be flipped over"
+IDS_ROBOT_WAITING_FOR_ROBOT,
+  //"a robot waiting for another robot to finish"
+  "•Ê‚Ì ƒƒ{ƒbƒg‚ª I‚í‚é‚Ì‚ğ ‘Ò‚Á‚Ä‚¢‚é ƒƒ{ƒbƒg"
+IDS_ROBOT_TRAINED_TO,
+  //"He has been trained to"
+  "”Ş‚ª ‹³ˆç‚³‚ê‚½‚Ì‚ÍA"
+IDS_ROBOT_WAITING_FOR_ITEM,
+  //"a robot waiting for something to appear in"
+  " "
+  // as in "You are holding a robot waiting for something to appear in the
+  // third hole of his box. "
+IDS_ROBOT_WAITING_FOR_ITEM2,
+  "‚É ‰½‚© Œ»‚ê‚é‚Ì‚ğ ‘Ò‚Á‚Ä‚¢‚é ƒƒ{ƒbƒg‚¾B" // used after "the third hole of his box" in the example above
+IDS_HIS_BOX,
+  //" his box" 
+  "”Ş‚Ì ƒ{ƒbƒNƒX"
+IDS_HE_WILL_THEN,
+  //"Then he will "
+  "‚·‚é‚Æ ”Ş‚ÍA"
+IDS_HE_WILL_THEN2,
+  //" " // used after describing what he will do
+  "‚ğ‚·‚éB"
+// IDS_ROBOT_WHO_WHEN_GIVEN,
+//  "robot who when given "
+// IDS_WILL_THEN,
+//  " will then "
+IDS_MORE_ROBOT_SAID_ENOUGH,
+  //"There are more robots, but I've said enough. "
+  "ƒƒ{ƒbƒg‚Í ‚à‚Á‚Æ ‚½‚­‚³‚ñ ‚¢‚é‚¯‚ÇA‚í‚½‚µ‚Í ‚à‚¤\•ª‚É ˜b‚µ‚½B"
+
+IDS_PROGRAMMER_ABORT,
+  //"It didn't work because "
+  " "  
+IDS_PROGRAMMER_ABORT2, // used after reason given after IDS_PROGRAMMER_ABORT
+  //" "
+  "‚È‚Ì‚Å ‚»‚ê‚Í ‚¤‚Ü‚­ ‚¢‚©‚È‚¢B"  
+IDS_ROBOT_ABORT,
+  //"The robot stopped because "
+  " "
+IDS_ROBOT_ABORT2, // used after reason given after IDS_ROBOT_ABORT
+  //" "
+  "‚É‚æ‚è ƒƒ{ƒbƒg‚Í ƒXƒgƒbƒv‚µ‚½B"
+
+// the following are text item descriptions of
+// the sounds available to the user found in
+// the notebook on page 8 of the main notebook.
+// Some names are just approximations of how
+// they sound (like "Be Whop") while others are
+// descriptions of natural sound sources
+
+IDS_HELICOPTER_SOUND,
+  //"Helicopter"
+  "ƒwƒŠƒRƒvƒ^"
+IDS_BIRD_HATCH_SOUND,
+  //"Bird\rHatch"
+  "¬’¹\r‚Ó‰»"
+IDS_BIRD_FLY_SOUND,
+  //"Bird\rFly"
+  "¬’¹\r‰H‚Î‚½‚«"
+IDS_TRUCK_ENGINE_SOUND,
+  //"Truck\rEngine"
+  "ƒgƒ‰ƒbƒN\rƒGƒ“ƒWƒ“"
+IDS_MAGIC_SOUND,
+  //"Magic"
+  "–‚–@"
+IDS_BE_WOP_SOUND,
+  //"Be Whop"
+  "‚©‚ñº"
+IDS_BE_YAW_SOUND,
+  //"Be Yaw"
+  "‚ä‚ê"
+IDS_SPIRAL_IN_SOUND,
+  //"Spiral\rIn"
+  "ƒoƒl\rƒCƒ“"
+IDS_SPIRAL_OUT_SOUND,
+  //"Spiral\rOut"
+  "ƒoƒl\rƒAƒEƒg"
+IDS_BOOK_DROP_SOUND,
+  //"Book\rDrop"
+  L"–{\r—\216‰º"
+IDS_DOOR_CREAK_SOUND,
+  //"Door\rCreak"
+  "ƒhƒA\r‚«‚µ‚İ"
+IDS_DUSTBUSTER_SOUND,
+  //"Vacuum"
+  "‹z‚¢‚İ"
+IDS_EXPLOSION_SOUND,
+  //"Explosion"
+  "”š”­"
+IDS_HAND_PUMP_SOUND,
+  //"Hand\rPump"
+  L"\216è“®\rƒ|ƒ“ƒv"
+IDS_OUCH_SOUND,
+  //"Ouch"
+  "’É‚¢"
+IDS_PLOP_SOUND,
+  //"Plop"
+  "ƒ|ƒ`ƒƒƒ“"
+IDS_POP_SOUND,
+  //"Pop"
+  "ƒ|ƒ“"
+IDS_WALKING_INSIDE_SOUND,
+  //"Indoors\rstep"
+  L"\216º“à\r•às"
+IDS_TYPING_SOUND,
+  //"Typing"
+  "ƒ^ƒCƒv"
+IDS_TRAFFIC_SOUND
+  //"Traffic\rsounds"
+  L"\216©“®\216Ô"
+IDS_PAGE_TURNING_SOUND,
+  //"Page\rTurning"
+  "ƒy[ƒW\r‚ß‚­‚è"
+// IDS_STEP_SOUND,
+//  "Step 1"
+IDS_NEAT_EFFECT_SOUND,
+  //"Neat\rEffect"
+  "‚·‚²‚¢\rŒø‰Ê"
+IDS_TRUCK_DRIVE_SOUND,
+  //"Truck\rDrive"
+  "ƒgƒ‰ƒbƒN\r‰^“]"
+IDS_BIKE_BELL_SOUND,
+  //"Bike\rBell"
+  "ƒoƒCƒN\rƒxƒ‹"
+IDS_BOING1_SOUND,
+  //"Boing"
+  "ƒ{[ƒCƒ“ƒO"
+// IDS_BOING2_SOUND,
+//  "Boing 2"
+// IDS_BOING3_SOUND,
+//  "Boing 3"
+IDS_CALCULATING_SOUND,
+  //"Calculating"
+  L"Œv\216Z’†"
+IDS_LOTS_OF_SILLY_SOUNDS_SOUND,
+  //"Lots Of\rSilly Sounds"
+  "‘å‚«‚È‰¹"
+IDS_WHIT_SOUND,
+  //"Whit"
+  "¬‚³‚È‰¹"
+IDS_DEFLATING_SOUND,
+  //"Deflating"
+  "‚µ‚Ú‚ñ‚Å‚¢‚é"
+IDS_DOOR_SOUND,
+  //"Door"
+  "ƒhƒA"
+// IDS_DOORKNOB_SOUND,
+//  "Doorknob"
+// IDS_STEP4_SOUND,
+//  "Step 2"
+// IDS_STEP3_SOUND,
+//  "Step 3"
+IDS_STEP_SOUND,
+  //"Outdoors\rstep"
+  "–ìŠO\r•às"
+IDS_GLASS_HIGH_SOUND,
+  //"Glass\rHigh"
+  "ƒKƒ‰ƒX\r‚‰¹"
+IDS_GLASS_LOW_SOUND,
+  //"Glass\rLow"
+  "ƒKƒ‰ƒX\r’á‰¹"
+// IDS_COUGH_SOUND,
+//  "Cough"
+// IDS_SAUCER_LANDING_SOUND,
+//  "Saucer Landing"
+IDS_SHUTDOWN_SOUND,
+  //"Shutdown"
+  L"’â\216~"
+IDS_SPIT_SOUND,
+  //"Spit"
+  "ƒpƒ‰ƒpƒ‰"
+IDS_SWITCH_SOUND,
+  //"Switch"
+  "ƒXƒCƒbƒ`"
+IDS_TELEPORT_SOUND,
+  //"Teleport"
+  "ƒeƒŒƒ|[ƒg"
+// IDS_HORSE_TROT_SOUND,
+//  "Horse Trot"
+IDS_TWING_SOUND,
+  "Twing"
+  
+IDS_EMPTY_NEST,
+  //"an empty nest"
+  "‚©‚ç‚Ì‘ƒ"
+IDS_COVERED_NEST,
+  //"a nest covered with "
+  "‘ƒ"
+IDS_AND,
+  //"and"
+  "‚Æ"
+IDS_REMOVE_FROM_EMPTY_NEST,
+  //"Warning: a bird tried to remove a stack from an empty nest. "
+  "’ˆÓF¬’¹‚Í ‚©‚ç‚Ì ‘ƒ‚©‚ç ‚È‚É‚©‚ğ Á‚»‚¤‚Æ‚µ‚½B"
+IDS_NEST_WITH_EGG,
+  //"a nest with an egg in it"
+  "—‘‚Ì “ü‚Á‚Ä‚¢‚é‘ƒ"
+IDS_CANT_ADD_TO_STACK_OF_NESTS,
+  //"the stack of nests won't accept anything"
+  L"‘ƒ‚Ì\216R‚Í ‚È‚É‚à \216ó‚¯\216æ‚ç‚È‚¢B"
+IDS_CANT_ADD_TO_NEST,
+  //"the nest won't accept anything"
+  L"‚»‚Ì‘ƒ‚Í ‚È‚É‚à \216ó‚¯\216æ‚ç‚È‚¢B"
+IDS_BIRD_TOO_BUSY,
+  //"the bird is too busy to accept anything"
+  L"‚»‚Ì¬’¹‚Í –Z‚µ‚¢‚Ì‚Å ‚È‚É‚à \216ó‚¯\216æ‚ç‚È‚¢B"
+IDS_BIRD_WONT_ACCEPT,
+  //"the bird only accepts things that are rectangular"
+  L"‚»‚Ì¬’¹‚Í ’·\216lŠp‚Ì ‚à‚Ì‚µ‚© \216ó‚¯\216æ‚ç‚È‚¢B"
+//IDS_EXPECTED_BIRD_IN_BOX,
+// "Expected a bird to be in a box and something else is there. "
+IDS_BIRDS_NEST_IN_VACUUM,
+  //"the bird's nest is inside a vacuum"
+  "‚»‚Ì’¹‚Ì‘ƒ‚Í ‚»‚¤‚¶‹@‚Ì ’†‚É ‚ ‚é"
+IDS_BIRDS_NEST_IN_BUBBLE,
+  //"the bird's nest is inside a thought bubble"
+  L"‚»‚Ì’¹‚Ì‘ƒ‚Í ƒƒ{ƒbƒg‚Ì \216vl‚Ì’†‚É ‚ ‚é"
+IDS_BIRD_CANT_FIND_NEST,
+  //"A bird wants to fly to her nest but she can't find it. "
+  L"¬’¹‚Í \216©•ª‚Ì‘ƒ‚Ö ”ò‚ñ‚Å s‚«‚½‚ª‚Á‚Ä ‚¢‚é‚ªA‚»‚ê‚ğ Œ©‚Â‚¯‚ç‚ê‚È‚¢B"
+IDS_BIRD_RETURNED_TO_OCCUPIED_CUBBY,
+  // "A bird tried to return to her cubby hole but it's not empty. "
+  //"A bird tried to return to a box hole but it's not empty. " // revised 12/23
+  "¬’¹‚Í ƒ{ƒbƒNƒX‚Ì ŒŠ‚É –ß‚ë‚¤‚Æ ‚µ‚½‚ªA‚»‚ÌŒŠ‚ª ‚©‚ç‚Å ‚È‚¢B"
+
+IDS_BOX_WONT_ACCEPT,
+  //"the box did not accept something dropped on it"
+  L"‚»‚Ìƒ{ƒbƒNƒX‚Í ‚»‚Ìã‚É —\216‚Æ‚³‚ê‚½‚à‚Ì‚ğ \216ó‚¯•t‚¯‚È‚©‚Á‚½B"
+IDS_TOO_MANY_BOXES_INSIDE_BOXES,
+  //"Ignored dropping a box into box since there is already a box inside a box inside a box inside a box and so on. "
+  L"ƒ{ƒbƒNƒX‚ğ ‚·‚Å‚É ƒ{ƒbƒNƒX‚ª “ü‚Á‚Ä‚¢‚é ƒ{ƒbƒNƒX‚É —\216‚Æ‚·‚±‚Æ‚Í ‚Å‚«‚È‚¢B"
+IDS_ONLY_BLANK_BOX_CAN_ACCEPT,
+  //"only a blank box can accept text or numbers"
+  L"ƒuƒ‰ƒ“ƒNƒ{ƒbƒNƒX‚¾‚¯‚ªAƒeƒLƒXƒg‚â ”\216š‚ğ \216ó‚¯•t‚¯‚éB"
+IDS_BOX_INSIDE_SELF,
+  //"Oh boy! Somehow trying to put a box into itself"
+  L"ƒ{ƒbƒNƒX‚ğA\216©•ª\216©g‚É “ü‚ê‚æ‚¤‚Æ ‚µ‚Ä‚¢‚éB"
+IDS_CANT_ADD_NON_BOX,
+  //"robot thought he would have a box to add to another box but has something else instead"
+  L"ƒƒ{ƒbƒg‚ÍA•Ê‚Ì ƒ{ƒbƒNƒX‚É ‚­‚Á‚Â‚¯‚ç‚ê‚é ƒ{ƒbƒNƒX‚ğ \216‚Á‚Ä‚¢‚½ ‚Í‚¸‚¾‚Á‚½‚ªA‰½‚© •Ê‚Ì‚à‚Ì‚ğ \216‚Á‚Ä‚¢‚½B"
+IDS_TEXT_OR_NUMBER_TO_BOX_HELP,
+  //"If you drop a number or text on a blank box, the box will expand the text to have one letter per hole. "
+  L"”\216š‚â ƒeƒLƒXƒg‚ğ ƒuƒ‰ƒ“ƒNƒ{ƒbƒNƒX‚É —\216‚Æ‚·‚ÆAƒ{ƒbƒNƒX‚Í ŒŠ‚²‚Æ‚É ˆê‚Â‚Ì ƒeƒLƒXƒg‚ª “ü‚é‚æ‚¤‚É L‚ª‚éB"
+IDS_VACUUM_TO_BLANK_HELP, // was misspelled as VACCUM
+  //"You can use Dusty, the vacuum, to make a blank box. "
+  L"ƒuƒ‰ƒ“ƒNƒ{ƒbƒNƒX‚ğ ì‚é‚É‚ÍA‚»‚¤‚¶‹@ ƒ_ƒXƒeƒB‚ğ \216g‚¤B"
+IDS_DROP_ON_NUMBER_TO_BREAK_HELP,
+  //"You can break a box into two pieces by dropping it on a number. One piece will have the number of holes of the number and the other what is left over. "
+  L"ƒ{ƒbƒNƒX‚ğ ”\216š‚Ìã‚É—\216‚Æ‚·‚ÆA‚Q‚Â‚É•ªŠ„‚Å‚«‚éBˆê‚Â‚ÍA‚»‚Ì”\216š‚Ì“ü‚Á‚½ŒŠ‚ğ\216‚¿A‚à‚¤ˆê‚Â‚Í‚»‚Ì‚Ü‚Ü‚É‚È‚éB"
+IDS_CANT_ADD_TO_BOX_LABEL,
+  //"you can't add to the box's label"
+  "ƒ{ƒbƒNƒX‚Ì ƒ‰ƒxƒ‹‚ğ ‘‚â‚¹‚È‚¢B"
+IDS_UNEXPECTED_NOT_IN_BOX,
+  //"something wrong with ToonTalk. It is trying to figure out size of something in a box hole that is empty"
+  L"ToonTalk‚É ˆÙí‚ ‚èB‚©‚ç‚Ì ƒ{ƒbƒNƒX‚ª \216‚Á‚Ä‚¢‚é ŒŠ‚Ì’†‚É‚ ‚é ‰½‚©‚Ì ƒTƒCƒY‚ğ Œv\216Z‚µ‚æ‚¤‚Æ ‚µ‚Ä‚¢‚éB"
+IDS_BOX_DOESNT_HAVE_EXPECTED_HOLE,
+  // As in "Sorry, didn't work because something is wrong. ..."
+  // This is how ToonTalk responds to the equivalent of array-bounds errors
+  // "is" added on 4/7/99
+  //"something is wrong. ToonTalk was looking for a hole that a box doesn't have. "
+  L"ˆÙí‚ ‚èBToonTalk‚ÍAƒ{ƒbƒNƒX‚ª \216‚Á‚Ä‚¢‚È‚¢ŒŠ‚ğ ’T‚µ‚½B"
+IDS_REMOVE_FROM_BOX_BUT_NOT_THERE,
+  //"something is wrong with ToonTalk because it tried to remove something from a box that isn't in a box"
+  L"ToonTalk‚É ˆÙí‚ ‚èBƒ{ƒbƒNƒX‚ª \216‚Á‚Ä‚¢‚È‚¢ ‰½‚©‚ğ \216Ì‚Ä‚æ‚¤‚Æ ‚µ‚½B"
+
+IDS_CUBBY_LABEL_TOO_LONG, // updated 140599 to be clearer
+  //"A box label in a notebook cannot be longer than 255 characters"
+  L"ƒm[ƒg‚Ì ’†‚Ì ƒ{ƒbƒNƒXƒ‰ƒxƒ‹‚ÍA‚Q‚T‚T•¶\216š‚ªÅ‘åB"
+IDS_FILE_DESCRIBING_BOX_BAD, // updated this on 050499 from "Something wrong with a file describing a box. "
+  //"Something wrong with a description of a box. "
+  "ƒ{ƒbƒNƒX‚Ì à–¾‚É ŠÔˆá‚¢‚ª ‚ ‚éB"
+
+IDS_ADD_TO_BACKGROUND_ALREADY_THERE,
+  //"ToonTalk problem. ToonTalk just tried to remove something from a background that wasn't part of the background. "
+  L"ToonTalk‚É ˆÙí‚ ‚èB”wŒi‚É ŠÜ‚Ü‚ê‚Ä‚¢‚È‚¢ ‰½‚©‚ğ \216Ì‚Ä‚æ‚¤‚Æ‚µ‚½B"
+//IDS_ADD_TO_BACKGROUND_BUT_ALREADY_THERE,
+// "ToonTalk has a problem because it just wasted time trying to add something to a background that already knew about it. "
+IDS_REMOVE_PART_BUT_NO_PARTS,
+  //"Problem with ToonTalk since it tried to remove the last part of something that didn't have any parts left. "
+  L"ToonTalk‚É ˆÙí‚ ‚èB‰½‚©‚ğ \216Ì‚Ä‚æ‚¤‚Æ‚µ‚½B"
+IDS_BOMB_WONT_ACCEPT,
+  //"bombs don't accept anything"
+  L"”š’e‚Í ‚È‚É‚à \216ó‚¯•t‚¯‚È‚¢B"
+
+//IDS_ROBOT_FILE_BAD,
+// "Something wrong with file describing what a robot does. Sorry. "
+IDS_ROBOT_TRAINING_LOST,
+  //"ToonTalk had troubles reading a notebook file. A robot in the notebook has lost his training. "
+  "ƒm[ƒgƒtƒ@ƒCƒ‹‚É ˆÙí‚ ‚èBƒm[ƒg‚Ì ’†‚Ì ƒƒ{ƒbƒg‚ÍA‹³ˆç‚³‚ê‚½‚±‚Æ‚ğ –Y‚ê‚Ä‚µ‚Ü‚Á‚½B"
+IDS_CONFUSED_ABOUT_ROBOT_DESCRIPTION,
+  //"... Ah, sorry but I'm having troubles figuring out what this robot does. "
+  "‚·‚İ‚Ü‚¹‚ñB‚±‚Ì ƒƒ{ƒbƒg‚Í ‚â‚é‚±‚Æ‚ª ‚í‚©‚ç‚È‚¢B"
+
+IDS_DO_NOTHING,
+  // as in "If given a box like that he will do nothing. "
+  //"do nothing"
+  "‚È‚É‚à‚µ‚È‚¢"
+IDS_VACUUM_TO_BLANK,
+  //"use Dusty to erase"  // used to say blank but erase is better
+  L"Á‚·‚Ì‚É ƒ_ƒXƒeƒB‚ğ \216g‚¤"
+IDS_SPECIAL_MAGIC_WAND_USE,
+  //  as in "He will use the magic wand, while holding the control button down, on the box. "
+  //"use the magic wand, while holding the control button down, on"
+  L"‚Í ƒRƒ“ƒgƒ[ƒ‹ƒL[‚ğ ‰Ÿ‚µ‚È‚ª‚çA–‚–@‚Ì‚Â‚¦‚ğ\216g‚¤B"		// *************************************************
+  // "key " removed from the following 3 phrases
+IDS_KEY_WHILE_POINTING, // as in "He'll push 'b' while pointing to the number. "
+  //" while pointing to"
+  " "
+IDS_KEY_WHILE_POINTING2, // used after "the number" in the example above
+  //" "
+  L"‚ğ \216w‚µ‚È‚ª‚çA"
+IDS_KEY_AFTER_MOVING, // as in "He'll push 'b' after moving to the number. "
+  //" after moving to"
+  " "
+IDS_KEY_AFTER_MOVING2, // used after "the number" in the example above
+  //" "
+  "‚É ˆÚ“®‚µ‚½ Œã‚ÉA"
+IDS_KEY_WHILE_HOLDING, // as in "He'll push 'b' to change what he is holding. "
+  //" to change" 
+  " "
+IDS_KEY_WHILE_HOLDING2, // comes after "what he is holding" in the example above
+  //" "
+  "‚ğ •Ï‚¦‚é‚Ì‚ÉA"
+ 
+IDS_TO_LABEL_OF,
+  // As in "He will add 'c' to the label of the box. "
+  // NOTE -- currenly only boxes have labels.  If this is used for
+  // other things then in some languages it is gender dependent
+  //" to the label of"
+  " "
+IDS_TO_LABEL_OF2,
+//   " " // used after "the box" in the example above
+  "‚Ì ƒ‰ƒxƒ‹‚É"
+
+// Used only in English version ...
+//IDS_NEW,
+  // as in "He will drop it on the new box. "
+// "new"
+//IDS_FIRST_NEW,
+  // as in "He will drop it on the first new box. "
+//"first new"
+//IDS_NEWEST,
+  // as in "He will drop it on the newest box. "
+// "newest "
+//IDS_TO_LAST
+  // as in "He will drop it on the second to last box. "
+// "to last"
+
+IDS_ROBOT_IN_TRUCK,
+  //"the robot in the truck"
+  "ƒgƒ‰ƒbƒN‚Ì ’†‚Ì ƒƒ{ƒbƒg"
+IDS_BOX_IN_TRUCK,
+  //"the box in the truck"
+  "ƒgƒ‰ƒbƒN‚Ì ’†‚Ì ƒ{ƒbƒNƒX"
+IDS_HOUSE_PICTURE_IN_TRUCK,
+  //"the picture of a house in the truck"
+  "ƒgƒ‰ƒbƒN‚Ì ’†‚É‚ ‚é ‰Æ‚Ì ƒsƒNƒ`ƒƒ"
+IDS_AVENUE_IN_TRUCK,
+  //"the Avenue number in the truck"
+  "ƒgƒ‰ƒbƒN‚Ì ’†‚Ì ƒAƒxƒjƒ…[”Ô†"
+IDS_STREET_IN_TRUCK,
+  //"the Street number in the truck"
+  "ƒgƒ‰ƒbƒN‚Ì ’†‚Ì ƒXƒgƒŠ[ƒg”Ô†"
+IDS_UNKNOWN_IN_TRUCK,
+  //"something in the truck" 
+  "ƒgƒ‰ƒbƒN‚Ì ’†‚Ì ‰½‚©"
+IDS_WHATS_ON,
+  // as in "The robot picks up what's on the third page of the notebook. "
+  // NOTE:  This currently is only used as part of something that
+  // refers to a page of a notebook.  If it is ever used for more, it may
+  // have different translation
+  //"what's on"
+  " "
+IDS_WHATS_ON2, // used after "the third page of the notebook" in the example above
+  //" "
+  "‚Ì ã‚Ì‚à‚Ì"
+IDS_WHATS_IN,
+  // as in "The robot picks up what's in the second hole of the box. "
+  // NOTE:  This currently is only used as part of something that
+  // refers to a hole of a box.  If it is ever used for more, it may
+  // have different translation
+  //"what's in"
+  " "
+IDS_WHATS_IN2, // used after "the second hole of the box" in the example above
+  //" "
+  "‚Ì ’†‚Ì‚à‚Ì"
+IDS_PAGE,
+  //"page"
+  "ƒy[ƒW"
+//IDS_OF
+// as in "He dropped it on page of the notebook"
+// and "You are holding a picture of a ball. "
+// and "You are pointing to the button of Dusty. "
+// "of"
+IDS_ROBOT_COULDNT_FIND_ITEM,
+  // was "it was"
+  //"couldn't find something he was going to pick up. "
+  "‚Ğ‚ë‚¨‚¤‚Æ‚µ‚½ ‰½‚©‚ª Œ©‚Â‚©‚ç‚È‚©‚Á‚½B"
+IDS_ROBOT_COULDNT_FIND_NEST,
+  // was "it was"
+  //"couldn't find a nest he was going to pick up. "
+  "‚Ğ‚ë‚¨‚¤‚Æ‚µ‚½ ‘ƒ‚ª Œ©‚Â‚©‚ç‚È‚©‚Á‚½B"
+IDS_ROBOT_COULDNT_FIND_PLACE,
+  // was "it was"
+  // "A robot couldn't find the place he was going to do something. "
+  //"couldn't find the place he was going to do something. "
+  "‰½‚©‚ğ ‚µ‚æ‚¤‚Æ‚µ‚½ êŠ‚ª Œ©‚Â‚©‚ç‚È‚©‚Á‚½B"
+IDS_ROBOT_COULDNT_FIND_BIRD,
+  // was "it expected"
+  //"was trained to give a bird something and now the bird isn't where he expected. He'll try to keep going anyway. "
+  "‚ÍA¬’¹‚É ‰½‚©‚ğ —^‚¦‚é‚æ‚¤‚É ‹³ˆç‚³‚ê‚Ä‚¢‚½‚ªA¬’¹‚Í ”Ş‚ª Šú‘Ò‚µ‚½ êŠ‚É ‚¢‚È‚¢B‚Æ‚É‚©‚­ ”Ş‚ÍA‘±‚¯‚æ‚¤‚Æ ‚·‚é‚¾‚ë‚¤B"
+IDS_ROBOT_EXPECTED_BOX_BUT,
+  //"Robot expected a box and found something else instead. "
+  "ƒƒ{ƒbƒg‚ÍAƒ{ƒbƒNƒX‚ğ Šú‘Ò‚µ‚Ä‚¢‚½‚ªA•Ê‚Ì ‰½‚©‚ğ Œ©‚Â‚¯‚½B"
+IDS_COULDNT_FIND_SOMETHING,
+  //"ToonTalk confused! It couldn't find something. Sorry. "
+  "ToonTalk‚Í ¬—‚µ‚½B‚È‚É‚à Œ©‚Â‚¯‚ç‚ê‚È‚©‚Á‚½B"
+IDS_ROBOT_DIDNT_FIND_ROBOT_IN_TRUCK,
+  //"thought he would find a robot in the truck and there wasn't one there. "
+  L"”Ş‚Í ƒgƒ‰ƒbƒN‚Ì ’†‚Å ƒƒ{ƒbƒg‚ğ Œ©‚Â‚¯‚ç‚ê‚é ‚¾‚ë‚¤‚Æ \216v‚Á‚Ä‚¢‚½‚ªA‚¢‚È‚©‚Á‚½B"
+//IDS_ROBOT_DIDNT_FIND_BOX_IN_TRUCK,
+// "thought he would find a box in the truck and there wasn't one there. "
+// IDS_ROBOT_DIDNT_FIND_HOUSE_PICTURE_IN_TRUCK,
+// "A robot thought he would find a picture of a house in the truck and there wasn't one there. "
+//IDS_ROBOT_DIDNT_FIND_AVENUE_IN_TRUCK,
+// "A robot thought he would find an avenue number in the truck and there wasn't one there. "
+//IDS_ROBOT_DIDNT_FIND_STREET_IN_TRUCK,
+// "A robot thought he would find a street number in the truck and there wasn't one there. "
+//IDS_ROBOT_DIDNT_FIND_UNKNOWN_IN_TRUCK,
+// "A robot thought he would find something in the truck and it wasn't there. "
+
+IDS_ROBOT_COULDNT_USE_IN_VACUUM,
+  //"was going to use something but it has been vacuumed up!"
+  L"‚Í ‰½‚©‚ğ \216g‚¨‚¤‚Æ‚µ‚½‚ªA‚»‚ê‚Í ‚·‚Å‚É ‹z‚¢‚Ü‚ê‚Ä‚¢‚½B"
+IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+  //"was going to put something into something but it has been vacuumed. "
+  "‚Í ‰½‚©‚ğ ‚¨‚±‚¤‚Æ‚µ‚½‚ªA‚»‚ê‚Í ‚·‚Å‚É ‹z‚¢‚Ü‚ê‚Ä‚¢‚½B"
+IDS_ROBOT_THING_NOT_IN_ROOM,
+  //"was going to put something into something but it is not in the room any more. "
+  "‚Í ‰½‚©‚ğ ‚¨‚±‚¤‚Æ‚µ‚½‚ªA‚»‚ê‚Í ‚·‚Å‚É •”‰®‚Ì ’†‚É ‚È‚¢B"
+IDS_SOMETHING_NOT_IN_NOTEBOOK,
+  //"expected to find something in a notebook and didn't. "
+  "‚Í ƒm[ƒg‚Ì ’†‚É ‚ ‚é‰½‚©‚ğ Œ©‚Â‚¯‚ç‚ê‚È‚©‚Á‚½B"
+IDS_BOX_OR_NEST_MISSING, // ". " removed on 4/7/99
+  //"expected to find a box or filled nest and didn't"
+  "‚Í ƒ{ƒbƒNƒX‚â ‚©‚ç‚Å‚È‚¢‘ƒ‚ğ Œ©‚Â‚¯‚ç‚ê‚È‚©‚Á‚½B"
+IDS_TOO_MANY_HOLES_FOR_ROBOT,
+  //"Robot can't remember more than 254 holes. Sorry. "
+  "ƒƒ{ƒbƒg‚ÍA‚Q‚T‚SŒÂˆÈã‚Ì ŒŠ‚ğ Šo‚¦‚ç‚ê‚È‚¢B"
+
+IDS_EMPTY_TEXT,
+  //"empty text pad"
+  "‚©‚ç‚Ì ƒeƒLƒXƒgƒpƒbƒh"
+IDS_IN_THOUGHT_BUBBLE_HELP1,
+  //"You are now in the robot's thought bubble. "
+  L"ŒN‚Í ¡ƒƒ{ƒbƒg‚Ì \216vl‚Ì’†‚É ‚¢‚éB"
+IDS_IN_THOUGHT_BUBBLE_HELP2,
+  //"You can train the robot by showing him what to do. "
+  "‚â‚Á‚Ä‚Ù‚µ‚¢‚±‚Æ‚ğ ƒƒ{ƒbƒg‚É Œ©‚¹‚é‚±‚Æ‚ÅA”Ş‚ğ ‹³ˆç‚Å‚«‚éB"
+IDS_LEFT_THOUGHT_BUBBLE_HELP,
+  //"To test the robot, just give him a box like the one in his thought bubble. "
+  L"ƒƒ{ƒbƒg‚ğ \216\216‚·‚É‚ÍA\216vl‚Ì’†‚É ‚ ‚é‚æ‚¤‚È ƒ{ƒbƒNƒX‚ğ ”Ş‚É —^‚¦‚é‚¾‚¯‚¾B"
+IDS_RIGHT_MOUSE_BUTTON_WITH_ONE_BUTTON,
+  //"a mouse button while holding the shift button down"
+  "ƒVƒtƒgƒL[‚ğ ‰Ÿ‚µ‚È‚ª‚ç‚Ì ƒ}ƒEƒXƒ{ƒ^ƒ“"
+IDS_LEFT_BUTTON_WITH_ONE_BUTTON,
+  //"any mouse button"
+  "ƒ}ƒEƒXƒ{ƒ^ƒ“"
+IDS_THE_LEFT_MOUSE_BUTTON,
+  //"the left mouse button"
+  "ƒ}ƒEƒX¶ƒ{ƒ^ƒ“"
+IDS_MIDDLE_BUTTON_WITH_THREE,
+  //"the middle mouse button"
+  "ƒ}ƒEƒX’†ƒ{ƒ^ƒ“"
+IDS_MIDDLE_BOTTON_WITH_TWO,
+  //"the right button while holding down the control button (labeled 'Ctrl')"
+  "ƒRƒ“ƒgƒ[ƒ‹ƒL[‚ğ ‰Ÿ‚µ‚È‚ª‚ç‚Ì ƒ}ƒEƒX‰Eƒ{ƒ^ƒ“"
+IDS_MIDDLE_BUTTON_WITH_ONE,
+  //"any mouse button while holding down the control button (labeled 'Ctrl')"
+  "ƒRƒ“ƒgƒ[ƒ‹ƒL[‚ğ ‰Ÿ‚µ‚È‚ª‚ç‚Ì ƒ}ƒEƒXƒ{ƒ^ƒ“"
+
+IDS_ALL_HOUSES_DESTROYED,
+  //"You managed to destroy all the houses, so I built some more. "
+  "‰½‚Æ‚© ‚·‚×‚Ä‚Ì ‰Æ‚ğ ‚±‚í‚¹‚½AŒã‚Í ‚í‚½‚µ‚ª Œš‚Ä‚éB"
+IDS_BAD_HOUSE_VIEW,
+  //"Something wrong inside ToonTalk. Houses may be missing. "
+  "ToonTalk‚ÉˆÙí‚ ‚èB‰Æ‚ª ‚È‚­‚È‚Á‚½‚©‚à ‚µ‚ê‚È‚¢B"
+IDS_COMMAND_LINE_ODD_ARGS1,
+  // this is joined to together with the following fragment with a number
+  // in between
+  //"Command line problem. Expecting an even number of items, not "
+  "ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ ƒGƒ‰[B"
+IDS_COMMAND_LINE_ODD_ARGS2,
+  //" items. Ignoring the command line. "
+  "‚Å‚Í‚È‚­A‚®‚¤”‚Ì ƒAƒCƒeƒ€‚ª •K—vB"
+IDS_COMMAND_LINE_H_WRONG1,
+  //"Command line has -h "
+  "ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚É -h ‚ª ‚ ‚é‚¯‚ê‚ÇA"
+IDS_COMMAND_LINE_H_WRONG2,
+  //" and it can only be -h 0 (bald), -h 1 (hair), or -h 2 (hat). "
+  L"—LŒø‚È‚Ì‚ÍA-h 0 (ƒXƒLƒ“ƒwƒbƒh), -h 1 (’·”¯), or -h 2 (–X\216q) ‚¾‚¯B"
+IDS_COMMAND_LINE_B_WRONG,
+  //" is wrong number of mouse buttons. 1, 2, or 3 is OK. "
+  "‚Í ‚Ü‚¿‚ª‚Á‚½ ƒ}ƒEƒXƒ{ƒ^ƒ“‚Ì ”Ô†B—LŒø‚È‚Ì‚ÍA1, 2, 3 B"
+IDS_COMMAND_LINE_UNKNOWN_OPTION,
+  //"Command line has unrecognized option: "
+  "ƒIƒvƒVƒ‡ƒ“‚ª ‚Ü‚¿‚ª‚Á‚Ä‚¢‚éF"
+IDS_NO_NAME_IS_YOUR_NAME,  // modified on 3/20/97
+  //"I didn't get your name so for now I'll call you"
+  "ŒN‚Ì –¼‘O‚ğ ’m‚ç‚È‚¢AŒN‚ğ"
+IDS_NO_NAME_IS_YOUR_NAME2,
+  //"NoName"
+  "Jiro"
+IDS_NO_NAME_IS_YOUR_NAME3,
+  //"and save anything you do under that name. "
+  "‚·‚×‚Ä ‚±‚Ì –¼‘O‚Å ƒZ[ƒu‚·‚éB"
+IDS_TROUBLE_WANT_TO_CONTINUE,
+  //"Despite these troubles getting started do you want to continue?"
+  "‚±‚ê‚ç‚Ì –â‘è‚ª ”­¶‚µ‚Ä‚é‚¯‚ê‚ÇA‘±‚¯‚éH"
+IDS_TIME_NEGATIVE,
+  //"ToonTalk has been running so long, it is resetting its internal clock. "
+  L"ToonTalk‚ğ ’·‚­\216g‚¢‚·‚¬‚½A“à•”‚Ì \216Œv‚ğ ƒŠƒZƒbƒg‚µ‚Ä‚¢‚éB"
+IDS_OUT_OF_MEMORY,
+  //"Sorry, ran out of memory. You'll have to restart. "
+  "‚²‚ß‚ñAƒƒ‚ƒŠ•s‘«‚¾BÄ‹N“®‚µ‚Ä ‚Ù‚µ‚¢B"
+IDS_MEMORY_LOW,
+  //"Memory low. Recycling 20% of memory used to speed things up. "
+  "ƒƒ‚ƒŠ‚ª ’á‰º‚µ‚Ä‚¢‚éB20%‚Ì ƒƒ‚ƒŠ‚ğ –ß‚¹‚ÎAƒXƒs[ƒhƒAƒbƒv ‚Å‚«‚éB"
+IDS_MEMORY_LOW2
+  //"Memory low. Recycling last part of memory used to speed things up. "
+  "ƒƒ‚ƒŠ‚ª ’á‰º‚µ‚Ä‚¢‚éB10%‚Ì ƒƒ‚ƒŠ‚ğ –ß‚¹‚ÎAƒXƒs[ƒhƒAƒbƒv ‚Å‚«‚éB"
+IDS_F8_HELP1,
+  //"If you ever want to stop all the robots just push F8 to cut off the power. "
+  L"‚·‚×‚Ä‚Ì ƒƒ{ƒbƒg‚ğ ƒXƒgƒbƒv‚³‚¹‚½‚¢\216‚ÍAF8‚ğ ‰Ÿ‚·B"
+IDS_F8_HELP2,
+  //"Pushing it again will start them up again. "
+  "‚»‚ê‚ğ ‚à‚¤ˆê“x ‰Ÿ‚·‚ÆAÄŠJ‚·‚éB"
+IDS_F8_HELP3,
+  //"Same thing with moving pictures and movies. "
+  "ƒsƒNƒ`ƒƒ‚Æ ƒ€[ƒr[‚ğ ˆÚ“®‚·‚é‚Ì‚Æ “¯‚¶B"
+IDS_EXCUSE_ME1,
+  //"Uh, excuse me. "
+  L"\216¸—çB"
+IDS_EXCUSE_ME2,
+  //"Umm, sorry to interrupt. "
+  "‚¶‚á‚Ü‚µ‚Ä‚²‚ß‚ñB"
+IDS_EXCUSE_ME3,
+  //"Uh, sorry. "
+  "‚²‚ß‚ñB"
+
+IDS_MOUSE_DIDNT_COME_OUT,
+  //"Bammer the Mouse didn't come out because "
+  "ƒlƒYƒ~‚Ì ƒoƒ“ƒ}[‚Í ‚â‚Á‚Ä‚±‚È‚¢B‚È‚º‚È‚çA"
+IDS_TRUCK_DIDNT_LEAVE_BECAUSE,
+  //"the truck didn't drive away to build a house because "
+  "ƒgƒ‰ƒbƒN‚ÍA‰Æ‚ğ Œš‚Ä‚É o”­‚µ‚È‚¢B‚È‚º‚È‚çA"
+
+IDS_NUMBER_STACK_WONT_ACCEPT,
+  // As in "The robot stopped because the stack of numbers would not accept something."
+  //"the stack of numbers would not accept something"
+  L"”\216š‚Ì \216R‚ÍA‚È‚É‚à \216ó‚¯•t‚¯‚È‚¢B"
+IDS_NUMBER_WONT_ACCEPT,
+  //"the number did not accept something"
+  L"”\216š‚Í ‚È‚É‚à \216ó‚¯•t‚¯‚È‚¢B"
+IDS_NUMBER_UNDERNEATH_IS_NEGATIVE,
+  //"the number underneath the box is negative"
+  L"ƒ{ƒbƒNƒX‚Ì ‚»‚±‚É‚ ‚é ”\216š‚ÍA•‰‚Ì”‚¾B"
+IDS_NUMBER_UNDERNEATH_TOO_BIG,
+  //"the number underneath the box is larger than the number of holes"
+  L"ƒ{ƒbƒNƒX‚Ì ’ê‚É‚ ‚é ”\216š‚ÍAŒŠ‚Ì”‚æ‚è ‘å‚«‚¢B"
+IDS_ONLY_NUMBERS_ON_NUMBERS
+  //"you can only drop numbers on numbers, text pads, or notebooks"  // revised 4/15/97 to mention notebooks
+  L"”\216š‚ÍA”\216šAƒpƒbƒhAƒm[ƒg‚Ì ã‚É‚¾‚¯ —\216‚Æ‚¹‚éB"
+IDS_TOP_NUMBER_IS_BLANK,
+  //"the number on top is blank"
+  L"ã‚Ì”\216š‚ÍAƒuƒ‰ƒ“ƒN‚¾B"
+IDS_CANT_DIVIDE_BY_ZERO,
+  //"you can't divide by zero"
+  "‚O‚Å‚ÍAŠ„‚ê‚È‚¢B"
+IDS_ANOTHER_MOUSE_SMASHING_IT,
+  //"the number underneath is about to be smashed by another mouse"
+  L"‰º‚Ì ”\216š‚ÍA•Ê‚Ì ƒlƒYƒ~‚É ‚±‚í‚³‚ê‚æ‚¤‚Æ ‚µ‚Ä‚¢‚éB"
+IDS_COMBINED_WITH,
+  // E.g.
+  // We just made a box with one hole which contains a remote control for a
+  // random number between 0 and 1000 which has been combined with something
+  // which will divide by 10 and the number -50.
+  //"which has been combined with"
+  " "
+IDS_COMBINED_WITH2, // used after "something which will divide by 10 and the number -50" in the example above
+  //" "
+  "‚Æ ‘g‚İ‡‚í‚³‚ê‚½"
+IDS_THOUSANDS_COMMA,
+  ","  // e.g. "1,000,000"
+IDS_CONVERT_TO_NUMBER_HELP,
+  //"If you drop something on a blank number, it will be converted to a number if possible. "
+  L"ƒuƒ‰ƒ“ƒN‚Ì ”\216š‚É ‰½‚©‚ğ —\216‚Æ‚¹‚ÎA”\216š‚É •ÏŠ·‚Å‚«‚éB"
+  // For example, if you drop the text "123" it will be converted to the
+  // number 123.
+
+IDS_EQUAL_OPERATOR_ON_NUMBERS,
+  //"If you type '=' and then drop this on another number, it'll become" // followed by a number
+  L"ƒL[‚ğ ƒ^ƒCƒv‚µA‚±‚ê‚ğ •Ê‚Ì ”\216š‚É —\216‚Æ‚·‚ÆA‚»‚ê‚ÍA"
+IDS_EQUAL_OPERATOR_ON_NUMBERS2, // used after the number above
+  //" "
+  "‚É‚È‚é"
+IDS_VACUUM_TO_BLANK_NUMBER,
+  //"You can use Dusty, the vacuum, to make a blank number. " // was "number blank"
+  L"ƒuƒ‰ƒ“ƒN‚Ì ”\216š‚ğ ‚Â‚­‚é‚É‚ÍA‚»‚¤‚¶‹@ ƒ_ƒXƒeƒB‚ğ \216g‚¤B"
+//IDS_IF_YOU_PRESS,
+// "If you press "
+IDS_WHILE_HOLDING_A_NUMBER,
+  // as in "If you hold shift while clicking a mouse button while
+  // holding a number, it will flip over. "  -- where "it" refers to the number.
+  //"while holding a number, it will flip over. "
+  L"ƒL[‚ğ ‰Ÿ‚·‚ÆA”\216š‚ğ ‚Â‚©‚ñ‚Å ‚¢‚ê‚Î ‚¤‚ç‚ª‚¦‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_PRESS_AGAIN_TO_FLIP_BACK,
+  //"Pressing it again will flip it back. "
+  "‚»‚ê‚ğ ‚à‚¤ˆê“x ‰Ÿ‚·‚ÆAŒ³‚É –ß‚¹‚éB"
+IDS_SENSOR_ARITHMETIC_PROBLEM,
+  //"Sensor had a problem doing arithmetic because "
+  L"ƒZƒ“ƒT[‚ÍAŒv\216Z’†‚É –â‘è‚ğ ‚¨‚±‚µ‚½B"
+IDS_TROUBLE_NUMBER_REMOVED,
+  //"The number that made trouble was removed. "
+  L"–â‘è‚ğ ‚¨‚±‚µ‚½ ”\216š‚Í \216Ì‚Ä‚ç‚ê‚½B"
+//IDS_THIS_NUMBER,   // removed 5/31/97
+// "This number"
+IDS_A_SENSOR,
+  //"a sensor"
+  "ƒZƒ“ƒT["
+IDS_A_REMOTE_CONTROL,
+  //"a remote control"
+  "ƒŠƒ‚ƒRƒ“"
+IDS_FOR,
+  //"for"
+  "—p‚Ì"
+IDS_AND_COMBINED_WITH,
+  // Used when describing remote sensors that have had numbers dropped on them.
+  // E.g. "This number is a sensor for a random number between 0 and 1000.
+  // "And it was combined with something which will divide by 10 and the number -50."
+  //"And it was combined with"
+  L"‚»‚ê‚ÍA\216Ÿ‚Ì ‚à‚Ì‚Æ ‘g‚İ‡‚í‚¹‚ç‚ê‚Ä‚¢‚éF"
+IDS_SENSOR_UNDERNEATH,
+  //"sensor is underneath"
+  "ƒZƒ“ƒT[‚Ì ã‚ÍA"
+IDS_CANT_CHANGE_SENSOR,
+  //"can't change the value of a sensor"
+  "ƒZƒ“ƒT[‚Ì ’l‚ğ •ÏX‚Å‚«‚È‚¢B"
+
+IDS_BALD,
+  //"bald"
+  "ƒXƒLƒ“ƒwƒbƒh"
+IDS_LONG_HAIR,
+  //"long hair"
+  "’·”¯"
+IDS_HAT,
+  //"hat"
+  L"–X\216q"
+IDS_NO_MOUSE_SHORTCUTS,
+  //"no mouse\rshortcuts"
+  "ƒ}ƒEƒX‚È‚µ\rƒVƒ‡[ƒgƒJƒbƒg"
+IDS_RIGHT_BUTTON_SHORTCUT,
+  //"right button\rshortcut"
+  "‰Eƒ{ƒ^ƒ“\rƒVƒ‡[ƒgƒJƒbƒg"
+IDS_RIGHT_AND_MIDDLE_SHORTCUTS,
+  //"middle & right\rbuttons shortcuts"
+  "’†•‰Eƒ{ƒ^ƒ“\rƒVƒ‡[ƒgƒJƒbƒg"
+IDS_FULL_SCREEN,
+  //"Full Screen"
+  "ƒtƒ‹ƒXƒNƒŠ[ƒ“"
+IDS_COLLIDING_SIDE_OR_NOT,
+  //"is colliding on the side with something. "
+  "‚ÍA‰½‚©‚Ì ‘¤–Ê‚Æ ‚µ‚å‚¤‚Æ‚Â ‚µ‚Ä‚¢‚éB"
+IDS_COLLIDING_TOP_OR_NOT,
+  //"is colliding with the top or bottom of something else. "
+  "‚ÍA‰½‚©‚Ì ã‚© ‰º‚Æ ‚µ‚å‚¤‚Æ‚Â ‚µ‚Ä‚¢‚éB"
+IDS_IF_YOU_CHANGE_APPEARANCE,
+  //"If you change the appearance of this picture, then "
+  "‚±‚Ì ƒsƒNƒ`ƒƒ‚Ì ŠOŒ©‚ğ •Ï‚¦‚é‚ÆA"
+IDS_CHANGE_SAME_WAY,
+  //"will change the same way. "
+  "‚à “¯—l‚É •Ï‰»‚·‚éB"
+IDS_CONTROLLING_WHETHER,
+  // This is used together with the next phrase as in
+  //  "This is for controlling whether the picture of the ball
+  //   is visible, partly visible, or invisible. "
+  //"This is for controlling whether"
+  "‚±‚ê‚ÍA"
+IDS_VISIBLE_PART_OR_NOT,
+  //"is visible, partly visible, or invisible. "
+  "‚Ì Œ©‚¦•û‚ğ •Ï‚¦‚éB"
+IDS_SPACE_WILL_CHANGE_THEM,
+  //"The space button will change between them. "
+  "ƒXƒy[ƒXƒo[‚ÍA‚»‚ê‚ç‚ğ •Ï‚¦‚éB"
+IDS_ANSWER_QUESTION_ANIMATION,
+  //"This tells us whether the animation of" // e.g. "an explosion"
+  "‚±‚ê‚ÍA"
+IDS_IS_FINISHED
+  //"is finished. "
+  "‚ª I—¹‚µ‚½‚© ‚Ç‚¤‚©‚ğ ‹³‚¦‚Ä‚­‚ê‚éB"
+IDS_WHETHER_HAND_VISIBLE,
+  //"This shows whether your hand is visible. "
+  L"‚±‚ê‚ÍAŒN‚Ì\216è‚ª Œ©‚¦‚é‚©‚Ç‚¤‚©‚ğ \216¦‚·B"
+IDS_SPACE_WILL_SWITCH_IT,
+  //"The space button while pointing to it will switch it on and off. "
+  L"‚»‚ê‚ğ \216w‚µ‚È‚ª‚ç ƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚·‚ÆAƒIƒ“^ƒIƒt‚ª Ø‚è‘Ö‚í‚éB"
+IDS_WHETHER_SOUND_ON,
+  // "This" refers to the remote control being pointed to.
+  //"This shows whether ToonTalk sound effects will be made. "
+  L"‚±‚ê‚ÍAToonTalk‚Ì ƒTƒEƒ“ƒhŒø‰Ê‚ª ì‚ç‚ê‚é‚© ‚Ç‚¤‚©‚ğ \216¦‚·B"
+IDS_MIDDLE_AND_RIGHT_SHORTCUTS_ON,
+  // "This" refers to the remote control being pointed to.
+  //"This changes what the middle and right mouse buttons do when you are on the floor. "
+  L"‚±‚ê‚ÍAŒN‚ª •”‰®‚Ì ’†‚É ‚¢‚é\216Aƒ}ƒEƒX‚Ì ’†‚Æ ‰Eƒ{ƒ^ƒ“‚Ì “®‚«‚ğ •Ï‚¦‚éB"
+IDS_MAKE_RIGHT_BUTTON_SHORTCUT,
+  //"You can make the right mouse button be a shortcut for shift and click. "
+  "ƒ}ƒEƒX‰Eƒ{ƒ^ƒ“‚ğAƒVƒtƒgƒL[‚Æ ƒNƒŠƒbƒN‚Ì ƒVƒ‡[ƒgƒJƒbƒg‚É ‚Å‚«‚éB"
+IDS_AND_RIGHT_BUTTON_SHORTCUT,
+  //"And you can make the middle button be a shortcut for control and click. "
+  "‚»‚µ‚ÄAƒ}ƒEƒX’†ƒ{ƒ^ƒ“‚ğAƒRƒ“ƒgƒ[ƒ‹ƒL[‚Æ ƒNƒŠƒbƒN‚Ì ƒVƒ‡[ƒgƒJƒbƒg‚É ‚Å‚«‚éB"
+IDS_THIS_TEXT_PAD,
+  //"This text pad is"  // as in  "This text pad is a remote control. "
+  "‚±‚ÌƒeƒLƒXƒgƒpƒbƒh‚ÍA"
+IDS_THIS_TEXT_PAD2,
+  //" " // used after "a remote control" in the example above
+  "‚¾"
+IDS_THIS_IS,
+  //"This is"  // as in "This is a remote sensor. "
+  "‚±‚ê‚ÍA"
+IDS_THIS_IS2,
+  //" " // used after "a remote control" in the example above
+  "‚¾"
+IDS_TURN_OFF_COLLISION_WITH_SPACE,
+  //"You can turn a collision into a miss by pointing to the detector and pressing the space button. "
+  L"ŒŸoŠí‚ğ \216w‚µAƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚¹‚ÎA‚µ‚å‚¤‚Æ‚Â‚ğ ƒ~ƒX‚É •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+
+IDS_BOOK_DESCRIPTION6,
+  //"This one is full of sounds"
+  "‚±‚ê‚ÍAƒTƒEƒ“ƒh‚Å ‚¢‚Á‚Ï‚¢‚¾B"
+IDS_BOOK_DESCRIPTION7,
+  //"This one is full of system options"
+  "‚±‚ê‚ÍAƒVƒXƒeƒ€ ƒIƒvƒVƒ‡ƒ“‚Å ‚¢‚Á‚Ï‚¢‚¾B"
+IDS_CONTAINING,
+  //"containing"
+  "A"
+IDS_NOTEBOOK_IN_VACUUM,
+  //"The notebook is in Dusty the vacuum. Dusty can spit it out. "
+  "ƒm[ƒg‚Í ‚»‚¤‚¶‹@ ƒ_ƒXƒeƒB‚Ì ’†‚¾Bƒ_ƒXƒeƒB‚Í ‚»‚ê‚ğ ‚Í‚«‚¾‚·‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_WARNING_FILE
+  //"Warning: file"
+  "’ˆÓFƒtƒ@ƒCƒ‹"
+IDS_COULDNT_OPEN,
+  //"could not be opened. "
+  "‚ÍAƒI[ƒvƒ“ ‚Å‚«‚È‚¢B"
+IDS_CANT_ADD_TO_NOTEBOOK_IN_BUBBLE,
+  //"Sorry, but can't add to a notebook inside a thought bubble. "
+  L"‚²‚ß‚ñA‚Å‚à \216vl‚Ì ’†‚Ö ƒm[ƒg‚Í ’Ç‰Á‚Å‚«‚È‚¢B"
+IDS_TEMPORARY_USER_CANT_SAVE,
+  //"Since you are a temporary user, you can't save this in the main notebook. "
+  "ŒN‚ÍA‰¼‚Ì ƒ†[ƒU[‚È‚Ì‚ÅAƒƒCƒ“‚Ì ƒm[ƒg‚É‚Í ‹L˜^‚Å‚«‚È‚¢B"
+IDS_ONLY_NOTEBOOKS_TO_MAIN,
+  //"Sorry, but for now, you can only add notebooks to your notebook that lives in the toolbox. "
+  "‚²‚ß‚ñA¡‚ÍAƒm[ƒg‚Í ƒc[ƒ‹ƒ{ƒbƒNƒX‚É‚ ‚é ŒN‚Ì ƒm[ƒg‚É‚µ‚© ’Ç‰Á‚Å‚«‚È‚¢B"
+IDS_NOTEBOOK_PAGE_DIDNT_ACCEPT,
+  //"the page of a notebook did not accept something"
+  L"ƒm[ƒg‚Ì ‚»‚Ìƒy[ƒW‚ÍA‚È‚É‚à \216ó‚¯•t‚¯‚È‚©‚Á‚½B"
+IDS_NOTEBOOK_DIDNT_ACCEPT,
+  //"a notebook did not accept something"
+  L"ƒm[ƒg‚Í ‚È‚É‚à\216ó‚¯•t‚¯‚È‚©‚Á‚½B"
+IDS_SOUNDS_NOTEBOOK,
+  //"Sounds"
+  "ƒTƒEƒ“ƒh"
+IDS_OPTIONS_NOTEBOOK,
+  //"Options"
+  "ƒIƒvƒVƒ‡ƒ“"
+IDS_OUTLET,
+  //"Outlet"
+  "oŒû"
+IDS_INLET,
+  //"Inlet"
+  "“üŒû"
+IDS_COUNT,
+  //"count"
+  "ƒJƒEƒ“ƒg"
+IDS_SOUND,
+  //"Sound"
+  "ƒTƒEƒ“ƒh"
+IDS_SORRY_BUT_FILE,
+  //"Sorry, but I think that the file" 
+  "‚²‚ß‚ñA‚»‚Ìƒtƒ@ƒCƒ‹‚ÍA"
+IDS_NOT_NOTEBOOK_FILE,
+  //"is not a notebook file. "
+  "ƒm[ƒgƒtƒ@ƒCƒ‹‚Å‚Í ‚È‚¢B"
+IDS_NOTEBOOK_FUTURE_VERSION,
+  //"Sorry, but trying to load a notebook that was created with a later version of ToonTalk!"
+  "‚²‚ß‚ñAToonTalk‚Ì V‚µ‚¢ ƒo[ƒWƒ‡ƒ“‚Å ì‚ç‚ê‚½ ƒm[ƒg‚ğ ƒ[ƒh‚µ‚Ä‚Ù‚µ‚¢B"
+IDS_THIS_VERSION_CANT
+  //"This version can't read"
+  "‚±‚Ì ƒo[ƒWƒ‡ƒ“‚Í"
+IDS_GET_NEW_VERSION,
+  //".  Maybe you should get a newer version. "
+  L"‚ğ “Ç‚ß‚È‚¢BV‚µ‚¢ ƒo[ƒWƒ‡ƒ“‚ğ “ü\216è‚µ‚Ä‚Ù‚µ‚¢B"
+IDS_TOONTALK_MIXED_UP,
+  //"ToonTalk mixed up. Sorry. "
+  "ToonTalk‚ÍA¬—‚µ‚Ä‚¢‚éB"
+IDS_COULDNT_RECOGNIZE_NOTEBOOK_FILE, // "for a notebook" removed on 3/10/98 
+  //"Warning: couldn't recognize something in a file. "
+  "’ˆÓFƒtƒ@ƒCƒ‹‚Ì ’†‚ª “Ç‚ß‚È‚¢B"
+
+IDS_TOONTALK_OR_FILE_BAD,
+  //"Something wrong with ToonTalk or else a file containing a picture is bad. "
+  "ToonTalk‚©AƒsƒNƒ`ƒƒ‚É “ü‚Á‚½ƒtƒ@ƒCƒ‹‚ª ‚¨‚©‚µ‚¢B"
+IDS_REMOTE_APPEARANCE_CONTROL,
+  // This kind of remote control shows the appearance of a picture
+  // It can be changed and the picture changes.
+  //"a remote control for another's looks"
+  "•Ê‚Ì ŠOŒ©—pƒŠƒ‚ƒRƒ“"
+IDS_WHICH_IS_INVISIBLE,
+  // E.g.  "You are holding a picture of a ball which is invisible."
+  //"which is invisible"
+  "–Ú‚É Œ©‚¦‚È‚¢"
+IDS_WHICH_IS_PARTLY_VISIBLE,
+  //"which is partly visible"
+  "•”•ª“I‚É Œ©‚¦‚é"
+IDS_JUST_A_NOTEBOOK,
+  //"is just a notebook"
+  "‚ÍA‚½‚¾‚Ì ƒm[ƒg‚¾B"
+IDS_ARE,
+  // only used in "And on the back are 5 things. "
+  //"are"
+  "‚Í"
+IDS_WITH,
+  //"with"
+  "‚Æ"
+IDS_PICTURE_ON_BLANK_PICTURE,
+  //"You can change the appearance of a blank picture by dropping another picture on top. "
+  L"‘¼‚Ì ƒsƒNƒ`ƒƒ‚ğ ‚»‚Ìã‚É —\216‚Æ‚·‚±‚Æ‚ÅAƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ‚Ì ŠOŒ©‚ğ •Ï‚¦‚ç‚ê‚éB"
+IDS_OR_NUMBER_OR_TEXT
+  //"Or a number or text pad. "
+  L"”\216š‚â ƒeƒLƒXƒgƒpƒbƒhB"
+IDS_VACUUM_PICTURE_BLANK,
+  //"Dusty, the vacuum, can make a blank picture. " // was picture blank
+  "‚»‚¤‚¶‹@ ƒ_ƒXƒeƒB‚ÍAƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ‚ğ ì‚éB"
+IDS_NOTEBOOK_OF_REMOTES_FLIES,
+  //"A notebook full of remote controls for the picture will fly out. "
+  "ƒsƒNƒ`ƒƒ—p ƒŠƒ‚ƒRƒ“‚Ì ‚¢‚Á‚Ï‚¢ ‚Â‚Ü‚Á‚½ ƒm[ƒg‚ªA”ò‚Ñ‚¾‚·B"
+IDS_CANT_FLIP_REMOTES,
+  // flip here is used as in flipping a picture over to see its back
+  //"you can't flip over a remote control for the looks of another picture"
+  "‘¼‚Ì ƒsƒNƒ`ƒƒ‚Ì ŠOŒ©—pƒŠƒ‚ƒRƒ“‚Í ‚¤‚ç‚ª‚¦‚¹‚È‚¢B"
+IDS_IGNORED_DROP_TOO_MANY_LEVELS,
+  //"Ignored drop on picture since there are too many pictures with pictures. "
+  L"ƒsƒNƒ`ƒƒ‚É‚Í ‚½‚­‚³‚ñ‚Ì ƒsƒNƒ`ƒƒ‚ª ‚ ‚è‚·‚¬‚é‚Ì‚ÅA‚à‚¤ ƒsƒNƒ`ƒƒ‚ğ —\216‚Æ‚¹‚È‚¢B"
+IDS_SCALES_CANT_ADD_TO_PICTURE,
+  //"scales can't be added to a picture"
+  "ƒXƒP[ƒ‹‚ÍAƒsƒNƒ`ƒƒ‚É ‰Á‚¦‚ç‚ê‚È‚¢B"
+IDS_UNFLIPPED_PICTURES_NOT_ON_FLIPPED_PICTURES, // revised on 8/23/97
+  //"the front side of a picture can't be added to the backside of a picture"
+  // "unflipped pictures can't be added to a flipped picture"
+  "‚¤‚ç‚ª‚¦‚µ‚Å‚«‚È‚¢ ƒsƒNƒ`ƒƒ‚ÍA‚¤‚ç‚ª‚¦‚µ‚Å‚«‚é ƒsƒNƒ`ƒƒ‚É‚Í ‰Á‚¦‚ç‚ê‚È‚¢B"
+IDS_PICTURE_WONT_ACCEPT_SOMETHING,
+  //"the picture would not accept something"
+  L"‚»‚ÌƒsƒNƒ`ƒƒ‚ÍA‚È‚É‚à \216ó•t‚¯‚ç‚ê‚È‚¢B"
+IDS_SCALE_TEXT_HELP1,
+  //"Here's how you can use a scale to compare text. "
+  L"‚±‚ê‚ª ƒeƒLƒXƒg‚ğ ”ä‚×‚é‚½‚ß‚Ì ƒXƒP[ƒ‹‚Ì \216g‚¢•û‚¾B"
+IDS_SCALE_TEXT_HELP2,
+  //"First connect three boxes together. Put some words in the first and third holes. "
+  L"‚Ü‚¸A‚R‚Â‚Ì ƒ{ƒbƒNƒX‚ğ ‚­‚Á‚Â‚¯‚éB•¶\216š‚ğ ‚P”Ô–Ú‚Æ ‚R”Ô–Ú‚Ì ŒŠ‚É “ü‚ê‚éB"
+IDS_SCALE_HELP3,
+  //"And a scale in the middle hole. "
+  "‚»‚µ‚ÄAƒXƒP[ƒ‹‚ğ ‚Ü‚ñ’†‚Ì ŒŠ‚É “ü‚ê‚éB"
+IDS_SCALE_NUMBER_HELP1,
+  //"Here's how you can use a scale to compare numbers. "
+  L"‚±‚ê‚ª ”\216š‚ğ ”ä‚×‚é‚½‚ß‚Ì ƒXƒP[ƒ‹‚Ì \216g‚¢•û‚¾B"
+IDS_SCALE_NUMBER_HELP2,
+  //"First connect three boxes together. Put some numbers in the first and third holes. "
+  L"‚Ü‚¸A‚R‚Â‚Ì ƒ{ƒbƒNƒX‚ğ ‚­‚Á‚Â‚¯‚éB”\216š‚ğ ‚P”Ô–Ú‚Æ ‚R”Ô–Ú‚Ì ŒŠ‚É “ü‚ê‚éB"
+IDS_REMOTE_CANT_ACCEPT_THAT,
+  //"the remote control for how something looks can't accept that item"
+  L"ŠOŒ©—p ƒŠƒ‚ƒRƒ“‚ÍA‚»‚ÌƒAƒCƒeƒ€‚ğ \216ó•t‚¯‚È‚¢B"
+IDS_PICTURE_WAITING_FOR_MOUSE,
+  //"the picture being dropped is waiting for Bammer the Mouse"
+  L"—\216‚Æ‚³‚ê‚½ ƒsƒNƒ`ƒƒ‚ÍAƒlƒYƒ~‚Ì ƒoƒ“ƒ}[‚ğ ‘Ò‚Á‚Ä‚¢‚éB"
+IDS_PICTURE_UNDERNEATH_WAITING_FOR_MOUSE,
+  //"the picture underneath is already waiting for Bammer the Mouse"
+  "‰º‚Ì ƒsƒNƒ`ƒƒ‚ÍA‚à‚¤ ƒlƒYƒ~‚Ì ƒoƒ“ƒ}[‚ğ ‘Ò‚Á‚Ä‚¢‚éB"
+IDS_PICTURE_DROPPED_IS_REMOTE,
+  //"the picture being dropped is a remote control"
+  L"—\216‚Æ‚³‚ê‚½ ƒsƒNƒ`ƒƒ‚ÍAƒŠƒ‚ƒRƒ“‚¾B"
+IDS_SORRY_WAIT_TIL_NEXT_TIME,
+  //"Sorry, this won't take effect until next time you start ToonTalk. "
+  L"‚²‚ß‚ñA‚±‚ê‚Í \216Ÿ‚É ToonTalk‚ª ‹N“®‚³‚ê‚é‚Ü‚Å —LŒø‚É ‚È‚ç‚È‚¢B"
+
+IDS_CONFUSED_ABOUT_PROGRAMMER,
+  //"ToonTalk confused and lost track of what the programmer is doing. "
+  "ToonTalk‚Í ¬—‚µAƒvƒƒOƒ‰ƒ€‚ğ –Y‚ê‚Ä ‚µ‚Ü‚Á‚½B"
+IDS_F8_PRESSED_HELP,
+  //"You just turned off the power and stopped all robots. Pressing F8 again will start them up again. "
+  L"ŒN‚Í ‚·‚×‚Ä‚Ì ƒƒ{ƒbƒg‚ğ ’â\216~‚³‚¹‚½B‚à‚¤ˆê“x F8‚ğ ‰Ÿ‚¹‚ÎAÄƒXƒ^[ƒg ‚Å‚«‚éB"
+IDS_F9_PRESSED_HELP,
+  //"Your hand is now hidden. To see it again just press F9 again. "
+  L"ŒN‚Ì\216è‚Í ¡‚Í Œ©‚¦‚È‚¢BŒ©‚¦‚é‚æ‚¤‚É ‚·‚é‚É‚ÍAF9‚ğ ‰Ÿ‚µ‚Ä‚²‚ç‚ñB"
+IDS_ONLY_PORTS_1_OR_2,
+  //"Only able to open serial ports 1 and 2. "
+  "ƒVƒŠƒAƒ‹ƒ|[ƒg‚Ì ‚P‚©‚Q‚¾‚¯‚ğ ƒI[ƒvƒ“‚Å‚«‚éB"
+IDS_TROUBLES_OPENING_PORT,
+  //"Trouble opening serial port. "
+  "ƒVƒŠƒAƒ‹ƒ|[ƒg‚ª ƒI[ƒvƒ“‚Å‚«‚È‚¢B"
+IDS_SERIAL_PORT_PROBLEMS,
+  //"Serial port problems. "
+  "ƒVƒŠƒAƒ‹ƒ|[ƒg‚É –â‘è‚ª ‚ ‚éB"
+IDS_COULDNT_FIND_CONTROLLER,
+  //"Couldn't find a HyperBot controller connected to the computer's serial port. "
+  "ƒVƒŠƒAƒ‹ƒ|[ƒg‚É Ú‘±‚³‚ê‚½ ƒnƒCƒp[ƒ{ƒbƒg ƒRƒ“ƒgƒ[ƒ‰‚ª Œ©‚Â‚©‚ç‚È‚¢B"
+IDS_TROUBLES_USING_PORT,
+  //"Trouble sending things out on serial port. "
+  "ƒVƒŠƒAƒ‹ƒ|[ƒg‚Ö “]‘—’†‚É –â‘è‚ª ”­¶‚µ‚½B"
+
+//IDS_ROBOT_WHO_STOPPED, // made obsolete on 030699
+// "a robot who stopped. "
+IDS_ROBOT_STOPPED_BY_F8,
+  //"a robot stopped because the power is off. F8 will turn on the power and start him up again"
+  L"ƒƒ{ƒbƒg‚Í ’â\216~‚µ‚½BF8‚Å Ä‹N“®‚Å‚«‚éB"
+IDS_A_HOLE,
+  //"a hole"
+  "ŒŠ"
+IDS_AND_THERE_ARE,
+  //"And there are"
+  "‚»‚µ‚Ä"
+IDS_ROBOTS_IN_FRONT,
+  //"robots in front of him"
+  "‘ä‚Ì ƒƒ{ƒbƒg‚ª ”Ş‚Ì‘O‚É ‚¢‚éB"
+IDS_AND_ONE_ROBOT_IN_FRONT,
+  //"And there is one robot in front of him"
+  "‚»‚µ‚Ä ‚P‘ä‚Ì ƒƒ{ƒbƒg‚ª ”Ş‚Ì‘O‚É ‚¢‚éB"
+IDS_ROBOTS_BEHIND,
+  //"robots behind him"
+  "‘ä‚Ì ƒƒ{ƒbƒg‚ª ”Ş‚ÌŒã‚ë‚É ‚¢‚éB"
+IDS_AND_ONE_ROBOT_BEHIND,
+  //"And there is one robot behind him"
+  "‚»‚µ‚Ä ‚P‘ä‚Ì ƒƒ{ƒbƒg‚ª ”Ş‚Ì Œã‚ë‚É ‚¢‚éB"
+IDS_ROBOT_LOST_TRACK,
+  // as in "A robot on the floor stopped because he lost track of stuff"
+  // this shouldn't really ever happen except if the programmer
+  // takes things away from a working robot
+  //"a robot lost track of stuff"
+  L"ƒƒ{ƒbƒg‚Í \216©•ª‚Ì –ğŠ„‚ğ –Y‚ê‚½B"
+IDS_ROBOT_FILE_BAD,
+  //"Something wrong with file storing a robot in a notebook. Robot is lost. Sorry. "
+  L"ƒƒ{ƒbƒg‚ğ ƒm[ƒg‚É ‹L˜^’†‚É –â‘è‚ª ”­¶‚µ‚½Bƒƒ{ƒbƒg‚Í \216¸‚í‚ê‚½B"
+IDS_TROUBLES_LOADING_ROBOT,
+  //"Troubles loading a robot in notebook. Sorry but it's lost. "
+  L"ƒm[ƒg‚Ì ’†‚Ì ƒƒ{ƒbƒg‚ğ \216æ‚èo‚¹‚È‚¢B‚È‚­‚È‚Á‚Ä ‚µ‚Ü‚Á‚½B"
+IDS_TROUBLE_FIGURING_OUT_ROBOT,
+  //"Sorry, but I'm having troubles figuring out what these robots do. "
+  "‚²‚ß‚ñA‚±‚ê‚ç‚Ì ƒƒ{ƒbƒg‚Ì “®ì‚ğ —‰ğ‚Å‚«‚È‚¢B"
+
+//IDS_WHEN_FINISHED_WILL_TELL_WHERE,
+// "When ToonTalk is finished, I'll be able to show you where it is. "
+IDS_ROBOTS_CANT_TRAIN_ROBOTS,
+  //"Sorry, but robots can't train robots. "
+  "‚²‚ß‚ñAƒƒ{ƒbƒg‚Í ƒƒ{ƒbƒg‚É ‹³ˆç‚Å‚«‚È‚¢B"
+
+IDS_FUSSY_ROBOT_HELP1,
+  //"Ah, sorry but robots are really fussy. They only take boxes. "
+  L"‚²‚ß‚ñAƒƒ{ƒbƒg‚Í –{“–‚É ‚«‚Ş‚¸‚©‚µ‚¢B”Ş‚ç‚Í ƒ{ƒbƒNƒX‚µ‚© \216ó‚¯\216æ‚ç‚È‚¢B"
+IDS_FUSSY_ROBOT_HELP2,
+  //"Luckily you can put things in boxes. "
+  "‚¤‚Ü‚¢‚±‚Æ‚ÉAŒN‚Í ƒ{ƒbƒNƒX‚É ‚à‚Ì‚ğ “ü‚ê‚ç‚ê‚éB"
+
+IDS_TOO_MANY_THINGS_ON_SCREEN,
+  //"ToonTalk can't keep track of so many things on the screen and it's lost track of some. "
+  "ToonTalk‚ÍA‚»‚ê‚Ù‚Ç ƒXƒNƒŠ[ƒ“ã‚Ì ‚±‚Æ‚ğ Šo‚¦‚ç‚ê‚È‚¢AŠô‚Â‚©‚Í –Y‚ê‚Ä‚µ‚Ü‚¤B"
+IDS_DISPLAY_LOST_TRACK_OF_STUFF,
+  //"ToonTalk's display stuff lost track of some things. "
+  L"ToonTalk‚Ì •\\216¦‚Í Šô‚Â‚©‚Ì ‚±‚Æ‚ğ –Y‚ê‚½B"
+
+// the following are used to describe internal errors within ToonTalk
+// They are only informative to the extent that someone uses them in a bug report.
+// They shouldn't appear at all of course.
+IDS_TOONTALK_BROKEN,
+  //"Oh nuts! ToonTalk is broken. It is trying to destroy something twice. "
+  "ToonTalk‚ÍA‚±‚í‚ê‚Ä‚¢‚éB‰½‚©‚ğ ‚Ü‚½‚±‚í‚»‚¤‚Æ ‚µ‚Ä‚¢‚éB"
+IDS_TOONTALK_USED_AFTER_DESTROYING,
+  //"Something is wrong with ToonTalk. It tried to use something after destroying it. "
+  L"ToonTalk‚Ì ‰½‚©‚ª ‚¨‚©‚µ‚¢B‰½‚©‚ğ ‚±‚í‚µ‚½Œã ‚»‚ê‚ğ \216g‚¨‚¤‚Æ‚µ‚½B"
+IDS_TOONTALK_DESTROY_ON_FLOOR,
+  //"Something is wrong with ToonTalk. It tried to destroy something that is still on the floor. "
+  "ToonTalk‚Ì ‰½‚©‚ª ‚¨‚©‚µ‚¢B°‚Ì ã‚É ‚ ‚é ‰½‚©‚ğ ‚±‚í‚»‚¤‚Æ ‚µ‚½B"
+IDS_TOONTALK_DESTROY_PART_OF_SOMETHING,
+  //"ToonTalk has something wrong with it. It tried to destroy a part of something. "
+  L"ToonTalk‚Í ‰½‚© ˆ«‚¢‚à‚Ì‚ğ \216‚Á‚Ä‚¢‚éB‰½‚©‚Ì ˆê•”‚ğ ‚±‚í‚»‚¤‚Æ ‚µ‚½B"
+IDS_BAD_DAT_FILE,
+  // before 8/23/97 data was DAT
+  //"Sorry, you seem to have an old or bad data file. " // broken in 2 on 8/13/97
+  "‚²‚ß‚ñAŒN‚Ì ƒtƒ@ƒCƒ‹‚ª ŒÃ‚¢‚©A‚ ‚é‚¢‚ÍAƒf[ƒ^‚ª ‚±‚í‚ê‚Ä‚¢‚éB"
+IDS_NEED_TO_REINSTALL,
+  //"Maybe you need to re-install ToonTalk. "
+  "‘½•ª¤ToonTalk‚ğ ÄƒCƒ“ƒXƒg[ƒ‹‚µ‚½‚Ù‚¤‚ª —Ç‚¢B"
+IDS_PICK_NONEXISTENT_MOVIE,
+  //"ToonTalk got mixed up and tried to pick an animation loop that didn't exist. "
+  L"ToonTalk‚Í ¬—‚µA‘¶İ‚µ‚È‚¢ ƒAƒjƒ‚ğ ŒJ‚è•Ô‚µ •\\216¦‚µ‚æ‚¤‚Æ ‚µ‚½B"
+//IDS_ONE,
+// "one"
+//IDS_IT,
+// "it"
+//IDS_UP,
+// "up"
+//IDS_CACHE_FREED_TWICE,
+// "Cache memory is being freed twice. Sorry, ToonTalk is confused. "
+IDS_FREEING_PROTECTED_CACHE,
+  //"ToonTalk is confused and trying to free some cache memory that it shouldn't. "
+  "ToonTalk‚Í ¬—‚µA•K—v‚Ì‚È‚¢ ƒLƒƒƒbƒVƒ… ƒƒ‚ƒŠ‚ğ ŠJ•ú‚µ‚æ‚¤‚Æ ‚µ‚Ä‚¢‚éB"
+IDS_CACHING_NON_SAVING,
+  //"ToonTalk is confused because it cached something needlessly. "
+  "ToonTalk‚Í ¬—‚µA•K—v‚Ì‚È‚¢‚à‚Ì‚ğ ƒLƒƒƒbƒVƒ…‚µ‚½B"
+IDS_DESTROYING_SAME_PICTURE_TWICE,
+  //"Nuts, ToonTalk is broken and trying to destroy a picture twice. "
+  "ToonTalk‚Í ‚±‚í‚ê‚Ä‚¢‚éAƒsƒNƒ`ƒƒ‚ğ ‚Ü‚½ ‚Í‚©‚¢‚µ‚æ‚¤‚Æ ‚µ‚½B"
+IDS_CANT_FIND_FILE,
+  //"Sorry, I can't seem to find the file "
+  "‚²‚ß‚ñAƒtƒ@ƒCƒ‹‚ªŒ©‚Â‚©‚ç‚È‚¢B"
+IDS_BUT_FILE_IS,
+  //"Sorry, but the file"
+  "‚²‚ß‚ñAƒtƒ@ƒCƒ‹"
+IDS_FILE_DAMAGED,
+  //"is damaged. You'll have to re-install. "
+  "‚ÍA‚±‚í‚ê‚Ä‚¢‚éBŒN‚ÍAÄƒCƒ“ƒXƒg[ƒ‹ ‚·‚×‚«‚¾B"
+IDS_CANT_FIND_RESIND,
+  //"Sorry, can't find the file I need called RESIND. "
+  "‚²‚ß‚ñARESINDƒtƒ@ƒCƒ‹‚ª Œ©‚Â‚©‚ç‚È‚¢B"
+IDS_RESIND_DAMAGED,
+  //"Sorry, but the RESIND file has been damaged. Please re-install. "
+  "‚²‚ß‚ñARESINDƒtƒ@ƒCƒ‹‚ª ‚±‚í‚ê‚Ä‚¢‚éBÄƒCƒ“ƒXƒg[ƒ‹ ‚µ‚Ä‚Ù‚µ‚¢B"
+IDS_NOT_ENOUGH_MEMORY_FOR_NEXT_SOUND,
+  //"ToonTalk is having problems because there is not enough cache memory to hold the next sound. "
+  L"ToonTalk‚É ‰½‚© –â‘è‚ª‚ ‚éB\216Ÿ‚Ì ƒTƒEƒ“ƒh—p‚Ì ƒLƒƒƒbƒVƒ… ƒƒ‚ƒŠ‚ª \216æ‚ê‚È‚¢B"
+
+IDS_HAS_PARTS_BUT_DOESNT,
+  //"ToonTalk is mixed up and thought something had parts and then couldn't find them. "
+  L"ToonTalk‚Í ¬—‚µA‰½‚©‚ª \216‚Á‚Ä‚¢‚é‚Í‚¸‚Ì ƒp[ƒc‚ª Œ©‚Â‚©‚ç‚È‚¢‚Æ l‚¦‚Ä‚½B"
+IDS_HAS_PARTS_BUT_DOESNT2,
+  //"Something might end up the wrong size or place. Sorry. "
+  "‰½‚©‚ªA‚Ü‚¿‚ª‚Á‚½ƒTƒCƒY‚© êŠ‚É‚È‚Á‚½B"
+
+IDS_CONVERT_TO_TEXT_HELP,
+  //"You can make something into text by dropping it on a blank text pad. "
+  L"‚»‚ê‚ğAƒuƒ‰ƒ“ƒN‚Ì ƒeƒLƒXƒgƒpƒbƒh‚Ì ã‚É —\216‚Æ‚·‚±‚Æ‚ÅAƒeƒLƒXƒg‚É •ÏŠ·‚Å‚«‚éB"
+IDS_BACKSPACE_TO_REMOVE_EMPTY_LINE,
+  //"Backspace will remove an empty line. "
+  "Back Space‚ÍA‹ó”’s‚ğ Á‚·B"
+//IDS_TEXT_SOUND_HELP1,
+// "Sometimes text spells out a sound like ""pop"". "
+//IDS_TEXT_SOUND_HELP2,
+// "When it does, you can make that sound by pressing "
+
+IDS_BLANK_TEXT_DIDNT_ACCEPT,
+  //"the blank text pad didn't accept something"
+  L"ƒuƒ‰ƒ“ƒNƒeƒLƒXƒgƒpƒbƒh‚ÍA‚È‚É‚à \216ó•t‚¯‚È‚¢B"
+IDS_ITEM_ON_TOP_IS_BLANK,
+  //"the item on top is blank"
+  "ã‚Ì ƒAƒCƒeƒ€‚ÍAƒuƒ‰ƒ“ƒN‚¾B"
+IDS_ONLY_TEXT_OR_NUMBERS_ON_TEXT,
+  //"you can only add text or numbers to text"
+  L"ƒeƒLƒXƒg‚É‚ÍAƒeƒLƒXƒg‚© ”\216š‚Ì‚İ ‰Á‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_TEXT_TOO_LONG,
+  //"text got to be too long"
+  "ƒeƒLƒXƒg‚ª ’·‚­‚È‚è‚·‚¬‚½B"
+
+IDS_IT_AS_COPY_WAND,
+  //"it"
+  "‚»‚ê"
+//IDS_HIM_AS_NON_WAND_TOOL,
+// "him"
+//IDS_IF_YOU_PICK_HIM,
+// "if you pick him up. "
+//IDS_THEN,
+// "then"
+//IDS_AS_BEFORE,
+// "as before. "
+IDS_PUMP_IN_VACUUM_WHEN_CALLED,
+  //"Pumpy is in Dusty the Vacuum. Dusty can spit him out. "
+  "ƒpƒ“ƒs[‚ÍA‚»‚¤‚¶‹@ ƒ_ƒXƒeƒB‚Ì ’†‚É ‚¢‚éBƒ_ƒXƒeƒB‚ÍA”Ş‚ğ ‚Í‚«‚¾‚¹‚éB"
+IDS_CANT_BE_MADE_BLANK,
+  //"some things can't be erased"
+  "Á‚¹‚È‚¢‚à‚Ì"
+IDS_VACUUM_SPIT_HELP, // changed 10/4
+  // "If you try to suck up the floor, he'll spit out the stuff he's vacuumed. "
+  //"If you want Dusty to spit out stuff he's sucked up, then press 'R'. "
+  "ƒ_ƒXƒeƒB‚É ‹z‚¢‚ñ‚¾‚à‚Ì‚ğ ‚Í‚«‚¾‚³‚¹‚½‚©‚Á‚½‚çA'R'‚ğ ‰Ÿ‚·‚ñ‚¾B"
+IDS_VACUUM_IN_VACUUM_HELP,
+  // This can happen if you make a copy of Dusty and then use the copy to suck
+  // up Dusty.  Then when you call for him (F2) you'll get this message
+  //"Dusty is in another vacuum. That vacuum can spit him out. "
+  "ƒ_ƒXƒeƒB‚ÍA•Ê‚Ì ‚»‚¤‚¶‹@‚Ì ’†‚É ‚¢‚éB‚»‚Ì ‚»‚¤‚¶‹@‚ÍA”Ş‚ğ ‚Í‚«‚¾‚¹‚éB"
+IDS_WAND_IN_VACUUM_WHEN_CALLED, // revised 3/16/97
+  //"The magic wand is in Dusty the Vacuum. Dusty can spit it out. "
+  "–‚–@‚Ì‚Â‚¦‚ÍA‚»‚¤‚¶‹@ ƒ_ƒXƒeƒB‚Ì ’†‚É ‚ ‚éBƒ_ƒXƒeƒB‚ÍA‚»‚ê‚ğ ‚Í‚«‚¾‚¹‚éB"
+IDS_IF_YOU_PRESS,
+  //"If you press"
+  " "
+IDS_COPY_BLANKS_TO_NON_BLANKS,
+  //"then it will copy and restore erased things to the way they were before. "
+  "‚ğ ‰Ÿ‚·‚ÆAÁ‚³‚ê‚½‚à‚Ì‚ğ ƒRƒs[‚µ Œ³‚É –ß‚·B"
+IDS_TOOLBOX_DIDNT_ACCEPT_SOMETHING,
+  //"Tooly did not accept something"
+  L"ƒc[ƒŠƒB‚ÍA‚È‚É‚à \216ó•t‚¯‚È‚¢B"
+
+IDS_TRUCK_ALREADY_HAS_ROBOTS,
+  //"the truck already has robots in it"
+  "‚·‚Å‚É ƒƒ{ƒbƒg‚ğ ‚à‚Á‚Ä‚¢‚é ƒgƒ‰ƒbƒN"
+IDS_TRUCK_ALREADY_HAS_BOX,
+  //"the truck already has a box in it"
+  "‚·‚Å‚É ƒ{ƒbƒNƒX‚ğ ‚à‚Á‚Ä‚¢‚é ƒgƒ‰ƒbƒN"
+IDS_TRUCK_HELP, // revised 3/16/97
+  //"all you can put in a truck is a box, robots, an address, a notebook, a text pad, or a picture of a house"
+  "ƒgƒ‰ƒbƒN‚É Ï‚ß‚é‚Ì‚ÍAƒ{ƒbƒNƒXAƒƒ{ƒbƒgAZŠAƒm[ƒgAƒeƒLƒXƒgƒpƒbƒh‚Æ ‰Æ‚Ì ƒsƒNƒ`ƒƒ‚¾B"
+IDS_TRUCK_CANT_ACCEPT,  // revised 3/16/97
+  //"something was dropped into the truck that wasn't a robot, box, address, notebook, text pad, or picture of a house"
+  L"ƒ{ƒbƒNƒXAƒƒ{ƒbƒgAZŠAƒm[ƒgAƒeƒLƒXƒgƒpƒbƒh‚Æ‰Æ‚ÌƒsƒNƒ`ƒƒˆÈŠO‚Ì ‰½‚©‚ªAƒgƒ‰ƒbƒN‚É —\216‚Æ‚³‚ê‚½B"
+IDS_TRUCK_STOPPED_BECAUSE_CITY_FULL
+  //"the city is completely full of houses"
+  "ŠX‚ÍA‚·‚Á‚©‚è ‰Æ‚Å ‚¢‚Á‚Ï‚¢‚Å‚·B"
+IDS_VIDEO_MODE_BAD,
+  //"Video mode not supported. Perhaps your -v n entry is wrong. "
+  "ƒTƒ|[ƒg‚³‚ê‚Ä‚¢‚È‚¢ ƒrƒfƒIƒ‚[ƒh‚¾B‘½•ªAİ’è‚ª ‚Ü‚¿‚ª‚Á‚Ä‚¢‚éB"
+
+
+IDS_FULL_SCREEN_INITIALIZATION_PROBLEMS,
+  //"Some problem getting into full screen mode. Sorry. "
+  "ƒtƒ‹ƒXƒNƒŠ[ƒ“ƒ‚[ƒh‚É ‚È‚é‚É‚ÍA–â‘è‚ª ‚ ‚éB"
+IDS_FULL_SCREEN_PROBLEMS,
+  //"Warning some problem with full screen mode. "
+  "ƒtƒ‹ƒXƒNƒŠ[ƒ“ƒ‚[ƒh‚Å‚ÍA‚¢‚­‚Â‚© –â‘è‚ª‚ ‚éB"
+IDS_TOONTALK_WINDOW_TITLE,
+  "ToonTalk"
+//IDS_TOONTALK_WINDOW_TITLED_PAUSED,
+// "ToonTalk (press Pause to resume)"
+IDS_TOONTALK_BETTER_256,  // revised for clarity and mention of full-screen mode on 1/30/98
+  //"ToonTalk will probably run much better if you run it in full-screen mode or if you change Windows to run with 256 colors. "
+  "ƒtƒ‹ƒXƒNƒŠ[ƒ“ƒ‚[ƒh‚É ‚·‚é‚©AWindows‚Ì İ’è‚ğ ‚Q‚T‚UF‚É ‚µ‚½‚Ù‚¤‚ªA—Ç‚¢B"
+//IDS_TOONTAL_PAL_MISSING,
+// "The file TOONTALK.PAL is missing so the colors may be off. "
+//IDS_WINDOWS_NOT_256_BAD,  // obsolete
+// "Since Windows is not running with 256 colors, this may look bad. "
+IDS_ASK_NAME_FAILURE,
+  //"Something went wrong trying to create a dialog box to ask your name. "
+  L"ŒN‚Ì –¼‘O‚ğ •·‚­ ƒ_ƒCƒAƒƒO‚ğ ŠJ‚±‚¤‚Æ‚µ‚Ä \216¸”s‚½B"
+
+// These 3 entries are spoken one directly after the other.
+IDS_OPTIONS_NOTEBOOK_HELP1,
+  //"There are lots of things about ToonTalk that you can change. "
+  "ToonTalk‚É ŠÖ‚µ‚ÄA•ÏX‚Å‚«‚é‚±‚Æ‚Í ‚½‚­‚³‚ñ‚ ‚éB"
+IDS_OPTIONS_NOTEBOOK_HELP2,
+  //"Like how you look or how fast I talk. Even how much I talk! "
+  "ŒN‚Ì ŠOŒ© ‚Æ‚©A‚í‚½‚µ‚Ì ˜b‚· ƒXƒs[ƒh ‚Æ‚©B‚í‚½‚µ‚Ì ˜b‚·—Ê‚Ü‚ÅI"
+IDS_OPTIONS_NOTEBOOK_HELP3,
+  //"To change things just try the things in the notebook of options on page 10 of your notebook. "
+  L"•ÏX‚·‚é‚É‚ÍAŒN‚Ì ƒm[ƒg‚Ì ‚P‚Oƒy[ƒW‚É‚ ‚é ƒIƒvƒVƒ‡ƒ“‚ğ \216\216‚µ‚Ä‚²‚ç‚ñB"
+
+IDS_NO_HIGH_RES_IN_16_BITS,
+  //"Sorry, but the high resolution mode of ToonTalk is only available when running the 32-bit version of ToonTalk. "
+  "‚²‚ß‚ñAƒnƒCƒŠƒ]ƒŠƒ…[ƒVƒ‡ƒ“ ƒ‚[ƒh‚ÍA‚R‚Qƒrƒbƒg”Å‚Å ‚Ì‚İ —LŒø‚¾B"
+IDS_BAD_VIDEO_MODE1,
+  //"Sorry, but the video mode"
+  "‚²‚ß‚ñAƒrƒfƒIƒ‚[ƒh"
+IDS_BAD_VIDEO_MODE2,
+  //"is not available. Default value used. "
+  L"‚ÍA\216g‚¦‚È‚¢BƒfƒtƒHƒ‹ƒgİ’è‚É ‚·‚éB"
+
+IDS_NEED_CDROM_TO_CONTINUE,
+  //"If you insert the ToonTalk CD-ROM now, ToonTalk will be able to continue. "
+  "¡AToonTalk CD-ROM‚ğ “ü‚ê‚ê‚Î Œp‘±‚Å‚«‚éB"
+IDS_NEED_CDROM_FOR_NARRATION,
+  //"If you insert the ToonTalk CD-ROM now, you will be able to hear the narration for this demo. "
+  "¡AToonTalk‚Ì CD-ROM‚ğ “ü‚ê‚ê‚ÎA‚±‚Ìƒfƒ‚‚Ì ƒiƒŒ[ƒVƒ‡ƒ“‚ğ •·‚¯‚éB"
+
+//IDS_EXPECTED_TO_FIND_SOMETHING_IN_NEST,
+// "Robot expected to find something in a nest but it was empty. "
+IDS_WHAT_IS_ON_TOP_OF,
+  // as in "He will then pick up what is on top of the nest. "
+  //"what is on top of"
+  " "
+IDS_WHAT_IS_ON_TOP_OF2, // used after "the nest" in the example above
+//  " "
+  "‚Ì ã‚É ‚ ‚é‚à‚Ì‚ğ"
+//IDS_TOONTALK_PAUSED,
+//  "ToonTalk is now stopped. Click on OK when you want it to start again. "
+IDS_MAIN_CUBBY_IN_TRUCK_NO_LOOP,
+  //"This robot will work once. Then he'll stop because you are training him to put his box in the truck.  After the truck drives off he'll never see it again. "
+  L"‚±‚Ì ƒƒ{ƒbƒg‚ÍAˆê“x“®‚«A‚»‚µ‚Ä \216~‚Ü‚éBŒN‚ª ”Ş‚Ì ƒ{ƒbƒNƒX‚ğ ƒgƒ‰ƒbƒN‚É Ï‚Ş‚æ‚¤ ‹³ˆç‚µ‚Ä‚¢‚é ‚©‚ç‚¾Bƒgƒ‰ƒbƒN‚ª ‹\216‚Á‚½Œã‚Å‚ÍA”Ş‚Í “ñ“x‚Æ ‚»‚ê‚ğ Œ©‚é‚±‚Æ‚Í ‚È‚¢B"
+//  "This robot will work once and then stop because you're training him to put the box he's working on in the truck so after the truck drives off he'll never see it again. "
+IDS_SCALE_WONT_ACCEPT,
+  //"the scale does not accept anything dropped on it"
+  L"‚»‚Ì ƒXƒP[ƒ‹‚ÍA—\216‚Æ‚³‚ê‚é‚à‚Ì‚ğ ‚È‚É‚à \216ó•t‚¯‚È‚¢B"
+
+// These should be translated since they will be seen by the user
+// when they paste things from the clipboard into a text program.
+// The system searches for IDS_UUENCODING_START_TOKEN so all
+// of this are considered comments when loaded into ToonTalk.
+IDS_UUENCODING_HEADER,
+  //"   This is the result of ""pasting"" a ToonTalk object. You can include"
+  "  ‚±‚ê‚ÍAToonTalk ƒIƒuƒWƒFƒNƒg‚ğ “\‚è•t‚¯‚½ Œ‹‰Ê‚Å‚·BŒN‚ÍA‚±‚ê‚ğ"
+IDS_UUENCODING_HEADER2,
+  //"this in files, email, or whatever. To decode it just use any program"
+  "ƒtƒ@ƒCƒ‹‚â ‚dƒ[ƒ‹“™A‰½‚É‚Å‚à ŠÜ‚ß‚é‚±‚Æ‚ª ‚Å‚«‚éB‚»‚ê‚ğ Œ©‚é‚É‚ÍA"
+IDS_UUENCODING_HEADER3,
+  //"that can copy this to the Windows clipboard. For example, you can use"
+  L"Windows‚Ì ƒNƒŠƒbƒvƒ{[ƒh‚É ƒRƒs[‚Å‚«‚é ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğ \216g‚¤B—á‚¦‚ÎAƒƒ‚’ ‚â"
+IDS_UUENCODING_HEADER4,
+  //"Windows Notepad or WordPad program. Select all of the text" // re-written for clarity on 020399
+  L"ƒ[ƒhƒpƒbƒh‚ª \216g‚¦‚éB‚·‚×‚Ä‚Ì ƒeƒLƒXƒg‚ğ ‘I‘ğ‚µA•ÒWƒRƒ}ƒ“ƒh‚Ì ’†‚Ì"
+IDS_UUENCODING_HEADER5,
+  //"and then use the Copy command in the Edit menu. Then it will appear"
+  L"ƒRƒs[ƒRƒ}ƒ“ƒh‚ğ \216g‚¤B‚·‚é‚ÆA‚»‚ê‚Í ƒNƒŠƒbƒvƒ{[ƒh—p ƒŠƒ‚ƒRƒ“‚Ì ’†‚É"
+IDS_UUENCODING_HEADER6,
+  //"in the ToonTalk remote control for the clipboard. You can find the"
+  "Œ»‚ê‚éBƒNƒŠƒbƒvƒ{[ƒh—p ƒŠƒ‚ƒRƒ“‚ÍAƒZƒ“ƒT[ ƒm[ƒg‚Ì ‚R‚Oƒy[ƒW‚É ‚ ‚éB"
+IDS_UUENCODING_HEADER7,
+  //"clipboard remote control on page 30 of the Sensor notebook. Just use"
+  L"ƒNƒŠƒbƒvƒ{[ƒh‚©‚ç ‹z‚¢‚Ş‚É‚ÍAƒ_ƒXƒeƒB‚ğ \216g‚¤B"
+IDS_UUENCODING_HEADER8,
+  //"Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. " // updated on 150599 for clarity and formating
+  "ƒRƒ“ƒgƒ[ƒ‹{'v'‚ÍA“\‚è•t‚¯‚Ì ƒVƒ‡[ƒgƒJƒbƒg‚¾B"
+IDS_UUENCODING_FOOTER,
+  // code is used here in the sense of "encoding"
+  //"This is the end of the code for the ToonTalk object. "
+  "‚±‚ê‚ÍAToonTalk ƒIƒuƒWƒFƒNƒg‚Ì I—¹ƒR[ƒh‚¾B"
+IDS_WHAT_FOLLOWS_IS_CODE,
+  "   What follows is in a special code and was produced by ToonTalk(tm) "
+IDS_FOLLOWING_IS,
+  //"The following is "
+  "ˆÈ‰º‚ÍA"
+
+//IDS_BETA4_FORMAT_WARNING,
+//  "Sorry but old ToonTalk programs probably won't run in Version 4. "
+IDS_BETA_TO_EXPIRE1, // changed  8/23/97
+  //"It is time to get a new version of ToonTalk. (Visit www.toontalk.com.) "
+  L"ToonTalk‚Ì V‚µ‚¢ ƒo[ƒWƒ‡ƒ“‚ğ “ü\216è‚·‚×‚«‚¾B"
+IDS_BETA_TO_EXPIRE2, // changed  8/23/97
+  // followed by a number
+  //"This version of ToonTalk will stop working in"
+  "‚±‚Ìƒo[ƒWƒ‡ƒ“‚ÍA‚ ‚Æ"
+IDS_BETA_TO_EXPIRE3, // added 8/23/97
+  //"days."
+  L"“úŠÔ \216g—p‚Å‚«‚éB"
+IDS_FOR_EXAMPLE,
+  //"for example"
+  "—á‚¦‚ÎA"
+IDS_WHICH_ORIGINALLY_WAS,
+  // as in "You are hold a blank number pad that originally was 42. "
+  //"which originally was"
+  "Œ³‚Ì’l‚ÍA"
+
+IDS_AVENUE_HOUSE_IS_ON,
+  //"This is a sensor which shows which avenue (runs north to south) that this house is on. "
+  L"‚±‚ê‚ÍA‚±‚Ì‰Æ‚ª Œš‚Á‚Ä‚¢‚é ƒAƒxƒjƒ…[i“ì–k‚É‘–‚é’Ê‚èj‚ğ \216¦‚· ƒZƒ“ƒT[‚¾B"
+IDS_YOU_CHANGE_IT_BY,
+  //"You can change it by dropping numbers on it. "
+  L"‚»‚Ìã‚É ”\216š‚ğ —\216‚Æ‚¹‚ÎA‚»‚ê‚ğ •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_AVENUE_TO_BUILD,
+  //"If you drop one of these into a truck, then the crew in the truck will build a house on the nearest free lot on this avenue. "
+  L"‚±‚Ì’†‚Ì ˆê‚Â‚ğ ƒgƒ‰ƒbƒN‚É —\216‚¹‚ÎAƒgƒ‰ƒbƒN‚Ì ƒƒ“ƒo[‚ÍA‚±‚Ì ƒAƒxƒjƒ…[‰ˆ‚¢‚Ì ˆê”Ô ‹ß‚¢ ‹ó‚«’n‚É ‰Æ‚ğ Œš‚Ä‚éB"
+IDS_STREET_HOUSE_IS_ON,
+  //"This is a sensor which shows which street (runs east to west) that this house is on. "
+  L"‚±‚ê‚ÍA‚±‚Ì‰Æ‚ª Œš‚Á‚Ä‚¢‚é ƒXƒgƒŠ[ƒgi“Œ¼‚É‘–‚é’Ê‚èj‚ğ \216¦‚· ƒZƒ“ƒT[‚¾B"
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_STREET_TO_BUILD,
+  //"If you drop one of these into a truck then the crew in the truck will build a house on the nearest free lot on this street. "
+  L"‚±‚Ì’†‚Ì ˆê‚Â‚ğ ƒgƒ‰ƒbƒN‚É —\216‚¹‚ÎAƒgƒ‰ƒbƒN‚Ì ƒƒ“ƒo[‚ÍA‚±‚Ì ƒXƒgƒŠ[ƒg‰ˆ‚¢‚Ì ˆê”Ô ‹ß‚¢ ‹ó‚«’n‚É ‰Æ‚ğ Œš‚Ä‚éB"
+//IDS_ABANDON_FULL_SCREEN,
+//  "ToonTalk crashed last time it was used. Maybe the problem is because ToonTalk was running in ""full screen mode"". This mode makes the animation look better but doesn't work on a few computers. "
+//IDS_ABANDON_FULL_SCREEN2,
+//  "The ""Screen Size"" option in the notebook on page 10 of your notebook can change this. Should I turn off this mode for you?"
+IDS_TOO_MANY_THINGS_FOR_ROBOT,
+  //"Robots can keep track of only so many things. This one has gotten confused since there are too many things. "
+  "ƒƒ{ƒbƒg‚ÍA‚½‚­‚³‚ñ‚Ì ‚±‚Æ‚ğ ‹L‰¯‚Å‚«‚é‚ªA‚±‚ê‚ÍA‘½‚·‚¬‚½‚½‚ß‚ÉA¬—‚µ‚Ä‚¢‚éB"
+
+IDS_LEFT,
+  //"left"
+  "¶"
+IDS_RIGHT,
+  //"right"
+  "‰E"
+IDS_COULDNT_FIND_PAGE,
+  //"couldn't find page in notebook"
+  "‚ÍAƒm[ƒg‚Ì ’†‚Ì ƒy[ƒW‚ğ Œ©‚Â‚¯‚ç‚ê‚È‚©‚Á‚½B" 
+
+IDS_UNKNOWN_MCI_ERROR,
+// was "Something went wrong sending something to the Windows Media Control Interface, but I don't know what. Sorry. "
+  //"Sorry. An error occurred after sending the following to the Windows Media Control Interface. "
+  "‚·‚İ‚Ü‚¹‚ñBWindows Media Control Interface‚É ‘—M‚µ‚½ Œã‚ÉAƒGƒ‰[‚ª ”­¶‚µ‚½B"
+
+IDS_ROBOT_COULDNT_FIND_PLACE_TO_RELEASE,
+  //"couldn't find the place he was going to drop something"
+  L"”Ş‚ª ‰½‚©‚ğ —\216‚»‚¤‚Æ‚µ‚½ êŠ‚ª ‚í‚©‚ç‚È‚©‚Á‚½B"
+
+IDS_UNABLE_TO_OPEN_FILE,
+  //"Unable to open log file called"
+  "ƒƒO ƒtƒ@ƒCƒ‹‚ğ ƒI[ƒvƒ“‚Å‚«‚È‚¢F"
+
+IDS_ITLL_SWITCH_TO_THE_NEXT_VALUE,
+  //"it'll switch to the next value. "
+  L"\216Ÿ‚Ì ’l‚É •Ï‚í‚éB"
+IDS_ITLL_SWITCH_TO_THE_PREVIOUS_VALUE,
+  //"it'll switch to the previous value. "
+  "‘O‚Ì ’l‚É •Ï‚í‚éB"
+IDS_IF_YOU_PICK_UP_AND_PRESS,
+  // as in "You are pointing to a remote control.  
+  // If you pick it up and press a mouse button while holding down shift
+  // or just the space button it'll switch to the previous value. "
+  //"If you pick it up and press"
+  "‚»‚ê‚ğ ‚Ğ‚ë‚¢A"
+IDS_JUST_THE_SPACE_BUTTON,
+  //"or just the space button" // add "or" on 12/20
+  "‚ğ ‰Ÿ‚·‚©AƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚¹‚ÎA"
+IDS_OR_JUST, // combined IDS_OR and IDS_JUST on 12/20
+  // as in  "Or just press '-' to switch to the previous value. "
+  //"or just"
+  "’P‚ÉA"
+
+IDS_IN,
+  // used only when describing robots that either give things
+  // to birds that are in boxes or put things in boxes that
+  // are in trucks.
+  // "He will give it to the bird in the first hole of the box. " or
+  // "He will drop it on the box in the truck. "
+  //"in"
+  " "    // ****************************************:::
+IDS_WARNING,
+  //"Warning"
+  "’ˆÓ"
+IDS_BYTES,
+  //"bytes"
+  "ƒoƒCƒg"
+//IDS_MEMORY_IS_LOW,
+// "Warning. Memory is low. Memory used to speed things up shrunk by " 
+//IDS_IT_IS_NOW,
+// "It is now" 
+IDS_CANT_ADD_TO_SIDE_OF_BLANK_BOX,
+  // as in "A robot stopped because nothing will stick to the side of a blank box.
+  //"nothing will stick to the side of a blank box"
+  "ƒuƒ‰ƒ“ƒNƒ{ƒbƒNƒX‚Ì ‘¤–Ê‚É ‚È‚É‚à “\‚ç‚ê‚Ä ‚¢‚È‚¢"
+
+IDS_CITY_SIZE_CANT_BE_LESS_THAN,   // re-written on 8/23/97 for clarity
+  // "The smallest you can make the city size is -255 for a 255 by 255 city randomly filled with houses. "
+  //"The smallest number you can give for the city size is -255.  This makes a 255 by 255 city and because it is negative the city is randomly filled with houses. "
+  "ŠX‚Ì ƒTƒCƒY‚Ì Å¬’l‚ÍA-255‚¾B255 x 255‚Ì ŠX‚ğ ‘¢‚é‚ªA•‰‚Ì”‚È‚Ì‚ÅAŠX‚Í “K“–‚É ‰Æ‚Å –„‚ß‚ç‚éB"
+IDS_CITY_SIZE_CANT_BE_MORE_THAN,
+  //"The biggest a city can be is 255 blocks by 255 blocks. "
+  "ŠX‚ÌÅ‘å‚ÍA255 x 255 ƒuƒƒbƒN‚¾B"
+
+//IDS_FULL_SCREEN_MODE_TOO_SLOW,
+// "Full screen mode is taking a surprisingly long time. You might want to try ToonTalk without it. "
+IDS_AVENUE,
+  //"Avenue"
+  "ƒAƒxƒjƒ…["
+IDS_STREET,
+  //"Street"
+  "ƒXƒgƒŠ[ƒg"
+
+IDS_TROUBLES_READING_PICTURE_FILE,
+  //"Had some problems reading the file"
+  L"ƒtƒ@ƒCƒ‹‚Ì “Ç‚İ‚İ‚É \216¸”s‚µ‚½"
+IDS_CANT_FLIP_USED_FILE_TO_PICTURE_REMOTE,
+  //"can't flip this over. You can vacuum out the picture and flip it over"
+  L"‚ÍA‚±‚ê‚ğ ‚¤‚ç‚ª‚¦‚¹‚È‚¢BƒsƒNƒ`ƒƒ‚ğ ‹z‚¢\216æ‚ê‚ÎA‚¤‚ç‚ª‚¦‚¹‚éB"
+IDS_CANT_FLIP_UNUSED_FILE_TO_PICTURE_REMOTE,
+  //"can't flip this over. All you can do is drop a file name of a picture on it. "
+  L"‚ÍA‚±‚ê‚ğ ‚¤‚ç‚ª‚¦‚¹‚È‚¢BŒN‚É ‚Å‚«‚é‚±‚Æ‚ÍAƒsƒNƒ`ƒƒ‚Ì ƒtƒ@ƒCƒ‹–¼‚ğ ‚»‚Ìã‚É —\216‚·‚±‚Æ ‚¾‚¯‚¾B"
+IDS_FILE_TO_SOUND_FULL_HELP,
+  //"This is for playing your own sound effects and music. "
+  "‚±‚ê‚ÍAŒN‚Ì ƒTƒEƒ“ƒh‚â ƒ~ƒ…[ƒWƒbƒN‚ğ –Â‚ç‚·‚½‚ß‚Ì ƒtƒ@ƒCƒ‹‚¾B"
+IDS_FILE_TO_SOUND_FULL_HELP2,
+  //"Just drop the name of a WAVE or MIDI file on it and it'll play until finished or vacuumed up. "
+  L"‚»‚Ìã‚ÉAWAVE‚â MIDIƒtƒ@ƒCƒ‹‚ğ —\216‚·‚¾‚¯‚ÅAI—¹‚·‚é‚© ‹z‚¢‚Ü‚ê‚é‚Ü‚Å ‰‰‘t‚·‚éB"
+IDS_FILE_TO_PICTURE_FULL_HELP,
+  //"This is for showing your own pictures inside of ToonTalk. "
+  L"‚±‚ê‚ÍAŒN‚Ì ƒsƒNƒ`ƒƒ‚ğ •\\216¦‚·‚é‚½‚ß‚Ì ƒtƒ@ƒCƒ‹‚¾B"
+IDS_FILE_TO_PICTURE_FULL_HELP2,
+  //"Just drop the file name of picture (in BMP format) and then vacuum up the result. "
+  L"BMPƒtƒ@ƒCƒ‹‚ğ —\216‚·‚¾‚¯‚¾B‚»‚µ‚Ä Œ‹‰Ê‚ğ ‹z‚¢‚Ş‚ñ‚¾B"
+IDS_SORRY_USER_PICTURE_TOO_BIG,
+  "I'm sorry but the 16 bit version of ToonTalk can't deal with pictures bigger than the screen. "
+IDS_TROUBLES_READING_SOUND_FILE,
+  //"Sorry, ToonTalk had troubles reading the sound file"
+  L"ƒTƒEƒ“ƒhƒtƒ@ƒCƒ‹‚Ì “Ç‚İ‚İ‚É \216¸”s‚µ‚½B"
+IDS_REMEMBER_FILE,
+  // Marty says this if the user puts a picture created from a user file onto the clipboard.
+  // The following is followed by the file name.
+  //"Remember that if you send this to someone on another computer, you should also send them the file"
+  L"‚±‚ê‚ğ •Ê‚Ì ƒRƒ“ƒsƒ…[ƒ^ã‚Ì ’N‚©‚É ‘—‚é\216‚ÍA‚±‚ê‚ç‚Ì ƒtƒ@ƒCƒ‹‚à ˆê‚É ‘—‚ç‚È‚­‚Ä‚Í ‚¢‚¯‚È‚¢F"
+
+// added 8/23/96
+IDS_RESULT_OF_SAVING_ROOM,
+  //"This is the result of saving everything in a room. "
+  "‚±‚ê‚ÍA•”‰®‚É‚ ‚é ‚·‚×‚Ä‚Ì ‚à‚Ì‚ğ ‹L˜^‚µ‚½ Œ‹‰Ê‚¾B"
+IDS_WHICH_CONTAINS,
+  //"which contains"
+  " "
+IDS_WHO_IS_HOLDING,
+  // as in "You are holding a robot who is holding a magic wand. " 
+  //"who is holding"
+  " "
+IDS_WHO_IS_HOLDING2,
+  //" " // used after "a magic wand" in the example above
+  L"‚ğ \216‚Á‚½"
+IDS_WHO_CAN_ONLY_REMEMBER,
+  //"who can only remember"
+  "Šo‚¦‚Ä‚¢‚é"
+IDS_ACTIONS,
+//  "actions"
+  "“®ì"
+//IDS_WHICH_IS_HELD_BY,
+// "which is held by"
+IDS_STEP
+  //"Step"
+  "ƒXƒeƒbƒv"
+IDS_STEPS,
+  //"Steps"
+  "ƒXƒeƒbƒv"
+IDS_WHICH_HAS_ENOUGH_MAGIC,
+  // Together with the following words is used in
+  // "You are holding a magic wand which has enough magic for 4 uses. "
+  //"which has enough magic for"
+  " "
+IDS_WHICH_HAS_ENOUGH_MAGIC2,
+  //" " // used after "4 uses" in the example above
+  L"‰ñ \216g‚¤‚Ì‚É \•ª‚È –‚–@‚ğ \216‚Á‚½"
+IDS_USE,
+  //"use"
+  L"\216g‚¤"
+IDS_USES,
+  //"uses"
+  L"\216g‚¤"
+//IDS_HIM,
+// "him"
+//IDS_HER,
+// "her"
+IDS_CANT_ADD_TO_REMOTE_NOTEBOOK,
+  // was "Sorry, but you can't save anything in a picture's notebook. It is just for remote controls and sensors. "
+  // on 9/4/97 changed to
+  //"Sorry, but you can't change a picture's notebook. It is just for remote controls and sensors. "
+  "‚²‚ß‚ñAƒsƒNƒ`ƒƒ‚Ì ƒm[ƒg‚Í •ÏX‚Å‚«‚È‚¢B‚»‚ê‚ÍAƒŠƒ‚ƒRƒ“‚Æ ƒZƒ“ƒT[—p‚¾B"
+
+// new on 10/3
+IDS_EXPANDER_KEY_COMMANDS,
+  // Each letter is a keyboard shortcut to put Pumpy's button in that state
+  // this (and the IDS_COPIER_KEY_COMMANDS and IDS_VACUUM_KEY_COMMANDS)
+  // should be as easy to remember as possible and must be unique
+  // IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2 documents this
+  "BTWLSNG" // for the first letter of Big, Tall, Wide, etc.
+IDS_WHO_IS_READY_TO,
+  //"who can"
+  "A"
+IDS_WHO_IS_READY_TO2,
+  //" "
+  "‚±‚Æ‚ª ‚Å‚«‚é"
+IDS_THAT_IS_READY_TO,
+  // only used to describe a magic wand
+  // following expressions are IDS_COPIER_STATE0, IDS_COPIER_STATE1, or
+  // IDS_COPIER_STATE2
+  //"that can"
+  "A"
+IDS_THAT_IS_READY_TO2,
+  //" "
+  "‚±‚Æ‚ª ‚Å‚«‚é"
+IDS_MAKE_THINGS,
+  //"make things"
+  " "
+IDS_EXPANDER_STATE0,
+  //"bigger"
+  "‘å‚«‚­‚·‚é"
+IDS_EXPANDER_STATE1,
+  //"taller"  
+  "‚‚­‚·‚é"
+IDS_EXPANDER_STATE2,
+  //"wider"  
+  "L‚­‚·‚é"
+IDS_EXPANDER_STATE3,
+  //"smaller"
+  "¬‚³‚­‚·‚é"
+IDS_EXPANDER_STATE4,
+  //"shorter"  
+  "’Z‚­‚·‚é"
+IDS_EXPANDER_STATE5,
+  //"narrower"
+  "‹·‚­‚·‚é"
+IDS_EXPANDER_STATE6,
+//  "a good size"
+  "‚¿‚å‚¤‚Ç—Ç‚¢ ƒTƒCƒY‚É‚·‚é"  
+IDS_VACUUM_KEY_COMMANDS,
+  // See comment for IDS_EXPANDER_KEY_COMMANDS
+  "SRE"  // was SRB before 12/14
+IDS_VACUUM_STATE0,
+  //"suck things up"  
+  "‚È‚ñ‚Å‚à ‹z‚¢‚Ş"
+IDS_VACUUM_STATE1,
+  //"spit out things he has sucked up"  
+  "‹z‚¢‚ñ‚¾‚à‚Ì‚ğ ‚Í‚«‚¾‚·"
+IDS_VACUUM_STATE2,
+  //"erase things from the surface to make things blank"  
+  "ƒuƒ‰ƒ“ƒN‚É ‚·‚é‚½‚ßAã‚É ‚ ‚é‚à‚Ì‚ğ Á‚·"
+  // was "suck things off the surface to make things blank"  
+IDS_COPIER_KEY_COMMANDS,
+  // See comment for IDS_EXPANDER_KEY_COMMANDS
+  "COS"
+IDS_COPIER_STATE0,
+  //"copy things"
+  "ƒRƒs[‚·‚é"
+IDS_COPIER_STATE1,
+  //"copy things, and if they are blank, restore them to the way they used to be"
+  "ƒRƒs[‚·‚éA‚à‚µ ‚»‚ê‚ª ƒuƒ‰ƒ“ƒN‚È‚ç‚ÎAƒuƒ‰ƒ“ƒN‚É ‚³‚ê‚é‘O‚É –ß‚·"
+IDS_COPIER_STATE2,
+  //"copy itself"
+  L"\216©•ª‚ğ ƒRƒs[‚·‚é"
+IDS_BUTTON_TYPE_INDEFINITE,
+  //"a button"
+  "ƒ{ƒ^ƒ“"
+IDS_BUTTON_TYPE_DEFINITE,
+  //"the button"
+  "ƒ{ƒ^ƒ“"
+IDS_BUTTON_TYPE_PLURAL,
+  //"buttons"
+  "ƒ{ƒ^ƒ“"
+IDS_BUTTON_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+
+IDS_BUTTON_CLICKED_HELP1,
+  //"You can change"
+  "ƒL[‚ğ ƒNƒŠƒbƒN‚·‚ê‚ÎA"
+IDS_BUTTON_CLICKED_HELP2,
+  //"to do something different if you click on the button. "
+  "‚ª ‰½‚© ˆá‚¤‚±‚Æ‚ğ ‚·‚é‚æ‚¤‚ÉA•Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_BUTTON_CYCLE_HELP1,
+  //"You can also change"
+  "'+'‚â '-'ƒL[‚ğ‰Ÿ‚¹‚ÎA"
+IDS_BUTTON_CYCLE_HELP2,
+  //"to do something different if you press the '+' or '-' button. "
+  "‚ª ‰½‚© ˆá‚¤‚±‚Æ‚ğ ‚·‚é‚æ‚¤‚ÉA•Ï‚¦‚é‚±‚Æ‚à ‚Å‚«‚éB"
+IDS_BUTTON_LETTER_TYPED_HELP1,
+  //"You can pick what"
+  L"‚±‚ê‚ç‚Ì •¶\216š‚Ì ‚Ğ‚Æ‚Â‚ğ ƒ^ƒCƒv‚·‚ê‚ÎA"
+IDS_BUTTON_LETTER_TYPED_HELP2,
+  //"will do by typing one of these letters:"
+  "‚ª s‚¤‚±‚Æ‚ğA‘I‘ğ‚Å‚«‚éB"
+IDS_BUTTON_HELP_GIVEN_HELP1,
+  //"I've told you all that I know about buttons. "
+  "ƒL[‚É‚Â‚¢‚Ä ‚í‚½‚µ‚Ì ’m‚Á‚Ä‚¢‚é‚±‚Æ ‚·‚×‚Ä‚ğ ˜b‚µ‚½B"
+IDS_BUTTON_HELP_GIVEN_HELP2,
+  //"If you want me to repeat all I know about buttons, then press F1 twice while pointing to a button. "
+  L"ƒL[‚É‚Â‚¢‚Ä ‚à‚¤ˆê“x •·‚«‚½‚¯‚ê‚ÎA‚»‚ê‚ğ \216w‚µ‚È‚ª‚ç F1ƒL[‚ğ “ñ“x ‰Ÿ‚·‚ñ‚¾B"
+IDS_BUTTON_HELP_GIVEN_HELP3,
+  //"I'll tell you more about"
+  L"\216Ÿ‚Ì ‚±‚Æ‚É‚Â‚¢‚Ä A‚à‚Á‚Æ˜b‚»‚¤F"
+
+// on 8/23/97 changed this so that each tool can have a different gender
+// initial space added 8/23/97 so German version can provide the needed comma
+IDS_COPIER_BUTTON_HELP_GIVEN_HELP,
+  // was IDS_BUTTON_HELP_GIVEN_HELP5
+  // as in "I'll tell you more about magic wands if you pick it up. "
+  // was "if you pick it up. "
+  //" if you pick it up. "
+  "A‚»‚ê‚Â‚©‚ß‚ÎB"
+IDS_EXPANDER_BUTTON_HELP_GIVEN_HELP,
+  // was IDS_BUTTON_HELP_GIVEN_HELP5,
+  // as in "I'll tell you more about bike pumps if you pick him up. "
+  // was "if you pick him up. "
+  //" if you pick him up. "
+  "A”Ş‚ğ‚Â‚©‚ß‚ÎB"
+IDS_VACUUM_BUTTON_HELP_GIVEN_HELP,
+  // was IDS_BUTTON_HELP_GIVEN_HELP5,
+  //" if you pick him up. "
+  "A”Ş‚ğ‚Â‚©‚ß‚ÎB"
+
+IDS_EXPANDER_CHANGED_STATE_VIA_BUTTON_HELP,
+  //"You can change Pumpy so he makes things smaller, or taller, or fatter by pushing the button on his chest. "
+  "ƒpƒ“ƒs[‚Ì “·‘Ì‚Ì ƒ{ƒ^ƒ“‚ğ ‰Ÿ‚¹‚ÎA”Ş‚ª ‚à‚Ì‚ğ ¬‚³‚­‚µ‚½‚èA‚‚­‚µ‚½‚èA•½‚½‚­‚µ‚½‚è ‚Å‚«‚é‚æ‚¤‚É •Ï‚¦‚ç‚ê‚éB"
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP1,
+  //"You can change Pumpy by pressing one of these keys"
+  "ƒpƒ“ƒs[‚ğ •Ï‚¦‚ç‚ê‚é‚Ì‚ÍA‚±‚ê‚ç‚Ì ƒL[‚¾F"
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2,
+  //"'B' for big, 'T' for tall, 'W' for wide, 'L' for little, 'S' for short, 'N' for narrow, and 'G' for a good size. "
+  "‘å‚«‚­(big)‚Ì'B', ‚‚­(tall)‚Ì'T', L‚­(wide)‚Ì'W', ¬‚³‚­(little)‚Ì'L', ’Z‚­(short)‚Ì'S', ‹·‚­(narrow)‚Ì'N', ‚æ‚¢‘å‚«‚³(good size)‚Ì'G', "
+IDS_EXPANDER_SELECTION_HELP,
+  //"whatever is under the end of his hose"
+  "”Ş‚Ì ƒz[ƒX‚Ì æ‚Ì ‰º‚É ‚ ‚é‚à‚Ì ‚·‚×‚Ä"
+  // following added on 8/23/97 so the pronoun depends upon the tool in question
+IDS_TURN_EXPANDER_ON_HELP,
+  // was "You can also turn him on and off while holding him by pressing the space bar. "
+  // "also" removed from following on 9/25/97
+  //"You can turn him on and off while holding him by pressing the space bar. "
+  "”Ş‚ğ ‚Â‚©‚İ‚È‚ª‚çAƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚¹‚ÎA”Ş‚ğ ƒIƒ“^ƒIƒt ‚Å‚«‚éB"
+IDS_TURN_VACUUM_ON_HELP,
+  //"You can turn him on and off while holding him by pressing the space bar. "
+  "”Ş‚ğ ‚Â‚©‚İ‚È‚ª‚çAƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚¹‚ÎA”Ş‚ğ ƒIƒ“^ƒIƒt ‚Å‚«‚éB"
+IDS_TURN_COPIER_ON_HELP,
+  //"You can turn it on and off while holding it by pressing the space bar. "
+  "‚»‚ê‚ğ ‚Â‚©‚İ‚È‚ª‚çAƒXƒy[ƒXƒo[‚ğ ‰Ÿ‚¹‚ÎA‚»‚ê‚ğ ƒIƒ“^ƒIƒt ‚Å‚«‚éB"
+
+// was:
+//IDS_TURN_HIM_ON_HELP,
+//"You can also turn him on and off while holding him by pressing the space bar. "
+//IDS_TURN_IT_ON_HELP,
+//"You can also turn it on and off while holding it by pressing the space bar. "
+
+IDS_VACUUM_CHANGED_STATE_VIA_BUTTON_HELP,
+  //"You can change Dusty so he spits things out or just sucks things off the top of things by pushing the button on his nose. "
+  "ƒ_ƒXƒeƒB‚Ì •@‚ğ ‰Ÿ‚¹‚ÎA”Ş‚ª ‚à‚Ì‚ğ ‚Í‚«‚¾‚·‚©A‹z‚¢‚ñ‚¾‚Ü‚Ü‚©‚ğ •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_VACUUM_CHANGED_STATE_VIA_KEYBOARD_HELP,
+  //"You can change Dusty by pressing 'S' for sucking, 'E' for erasing, and 'R' for reverse (spitting out). "
+  L"ƒ_ƒXƒeƒB‚ÍA'S'‚ğ ‰Ÿ‚¹‚Î ‹z‚¢‚İA'E'‚ğ ‰Ÿ‚¹‚Î Á‹\216A'R' ‚ğ‰Ÿ‚¹‚Î ‚Í‚«‚¾‚·B"
+IDS_COPIER_CHANGED_STATE_VIA_BUTTON_HELP,
+  //"You can change the Magic Wand so it copies itself or copies things and restores them by pushing the button on its tip. " 
+  L"–‚–@‚Ì‚Â‚¦‚Ì æ‚É‚ ‚é ƒ{ƒ^ƒ“‚ğ ‰Ÿ‚¹‚ÎA‚»‚ê‚ª \216©•ª\216©g‚ğ ƒRƒs[‚·‚é‚©A‚à‚Ì‚ğ ƒRƒs[‚µ Œ³‚É –ß‚·‚©‚ğ •Ï‚¦‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_COPIER_CHANGED_STATE_VIA_KEYBOARD_HELP,
+  //"You can change the Magic Wand by pressing 'C' for copy, 'O' for copy and restore original, and 'S' for copy self. "
+  L"–‚–@‚Ì‚Â‚¦‚ÍA'C'‚ğ ‰Ÿ‚¹‚ÎƒRƒs[‚µA'O'‚ğ ‰Ÿ‚¹‚Î ‚ğ ƒIƒŠƒWƒiƒ‹‚ğ ƒRƒs[‚µ Œ³‚É–ß‚µA'S'‚ğ ‰Ÿ‚¹‚Î \216©•ª\216©g‚ğ ƒRƒs[‚·‚éB"
+//IDS_PUSH_R,
+//"push 'R'"
+//IDS_CHAR_O,
+//"'O'"
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP,
+  //"You can get me to say the next thing by pressing the 'PageDown' button. "
+  L"PageDownƒL[‚ğ ‰Ÿ‚¹‚ÎA‚í‚½‚µ‚É \216Ÿ‚É Œ¾‚¤‚±‚Æ‚ğ Œ¾‚í‚¹‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP2,
+  //"And pressing PageUp will get me to repeat the last thing I said. "
+  "PageUpƒL[‚ğ ‰Ÿ‚¹‚ÎA‚í‚½‚µ‚É ‘O‚É Œ¾‚Á‚½‚±‚Æ‚ğ ŒJ‚è‚©‚¦‚³‚¹‚é‚±‚Æ‚ª ‚Å‚«‚éB"
+
+//Added 10/7
+IDS_REPEAT1,
+  //"Here's what I just said. "
+  L"\216„‚Ì Œ¾‚Á‚½‚Ì‚ÍA‚±‚ê‚¾B"
+IDS_REPEAT2,
+  //"I'll just repeat myself. "
+  "ŒJ‚è•Ô‚·‚æB"
+IDS_REPEAT3,
+  //"I'll say it again. "
+  "‚à‚¤ˆê“x Œ¾‚¤B"
+IDS_BAD_DEMO_LOG,
+  //"Something wrong with demo log. Stopping replay. "
+  L"ƒfƒ‚‹L˜^‚ª ‚¨‚©‚µ‚¢BÄ¶‚ğ ’†\216~‚·‚éB"
+IDS_TROUBLES_COPYING_FROM_CDROM,
+  // followed by a directory name (from TempDir in toontalk.ini)
+  //"ToonTalk had troubles copying temporary files to "
+  "ƒeƒ“ƒ|ƒ‰ƒŠ ƒtƒ@ƒCƒ‹‚ğ"
+IDS_TROUBLES_COPYING_FROM_CDROM2,
+  //". Maybe there isn't enough free disk space. "
+  "‚É ƒRƒs[‚Å‚«‚È‚¢B‚¨‚»‚ç‚­A‹ó‚«—Ìˆæ •s‘«‚¾B"
+IDS_TROUBLES_COPYING_FROM_CDROM3,
+  //"ToonTalk will run off the CD-ROM. It may be slow. "
+  L"CD-ROM‚ğ o‚µ‚Ü‚·B­‚µ \216ŠÔ‚ª ‚©‚©‚é‚æB"
+
+// When translating the following please add a sentence naming and crediting the translators
+IDS_TOONTALK_CREDITS,
+"Animation by Greg Savoia, Kim Tempest, and Brian Anderson. Voices by Jane Barrier and David Kahn. Translations by Hiroko Kondo."
+IDS_TOONTALK_CREDITS2,
+"Everything else by Ken Kahn. Special thanks to Markus, David, and Mary. "
+
+
+IDS_ON, // added 12/3
+  // only used for Pumpy
+ //"on"  // as in "use Pumpy on"
+ " "
+
+IDS_WANT_TO_PLAY_NOW,
+  //"Hi there! Want to play with ToonTalk now?"
+  "‚±‚ñ‚É‚¿‚ÍAToonTalk‚Å —V‚Ñ‚½‚¢H"
+IDS_PLAY_DEMOS_OR_BUILD,
+  //"Do you want to play a game, see movies, or build something with ToonTalk?"
+  "ToonTalk‚Å ƒQ[ƒ€‚ğ ‚µ‚½‚èAƒ€[ƒr[‚ğ Œ©‚½‚èA‰½‚©‚ğ ‘¢‚Á‚Ä‚İ‚È‚¢H"
+IDS_PICK_DEMO,
+  //"Well, we have lots of demos. Just pick one. "
+  "‚½‚­‚³‚ñ‚Ì ƒfƒ‚‚ª ‚ ‚é‚æBˆê‚Â ‘I‚ñ‚Å‚ËB"
+IDS_INSTALL_FIRST,
+  //"Good, but to continue we're going to have to install ToonTalk. OK?"
+  "‚æ‚ë‚µ‚¢A‚Å‚à ‘±‚¯‚é‚É‚ÍAToonTalk‚ğ ƒCƒ“ƒXƒg[ƒ‹ ‚µ‚È‚¯‚ê‚Î ‚È‚ç‚È‚¢B‚n‚jH"
+
+THE_LEFT_PAGE_OF, // added 12/13
+  // should always be of some notebook
+  // as in "If given a box like that he will pick up what's on
+  // "the left page of the main notebook. "
+  //"the left page of"
+  "¶‚Ì ƒy[ƒW‚Ì"
+THE_RIGHT_PAGE_OF, // added 12/13
+  //"the right page of"
+  "‰E‚Ì ƒy[ƒW‚Ì"
+
+IDS_PICT_OF_DEFINITE, // added 12/13
+  //"the picture of"
+  "ƒsƒNƒ`ƒƒ"
+IDS_MOVIE_OF_DEFINITE,
+  //"the movie of"
+  "ƒ€[ƒr["
+IDS_BLANK_PICTURE_OF_DEFINITE, // added 12/20
+  //"the blank picture of"
+  "ƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ"
+
+IDS_PICT_OF_PLURAL,
+  //"pictures of"
+  "ƒsƒNƒ`ƒƒ"
+IDS_MOVIE_OF_PLURAL,
+  //"movies of"
+  "ƒ€[ƒr["
+IDS_BLANK_PICTURE_OF_PLURAL, // added 12/20
+  //"blank pictures of"
+  "ƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ"
+
+IDS_PICT_OF_PRONOUN, // added 12/21
+  //"it"
+  "‚»‚ê"
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+  //"it"
+  "‚»‚ê"
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+  //"it"
+  "‚»‚ê"
+
+IDS_THING_ON_THE_BACK1,
+  //"the"
+  "Œã‚ë‚Ì"
+IDS_THING_ON_THE_BACK2,
+  //"thing on the back is " // as in "The third thing on the back is a robot. "
+  "”Ô–Ú‚Ì‚à‚Ì‚ÍA"
+IDS_THING_ON_THE_BACK3, // used after "a robot" in the example above
+  //" "
+  "‚Å‚·B"
+IDS_TO_LAST_THING1,  // new on 12/13
+  //"the"
+  "”Ş‚ª ì‚Á‚½‚èAŒ©‚Â‚¯‚½ ÅŒã‚©‚ç"
+  // these combine to make "the second to last thing he made or found"
+IDS_TO_LAST_THING2,
+  //"to last thing he made or found"
+  "”Ô–Ú‚Ì ‚à‚Ì"
+IDS_MADE_OR_FOUND1, // new on 12/13
+  //"the"
+  "”Ş‚ªì‚Á‚½‚èAŒ©‚Â‚¯‚½"
+IDS_MADE_OR_FOUND2, // these combine to form "the third thing he made or found"
+  //"thing he made or found"
+  "‚Ì ‚à‚Ì‚ÍA"
+IDS_PAGE_OF1,
+  //"the"
+  " "
+  // as in "the first page of the notebook"
+IDS_PAGE_OF2,
+  //"page of"
+  "ƒy[ƒW‚Ì"
+  // as in "the fourth hole of the box"
+
+// the following 4 combine to generate things like
+// "the third hole inside the second hole of the box"
+IDS_HOLE_OF1,
+ //"the"
+ " "
+IDS_HOLE_OF2,
+ //"hole of"
+ "ŒŠ‚Ì’†‚Ì"
+IDS_HOLE_INSIDE1, // added 8/23/97
+ //"the"
+ " "
+IDS_HOLE_INSIDE2, // added 8/23/97
+ //"hole inside"
+ "ŒŠ"
+
+IDS_THING_ON_TOP1,
+ //"the"
+ "ã‚©‚ç"
+IDS_THING_ON_TOP2,
+ //"thing on top is " // as in "The second thing on top is a number. "
+ "‚à‚Ì‚ÍA"
+IDS_ROBOT_DESCRIBE5_1,
+ //"the"
+ " "
+IDS_ROBOT_DESCRIBE5_2, // as in "The second robot wants a box. "
+ //"robot wants "
+ "ƒƒ{ƒbƒg‚ª ‚Ù‚µ‚¢‚Ì‚ÍA" 
+IDS_PICTURES,
+ //" pictures"
+ "ƒsƒNƒ`ƒƒ"
+IDC_NO_SUCH_STRING,
+//" Ahh, sorry I can't remember what I was going to say... "
+"‚²‚ß‚ñAŒ¾‚¨‚¤‚Æ ‚µ‚½‚±‚Æ‚ğ –Y‚ê‚Ä‚µ‚Ü‚Á‚½DDD"
+
+IDS_NATURAL_LANGUAGE,
+"English" 
+
+// the following should not be translated
+
+IDS_PUZZLE_SUBDIRECTORY,
+//"US"
+ "JP"
+IDS_NARRATION_FILE_SUFFIX,
+ "SPK"
+IDS_SUBTITLES_FILE_SUFFIX,
+ "UST"
+//IDS_START_TOONTALK_NAME,
+//"StartToonTalk"
+IDS_SPEECH_ENGINE_VOICE,
+"USMarty2"
+
+// The fololwing entries are added by T.Matsuzawa on September 8
+// according to Mr. Ken Kahn's instructions.
+
+// New RC entries:
+
+IDS_MY_BOX, // new on 290499
+//"My Box"
+ "ƒ}ƒCƒ{ƒbƒNƒX" 
+
+// New RC entries:
+// The following entries are added on Sept. 9, 1999
+
+IDS_THAT_REMINDS_ME_OF, // new on 290699
+ // for example, "You are holding a box that reminds me of the text "this is a comment"".
+ //"that reminds me of"
+ " "
+IDS_THAT_REMINDS_ME_OF2, // used after "this is a comment" above.
+ L"‚ğ\216v‚¢o‚³‚¹‚é"
+
+IDS_SOMETHING, // new on 300699
+ //"something"
+ "‰½‚©"
+
+IDS_ANY_ROBOT, // new on 090799
+ //"any robot"
+ "ƒƒ{ƒbƒg"
+
+IDS_ANY_FORCE_EFFECT, // new on 160799
+ "any force effect"
+IDS_BLANK_FORCE_EFFECT,
+ "an erased force effect"
+IDS_FORCE_EFFECT_TYPE_INDEFINITE,
+ "a force feedback effect"
+IDS_FORCE_EFFECT_TYPE_DEFINITE,
+ "the force feedback effect"
+IDS_FORCE_EFFECT_TYPE_PLURAL,
+ "force feedback effects"
+IDS_FORCE_EFFECT_TYPE_PRONOUN,
+ "it"
+
+ // new on 200799
+IDS_KEYBOARD_ACCELERATORS,
+  // be sure that no letter occurs twice in the same situation in the following
+  // Each letter corresponds to a keyboard command:
+
+  // D - Down when in helicopter
+  // U - Up when in helicopter
+
+  // H - Helicopter when walking outside
+
+  // U - Standup if your hand is empty
+  // P - Pickup what is under your finger if your hand is empty
+  // F - Pickup and flip what is under your finger if your hand is empty
+
+  // F - Flip when holding picture or pad
+  // D - Drop what you are holding
+ "duhupffd"
+
+// The following indicate what should seperate words in sentences.
+// In Japanese it should be the special keyword "NOTHING" which means no space between phrases or words
+IDS_SPACE_BEFORE_PRONOUNS,
+ // in Portuguese this should be "-"
+ " "
+IDS_SPACE_BEFORE_OR_AFTER_NUMBERS,
+ " "
+IDS_DEFAULT_SPACE_BETWEEN_WORDS,
+ " "
+
+ // the following also need to be updated for Asian languages
+IDS_COMMA,
+  //","
+  "A"
+IDS_END_SENTENCE,
+  //". "
+  "B"
+IDS_END_QUESTION,
+  //"? "
+  "H"
+IDS_END_SENTENCE_EXCLAMATION,
+  //"! "
+  "I"
+
+IDS_NOT_A_GOOD_DEMO_FILE,
+ "is not a good ToonTalk demo log file."
+IDS_DEMO_FILE_NEED_NEWER_VERSION_OF_TOONTALK,
+ "The demo file will only run in later versions of ToonTalk. Please upgrade your system. Visit www.toontalk.com."
+
+IDS_FORCE_EFFECT_HELP, // added 7/31/99
+"You can feel that effect by pressing "
+IDS_FORCE_EFFECT_HELP2,
+ " "
+IDS_FORCE_EFFECTS_ON_PAGE4,
+"You can find more force effects in the notebook near the end of the sensor notebook."
+
+
+#include "puzzle.rc"
+#include "new.rc"
+#include "..\common.rc"
+
+#include "..\sensors.rc"
+#include "..\java.rc"
+
+}

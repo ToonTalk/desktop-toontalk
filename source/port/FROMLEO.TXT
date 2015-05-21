@@ -1,0 +1,42 @@
+Subject: 2nd round of the translation
+Date: Fri, 20 Dec 1996 10:55:05 -0800
+From: Leo Burd <burd@dca.fee.unicamp.br>
+To: Ken Kahn <KenKahn@ToonTalk.com>
+References: <329421E3.66E2@dca.fee.unicamp.br> <329DFF6D.4D5D@ToonTalk.com> <32B0A3B8.1495@dca.fee.unicamp.br> <32B3533D.2CBB@ToonTalk.com>
+
+Hi, Ken!
+
+Sorry for taking so much time to reply, but I had lots of problems with my computer. The
+Netscape Mail was throwing away all the messages that had attachments! Now I think the
+problem is solved.
+
+Here are my current remarks:
+
+* In the file TTUS.RC, I would recommend replacing the sentence ‘com um chapéu’ by ‘com
+chapéu’
+
+* Marty explanation differs depending on if you are holding the object, if the object is
+in the toolbox or if it is on the floor. When you hold a bomb, a robot, or a truck, the
+explanation is incomplete and very fast. The same thing happens when these objects are
+inside the toolbox.
+
+* When we point to the button on Dusty’s chest, Marty explains all he knows about ‘the
+picture of a button’. Isn’t that weird?
+
+* I couldn’t read the LOG files. Would you tell me again how to do that?
+
+* Concerning the puzzles, I do not know what to do. One option is to present them
+myself. Another would be to record my voice (how did you do that? -- I think that would
+be very interesting for teachers to create their own scenarios...). A third option is to
+have Marty explaining everything.
+
+* When do you think you could provide me with a new CD so I would be able to generate
+instalation diskettes?
+
+* Other remarks are writen in the file PORT.RC after ‘// ---‘ (2 slashes and 3 dashes)
+
+Looking forward to hearing from again,
+
+Leo
+
+    --------------------------------------------------------------------

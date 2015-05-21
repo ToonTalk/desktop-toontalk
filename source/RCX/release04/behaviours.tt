@@ -1,0 +1,2924 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. Then it will appear
+in the ToonTalk remote control for the clipboard. You can find the
+clipboard remote control on page 30 of the Sensor notebook. Just use
+Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. 
+   What follows is in a special code and was produced by ToonTalk(r) 
+ToonTalk 2.99r. To learn more about ToonTalk visit www.toontalk.com.
+-->
+<ToonTalkObject Language="1" Version="3" xmlns="http://www.toontalk.com">
+ <Notebook ID="5" Parameter="4">
+  <Label><![CDATA[behaviours]]></Label>
+  <NumberOfPages>18</NumberOfPages>
+  <Page>1
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">1
+    <TextPad>
+     <TextValue><![CDATA[Set the
+LEGO tower
+port]]></TextValue>
+     <Active/>
+     <InfiniteStack/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>2
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">2
+    <Box>
+     <NumberOfHoles>2</NumberOfHoles>
+     <Hole>1
+      <ForeignBird Parameter="10" Index="12">
+       <MessageToMaker>
+        <Box>
+         <NumberOfHoles>2</NumberOfHoles>
+         <Hole>1
+          <TextPad>
+           <TextValue><![CDATA[rcx]]></TextValue>
+          </TextPad>
+         </Hole>
+         <Hole>2
+          <Bird Parameter="8">
+           <Active/>
+          </Bird>
+         </Hole>
+         <Geometry Z="-2147483648">
+          <Left>-14850</Left>
+          <Bottom>12675</Bottom>
+          <Width>6600</Width>
+          <Height>2400</Height>
+         </Geometry>
+        </Box>
+       </MessageToMaker>
+       <Maker HandleIndex="0">
+        <ForeignBird Parameter="8">
+         <Label>
+          <PictureOf>
+           <Appearance>
+            <TextPad>
+             <TextValue><![CDATA[?]]></TextValue>
+             <VariableWidthFont/>
+             <Active/>
+             <SeeSome/>
+            </TextPad>
+           </Appearance>
+           <PartlyVisibleIfPartOfPicture/>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+           <GluedDown/>
+           <Active/>
+           <SeeSome/>
+           <GeometryWhenFreeAndUnflipped>
+            <Width>7600</Width>
+            <Height>9900</Height>
+           </GeometryWhenFreeAndUnflipped>
+          </PictureOf>
+         </Label>
+         <Geometry Z="-2147483648">
+          <Left>-5925</Left>
+          <Bottom>18650</Bottom>
+          <Width>6475</Width>
+          <Height>7575</Height>
+         </Geometry>
+         <Active/>
+        </ForeignBird>
+       </Maker>
+       <Active/>
+      </ForeignBird>
+     </Hole>
+     <Hole>2
+      <Box Parameter="4">
+       <NumberOfHoles>3</NumberOfHoles>
+       <Hole>1
+        <TextPad>
+         <TextValue><![CDATA[set tower port]]></TextValue>
+         <Active/>
+        </TextPad>
+        <Label><![CDATA[command]]></Label>
+       </Hole>
+       <Hole>2
+        <TextPad>
+         <TextValue><![CDATA[USB]]></TextValue>
+         <Active/>
+        </TextPad>
+        <Label><![CDATA[port]]></Label>
+       </Hole>
+       <Hole>3
+        <TextPad>
+         <TextValue><![CDATA[fast sweep up]]></TextValue>
+         <Active/>
+        </TextPad>
+        <Label><![CDATA[sound]]></Label>
+       </Hole>
+       <Active/>
+      </Box>
+     </Hole>
+     <Active/>
+     <InfiniteStack/>
+    </Box>
+   </Page>
+  </Page>
+  <Page>3
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">3
+    <TextPad>
+     <TextValue><![CDATA[download
+the
+program]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>5204</Left>
+      <Bottom>4703</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>4
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">4
+    <Box Parameter="4">
+     <NumberOfHoles>2</NumberOfHoles>
+     <Hole>1
+      <TextPad>
+       <TextValue><![CDATA[download program]]></TextValue>
+       <Active/>
+      </TextPad>
+      <Label><![CDATA[command]]></Label>
+     </Hole>
+     <Hole>2
+      <TextPad>
+       <TextValue><![CDATA[behaviours.bin]]></TextValue>
+       <Active/>
+      </TextPad>
+      <Label><![CDATA[filename]]></Label>
+     </Hole>
+     <Geometry Z="-2147483648">
+      <Left>9191</Left>
+      <Bottom>4703</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </Box>
+   </Page>
+  </Page>
+  <Page>5
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">5
+    <TextPad>
+     <TextValue><![CDATA[The value
+of HitsLimit]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>5204</Left>
+      <Bottom>4703</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>6
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">6
+    <Box Parameter="4">
+     <NumberOfHoles>1</NumberOfHoles>
+     <Hole>1
+      <PictureOf GUID="afiofkoakejfkiedijjmcbpmlonkgnih">
+       <Appearance>
+        <Integer>5</Integer>
+       </Appearance>
+       <PartlyVisibleIfPartOfPicture/>
+       <GeometricRelationToContainer RecordedLeaderWidthSquared="8410000" RecordedLeaderHeightSquared="14025025" WidthTimesLeaderWidth="5602800" HeightTimesLeaderHeight="7010640" XOffsetTimesLeaderWidth="1400700" YOffsetTimesLeaderHeight="3505320" Z="-2147483648"/>
+       <OnBack>
+        <Robot>
+         <ThoughtBubble>
+          <Box>
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <PictureOf>
+             <Appearance>
+              <Integer>1
+               <Active/>
+               <Erased/>
+              </Integer>
+             </Appearance>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="1201216" RecordedLeaderHeightSquared="126025" WidthTimesLeaderWidth="74528" HeightTimesLeaderHeight="62835" XOffsetTimesLeaderWidth="108504" YOffsetTimesLeaderHeight="31240" Z="-2147483648"/>
+             <Active/>
+             <Erased/>
+             <GeometryWhenFreeAndUnflipped>
+              <Width>1405</Width>
+              <Height>1824</Height>
+             </GeometryWhenFreeAndUnflipped>
+            </PictureOf>
+           </Hole>
+           <Hole>2
+            <Integer>2
+             <Active/>
+             <Erased/>
+            </Integer>
+           </Hole>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="26112100" RecordedLeaderHeightSquared="32787076" WidthTimesLeaderWidth="17460870" HeightTimesLeaderHeight="13095362" XOffsetTimesLeaderWidth="4537680" YOffsetTimesLeaderHeight="15757952" Z="-2147483648"/>
+           <Active/>
+          </Box>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17837850" YOffsetTimesLeaderHeight="33398057" Z="-2147483648"/>
+          <Active/>
+          <SeeAll/>
+         </ThoughtBubble>
+         <Actions ID="68" Version="2" MadeOrMovedCount="0">
+          <Grasp>MyBox.2</Grasp>
+          <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+          <DropOn>MyBox.1</DropOn>
+         </Actions>
+         <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+          <Box GUID="ipglaanlnnfaelecigpjgpooliplhndp">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <RemoteControl Code="15">
+             <For>
+              <PictureOf Link="afiofkoakejfkiedijjmcbpmlonkgnih"/>
+             </For>
+             <NotFlippedOver/>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="765625" RecordedLeaderHeightSquared="430336" WidthTimesLeaderWidth="49000" HeightTimesLeaderHeight="215168" XOffsetTimesLeaderWidth="69125" YOffsetTimesLeaderHeight="107584" Z="-2147483648"/>
+            </RemoteControl>
+           </Hole>
+           <Hole>2
+            <Nest GUID="icpcnaaagdehlhepkppodejfkfapjmin" BirdCount="2" Parameter="3">
+             <ID>f8ed1f24-06b2-4e46-b749-1865a5b2f3d6</ID>
+             <SeeAll/>
+            </Nest>
+           </Hole>
+          </Box>
+         </WorkingInfo>
+        </Robot>
+       </OnBack>
+       <OnBack>
+        <Box Link="ipglaanlnnfaelecigpjgpooliplhndp"/>
+       </OnBack>
+       <OnBack>
+        <Robot>
+         <ThoughtBubble>
+          <Box>
+           <NumberOfHoles>5</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[ ]]></TextValue>
+             <Active/>
+            </TextPad>
+           </Hole>
+           <Hole>2
+            <Scale Parameter="7" Index="1">Moving
+             <Active/>
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <TextPad>
+             <TextValue><![CDATA[ ]]></TextValue>
+             <Active/>
+            </TextPad>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[get var]]></TextValue>
+               <Active/>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[1]]></TextValue>
+               <Active/>
+               <Erased/>
+              </TextPad>
+              <Label><![CDATA[variable]]></Label>
+             </Hole>
+             <Hole>3
+              <Bird Parameter="10" Index="12">
+               <Active/>
+               <Erased/>
+              </Bird>
+              <Label><![CDATA[bird]]></Label>
+             </Hole>
+             <Active/>
+            </Box>
+           </Hole>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15830750" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+           <Active/>
+          </Box>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17837850" YOffsetTimesLeaderHeight="33398057" Z="-2147483648"/>
+          <Active/>
+          <SeeAll/>
+         </ThoughtBubble>
+         <Actions ID="67" Version="2" MadeOrMovedCount="2">
+          <GraspMagicWand>MagicWand</GraspMagicWand>
+          <UseMagicWand>MyBox.4</UseMagicWand>
+          <Drop>1</Drop>
+          <UseMagicWand>MyBox.5</UseMagicWand>
+          <GiveBird>1</GiveBird>
+          <DropMagicWand>MagicWand</DropMagicWand>
+          <GraspVacuum>Vacuum</GraspVacuum>
+          <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+          <UseVacuum>1</UseVacuum>
+          <DropVacuum>Vacuum</DropVacuum>
+         </Actions>
+         <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+          <Box GUID="ojkajpofjgjfngelkbeopcgkgenjadbd">
+           <NumberOfHoles>5</NumberOfHoles>
+           <Hole>1
+            <RemoteControl Code="27">
+             <GlobalSensor/>
+             <Value>
+              <RemoteControl>0</RemoteControl>
+             </Value>
+            </RemoteControl>
+           </Hole>
+           <Hole>2
+            <Scale>Moving
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <TextPad>
+             <TextValue><![CDATA[ ]]></TextValue>
+            </TextPad>
+           </Hole>
+           <Hole>4
+            <ForeignBird Parameter="10" Index="12">
+             <MessageToMaker>
+              <Box>
+               <NumberOfHoles>2</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[rcx]]></TextValue>
+                </TextPad>
+               </Hole>
+               <Hole>2
+                <Bird Parameter="8">
+                 <Active/>
+                </Bird>
+               </Hole>
+               <Geometry Z="-2147483648">
+                <Left>-15431</Left>
+                <Bottom>8603</Bottom>
+                <Width>6600</Width>
+                <Height>2400</Height>
+               </Geometry>
+              </Box>
+             </MessageToMaker>
+             <Maker HandleIndex="0">
+              <ForeignBird Parameter="8">
+               <Label>
+                <PictureOf>
+                 <Appearance>
+                  <TextPad>
+                   <TextValue><![CDATA[?]]></TextValue>
+                   <VariableWidthFont/>
+                   <Active/>
+                   <SeeSome/>
+                  </TextPad>
+                 </Appearance>
+                 <PartlyVisibleIfPartOfPicture/>
+                 <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                 <GluedDown/>
+                 <Active/>
+                 <SeeSome/>
+                 <GeometryWhenFreeAndUnflipped>
+                  <Width>7600</Width>
+                  <Height>9900</Height>
+                 </GeometryWhenFreeAndUnflipped>
+                </PictureOf>
+               </Label>
+               <Geometry Z="-2147483648">
+                <Left>8319</Left>
+                <Bottom>23878</Bottom>
+                <Width>6475</Width>
+                <Height>7575</Height>
+               </Geometry>
+               <Active/>
+              </ForeignBird>
+             </Maker>
+             <Active/>
+            </ForeignBird>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[get var]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[12]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[variable]]></Label>
+             </Hole>
+             <Hole>3
+              <Bird Parameter="10" Index="12">
+               <MyNest>
+                <Nest Link="icpcnaaagdehlhepkppodejfkfapjmin"/>
+               </MyNest>
+               <Active/>
+              </Bird>
+              <Label><![CDATA[bird]]></Label>
+             </Hole>
+            </Box>
+           </Hole>
+          </Box>
+         </WorkingInfo>
+        </Robot>
+       </OnBack>
+       <OnBack>
+        <Box Link="ojkajpofjgjfngelkbeopcgkgenjadbd"/>
+       </OnBack>
+       <OnBack>
+        <Robot>
+         <ThoughtBubble>
+          <Box>
+           <NumberOfHoles>6</NumberOfHoles>
+           <Hole>1
+            <PictureOf>
+             <Appearance>
+              <Integer>24
+               <Active/>
+               <Erased/>
+              </Integer>
+             </Appearance>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="1199025" RecordedLeaderHeightSquared="126025" WidthTimesLeaderWidth="26280" HeightTimesLeaderHeight="62835" XOffsetTimesLeaderWidth="38325" YOffsetTimesLeaderHeight="31240" Z="-2147483648"/>
+             <Active/>
+             <Erased/>
+             <GeometryWhenFreeAndUnflipped>
+              <Width>8000</Width>
+              <Height>6000</Height>
+             </GeometryWhenFreeAndUnflipped>
+            </PictureOf>
+           </Hole>
+           <Hole>2
+            <Scale Parameter="4" Index="1">Moving
+             <Active/>
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <Integer>2
+             <Active/>
+             <Erased/>
+            </Integer>
+           </Hole>
+           <Hole>4
+            <ForeignBird Parameter="10" Index="12">
+             <MessageToMaker>
+              <Box>
+               <NumberOfHoles>2</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[rcx]]></TextValue>
+                </TextPad>
+               </Hole>
+               <Hole>2
+                <Bird Parameter="8">
+                 <Active/>
+                </Bird>
+               </Hole>
+               <Geometry Z="-2147483648">
+                <Left>-15431</Left>
+                <Bottom>8603</Bottom>
+                <Width>6600</Width>
+                <Height>2400</Height>
+               </Geometry>
+              </Box>
+             </MessageToMaker>
+             <Maker HandleIndex="0">
+              <ForeignBird Parameter="8">
+               <Label>
+                <PictureOf>
+                 <Appearance>
+                  <TextPad>
+                   <TextValue><![CDATA[?]]></TextValue>
+                   <VariableWidthFont/>
+                   <Active/>
+                   <SeeSome/>
+                  </TextPad>
+                 </Appearance>
+                 <PartlyVisibleIfPartOfPicture/>
+                 <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                 <GluedDown/>
+                 <Active/>
+                 <SeeSome/>
+                 <GeometryWhenFreeAndUnflipped>
+                  <Width>7600</Width>
+                  <Height>9900</Height>
+                 </GeometryWhenFreeAndUnflipped>
+                </PictureOf>
+               </Label>
+               <Geometry Z="-2147483648">
+                <Left>11169</Left>
+                <Bottom>25803</Bottom>
+                <Width>6475</Width>
+                <Height>7575</Height>
+               </Geometry>
+               <Active/>
+              </ForeignBird>
+             </Maker>
+             <Active/>
+             <Erased/>
+            </ForeignBird>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[set var]]></TextValue>
+               <Active/>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[var13]]></TextValue>
+               <Active/>
+               <Erased/>
+              </TextPad>
+              <Label><![CDATA[var]]></Label>
+             </Hole>
+             <Hole>3
+              <Label><![CDATA[value]]></Label>
+             </Hole>
+             <Active/>
+            </Box>
+           </Hole>
+           <Hole>6
+            <Box Parameter="4">
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[start task]]></TextValue>
+               <Active/>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <Integer>3
+               <Active/>
+               <Erased/>
+              </Integer>
+              <Label><![CDATA[task]]></Label>
+             </Hole>
+             <Active/>
+            </Box>
+           </Hole>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15855105" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+           <Active/>
+          </Box>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17341445" YOffsetTimesLeaderHeight="33195269" Z="-2147483648"/>
+          <Active/>
+          <SeeAll/>
+         </ThoughtBubble>
+         <Actions ID="72" Version="2" MadeOrMovedCount="6">
+          <MoveTo>NumberStack</MoveTo>
+          <MadeOrMoved TypeCode="0">1</MadeOrMoved>
+          <Grasp>1</Grasp>
+          <TypeTo KeyDescription="" KeyCode="8">InHand</TypeTo>
+          <Drop>1</Drop>
+          <GraspMagicWand>MagicWand</GraspMagicWand>
+          <UseMagicWand>MyBox.1</UseMagicWand>
+          <DropOn>1</DropOn>
+          <UseMagicWand>MyBox.4</UseMagicWand>
+          <Drop>3</Drop>
+          <UseMagicWand>MyBox.5</UseMagicWand>
+          <Drop>4</Drop>
+          <DropMagicWand>MagicWand</DropMagicWand>
+          <GraspMagicWand>MagicWand</GraspMagicWand>
+          <UseMagicWand>1</UseMagicWand>
+          <Drop>5</Drop>
+          <UseMagicWand>MyBox.6</UseMagicWand>
+          <Drop>6</Drop>
+          <DropMagicWand>MagicWand</DropMagicWand>
+          <Grasp>1</Grasp>
+          <DropOn>4.3</DropOn>
+          <Grasp>4</Grasp>
+          <GiveBird>3</GiveBird>
+          <Grasp>6</Grasp>
+          <GiveBird>3</GiveBird>
+          <Grasp>5</Grasp>
+          <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+          <DropOn>MyBox.3</DropOn>
+          <GraspVacuum>Vacuum</GraspVacuum>
+          <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+          <UseVacuum>3</UseVacuum>
+          <DropVacuum>Vacuum</DropVacuum>
+         </Actions>
+         <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+          <Box GUID="cdkilinodlchmhehlegbpjfmoeeghgib">
+           <NumberOfHoles>6</NumberOfHoles>
+           <Hole>1
+            <RemoteControl Code="15">
+             <For>
+              <PictureOf Link="afiofkoakejfkiedijjmcbpmlonkgnih"/>
+             </For>
+             <NotFlippedOver/>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="765625" RecordedLeaderHeightSquared="430336" WidthTimesLeaderWidth="14000" HeightTimesLeaderHeight="215168" XOffsetTimesLeaderWidth="24500" YOffsetTimesLeaderHeight="107584" Z="-2147483648"/>
+            </RemoteControl>
+           </Hole>
+           <Hole>2
+            <Scale Parameter="7">Moving
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <Integer>5</Integer>
+           </Hole>
+           <Hole>4
+            <ForeignBird Parameter="10" Index="12">
+             <MessageToMaker>
+              <Box>
+               <NumberOfHoles>2</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[rcx]]></TextValue>
+                </TextPad>
+               </Hole>
+               <Hole>2
+                <Bird Parameter="8">
+                 <Active/>
+                </Bird>
+               </Hole>
+               <Geometry Z="-2147483648">
+                <Left>-15431</Left>
+                <Bottom>8603</Bottom>
+                <Width>6600</Width>
+                <Height>2400</Height>
+               </Geometry>
+              </Box>
+             </MessageToMaker>
+             <Maker HandleIndex="0">
+              <ForeignBird Parameter="8">
+               <Label>
+                <PictureOf>
+                 <Appearance>
+                  <TextPad>
+                   <TextValue><![CDATA[?]]></TextValue>
+                   <VariableWidthFont/>
+                   <Active/>
+                   <SeeSome/>
+                  </TextPad>
+                 </Appearance>
+                 <PartlyVisibleIfPartOfPicture/>
+                 <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                 <GluedDown/>
+                 <Active/>
+                 <SeeSome/>
+                 <GeometryWhenFreeAndUnflipped>
+                  <Width>7600</Width>
+                  <Height>9900</Height>
+                 </GeometryWhenFreeAndUnflipped>
+                </PictureOf>
+               </Label>
+               <Geometry Z="-2147483648">
+                <Left>8319</Left>
+                <Bottom>23878</Bottom>
+                <Width>6475</Width>
+                <Height>7575</Height>
+               </Geometry>
+               <Active/>
+              </ForeignBird>
+             </Maker>
+             <Active/>
+            </ForeignBird>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[set var]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[12]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[var]]></Label>
+             </Hole>
+             <Hole>3
+              <Label><![CDATA[value]]></Label>
+             </Hole>
+            </Box>
+           </Hole>
+           <Hole>6
+            <Box Parameter="4">
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[start task]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <Integer>4</Integer>
+              <Label><![CDATA[task]]></Label>
+             </Hole>
+            </Box>
+           </Hole>
+          </Box>
+         </WorkingInfo>
+         <Next>
+          <Robot>
+           <Label><![CDATA[Vo]]></Label>
+           <ThoughtBubble>
+            <Box>
+             <NumberOfHoles>6</NumberOfHoles>
+             <Hole>1
+              <PictureOf>
+               <Appearance>
+                <Integer>24
+                 <Active/>
+                 <Erased/>
+                </Integer>
+               </Appearance>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="1201216" RecordedLeaderHeightSquared="126025" WidthTimesLeaderWidth="26304" HeightTimesLeaderHeight="62835" XOffsetTimesLeaderWidth="38360" YOffsetTimesLeaderHeight="31240" Z="-2147483648"/>
+               <Active/>
+               <Erased/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>8000</Width>
+                <Height>6000</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Hole>
+             <Hole>2
+              <Scale Parameter="3">RightLeaning
+               <SeeSome/>
+              </Scale>
+             </Hole>
+             <Hole>3
+              <Integer>2
+               <Active/>
+               <Erased/>
+              </Integer>
+             </Hole>
+             <Hole>4
+              <ForeignBird Parameter="10" Index="12">
+               <MessageToMaker>
+                <Box>
+                 <NumberOfHoles>2</NumberOfHoles>
+                 <Hole>1
+                  <TextPad>
+                   <TextValue><![CDATA[rcx]]></TextValue>
+                  </TextPad>
+                 </Hole>
+                 <Hole>2
+                  <Bird Parameter="8">
+                   <Active/>
+                  </Bird>
+                 </Hole>
+                 <Geometry Z="-2147483648">
+                  <Left>-15431</Left>
+                  <Bottom>8603</Bottom>
+                  <Width>6600</Width>
+                  <Height>2400</Height>
+                 </Geometry>
+                </Box>
+               </MessageToMaker>
+               <Maker HandleIndex="0">
+                <ForeignBird Parameter="8">
+                 <Label>
+                  <PictureOf>
+                   <Appearance>
+                    <TextPad>
+                     <TextValue><![CDATA[?]]></TextValue>
+                     <VariableWidthFont/>
+                     <Active/>
+                     <SeeSome/>
+                    </TextPad>
+                   </Appearance>
+                   <PartlyVisibleIfPartOfPicture/>
+                   <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                   <GluedDown/>
+                   <Active/>
+                   <SeeSome/>
+                   <GeometryWhenFreeAndUnflipped>
+                    <Width>7600</Width>
+                    <Height>9900</Height>
+                   </GeometryWhenFreeAndUnflipped>
+                  </PictureOf>
+                 </Label>
+                 <Geometry Z="-2147483648">
+                  <Left>14019</Left>
+                  <Bottom>27728</Bottom>
+                  <Width>6475</Width>
+                  <Height>7575</Height>
+                 </Geometry>
+                 <Active/>
+                </ForeignBird>
+               </Maker>
+               <Active/>
+               <Erased/>
+              </ForeignBird>
+             </Hole>
+             <Hole>5
+              <Box Parameter="4">
+               <NumberOfHoles>3</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[set var]]></TextValue>
+                 <Active/>
+                </TextPad>
+                <Label><![CDATA[command]]></Label>
+               </Hole>
+               <Hole>2
+                <TextPad>
+                 <TextValue><![CDATA[var13]]></TextValue>
+                 <Active/>
+                 <Erased/>
+                </TextPad>
+                <Label><![CDATA[var]]></Label>
+               </Hole>
+               <Hole>3
+                <Label><![CDATA[value]]></Label>
+               </Hole>
+               <Active/>
+              </Box>
+             </Hole>
+             <Hole>6
+              <Box Parameter="4">
+               <NumberOfHoles>2</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[start task]]></TextValue>
+                 <Active/>
+                </TextPad>
+                <Label><![CDATA[command]]></Label>
+               </Hole>
+               <Hole>2
+                <Integer>3
+                 <Active/>
+                 <Erased/>
+                </Integer>
+                <Label><![CDATA[task]]></Label>
+               </Hole>
+               <Active/>
+              </Box>
+             </Hole>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15859976" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+             <Active/>
+            </Box>
+            <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17341445" YOffsetTimesLeaderHeight="33195269" Z="-2147483648"/>
+            <Active/>
+            <SeeAll/>
+           </ThoughtBubble>
+           <Actions ID="72" Version="2" MadeOrMovedCount="6">
+            <MoveTo>NumberStack</MoveTo>
+            <MadeOrMoved TypeCode="0">1</MadeOrMoved>
+            <Grasp>1</Grasp>
+            <TypeTo KeyDescription="" KeyCode="8">InHand</TypeTo>
+            <Drop>1</Drop>
+            <GraspMagicWand>MagicWand</GraspMagicWand>
+            <UseMagicWand>MyBox.1</UseMagicWand>
+            <DropOn>1</DropOn>
+            <UseMagicWand>MyBox.4</UseMagicWand>
+            <Drop>3</Drop>
+            <UseMagicWand>MyBox.5</UseMagicWand>
+            <Drop>4</Drop>
+            <DropMagicWand>MagicWand</DropMagicWand>
+            <GraspMagicWand>MagicWand</GraspMagicWand>
+            <UseMagicWand>1</UseMagicWand>
+            <Drop>5</Drop>
+            <UseMagicWand>MyBox.6</UseMagicWand>
+            <Drop>6</Drop>
+            <DropMagicWand>MagicWand</DropMagicWand>
+            <Grasp>1</Grasp>
+            <DropOn>4.3</DropOn>
+            <Grasp>4</Grasp>
+            <GiveBird>3</GiveBird>
+            <Grasp>6</Grasp>
+            <GiveBird>3</GiveBird>
+            <Grasp>5</Grasp>
+            <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+            <DropOn>MyBox.3</DropOn>
+            <GraspVacuum>Vacuum</GraspVacuum>
+            <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+            <UseVacuum>3</UseVacuum>
+            <DropVacuum>Vacuum</DropVacuum>
+           </Actions>
+           <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+            <Box Link="cdkilinodlchmhehlegbpjfmoeeghgib"/>
+           </WorkingInfo>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="27040000" RecordedLeaderHeightSquared="28890625" WidthTimesLeaderWidth="27040000" HeightTimesLeaderHeight="28890625" XOffsetTimesLeaderWidth="17238000" YOffsetTimesLeaderHeight="23042625" Z="-2147483648"/>
+          </Robot>
+         </Next>
+        </Robot>
+       </OnBack>
+       <OnBack>
+        <Box Link="cdkilinodlchmhehlegbpjfmoeeghgib"/>
+       </OnBack>
+       <GeometryWhenFreeAndUnflipped>
+        <Width>1405</Width>
+        <Height>1824</Height>
+       </GeometryWhenFreeAndUnflipped>
+      </PictureOf>
+      <Label><![CDATA[HitsLimit]]></Label>
+     </Hole>
+     <Geometry Z="-2147483648">
+      <Left>9191</Left>
+      <Bottom>4703</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </Box>
+   </Page>
+  </Page>
+  <Page>7
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">7
+    <TextPad>
+     <TextValue><![CDATA[The value
+of counter_0]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>11600</Left>
+      <Bottom>4703</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>8
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">8
+    <Box Parameter="4">
+     <NumberOfHoles>1</NumberOfHoles>
+     <Hole>1
+      <PictureOf GUID="mbckcopngnddgoepkkhimdgaebkigbab">
+       <Appearance>
+        <Integer>2</Integer>
+       </Appearance>
+       <PartlyVisibleIfPartOfPicture/>
+       <GeometricRelationToContainer RecordedLeaderWidthSquared="8410000" RecordedLeaderHeightSquared="14025025" WidthTimesLeaderWidth="5602800" HeightTimesLeaderHeight="7010640" XOffsetTimesLeaderWidth="1400700" YOffsetTimesLeaderHeight="3505320" Z="-2147483648"/>
+       <OnBack>
+        <Robot>
+         <ThoughtBubble>
+          <Box>
+           <NumberOfHoles>5</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[ ]]></TextValue>
+             <Active/>
+            </TextPad>
+           </Hole>
+           <Hole>2
+            <Scale Parameter="7" Index="1">Moving
+             <Active/>
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <TextPad>
+             <TextValue><![CDATA[ ]]></TextValue>
+             <Active/>
+            </TextPad>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[get var]]></TextValue>
+               <Active/>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[1]]></TextValue>
+               <Active/>
+               <Erased/>
+              </TextPad>
+              <Label><![CDATA[variable]]></Label>
+             </Hole>
+             <Hole>3
+              <Bird Parameter="8">
+               <Active/>
+               <Erased/>
+              </Bird>
+              <Label><![CDATA[bird]]></Label>
+             </Hole>
+             <Active/>
+            </Box>
+           </Hole>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15830750" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+           <Active/>
+          </Box>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17837850" YOffsetTimesLeaderHeight="33398057" Z="-2147483648"/>
+          <Active/>
+          <SeeAll/>
+         </ThoughtBubble>
+         <Actions ID="67" Version="2" MadeOrMovedCount="2">
+          <GraspMagicWand>MagicWand</GraspMagicWand>
+          <UseMagicWand>MyBox.4</UseMagicWand>
+          <Drop>1</Drop>
+          <UseMagicWand>MyBox.5</UseMagicWand>
+          <GiveBird>1</GiveBird>
+          <DropMagicWand>MagicWand</DropMagicWand>
+          <GraspVacuum>Vacuum</GraspVacuum>
+          <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+          <UseVacuum>1</UseVacuum>
+          <DropVacuum>Vacuum</DropVacuum>
+         </Actions>
+         <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+          <Box GUID="bggjeeioeombilekkiiicekjeglolfgo">
+           <NumberOfHoles>5</NumberOfHoles>
+           <Hole>1
+            <RemoteControl Code="27">
+             <GlobalSensor/>
+             <Value>
+              <RemoteControl>0</RemoteControl>
+             </Value>
+            </RemoteControl>
+           </Hole>
+           <Hole>2
+            <Scale>Moving
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <TextPad>
+             <TextValue><![CDATA[ ]]></TextValue>
+            </TextPad>
+           </Hole>
+           <Hole>4
+            <ForeignBird Parameter="8">
+             <MessageToMaker>
+              <Box>
+               <NumberOfHoles>2</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[rcx]]></TextValue>
+                </TextPad>
+               </Hole>
+               <Hole>2
+                <Bird Parameter="8">
+                 <Active/>
+                </Bird>
+               </Hole>
+               <Geometry Z="-2147483648">
+                <Left>-15431</Left>
+                <Bottom>8603</Bottom>
+                <Width>6600</Width>
+                <Height>2400</Height>
+               </Geometry>
+              </Box>
+             </MessageToMaker>
+             <Maker HandleIndex="0">
+              <ForeignBird Parameter="8">
+               <Label>
+                <PictureOf>
+                 <Appearance>
+                  <TextPad>
+                   <TextValue><![CDATA[?]]></TextValue>
+                   <VariableWidthFont/>
+                   <Active/>
+                   <SeeSome/>
+                  </TextPad>
+                 </Appearance>
+                 <PartlyVisibleIfPartOfPicture/>
+                 <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                 <GluedDown/>
+                 <Active/>
+                 <SeeSome/>
+                 <GeometryWhenFreeAndUnflipped>
+                  <Width>7600</Width>
+                  <Height>9900</Height>
+                 </GeometryWhenFreeAndUnflipped>
+                </PictureOf>
+               </Label>
+               <Geometry Z="-2147483648">
+                <Left>8319</Left>
+                <Bottom>23878</Bottom>
+                <Width>6475</Width>
+                <Height>7575</Height>
+               </Geometry>
+               <Active/>
+              </ForeignBird>
+             </Maker>
+             <Active/>
+            </ForeignBird>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[get var]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[1]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[variable]]></Label>
+             </Hole>
+             <Hole>3
+              <Bird Parameter="8">
+               <MyNest>
+                <Nest GUID="coibmddakajlffebkdlcfnapcmhkekfg" Parameter="3">
+                 <ID>0b79bd55-d8bc-463a-b47e-3f05ebfce65f</ID>
+                 <SeeAll/>
+                </Nest>
+               </MyNest>
+               <Active/>
+              </Bird>
+              <Label><![CDATA[bird]]></Label>
+             </Hole>
+            </Box>
+           </Hole>
+          </Box>
+         </WorkingInfo>
+        </Robot>
+       </OnBack>
+       <OnBack>
+        <Robot>
+         <ThoughtBubble>
+          <Box>
+           <NumberOfHoles>5</NumberOfHoles>
+           <Hole>1
+            <PictureOf>
+             <Appearance>
+              <Integer>25
+               <Active/>
+               <Erased/>
+              </Integer>
+             </Appearance>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="1201216" RecordedLeaderHeightSquared="125316" WidthTimesLeaderWidth="30688" HeightTimesLeaderHeight="62658" XOffsetTimesLeaderWidth="46032" YOffsetTimesLeaderHeight="31152" Z="-2147483648"/>
+             <Active/>
+             <Erased/>
+             <GeometryWhenFreeAndUnflipped>
+              <Width>2400</Width>
+              <Height>1200</Height>
+             </GeometryWhenFreeAndUnflipped>
+            </PictureOf>
+           </Hole>
+           <Hole>2
+            <Scale Parameter="4" Index="1">Moving
+             <Active/>
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <Integer>1
+             <Active/>
+             <Erased/>
+            </Integer>
+           </Hole>
+           <Hole>4
+            <ForeignBird Parameter="8">
+             <MessageToMaker>
+              <Box>
+               <NumberOfHoles>2</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[rcx]]></TextValue>
+                </TextPad>
+               </Hole>
+               <Hole>2
+                <Bird Parameter="8">
+                 <Active/>
+                </Bird>
+               </Hole>
+               <Geometry Z="-2147483648">
+                <Left>-15431</Left>
+                <Bottom>8603</Bottom>
+                <Width>6600</Width>
+                <Height>2400</Height>
+               </Geometry>
+              </Box>
+             </MessageToMaker>
+             <Maker HandleIndex="0">
+              <ForeignBird Parameter="8">
+               <Label>
+                <PictureOf>
+                 <Appearance>
+                  <TextPad>
+                   <TextValue><![CDATA[?]]></TextValue>
+                   <VariableWidthFont/>
+                   <Active/>
+                   <SeeSome/>
+                  </TextPad>
+                 </Appearance>
+                 <PartlyVisibleIfPartOfPicture/>
+                 <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                 <GluedDown/>
+                 <Active/>
+                 <SeeSome/>
+                 <GeometryWhenFreeAndUnflipped>
+                  <Width>7600</Width>
+                  <Height>9900</Height>
+                 </GeometryWhenFreeAndUnflipped>
+                </PictureOf>
+               </Label>
+               <Geometry Z="-2147483648">
+                <Left>11169</Left>
+                <Bottom>25803</Bottom>
+                <Width>6475</Width>
+                <Height>7575</Height>
+               </Geometry>
+               <Active/>
+              </ForeignBird>
+             </Maker>
+             <Active/>
+             <Erased/>
+            </ForeignBird>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[set var]]></TextValue>
+               <Active/>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[var1]]></TextValue>
+               <Active/>
+              </TextPad>
+              <Label><![CDATA[var]]></Label>
+             </Hole>
+             <Hole>3
+              <Label><![CDATA[value]]></Label>
+             </Hole>
+             <Active/>
+            </Box>
+           </Hole>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15859976" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+           <Active/>
+          </Box>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17837850" YOffsetTimesLeaderHeight="33398057" Z="-2147483648"/>
+          <Active/>
+          <SeeAll/>
+         </ThoughtBubble>
+         <Actions ID="69" Version="2" MadeOrMovedCount="5">
+          <MoveTo>NumberStack</MoveTo>
+          <MadeOrMoved TypeCode="0">1</MadeOrMoved>
+          <Grasp>1</Grasp>
+          <TypeTo KeyDescription="" KeyCode="8">InHand</TypeTo>
+          <Drop>1</Drop>
+          <GraspMagicWand>MagicWand</GraspMagicWand>
+          <UseMagicWand>MyBox.1</UseMagicWand>
+          <DropOn>1</DropOn>
+          <DropMagicWand>MagicWand</DropMagicWand>
+          <Grasp>1</Grasp>
+          <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+          <DropOn>MyBox.3</DropOn>
+          <GraspMagicWand>MagicWand</GraspMagicWand>
+          <DropMagicWand>MagicWand</DropMagicWand>
+          <GraspMagicWand>MagicWand</GraspMagicWand>
+          <UseMagicWand>MyBox.4</UseMagicWand>
+          <Drop>3</Drop>
+          <UseMagicWand>MyBox.5</UseMagicWand>
+          <Drop>4</Drop>
+          <UseMagicWand>MyBox.3</UseMagicWand>
+          <DropOn>4.3</DropOn>
+          <DropMagicWand>MagicWand</DropMagicWand>
+          <Grasp>4</Grasp>
+          <GiveBird>3</GiveBird>
+          <GraspVacuum>Vacuum</GraspVacuum>
+          <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+          <UseVacuum>3</UseVacuum>
+          <DropVacuum>Vacuum</DropVacuum>
+         </Actions>
+         <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+          <Box GUID="pdddbkddhnecajeokdgefjegcnbegjao">
+           <NumberOfHoles>5</NumberOfHoles>
+           <Hole>1
+            <RemoteControl Code="15">
+             <For>
+              <PictureOf Link="mbckcopngnddgoepkkhimdgaebkigbab"/>
+             </For>
+             <NotFlippedOver/>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="765625" RecordedLeaderHeightSquared="429025" WidthTimesLeaderWidth="17500" HeightTimesLeaderHeight="214185" XOffsetTimesLeaderWidth="28875" YOffsetTimesLeaderHeight="106765" Z="-2147483648"/>
+            </RemoteControl>
+           </Hole>
+           <Hole>2
+            <Scale Parameter="7">Moving
+             <SeeSome/>
+            </Scale>
+           </Hole>
+           <Hole>3
+            <Integer>2</Integer>
+           </Hole>
+           <Hole>4
+            <ForeignBird Parameter="8">
+             <MessageToMaker>
+              <Box>
+               <NumberOfHoles>2</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[rcx]]></TextValue>
+                </TextPad>
+               </Hole>
+               <Hole>2
+                <Bird Parameter="8">
+                 <Active/>
+                </Bird>
+               </Hole>
+               <Geometry Z="-2147483648">
+                <Left>-15431</Left>
+                <Bottom>8603</Bottom>
+                <Width>6600</Width>
+                <Height>2400</Height>
+               </Geometry>
+              </Box>
+             </MessageToMaker>
+             <Maker HandleIndex="0">
+              <ForeignBird Parameter="8">
+               <Label>
+                <PictureOf>
+                 <Appearance>
+                  <TextPad>
+                   <TextValue><![CDATA[?]]></TextValue>
+                   <VariableWidthFont/>
+                   <Active/>
+                   <SeeSome/>
+                  </TextPad>
+                 </Appearance>
+                 <PartlyVisibleIfPartOfPicture/>
+                 <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                 <GluedDown/>
+                 <Active/>
+                 <SeeSome/>
+                 <GeometryWhenFreeAndUnflipped>
+                  <Width>7600</Width>
+                  <Height>9900</Height>
+                 </GeometryWhenFreeAndUnflipped>
+                </PictureOf>
+               </Label>
+               <Geometry Z="-2147483648">
+                <Left>8319</Left>
+                <Bottom>23878</Bottom>
+                <Width>6475</Width>
+                <Height>7575</Height>
+               </Geometry>
+               <Active/>
+              </ForeignBird>
+             </Maker>
+             <Active/>
+            </ForeignBird>
+           </Hole>
+           <Hole>5
+            <Box Parameter="4">
+             <NumberOfHoles>3</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[set var]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[command]]></Label>
+             </Hole>
+             <Hole>2
+              <TextPad>
+               <TextValue><![CDATA[var1]]></TextValue>
+              </TextPad>
+              <Label><![CDATA[var]]></Label>
+             </Hole>
+             <Hole>3
+              <Label><![CDATA[value]]></Label>
+             </Hole>
+            </Box>
+           </Hole>
+          </Box>
+         </WorkingInfo>
+         <Next>
+          <Robot>
+           <Label><![CDATA[Ro]]></Label>
+           <ThoughtBubble>
+            <Box>
+             <NumberOfHoles>5</NumberOfHoles>
+             <Hole>1
+              <PictureOf>
+               <Appearance>
+                <Integer>25
+                 <Active/>
+                 <Erased/>
+                </Integer>
+               </Appearance>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="1201216" RecordedLeaderHeightSquared="125316" WidthTimesLeaderWidth="30688" HeightTimesLeaderHeight="62658" XOffsetTimesLeaderWidth="46032" YOffsetTimesLeaderHeight="31152" Z="-2147483648"/>
+               <Active/>
+               <Erased/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>2400</Width>
+                <Height>1200</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Hole>
+             <Hole>2
+              <Scale Parameter="3">RightLeaning
+               <SeeSome/>
+              </Scale>
+             </Hole>
+             <Hole>3
+              <Integer>1
+               <Active/>
+               <Erased/>
+              </Integer>
+             </Hole>
+             <Hole>4
+              <ForeignBird Parameter="8">
+               <MessageToMaker>
+                <Box>
+                 <NumberOfHoles>2</NumberOfHoles>
+                 <Hole>1
+                  <TextPad>
+                   <TextValue><![CDATA[rcx]]></TextValue>
+                  </TextPad>
+                 </Hole>
+                 <Hole>2
+                  <Bird Parameter="8">
+                   <Active/>
+                  </Bird>
+                 </Hole>
+                 <Geometry Z="-2147483648">
+                  <Left>-15431</Left>
+                  <Bottom>8603</Bottom>
+                  <Width>6600</Width>
+                  <Height>2400</Height>
+                 </Geometry>
+                </Box>
+               </MessageToMaker>
+               <Maker HandleIndex="0">
+                <ForeignBird Parameter="8">
+                 <Label>
+                  <PictureOf>
+                   <Appearance>
+                    <TextPad>
+                     <TextValue><![CDATA[?]]></TextValue>
+                     <VariableWidthFont/>
+                     <Active/>
+                     <SeeSome/>
+                    </TextPad>
+                   </Appearance>
+                   <PartlyVisibleIfPartOfPicture/>
+                   <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+                   <GluedDown/>
+                   <Active/>
+                   <SeeSome/>
+                   <GeometryWhenFreeAndUnflipped>
+                    <Width>7600</Width>
+                    <Height>9900</Height>
+                   </GeometryWhenFreeAndUnflipped>
+                  </PictureOf>
+                 </Label>
+                 <Geometry Z="-2147483648">
+                  <Left>14019</Left>
+                  <Bottom>27728</Bottom>
+                  <Width>6475</Width>
+                  <Height>7575</Height>
+                 </Geometry>
+                 <Active/>
+                </ForeignBird>
+               </Maker>
+               <Active/>
+               <Erased/>
+              </ForeignBird>
+             </Hole>
+             <Hole>5
+              <Box Parameter="4">
+               <NumberOfHoles>3</NumberOfHoles>
+               <Hole>1
+                <TextPad>
+                 <TextValue><![CDATA[set var]]></TextValue>
+                 <Active/>
+                </TextPad>
+                <Label><![CDATA[command]]></Label>
+               </Hole>
+               <Hole>2
+                <TextPad>
+                 <TextValue><![CDATA[var1]]></TextValue>
+                 <Active/>
+                </TextPad>
+                <Label><![CDATA[var]]></Label>
+               </Hole>
+               <Hole>3
+                <Label><![CDATA[value]]></Label>
+               </Hole>
+               <Active/>
+              </Box>
+             </Hole>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15859976" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+             <Active/>
+            </Box>
+            <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17837850" YOffsetTimesLeaderHeight="33398057" Z="-2147483648"/>
+            <Active/>
+            <SeeAll/>
+           </ThoughtBubble>
+           <Actions ID="69" Version="2" MadeOrMovedCount="5">
+            <MoveTo>NumberStack</MoveTo>
+            <MadeOrMoved TypeCode="0">1</MadeOrMoved>
+            <Grasp>1</Grasp>
+            <TypeTo KeyDescription="" KeyCode="8">InHand</TypeTo>
+            <Drop>1</Drop>
+            <GraspMagicWand>MagicWand</GraspMagicWand>
+            <UseMagicWand>MyBox.1</UseMagicWand>
+            <DropOn>1</DropOn>
+            <DropMagicWand>MagicWand</DropMagicWand>
+            <Grasp>1</Grasp>
+            <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+            <DropOn>MyBox.3</DropOn>
+            <GraspMagicWand>MagicWand</GraspMagicWand>
+            <DropMagicWand>MagicWand</DropMagicWand>
+            <GraspMagicWand>MagicWand</GraspMagicWand>
+            <UseMagicWand>MyBox.4</UseMagicWand>
+            <Drop>3</Drop>
+            <UseMagicWand>MyBox.5</UseMagicWand>
+            <Drop>4</Drop>
+            <UseMagicWand>MyBox.3</UseMagicWand>
+            <DropOn>4.3</DropOn>
+            <DropMagicWand>MagicWand</DropMagicWand>
+            <Grasp>4</Grasp>
+            <GiveBird>3</GiveBird>
+            <GraspVacuum>Vacuum</GraspVacuum>
+            <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+            <UseVacuum>3</UseVacuum>
+            <DropVacuum>Vacuum</DropVacuum>
+           </Actions>
+           <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+            <Box Link="pdddbkddhnecajeokdgefjegcnbegjao"/>
+           </WorkingInfo>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="27040000" RecordedLeaderHeightSquared="28890625" WidthTimesLeaderWidth="27040000" HeightTimesLeaderHeight="28890625" XOffsetTimesLeaderWidth="17238000" YOffsetTimesLeaderHeight="23042625" Z="-2147483648"/>
+          </Robot>
+         </Next>
+        </Robot>
+       </OnBack>
+       <OnBack>
+        <Robot>
+         <ThoughtBubble>
+          <Box>
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <PictureOf>
+             <Appearance>
+              <Integer>1
+               <Active/>
+               <Erased/>
+              </Integer>
+             </Appearance>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="1201216" RecordedLeaderHeightSquared="125316" WidthTimesLeaderWidth="74528" HeightTimesLeaderHeight="62658" XOffsetTimesLeaderWidth="108504" YOffsetTimesLeaderHeight="31152" Z="-2147483648"/>
+             <Active/>
+             <Erased/>
+             <GeometryWhenFreeAndUnflipped>
+              <Width>1405</Width>
+              <Height>1824</Height>
+             </GeometryWhenFreeAndUnflipped>
+            </PictureOf>
+           </Hole>
+           <Hole>2
+            <Integer>2
+             <Active/>
+             <Erased/>
+            </Integer>
+           </Hole>
+           <GeometricRelationToContainer RecordedLeaderWidthSquared="26112100" RecordedLeaderHeightSquared="32787076" WidthTimesLeaderWidth="17460870" HeightTimesLeaderHeight="13095362" XOffsetTimesLeaderWidth="4537680" YOffsetTimesLeaderHeight="15757952" Z="-2147483648"/>
+           <Active/>
+          </Box>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17837850" YOffsetTimesLeaderHeight="33398057" Z="-2147483648"/>
+          <Active/>
+          <SeeAll/>
+         </ThoughtBubble>
+         <Actions ID="68" Version="2" MadeOrMovedCount="0">
+          <Grasp>MyBox.2</Grasp>
+          <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+          <DropOn>MyBox.1</DropOn>
+         </Actions>
+         <WorkingInfo SetDownCounter="0" RecentPageNumber="0" WaitingForDrop="1" Suspended="1">
+          <Box GUID="chmnmhckihammkekkeponbfdhmlglhpi">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <RemoteControl Code="15">
+             <For>
+              <PictureOf Link="mbckcopngnddgoepkkhimdgaebkigbab"/>
+             </For>
+             <NotFlippedOver/>
+             <GeometricRelationToContainer RecordedLeaderWidthSquared="765625" RecordedLeaderHeightSquared="429025" WidthTimesLeaderWidth="49000" HeightTimesLeaderHeight="214185" XOffsetTimesLeaderWidth="69125" YOffsetTimesLeaderHeight="106765" Z="-2147483648"/>
+            </RemoteControl>
+           </Hole>
+           <Hole>2
+            <Nest Link="coibmddakajlffebkdlcfnapcmhkekfg"/>
+           </Hole>
+          </Box>
+         </WorkingInfo>
+        </Robot>
+       </OnBack>
+       <OnBack>
+        <Box Link="bggjeeioeombilekkiiicekjeglolfgo"/>
+       </OnBack>
+       <OnBack>
+        <Box Link="pdddbkddhnecajeokdgefjegcnbegjao"/>
+       </OnBack>
+       <OnBack>
+        <Box Link="chmnmhckihammkekkeponbfdhmlglhpi"/>
+       </OnBack>
+       <GeometryWhenFreeAndUnflipped>
+        <Width>1405</Width>
+        <Height>1824</Height>
+       </GeometryWhenFreeAndUnflipped>
+      </PictureOf>
+      <Label><![CDATA[counter_0]]></Label>
+     </Hole>
+     <Geometry Z="-2147483648">
+      <Left>15587</Left>
+      <Bottom>4703</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </Box>
+   </Page>
+  </Page>
+  <Page>9
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">9
+    <TextPad>
+     <TextValue><![CDATA[Task
+Touch]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>8402</Left>
+      <Bottom>4683</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>10
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">10
+    <Picture>
+     <BuiltIn Code="54" PictureNumber="0"/>
+     <Geometry Z="-2147483648">
+      <Left>12389</Left>
+      <Bottom>4683</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+     <SeeSome/>
+     <FlippedOver/>
+     <OnBack>
+      <TextPad>
+       <TextValue><![CDATA[Touch]]></TextValue>
+       <Active/>
+      </TextPad>
+     </OnBack>
+     <OnBack>
+      <Robot>
+       <Label><![CDATA[So]]></Label>
+       <ThoughtBubble>
+        <Box>
+         <NumberOfHoles>5</NumberOfHoles>
+         <Hole>1
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>2
+          <Scale Parameter="7" Index="1">Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="8">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>11169</Left>
+              <Bottom>25803</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+           <Erased/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box Parameter="4">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[start task]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <Integer>3
+             <Active/>
+             <Erased/>
+            </Integer>
+            <Label><![CDATA[task]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15859976" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+         <Active/>
+        </Box>
+        <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17341445" YOffsetTimesLeaderHeight="33195269" Z="-2147483648"/>
+        <Active/>
+        <SeeAll/>
+       </ThoughtBubble>
+       <Actions ID="70" Version="2" MadeOrMovedCount="2">
+        <GraspMagicWand>MagicWand</GraspMagicWand>
+        <UseMagicWand>MyBox.4</UseMagicWand>
+        <Drop>1</Drop>
+        <UseMagicWand>MyBox.5</UseMagicWand>
+        <GiveBird>1</GiveBird>
+        <DropMagicWand>MagicWand</DropMagicWand>
+        <GraspVacuum>Vacuum</GraspVacuum>
+        <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+        <UseVacuum>1</UseVacuum>
+        <DropVacuum>Vacuum</DropVacuum>
+       </Actions>
+       <WorkingInfo SetDownCounter="0" RecentPageNumber="0" Suspended="1">
+        <Box GUID="hnldagmnpoedhcejkjfcanmnidaiclgf">
+         <NumberOfHoles>5</NumberOfHoles>
+         <Hole>1
+          <RemoteControl Code="27">
+           <GlobalSensor/>
+           <Active/>
+          </RemoteControl>
+         </Hole>
+         <Hole>2
+          <Scale>Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="10" Index="12">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>8319</Left>
+              <Bottom>23878</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box Parameter="4">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[start task]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <Integer>1
+             <Active/>
+            </Integer>
+            <Label><![CDATA[task]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Active/>
+        </Box>
+       </WorkingInfo>
+       <Active/>
+      </Robot>
+     </OnBack>
+     <OnBack>
+      <Box Link="hnldagmnpoedhcejkjfcanmnidaiclgf"/>
+     </OnBack>
+     <GeometryWhenFreeAndUnflipped>
+      <Width>1575</Width>
+      <Height>1575</Height>
+     </GeometryWhenFreeAndUnflipped>
+    </Picture>
+   </Page>
+  </Page>
+  <Page>11
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">11
+    <TextPad>
+     <TextValue><![CDATA[Task
+Log]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>8402</Left>
+      <Bottom>7103</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>12
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">12
+    <Picture>
+     <BuiltIn Code="54" PictureNumber="0"/>
+     <Geometry Z="-2147483648">
+      <Left>12389</Left>
+      <Bottom>7103</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+     <SeeSome/>
+     <FlippedOver/>
+     <OnBack>
+      <Robot>
+       <Label><![CDATA[So]]></Label>
+       <ThoughtBubble>
+        <Box>
+         <NumberOfHoles>5</NumberOfHoles>
+         <Hole>1
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>2
+          <Scale Parameter="7" Index="1">Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="8">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>14019</Left>
+              <Bottom>27728</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+           <Erased/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box Parameter="4">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[start task]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <Integer>3
+             <Active/>
+             <Erased/>
+            </Integer>
+            <Label><![CDATA[task]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15859976" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+         <Active/>
+        </Box>
+        <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17341445" YOffsetTimesLeaderHeight="33195269" Z="-2147483648"/>
+        <Active/>
+        <SeeAll/>
+       </ThoughtBubble>
+       <Actions ID="70" Version="2" MadeOrMovedCount="2">
+        <GraspMagicWand>MagicWand</GraspMagicWand>
+        <UseMagicWand>MyBox.4</UseMagicWand>
+        <Drop>1</Drop>
+        <UseMagicWand>MyBox.5</UseMagicWand>
+        <GiveBird>1</GiveBird>
+        <DropMagicWand>MagicWand</DropMagicWand>
+        <GraspVacuum>Vacuum</GraspVacuum>
+        <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+        <UseVacuum>1</UseVacuum>
+        <DropVacuum>Vacuum</DropVacuum>
+       </Actions>
+       <WorkingInfo SetDownCounter="0" RecentPageNumber="0" WaitingForDrop="1" Suspended="1">
+        <Box GUID="bimekogfceenpiebldmkbbgbbmdcnbcd">
+         <NumberOfHoles>5</NumberOfHoles>
+         <Hole>1
+          <RemoteControl Code="27">
+           <GlobalSensor/>
+           <Active/>
+          </RemoteControl>
+         </Hole>
+         <Hole>2
+          <Scale Index="6">Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="10" Index="12">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>11169</Left>
+              <Bottom>25803</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box Parameter="4">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[start task]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <Integer>2
+             <Active/>
+            </Integer>
+            <Label><![CDATA[task]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Active/>
+        </Box>
+       </WorkingInfo>
+       <Active/>
+      </Robot>
+     </OnBack>
+     <OnBack>
+      <TextPad>
+       <TextValue><![CDATA[Log]]></TextValue>
+       <Active/>
+      </TextPad>
+     </OnBack>
+     <OnBack>
+      <Box Link="bimekogfceenpiebldmkbbgbbmdcnbcd"/>
+     </OnBack>
+     <GeometryWhenFreeAndUnflipped>
+      <Width>1575</Width>
+      <Height>1575</Height>
+     </GeometryWhenFreeAndUnflipped>
+    </Picture>
+   </Page>
+  </Page>
+  <Page>13
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">13
+    <TextPad>
+     <TextValue><![CDATA[Task
+TooMuch]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>8402</Left>
+      <Bottom>4683</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>14
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">14
+    <Picture>
+     <BuiltIn Code="54" PictureNumber="0"/>
+     <Geometry Z="-2147483648">
+      <Left>12389</Left>
+      <Bottom>4683</Bottom>
+      <Width>2900</Width>
+      <Height>3745</Height>
+     </Geometry>
+     <Active/>
+     <SeeSome/>
+     <FlippedOver/>
+     <OnBack>
+      <Robot>
+       <Label><![CDATA[So]]></Label>
+       <ThoughtBubble>
+        <Box>
+         <NumberOfHoles>5</NumberOfHoles>
+         <Hole>1
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>2
+          <Scale Parameter="7" Index="1">Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="8">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>16869</Left>
+              <Bottom>29653</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+           <Erased/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box Parameter="4">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[start task]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <Integer>3
+             <Active/>
+             <Erased/>
+            </Integer>
+            <Label><![CDATA[task]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <GeometricRelationToContainer RecordedLeaderWidthSquared="23726641" RecordedLeaderHeightSquared="29855296" WidthTimesLeaderWidth="15859976" HeightTimesLeaderHeight="11916984" XOffsetTimesLeaderWidth="4120866" YOffsetTimesLeaderHeight="14348464" Z="-2147483648"/>
+         <Active/>
+        </Box>
+        <GeometricRelationToContainer RecordedLeaderWidthSquared="29757025" RecordedLeaderHeightSquared="31730689" WidthTimesLeaderWidth="27875050" HeightTimesLeaderHeight="32254558" XOffsetTimesLeaderWidth="17341445" YOffsetTimesLeaderHeight="33195269" Z="-2147483648"/>
+        <Active/>
+        <SeeAll/>
+       </ThoughtBubble>
+       <Actions ID="70" Version="2" MadeOrMovedCount="2">
+        <GraspMagicWand>MagicWand</GraspMagicWand>
+        <UseMagicWand>MyBox.4</UseMagicWand>
+        <Drop>1</Drop>
+        <UseMagicWand>MyBox.5</UseMagicWand>
+        <GiveBird>1</GiveBird>
+        <DropMagicWand>MagicWand</DropMagicWand>
+        <GraspVacuum>Vacuum</GraspVacuum>
+        <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+        <UseVacuum>1</UseVacuum>
+        <DropVacuum>Vacuum</DropVacuum>
+       </Actions>
+       <WorkingInfo SetDownCounter="0" RecentPageNumber="0" WaitingForDrop="1" Suspended="1">
+        <Box GUID="lddjmbpffobfijediiidoikegcmigcel">
+         <NumberOfHoles>5</NumberOfHoles>
+         <Hole>1
+          <RemoteControl Code="27">
+           <GlobalSensor/>
+           <Active/>
+          </RemoteControl>
+         </Hole>
+         <Hole>2
+          <Scale Index="1">Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[ ]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="10" Index="12">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>14019</Left>
+              <Bottom>27728</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box Parameter="4">
+           <NumberOfHoles>2</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[start task]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <Integer>3
+             <Active/>
+            </Integer>
+            <Label><![CDATA[task]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Active/>
+        </Box>
+       </WorkingInfo>
+       <Active/>
+      </Robot>
+     </OnBack>
+     <OnBack>
+      <TextPad>
+       <TextValue><![CDATA[TooMuch]]></TextValue>
+       <Active/>
+      </TextPad>
+     </OnBack>
+     <OnBack>
+      <Box Link="lddjmbpffobfijediiidoikegcmigcel"/>
+     </OnBack>
+     <GeometryWhenFreeAndUnflipped>
+      <Width>1575</Width>
+      <Height>1575</Height>
+     </GeometryWhenFreeAndUnflipped>
+    </Picture>
+   </Page>
+  </Page>
+  <Page>15
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">15
+    <TextPad>
+     <TextValue><![CDATA[Stop
+Program]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>12063</Left>
+      <Bottom>7044</Bottom>
+      <Width>2899</Width>
+      <Height>3742</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>16
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">16
+    <Picture>
+     <BuiltIn Code="21" PictureNumber="0"/>
+     <Geometry Z="2147483346">
+      <Left>16050</Left>
+      <Bottom>7044</Bottom>
+      <Width>2899</Width>
+      <Height>3742</Height>
+     </Geometry>
+     <Active/>
+     <SeeSome/>
+     <FlippedOver/>
+     <OnBack>
+      <TextPad>
+       <TextValue><![CDATA[Stop
+Program]]></TextValue>
+       <Active/>
+      </TextPad>
+     </OnBack>
+     <OnBack>
+      <Robot Parameter="1" Index="22">
+       <ThoughtBubble>
+        <Box>
+         <NumberOfHoles>8</NumberOfHoles>
+         <Hole>1
+          <TextPad>
+           <TextValue><![CDATA[.]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>2
+          <Scale Parameter="7" Index="1">Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[.]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="8">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>5469</Left>
+              <Bottom>21953</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+           <Erased/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box>
+           <NumberOfHoles>1</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[stop program]]></TextValue>
+             <Active/>
+            </TextPad>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Hole>6
+          <Box Parameter="4">
+           <NumberOfHoles>3</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[set var]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <TextPad>
+             <TextValue><![CDATA[4]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[var]]></Label>
+           </Hole>
+           <Hole>3
+            <Integer>0
+             <Active/>
+            </Integer>
+            <Label><![CDATA[value]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Hole>7
+          <Box Parameter="4">
+           <NumberOfHoles>3</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[set var]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <TextPad>
+             <TextValue><![CDATA[5]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[var]]></Label>
+           </Hole>
+           <Hole>3
+            <Integer>0
+             <Active/>
+            </Integer>
+            <Label><![CDATA[value]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Hole>8
+          <Box Parameter="4">
+           <NumberOfHoles>3</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[set var]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <TextPad>
+             <TextValue><![CDATA[6]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[var]]></Label>
+           </Hole>
+           <Hole>3
+            <Integer>0
+             <Active/>
+            </Integer>
+            <Label><![CDATA[value]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <GeometricRelationToContainer RecordedLeaderWidthSquared="26081449" RecordedLeaderHeightSquared="32695524" WidthTimesLeaderWidth="17450619" HeightTimesLeaderHeight="13077066" XOffsetTimesLeaderWidth="4529909" YOffsetTimesLeaderHeight="15718782" Z="-2147483648"/>
+         <Active/>
+        </Box>
+        <GeometricRelationToContainer RecordedLeaderWidthSquared="29637136" RecordedLeaderHeightSquared="31618129" WidthTimesLeaderWidth="27802508" HeightTimesLeaderHeight="32152314" XOffsetTimesLeaderWidth="17235704" YOffsetTimesLeaderHeight="33338767" Z="2147483351"/>
+        <Active/>
+        <SeeAll/>
+       </ThoughtBubble>
+       <Actions ID="59" Version="2" MadeOrMovedCount="6">
+        <GraspMagicWand>MagicWand</GraspMagicWand>
+        <UseMagicWand>MyBox.4</UseMagicWand>
+        <Drop>1</Drop>
+        <UseMagicWand>MyBox.5</UseMagicWand>
+        <GiveBird>1</GiveBird>
+        <UseMagicWand>MyBox.6</UseMagicWand>
+        <GiveBird>1</GiveBird>
+        <UseMagicWand>MyBox.7</UseMagicWand>
+        <GiveBird>1</GiveBird>
+        <UseMagicWand>MyBox.8.2</UseMagicWand>
+        <Drop>5</Drop>
+        <UseMagicWand>MyBox.8</UseMagicWand>
+        <GiveBird>1</GiveBird>
+        <DropMagicWand>MagicWand</DropMagicWand>
+        <GraspVacuum KeyDescription="1" KeyCode="49">Vacuum</GraspVacuum>
+        <TypeTo KeyDescription="1" KeyCode="49">Vacuum</TypeTo>
+        <UseVacuum>1</UseVacuum>
+        <UseVacuum>5</UseVacuum>
+        <DropVacuum>Vacuum</DropVacuum>
+       </Actions>
+       <WorkingInfo SetDownCounter="0" RecentPageNumber="0" WaitingForDrop="1" Suspended="1">
+        <Box GUID="nkpfaefanpkdgkeoioagajijkebnfdmp">
+         <NumberOfHoles>8</NumberOfHoles>
+         <Hole>1
+          <RemoteControl Code="27">
+           <GlobalSensor/>
+           <Active/>
+          </RemoteControl>
+         </Hole>
+         <Hole>2
+          <Scale>Moving
+           <Active/>
+           <SeeSome/>
+          </Scale>
+         </Hole>
+         <Hole>3
+          <TextPad>
+           <TextValue><![CDATA[.]]></TextValue>
+           <Active/>
+          </TextPad>
+         </Hole>
+         <Hole>4
+          <ForeignBird Parameter="10" Index="12">
+           <MessageToMaker>
+            <Box>
+             <NumberOfHoles>2</NumberOfHoles>
+             <Hole>1
+              <TextPad>
+               <TextValue><![CDATA[rcx]]></TextValue>
+              </TextPad>
+             </Hole>
+             <Hole>2
+              <Bird Parameter="8">
+               <Active/>
+              </Bird>
+             </Hole>
+             <Geometry Z="-2147483648">
+              <Left>-15431</Left>
+              <Bottom>8603</Bottom>
+              <Width>6600</Width>
+              <Height>2400</Height>
+             </Geometry>
+            </Box>
+           </MessageToMaker>
+           <Maker HandleIndex="0">
+            <ForeignBird Parameter="8">
+             <Label>
+              <PictureOf>
+               <Appearance>
+                <TextPad>
+                 <TextValue><![CDATA[?]]></TextValue>
+                 <VariableWidthFont/>
+                 <Active/>
+                 <SeeSome/>
+                </TextPad>
+               </Appearance>
+               <PartlyVisibleIfPartOfPicture/>
+               <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+               <GluedDown/>
+               <Active/>
+               <SeeSome/>
+               <GeometryWhenFreeAndUnflipped>
+                <Width>7600</Width>
+                <Height>9900</Height>
+               </GeometryWhenFreeAndUnflipped>
+              </PictureOf>
+             </Label>
+             <Geometry Z="-2147483648">
+              <Left>2619</Left>
+              <Bottom>20028</Bottom>
+              <Width>6475</Width>
+              <Height>7575</Height>
+             </Geometry>
+             <Active/>
+            </ForeignBird>
+           </Maker>
+           <Active/>
+          </ForeignBird>
+         </Hole>
+         <Hole>5
+          <Box>
+           <NumberOfHoles>1</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[stop program]]></TextValue>
+             <Active/>
+            </TextPad>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Hole>6
+          <Box Parameter="4">
+           <NumberOfHoles>3</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[set var]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <TextPad>
+             <TextValue><![CDATA[4]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[var]]></Label>
+           </Hole>
+           <Hole>3
+            <Integer>0
+             <Active/>
+            </Integer>
+            <Label><![CDATA[value]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Hole>7
+          <Box Parameter="4">
+           <NumberOfHoles>3</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[set var]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <TextPad>
+             <TextValue><![CDATA[5]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[var]]></Label>
+           </Hole>
+           <Hole>3
+            <Integer>0
+             <Active/>
+            </Integer>
+            <Label><![CDATA[value]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Hole>8
+          <Box Parameter="4">
+           <NumberOfHoles>3</NumberOfHoles>
+           <Hole>1
+            <TextPad>
+             <TextValue><![CDATA[set var]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[command]]></Label>
+           </Hole>
+           <Hole>2
+            <TextPad>
+             <TextValue><![CDATA[6]]></TextValue>
+             <Active/>
+            </TextPad>
+            <Label><![CDATA[var]]></Label>
+           </Hole>
+           <Hole>3
+            <Integer>0
+             <Active/>
+            </Integer>
+            <Label><![CDATA[value]]></Label>
+           </Hole>
+           <Active/>
+          </Box>
+         </Hole>
+         <Active/>
+        </Box>
+       </WorkingInfo>
+       <Active/>
+      </Robot>
+     </OnBack>
+     <OnBack>
+      <Box Link="nkpfaefanpkdgkeoioagajijkebnfdmp"/>
+     </OnBack>
+     <GeometryWhenFreeAndUnflipped>
+      <Width>2722</Width>
+      <Height>3800</Height>
+     </GeometryWhenFreeAndUnflipped>
+    </Picture>
+   </Page>
+  </Page>
+  <Page>17
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">17
+    <TextPad>
+     <TextValue><![CDATA[get
+datalog]]></TextValue>
+     <Geometry Z="-2147483648">
+      <Left>11340</Left>
+      <Bottom>8056</Bottom>
+      <Width>2899</Width>
+      <Height>3742</Height>
+     </Geometry>
+     <Active/>
+    </TextPad>
+   </Page>
+  </Page>
+  <Page>18
+   <Page Language="1" Version="3" xmlns="http://www.toontalk.com">18
+    <Box Parameter="4">
+     <NumberOfHoles>2</NumberOfHoles>
+     <Hole>1
+      <TextPad>
+       <TextValue><![CDATA[get datalog]]></TextValue>
+       <Active/>
+      </TextPad>
+      <Label><![CDATA[command]]></Label>
+     </Hole>
+     <Hole>2
+      <Bird Parameter="10" Index="12">
+       <Active/>
+      </Bird>
+      <Label><![CDATA[bird]]></Label>
+     </Hole>
+     <Geometry Z="-2147483648">
+      <Left>15327</Left>
+      <Bottom>8056</Bottom>
+      <Width>2899</Width>
+      <Height>3742</Height>
+     </Geometry>
+     <Active/>
+    </Box>
+   </Page>
+  </Page>
+  <OpenToPage>1</OpenToPage>
+  <Geometry Z="-1">
+   <Width>7248</Width>
+   <Height>5347</Height>
+  </Geometry>
+  <Active/>
+ </Notebook>
+</ToonTalkObject>

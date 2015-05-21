@@ -1,0 +1,10 @@
+You should add a second sentence here crediting yourself for translation.
+
+IDS_TOONTALK_CREDITS,
+"Animation von Greg Savoia, Kim Tempest und Brian Anderson. Der Rest von Ken Kahn. "
+
+
+// forgot to translate this??
+
+IDS_TOONTALK_CREDITS2,
+"Special thanks to Markus, David, and Mary."

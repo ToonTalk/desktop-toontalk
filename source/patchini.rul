@@ -1,0 +1,586 @@
+// ToonTalk Patch Installation script
+
+// this just adds to beta 33 24-bit imagery
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  IIIIIII SSSSSS
+//    II    SS                          InstallShield (R)
+//    II    SSSSSS      (c) 1996-1997, InstallShield Software Corporation
+//    II        SS      (c) 1990-1996, InstallShield Corporation
+//  IIIIIII SSSSSS                     All Rights Reserved.
+//
+//
+//  This code is generated as a starting setup template.  You should
+//  modify it to provide all necessary steps for your setup.
+//
+//
+//    File Name:  Setup.rul
+//
+//  Description:  InstallShield script
+//
+//     Comments:  This template script performs a basic setup on a
+//                Windows 95 or Windows NT 4.0 platform. With minor
+//                modifications, this template can be adapted to create
+//                new, customized setups.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+  // Include header file
+#include "sdlang.h"
+#include "sddialog.h"
+
+////////////////////// string defines ////////////////////////////
+
+//#define UNINST_LOGFILE_NAME      "Uninst.isu"
+
+//////////////////// installation declarations ///////////////////
+
+  // ----- DLL prototypes -----
+
+
+     // your DLL prototypes
+     prototype DefaultIniEntry(STRING, STRING, STRING);
+     prototype CreateAndRegister(STRING, STRING, STRING);
+     prototype CreateAndRegisterIfNew(STRING, STRING, STRING);
+
+
+  // ---- script prototypes -----
+
+     // generated
+     prototype ShowDialogs();
+     prototype MoveFileData();
+     prototype HandleMoveDataError( NUMBER );
+     prototype ProcessBeforeDataMove();
+     prototype ProcessAfterDataMove();
+     prototype SetupRegistry();
+     prototype SetupFolders();
+     prototype CleanUpInstall();
+     prototype SetupInstall();
+     prototype SetupScreen();
+     prototype CheckRequirements();
+     prototype DialogShowSdWelcome();
+     prototype DialogShowSdFinishReboot();
+
+     // your prototypes
+
+
+  // ----- global variables ------
+
+     // generated
+     BOOL        bWinNT, bIsShellExplorer, bInstallAborted, bIs32BitSetup;
+     STRING      svDir;
+     STRING      svName, svCompany, svSerial;
+     STRING      svDefGroup;
+     STRING      szAppPath;
+     STRING      svSetupType;
+
+
+     // your global variables
+
+     STRING szTemp, szTemp2, szIgnore;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//   MAIN PROGRAM
+//
+//      The setup begins here by hiding the visible setup
+//      window.  This is done to allow all the titles, images, etc. to
+//      be established before showing the main window.  The following
+//      logic then performs the setup in a series of steps.
+//
+///////////////////////////////////////////////////////////////////////////////
+program
+    Disable( BACKGROUND );
+
+    CheckRequirements();
+
+    SetupInstall();
+
+    SetupScreen();
+
+    if (ShowDialogs()<0) goto end_install;
+
+    if (ProcessBeforeDataMove()<0) goto end_install;
+
+    if (MoveFileData()<0) goto end_install;
+
+    if (ProcessAfterDataMove()<0) goto end_install;
+
+    if (SetupRegistry()<0) goto end_install;
+
+    if (SetupFolders()<0) goto end_install;
+
+  end_install:
+
+    CleanUpInstall();
+
+     // If an unrecoverable error occurred, clean up the partial installation.
+     // Otherwise, exit normally.
+
+    if (bInstallAborted) then
+        abort;
+    endif;
+
+endprogram
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  ShowDialogs                                                    //
+//                                                                           //
+//  Purpose:  This function manages the display and navigation               //
+//            the standard dialogs that exist in a setup.                    //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ShowDialogs()
+    NUMBER  nResult;
+ begin
+
+    Dlg_Start:
+        // beginning of dialogs label
+
+    Dlg_SdWelcome:
+        nResult = DialogShowSdWelcome();
+        if (nResult = BACK) goto Dlg_Start;
+
+    return 0;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessBeforeDataMove                                           //
+//                                                                           //
+//  Purpose: This function performs any necessary operations prior to the    //
+//           actual data move operation.                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessBeforeDataMove()
+    STRING svLogFile;
+    NUMBER nResult;
+ begin
+
+  InstallationInfo( @COMPANY_NAME, @PRODUCT_NAME, @PRODUCT_VERSION, @PRODUCT_KEY );
+
+//  svLogFile = UNINST_LOGFILE_NAME;
+  svLogFile = @UNINST_LOGFILE_NAME; // updated 011100
+  // put this in the Playground subdirectory now
+//  nResult = DeinstallStart( svDir + "Playground" , svLogFile, @UNINST_KEY, 0 );
+  nResult = DeinstallStart( svDir , svLogFile, @UNINST_KEY, 0 );
+  if (nResult < 0) then
+      MessageBox( @ERROR_UNINSTSETUP, WARNING );
+  endif;
+
+  szAppPath = TARGETDIR; // TODO : if your application .exe is in a subdir of TARGETDIR then add subdir
+//  GetProfString(@ToonTalkIni, "Directories", "MainDir", szAppPath); // replaces the above on 170401 in case ToonTalk installed somewhere else -- already taken care of
+
+  if ((bIs32BitSetup) && (bIsShellExplorer)) then
+      RegDBSetItem( REGDB_APPPATH, szAppPath );
+      RegDBSetItem( REGDB_APPPATH_DEFAULT, szAppPath ^ @PRODUCT_KEY );
+      RegDBSetItem( REGDB_UNINSTALL_NAME, @UNINST_DISPLAY_NAME );
+  endif;
+
+  // TODO : update any items you want to process before moving the data
+  //
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  MoveFileData                                                   //
+//                                                                           //
+//  Purpose:  This function handles the data movement for                    //
+//            the setup.                                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function MoveFileData()
+    NUMBER nResult, nDisk;
+ begin
+
+  nDisk = 1;
+  SetStatusWindow( 0, "" );
+  Disable( DIALOGCACHE );
+  Enable( STATUS );
+  StatusUpdate( ON, 100 );
+  nResult = ComponentMoveData( MEDIA, nDisk, 0 );
+
+  HandleMoveDataError( nResult );
+
+  Disable( STATUS );
+
+  return nResult;
+
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: HandleMoveDataError                                             //
+//                                                                           //
+//  Purpose: This function handles the error (if any) during the move data   //
+//           operation.                                                      //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function HandleMoveDataError( nResult )
+ begin
+
+  switch (nResult)
+  case 0:
+       return 0;
+  default:
+       SprintfBox( SEVERE, @TITLE_CAPTIONBAR, @ERROR_MOVEDATA, nResult );
+       bInstallAborted = TRUE;
+       return nResult;
+  endswitch;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessAfterDataMove                                            //
+//                                                                           //
+//  Purpose: This function performs any necessary operations needed after    //
+//           all data has been moved.                                        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessAfterDataMove()
+    STRING szReferenceFile;
+ begin
+
+  // TODO : update self-registered files and other processes that
+  //        should be performed after the data has been moved.
+
+  // DeinstallSetReference specifies a file to be checked before
+  // uninstallation. If the file is in use, uninstallation will not proceed.
+
+  szReferenceFile = svDir ^ @PRODUCT_KEY; // TODO : If your file is in a subdir of svDir add that here
+  DeinstallSetReference( szReferenceFile );
+
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupRegistry                                                   //
+//                                                                           //
+//  Purpose: This function makes the registry entries for this setup.        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupRegistry()
+     INT nvType;
+     STRING szStartTTPath;
+begin
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Function: SetupFolders
+//
+//  Purpose: This function creates all the folders and shortcuts for the
+//           setup.  This includes program groups and items for Windows 3.1.
+//
+///////////////////////////////////////////////////////////////////////////////
+function SetupFolders()
+ STRING svPath , svVersionNumber;
+ begin
+
+
+  // TODO : Add all your folder (program group) along with shortcuts (program items)
+  //
+  //
+  //    CreateProgramFolder, AddFolderIcon....
+  //
+
+	WriteProfString(@ToonTalkIni,"FileExtensions","MissingBuiltinPictureFileExtension",@PICTURE_EXTENSION);
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: CleanUpInstall                                                  //
+//                                                                           //
+//  Purpose: This cleans up the setup.  Anything that should                 //
+//           be released or deleted at the end of the setup should           //
+//           be done here.                                                   //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CleanUpInstall()
+ begin
+
+
+  if (bInstallAborted) then
+      return 0;
+  endif;
+
+  DialogShowSdFinishReboot();
+
+  if (BATCH_INSTALL) then // ensure locked files are properly written
+      CommitSharedFiles(0);
+  endif;
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupInstall                                                    //
+//                                                                           //
+//  Purpose: This will setup the installation.  Any general initialization   //
+//           needed for the installation should be performed here.           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupInstall()
+ STRING svResult, svTemp;
+ BOOL bCheckVersions;
+// STRING svTemp2;
+// NUMBER nResult;
+ begin
+
+  Enable( CORECOMPONENTHANDLING );
+
+  bInstallAborted = FALSE;
+
+//  if (bIs32BitSetup) then
+//      svDir = PROGRAMFILES ^ @COMPANY_NAME ^ @PRODUCT_NAME;
+//  else
+//      svDir = PROGRAMFILES ^ @COMPANY_NAME16 ^ @PRODUCT_NAME16; // use shorten names
+//  endif;
+
+//  if (!bIsShellExplorer) then
+//     MessageBox ( "Sorry but the 32-bit version of ToonTalk requires Windows 95 or Windows NT 4.0 or later." , SEVERE );
+//     abort;
+//  endif;
+  if (GetProfString ( @ToonTalkIni , "Directories" , "MainDir" , svDir ) < 0) then
+     MessageBox ( "You must install ToonTalk first. Sorry. See www.toontalk.com." , SEVERE );
+     abort;
+  endif;
+//  GetProfString ( @ToonTalkIni , "Versions" , "Language" , svTemp );
+//  if (StrCompare ( svTemp ,  @LANGUAGE_VERSION ) != 0) then
+//     if (AskYesNo ( @PATCH_DESIGNED_FOR + " " +  @LANGUAGE_VERSION + " " + @PATCH_MIGHT_NOT_WORK, YES) = YES) then
+//        abort;
+//     endif;
+//  endif;
+  bCheckVersions = TRUE;
+//  if (GetProfString ( @ToonTalkIni , "Versions" , @PRODUCT_KIND , svTemp ) < 0) then
+//     if (GetProfString ( @ToonTalkIni , "Versions" , @PRODUCT_KIND2 , svTemp ) < 0) then
+//        if (AskYesNo ( @PATCH_DESIGNED_FOR + " " +  @PRODUCT_KIND_NAME + " " + @PATCH_MIGHT_NOT_WORK, YES) = YES) then
+//           abort;
+//        else
+//           bCheckVersions = FALSE;
+//        endif;
+//     endif;
+//  endif;
+//  if (bCheckVersions && VerCompare ( svTemp + ".0", @PRODUCT_VERSION + ".0", VERSION ) = GREATER_THAN) then
+     // version compare expects 3 .s
+//     if (AskYesNo ( @PATCH_OLD_VERSION, YES) = YES) then
+//        abort;
+//     endif;
+//  endif;
+
+
+//  if (!bIsShellExplorer) then
+//     ComponentSelectItem(MEDIA, "32-bit Program Files", FALSE);
+//  endif;
+
+  TARGETDIR  = svDir;
+
+  SdProductName( @PRODUCT_NAME );
+
+  SdInit();
+
+  Enable( DIALOGCACHE );
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  SetupScreen                                                    //
+//                                                                           //
+//  Purpose:  This function establishes  the screen look.  This includes     //
+//            colors, fonts, and text to be displayed.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupScreen()
+ begin
+
+  Enable( FULLWINDOWMODE );
+  SetTitle( @TITLE_MAIN, 24, WHITE );
+
+  SetTitle( @TITLE_CAPTIONBAR, 0, BACKGROUNDCAPTION ); // Caption bar text.
+
+  Enable( BACKGROUND );
+
+  Delay( 1 );
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  CheckRequirements                                              //
+//                                                                           //
+//  Purpose:  This function checks all minimum requirements for the          //
+//            application being installed.  If any fail, then the user       //
+//            is informed and the setup is terminated.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CheckRequirements()
+    NUMBER  nvDx, nvDy, nvResult;
+    STRING  svResult;
+
+ begin
+
+  bWinNT           = FALSE;
+  bIsShellExplorer = FALSE;
+
+  // Check screen resolution.
+  GetExtents( nvDx, nvDy );
+
+  if (nvDy < 480) then
+      MessageBox( @ERROR_VGARESOLUTION, WARNING );
+      abort;
+  endif;
+
+  // set 'setup' operation mode
+  bIs32BitSetup = TRUE;
+  GetSystemInfo( ISTYPE, nvResult, svResult );
+  if (nvResult = 16) then
+      bIs32BitSetup = FALSE; // running 16-bit setup
+      return 0; // no additional information required
+  endif;
+
+  // --- 32-bit testing after this point ---
+
+  // Determine the target system's operating system.
+  GetSystemInfo( OS, nvResult, svResult );
+
+  if (nvResult =  IS_WINDOWSNT) then
+      // Running Windows NT.
+      bWinNT = TRUE;
+
+      // Check to see if the shell being used is EXPLORER shell.
+      if (GetSystemInfo( OSMAJOR, nvResult, svResult ) = 0) then
+          if (nvResult >= 4) then
+              bIsShellExplorer = TRUE;
+          endif;
+      endif;
+
+  elseif (nvResult = IS_WINDOWS95 ) then
+      bIsShellExplorer = TRUE;
+
+  endif;
+
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdWelcome                                             //
+//                                                                           //
+//  Purpose: This function handles the standard welcome dialog.              //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdWelcome()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+
+  szTitle = "";
+  szMsg   = "";
+  nResult = SdWelcome( szTitle, szMsg );
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdFinishReboot                                        //
+//                                                                           //
+//  Purpose: This function will show the last dialog of the product.         //
+//           It will allow the user to reboot and/or show some readme text.  //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdFinishReboot()
+    NUMBER nResult, nDefOptions;
+    STRING szTitle, szMsg1, szMsg2, szOption1, szOption2;
+    NUMBER bOpt1, bOpt2;
+ begin
+
+//  WriteProfString(@ToonTalkIni, "Versions", @PRODUCT_KIND, @PRODUCT_VERSION);
+
+  if (!BATCH_INSTALL) then
+      bOpt1 = FALSE;
+      bOpt2 = FALSE;
+      szMsg1 = "";
+      szMsg2 = "";
+      szOption1 = "";
+      szOption2 = "";
+      nResult = SdFinish( "", @INSTALLATION_COMPLETE, " ", szOption1, szOption2, bOpt1, bOpt2 );
+      return 0;
+  endif;
+
+  nDefOptions = SYS_BOOTMACHINE;
+  szTitle     = "";
+  szMsg1      = "";
+  szMsg2      = "";
+  nResult     = SdFinishReboot( szTitle, szMsg1, nDefOptions, szMsg2, 0 );
+
+  return nResult;
+ end;
+
+
+#include "c:\tt\install.rul"
+
+// --- include script file section ---
+
+#include "sddialog.rul"
+
+/* old versions:
+function CreateAndRegister(szKey, szName, szValue)
+   NUMBER nvType;
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+     endif;
+     // set's value even if old
+     RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     return 0;
+end;
+
+function CreateAndRegisterIfNew(szKey, szName, szValue)
+   STRING svOldValue;
+   NUMBER nvSize;
+   NUMBER nvType;
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+        // set's value only if new
+        RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     elseif (szKey[0] == '.') then
+       RegDBGetKeyValueEx (szKey, szName, nvType, svOldValue, nvSize);
+       if (StrCompare(szValue,svOldValue) = 0) then
+          return 0;
+       endif;
+       if (StrCompare("ToonTalk",svOldValue) = 0 || StrCompare("StartTT",svOldValue) = 0) then // added StartTT here on 210501
+          // don't need to ask if it is an old ToonTalk binding
+          CreateAndRegister(szKey, szName, szValue);
+          return 0;
+       endif;
+       if (AskYesNo(@TOONTALK_DOUBLE_CLICK1 + " " + szKey +
+                    " " + @TOONTALK_DOUBLE_CLICK2 + " (" + svOldValue + ") " + @TOONTALK_DOUBLE_CLICK3,
+                    YES) = YES) then
+           CreateAndRegister(szKey, szName, szValue);
+       endif;
+     endif;
+   return 0;
+end;
+*/

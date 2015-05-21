@@ -1,0 +1,286 @@
+
+
+ IDS_THE_ROBOTS, // as in "you can drop what is in the robot's hand by ..."
+  "the robot's"
+ IDS_YOUR,  // currently only used together with hand as in
+            // "If you press F2 Dusty will run to your hand."
+  "your"  
+//are replaced (as your good suggestion) by
+ IDS_THE_ROBOTS_HAND, // as in "you can drop what is in the robot's hand by ..."
+  "the robot's hand"
+ IDS_YOUR_HAND, // "If you press F2 Dusty will run to your hand."
+  "your hand"  
+
+
+//And the word "hand was removed from:
+ IDS_CUBBY_CONTENTS_REMOVED_HELP2,
+  " or with Dusty. " // "hand" removed
+ IDS_EXPANDER_CALLED_HELP2,
+  " just call him by pressing the F3 button. " // hand removed
+ IDS_VACUUM_CALLED_HELP2,
+  " just push the F2 button. " // hand removed
+ IDS_COPIER_CALLED_HELP2,
+  " just call it by pressing the F5 button. "  // hand removed
+
+IDS_NEST_HELP_GIVEN_HELP,  // this is now said after the following
+ "I've said all I know about nests. "
+
+
+//All of the phrases from IDS_MOVE_TO to IDS_APPLY_GRASPED_NEST
+//are used to describe what the robot will do if given a box.
+//E.g.
+ IDS_MOVE_TO, // as in "If given a box like that he will move to the stack of text."
+  "move to"
+ IDS_SELECT_VACUUM, // as in "He will grab a copy of Dusty."
+  "grab a copy of Dusty"
+ IDS_APPLY_VACUUM,
+  "use Dusty to vacuum" // as in "The robot will use Dusty to vacuum the box."
+ IDS_APPLY_VACUUM_RESTORE,
+  "run Dusty in reverse to restore" // as in "He will run Dusty in reverse to restore the number."
+
+ IDS_INTS_MADE_NEGATIVE_HELP,
+  "Você pode mudar o " // --- This sentence gets a little bit weird when the user is pointing to the number 0. She will have something like: "You can change 0 to 0 pressing - ..."
+// Thanks for pointing this out. Fixed now.
+
+ IDS_VACUUM_HELP_GIVEN_HELP2, // this is now said earlier
+  "Eu às vezes uso ele para mover objetos entre casas. " // --- This sentence is in a strange place. It is showing up after the 'this is all I had to tell you about Dusty'...
+
+ IDS_VISIBLE_REMOTE_STATE2,
+        "VER PARTE" // ---
+ IDS_VISIBLE_REMOTE_STATE3,
+        "NÃO VER" // ---
+// did you mean to remove the // --- on these?
+
+IDS_VACUUM_TO_BLANK_HELP, // was mispelt as VACCUM
+ "You can use Dusty, the vacuum, to make a blank box. "
+// Thanks for catching this one
+
+IDS_TO_LABEL_OF,
+  // As in "He will add 'c' to the label of the box."
+  // NOTE -- currenly only boxes have labels.  If this is used for
+  // other things then in some languages it is gender dependent
+ " to the label of"
+// Leo, if the need arises I'll probably follow your suggestion but
+// for now this warning should be enough
+
+
+The problems you mentioned regarding
+
+IDS_NEW
+IDS_FIRST_NEW
+IDS_NEWEST
+IDS_TO_LAST
+
+are resolved by removing them.  (They are still used in the
+English version.)  This means that when Marty is describing
+what a robot does he may say less natural things such as "the
+fourth thing made or found" rather than "the new number" if
+the system knows that it is a number and it is new.  I think
+this is low priority so for now it'll fall back on the more
+generic descriptions.
+
+IDS_WHATS_ON,
+ // as in "The robot picks up what's on the third page of the notebook."
+ // NOTE:  This currently is only used as part of something that
+ // refers to a page of a notebook.  If ever used for more may
+ // have different translation
+ "what's on"
+IDS_WHATS_IN,
+ // as in "The robot picks up what's in the second hole of the box."
+ // NOTE:  This currently is only used as part of something that
+ // refers to a hole of a box.  If ever used for more may
+ // have different translation
+ "what's in"
+
+
+// added the following
+
+IDS_BLANK_PICTURE_OF_DEFINITE, // added 12/20
+ "the blank picture of"
+IDS_BLANK_PICTURE_OF_PLURAL, // added 12/20
+ "blank pictures of"
+IDS_BLANK_PICTURE_OF, // revised on 12/20 (replaces the old IDS_BLANK_PICTURE)
+ "a blank picture of"
+
+IDS_OF
+ "of" // --- 'of the notebook' would become 'do', 'of a ball' would be 'da', and 'of Dusty' would be 'do'
+
+// I eliminated 
+IDS_OF
+
+IDS_NO_NAME_IS_YOUR_NAME,
+ "Eu não peguei o seu nome. Dessa forma, agora eu vou chamar você de SemNome e salvar tudo o que você fizer sob este este nome. " // --- I substituted NoName by SemNome. Please replace this wherever it is used.
+
+I added this to the RUL file.
+
+#define STR_NO_NAME "SemNome"
+
+IDS_THIS_TEXT_PAD,
+ "This text pad is"  // as in  "This text pad is a remote control."
+IDS_THIS_IS,
+ "This is"  // as in "This is a remote sensor."
+
+// these 3 are only used if a Hyperbot robotic controller is connected to the serial port
+IDS_OUTLET,
+ "Outlet" // ---
+IDS_INLET,
+ "Inlet" // ---
+IDS_COUNT,
+ "count" // ---
+
+IDS_REMOTE_APPEARANCE_CONTROL,
+// This kind of remote control shows the appearance of a picture
+// It can be changed and the picture changes.
+ "a remote control for another's looks"
+
+IDS_ARE,
+ // only used in "And on the back are 5 things."
+
+IDS_CANT_FLIP_REMOTES,
+ // see IDS_REMOTE_APPEARANCE_CONTROL above
+ "you can't flip over a remote control for another's looks" // -----
+
+IDS_ROBOT_LOST_TRACK,
+ // as in "A robot on the floor stopped because he lost track of stuff"
+ // this shouldn't really ever happen except if the programmer
+ // takes things away from a working robot
+ "a robot lost track of stuff"
+
+Removed
+IDS_UP
+
+and changed
+IDS_PICK_UP_HELP,
+ "You can pick up" // added "up" on 12/20
+
+removed:
+IDS_HIM_AS_NON_WAND_TOOL
+IDS_IF_YOU_PICK_HIM
+IDS_THEN
+IDS_AS_BEFORE
+
+IDS_WHAT_IS_ON_TOP_OF,
+  // as in "He will then pick up what is on top of the nest."
+  "what is on top of"
+
+// These should be translated since they will be seen by the user
+// when they paste things from the clipboard into a text program.
+// The system searches for IDS_UUENCODING_START_TOKEN so all
+// of this are considered comments when loaded into ToonTalk.
+IDS_UUENCODING_HEADER,
+  "   This is the result of \"pasting\" a ToonTalk object. You can include"
+
+IDS_BETA_TO_EXPIRE_SOON,
+  "Já é hora de obter uma nova versão do ToonTalk. Estaversão beta deixará de funcionar dia primeiro de fevereiro." // --- Is February 1st still valid?
+
+// It is now March 1.  It is usually 6 to 10 weeks away.
+
+IDS_WHICH_ORIGINALLY_WAS,
+  // as in "You are hold a blank number pad that originally was 42."
+  "which originally was"
+
+IDS_IF_YOU_PICK_UP_AND_PRESS,
+ // as in "You are pointing to a remote control.  
+ // If you pick it up and press a mouse button while holding down shift
+ // or just the space button it'll switch to the previous value."
+ "If you pick it up and press"
+
+IDS_JUST_THE_SPACE_BUTTON,
+ "or just the space button" // add "or" on 12/20
+IDS_OR_JUST, // combined IDS_OR and IDS_JUST on 12/20
+ // as in  "Or just press '-' to switch to the previous value."
+ "or just"
+
+IDS_IN,
+ // used only when describing robots that either give things
+ // to birds that are in boxes or put things in boxes that
+ // are in trucks.
+ // "He will give it to the bird in the first hole of the box." or
+ // "He will drop it on the box in the truck."
+ "in"
+
+IDS_CANT_ADD_TO_SIDE_OF_BLANK_BOX,
+ // as in "A robot stopped because nothing will stick to the side of a blank box.
+ "nothing will stick to the side of a blank box"
+
+IDS_VK_LEFT,
+ "Seta para a esquerda" // ---
+// How are these labeled on keyboards there?
+
+//
+
+removed: 
+IDS_WHICH_IS_HELD_BY
+IDS_HIM
+IDS_HER
+
+
+ IDS_STACK_OF, // revised 12/21
+  "a stack of "
+ IDS_STACK_OF_DEFINITE, // added 12/21
+  "the stack of "
+ IDS_STACK_OF_PLURAL, // added 12/21
+  "stacks of "
+ IDS_STACK_OF_PRONOUN, // added 12/21
+  "it"
+
+IDS_PICT_OF_PRONOUN, // added 12/21
+ "it"
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+ "it"
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+ "it"
+
+IDS_WHICH_HAS_ENOUGH_MAGIC,
+ // Together with the following words is used in
+ // "You are holding a magic wand which has enough magic for 4 uses."
+ "which has enough magic for"
+IDS_USE,
+  "use"
+IDS_USES,
+  "uses"
+
+IDS_SOMETHING_IS_MISSING,
+ // as in  "Something is missing from the box."
+ "Something is missing from"
+
+IDS_EXPANDER_KEY_COMMANDS,
+ // this (and the IDS_COPIER_KEY_COMMANDS and IDS_VACUUM_KEY_COMMANDS)
+ // should be as easy to remember as possible and must be unique
+ // IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2 documents this
+ "BTWLSNG"
+
+IDS_BUTTON_HELP_GIVEN_HELP4,
+  // as in "I'll tell you more about magic wands if you pick it up."
+"if you pick it up."
+IDS_BUTTON_HELP_GIVEN_HELP5,
+  // as in "I'll tell you more about bike pumps if you pick him up."
+"if you pick him up."
+
+IDS_JANUARY,
+"Janeiro" // --- In Brazil, month names begin with low letters. The only exception occurs when they are in the beginning of a sentence
+
+These should be lower case then.
+By the way, the default way ToonTalk prints dates is
+<day> <month>, <year>  (exception made for USA)
+is this ok?
+
+IDS_NEED_ALL_7_DAYS,
+"Sorry, but we need all 7 days on the nest, not just"
+ // as in "Sorry, but we need all 7 days on the nest, not just 5."
+IDS_NEED_NUMBERS_UNDERNEATH,
+ // as in "Sorry, but we need at least 5 numbers on the nest, not just 3." 
+"Sorry, but we need at least 5 numbers on the nest, not just" 
+
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"My sensors aren't showing a new house built by the crew in the truck. Sorry. " // ---
+// This is response to one of the later puzzles.  Needed a way for Marty
+// to reject a solution even though this one depends upon something
+// he can't see directly...
+
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyz"
+
+This should be all of the letters of the alphabet in the standard order.

@@ -1,0 +1,479 @@
+<html>
+<head>
+<title>ToonTalk - Nos bastidores do jogo de quebra-cabeça</title>
+<link rel="stylesheet" type="text/css" href="../toontalk.css">
+</head>
+
+<body link="#0000ff" vlink="#800080" bgcolor="#ffffff">
+
+<div align="center">
+<a name="topo"></a>
+<table width=468 cellspacing=0 cellpadding=0 border=0><tr><td>
+
+<p>
+<table width=460 cellspacing=0 cellpadding=0 border=0><tr><td>
+<div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a>
+<hr size=1>
+    </td></tr>
+</table>
+
+<h2>Nos bastidores do jogo de quebra-cabeça</h2>
+
+<p>A seguir daremos uma olhada nos bastidores do jogo de quebra-cabeça no Toon Talk. Você está imaginando como está aprendendo programação de computadores enquanto se diverte? Dê uma olhada nas explicações de cada quebra-cabeça e você se surpreenderá de quanto você aprendeu ou pode aprender enquanto está jogando Toon Talk.
+
+<p class=center><br><b><i>Nível 1- Números (geralmente potências de 2)</i></b>
+
+<p><b>Quebra-cabeça n&deg;1 - Márcio precisa de uma caixa com um 1 e um 2 dentro.</b>  Isto introduz as caixas do Toon Talk que servem para guardar coisas. Os cientistas da computação as chamam <i>estruturas de dados</i>. As caixas quase se parecem com o que eles chamam <i>bancos de dados</i>, <i>vetores</i> e <i>"tuples"</i>.
+Os números são um exemplo do que os cientistas de computação chamam <i>tipos de dados atômicos</i>. Para resolver esse quebra-cabeça você precisa descobrir como colocar coisas em caixas (ou seja, como <i>inicializar elementos de um vetor</i>).
+
+<p><b>Quebra-cabeça n&deg;2 - Márcio precisa de um 4.</b> Este quebra-cabeça introduz Bambam, o ratinho, que faz cálculos aritméticos e outras operações básicas. Através da solução desse quebra-cabeça você descobrirá como expressar a adição de dois números.
+
+<p><b>Quebra-cabeça n&deg;3 - Márcio precisa de uma caixa  com um 8, um 16 e um 32 dentro.</b>  Este introduz um modo de combinar caixas para fazer caixas maiores. Ele também ilustra como expressar a adição de um número que está em uma caixa. Na terminologia da ciência da computação você aprende como<i>concatenar vetores</i> e como <i>operar um elemento de uma estrutura de dados</i>.
+
+<p><b>Quebra-cabeça n&deg;4 - Márcio precisa de um número maior que 1.000.</b> Este quebra-cabeça introduz a Varinha Mágica do Toon Talk, que é usada para copiar os objetos do Toon Talk. Como todas as ferramentas do Toon Talk, a varinha pode ser utilizada como parte de um programa e como uma ferramenta no interior do ambiente de programação. Este quebra-cabeça é matematicamente interessante j&aacute; que se baseia em repetidas multiplicações para crescer de 1 até 1.024 em apenas 10 passos. Ele é, intencionalmente, um pouco tedioso, para proporcionar a motivação para automatizar tarefas como essa última.
+
+<p><b>Quebra-cabeça n&deg;5 - Márcio precisa de um zero.</b>  Este quebra-cabeça introduz Asper, o aspirador. Asper é uma ferramenta utilizada para remover coisas. O zero está enterrado sob coisas que apenas Asper pode remover.
+
+<p><b>Quebra-cabeça n&deg;6 -  Márcio precisa de - 1.</b> Para resolver  esse quebra-cabeça o jogador precisa adivinhar (ou receber pistas de M&aacute;rcio) que o botão no nariz de Asper pode ser alterado pressionando-o. Esta utilização dos botões para alterar o comportamento das ferramentas é utilizada por toda parte no Toon Talk. Um jogador observador pode perceber que esta utilização de Asper para sugar coisas e depois cuspi-las corresponde bastante a <i>recortar e colar</i> em muitas interfaces baseadas em janelas (windows). 
+
+<p><b>Quebra-cabeça n&deg;7 - Márcio precisa de um grupo de números em branco.</b> Este quebra-cabeça introduz grupos de números em branco que são usados em quebra-cabeças posteriores. Um grupo de números em branco é uma forma de expressar o <i>tipo de uma estrutura de dados</i>. Neste caso, ele indica alguns dados cujo <i>tipo</i> é o <i>número</i>.
+
+<p><b>Quebra-cabeça n&deg;8 - Márcio precisa de uma caixa com dois zeros.</b>  Treinando o robô neste quebra-cabeça, você estará construindo seu primeiro programa. O programa construído é equivalente a um programa de texto como este:
+
+<p>while (sizeOf(box) = 1 and box[0] = 1) do
+
+<blockquote>
+  <p>box := concat(box, copy(box));
+</blockquote>
+
+<p>endwhile;
+
+<p>O motivo que permite que mesmo crianças pequenas possam construir esse programa sem ajuda é que o quebra-cabeça restringe o universo de forma que a busca que o jogador precisa fazer para encontrar a solução não é muito grande. Aqui a memória do robô é limitada para lembrar apenas dois passos, e o robô já tem a Varinha Mágica.
+
+<p><b>Quebra-cabeça n&deg;9 - Márcio precisa de um número maior que um bilhão.</b> A solução deste quebra-cabeça se baseia na experiência  da solução dos problemas 4, 7 e 8. Para resolver este quebra-cabeça você precisa treinar um robô para fazer o que você fez manualmente no quebra-cabeça n&deg;4. Durante o quebra-cabeça n&deg;4 você teve de repetir uma seqüência de ações dez vezes. Aqui você simplesmente treina o robô para realizar uma seqüência e ele irá fazê-la pelas 30 vezes necessárias. De forma a conseguir que o robô trabalhe repetidamente, você precisa aprender a como tornar o robô menos preocupado acerca do tipo de caixa em que irá trabalhar. No jargão da ciência da computação isto se chama <i>relaxamento do predicado da condicional</i>. O programa de texto equivalente ao robô treinado nesse quebra-cabeça é:
+
+<p>repeat 30
+
+<blockquote>
+  <p>if (sizeOf(box) = 1 and isNumber(box[0])) then 
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p>Box[0] := box[0] + copy(box[0]);
+  </blockquote>
+  <p>endif;
+</blockquote>
+
+<p><b>Quebra-cabeça n&deg;10 - Márcio precisa de uma caixa dentro da caixa.</b> Para resolver esse quebra-cabeça, você precisa colocar uma caixa dentro de uma caixa dentro de uma caixa. Isto é o que os cientistas da computação chamam de uma <i>estrutura de dados recursiva, desde que os elementos da estrutura podem ser do mesmo tipo que toda a estrutura.</i> Se você colocar uma das caixas no buraco errado, então Márcio o informará que os elementos precisam estar no lugar correto. Isto porque a caixa é <i>uma coleção indexada ordenada.</i>
+
+
+<p><b>Quebra-cabeça n&deg;11 - Márcio precisa de uma caixa com 3 zeros.</b> Como o quebra-cabeça n&deg;2, você precisa conectar <i>(concatenar)</i> duas caixas <i>(vetores)</i>. Aqui você descobrirá que as caixas não podem ser conectadas quando elas são parte de outra caixa. Você descobre que as caixas podem ser removidas, conectadas, e então colocadas de volta. Uma solução corresponde ao fragmento de código:
+
+<p>temp1 := box[0];
+
+<p>temp2 := box[1];
+
+<p>temp1 := concat(temp1,temp2);
+
+<p>box[1] := temp1;
+
+<p><b>Quebra-cabeça n&deg;12 - Márcio precisa de uma caixa com 6 zeros.</b> Este quebra-cabeça se assemelha ao n&deg;11. A operação de conectar as caixas é repetida tr&ecirc;s vezes. Isto serve para prepará-lo para o próximo quebra-cabeça no qual um robô precisa ser treinado para repetidamente conectar caixas.
+
+<p><b>Quebra-cabeça n&deg;13 - Márcio precisa de uma caixa com 10 zeros.</b> Na solução deste quebra-cabeça, você treinará um robô para aumentar repetidamente uma caixa. Isto introduz uma técnica de programação habitualmente usada quando se incrementa a criação de uma estrutura de dados. O robô treinado corresponde ao programa de texto:
+
+<p>repeat 4
+
+<blockquote>
+  <p>if (sizeOf(box) = 2 and sizeOf(box[0]) = 1 and
+  box[0][0] = 0) then
+  <blockquote>
+    <p>temp1 := copy(box[0]);
+    <p>temp1 := concat(temp1,box[1]);
+    <p>box[1] := temp;
+  </blockquote>
+  <p>endif;
+</blockquote>
+
+<p>O robô neste quebra-cabeça pode se lembrar de até 20 passos,   mas o quebra-cabeça pode ser resolvido com apenas quatro.
+
+<p><b>Quebra-cabeça n&deg;14 - Márcio precisa de uma caixa contendo 1, 2, 4, 8, 16 e 32.</b>  A resolução desse quebra-cabeça envolve o aumento repetido de uma caixa com números que são o dobro do número anterior.
+
+<p><b>Quebra-cabeça n&deg;15 - Márcio precisa de uma caixa contendo 1, 2, 4, 8, 16 e assim por diante até atingir 1.073.741.824.</b> A solução desse problema se baseia nos quebra-cabeças n&deg;9, n&deg;13 e n&deg;14. Ele é um bom exemplo de como alguém freqüentemente precisa combinar diferentes técnicas de programação para atingir um objetivo. Aqui está o equivalente programa de texto:
+
+<p>repeat 30
+
+<blockquote>
+  <p>if (sizeOf(box) = 2 and sizeOf(box[0]) = 1 and
+  isNumber(box[0][0])) then
+  <blockquote>
+    <p>box[0][0] := box[0][0] + copy(box[0][0]);
+    <p>temp1 := copy(box[0]);
+    <p>temp2 := box[1];
+    <p>temp2 := concat(temp2,temp1);
+    <p>box[1] := temp2;
+  </blockquote>
+  <p>endif;
+</blockquote>
+
+<p><b>Quebra-cabeça n&deg;16 - Márcio precisa do ano em que você nasceu.</b>  As potências de 2 são o conjunto básico dos inteiros positivos. Em outras palavras, qualquer número inteiro pode ser expresso como a soma de números que são potência de 2 e nenhum número na soma ocorre mais de uma vez. Daí a ausência da Varinha Mágica neste quebra-cabeça.
+
+<p><b>Quebra-cabeça n&deg;17 - Márcio precisa do ano em que você nasceu em binário.</b> Você precisa fazer exatamente a mesma coisa que ele ou ela fizeram quando resolveram o quebra-cabeça n&deg;17. Este pode ser na verdade um quebra-cabeça muito mais fácil que o n&deg;16. O truque é perceber que sempre que precisar de um 1, encontre o número com o 1 naquela posição.
+
+<p><b>Quebra-cabeças n&deg;18, n&deg;19 e n&deg;20</b> -
+Intencionalmente deixados em branco.
+
+<p class=center><br><b><i>Nível 2 - Letras e Palavras</i></b>
+
+<p><b>Quebra-cabeça n&deg;21 - Márcio precisa de uma caixa com A, B e C.</b> Este quebra-cabeça introduz grupos de texto (<i>um novo tipo de dados</i>). Ao solucioná-lo, você irá descobrir o que faz a operação de adição quando aplicada às letras
+
+<p><b>Quebra-cabeça n&deg;22 - Márcio precisa de uma caixa com A, B, C, D, E e F.</b> este quebra-cabeça é similar ao quebra-cabeça n&deg;14, mas a mesma técnica é aplicada agora às letras, ao invés de números.
+
+<p><b>Quebra-cabeça n&deg;23 - Márcio precisa de uma caixa com A, B, C, e assim por diante até Z.</b> Este quebra-cabeça se baseia nos quebra-cabeças n&deg;15 e n&deg;22. Como no n&deg;15, você precisa treinar um robô para dar um passo, de tal forma que quando ele o tiver feito estará pronto para dar o próximo passo. O programa de texto equivalente é:
+
+<p>repeat 20 
+
+<blockquote>
+  <p>if (sizeOf(box) = 3 and box[0] = 1 and
+  sizeOf(box[1]) = 1 and isText(box[1][0])) then
+  <blockquote>
+    <p>temp1 := copy(box[1]);
+    <p>box[1][0] := box[1][0] + copy(box[0]);
+    <p>temp2 := box[2];
+    <p>temp2 := concat(temp2,temp1);
+    <p>box[2] := temp2;
+  </blockquote>
+  <p>endif;
+</blockquote>
+
+<p><b>Quebra-cabeça n&deg;24 - Márcio precisa de uma caixa com a, b, c, e assim por diante até z.</b> Este quebra-cabeça é trivial porque o robô que foi treinado no quebra-cabeça anterior pode criar a caixa que aqui é necessária. Tudo o que o robô necessita é receber uma caixa diferente para começar. Um robô é o que é chamado pelos cientistas da computação de <i>uma procedura</i> . E <i>esta procedura</i> tem um <i>argumento</i> - a caixa que é dada para o robô. Um aspecto muito importante de uma procedura é que ela pode ser reutilizada pela <i>transmissão</i> de diferentes <i>argumentos</i>.
+
+<p><b>Quebra-cabeça n&deg;25 - Márcio precisa de uma caixa com um alfabeto que é pequeno o bastante para que seja visto todo de uma só vez.</b> Este quebra-cabeça introduz uma nova ferramenta &#150; Soprana, a bomba de bicicleta. Soprana muda o tamanho das coisas. Isto é útil em "Free Play" ( Jogo Livre) para gerenciar o estado real da tela. É também um meio simples e direto de alterar o tamanho das ilustrações.
+
+<p><b>Quebra-cabeça n&deg;26 - Márcio precisa de uma caixa com um ponto final, ponto de interrogação e vírgula.</b> Este quebra-cabeça ilustra que os grupos de texto não são limitados às letras do alfabeto, mas também incluem a pontuação. As letras, pontuação e símbolos especiais ( como o $) são chamados de <i>caracteres</i> na maioria das linguagens de programação. Este quebra-cabeça também ilustra dramaticamente que o tamanho dos objetos no Toon Talk não influencia em como eles se comportam ( <i>sua semântica</i>).
+
+<p><b>Quebra-cabeça n&deg;27 - Márcio precisa que a caixa com a pontuação seja grande o bastante para que veja seu conteúdo.</b> Este quebra-cabeça introduz uma <i>tecla de atalho</i> &#150; neste caso, um meio de criar um som para chamar Pumpy para saltar em sua mão. As teclas de atalho são comuns em muitas espécies diferentes de interfaces do usuário.
+
+<p><b>Quebra-cabeça n&deg;28 - Márcio precisa da palavra "Start" (Início).</b> Este quebra-cabeça apresenta o que os cientistas da computação denominam <i>strings</i> &#150; ou seja, <i>seqüências de caracteres</i>. Para resolver esse quebra-cabeça você precisa descobrir que as letras e "strings" podem ser concatenados para formar "strings" (seqüências) maiores.
+
+<p><b>Quebra-cabeças n&deg;29 e n&deg;30</b> - Intencionalmente deixados em branco.
+
+<p class=center><br><b><i>Nível 3 - Matemática do Tempo</i></b>
+
+<p><b>Quebra-cabeça n&deg;31 - Márcio precisa de uma caixa com o seu aniversário.</b> Para resolver este quebra-cabeça, você precisa descobrir que o teclado pode ser utilizado para alterar o valor de "strings" e números. Isto é uma espécie de <i>manipulação direta de dados</i>.
+
+<p><b>Quebra-cabeça n&deg;32 - Márcio quer saber o número de minutos de um dia.</b> Este quebra-cabeça ilustra que a adição repetida é multiplicação. O programa de texto equivalente é :
+
+<p>repeat 24
+
+<blockquote>
+  <p>if (sizeOf(box) = 2 and isNumber(box[0]) and
+  isNumber(box[1])) then
+  <blockquote>
+    <p>box[1] := box[1] + copy(box[0]);
+  </blockquote>
+  <p>endif;
+</blockquote>
+
+<p><b>Quebra-cabeça n&deg;33 - Márcio quer saber o número de segundos em uma hora.</b> O robô do quebra-cabeça n&deg;32 é reutilizado aqui, pois a única diferença é quantas vezes as instruções devem ser repetidas.
+
+<p><b>Quebra-cabeça n&deg;34 - Márcio  precisa de uma caixa que exiba um conjunto de escalas que mostre que dois números são o mesmo.</b> Este quebra-cabeça introduz escalas que são um meio de expressar <i>comparações numéricas</i>. Ele também introduz o uso de números negativos para a subtração.
+
+<p><b>Quebra-cabeça n&deg;35 - Márcio precisa de outra caixa com uma escala mostrando que dois números são o mesmo.</b> Este quebra-cabeça difere do anterior, porque agora um robô está fazendo o trabalho. O que é importante notar aqui é que o robô pára quando a escala não é mais graduada à esquerda. Este exemplo mostra como utilizar um predicado de comparação em uma condicional. Desde que o robô possui uma varinha com mágica ilimitada, ele pára apenas quando a caixa não mais se identifica com a caixa em seu balão de pensamento. Isso é o que os cientistas da computação chamam de um <i>"while loop"</i>. O equivalente de texto é:
+
+<p>while (sizeof(box) = 4 and box[1] = '&gt;' and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3])) then
+
+<blockquote>
+  <p>box[2] := box[2] + copy(box[3]);
+</blockquote>
+
+<p>endwhile;
+
+<p>The expression &quot;box[1]
+= '&gt;' &quot; is unusual. In this case it is equivalent
+to the more common &quot;box[0] &gt; box[2]&quot;, since the scale is always displaying the relationship between
+its neighboring data.
+
+<p><b>Quebra-cabeça n&deg;36 - Márcio precisa de uma caixa com 24 zeros.</b> Este quebra-cabeça combina o n&deg;13 e o n&deg;35. Ele mostra como utilizar um <i>"while loop"</i> com uma <i>expressão em linguagem de computação</i>. Esta é uma técnica importante para repetir alguma coisa um número de vezes quando você não sabe quantas vezes será necessário repeti-la até que o programa rode.
+
+<p>Os cientistas da computação analisam programas para encontrar constantes. Existem relações que se mant&ecirc;m depois de cada ciclo. Aqui é uma constante que o primeiro buraco da caixa é um número que é o tamanho (isto é, o número de buracos) da caixa no sexto buraco.  O equivalente de texto do robô é :
+
+<p>while (sizeof(box) = 6 and box[1] = '&lt;' and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3])) do
+
+<blockquote>
+  <p>temp1 := copy(box[4]);
+  <p>temp2 := box[5];
+  <p>temp2 := concat(temp2,temp1);
+  <p>box[5] := temp2;
+  <p>box[0] := box[0] + copy(box[3]);
+</blockquote>
+
+<p>endwhile;
+
+<p>ou equivalentemente:
+
+<p>if (sizeof(box) = 6 and box[1] = '&lt;' and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3])) then
+
+<blockquote>
+  <p>for (; box[0] &lt; box[2]; box[0] := box[0] +
+  copy(box[3])) do
+  <blockquote>
+    <p>temp1 := copy(box[4]);
+    <p>temp2 := box[5];
+    <p>temp2 := concat(temp2,temp1);
+    <p>box[5] := temp2;
+  </blockquote>
+  <p>endfor;
+</blockquote>
+
+<p>endif;
+
+<p><b>Quebra-cabeça n&deg;37 - Márcio quer saber quantas horas existem em um ano.</b> Este é similar ao quebra-cabeça n&deg;32, exceto que agora você está treinando um robô geralmente mais útil. Isto é porque o robô computa o produto dos dois primeiros números e o mantém no sexto buraco. A constante neste programa é que o número no sexto buraco é o produto dos números no primeiro e quarto buracos. O robô pára quando os números no segundo e no quarto buraco são os mesmos. O equivalente de texto disso é:
+
+<p>while (sizeof(box) = 6 and box[1] &gt; box[3] and
+isNumber(box[0]) and isNumber(box[1]) and isNumber(box[3]) and isNumber(box[4]) and
+isNumber(box[5])) do
+
+<blockquote>
+  <p>box[5] := box[5] + copy(box[0]);
+  <p>box[3] := box[3] + copy(box[4]);
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;38 - Márcio quer saber quantos segundos há em um dia.</b> Para resolver esse quebra-cabeça, você utiliza o robô treinado no quebra-cabeça anterior para multiplicar 60 vezes 24, resultando em 1.440. O jogador então utiliza o robô novamente para multiplicar 60 vezes 1.440. Isto pode ser feito colocando o 60 tanto no primeiro como no segundo buraco e o 1.440 no outro. O robô irá computar o produto corretamente em qualquer um dos casos, mas ele será muito mais rápido se o 1.440 estiver no primeiro buraco. Isto acontece porque o robô multiplica através da adição repetida do primeiro número. A quantidade de trabalho que o robô precisa fazer é proporcional ao número no segundo buraco. Em terminologia da ciência da computação, nós dizemos que a <i>complexidade do programa é linear com o segundo argumento</i>.
+
+<p><b>Quebra-cabeça n&deg;39 - Márcio quer saber quantos segundos há em um ano.</b> Como no quebra-cabeça anterior, este utiliza repetidamente o robô treinado no quebra-cabeça n&deg;37 para computar 365x24x60x60.
+
+<p><b>Quebra-cabeça n&deg;40</b> - Intencionalmente deixado em branco.
+
+<p class=center><br><b><i>Nível 4 - Computando o Tempo</i></b>
+
+<p><b>Quebra-cabeça n&deg;41 - Márcio precisa dos dias da semana.</b>  Este quebra-cabeça introduz os pássaros e seus ninhos. Para um cientista da computação um pássaro e seu ninho é um <i>canal de comunicação</i>. Um pássaro é o <i>direito ou capacidade para enviar mensagens em um canal</i> e seu <i>ninho o direito de receber mensagens naquele canal</i>. Este exemplo também ilustra que as mensagens no Toon Talk são <i>enfileiradas de um modo primeira a chegar, primeira a sair</i>.
+
+<p><b>Quebra-cabeça n&deg;42 - Márcio  precisa de uma caixa com um ninho com inteiros começando de 2.</b> O robô treinado para resolver este quebra-cabeça é o que os cientistas da computação chamam um <i>gerador</i>. Aqui o robô gera um <i>fluxo de inteiros</i>. Este gerador é um <i>gerador infinito</i>, desde que ele não pára. O equivalente de texto desse robô é :
+
+<p>while (sizeOf(box) = 3 and isNumber(box[0]) and
+isNumber(box[1]) and isSendCapability(box[2])) do
+
+<blockquote>
+  <p>transmit(box[2],copy(box[0])); <em>// transmit a
+  copy of box[0] on the channel of box[2]</em>
+  <p>box[0] := box[0]+copy(box[1]);
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;43 - Márcio precisa da soma dos números no ninho.</b>  Aqui você treina um robô para ser um <i>consumidor</i>. Muitos <i>programas orientados para fluxos</i> envolvem <i>consumidores</i> e <i>geradores</i>.
+
+<p>while (sizeOf(box) = 2 and isNumber(peek(box[0]))
+and isNumber(box[1])) do
+
+<blockquote>
+  <p><em>// we &quot;peek&quot; at the communication
+  channel in box[0] to see if a number is there</em>
+  <p>box[1] := box[1] + receive(box[0]); 
+  <p><em>// &quot;receive&quot; removes the top element
+  in the queue and returns it</em>
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;44 - Márcio precisa de uma caixa com tr&ecirc;s números que não se alteram.</b> Aqui, você é apresentado aos sensores. Um sensor é atualizado a cada ciclo, e portanto exibe o valor mais recente daquilo que está aferindo. O que um sensor está aferindo pretende-se que seja um mistério até o quebra-cabeça n&deg;48. Este quebra-cabeça ensina a técnica de programação do Toon Talk de "congelar um sensor", descendo-o a zero.
+
+<p><b>Quebra-cabeça n&deg;45 - Maty precisa de uma caixa com um ninho cheio de números que não se alteram.</b>  Este quebra-cabeça combina os quebra-cabeças n&deg;42 e n&deg;44 para produzir um <i>fluxo de valores de sensor</i>. O equivalente de texto é:
+
+<p>while (sizeOf(box) = 3 and isNumber(box[0]) and
+isSendCapability(box[1]) and box[2] = 0) do
+
+<blockquote>
+  <p>temp1 := copy(box[2]);
+  <p>temp1 := temp1 + copy(box[0]);
+  <p>transmit(box[1],temp1);
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;46 - Márcio quer saber a soma dos números no ninho.</b>  O robô treinado no quebra-cabeça n&deg;43 trabalhará bem com este fluxo de números.
+
+<p><b>Quebra-cabeça n&deg;47 - Márcio quer o número que resulta da espera por 8 segundos.</b> Here you run the robot from puzzle #43 and the
+robot from puzzle #45 <i>in parallel</i>, in other words, at the same time.
+
+<p>Para resolver este quebra-cabeça, você precisa gerar um novo processo carregando o caminhão com um robô e uma caixa. Este é o método favorito de rodar programas em paralelo &#150; fazendo-o em uma única casa é mais difícil de controlar e se confunde rapidamente. Aqui você aprende que o sensor mede o número de milissegundos  desde o último ciclo do Toon Talk. Portanto a soma dos números mede quanto tempo passou. Se você deixou por exatamente 8 segundos no quebra-cabeça n&deg;47, o número seria 8.000. Aqui, se você esperou por exatamente 14 segundos o número seria 14.000. A razão pela qual você deve estar fora do ângulo de visão é que os pássaros baixam vagarosamente para seu benefício, portanto você pode observá-los. Os pássaros lentos interferem aqui com a medição do tempo precisamente.
+
+<p><b>Quebra-cabeça n&deg;49 - Márcio quer que você se livre da outra casa.</b> Para resolver este quebra-cabeça você precisa descobrir como <i>terminar um processo</i>.
+
+<p><b>Quebra-cabeça n&deg;50 - Márcio quer o resultado depois de esperar 10 segundos.</b> Desta vez você precisa treinar um único robô para fazer o que os robôs nos quebra-cabeças n&deg;47 e n&deg;48 fizeram.Os programadores freqüentemente fazem um programa especial que faz o mesmo que uma combinação de dois programas gerais. Eles o fazem pois o computadores necessitam dar menos passos para rodar o programa especial. Aqui os processos gerador e consumidor podem ser combinados em um processo mais rápido e muito mais simples. O equivalente de texto é:
+
+<p>while (sizeOf(box) = 2 and isNumber(box[1]) and
+isNumber(box[2])) do
+
+<blockquote>
+  <p>box[1] := box[1] + copy(box[0]);
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;51 - Márcio precisa da caixa depois de três segundos que o cronômetro foi desligado.</b> Este quebra-cabeça combina os quebra-cabeças n&deg;35 e n&deg;50 para medir o tempo até que alguma comparação não seja mais verdadeira. Aqui está a forma de texto:
+
+<p>while (sizeOf(box) = 6 and isNumber(box[0]) and
+isNumber(box[1]) and isNumber(box[3])and box[1] &lt; box[3]) do
+
+<blockquote>
+  <p>box[3] := box[3] + milliseconds_since_last_cycle();
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;52 - Márcio precisa de - 10.</b> Este quebra-cabeça ilustra o uso repetido de -1 para o <i>decremento de um contador</i>. É igualmente válido ver esta atividade como  a adição de um número negativo ou a subtração de um positivo. O equivalente de texto é:
+
+<p>while (sizeOf(box) = 3 and isNumber(box[0]) and
+isNumber(box[1])) do
+
+<blockquote>
+  <p>box[0] := box[0] + copy(box[1]);
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;53 - Márcio quer a palavra secreta.</b> Este quebra-cabeça introduz equipes de robôs. Quando uma caixa é dada a um robô, e essa caixa não combina com a caixa no balão de pensamento do robô, então o robô deixará a caixa para o próximo robô da equipe, se houver um.
+Em procedimentos de linguagens de programação, isso corresponde ao que os cientistas da computação chamam de <i>instruções se- então</i>.
+Em linguagens de programação orientadas para objetos, uma equipe corresponde ao <i>comportamento de um objeto</i>, onde cada robô corresponde a um <i>método</i>.
+Na lógica de linguagens de programação, uma equipe corresponde a um <i>predicado</i>, e cada robô a uma <i>condicional</i>. A equipe construída neste quebra-cabeça é equivalente ao seguinte programa de texto de procedimento:
+
+<p>procedure team(Box box)
+
+<blockquote>
+  <p>if (sizeOf(box) = 3 and box[0] = 0 and box[1] = -1
+  and box[2] = 'a') then
+  <blockquote>
+    <p>run_secret_procedure(box);
+  </blockquote>
+  <blockquote>
+    <p>team(box);
+  </blockquote>
+  <p>else if (sizeOf(box) = 3 and isNumber(box[0]) and
+  isNumber(box[1])) then
+  <blockquote>
+    <p>box[0] := box[0] + copy(box[1]);
+    <p>team(box);
+  </blockquote>
+  <p>endif;
+</blockquote>
+
+<p>endprocedure;
+
+<p><b>Quebra-cabeça n&deg;54 - Márcio quer um despertador.</b>
+Aqui o robô treinado para o quebra-cabeça n&deg;51 é uitlizado junto &agrave;quele treinado aqui para implementar uma mensagem enviada com o atraso de um número de segundos. O programa de texto equivalente é:
+
+<p>procedure team(Box box)
+
+<blockquote>
+  <p>if&nbsp; (sizeOf(box) = 6 and isNumber(box[0]) and
+  isNumber(box[1]) and isNumber(box[3])and box[1] &lt; box[3]) then
+  <blockquote>
+    <p>box[3] := box[3] + milliseconds_since_last_cycle();
+    <p>team(box);
+  </blockquote>
+  <p>else if&nbsp; (sizeOf(box) = 6 and isNumber(box[0])
+  and isNumber(box[1]) and isNumber(box[3]) and isSendCapability(box[4]) and isText(box[5]))
+  then
+  <blockquote>
+    <p>transmit(box[4],box[5]);
+    <p>team(box);
+  </blockquote>
+  <p>endif;
+</blockquote>
+
+<p>endprocedure;
+
+<p>Se você não zerar a escala no balão de pensamento do novo robô, então nós não funcionaremos no caso raro onde box [1] = box[3]. A probabilidade de que isto ocorra é de 1 fora da duração média  do ciclo cuja ordem varia entre 10 e 100 dependendo da velocidade do computador envolvido. 
+
+<p><b>Quebra-cabeças n&deg;55, n&deg;56, n&deg;57, n&deg;58, n&deg;59, e n&deg;60</b>. Intencionalmente deixados em branco. 
+
+<p class=center><br><b><i>Nível 5 - Construindo um Relógio</i></b>
+
+<p><b>Quebra-cabeça n&deg;61 - Márcio quer um número que se mantém crescente.</b> A solução deste quebra-cabeça é a mesma do quebra-cabeça n&deg;50. Aqui, entretanto, o número que se altera tem uma propriedade especial, de tal forma que as mudanças nele se exibem também em outro número. Isto é o que os cientistas da computação chamam de <i>estado comum</i>. Sabe-se que o estado comum causa problemas em programas concorrentes. No Toon Talk, entretanto, os controles remotos funcionam apenas no interior de uma casa isolada, sendo pois esses problemas evitados.
+
+<p><b>Quebra-cabeça n&deg;62 - Márcio quer que o número aumente em 1.000 a cada segundo.</b> A solução deste quebra-cabeça exige que se coloque o robô e a caixa atrás do número. Muitos sistemas de desenvolvimento de softwares proporcionam objetos na interface com o usuário que podem ter programas associados com eles. no Toon Talk, você pode colocar robôs atrás das ilustrações para dar a elas qualquer comportamento que você programe. A razão pela qual a solução deste quebra-cabeça mantém corretamente o tempo, enquanto a solução do quebra-cabeça anterior não o fazia, é que no quebra-cabeça prévio o robô ia devagar, de forma que você podia observá-lo.
+
+<p><b>Quebra-cabeça n&deg;63 - Márcio quer um número que aumente em 1 a cada segundo.</b> A solução para este quebra-cabeça se baseia nas técnicas de programação utilizadas no nível n&deg;4. Uma das <i>constantes</i> deste robô é que o número do terceiro buraco deve ser 1 menos mil vezes o número do quarto buraco. Outra constante é que o quarto número será 1/1000 do valor do primeiro número. A forma de texto desse robô é:
+
+<p>while (sizeof(box) = 6 and box[0] &gt; box[2] and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3]) and isNumber(box[4])&nbsp; and
+isNumber(box[5])) do
+
+<blockquote>
+  <p>box[2] := box[2] + copy(box[5]);
+  <p>box[3] := box[3] + copy(box[4]);
+  <p>update_display(box[3]); <em>// update the display
+  to show the new value of box[3]</em>
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;64 - Márcio quer um número que aumente em 1 a cada minuto.</b>  Este quebra-cabeça reutiliza o robô do quebra-cabeça anterior. Os números não se alteraram de tal forma que o robô assegura que o quarto número é 1/60 do primeiro número.
+
+<p><b>Quebra-cabeça n&deg;65 - Márcio precisa de uma caixa com contadores de horas, minutos e segundos.</b> Construir o contador de horas é o mesmo que construir o contador de minutos no quebra-cabeça anterior.
+
+<p><b>Quebra-cabeça n&deg;66 - Márcio quer que o contador de segundos volte para 0 quando alcançar 60.</b>  Depois que o robô calcular o primeiro número haverá o resto depois de dividir o que havia por 60. A computação do resto da divisão é implementada pela subtração repetida. É digno de nota que este processo está rodando em paralelo com o processo construído anteriormente, que faz com que o número seja 1/1000 do contador de milissegundos. O robô é equivalente a:
+
+<p>while (sizeOf(box) = 4 and box[0] &gt; box[2] and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3]) do
+
+<blockquote>
+  <p>box[0] := box[0] + copy(box[3]);
+</blockquote>
+
+<p>endwhile;
+
+<p><b>Quebra-cabeça n&deg;67 - Márcio quer que o contador de minutos volte a zero quando atingir 60.</b> A solução para este problema requer que se perceba que o mesmo robô do quebra-cabeça anterior é necessário aqui e que você pode utilizar a Varinha Mágica para copiar o robô exigido.
+
+<p><b>Quebra-cabeça n&deg;68 - Márcio quer que o contador de horas volte a zero quando atingir 24.</b>  A solução para este quebra-cabeça é a mesma do anterior, e adicionalmente você deve alterar os números de forma que o robô se comporte corretamente. Este problema testa sua compreensão dos dois quebra-cabeças anteriores.
+
+<p><b>Quebra-cabeça n&deg;69 - Márcio quer que o relógio digital mostre a hora certa.</b> Para resolver este quebra-cabeça, você simplesmente <i>inicializa</i> os valores dos contadores para a hora atual.
+
+<p><b>Quebra-cabeça n&deg;70 - Márcio quer um relógio digital de bela aparência.</b> Muitos softwares modernos não apenas precisam computar corretamente, mas também devem exibir informações para os usuários de uma forma atraente e efetiva. Aqui, você precisa fazer que o relógio pareça mais atraente.
+
+<p><b>Quebra-cabeça n&deg;71 - Márcio quer uma caixa mostrando a hora de seu nascimento.</b> Isto é necessário para o próximo quebra-cabeça.
+
+<p><b>Quebra-cabeça n&deg;72 - Márcio deseja saber quantos segundos até que você tenha um número redondo de milhões de segundos de idade.</b> Aqui, você deve baixar o número mostrando sua idade em segundos até zero para congelar o número. Se você tentar subtrair com o contador, então o número continuará a crescer, mesmo quando for negativo. Negligenciar esse procedimento afetará a resposta em apenas poucos segundos.
+
+<p><b>Quebra-cabeça n&deg;73 - Márcio quer saber quantos minutos até que você tenha um número redondo de milhões de segundos de idade.</b> Este quebra-cabeça ilustra como o Toon Talk, como a maioria das linguagens de programação, pode realizar a divisão <i>de forma primitiva</i>. Uma vez que o computador principal estava quebrado antes você não podia multiplicar e dividir números e tinha de programar essas operações utilizando adição e subtração.
+
+<p><b>Quebra-cabeça n&deg;74 - Márcio quer saber quantos dias até que você tenha um número redondo de milhões de segundos de idade.</b> Aqui, você precisa classificar a operação de divisão, em vez de utilizar uma pré-definida.
+
+<p>Se você chegou ao final do jogo de quebra-cabeça, você deve ter aprendido o suficiente para construir uma ampla variedade de programas em "Free Play". Você pode aprender mais observando alguns dos filmes demonstrativos ("Vide Demos"). Por favor, <a
+href="contribp.html">compartilhe o que você construiu </a> com os outros.
+
+<p>
+<hr size=1><div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a></div></td>
+
+</tr></table>
+</div>
+</body></html>
+
+<!--  FuturArte Editora Ltda.                                     Divertire  -->

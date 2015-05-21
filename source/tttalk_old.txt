@@ -1,0 +1,147 @@
+This buffer is for notes you don't want to save, and for Lisp evaluation.
+If you want to create a file, visit that file with C-x C-f,
+then enter the text in that file's own buffer.
+
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. Then it will appear
+in the ToonTalk remote control for the clipboard. You can find the
+clipboard remote control on page 30 of the Sensor notebook. Just use
+Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. 
+   The following is a box with 2 holes. The first hole contains a movie of
+a hand. The second hole contains a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\title.bmp) . The first thing on the
+back is a box with 3 holes. The hole labeled with "Key" contains a
+remote control for the key just pressed. The hole labeled with "Looks"
+contains a remote control for another's looks - something. The hole
+labeled with "Pictures" contains a box with 10 holes. The hole labeled
+with "future" contains a picture from a file (C:\Pictures\ToonTalk Talk
+800x600\future.bmp) . The hole labeled with "programming" contains a
+picture from a file (C:\Pictures\ToonTalk Talk 800x600\programming.bmp)
+. The hole labeled with "games" contains a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\games.bmp) . The hole labeled with
+"dream" contains a picture from a file (C:\Pictures\ToonTalk Talk
+800x600\dream.bmp) . The hole labeled with "concretizations" contains a
+picture from a file (C:\Pictures\ToonTalk Talk
+800x600\concretizations.bmp) . The hole labeled with "learn" contains a
+picture from a file (C:\Pictures\ToonTalk Talk 800x600\learn.bmp) . The
+hole labeled with "videogames" contains a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\videogames.bmp) . The hole labeled
+with "robots" contains a picture from a file (C:\Pictures\ToonTalk Talk
+800x600\robots.bmp) . The hole labeled with "availability" contains a
+picture from a file (C:\Pictures\ToonTalk Talk 800x600\availability.bmp)
+. The hole labeled with "title" contains a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\title.bmp) . And the second thing on
+the back is a robot who wants a box with 3 holes. The hole labeled with
+"Key" contains a pad with the text "+" on it. The hole labeled with
+"Looks" contains any picture (for example, a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\title.bmp) a picture from a file. The
+third hole contains any box. If given a box like that he will pick up
+what's in the third hole inside his box. And push '1' to change what he
+is holding. And drop it just right of the new box. And grab a copy of
+Dusty. And push '+' to change what he is holding. And push '+' to change
+what he is holding. And use Dusty to vacuum what's in the second hole
+inside his box. And release Dusty. And pick up what's in the second hole
+inside his box. And drop it. And pick up the second thing he made or
+found. And drop it. And pick up the second thing he made or found. And
+drop it. And pick up the second thing he made or found. And drop it on
+the second hole inside his box. And grab a magic wand. And use the magic
+wand on the first hole inside the new box. And drop what he just copied
+on the second hole inside his box. And release the magic wand. And pick
+up the new box. And drop it on the third hole inside his box. And the
+third thing on the back is a box with 3 holes. The hole labeled with
+"Key" contains a remote control for the key just pressed. The hole
+labeled with "Looks" contains a remote control for another's looks -
+something. The hole labeled with "Pictures" contains a box with 10
+holes. The hole labeled with "future" contains a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\future.bmp) . The hole labeled with
+"programming" contains a picture from a file (C:\Pictures\ToonTalk Talk
+800x600\programming.bmp) . The hole labeled with "games" contains a
+picture from a file (C:\Pictures\ToonTalk Talk 800x600\games.bmp) . The
+hole labeled with "dream" contains a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\dream.bmp) . The hole labeled with
+"concretizations" contains a picture from a file (C:\Pictures\ToonTalk
+Talk 800x600\concretizations.bmp) . The hole labeled with "learn"
+contains a picture from a file (C:\Pictures\ToonTalk Talk
+800x600\learn.bmp) . The hole labeled with "videogames" contains a
+picture from a file (C:\Pictures\ToonTalk Talk 800x600\videogames.bmp) .
+The hole labeled with "robots" contains a picture from a file
+(C:\Pictures\ToonTalk Talk 800x600\robots.bmp) . The hole labeled with
+"availability" contains a picture from a file (C:\Pictures\ToonTalk Talk
+800x600\availability.bmp) . The hole labeled with "title" contains a
+picture from a file (C:\Pictures\ToonTalk Talk 800x600\title.bmp) . And
+the fourth thing on the back is a robot who wants a box with 3 holes.
+The hole labeled with "Key" contains a pad with the text "-" on it. The
+hole labeled with "Looks" contains any picture (for example, a picture
+from a file (C:\Pictures\ToonTalk Talk 800x600\programming.bmp) a
+picture from a file. The third hole contains any box. If given a box
+like that he will pick up what's in the third hole inside his box. And
+push Backspace key to change what he is holding. And drop it just right
+of the new box. And grab a copy of Dusty. And push '+' to change what he
+is holding. And push '+' to change what he is holding. And use Dusty to
+vacuum what's in the second hole inside his box. And release Dusty. And
+grab a magic wand. And use the magic wand on the first hole inside the
+new box. And drop what he just copied on the first hole inside the new
+box. And release the magic wand. And grab a copy of Dusty. And push '-'
+to change what he is holding. And push '-' to change what he is holding.
+And use Dusty to vacuum the picture in the first hole of the new box.
+And release Dusty. And grab a copy of Dusty. And push '+' to change what
+he is holding. And run Dusty in reverse to restore. And release Dusty.
+And pick up the last thing he made or found. And drop it on the second
+hole inside his box. And pick up the new box. And drop it on the third
+hole inside his box.
+   What follows is in a special code and was produced by ToonTalk(tm) 
+Beta 021199. To learn more about ToonTalk see www.toontalk.com.
+6BStartToonTalkEncoding:
+Cv8AAgD4AAAM/wQAGgJQAHEAAAAAAPgBACj/+AIAKf8rQzpcUGljdHVyZXNcVG9vblRhbGsg
+VGFsayA4MDB4NjAwXHRpdGxlLmJtcAAAPQPiBOIEAAAAAJYAZAAwAmkBAAAAAAAAPQPiBOIE
+AAAEACD/AAMABEtleQAy/wAAAIArAAEb/wZMb29rcwD4AwAn//kBAAAAPAOmAKYAAAAAAAlQ
+aWN0dXJlcwAg/wAKAAdmdXR1cmUA+AQAKf8sQzpcUGljdHVyZXNcVG9vblRhbGsgVGFsayA4
+MDB4NjAwXGZ1dHVyZS5ibXAAAD0D4gTiBAAAAAAMcHJvZ3JhbW1pbmcA+AUAKf8xQzpcUGlj
+dHVyZXNcVG9vblRhbGsgVGFsayA4MDB4NjAwXHByb2dyYW1taW5nLmJtcAAAPQPiBOIEAAAA
+AAZnYW1lcwD4BgAp/ytDOlxQaWN0dXJlc1xUb29uVGFsayBUYWxrIDgwMHg2MDBcZ2FtZXMu
+Ym1wAAA9A+IE4gQAAAAABmRyZWFtAPgHACn/K0M6XFBpY3R1cmVzXFRvb25UYWxrIFRhbGsg
+ODAweDYwMFxkcmVhbS5ibXAAAD0D4gTiBAAAAAAQY29uY3JldGl6YXRpb25zAPgIACn/NUM6
+XFBpY3R1cmVzXFRvb25UYWxrIFRhbGsgODAweDYwMFxjb25jcmV0aXphdGlvbnMuYm1wAAA9
+A+IE4gQAAAAABmxlYXJuAPgJACn/K0M6XFBpY3R1cmVzXFRvb25UYWxrIFRhbGsgODAweDYw
+MFxsZWFybi5ibXAAAD0D4gTiBAAAAAALdmlkZW9nYW1lcwD4CgAp/zBDOlxQaWN0dXJlc1xU
+b29uVGFsayBUYWxrIDgwMHg2MDBcdmlkZW9nYW1lcy5ibXAAAD0D4gTiBAAAAAAHcm9ib3Rz
+APgLACn/LEM6XFBpY3R1cmVzXFRvb25UYWxrIFRhbGsgODAweDYwMFxyb2JvdHMuYm1wAAA9
+A+IE4gQAAAAADWF2YWlsYWJpbGl0eQD4DAAp/zJDOlxQaWN0dXJlc1xUb29uVGFsayBUYWxr
+IDgwMHg2MDBcYXZhaWxhYmlsaXR5LmJtcAAAPQPiBOIEAAAAAAZ0aXRsZQD4DQAp/ytDOlxQ
+aWN0dXJlc1xUb29uVGFsayBUYWxrIDgwMHg2MDBcdGl0bGUuYm1wAAA9A+IE4gQAAAAABf8w
+/wQATmV4dP8CIP8AAwAES2V5AA7/AQArAAMGTG9va3MA+A4APf8rQzpcUGljdHVyZXNcVG9v
+blRhbGsgVGFsayA4MDB4NjAwXHRpdGxlLmJtcAAAPQPiBOIEAAAAAAAK/wEDAPgPACn/K0M6
+XFBpY3R1cmVzXFRvb25UYWxrIFRhbGsgODAweDYwMFx0aXRsZS5ibXAAAD0D4gTiBAAAAAD4
+EAAp/zFDOlxQaWN0dXJlc1xUb29uVGFsayBUYWxrIDgwMHg2MDBccHJvZ3JhbW1pbmcuYm1w
+AAA9A+IE4gQAAAAA+BEAKf8rQzpcUGljdHVyZXNcVG9vblRhbGsgVGFsayA4MDB4NjAwXGdh
+bWVzLmJtcAAAPQPiBOIEAAAAACDh/wIAA/8ABwAC/wARDf8xAgAK/wALFP8ADQP/ABEN/ysR
+Df8rDgAB/wAQA/8ABwAB/wAIFf8ABxX/AAgV/wAHFf8ACBX/AAcV/wAJAAH/AAMC/wAEFAD/
+AAkAAf8ABgL/AAcU/wAJAAL/ABf///8g/wADAARLZXkAMv8AAACAKwABG/8GTG9va3MA+BIA
+J//5AQAAADwDpgCmAAAAAAAJUGljdHVyZXMAIP8ACgAHZnV0dXJlAPgTACn/LEM6XFBpY3R1
+cmVzXFRvb25UYWxrIFRhbGsgODAweDYwMFxmdXR1cmUuYm1wAAA9A+IE4gQAAAAADHByb2dy
+YW1taW5nAPgUACn/MUM6XFBpY3R1cmVzXFRvb25UYWxrIFRhbGsgODAweDYwMFxwcm9ncmFt
+bWluZy5ibXAAAD0D4gTiBAAAAAAGZ2FtZXMA+BUAKf8rQzpcUGljdHVyZXNcVG9vblRhbGsg
+VGFsayA4MDB4NjAwXGdhbWVzLmJtcAAAPQPiBOIEAAAAAAZkcmVhbQD4FgAp/ytDOlxQaWN0
+dXJlc1xUb29uVGFsayBUYWxrIDgwMHg2MDBcZHJlYW0uYm1wAAA9A+IE4gQAAAAAEGNvbmNy
+ZXRpemF0aW9ucwD4FwAp/zVDOlxQaWN0dXJlc1xUb29uVGFsayBUYWxrIDgwMHg2MDBcY29u
+Y3JldGl6YXRpb25zLmJtcAAAPQPiBOIEAAAAAAZsZWFybgD4GAAp/ytDOlxQaWN0dXJlc1xU
+b29uVGFsayBUYWxrIDgwMHg2MDBcbGVhcm4uYm1wAAA9A+IE4gQAAAAAC3ZpZGVvZ2FtZXMA
++BkAKf8wQzpcUGljdHVyZXNcVG9vblRhbGsgVGFsayA4MDB4NjAwXHZpZGVvZ2FtZXMuYm1w
+AAA9A+IE4gQAAAAAB3JvYm90cwD4GgAp/yxDOlxQaWN0dXJlc1xUb29uVGFsayBUYWxrIDgw
+MHg2MDBccm9ib3RzLmJtcAAAPQPiBOIEAAAAAA1hdmFpbGFiaWxpdHkA+BsAKf8yQzpcUGlj
+dHVyZXNcVG9vblRhbGsgVGFsayA4MDB4NjAwXGF2YWlsYWJpbGl0eS5ibXAAAD0D4gTiBAAA
+AAAGdGl0bGUA+BwAKf8rQzpcUGljdHVyZXNcVG9vblRhbGsgVGFsayA4MDB4NjAwXHRpdGxl
+LmJtcAAAPQPiBOIEAAAAAAX/MP8IAFByZXZpb3Vz/wIg/wADAARLZXkADv8BAC0AAwZMb29r
+cwD4HQA9/zFDOlxQaWN0dXJlc1xUb29uVGFsayBUYWxrIDgwMHg2MDBccHJvZ3JhbW1pbmcu
+Ym1wAAA9A+IE4gQAAAAAAAr/AQMA+B4AKf8xQzpcUGljdHVyZXNcVG9vblRhbGsgVGFsayA4
+MDB4NjAwXHByb2dyYW1taW5nLmJtcAAAPQPiBOIEAAAAAPgfACn/K0M6XFBpY3R1cmVzXFRv
+b25UYWxrIFRhbGsgODAweDYwMFxnYW1lcy5ibXAAAD0D4gTiBAAAAAD4IAAp/ytDOlxQaWN0
+dXJlc1xUb29uVGFsayBUYWxrIDgwMHg2MDBcdGl0bGUuYm1wAAA9A+IE4gQAAAAAIOL/AgAD
+/wAHAAL/ABEN/wgCAAr/AAsU/wANA/8AEQ3/KxEN/ysOAAH/ABAD/wADAv8ABBQA/wAJFAD/
+AAYC/wANA/8AEQ3/LREN/y0OFAD+DP8AEAP/AA0D/wARDf8rDwH/AAIC/v8AEAP/AAcW/wAJ
+AAH/AAcU/wAJAAL/ABf///8=
+.
+This is the end of the code for the ToonTalk object. 

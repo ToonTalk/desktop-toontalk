@@ -1,0 +1,199 @@
+Fakultet demo
+
+29245
+Vi ska börja med en låda med ett tal och 
+en plats för talets fakultet.
+
+42599
+Den här fågeln kommer att hämta svaret.
+
+47570
+Tre-fakultet blir ett bra exempel.
+
+69905
+Den här roboten ska ställa i ordning det hela för en annan robot.
+
+100019
+Den startar med talet 1, som också är lika med 1-fakultet.
+
+185805
+Vi vill, att roboten  ska kunna räkna med vilket tal som helst.
+
+235530
+Låt oss beräkna nästa fakultet.
+
+246423
+Som vi får genom att multiplicera det gamla svaret med efterföljande tal.
+
+278518
+Vi vill att den här roboten ska kunna arbeta med vilka tal som helst..
+
+306528
+Och han slutar eftersom vågen inte lutar längre.
+
+335076
+Vi hittar svaret i lådan.
+Så roboten behöver bara ge det till fågeln.
+
+356857
+Och rensa upp.
+
+386312
+Låt oss göra ett lag av våra robotar.
+
+417112
+Vi avslutar det här exemplet i ett nytt hus.
+
+430914
+Bra.
+
+442875
+Låt oss se om robotarna klarar av tio-fakultet.
+
+468317
+Det här måste vara 1x2x3x4x5x6x7x8x910.
+
+
+Fibonacci tal
+
+28684
+Låt oss lära den här roboten  att  ställa i ordning saker och ting.
+
+39949
+Han skall skapa en låda med två  "ettor", eftersom talen "1 1" utgör de första talen i Fibonacciserien.
+
+53656
+Nu provar vi honom.
+
+88013
+Den här roboten startar, där den andra avslutade sitt arbete.
+
+103925
+Vi ska lära honom att addera de två sista talen och spara summan i ett nytt lådfack.
+
+154394
+Vi vill att den här roboten ska kunna arbeta med vilken låda som helst.
+(Egentligen vilken låda med siffror som helst, men det är lite väl svårt.)
+
+184552
+Verkar fungera bra!
+
+216780
+Vi tar och ökar ToonTalks hastighet.
+
+246313
+Nu går det dubbelt så fort.
+
+275762
+Fem gånger normal hastighet.
+
+376440
+Tio gånger.
+
+509762
+Tjugo gånger.
+
+849693
+Tillbaka till normal hastighet.
+
+862030
+Vi ställer oss upp medan roboten arbetar.
+
+869020
+Roboten körde jättefort när vi inte tittade på.
+
+904436
+Han slutade lägga till tal som är större än en miljard.
+
+910193
+Här har du alla Fibonacci-tal som är mindre än två miljarder.
+
+953915
+Vi ställer ihop robotarna och sparar dem som ett robotlag.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+x

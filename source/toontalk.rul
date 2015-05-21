@@ -1,0 +1,2580 @@
+// Last modified March 11, 2004 - Ken Kahn
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//  IIIIIII SSSSSS
+//    II    SS                          InstallShield (R)
+//    II    SSSSSS      (c) 1996-1997, InstallShield Software Corporation
+//    II        SS      (c) 1990-1996, InstallShield Corporation
+//  IIIIIII SSSSSS                     All Rights Reserved.
+//
+//
+//  This code is generated as a starting setup template.  You should
+//  modify it to provide all necessary steps for your setup.
+//
+//
+//    File Name:  Setup.rul
+//
+//  Description:  InstallShield script
+//
+//     Comments:  This template script performs a basic setup on a
+//                Windows 95 or Windows NT 4.0 platform. With minor
+//                modifications, this template can be adapted to create
+//                new, customized setups.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include "c:\tt\guid.h"
+#include "c:\tt\dsetup.h"
+
+  // Include header file
+#include "sdlang.h"
+#include "sddialog.h"
+
+////////////////////// string defines ////////////////////////////
+
+//#define UNINST_LOGFILE_NAME      "Uninst.isu"
+// commented out on 090600 since is now in string table
+
+//////////////////// installation declarations ///////////////////
+
+  // ----- DLL prototypes -----
+
+
+     // your DLL prototypes
+
+
+  // ---- script prototypes -----
+
+     // generated
+     prototype ShowDialogs();
+     prototype MoveFileData();
+     prototype HandleMoveDataError( NUMBER );
+     prototype ProcessBeforeDataMove();
+     prototype ProcessAfterDataMove();
+     prototype SetupRegistry();
+     prototype SetupFolders();
+     prototype CleanUpInstall();
+     prototype SetupInstall();
+     prototype SetupScreen();
+     prototype CheckRequirements();
+     prototype DialogShowSdWelcome();
+     prototype DialogShowSdLicense();
+     prototype DialogShowSdAskDestPath();
+     prototype DialogShowSdSetupType();
+     prototype DialogShowSdComponentDialog2();
+     prototype DialogShowSdFinishReboot();
+
+     // your prototypes
+     prototype UpdateToonTalkIniFile();
+     prototype CreateAndRegister(STRING, STRING, STRING);
+     prototype CreateAndRegisterIfNew(STRING, STRING, STRING);
+     prototype DefaultIniEntry(STRING, STRING, STRING);
+     prototype UpdateToonTalkIni(STRING, STRING, STRING);
+//   prototype InstallWinG();
+     prototype InstallDirectX();
+ //  prototype LONG dsetup.DirectXSetup(HWND, STRING, LONG);
+     prototype INT dsetup.DirectXSetupA(HWND,BYREF STRING,LONG);
+     prototype DeselectWin95DependentComponents();
+     prototype LinkSound(STRING, STRING);
+
+     prototype INT AllUsersIniEntryInt(STRING, STRING);
+     prototype INT AllUsersIniEntryString(STRING, STRING, STRING, BYREF STRING);
+
+    // Windows API
+//    prototype LONG shfolder.SHGetFolderPathA(HWND, LONG, LONG, LONG, BYREF STRING); // new on 260402 -- 3rd arg is really a HANDLE -- made A on 210602
+     prototype LONG getpath.get_my_doc_folder(BYREF STRING); // new on 041002
+
+     prototype LONG unzipdll.unzip_all(BYREF STRING, BYREF STRING); // new on 100404
+
+     prototype unzip(STRING, STRING, STRING, STRING); // friendlier interface to the above
+
+//    prototype STRING Mydocs.fnMydocs();
+//    prototype LONG mydocs.fnMydocs(STRING);
+
+  // ----- global variables ------
+
+     // generated
+     BOOL        bWinNT, bWinNT4, bAlreadyHasUpToDateSAPI, bIsShellExplorer, bInstallAborted, bIs32BitSetup, bPatch, bWin2000OrLater;
+     STRING      svDir;
+     STRING      svName, svCompany, svSerial;
+     STRING      svDefGroup;
+     STRING      szAppPath;
+     STRING      svSetupType;
+
+     // your global variables
+     BOOL bCDROMInstall, bDirectXPossible; // bInstallMinimum, bInstallFull, ;
+ //    BOOL bTextToSpeech, bTextToSpeechOnCDROM;
+//     BOOL b32Possible, bInstall32;
+     BOOL bSomeDirectXInstalled, bNeedToReboot; // bNeedToInstallDirectX, bOldDirectXInstalled
+//     BOOL bWinGAlreadyInstalled;
+     BOOL bShortcutOnDesktop;
+     STRING szCDROMDrive,
+            szCDROMPath, // path to "cdrom" if installed from server or non-standard place
+            szCDROMInstallPath,  // path to installation directory
+            szShortAppPath, szTTExecutablePath, szTTExecutableName, szStartTTPath, szStartTTName;
+     INT nvType;
+     STRING szTemp, szTemp2,szTemp3, szIgnore;
+     INT nTemp, nIgnore;
+     STRING svLogFile;  // was local to original code
+     BOOL bSwedish,bBritish,bBrazilian,bEnglish;
+     BOOL DisplayLicense; // new on 150304 (corrected spelling on 190805)
+//     BOOL bWebLabs; // new on 091002 -- obsolete 150304
+//     STRING szMainLanguageCountryCode, szSpokenLanguageCountryCode; // new on 131002
+     INT nIEVersion; // new on 250402
+     STRING szToonTalkIni; // new on 250402
+     STRING szMyDocToonTalk; // new on 091002
+     STRING szInstallationNewUsersIniFile; // new on 020304
+     STRING szInstallationAllUsersIniFile; // new on 020304
+     STRING product_version; // new on 060304
+     INT MinimalInstall; // made global on 130304
+     BOOL bSpeechAPIInstalled; // new on 190805
+     BOOL RunOnlyInstallation; // new on 121205
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//   MAIN PROGRAM
+//
+//      The setup begins here by hiding the visible setup
+//      window.  This is done to allow all the titles, images, etc. to
+//      be established before showing the main window.  The following
+//      logic then performs the setup in a series of steps.
+//
+///////////////////////////////////////////////////////////////////////////////
+program
+
+   // moved here on 060304 so can be used for titles and more
+   szCDROMInstallPath = SRCDIR;
+   szInstallationNewUsersIniFile = szCDROMInstallPath ^ "\\newinstl.ini"; // new on 020304 -- renamed from newusers.ini on 110304
+   szInstallationAllUsersIniFile = szCDROMInstallPath ^ "\\allinstl.ini" ; //allusers.ini";
+
+    // moved to ProcessBeforeDataMove on 091002 and moved here on 090807
+
+// commented the following since only needed for Win98 and that is too old to support anymore
+//     if (!bWin2000OrLater) then // no need to install it on Windows 2000 or later
+////        if (bCDROMInstall) then // commented this out on 101002 since best to use SUPPORTDIR
+////           szTemp = szCDROMInstallPath ^ "\\Windows\\SHFolder.exe";
+////        else
+//           szTemp = SUPPORTDIR ^ "SHFolder.exe"; // should be in the setup directory - new on 200602
+////        endif;
+//        Enable(HOURGLASS);
+//        if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then // install SHFolder.dll which is needed to find things like "My Documents" in the correct manner - new on 260402
+//            MessageBox(@CANT_LAUNCH + " " + szTemp + " to install SHFolder.",WARNING);
+//        endif;
+//        Disable(HOURGLASS);
+//     endif;
+
+    Disable( BACKGROUND );
+
+    UseDLL( SUPPORTDIR ^ "getpath.dll" );
+    nTemp = get_my_doc_folder(szTemp);
+    UnUseDLL( SUPPORTDIR ^ "getpath.dll" );
+   if (nTemp) then // rewritten on 041002
+     szMyDocToonTalk = szTemp ^ "\\ToonTalk";
+     CreateDir(szMyDocToonTalk);
+     szToonTalkIni = szMyDocToonTalk ^ "toontalk.ini"; 
+   else // fall back on old convention or better to warn??
+//     nTemp = SHGetFolderPathA(NULL, 0x0005|0x8000, NULL, 0, szTemp);
+//     MessageBox("Warning. SHGetFolderPath returned failure. ", WARNING); // just for now
+     szToonTalkIni = WINDIR ^ "toontalk.ini";
+   endif;
+
+
+    CheckRequirements();
+
+//    if (!bPatch) then
+       SetupInstall();
+//    endif;
+
+    SetupScreen();
+
+    if (ShowDialogs()<0) goto end_install;
+
+    if (ProcessBeforeDataMove()<0) goto end_install;
+
+    if (MoveFileData()<0) goto end_install;
+
+    if (!bPatch) then
+       UpdateToonTalkIni("Comments", "Comment1", @ReadTTini);
+       // new on 131203
+       UpdateToonTalkIni("NeverShowTheseDialogsAgain", "Comment1", "These are dialogs where someone checked the box indicating never show them again.");
+       UpdateToonTalkIni("NeverShowTheseDialogsAgain", "Comment2", "Changing the 1 to a 2 will both restore them and no longer offer the check box for turning off the dialog");
+       UpdateToonTalkIni("NeverShowTheseDialogsAgain", "Comment3", "Changing the 1 to a 0 will restore the dialog.");
+
+    endif;
+
+    if (ProcessAfterDataMove()<0) goto end_install;
+
+//    if (InstallWinG()<0) goto end_install;
+
+    if (UpdateToonTalkIniFile() < 0) goto end_install;
+
+//    if (bPatch) goto end_install; // new on 090807
+
+    if (SetupRegistry()<0) goto end_install;
+
+    if (SetupFolders()<0) goto end_install;
+
+    if (!bPatch && RegDBKeyExist(".HTM") < 0) then
+        // offer to install web browser if CDROM
+        // NOTE that if a browser was installed and removed improperly there may still be
+        // a key but no association
+//        if (bCDROMInstall) then
+//           MessageBox(@INSTALL_IE,INFORMATION);
+//           if (bIsShellExplorer) then
+//              MessageBox(@IE_DONT_RESTART,WARNING);
+//              szTemp = szCDROMInstallPath ^ @IE_WIN95_PATH;
+//          else
+//              szTemp = szCDROMInstallPath ^ @IE_WIN31_PATH;
+//          endif;
+//              if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then
+//                 MessageBox(@CANT_LANUCH + " " + szTemp,WARNING);
+//              endif;
+//        else
+           MessageBox(@CANT_READ_MANUAL,WARNING);
+//        endif;
+    endif;
+
+    if (!bPatch && bDirectXPossible && !bWin2000OrLater) then // new on 291002 that at least for WebLabs - maybe for all don't bother installing DirectX for Windows 2000 or XP
+        // on 030304 removed bWebLabs so don't bother now for Win2000 or above
+        if (InstallDirectX()<0) goto end_install;
+    endif;
+
+  end_install:
+
+    CleanUpInstall();
+
+     // If an unrecoverable error occurred, clean up the partial installation.
+     // Otherwise, exit normally.
+
+    if (bInstallAborted) then
+        abort;
+    endif;
+
+endprogram
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  ShowDialogs                                                    //
+//                                                                           //
+//  Purpose:  This function manages the display and navigation               //
+//            the standard dialogs that exist in a setup.                    //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ShowDialogs()
+    NUMBER  nResult;
+ begin
+
+    Dlg_Start:
+        // beginning of dialogs label
+
+    Dlg_SdWelcome:
+        nResult = DialogShowSdWelcome();
+        if (nResult = BACK) goto Dlg_Start;
+
+    Dlg_SdLicense:
+        if (!bSwedish && !bPatch && DisplayLicense) then
+           nResult = DialogShowSdLicense();
+           if (nResult = BACK) goto Dlg_SdWelcome;
+        endif;
+
+    Dlg_SdAskDestPath:
+        nResult = DialogShowSdAskDestPath();
+        if (bSwedish || bPatch) then
+           if (nResult = BACK) goto Dlg_SdWelcome;
+        else
+           if (nResult = BACK) goto Dlg_SdLicense;
+        endif;
+
+    Dlg_SdSetupType:
+        if (!bPatch) then
+           nResult = DialogShowSdSetupType();
+        endif;
+        if (nResult = BACK) goto Dlg_SdAskDestPath;
+
+    Dlg_SdComponentDialog2:
+        if ((nResult = BACK) && (svSetupType != "Custom") && (svSetupType != "")) then
+           goto Dlg_SdSetupType;
+        endif;
+        if (!bPatch) then
+           nResult = DialogShowSdComponentDialog2();
+        endif;
+        if (nResult = BACK) goto Dlg_SdSetupType;
+
+    return 0;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessBeforeDataMove                                           //
+//                                                                           //
+//  Purpose: This function performs any necessary operations prior to the    //
+//           actual data move operation.                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessBeforeDataMove()
+//    STRING svLogFile;
+    STRING uninstall_key;
+    NUMBER nResult;
+ begin
+
+  AllUsersIniEntryString("Install", "ProductVersion", @PRODUCT_VERSION, product_version); // new on 060304 to make this global and shared
+
+  nResult = InstallationInfo( @COMPANY_NAME, @PRODUCT_NAME, product_version, @PRODUCT_KEY );
+  if (nResult < 0) then // new on 140807
+     MessageBox("InstallationInfo call failed", WARNING);
+     abort;
+  endif;
+
+  // added @ on 090600 since should be able to uninstall betas or patches on top of other installations
+//  svLogFile = @UNINST_LOGFILE_NAME;
+    AllUsersIniEntryString("Install", "UninstallLogFileName", @UNINST_LOGFILE_NAME, svLogFile); // updated 060304
+    AllUsersIniEntryString("Install", "UninstallKey", @UNINST_KEY, uninstall_key); // updated 060304
+  nResult = DeinstallStart( svDir, svLogFile, uninstall_key, 0 );
+  if (nResult < 0) then
+      MessageBox( @ERROR_UNINSTSETUP, WARNING );
+      MessageBox( "Failed to create " + svLogFile + " in directory " + svDir + " with key " + uninstall_key, WARNING); // new on 170904
+  endif;
+
+  szAppPath = TARGETDIR;
+
+  if ((bIs32BitSetup) && (bIsShellExplorer)) then
+      RegDBSetItem( REGDB_APPPATH, szAppPath );
+      RegDBSetItem( REGDB_APPPATH_DEFAULT, szAppPath ^ @PRODUCT_KEY );
+//      RegDBSetItem( REGDB_UNINSTALL_NAME, @UNINST_DISPLAY_NAME );
+      RegDBSetItem( REGDB_UNINSTALL_NAME, uninstall_key); // beginning 060403 using the same for both -- should be OK is that way in the string table now anyway
+  endif;
+
+  // my additions:
+
+  if (bPatch) then
+     return 0; // no need to do the following
+  endif;
+
+  if (!bIsShellExplorer) then
+     DeselectWin95DependentComponents();
+  endif;
+
+// commented out on 090807
+//  if (bPatch && bEnglish) then  // added check for English since not updating other language versions now
+//     VarSave(SRCTARGETDIR);
+//     TARGETDIR = szAppPath ^ "\\doc\\" ^ @LANGUAGE_SUBDIRECTORY;
+//     SRCDIR = szAppPath ^ "\\doc\\" ^ @LANGUAGE_SUBDIRECTORY;
+//     RenameFile ("help.htm", "oldhelp.htm"); // relying upon this to do nothing oldhelp.htm already created
+//     VarRestore(SRCTARGETDIR);
+//  endif;
+
+//  if (bWinNT4 && ComponentIsItemSelected (MEDIA, "Program Files\\32 Bit Program Files")) then
+//     ComponentSelectItem(MEDIA, "Program Files\\32 Bit Program Files", FALSE);
+//     ComponentSelectItem(MEDIA, "Program Files\\NT 4 Program Files", TRUE);
+//  endif;
+
+//  UseDLL( SUPPORTDIR ^ "MyDocs.dll" );
+//  nTemp = fnMydocs(szTemp);
+//  UnUseDLL( SUPPORTDIR ^ "MyDocs.dll" );
+  //SHGetFolderPath(NULL, CSIDL_PERSONAL|CSIDL_FLAG_CREATE, NULL, SHGFP_TYPE_CURRENT, path) == S_OK) -- "real" call but substituting for constants below
+//  if (SHGetFolderPathA(0, 32773, 0, 0, szTemp) == 0) then // new on 250402 -- replaces old @toontalkini
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  MoveFileData                                                   //
+//                                                                           //
+//  Purpose:  This function handles the data movement for                    //
+//            the setup.                                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function MoveFileData()
+    NUMBER nResult, nDisk;
+ begin
+
+  nDisk = 1;
+  SetStatusWindow( 0, "" );
+  Disable( DIALOGCACHE );
+  Enable( STATUS );
+  StatusUpdate( ON, 100 );
+  nResult = ComponentMoveData( MEDIA, nDisk, 0 );
+
+  HandleMoveDataError( nResult );
+
+  // following new on 020304 -- it copies files from the ToonTalk directory on the installation disk to the ToonTalk installation directory
+  // and it copies the contents of MyDocsTT directory to My Documents\ToonTalk
+  // Could consider copying the contents of SharedTT directory to Shared Documents\ToonTalk
+  // but it is a hassle and done better using current zip archive mechanism
+  // moved here on 080304
+  VarSave(SRCTARGETDIR);
+//  Enable(HOURGLASS);
+
+  MinimalInstall = AllUsersIniEntryInt("Install", "MinimalInstall");
+  if (MinimalInstall != 0 && MinimalInstall != 1) then
+     AllUsersIniEntryString("Install", "AskFullInstall", "Do you want me to put all the ToonTalk files on your hard disk? If you answer no, then ToonTalk will start slower and require the CD-ROM to run but very little disk space will be used.", szTemp);
+     if (AskYesNo(szTemp, YES) == YES) then
+        MinimalInstall = 0;
+     else
+        MinimalInstall = 1;
+     endif;
+  endif;
+  Disable( STATUS );
+  if (MinimalInstall == 0) then
+     nTemp = unzip("ToonTalk.zip", szCDROMInstallPath, szAppPath, "ToonTalk");
+     if (nTemp != 0 && nTemp != 11) then // failed (11 means no work to do -- can happen)
+	MessageBox("An error occurred while unzipping ToonTalk.zip. Perhaps a file was corrupted while uploading or copying to media such as Compact Disks. Sorry.",INFORMATION);
+        NumToStr(szTemp,nTemp); // new on 170904
+	MessageBox("The error code is " + szTemp + " and it was trying to unzip " + szCDROMInstallPath + "ToonTalk.zip to " + szAppPath, WARNING); // new on 170904
+    	CleanUpInstall();
+	abort;
+     endif;
+     SRCDIR = szCDROMInstallPath ^ "\\ToonTalk\\"; // was TTInstll prior to 110304 but this is better for full/minimal installation
+//MessageBox(SRCDIR,INFORMATION);
+     TARGETDIR = szAppPath; 
+//     if (nTemp == 0) then // failed to unzip (maybe file doesn't exist so try to copy directory instead
+//        if (FindFile(SRCDIR, "*.*", szTemp) < 0) then
+//            MessageBox("No files to install in " + SRCDIR + ".  Please report this to support@toontalk.com",SEVERE);
+//        endif;
+//     endif;
+     AllUsersIniEntryString("Install", "InstallTTFilesText", "Copying ToonTalk files", szTemp);
+     SetStatusWindow( 0, szTemp);
+     Enable( STATUS );
+     StatusUpdate( ON, 100 ); // new on 080304
+     nTemp = XCopyFile("*.*", "*.*", COMP_UPDATE_DATE | INCLUDE_SUBDIR);
+     if (nTemp < -1) then // -1 seems to be triggered if there are no files to copy -- updated 021204
+        // new on 011204
+        NumToStr(szTemp,nTemp);
+	MessageBox("Unable to copy files from " + SRCDIR + " to " + TARGETDIR + "; Error code is " + szTemp,WARNING);
+     endif;
+  endif;
+
+  nTemp = unzip("MyDocsTT.zip", szCDROMInstallPath, szMyDocToonTalk, "MyDocsTT"); // was szAppPath prior to 140404
+  if (nTemp != 0 && nTemp != 11) then // failed (11 means no work to do -- can happen)
+	MessageBox("An error occurred while unzipping MyDocsTT.zip. Perhaps a file was corrupted while uploading or copying to media such as Compact Disks. Sorry.",INFORMATION);
+    	CleanUpInstall();
+	abort;
+  endif;
+
+//  if (nTemp == 0) then // failed to unzip (maybe file doesn't exist so try to copy directory instead)
+     SRCDIR = szCDROMInstallPath ^ "\\MyDocsTT\\";
+     TARGETDIR = szMyDocToonTalk;
+     Disable( STATUS );
+     AllUsersIniEntryString("Install", "InstallUserFilesText", "Copying ToonTalk user files", szTemp);
+     SetStatusWindow( 0, szTemp);
+     Enable( STATUS );
+     StatusUpdate( ON, 100 ); // new on 080304
+     nTemp = XCopyFile("*.*", "*.*", COMP_UPDATE_DATE | INCLUDE_SUBDIR);
+     if (nTemp < -1) then // -1 seems to be triggered if there are no files to copy -- updated 021204
+        // new on 011204
+        NumToStr(szTemp,nTemp);
+	MessageBox("Unable to copy files from " + SRCDIR + " to " + TARGETDIR + "; Error code is " + szTemp,WARNING);
+     endif;
+//  endif;
+
+  VarRestore(SRCTARGETDIR);
+
+  Disable( STATUS );
+
+  return nResult;
+
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: HandleMoveDataError                                             //
+//                                                                           //
+//  Purpose: This function handles the error (if any) during the move data   //
+//           operation.                                                      //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function HandleMoveDataError( nResult )
+  STRING svMedia, svComponent, svFileGroup, svFile;
+  NUMBER nvError;
+ begin
+
+  switch (nResult)
+  case 0:
+       return 0;
+  default:
+    ComponentError(svMedia, svComponent, svFileGroup, svFile, nvError);
+//    if (svFileGroup = "Java Classes") then
+//       return 0; // warn? -- OK to skip for 16bit systems
+//    endif;
+    SprintfBox(INFORMATION, "ComponentMoveData Error Information",
+            "An error occured trying to move files:\n\n" +
+            "Media Name: %s\nComponent: %s\nFile Group: %s\n" +
+            "File: %s\nInstallShield Error Number: %ld",
+            svMedia, svComponent, svFileGroup, svFile, nvError);
+//       SprintfBox( SEVERE, @TITLE_CAPTIONBAR, @ERROR_MOVEDATA, nResult );
+       bInstallAborted = TRUE;
+       return nResult;
+  endswitch;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessAfterDataMove                                            //
+//                                                                           //
+//  Purpose: This function performs any necessary operations needed after    //
+//           all data has been moved.                                        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessAfterDataMove()
+    STRING szReferenceFile;
+    STRING szCDROMDir;
+ begin
+
+  // TODO : update self-registered files and other processes that
+  //        should be performed after the data has been moved.
+
+  // DeinstallSetReference specifies a file to be checked before
+  // uninstallation. If the file is in use, uninstallation will not proceed.
+
+  szReferenceFile = svDir ^ @PRODUCT_KEY; // TODO : If your file is in a subdir of svDir add that here
+  DeinstallSetReference( szReferenceFile );
+
+  // my additions
+
+  UpdateToonTalkIni("Switches","InstallCompleted","0"); //re-written later
+  if (!bCDROMInstall) then
+     szTTExecutableName = @FLOPPY_EXECUTABLE;
+  else // if (bDirectXPossible) then
+     szTTExecutableName = @CDROM_EXECUTABLE;
+//  else
+//     szTTExecutableName = "tt16";
+  endif;
+  AllUsersIniEntryString("Install", "ToonTalk32", szTTExecutableName, szTTExecutableName); // override if possible - new on 070304
+  szShortAppPath = szAppPath;
+  LongPathToShortPath(szShortAppPath);
+// commented out the following since StartTT.exe is now always installed
+//  bInstallMinimum = FALSE; // unless changed below
+//  if (ExistsDir(szShortAppPath) != EXISTS ||
+//      FindFile(szShortAppPath,szStartTTName + ".exe",szIgnore) < 0) then // changed on 240300 since StartTT can be installed while toontalk.exe is left on CD-ROM
+//     if (bCDROMInstall) then
+//        szShortAppPath = szCDROMPath ^ "\\ToonTalk\\";
+//        bInstallMinimum = TRUE;
+//     else
+//        MessageBox(szTTExecutableName + ".exe not installed on " + szAppPath,WARNING);
+ //       return -1;
+//     endif;
+//  endif;
+  szTTExecutablePath = szShortAppPath ^ szTTExecutableName + ".exe";
+//  if (bCDROMInstall && bWinNT && !bIsShellExplorer) then // problem running 16 bit version on Win 3.51
+//      szStartTTName = "STT32";
+//  else // but NT 4.0 can run StartTT which is more likely to be around (e.g. Internet download)
+//      szStartTTName = @START_TOONTALK;
+//  endif;
+  RunOnlyInstallation = AllUsersIniEntryInt("Install", "RunOnlyInstallation");
+  if (RunOnlyInstallation) then
+     szStartTTName = szTTExecutableName;
+  else
+     szStartTTName = @START_TOONTALK;
+  endif;
+  if (FindFile(szShortAppPath, szStartTTName + ".exe", szIgnore) < 0) then
+     // only if customized away this
+//     if (bWinNT) then
+//        szStartTTName = "STT32";
+//     endif;
+     if (MinimalInstall) then // conditional new on 070604
+     	szStartTTPath = szCDROMPath ^ "\\ToonTalk\\" ^ szStartTTName + ".exe";
+     else // new on 070604
+    	CleanUpInstall();
+	abort;
+     endif;
+   else
+     szStartTTPath = szShortAppPath ^ szStartTTName + ".exe";
+  endif;
+//  if (bPatch) then // new on 220501
+//     if (FindFile(szShortAppPath, "m22." + @DATA_FILE_SUFFIX, szIgnore) == 0 &&
+//         FindFile(szShortAppPath, "m25." + @DATA_FILE_SUFFIX, szIgnore) < 0) then
+//     // if m22 is on the hard drive but m25 isn't then offer to copy it now
+//        if (AskYesNo( @OK_TO_COPY_FROM_CDROM , YES ) == YES) then
+//           VarSave(SRCTARGETDIR);
+//           TARGETDIR = szAppPath;
+//           GetProfString(szToonTalkIni, "Directories", "CDROMDir", szCDROMDir);
+//           SRCDIR = szCDROMDir;
+//           if (CopyFile( "m25." + @DATA_FILE_SUFFIX, "m25." + @DATA_FILE_SUFFIX) == COPY_ERR_OPENINPUT) then
+//          while (AskYesNo (@TRY_TO_READ_CDROM_AGAIN, YES) == YES &&
+//                     CopyFile( "m25." + @DATA_FILE_SUFFIX, "m25." + @DATA_FILE_SUFFIX) == COPY_ERR_OPENINPUT)
+//              endwhile;
+//           endif;
+//           VarRestore(SRCTARGETDIR);
+//        endif;
+//     endif;
+//  endif;
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupRegistry                                                   //
+//                                                                           //
+//  Purpose: This function makes the registry entries for this setup.        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupRegistry()
+   STRING szSpeechPath, szVCEFileName, szVCEPath;
+   STRING szStartTTCLSID, szStartTTDemoCLSID, szStartTTUserCLSID, szStartTTCityCLSID, szStartTTPuzzleCLSID;
+ begin
+   if (bPatch) then
+      return 0;
+   endif;
+   // on 130707 following moved out of conditional since even beta and trial version do the following (careful that patch doesn't do this)
+   // rewrote the following on 190805 since can be WinXP upgraded from Win2000.
+   if (!bSpeechAPIInstalled) then
+//        szTemp = szCDROMInstallPath ^ "\\speech\\SpchAPI.exe /Q:A"; // is /Q:U better??
+//        szTemp = SUPPORTDIR ^ "\\speech\\SpchAPI.exe /Q:A"; // updated 101002
+        szTemp = SUPPORTDIR ^ "SpchAPI.exe /Q:A"; // updated 291002
+        Enable(HOURGLASS);
+        if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then // install Microsoft Speech API
+           MessageBox(@CANT_LAUNCH + " " + szTemp + " to install the Microsoft Speech API 4.0",WARNING); // updated 200602
+        endif;
+        Disable(HOURGLASS);
+      endif; // following should happen even if Windows 2000
+   Enable(HOURGLASS);
+   szTemp = SUPPORTDIR ^ "MSAgent.exe /Q:A"; 
+   if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then
+      MessageBox(@CANT_LAUNCH + " " + szTemp + " to install the Microsoft Agent",WARNING);
+   endif;
+   szTemp = SUPPORTDIR ^ "Peedy.exe /Q:A";
+   if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then
+      MessageBox(@CANT_LAUNCH + " " + szTemp + " to install the Microsoft Agent Peedy character",WARNING);
+   endif;
+   szTemp = SUPPORTDIR ^ "tv_enua.exe /Q:A";
+   if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then
+      MessageBox(@CANT_LAUNCH + " " + szTemp + " to install an American English voice",WARNING);
+   endif;
+   Disable(HOURGLASS);
+   if (bIsShellExplorer && bCDROMInstall) then // Speech is possible
+//     if (!bAlreadyHasUpToDateSAPI) then // conditional added on 200400 since Windows 2000 has a newer version already
+      /* Need to register the following for Microsoft Text-to-speech engine
+        HKEY_LOCAL_MACHINE\Software\Voice\TextToSpeech\Engine, MSTTS= {1B6BF820-9299-101B-8A19-265D428C60FF}
+        HKEY_CLASSES_ROOT\CLSID\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}=MSTTS
+        HKEY_CLASSES_ROOT\CLSID\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\InprocServer32=$(WINDOWS)\Speech\MSTTS.DLL
+        HKEY_CLASSES_ROOT \CLSID\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\InprocServer32, ThreadingModel=Apartment
+      */
+      RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+      CreateAndRegister("Software\\Voice\\TextToSpeech\\Engine","MSTTS",
+                        "{1B6BF820-9299-101B-8A19-265D428C60FF}");
+      // following makes things work but isn't documented as needed:
+      CreateAndRegister("Software\\Voice\\TextToSpeech\\Engine","",
+                        "{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}");
+      RegDBSetDefaultRoot(HKEY_CLASSES_ROOT);
+//      if (RegDBKeyExist("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}") < 0) then
+      CreateAndRegister("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}","","MSTTS");
+// following was needed for SAPI 2.0
+//         RegDBCreateKeyEx("CLSID\\{D67C0280-C743-11CD-80E5-00AA003E4B50}",
+//                          "Text to Speech Enumerator");
+//         RegDBCreateKeyEx("CLSID\\{CB96B400-C743-11cd-80E5-00AA003E4B50}",
+//                          "Audio Destination Object");
+// following was for SAPI 2.0 to use the CDROM VCE files
+//      szTemp = szAppPath ^ "\\Speech\\";
+//      if (ExistsDir(szTemp) != EXISTS ||
+//          FindFile(szTemp,"MSTTS.DLL",szIgnore) < 0) then
+// was not installed on hard disk
+//        szTemp = szCDROMDrive ^ "\\ToonTalk\\Speech\\MSTTS.DLL";
+//      else
+//         szTemp = szAppPath ^ "\\Speech\\MSTTS.DLL";
+//      endif;
+//      UpdateToonTalkIni("Executables","SpeechEngine",szTemp);
+      if (bCDROMInstall) then
+       szSpeechPath = szCDROMPath ^ "\\toontalk\\speech\\";
+       RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+       if (ExistsDir(szSpeechPath) == 0 &&
+           FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, RESET) == 0) then
+          ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+          CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          while (FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, CONTINUE) == 0)
+            ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+            CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          endwhile;
+       endif;
+       szSpeechPath = szAppPath ^ "\\Speech\\";
+       // do it over again for the hard drive
+       if (ExistsDir(szSpeechPath) == 0 &&
+           FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, RESET) == 0) then
+          ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+          CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          while (FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, CONTINUE) == 0)
+            ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+            CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          endwhile;
+       endif;
+      endif;
+      RegDBSetDefaultRoot(HKEY_CLASSES_ROOT);
+      szTemp = WINDIR ^ "speech\\mstts.dll";
+      CreateAndRegister("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\\InprocServer32","",
+                        szTemp);
+      CreateAndRegister("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\\InprocServer32", "ThreadingModel",
+                         "Apartment");
+/* Following was needed for SAPI 2.0
+      // put speech.dll on system directory so I don't interfere with
+      // other speech engines
+      szTemp2 = WINDIR ^ "speech\\Speech.dll";
+      RegDBCreateKeyEx("CLSID\\{D67C0280-C743-11CD-80E5-00AA003E4B50}\\InprocServer32",
+                          szTemp2);
+      RegDBCreateKeyEx("CLSID\\{CB96B400-C743-11cd-80E5-00AA003E4B50}\\InprocServer32",
+                          szTemp2);
+      RegDBCreateKeyEx("CLSID\\{D67C0280-C743-11cd-80E5-00AA003E4B50}\\InprocServer32\\ThreadingModel",
+                          "Apartment");
+      RegDBCreateKeyEx("CLSID\\{CB96B400-C743-11cd-80E5-00AA003E4B50}\\InprocServer32\\ThreadingModel",
+                          "Apartment");
+     endif;
+*/
+//     RegDBCreateKey("ToonTalk");
+//     RegDBCreateKey("ToonTalk\\shell\\open");
+//     RegDBCreateKey("ToonTalk\\shell\\open\\command");
+     endif;
+// commented out the following on 220500 since is obsolete
+//     RegDBCreateKey("ToonTalk");
+//     RegDBSetKeyValueEx("ToonTalk","",nvType,"ToonTalk",-1); // added 250300 so it looks nice in a file browser
+//     RegDBCreateKeyEx("ToonTalk\\shell\\open\\command","");
+//     RegDBSetKeyValueEx("ToonTalk\\shell\\open\\command","",nvType,szTTExecutablePath + " %1",-1);
+//     CreateAndRegisterIfNew(".DMO", "", "ToonTalk");
+//     CreateAndRegisterIfNew(".PZL", "", "ToonTalk");
+//     CreateAndRegisterIfNew(".CTY", "", "ToonTalk");
+ if (!RunOnlyInstallation) then
+     nvType = REGDB_STRING;
+     RegDBCreateKey("StartTT"); // new on 220500
+     RegDBSetKeyValueEx("StartTT","",nvType,"ToonTalk File",-1); // new on 220500 -- changed to ToonTalk File on 060301
+     RegDBCreateKeyEx("StartTT\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTT\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+
+     // following is new on 180301 since otherwise Explorer shows them all with the type "ToonTalk File"
+     RegDBCreateKey("StartTTUser");
+     RegDBSetKeyValueEx("StartTTUser","",nvType,"ToonTalk User Profile",-1);
+     RegDBCreateKeyEx("StartTTUser\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTUser\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+     RegDBCreateKey("StartTTDemo");
+     RegDBSetKeyValueEx("StartTTDemo","",nvType,"ToonTalk Demo",-1);
+     RegDBCreateKeyEx("StartTTDemo\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTDemo\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+     RegDBCreateKey("StartTTPuzzle");
+     RegDBSetKeyValueEx("StartTTPuzzle","",nvType,"ToonTalk Puzzle",-1);
+     RegDBCreateKeyEx("StartTTPuzzle\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTPuzzle\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+     RegDBCreateKey("StartTTCity");
+     RegDBSetKeyValueEx("StartTTCity","",nvType,"ToonTalk City",-1);
+     RegDBCreateKeyEx("StartTTCity\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTCity\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+
+     CreateAndRegisterIfNew(".USR", "", "StartTTUser");
+     CreateAndRegisterIfNew(".DMO", "", "StartTTDemo"); // moved these 3 from ToonTalk to StartTT
+     CreateAndRegisterIfNew(".PZL", "", "StartTTPuzzle");
+     CreateAndRegisterIfNew(".CTY", "", "StartTTCity");
+     CreateAndRegisterIfNew(".TT",  "", "StartTT"); // new on 200300
+
+//   new on 010105 since this seems to be the correct way to register MIME extensions
+//   (but couldn't find good documentation)
+
+     szStartTTCLSID = "{C16743ED-FD81-45c9-9116-0E1AA7D6A166}";
+     RegDBCreateKeyEx("StartTT\\CLSID","");
+     RegDBSetKeyValueEx("StartTT\\CLSID","",nvType,szStartTTCLSID,-1);
+     CreateAndRegisterIfNew("CLSID\\" + szStartTTCLSID + "\\ProgID", "", "StartTT");
+     RegDBSetKeyValueEx("StartTT","PreferExecuteOnMismatch",REGDB_NUMBER,"1",-1); 
+// should help but doesn't seem to have any effect -- 
+// http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/overview/XpSp2Compat.asp
+
+     szStartTTDemoCLSID = "{1D676394-850F-419d-B721-D4F6602E8EA7}";
+     RegDBCreateKeyEx("StartTTDemo\\CLSID","");
+     RegDBSetKeyValueEx("StartTTDemo\\CLSID","",nvType,szStartTTDemoCLSID,-1);
+     CreateAndRegisterIfNew("CLSID\\" + szStartTTDemoCLSID + "\\ProgID", "", "StartTTDemo");
+     RegDBSetKeyValueEx("StartTTDemo","PreferExecuteOnMismatch",REGDB_NUMBER,"1",-1); 
+
+     szStartTTCityCLSID = "{4FCA0496-39CC-4663-80B3-3A01616FFF7D}";
+     RegDBCreateKeyEx("StartTTCity\\CLSID","");
+     RegDBSetKeyValueEx("StartTTCity\\CLSID","",nvType,szStartTTCityCLSID,-1);
+     CreateAndRegisterIfNew("CLSID\\" + szStartTTCityCLSID + "\\ProgID", "", "StartTTCity");
+     RegDBSetKeyValueEx("StartTTCity","PreferExecuteOnMismatch",REGDB_NUMBER,"1",-1); 
+
+     szStartTTPuzzleCLSID = "{03BE1F75-5FC6-4760-A34F-9F5EAF7A00A6}";
+     RegDBCreateKeyEx("StartTTPuzzle\\CLSID","");
+     RegDBSetKeyValueEx("StartTTPuzzle\\CLSID","",nvType,szStartTTPuzzleCLSID,-1);
+     CreateAndRegisterIfNew("CLSID\\" + szStartTTPuzzleCLSID + "\\ProgID", "", "StartTTPuzzle");
+     RegDBSetKeyValueEx("StartTTPuzzle","PreferExecuteOnMismatch",REGDB_NUMBER,"1",-1); 
+
+     szStartTTUserCLSID = "{9191C804-852D-46be-9D2A-425093BC0CD7}";
+     RegDBCreateKeyEx("StartTTUser\\CLSID","");
+     RegDBSetKeyValueEx("StartTTUser\\CLSID","",nvType,szStartTTUserCLSID,-1);
+     CreateAndRegisterIfNew("CLSID\\" + szStartTTUserCLSID + "\\ProgID", "", "StartTTUser");
+     RegDBSetKeyValueEx("StartTTUser","PreferExecuteOnMismatch",REGDB_NUMBER,"1",-1); 
+
+RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE); // following new on 010105 -- also based upon
+// http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/overview/XpSp2Compat.asp
+
+ RegDBCreateKeyEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTT","");
+ RegDBSetKeyValueEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTT","",REGDB_NUMBER,"1",-1); 
+ RegDBCreateKeyEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTDemo","");
+ RegDBSetKeyValueEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTDemo","",REGDB_NUMBER,"1",-1); 
+ RegDBCreateKeyEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTCity","");
+ RegDBSetKeyValueEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTCity","",REGDB_NUMBER,"1",-1); 
+ RegDBCreateKeyEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTPuzzle","");
+ RegDBSetKeyValueEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTPuzzle","",REGDB_NUMBER,"1",-1); 
+ RegDBCreateKeyEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTUser","");
+ RegDBSetKeyValueEx("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\Secure Mime Handlers\\StartTTUser","",REGDB_NUMBER,"1",-1); 
+
+ if (AllUsersIniEntryInt("Install","IPreferFileExtensionsToWorkAsTheyDidPriorToXPServicePack2DespiteLowerSecurity")) then
+      RegDBSetKeyValueEx("SOFTWARE\\Microsoft\\Internet Explorer\\Main\\FeatureControl\\FEATURE_MIME_HANDLING","iexplore.exe",REGDB_NUMBER,"0",-1);
+ endif;
+
+RegDBSetDefaultRoot(HKEY_CLASSES_ROOT); // restore default
+
+
+     // following is new on 060301 - needed for Netscape Navigator and maybe some mail readers and others
+     CreateAndRegisterIfNew(".USR", "Content Type", "application/toontalk-user");
+     CreateAndRegisterIfNew(".DMO", "Content Type", "application/toontalk-demo");
+     CreateAndRegisterIfNew(".PZL", "Content Type", "application/toontalk-puzzle");
+     CreateAndRegisterIfNew(".CTY", "Content Type", "application/toontalk-city");
+     CreateAndRegisterIfNew(".TT",  "Content Type", "application/toontalk-object");
+
+     RegDBCreateKeyEx("MIME\\Database\\Content Type\\application/toontalkfile",""); // obsolete I think... (noticed 010105)
+
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-user","Extension",nvType,".usr",-1);
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-user","CLSID",nvType,szStartTTUserCLSID,-1); // new on 010105
+
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-demo","Extension",nvType,".dmo",-1);
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-demo","CLSID",nvType,szStartTTDemoCLSID,-1); // new on 010105
+
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-puzzle","Extension",nvType,".pzl",-1); // was puzzley by mistake before 260402
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-puzzle","CLSID",nvType,szStartTTPuzzleCLSID,-1); // new on 010105
+
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-city","Extension",nvType,".cty",-1);
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-city","CLSID",nvType,szStartTTCityCLSID,-1); // new on 010105
+
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-object","Extension",nvType,".tt",-1);
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-object","CLSID",nvType,szStartTTCLSID,-1); // new on 010105
+
+     Disable(LOGGING);
+     szTemp = BETA_GUID;
+     AllUsersIniEntryString("Install", "Expires", "-1", szTemp2); 
+     if (szTemp2 == "-1") then
+        // clobber it regardless if this is purchased -- new on 220208
+        CreateAndRegister(szTemp,"",szTemp2);
+     else
+        CreateAndRegisterIfNew(szTemp,"",szTemp2); // was @EXPIRES prior to 090807
+     endif;
+     // new since if product version don't reset value when loading beta (if for same GUID)
+//MessageBox("Creating an entry for " + szTemp + " set to " + @EXPIRES,INFORMATION);
+//     if (bSwedish) then
+//        szTemp = BETA_GUID_8C;  // until demos are redone -- even the Swedish ones
+//        CreateAndRegister(szTemp,"",@EXPIRES);
+//     endif;
+     Enable(LOGGING);
+/*
+     if (bWinNT && szStartTTName != "STT32") then
+        VarSave(SRCTARGETDIR);
+        TARGETDIR = szAppPath;
+        SRCDIR = szAppPath;
+        // start ToonTalk executables with 32bit versions
+        RenameFile("StartTT.EXE","STT16.EXE");
+        SRCDIR = szCDROMPath ^ "\\ToonTalk\\";
+        CopyFile( "STT32.EXE", "StartTT.EXE" );
+        VarRestore(SRCTARGETDIR);
+  //      RenameFile("STT32.EXE","StartTT.EXE");
+     endif;
+*/
+  endif; // of the !RunOnlyInstallation
+     UpdateToonTalkIni("Switches","InstallCompleted","1");
+     DefaultIniEntry("Switches","AutoDemoSubtitle"," ");
+//     DefaultIniEntry("Switches","ShowSubtitles","1");
+     DefaultIniEntry("Switches","RobotCounter","50"); // only about 50 demo robots on page 6
+//     if (!bDirectXAlreadyInstalled && bInstall32) then
+//        MessageBox(@INSTALL_DIRECTX_NEXT,INFORMATION);
+//        szTemp = szCDROMPath ^ "\\DirectX\\DirectX\\dxsetup.exe";
+//        LaunchAppAndWait(szTemp,"",WAIT);
+//     endif;
+
+     UpdateToonTalkIni("Switches","SaveInXML","1"); // new on 041002 -- changed to 1 on 060603  -- and changed from DefaultIniEntry on 150903
+     DefaultIniEntry("Switches","DustyUsedOncePerClick","1"); // changed to 1 on 060603
+     DefaultIniEntry("Switches","MillisecondsPumpyUsedPerClick","500"); // was 0 prior to 060603
+     DefaultIniEntry("Switches","SpeakToolButtons","1");
+
+     // new on 301002
+     DefaultIniEntry("Switches","TryToRecoverFromCrashes","0");
+     DefaultIniEntry("Switches","ShowCrashDirectoryAfterCrashes","1");
+     // following had been commented out prior to 121205
+     DefaultIniEntry("User","EmailToReportCrash","mailto:support@toontalk.com?subject=ToonTalk Crash Report&body=Please add any information that might be useful. Please drag the crash file here.");
+
+//     DefaultIniEntry("User","EmailToReportCrash","mailto:weblabsbugs@ioe.ac.uk?subject=ToonTalk Crash Report [priority=critical; assignedto=ken]&body=Please add any information that might be useful. Please drag the crash file here.");
+
+//     DefaultIniEntry("User","XXXEmailToReportCrash","http://www.weblabs.eu.com/toontalk/issue?:template"); // new on 161003 - to make it easier to switch if no email available for example
+
+     DefaultIniEntry("User","MessageAskingToReportCrash","I'm sorry but ToonTalk crashed. Will you please help us fix the problem?");
+
+// for Portuguese
+//     DefaultIniEntry("User","EmailToReportCrash","mailto:support@toontalk.com?subject=ToonTalk Crash Report&body=Escreva informações que possam ser úteis à resolução do problema. Depois, arraste para aqui o ficheiro produzido durante a falha do ToonTalk (/"Crash Report/").");
+ 
+//    DefaultIniEntry("User","MessageAskingToReportCrash","Infelizmente, o ToonTalk falhou! Está disposto a ajudar-nos a resolver o problema?");
+
+
+     // updated 091002
+     DefaultIniEntry("Java","JavaSourceHTML",@JAVA_SOURCE_HTML); // e.g. "Click to see the Java source code.<br>"
+     DefaultIniEntry("Java","ToonTalkSourceHTML",@TOONTALK_SOURCE_HTML); // e.g. "Click to load this into ToonTalk."
+
+     DefaultIniEntry("Switches","NoAudioWarningGiven","1"); // new on 091002 as a temporary work around to prevent the dialog from appearing underneath the HTML
+
+      // new on 020304 to be able to be overridden
+     DefaultIniEntry("Switches","MovementSelectionFeedback","2");
+     DefaultIniEntry("Switches","SensorsChangeAtDropNotWhenBammed","0");
+     DefaultIniEntry("Switches","NumberShrinkage","");
+     DefaultIniEntry("Switches","IncludeMediaInTimeTravelArchives","0");
+     DefaultIniEntry("Switches","ExitWhenDemoEnds","1");
+     DefaultIniEntry("Switches","GoodSizesAreAFixedPercentageOfScreen","0");
+     DefaultIniEntry("Switches","KeepAllTimeTravelSegments","0");
+     DefaultIniEntry("Switches","DisplayTextRightToLeft","0");
+     DefaultIniEntry("Switches","ClipboardTextMayBeUnicode","0");
+     DefaultIniEntry("Switches","DontScrollOnFloor","0");
+     DefaultIniEntry("Switches","SaveMediaInMainNotebook","0");
+     DefaultIniEntry("Switches","ColorSelectionFeedback","1");
+     DefaultIniEntry("Switches","MakeCurrentExeDefault","2"); // ask
+
+     DefaultIniEntry("Switches","UseLocalIniFilesWhenLoading","0"); // new on 030304
+
+     DefaultIniEntry("User","SpokenLanguage","");
+
+     DefaultIniEntry("Executables","PictureEditor","");
+     DefaultIniEntry("Executables","RunAfterSaving","");
+     DefaultIniEntry("Executables","ShowDialogAfterSaving","");
+
+     DefaultIniEntry("Java","DigitsAfterDecimalPoint","1000");
+
+     DefaultIniEntry("Network","SaveNestsAndBirdsAsLocal","0");
+
+     DefaultIniEntry("Switches","CityFileMax","");
+     DefaultIniEntry("Switches","DustyUsedOncePerClick","1");
+     DefaultIniEntry("Switches","MillisecondsPumpyUsedPerClick","");
+     DefaultIniEntry("Switches","AskBeforeForeignBirdsLoadDLL","1");
+
+     DefaultIniEntry("Switches","GenerateLogs","");
+     DefaultIniEntry("Switches","SecondsBetweenLogs","");
+     DefaultIniEntry("Switches","KeepAllTimeTravelSegments","0");
+     DefaultIniEntry("Switches","MaximumNumberOfTimeLines","");
+     DefaultIniEntry("Switches","MaximumItemsInDusty","100"); // WebLabs uses 10 and the code 1000 - this seems a good compromise
+
+     UpdateToonTalkIni("Java","cabbase","ttclass2.cab"); // moved out of conditional on 020304 since not just WebLabs should use this
+     UpdateToonTalkIni("Java","archive","ttclass2.zip"); 
+
+     UpdateToonTalkIni("Switches","MaximumNumberOfHoles"," "); // new on 060603 -- no limit // prior to 290903 this was just Weblabs??
+
+//    if (bWebLabs) then
+        // copied from patch.rul on 091002 and updated
+//        UpdateToonTalkIni("Directories","ClippingDir",szAppPath ^ "TT_files\\"); // commented out on 090603
+        // new on 010600
+//        szTemp = "*\\..\\..\\Java;*\\..\\..\\Playground\\sounds;*\\..\\..\\Downloads;http://www.ioe.ac.uk/playground/media";
+        // re-written on 071002 and commented out on 030304 since general computation of the path is fine
+//        szTemp = szAppPath ^ "Java" + ";" + szAppPath ^ "Playground\\sounds" + ";" + szAppPath ^ "Downloads" + ";"; // restored on 050903 - had been reduced but sounds were missing
+//        UpdateToonTalkIni("Directories","FileSearchPath",szTemp);
+//        UpdateToonTalkIni("Directories","URLCacheDir",szAppPath ^ "Downloads\\"); // restored on 071002 -- removed on 030304
+//        UpdateToonTalkIni("Directories","URLCacheDir","*\\..\\..\\Downloads"); // updated on 170401
+//        UpdateToonTalkIni("Directories","UserFiles",""); // why?? -- commented out on 030304 so is set or not by users directly
+
+//        UpdateToonTalkIni("Switches","CityFileMax","10"); // new on 150400 -- was 5 prior to 250903
+
+//        UpdateToonTalkIni("Switches","DustyUsedOncePerClick","1"); // new on 071002
+//        UpdateToonTalkIni("Switches","MillisecondsPumpyUsedPerClick","100"); // new on 071002
+
+//        UpdateToonTalkIni("Switches","AskBeforeForeignBirdsLoadDLL","0"); // new on 060603 // ok for all or just WebLabs?????
+
+//        UpdateToonTalkIni("Switches","GenerateLogs","30"); // new on 071002 
+//        UpdateToonTalkIni("Switches","SecondsBetweenLogs","10"); // new on 250903 - combined with above gives 5 minutes due to the following
+//        UpdateToonTalkIni("Switches","KeepAllTimeTravelSegments","1"); // new on 071003 since this means all old archives are available
+//        UpdateToonTalkIni("Switches","MaximumNumberOfTimeLines","1000"); // new on 071003
+
+//        UpdateToonTalkIni("Switches","MaximumItemsInDusty","10"); // new on 060603 -- set to 10 (from 100) on 161003 since can be costly for time travel
+
+//        UpdateToonTalkIni("Directories","CDROMDir",""); // since there isn't one in this installation - but there could be so commented out
+
+//        UpdateToonTalkIni("Executables","PictureEditor","mspaint.exe"); // new on 060603 -- removed on 090603 since Paint in Win98 can't deal with PNG files
+
+//        UpdateToonTalkIni("ButtonKeyboardEquivalents","3","<F11>");
+
+//        if (@TEXT_TO_SPEECH_VOICE != "") then
+//          UpdateToonTalkIni("User", "TextToSpeechMode", @TEXT_TO_SPEECH_VOICE); // new on 170401 
+//        endif;
+
+//        szTemp = szShortAppPath ^ "Users\\" ^ "Playground2001.cty"; // use Short Path to work around some Windows limitations
+//        szTemp = szStartTTPath + " -free_play 1 -time_travel_enabled 0 -default_user Playground2001X"; // updated 310803
+//        AddFolderIcon(FOLDER_DESKTOP, "Playground City", szTemp, "", "", 0, "", REPLACE);
+//        szTemp = szShortAppPath ^ "Users\\" ^ "PlaygroundBook.cty";
+//        szTemp = szStartTTPath + " -free_play 1 -time_travel_enabled 0 -default_user PlaygroundBookX"; // updated 310803
+//        AddFolderIcon(FOLDER_DESKTOP, "Playground Notebook", szTemp, "", "", 0, "", REPLACE);
+          // replaced by something better...
+//     endif;
+    // following moved out of bWebLabs conditional on 150304 and commented out on 010907
+//    DeleteFolderIcon(FOLDER_DESKTOP, "Playground City");
+//    DeleteFolderIcon(FOLDER_DESKTOP, "Playground Notebook");
+
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Function: SetupFolders
+//
+//  Purpose: This function creates all the folders and shortcuts for the
+//           setup.  This includes program groups and items for Windows 3.1.
+//
+///////////////////////////////////////////////////////////////////////////////
+function SetupFolders()
+  STRING szWorkingDir, szProgram;
+  NUMBER nvFileHandle;
+ begin
+
+
+  // TODO : Add all your folder (program group) along with shortcuts (program items)
+  //
+  //
+  //    CreateProgramFolder, AddFolderIcon....
+  //
+
+  if (!bPatch) then
+     DeleteProgramFolder(@PRODUCT_NAME); // to start with a fresh folder
+     CreateProgramFolder(@PRODUCT_NAME);
+  endif;
+
+//  szTemp = "StartTT.EXE";
+//  if (bWinNT && bInstallMinimum) then
+//     szTemp = "STT32.EXE";
+ // endif;
+//  if (!bInstallMinimum) then
+     szWorkingDir =  szAppPath;
+//  else // was SRCDIR ^ szTemp;
+//     szWorkingDir = szCDROMDrive ^ "\\ToonTalk\\";
+//  endif;
+//  szCmdLinePath = szWorkingDir ^ szTemp;
+//  LongPathToShortPath(szCmdLinePath);
+//  LongPathToShortPath(szWorkingDir); commented out on 230300 since Win32 accept long names and they look better
+//  if (bDirectXPossible) then
+//      szProgram = szStartTTPath + " -32 1 -v 22 -language " + @LANGUAGE_NAME;
+//      AddFolderIcon("ToonTalk", @TOONTALK_32_BIT_ICON_LABEL,
+//                    szProgram, szWorkingDir, "", 0, "", REPLACE);
+//      szProgram = szStartTTPath + " -32 1 -v 25 -language " + @LANGUAGE_NAME;
+//      AddFolderIcon("ToonTalk", @TOONTALK_32_BIT_HIGH_RESOLUTION_ICON_LABEL,
+//                    szProgram, szWorkingDir, "", 0, "", REPLACE);
+//  endif;
+//  szProgram = szStartTTPath; // + " -32 0 -v 22 -language " + @LANGUAGE_NAME;
+//  if (bDirectXPossible) then
+//     szTemp = @TOONTALK_16_BIT_ICON_LABEL;
+//  else
+     szTemp = @PRODUCT_NAME;
+//  endif;
+  szProgram = szStartTTPath; // leave all the defaults to toontalk.ini
+if (!bPatch) then
+  AddFolderIcon(@PRODUCT_NAME, szTemp,
+                szProgram, szWorkingDir, "", 0, "", REPLACE);
+  if (bIsShellExplorer) then
+     // should really not ask if already there but update it automatically
+     nTemp = AllUsersIniEntryInt("Install", "AddShortcutOnDesktop"); // if 1 or 0 don't ask
+//     if (bWebLabs) then // new on 151002
+     if (nTemp == 1) then
+        bShortcutOnDesktop = TRUE;
+     elseif (nTemp != 0) then
+        AllUsersIniEntryString("Install", "AskAddShortcutOnDesktop", @SHORTCUT_ON_YOUR_DESKTOP, szTemp); // new on 150304
+        if (AskYesNo( szTemp , YES ) == YES) then
+           bShortcutOnDesktop = TRUE;
+        endif;
+     endif;
+     if (bShortcutOnDesktop) then
+        AddFolderIcon(FOLDER_DESKTOP, @PRODUCT_NAME,
+                      szProgram, szWorkingDir, "", 0, "", REPLACE);
+     endif;
+  endif;
+  szTemp = svLogFile;
+  LongPathToShortPath(szTemp);
+  szProgram = UNINST + " -f" + szTemp;
+
+  AllUsersIniEntryString("Install", "UninstallTitle", @UN_INSTALL_TITLE, szTemp); // new on 110304
+  AddFolderIcon(@PRODUCT_NAME, szTemp, szProgram, WINDIR, "", 0, "", REPLACE);
+     szTemp = szAppPath ^ "\\doc\\" ^ @LANGUAGE_SUBDIRECTORY;
+     // could provide a status.txt version if no browser available
+// following commented out on 140807 since no longer very useful
+//     szProgram = szAppPath ^ "Status.htm";
+//     LongPathToShortPath(szProgram);
+//     AddFolderIcon(@PRODUCT_NAME, @TOONTALK_STATUS_TITLE,
+//                   szProgram, szWorkingDir, "", 0, "", REPLACE);
+     CreateDir(szTemp);
+    if (FindFile(szTemp, "doc.htm", szTemp2) < 0 ) then
+       // first I copy any old file there so it is logged for un-install
+       VarSave(SRCTARGETDIR);
+       TARGETDIR = szTemp;
+       SRCDIR = SUPPORTDIR;
+       XCopyFile("help.htm", "", COMP_NORMAL);
+       VarRestore(SRCTARGETDIR);
+       OpenFileMode(FILE_MODE_BINARY);
+       CreateFile(nvFileHandle, szTemp, "help.htm");
+       szTemp2 = @HTML_HEADER1;
+       WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+       szTemp2 = @HTML_HEADER2;
+       WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+       szTemp2 = @NOHELP_HTML1;
+       WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+//     if (FindFile(szTemp, "doc.htm", szIgnore) < 0) then
+          szTemp2 = "file:///" + szCDROMPath ^ "\\Toontalk\\Doc\\" ^ @LANGUAGE_SUBDIRECTORY ^ "\\doc.htm";
+//     else
+//        szTemp2 = "doc.htm";
+//     endif;
+       if (bCDROMInstall) then
+          WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+       endif;
+       szTemp2 = @NOHELP_HTML2;
+       WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+       CloseFile (nvFileHandle);
+    endif; // else regular help.htm overrides what was there
+    szTemp2 = szAppPath ^ "\\doc\\" ^ @LANGUAGE_SUBDIRECTORY ^ "\\help.htm";
+    LongPathToShortPath(szTemp2);
+    AddFolderIcon(@PRODUCT_NAME, @TOONTALK_HELP_TITLE, szTemp2, "", "", 0, "", REPLACE);
+  endif;
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: CleanUpInstall                                                  //
+//                                                                           //
+//  Purpose: This cleans up the setup.  Anything that should                 //
+//           be released or deleted at the end of the setup should           //
+//           be done here.                                                   //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CleanUpInstall()
+ begin
+
+  if (bInstallAborted) then
+      return 0;
+  endif;
+  DialogShowSdFinishReboot();
+  if (BATCH_INSTALL) then // ensure locked files are properly written
+      CommitSharedFiles(0);
+  endif;
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupInstall                                                    //
+//                                                                           //
+//  Purpose: This will setup the installation.  Any general initialization   //
+//           needed for the installation should be performed here.           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupInstall()
+ begin
+
+  Enable( CORECOMPONENTHANDLING );
+
+  bInstallAborted = FALSE;
+
+  if (bIs32BitSetup) then
+      svDir = PROGRAMFILES ^ @COMPANY_NAME ^ @PRODUCT_NAME;
+  else
+      svDir = PROGRAMFILES ^ @COMPANY_NAME16 ^ @PRODUCT_NAME16; // use shorten names
+  endif;
+
+  TARGETDIR  = svDir;
+
+  SdProductName( @PRODUCT_NAME );
+
+  Enable( DIALOGCACHE );
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  SetupScreen                                                    //
+//                                                                           //
+//  Purpose:  This function establishes  the screen look.  This includes     //
+//            colors, fonts, and text to be displayed.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupScreen()
+ STRING szTemp;
+ begin
+
+  Enable( FULLWINDOWMODE );
+
+  AllUsersIniEntryString("Install", "MainTitle", @TITLE_MAIN, szTemp);
+  SetTitle(szTemp, 24, WHITE);
+//  SetTitle(@TITLE_MAIN , 24, WHITE );
+
+ AllUsersIniEntryString("Install", "TitleCaptionBar", @TITLE_CAPTIONBAR,  szTemp);
+ SetTitle(szTemp,  0, BACKGROUNDCAPTION ); // Caption bar text.
+
+// SetTitle( @TITLE_CAPTIONBAR, 0, BACKGROUNDCAPTION ); // Caption bar text.
+
+  Enable( BACKGROUND );
+
+  Delay( 1 );
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  CheckRequirements                                              //
+//                                                                           //
+//  Purpose:  This function checks all minimum requirements for the          //
+//            application being installed.  If any fail, then the user       //
+//            is informed and the setup is terminated.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CheckRequirements()
+    NUMBER  nvDx, nvDy, nvResult, nvResult2;
+    STRING  svResult;
+
+    STRING svVersionNumber, svVersionNumber2, svCDROMVersionNumber, svPath;
+
+ begin
+
+  bWinNT           = FALSE;
+  bWinNT4          = FALSE; // not used anymore
+  bAlreadyHasUpToDateSAPI = FALSE;
+  bIsShellExplorer = FALSE;
+  nvResult2 = 0;
+
+//  bPatch = (@PRODUCT_KIND = "PRODUCT_PATCH"); // new on 030401
+// updated 090807
+    bPatch = AllUsersIniEntryInt("Install", "Patch");
+
+  if (bPatch) then
+      if (GetProfString(szToonTalkIni, "Directories", "MainDir" , svDir) = 0) then          // updated 090807
+         // nothing else to do -- svDir binding should be enough
+//    if (GetProfString(szToonTalkIni, "Versions", "CDROM" , svCDROMVersionNumber) = 0) then
+//       if (GetProfString(szToonTalkIni, "Versions", "Language", svResult) = 0) then
+//        if (svResult != @LANGUAGE_NAME) then
+////        if (svResult != "American" || @LANGUAGE_NAME != "US English") then
+//          if (!((svResult == "American" && @LANGUAGE_NAME == "US English") ||
+//            (svResult == "British" && @LANGUAGE_NAME == "UK English"))) then // updated on 180601
+//                if (AskYesNo (@DIFFERENT_LANGUAGE_VERSIONS1 + " " + svResult + " " + @DIFFERENT_LANGUAGE_VERSIONS2 + " " + @LANGUAGE_NAME + ". " + @DIFFERENT_LANGUAGE_VERSIONS3, YES) = YES) then
+//           abort;
+//                endif;
+//         endif;
+//          endif;
+//       endif;
+//       if (GetProfString(szToonTalkIni, "Versions", "PRODUCT_PATCH", svVersionNumber) = 0) then
+//          // there already is a patch
+//          if (VerCompare ("1." + product_version, "1." + svVersionNumber,  VERSION ) = LESS_THAN) then // need 4 numbers so prepending 1.
+//         if (AskYesNo (@EQUAL_OR_NEWER_PATCH_ALREADY_INSTALLED, YES) = YES) then
+//        abort;
+//         endif;
+//      elseif (VerCompare ("1." +  product_version, "1." + svCDROMVersionNumber, VERSION ) = LESS_THAN) then
+//         if (AskYesNo (@EQUAL_OR_NEWER_CDROM_ALREADY_INSTALLED, YES) = YES) then
+//        abort;
+//         endif;
+//          endif;
+//       endif;
+    else
+       AllUsersIniEntryString("Install", "PatchIsOnlyForProduct", "", szTemp);
+       MessageBox(szTemp, WARNING);
+       abort;
+    endif;
+  elseif (GetProfString(szToonTalkIni, "Versions", @PRODUCT_KIND, svResult) = 0) then
+     if (svResult != product_version) then
+        if (AskYesNo ( @PROCEED_DESPITE_OLD_INSTALLATION , YES ) = YES) then
+           abort;
+        endif;
+     endif;
+  elseif (@PRODUCT_KIND = "CDROM" &&
+          (GetProfString(szToonTalkIni, "Versions", "CDROM_TRIAL", svResult) = 0 ||
+           GetProfString(szToonTalkIni, "Versions", "INTERNET_TRIAL", svResult) = 0 ||
+           GetProfString(szToonTalkIni, "Versions", "INTERNET_BETA", svResult) = 0)) then
+        if (AskYesNo ( @PROCEED_DESPITE_OLD_INSTALLATION , YES ) = YES) then
+           abort;
+        endif;
+   endif;
+
+//  bTestInstall = TRUE;
+  bCDROMInstall = (StrCompare ( "CDROM" , @PRODUCT_KIND ) = 0);
+//  bNeedToInstallDirectX = FALSE; // until proven otherwise
+
+  // Check screen resolution.
+  GetExtents( nvDx, nvDy );
+
+  if (nvDy < 480) then
+      MessageBox( @ERROR_VGARESOLUTION, WARNING );
+      abort;
+  endif;
+
+  // set 'setup' operation mode
+  bIs32BitSetup = TRUE;
+  GetSystemInfo( ISTYPE, nvResult, svResult );
+  if (nvResult = 16) then
+      bIs32BitSetup = FALSE; // running 16-bit setup
+//      return 0; // no additional information required
+//  endif;
+  else
+  // --- 32-bit testing after this point ---
+
+     // Determine the target system's operating system.
+     GetSystemInfo( OS, nvResult, svResult );
+     if (nvResult =  IS_WINDOWSNT) then
+         // Running Windows NT.
+         bWinNT = TRUE;
+         // Check to see if the shell being used is EXPLORER shell.
+         if (GetSystemInfo( OSMAJOR, nvResult, svResult ) = 0) then
+             if (nvResult >= 4) then
+                 bIsShellExplorer = TRUE;
+             endif;
+             if (nvResult = 4) then
+                 bWinNT4 = TRUE;
+             elseif (nvResult >= 5) then // Windows 2000 or later -- changed on 140302 to be = rather than >= since Windows XP does not include SAPI 4.0
+                // updated on 150903 since XP seems to be 5.1 so the major version is the same as Win 2000!
+                if (GetSystemInfo( OSMINOR, nvResult2, svResult ) = 0) then
+		   if (nvResult2 = 0) then // is Win2000
+                      bAlreadyHasUpToDateSAPI = TRUE;
+                   endif;
+                endif;
+             endif;
+             bWin2000OrLater = (nvResult >= 5);
+         endif;
+     elseif (nvResult = IS_WINDOWS95 ) then
+        if (GetSystemInfo( OSMAJOR, nvResult, svResult ) = 0) then
+           if (nvResult > 4) then // later than Windows 98 Second Edition
+              bAlreadyHasUpToDateSAPI = TRUE;
+           endif;
+        endif;
+        bIsShellExplorer = TRUE;
+     endif;
+  endif;
+
+  // my additions
+
+  if (bIsShellExplorer) then
+     // Trying to leave it completely up to Microsoft now
+
+     if (VerFindFileVersion ( "ddraw.dll" , svPath , svVersionNumber ) == FILE_NOT_FOUND) then
+         bSomeDirectXInstalled = FALSE;
+     else
+         bSomeDirectXInstalled = TRUE;
+//         bOldDirectXInstalled = (VerCompare ( svVersionNumber , @DDRAW_VERSION_NUMBER , VERSION ) = LESS_THAN);
+     endif;
+  else
+     nTemp = ComponentFilterOS(MEDIA , 0 , ISOSL_WIN95|ISOSL_NT40 , TRUE);
+  endif;
+  if (bCDROMInstall) then
+     bDirectXPossible = bIsShellExplorer;
+//     ParsePath(szCDROMDrive, SRCDIR, DISK);
+     if (SRCDISK = "." || SRCDISK = ".\\") then // this happens on 16 bit systems...
+        AskText ("Please enter the drive for your CDROM", "D:", szCDROMDrive);
+     else
+         szCDROMDrive = SRCDISK;
+     endif;
+     szTemp = SRCDISK ^ "\\Install\\";
+//MessageBox(szTemp,INFORMATION);
+//     if (szTemp = SRCDIR) then
+//        szCDROMPath = szCDROMDrive;
+//     else
+//        szCDROMPath = SRCDIR ^ "\\..\\";
+//     endif;
+// changed on 080304 since I no longer put the setup files one level down in install (since autorun.inf semmed to have problems)
+       szCDROMPath = SRCDIR;
+MessageBox(szCDROMPath,INFORMATION);
+  else
+     bDirectXPossible = FALSE;
+//     szCDROMDrive = "d:"; // for testing
+  endif;
+
+  szTemp = WINDIR ^ "\\System\\"; // WinG expects it to be on System not System32 if it exists
+//  bWinGAlreadyInstalled = (FindFile(szTemp,"wing.dll",szTemp2) = 0);
+
+  bShortcutOnDesktop = FALSE; // unless proven otherwise
+
+  bSwedish = (@LANGUAGE_NAME == "Swedish");
+
+  bBritish = (@LANGUAGE_NAME == "UK English"); // was "British" prior to 300300
+
+  bEnglish = (@LANGUAGE_NAME % "English"); // new on 250501
+
+  bBrazilian = (@LANGUAGE_NAME == "Brasileiro"); // new on 250501
+
+//  bWebLabs = (@SPECIAL_INSTALL == "1"); // new on 091002 -- might be other values in the future -
+// rewritten on 030304 so same installer works for different purposes
+//   GetProfInt(szInstallationAllUsersIniFile, "Switches", "WebLabsInstallation", nTemp);
+//   bWebLabs = (nTemp != 0);
+//     bWebLabs = AllUsersIniEntryInt("Install", "WebLabs");
+    DisplayLicense = AllUsersIniEntryInt("Install", "DisplayLicense"); // was misspelled prior to 190805
+
+   // following new on 190805
+   VarSave(SRCTARGETDIR);
+   TARGETDIR = WINDIR ^ "\\Speech\\"; // can be there as well
+   if (VerFindFileVersion ( "speech.dll" , svPath , svVersionNumber ) != 0) then // not found or has no version number
+      bSpeechAPIInstalled = FALSE;
+   else
+      bSpeechAPIInstalled = (VerCompare ( svVersionNumber , "4.0.4.2512" , VERSION ) != LESS_THAN);
+   endif;
+   VarRestore(SRCTARGETDIR);
+
+
+//if (bWebLabs) then
+//MessageBox("bWebLabs set to true", INFORMATION);
+//else
+//MessageBox("bWebLabs set to false", INFORMATION);
+//endif;
+
+  if (VerFindFileVersion ("Shdocvw.dll",  svPath, svVersionNumber) == FILE_NOT_FOUND) then
+    // none or pre IE 3 installed
+     nIEVersion = 0;
+  elseif (VerCompare(svVersionNumber,"4.71.1008.3",VERSION) = LESS_THAN) then
+     nIEVersion = 3;
+  elseif (VerCompare(svVersionNumber,"5.00.2014.0216",VERSION) = LESS_THAN) then
+     nIEVersion = 4;
+  elseif (VerCompare(svVersionNumber,"6.0.2462.0000",VERSION) = LESS_THAN) then
+     nIEVersion = 5;
+  else
+     nIEVersion = 6; // or possibly higher
+  endif;
+
+  if (nIEVersion < 6 && VerFindFileVersion ("msxml.dll",  svPath, svVersionNumber) == FILE_NOT_FOUND) then
+// new on 210404
+     MessageBox("ToonTalk uses Microsoft Window's XML library and it seems to be missing. If ToonTalk doesn't work properly then ensure that you have Internet Explorer 6 or higher installed. Visit www.microsoft.com/IE for more information.",INFORMATION);
+  endif;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdWelcome                                             //
+//                                                                           //
+//  Purpose: This function handles the standard welcome dialog.              //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdWelcome()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+
+//  szTitle = "";
+//  szMsg   = "";
+  AllUsersIniEntryString("Install", "WelcomeTitle", "Welcome", szTitle);
+  AllUsersIniEntryString("Install", "WelcomeMessage", "This will install ToonTalk.", szMsg);
+  nResult = SdWelcome( szTitle, szMsg );
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdLicense                                             //
+//                                                                           //
+//  Purpose: This function displays the license agreement dialog.            //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdLicense()
+    NUMBER nResult;
+    STRING szTitle, szMsg, szQuestion, szLicenseFile;
+ begin
+
+  szLicenseFile = SUPPORTDIR ^ "license.txt";
+  szTitle    = "";
+  szMsg      = "";
+  szQuestion = "";
+  nResult    = SdLicense( szTitle, szMsg, szQuestion, szLicenseFile );
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdAskDestPath                                         //
+//                                                                           //
+//  Purpose: This function asks the user for the destination directory.      //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdAskDestPath()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+
+  szTitle = "";
+  szMsg   = "";
+  if (bPatch) then
+     GetProfString(szToonTalkIni, "Directories", "MainDir", svDir);
+  else
+     nResult = SdAskDestPath( szTitle, szMsg, svDir, 0 );
+  endif;
+
+  TARGETDIR = svDir;
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdSetupType                                           //
+//                                                                           //
+//  Purpose: This function displays the standard setup type dialog.          //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdSetupType()
+    NUMBER nResult, nType;
+    STRING szTitle, szMsg;
+ begin
+
+  if (bCDROMInstall) then // was bWebLabs bewteen 091002 and 150304
+//     svSetupType = "Custom"; // commented out on 080304 since no need to let user decide about whether to install the minimum...
+//     nType = CUSTOM;
+       svSetupType = "Typical";
+       nType = TYPICAL;
+     return 0;
+  endif;
+  if (!bCDROMInstall) then
+    svSetupType = "Internet Beta";
+    return 0;
+  endif;
+  szTitle = "";
+  szMsg   = "";
+  switch (svSetupType)
+  case "Typical":
+       nType = TYPICAL;
+  case "Custom":
+       nType = CUSTOM;
+  case "Compact":
+       nType = COMPACT;
+  case "":
+       svSetupType = "Typical";
+       nType = TYPICAL;
+  endswitch;
+
+
+  nResult = SetupType( szTitle, szMsg, "", nType, 0 );
+  switch (nResult)
+  case COMPACT:
+       svSetupType = "Compact";
+/*
+       ComponentSelectItem(MEDIA, "Program Files", FALSE);
+       ComponentSelectItem(MEDIA, "Program Files/WinG 16 Bit Extension", TRUE);
+       ComponentSelectItem(MEDIA, "Documentation", FALSE);
+       ComponentSelectItem(MEDIA, "Demonstrations", FALSE);
+       ComponentSelectItem(MEDIA, "Java Components", FALSE);
+       ComponentSelectItem(MEDIA, "Puzzles", FALSE);
+       ComponentSelectItem(MEDIA, "Speech Components", FALSE);
+       ComponentSelectItem(MEDIA, "Data Files", FALSE);
+       ComponentSelectItem(MEDIA, "Debugging Components", FALSE);
+*/
+  case TYPICAL:
+       svSetupType = "Typical";
+  case CUSTOM:
+       svSetupType = "Custom";
+  endswitch;
+
+//  nResult = SdSetupTypeEx( szTitle, szMsg, "", svSetupType, 0 );
+//  ComponentSetupTypeSet (MEDIA, "Typical");
+//  svSetupType = "Typical";
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdComponentDialog2                                    //
+//                                                                           //
+//  Purpose: This function displays the custom component dialog.             //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdComponentDialog2()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+/* commented out on 250501
+  if (bSwedish) then
+     // this a work around of an InstallShield bug
+   if ((svSetupType != "Custom") && (svSetupType != "")) then
+     ComponentSelectItem(MEDIA, "Speech Components\\Swedish Speech Files", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Applet Maker Archives", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Java Compiler", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Audio Data Files", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Low Resolution Graphics", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\High Resolution Graphics", FALSE);
+     ComponentSelectItem(MEDIA, "Data Files\\High Resolution Graphic Files", FALSE);
+     ComponentSelectItem(MEDIA, "Program Files\\Force Feedback Files", FALSE);
+     ComponentSelectItem(MEDIA, "Program Files\\NT Program Files", FALSE);
+     ComponentSelectItem(MEDIA, "Demonstrations\\Swedish Narration for Introduction", FALSE);
+     ComponentSelectItem(MEDIA, "Demonstrations\\Swedish Narration for all but Introduction", FALSE);
+     ComponentSelectItem(MEDIA, "Demonstrations\\New High Resolution Demos", FALSE);
+     ComponentSelectItem(MEDIA, "Demonstrations\\Swedish Subtitles", FALSE);
+   endif;
+   if (svSetupType == "Compact") then
+      ComponentSelectItem(MEDIA, "Demonstrations\\New Low Resolution Demos", FALSE);
+      ComponentSelectItem(MEDIA, "Documentation\\Common Documentation Files", FALSE);
+      ComponentSelectItem(MEDIA, "Documentation\\Swedish Documentation", FALSE);
+      ComponentSelectItem(MEDIA, "Documentation\\Documentation Java Files", FALSE);
+      ComponentSelectItem(MEDIA, "Puzzles\\Swedish Puzzles", FALSE);
+      ComponentSelectItem(MEDIA, "Data Files\\Common Data Files", FALSE);
+   endif;
+   ComponentSelectItem(MEDIA, "Speech Components\\English Speech Files", FALSE);
+   ComponentSelectItem(MEDIA, "Documentation\\English Documentation", FALSE);
+   ComponentSelectItem(MEDIA, "Documentation\\English Help HTML", FALSE);
+   ComponentSelectItem(MEDIA, "Program Files\\32 Bit English Program Files", FALSE);
+   ComponentSelectItem(MEDIA, "Program Files\\16 Bit English Program Files", FALSE);
+   ComponentSelectItem(MEDIA, "Program Files\\File Extension Files", FALSE);
+   ComponentSelectItem(MEDIA, "Demonstrations\\English Subtitles", FALSE);
+   ComponentSelectItem(MEDIA, "Demonstrations\\English Narration for Introductory Tour", FALSE);
+   ComponentSelectItem(MEDIA, "Demonstrations\\English Narration for all but Introductory Tour", FALSE);
+   ComponentSelectItem(MEDIA, "Puzzles\\English Puzzles", FALSE);
+     // off by default for all setup types
+  endif;
+*/
+  if ((svSetupType != "Custom") && (svSetupType != "")) then
+      return 0;
+  endif;
+
+  if (!bIsShellExplorer) then // will reset them again but this way they should look deselected
+     DeselectWin95DependentComponents();
+  endif;
+
+  szTitle  = "";
+  szMsg    = "";
+  nResult  = SdComponentDialog2( szTitle, szMsg, svDir, "" );
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdFinishReboot                                        //
+//                                                                           //
+//  Purpose: This function will show the last dialog of the product.         //
+//           It will allow the user to reboot and/or show some readme text.  //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdFinishReboot()
+    NUMBER nResult, nDefOptions;
+    STRING szTitle, szMsg1, szMsg2, szOption1, szOption2, starttt_command_line;
+    NUMBER launch_number;
+    STRING launch_number_string,launch_key_name;
+    NUMBER bOpt1, bOpt2;
+ begin
+
+   bOpt2 = FALSE;
+   szMsg1 = "";
+   szMsg2 = "";
+   szOption1 = "";
+   szOption2 = "";
+
+  AllUsersIniEntryString("Install", "CommandLine", "", starttt_command_line);
+
+//  if (bDirectXPossible && !bDirectXAlreadyInstalled) then
+//      bOpt1 = FALSE;
+//      SdFinish(@INSTALLATION_COMPLETE_TITLE, @DIRECTX_INSTALLATION_NEXT, szMsg2, szOption1, szOption2, bOpt1, bOpt2 );
+//      InstallDirectX();
+//      if (bNeedToReboot) then
+         // only reason so far is DirectX wants to reboot so...
+//         return RebootDialog(@REBOOT_TITLE,@REBOOT_MESSAGE, SYS_BOOTWIN);
+//      endif;
+//      return 0;
+//  endif;
+   VarSave(SRCTARGETDIR);
+   SRCDIR = szMyDocToonTalk;
+   TARGETDIR = WINDIR;
+   CopyFile("toontalk.ini","toontalk.ini"); // new on 091002 since demos need this - and important if there are different Windows user log ins
+   CopyFile("tt_fpt.ini","tt_ftp.ini"); // new on 270904
+   VarRestore(SRCTARGETDIR);
+
+//if (bWebLabs) then
+
+/* commented out on 310803
+// move if this works OK
+//  AddFolderIcon (szAppPath ^ "Playground\\Sounds", "boing.lnk" , szAppPath ^ "Playground\\Sounds" ^ "boing1.wav", "", "", 0, "", REPLACE); 
+//  AddFolderIcon (szAppPath ^ "Playground\\Sounds", "ånga.lnk" , szAppPath ^ "Playground\\Sounds" ^ "steam.wav", "", "", 0, "", REPLACE); 
+// following is new on 290501
+  if (AskYesNo ("The installer can create shortcuts with Swedish names for the Playground sounds. This may take a several minutes. Do you want to create these shortcuts?", YES) == YES) then
+
+LinkSound("abambi", "abambi"); 
+LinkSound("Brännkammare", "AfterBurn"); 
+LinkSound("Flyglarm", "AirHorn"); 
+LinkSound("Larmsignal1", "Alert1"); 
+LinkSound("Larmsignal2", "Alert2"); 
+LinkSound("ett", "lejon alion"); 
+LinkSound("Basun", "Bassoon"); 
+LinkSound("Fladder", "mus batchirp"); 
+LinkSound("Badvatten", "BathWater"); 
+LinkSound("Beepbeep", "Beepbeep"); 
+LinkSound("BeepBeep2", "BeepBeep2"); 
+LinkSound("Beet5", "Beet5"); 
+LinkSound("Plingklocka", "Bell"); 
+LinkSound("Klockringning", "BellToll"); 
+LinkSound("Cykel1", "Bicycle1"); 
+LinkSound("Cykel2", "Bicycle2"); 
+LinkSound("bionic", "bionic"); 
+LinkSound("Fågelsång", "BirdSong"); 
+LinkSound("Fågelsång2", "BirdSong2"); 
+LinkSound("Boing1", "Boing1"); 
+LinkSound("Boing2", "Boing2"); 
+LinkSound("Bong", "Bong"); 
+LinkSound("Bonkzing", "Bonkzing"); 
+LinkSound("BOP", "BOP"); 
+LinkSound("Bäck", "Brook"); 
+LinkSound("Bubbel", "Bubble"); 
+LinkSound("Kula1", "bullet1"); 
+LinkSound("Kula2", "bullet2"); 
+LinkSound("Kula3", "bullet3"); 
+LinkSound("Rap", "Burp"); 
+LinkSound("Bussklocka", "BusBell"); 
+LinkSound("Buzz", "Buzz"); 
+LinkSound("byoing", "byoing"); 
+LinkSound("Bilstart1", "CarStart1"); 
+LinkSound("Bilstart2", "CarStart2"); 
+LinkSound("Katt1", "Cat1"); 
+LinkSound("Katt2", "Cat2"); 
+LinkSound("Hurra", "Cheer"); 
+LinkSound("Ching", "Ching"); 
+LinkSound("Kyrkklockor", "ChurchBells"); 
+LinkSound("clang1", "clang1"); 
+LinkSound("Applåd", "CLAPPING"); 
+LinkSound("Väggklocka", "Clock"); 
+LinkSound("Klockdong", "clockdong"); 
+LinkSound("Tuppkyckling", "Cockerel"); 
+LinkSound("Dator_klar", "computer_ready"); 
+LinkSound("Kosmisk", "Cosmic"); 
+LinkSound("Ko", "Cow"); 
+LinkSound("Ko_som_muar", "COWMOO"); 
+LinkSound("Krasch", "CRASH"); 
+LinkSound("Syrsor", "crickets"); 
+LinkSound("Crunch", "Crunch"); 
+LinkSound("Crunch2", "Crunch2"); 
+LinkSound("Gök", "CUCKOO"); 
+LinkSound("Gökur", "cuckooclock"); 
+LinkSound("Cymbal", "Cymbal"); 
+LinkSound("Liten_cymbal", "cymbalsmall"); 
+LinkSound("Da-ding", "Da-ding"); 
+LinkSound("DaDaDa", "DaDaDa"); 
+LinkSound("DeLa", "DeLa"); 
+LinkSound("Tärning1", "DiceRoll1"); 
+LinkSound("Tärning2", "DiceRoll2"); 
+LinkSound("Dinosaur", "Dinosaur"); 
+LinkSound("Hundskall", "Dogbark"); 
+LinkSound("Hundskall2", "Dogbark2"); 
+LinkSound("Hundskall3", "Dogbark3"); 
+LinkSound("Hundflämtning", "DogPanting"); 
+LinkSound("Liten_hund", "DogSmall"); 
+LinkSound("Dörrklocka", "Doorbell"); 
+LinkSound("Dropp", "Drip"); 
+LinkSound("Drong", "Drong"); 
+LinkSound("Anka", "Duck"); 
+LinkSound("dweewee", "dweewee"); 
+LinkSound("E", "E"); 
+LinkSound("Eek", "Eek"); 
+LinkSound("Töjning", "elastic"); 
+LinkSound("Elefant", "ELEPHANT"); 
+LinkSound("Elefant2", "Elephant2"); 
+LinkSound("Stärka", "Energize"); 
+LinkSound("Explodera", "Explode"); 
+LinkSound("Explosion2", "explosion2"); 
+LinkSound("Försvinna", "Fade"); 
+LinkSound("Fall1", "Fall1"); 
+LinkSound("Fall2", "Fall2"); 
+LinkSound("Fanfar", "Fanfare"); 
+LinkSound("Bondgård", "farmyard"); 
+LinkSound("Snabb_bil", "FastCar"); 
+LinkSound("Fjädrar", "feathers"); 
+LinkSound("Brandbil", "FireTruck"); 
+LinkSound("Spola", "FLUSH"); 
+LinkSound("MISTLUR1", "FogHorn1"); 
+LinkSound("MISTLUR2", "FogHorn2"); 
+LinkSound("Groda", "frog"); 
+LinkSound("Grodor", "Frogs"); 
+LinkSound("Spöke", "Ghost"); 
+LinkSound("Fnitter", "Giggle"); 
+LinkSound("Fnitter2", "giggle2"); 
+LinkSound("Glaskross", "glassbreak"); 
+LinkSound("Glaskross2", "GlassBreak2"); 
+LinkSound("Get", "goat"); 
+LinkSound("Godzilla", "godzilla"); 
+LinkSound("GongGong", "Gong"); 
+LinkSound("Gås", "Goose"); 
+LinkSound("Grhino", "grhino"); 
+LinkSound("Trafikkaos", "Gridlock"); 
+LinkSound("Morrning", "growl"); 
+LinkSound("Gevär", "GunRepeat"); 
+LinkSound("Hello", "hello"); 
+LinkSound("Träff", "hit"); 
+LinkSound("Hmm", "Hmm"); 
+LinkSound("Biltuta1", "Honk1"); 
+LinkSound("Biltuta2", "Honk2"); 
+LinkSound("Biltuta3", "Hooter"); 
+LinkSound("Tuta", "Horn"); 
+LinkSound("Tuta2", "horn2"); 
+LinkSound("Häst1", "Horse1"); 
+LinkSound("Häst2", "Horse2"); 
+LinkSound("Ylande", "HOWL"); 
+LinkSound("Inkräktare", "invader"); 
+LinkSound("Lastbilstuta", "Klaxon"); 
+LinkSound("Laladong", "Laladong"); 
+LinkSound("Laserpistol1", "LaserGun1"); 
+LinkSound("Laserpistol2", "LaserGun2"); 
+LinkSound("Laserpistol3", "LaserGun3"); 
+LinkSound("Laserpistol4", "LaserGun4"); 
+LinkSound("Laserpistol5", "LaserGun5"); 
+LinkSound("Skratt", "LAUGH"); 
+LinkSound("raketstart", "launch"); 
+LinkSound("LiftOff", "LiftOff"); 
+LinkSound("Lejon", "Lion"); 
+LinkSound("Lejon2", "Lion2"); 
+LinkSound("Dåre", "loon"); 
+LinkSound("Trollspö", "MagicWand"); 
+LinkSound("Skala", "Majscale"); 
+LinkSound("Marsian1", "Martian1"); 
+LinkSound("Marsian2", "Martian2"); 
+LinkSound("Mjau", "Meow"); 
+LinkSound("Modem", "Modem"); 
+LinkSound("Mu", "Moo"); 
+LinkSound("Rör_sig", "Moving"); 
+LinkSound("Musik1", "Music1"); 
+LinkSound("Musik2", "Music2"); 
+LinkSound("inget_ljud", "nosound"); 
+LinkSound("tonenA", "noteA"); 
+LinkSound("tonenB", "noteB"); 
+LinkSound("tonenC", "noteC"); 
+LinkSound("tonenD", "noteD"); 
+LinkSound("tonenG", "noteG"); 
+LinkSound("OneStep", "OneStep"); 
+LinkSound("Oops", "Oops"); 
+LinkSound("Orgel", "Organ"); 
+LinkSound("Uggla", "OWL"); 
+LinkSound("Papegoja", "Parrot"); 
+LinkSound("Papegoja2", "Parrot2"); 
+LinkSound("Vissla", "pennywhistle"); 
+LinkSound("Foton", "Photon"); 
+LinkSound("Fjutt", "Phut"); 
+LinkSound("Gris", "Pig"); 
+LinkSound("Svinstia", "Pigpen"); 
+LinkSound("Pilot", "pilot"); 
+LinkSound("Ping", "Ping"); 
+LinkSound("Flygplan", "Plane"); 
+LinkSound("Flygplan1", "Plane1"); 
+LinkSound("Flygplan2", "Plane2"); 
+LinkSound("Flygplan3", "Plane3"); 
+LinkSound("PLAYEAR", "PLAYEAR"); 
+LinkSound("Plopp", "Plop"); 
+LinkSound("Polissiren", "PoliceSiren"); 
+LinkSound("Flugor", "PondFlies"); 
+LinkSound("Flugor2", "PondFlies2"); 
+LinkSound("Pop1", "Pop1"); 
+LinkSound("Pop2", "Pop2"); 
+LinkSound("Pop3", "Pop3"); 
+LinkSound("Pop4", "Pop4"); 
+LinkSound("Pop5", "Pop5"); 
+LinkSound("Hälla", "Pouring"); 
+LinkSound("Gaspådrag", "PowerUp"); 
+LinkSound("Dunk", "Punch"); 
+LinkSound("Kvack", "Quack"); 
+LinkSound("Racer", "racer"); 
+LinkSound("randh", "Randh"); 
+LinkSound("Buande", "Raspberry"); 
+LinkSound("Strålpistol", "raygun"); 
+LinkSound("Noshörning", "RHINO"); 
+LinkSound("Rikoschett", "RICOCHET"); 
+LinkSound("Rödhake", "Robin"); 
+LinkSound("Tupp", "ROOSTER"); 
+LinkSound("Scooby", "Scooby"); 
+LinkSound("Måsar", "Seagulls"); 
+LinkSound("Vid_havet", "Seaside"); 
+LinkSound("Får", "Sheep"); 
+LinkSound("Fartyg", "Ship1"); 
+LinkSound("Slurp", "sinkdrain"); 
+LinkSound("SMASH", "SMASH"); 
+LinkSound("Smasch", "snore"); 
+LinkSound("Sonar", "sonar"); 
+LinkSound("Rymd", "space"); 
+LinkSound("Rymd4", "Space4"); 
+LinkSound("Splat", "Splat"); 
+LinkSound("Spring1", "Spring1"); 
+LinkSound("Spring2", "Spring2"); 
+LinkSound("Spring3", "Spring3"); 
+LinkSound("Ånga", "Steam"); 
+LinkSound("Kortvågsradio", "SwRadio"); 
+LinkSound("Synth", "Synth"); 
+LinkSound("Flygplanssatart", "takeoff"); 
+LinkSound("Tekopp", "Teacup"); 
+LinkSound("Telefon", "Telephone"); 
+LinkSound("Telefon2", "Telephone2"); 
+LinkSound("thankyou", "thankyou"); 
+LinkSound("Tiger", "tiger"); 
+LinkSound("Tiger2", "Tiger2"); 
+LinkSound("Trafik", "Traffic"); 
+LinkSound("Tåg1", "Train1"); 
+LinkSound("Tåg2", "Train2"); 
+LinkSound("Triangel", "TRIANGLE"); 
+LinkSound("Trumpet", "Trumpet"); 
+LinkSound("TWANG", "TWANG"); 
+LinkSound("Twoing", "Twoing"); 
+LinkSound("urhh", "urhh"); 
+LinkSound("Warble1", "Warble1"); 
+LinkSound("Warble2", "Warble2"); 
+LinkSound("Warp", "Warp"); 
+LinkSound("WarpSpeed", "WarpSpeed"); 
+LinkSound("Tvättbräde", "WashBoard"); 
+LinkSound("Vattenbubblor", "waterbubbles"); 
+LinkSound("Virvla", "Whirling"); 
+LinkSound("Häxa", "witch"); 
+LinkSound("Wobble1", "Wobble1"); 
+LinkSound("Wobble2", "Wobble2"); 
+LinkSound("Wobble3", "Wobble3"); 
+LinkSound("Vargylande", "WOLFHOWL"); 
+LinkSound("Xylofon1", "Xylophone1"); 
+LinkSound("Xylofon2", "Xylophone2"); 
+LinkSound("Yippee", "Yippee"); 
+LinkSound("Yippee1", "Yippee1"); 
+LinkSound("Zap1", "Zap1"); 
+LinkSound("Zap2", "Zap2"); 
+LinkSound("Zap3", "Zap3"); 
+LinkSound("Zip", "Zip"); 
+endif;
+*/
+
+//MessageBox("We are now going to install some text-to-speech engines. If the voice installer asks if you want to restart answer NO.",INFORMATION);
+
+//LaunchAppAndWait(SUPPORTDIR ^ "lhttseng.exe","",WAIT); // new on 091002
+//LaunchAppAndWait(SUPPORTDIR ^ "tv_enua.exe","",WAIT); // new on 151002
+
+//endif;
+
+     // following is a generalized version of the above - new on 1010304
+     launch_number = 1;
+     NumToStr(launch_number_string,launch_number);
+     launch_key_name = "Launch" + launch_number_string;
+     AllUsersIniEntryString("Install", launch_key_name, "", szTemp);
+     while (szTemp != "") 
+        AllUsersIniEntryString("Install", launch_key_name + "Message", "", szTemp2);
+        if (szTemp2 != "") then
+           MessageBox(szTemp2,INFORMATION);
+        endif;
+        AllUsersIniEntryString("Install", launch_key_name + "CommandLine", "", szTemp2);
+        if (LaunchAppAndWait(szCDROMPath ^ szTemp, szTemp2, WAIT) < 0) then
+           MessageBox("Failed to launch: " + (szCDROMPath ^ szTemp) + " " + szTemp,INFORMATION);
+        endif;
+        launch_number = launch_number+1;
+        NumToStr(launch_number_string,launch_number);
+        launch_key_name = "Launch" + launch_number_string;
+        AllUsersIniEntryString("Install", launch_key_name, "", szTemp);
+     endwhile;
+
+
+//  if (bWebLabs) then // conditional removed on 10304
+  // no point removing this but the new scheme (as of 060304 is more general)
+//MessageBox(szStartTTPath,INFORMATION);
+//MessageBox(" -next_dialog " + szAppPath ^ "doc\\english\\wlab_ini.htm",INFORMATION);
+
+    szTemp = SRCDISK ^ "\\Install\\Latest\\"; // new on 301003
+//MessageBox(szTemp,INFORMATION);
+  
+    if (FindAllFiles (szTemp, "*.exe", szTemp2, RESET) = 0) then
+//MessageBox(szTemp2,INFORMATION);
+      if ( ParsePath (szTemp3, szTemp2, FILENAME) == 0) then // fixed on 201103
+        VarSave(SRCTARGETDIR);
+        TARGETDIR = szAppPath;
+        SRCDIR = szTemp;
+//MessageBox("target dir = " + szAppPath,INFORMATION);
+//MessageBox("source dir = " + szTemp,INFORMATION);
+//MessageBox("szTemp3 = " + szTemp3,INFORMATION);
+        CopyFile(szTemp3,szTemp3); // didn't happen
+        VarRestore(SRCTARGETDIR);
+        ParsePath (szTemp3, szTemp2, FILENAME_ONLY); // was buggy but fixed 071103
+//MessageBox("szTemp3 = " + szTemp3,INFORMATION);
+        UpdateToonTalkIni("Executables","ToonTalk32",szTemp3);
+        UpdateToonTalkIni("Executables","DemoToonTalk32",szTemp3); // new on 221103
+       endif;
+   endif;
+
+//MessageBox("About to LaunchApp " + szStartTTPath + " -next_dialog " + "\"" + szAppPath ^ "doc\\english\\wlab_ini.htm" +  "\"", INFORMATION);
+//     if (LaunchApp(szStartTTPath, " -next_dialog " + "\"" + szAppPath ^ "doc\\english\\wlab_ini.htm" +  "\"") < 0) then
+   if(starttt_command_line != "") then // conditional new on 103004
+      if (LaunchApp(szStartTTPath, starttt_command_line) < 0) then // rewritten 100304
+         MessageBox(@CANT_LAUNCH + " " + szStartTTPath,WARNING);
+      endif;
+      return 0;
+  endif;
+
+  if (bNeedToReboot) then
+      // only reason so far is DirectX wants to reboot so...
+      return RebootDialog(@REBOOT_TITLE,@REBOOT_MESSAGE, SYS_BOOTWIN);
+  endif;
+
+  if (!BATCH_INSTALL) then
+
+      bOpt1 = TRUE; // was FALSE
+
+//      nResult = SdFinish( szTitle, szMsg1, szMsg2, szOption1, szOption2, bOpt1, bOpt2 );
+      if (bIsShellExplorer) then
+         if (bShortcutOnDesktop) then
+            szMsg1 = @TOONTALK_READY_TO_RUN_DESKTOP;
+         else
+            szMsg1 = @TOONTALK_READY_TO_RUN_EXPLORER;
+         endif;
+      else
+         szMsg1 = @TOONTALK_READY_TO_RUN_PROGRAM_MANAGER;
+      endif;
+      nResult = SdFinish(@INSTALLATION_COMPLETE_TITLE, szMsg1, szMsg2, @RUN_TOONTALK_NOW, szOption2, bOpt1, bOpt2 );
+      if (bOpt1) then
+//          if (bCDROMInstall) then
+//             szTemp = szCDROMPath ^ "\\ToonTalk\\" ^ @START_TOONTALK + ".exe";
+//          else
+//             szTemp = szShortAppPath ^ @START_TOONTALK + ".exe";
+//          endif;
+         // replaced szTemp with szStartTTPath on 240300
+          if (LaunchApp(szStartTTPath, starttt_command_line ) < 0) then // added starttt_command_line on 100304
+              MessageBox(@CANT_LAUNCH + " " + szStartTTPath,WARNING);
+          endif;
+      endif;
+      return 0;
+  endif;
+
+  nDefOptions = SYS_BOOTMACHINE;
+  szTitle     = "";
+  szMsg1      = "";
+  szMsg2      = "";
+  nResult     = SdFinishReboot(szTitle, szMsg1, nDefOptions, szMsg2, 0 );
+
+  return nResult;
+ end;
+
+// my additions follow:
+
+function UpdateToonTalkIniFile()
+  STRING szFileName;
+  STRING oldLanguage, newLanguage;
+  INT nTemp, nCDROMDirLength;
+  BOOL bUsersWantsDebuggingVersion;
+  begin
+     if (bCDROMInstall) then
+        if (MinimalInstall) then
+           szTemp = szCDROMPath ^ "\\ToonTalk\\";
+        else
+           szTemp = ""; // new on 130304 since wasteful (and slow) to check CD-ROM when everything should be on the disk
+        endif;
+        UpdateToonTalkIni("Directories", "CDROMdir", szTemp);
+      else
+        DefaultIniEntry("Directories", "CDROMdir", ""); // was UpdateToonTalkIni prior to 040301
+      endif;
+      szShortAppPath = szAppPath;
+      LongPathToShortPath(szShortAppPath);
+//      if (bInstallMinimum) then
+//          szTemp = szCDROMDrive ^ "\\ToonTalk\\";
+//      else
+//          szTemp = szShortAppPath ^ "\\";
+//      endif;
+//      UpdateToonTalkIni("Directories", "EXEdir",szTemp);
+     // wrong place but this should get done since mininal install won't create them
+      szTemp = szShortAppPath ^ "\\Demos\\";
+      CreateDir(szTemp);
+// commented out on 230300
+//      szTemp = szShortAppPath ^ "\\Demos\\HighRes\\";
+//      CreateDir(szTemp);
+//      szTemp = szShortAppPath ^ "\\Demos\\LowRes\\";
+//      CreateDir(szTemp);
+      szTemp = szShortAppPath ^ "\\Users\\";
+      CreateDir(szTemp);
+//      UpdateToonTalkIni("Directories", "UsersDir", szTemp);
+      szTemp = szShortAppPath ^ "\\"; // to be consistent
+//      szTemp = szAppPath ^ "\\"; // to be consistent - changed on 240300 to use full name (with spaces etc)
+// this broke generating java applets and maybe more - leave the ugly path name for now
+      if (!bPatch) then
+     UpdateToonTalkIni("Directories", "MainDir", szTemp);
+         szTemp = szShortAppPath ^ "\\temp\\"; // here too (240300)
+         CreateDir(szTemp);
+         UpdateToonTalkIni("Directories", "TempDir",szTemp);
+//      if (bInstallFull || !bCDROMInstall) then
+//          szTemp = szShortAppPath ^ "\\Demos\\";
+//      else
+//          szTemp = szCDROMDrive ^ "\\ToonTalk\\Demos\\";
+//      endif;
+//      UpdateToonTalkIni("Directories", "DemoDir", szTemp);
+//      if (bInstallMinimum) then
+//          szTemp = szCDROMDrive ^ "\\ToonTalk\\Puzzles\\";
+//      else
+//          szTemp = szShortAppPath ^ "\\Puzzles\\";
+//          CreateDir(szTemp);
+//      endif;
+//      UpdateToonTalkIni("Directories","PuzzleDir",szTemp);
+        szTemp = szShortAppPath ^ "\\java\\";
+        CreateDir(szTemp);
+//      UpdateToonTalkIni("Directories", "JavaDir",szTemp);
+//      szTemp2 = WINDIR ^ "java\\classes\\";
+//      if (ExistsDir(szTemp2) != EXISTS ||
+//          FindFile(szTemp2, "classes.zip", szTemp ) < 0 ) then
+//          MessageBox(@JAVA_SYSTEM_CLASSES_NOT_FOUND, WARNING);
+//      endif;
+//      szTemp = WINDIR ^ "java\\classes\\classes.zip";
+//      szTemp = szShortAppPath ^ "\\java\\" ^ "ttclass.zip";
+//      szTemp2 = szShortAppPath ^ "\\java\\" ^ "system.zip";
+//      UpdateToonTalkIni("Directories", "JavaClassDir", szTemp + ";" + szTemp2);
+      // m25 looks nicer -- users can choose m22 if they want
+//      szTemp = szShortAppPath ^ "\\Java\\Pictures\\M25\\";
+//      if (ExistsDir(szTemp) != EXISTS) then
+//         szTemp = szShortAppPath ^ "\\Java\\Pictures\\M22\\";
+//         if (ExistsDir(szTemp) != EXISTS) then
+//            szTemp = szCDROMDrive ^ "\\ToonTalk\\Java\\Pictures\\M22\\";
+//         endif;
+//      endif;
+//      UpdateToonTalkIni("Directories", "GIFDir", szTemp);
+//      szTemp = szShortAppPath ^ "\\Java\\Sounds\\";
+//      if (ExistsDir(szTemp) != EXISTS) then
+//         szTemp = szCDROMDrive ^ "\\ToonTalk\\Java\\Sounds\\";
+//      endif;
+//      UpdateToonTalkIni("Directories", "SoundDir", szTemp);
+        DefaultIniEntry("User", "PreviousName",@NO_NAME);
+//     DefaultIniEntry("User", "TextToSpeechMode",@DEFAULT_TEXT_TO_SPEECH_MODE); // new on 230300 -- commented out on 100404 since newinstl.ini does it more flexibly (and beta doesn't want this)
+        DefaultIniEntry("User", "TextToSpeechMode"," "); // restored on 240804 so newinstl.ini gets to do its thing
+    // following new on 101201 -- and updated on 250402
+        DefaultIniEntry("Directories", "BackgroundsDir"," "); // if not given then will default to same as BuiltinPictureDir -- was szTemp);
+	 // following should still be the Java subdirectory -- can't comment this out if still want to run old (pre 3.60) versions
+//        DefaultIniEntry("Directories", "BuiltinPictureDir",szTemp); // should still be the Java subdirectory -- commented out on 120304 since is redundant
+      UpdateToonTalkIni("Directories", "HTMLFiles", @WEB_HTML_HELP); // new on 060301
+      endif;
+        if (MinimalInstall) then
+           UpdateToonTalkIni("Directories", "BuiltinPictureDir", szCDROMPath ^ "\\ToonTalk\\Java"); // new on 120304 -- fixed on 150304
+        else    
+           UpdateToonTalkIni("Directories", "BuiltinPictureDir", szShortAppPath ^ "\\java\\"); // as of 200602 is set - not just a default
+        endif;
+        DefaultIniEntry("Directories", "BuiltinPictureDirIf8Bit", " "); // nothing for now - new on 190602
+    DefaultIniEntry("FileExtensions","MissingBuiltinPictureFileExtension",@BUILTIN_PICTURE_EXTENSION);
+    DefaultIniEntry("FileExtensions","MissingBuiltinPictureFileExtensionIf8Bit",@BUILTIN_PICTURE_EXTENSION_8BIT); // was this implemented prior to 190602?
+    DefaultIniEntry("FileExtensions","MissingPictureFileExtension",@MISSING_PICTURE_EXTENSION); // new on 250402
+
+      DefaultIniEntry("User", "DefaultUser"," "); // changed on 080304 @DEFAULT_USER); // added 3010995
+      DefaultIniEntry("Versions", "Language", @LANGUAGE_NAME);
+
+   if (!bPatch) then
+      if (StrCompare(@LANGUAGE_NAME,"US English") = 0) then // new on 210602
+         szTemp2 = "American"; // equivalent but older name
+      elseif (StrCompare(@LANGUAGE_NAME,"UK English") = 0) then
+         szTemp2 = "British"; // equivalent but older name
+      else
+         szTemp2 = @LANGUAGE_NAME;
+      endif;
+      newLanguage = @LANGUAGE_NAME; // part of 070807 change
+        if (GetProfString(szToonTalkIni, "Versions", "Language1", oldLanguage) < 0) then
+     UpdateToonTalkIni("Versions", "Language1",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+//        elseif (GetProfString(szToonTalkIni, "Versions", "Language2", oldLanguage) < 0) then
+        else
+// following new on 070807 so that Language1 is always the language being installed
+        newLanguage = oldLanguage; // make current Language1 be the language being added (if really new)
+     UpdateToonTalkIni("Versions", "Language1", @LANGUAGE_NAME); // clobber Language1
+// second disjunct repeatedly added below on 070807 to swap around Language1 and Language-n
+        if (GetProfString(szToonTalkIni, "Versions", "Language2", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language2",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+        elseif (GetProfString(szToonTalkIni, "Versions", "Language3", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language3",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+        elseif (GetProfString(szToonTalkIni, "Versions", "Language4", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language4",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+        elseif (GetProfString(szToonTalkIni, "Versions", "Language5", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language5",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+        elseif (GetProfString(szToonTalkIni, "Versions", "Language6", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language6",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+        elseif (GetProfString(szToonTalkIni, "Versions", "Language7", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language7",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+        elseif (GetProfString(szToonTalkIni, "Versions", "Language8", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language8",newLanguage);
+        elseif (StrCompare(oldLanguage,newLanguage) = 0 || StrCompare(oldLanguage, szTemp2) = 0) then // do nothing since already know this language name
+        elseif (GetProfString(szToonTalkIni, "Versions", "Language9", oldLanguage) < 0 || StrCompare(oldLanguage,@LANGUAGE_NAME) = 0) then
+     UpdateToonTalkIni("Versions", "Language9",newLanguage);
+        endif;
+        // re-wrote the following as the above on 210400
+//      DefaultIniEntry("Versions", "Language1", @LANGUAGE_NAME);
+//      if (bWebLabs) then
+         // moved to newinstl.ini on 150304
+//         DefaultIniEntry("Versions", "Language2", "Swedish");
+//         DefaultIniEntry("Versions", "Language3", "Portuguese");
+//         DefaultIniEntry("Versions", "Language4", "US English");
+      // restored the following on 250501
+//      else
+
+      DefaultIniEntry("Versions", "Language2", ""); // new on 150304 to replace the above to enable overridding
+      DefaultIniEntry("Versions", "Language3", "");
+      DefaultIniEntry("Versions", "Language4", "");
+      DefaultIniEntry("Versions", "Language5", "");
+      DefaultIniEntry("Versions", "Language6", "");
+      DefaultIniEntry("Versions", "Language7", "");
+      DefaultIniEntry("Versions", "Language8", "");
+      DefaultIniEntry("Versions", "Language9", "");
+      if (bSwedish) then // 2nd choice for Swedish version
+         DefaultIniEntry("Versions", "Language2", "English");
+      endif;
+//      UpdateToonTalkIni("Executables","WelcomeToonTalk",@WELCOME_EXE);
+      endif;
+      // let the language DLL decide this
+      DefaultIniEntry("FileExtensions","SubtitlesSuffix"," ");
+      if (!bPatch) then
+         UpdateToonTalkIni("Versions","PortugueseIsBrazilian",@PORTUGUESE_IS_BRAZILIAN); // new on 210300
+      endif;
+      UpdateToonTalkIni("Executables","StringLibraryDll32","NT32.dll");   // new on 301099 - was DefaultIniEntry prior to 190201
+      UpdateToonTalkIni("Executables","NewStringLibraryDll","NewTT.dll"); // new on 190201
+      if (bBritish) then
+         UpdateToonTalkIni("FileExtensions","DataFileSuffix","UK1");
+      else
+         UpdateToonTalkIni("FileExtensions","DataFileSuffix",@DATA_FILE_SUFFIX);
+      endif;
+  endif; // end !bpatch
+//      szTemp = szAppPath ^ "javac16.bat";
+//      if (n32Possible = FALSE) then
+//         szTemp = " ";
+//      else
+//      szTemp = szShortAppPath ^ "jump\\";
+//      if (ExistsDir(szTemp) != EXISTS ||
+//          FindFile(szTemp, "jump.exe", szIgnore) < 0) then
+//         szTemp = szCDROMDrive ^ "\\ToonTalk\\jump\\jump.exe";
+//      else
+//         szTemp = szShortAppPath ^ "jump\\jump.exe";
+//      endif;
+//     UpdateToonTalkIni("Executables","JavaCompiler",szTemp);
+//      if (SWEDISH = TRUE) then
+//         UpdateToonTalkIni("Versions", "Release", "2.0");
+//         UpdateToonTalkIni("Versions", "Beta", " ");
+//      else
+      AllUsersIniEntryString("Install", "ProductKind", "ToonTalk", szTemp); // new on 010907
+      UpdateToonTalkIni("Versions", szTemp, product_version); // updated 010807
+//      UpdateToonTalkIni("Versions", @PRODUCT_KIND, product_version);
+//      endif;
+      UpdateToonTalkIni("Executables","StartToonTalk",szStartTTName);
+//      if (bInstall16) then
+//      bUsersWantsDebuggingVersion = FALSE;
+//      if (!bCDROMInstall) then
+//         szTemp = @FLOPPY_EXECUTABLE;
+//      elseif (FindFile(szAppPath,"TTBug16.exe",szIgnore) < 0) then
+//         szTemp = "TT16";
+//      elseif (AskYesNo (@OK_TO_MAKE_DEBUGGING_VERSION_DEFAULT, YES) == YES) then
+//         szTemp = "TTBug16";
+//         bUsersWantsDebuggingVersion = TRUE;
+//      else
+//        szTemp = "TT16";
+//      endif;
+//      UpdateToonTalkIni("Executables","ToonTalk16",szTemp);
+//      UpdateToonTalkIni("Executables","DemoToonTalk16",szTemp);
+      if (!bCDROMInstall) then // new rewrite on 210300
+     szTemp = @FLOPPY_EXECUTABLE;
+      else
+     szTemp = @CDROM_EXECUTABLE;
+      endif;
+     // override if possible - new on 080304 -- prior to 100304 was DemoToonTalk32
+     AllUsersIniEntryString("Install", "ToonTalk32", szTTExecutableName, szTTExecutableName); 
+// commented out on 130401
+//      if (FindFile(szAppPath,"TTBug32.exe",szIgnore) < 0) then
+////         szTemp = "TT32";
+//      elseif (!bPatch && AskYesNo (@OK_TO_MAKE_DEBUGGING_VERSION_DEFAULT, YES) == YES) then
+//         szTemp = "TTBug32";
+//         bUsersWantsDebuggingVersion = TRUE;
+////      else
+////         szTemp = "TT32";
+//      endif;
+//      UpdateToonTalkIni("Executables","DemoToonTalk16","TT168c");
+//      if (bWinNT4) then // since there is no DirectX and TTBug32 caused problems on NT
+//         szTemp = "TT32NT4";
+//      else
+//      if (!bUsersWantsDebuggingVersion || FindFile(szAppPath,"TTBug32.exe",szIgnore) < 0) then
+//         szTemp = "TT32";
+//      else
+//         szTemp = "TTBug32";
+//      endif;
+// changed 301099 - and changed again 291199
+    if (szTTExecutableName != "") then // coondition new on 090807 -- typically happens when patching
+      UpdateToonTalkIni("Executables", "ToonTalk32", szTTExecutableName); // "ttbeta21"); changed on 190200 -- was szTemp prior to 100304
+    endif; 
+     AllUsersIniEntryString("Install", "DemoToonTalk32", szTTExecutableName, szTemp); // new on 100304
+    if (szTTExecutableName != "") then // coondition new on 090807 -- typically happens when patching
+       UpdateToonTalkIni("Executables","DemoToonTalk32",szTemp);
+    endif;
+//      if (bCDROMInstall) then
+         // conditional added on 090600 since demos require 640x480 graphics
+// this was updated on 180201 since the demos now include local ini files indicating which version they require to run
+//         UpdateToonTalkIni("Executables","DemoToonTalk32",szTemp); // "TT202");  // updated on 200400
+//      else
+//         DefaultIniEntry("Executables","DemoToonTalk32","TTBeta22");
+//      endif;
+//      UpdateToonTalkIni("Executables","DemoToonTalk32","ttbta14b"); // for now for beta 22
+      DefaultIniEntry("Executables","SpeechEngine"," ");
+      DefaultIniEntry("FileExtensions","NarrationFileSuffix"," ");
+      if (bDirectXPossible) then
+//         DefaultIniEntry("Switches","32BitDefault","1");
+         UpdateToonTalkIni("InstallationDefaults","Version","2");
+      else
+         UpdateToonTalkIni("InstallationDefaults","Version","1");
+      endif;
+      UpdateToonTalkIni("Versions","640x480","1"); // moved out of the conditional on 090600
+      if (bCDROMInstall && bIsShellExplorer) then // speech is possible
+        // the following is obsolete since NewInstl.ini does this better (150304)
+//	if (bWebLabs) then // new on 050903
+//           UpdateToonTalkIni("InstallationDefaults","MartyTalk","6"); // speak with subtitles the new default 050903
+//        else
+           UpdateToonTalkIni("InstallationDefaults","MartyTalk","2");
+	   // changed to 6 on 150304 for all installations to be the default -- changed to 2 on 090904
+           UpdateToonTalkIni("Versions","TextToSpeech","1");
+//        endif;
+      else
+         DefaultIniEntry("InstallationDefaults","MartyTalk","3"); // was UpdateToonTalkIni prior to 030401
+//         UpdateToonTalkIni("Versions","TextToSpeech","0"); // implicit
+      endif;
+//    UpdateToonTalkIni("Versions","16Bit","1");
+      UpdateToonTalkIni("Versions","32Bit","1"); // moved here on 271299
+      if (bBritish) then
+         DefaultIniEntry("Versions","EnglishIsAmerican","0");
+      else
+         DefaultIniEntry("Versions","EnglishIsAmerican","1");
+      endif;
+      DefaultIniEntry("Switches","GenerateLogs","0");
+      DefaultIniEntry("Switches","AutoDemoMaxIdle","120");  // 2 minute default
+      DefaultIniEntry("Switches","TurnOffJoystickAutoCenter","0");
+      DefaultIniEntry("Switches","DisplayAvailableSubtitlesInDemos","0"); // new on 170904
+      if (bWinNT) then // && !bIsShellExplorer) then
+         // at least on the NT 4.0 machine at Center for Software Development
+         // it runs black (but runs)
+         UpdateToonTalkIni("Switches","DispDIBNotPossible","1");
+      else
+         UpdateToonTalkIni("Switches","DispDIBNotPossible","0");
+      endif;
+      UpdateToonTalkIni("InstallationDefaults","WindowSize","1");
+      UpdateToonTalkIni("InstallationDefaults","Version","3"); // new on 180300 - 800x600 default
+      DefaultIniEntry("Switches","GenerateRobotNames","1"); // was UpdateToonTalkIni prior to 180800
+      DefaultIniEntry("Switches","RunAppletInNewWindow","0"); // ditto
+      if (bIsShellExplorer) then
+         UpdateToonTalkIni("Switches","ShellIsPROGMAN","0");
+      else
+         UpdateToonTalkIni("Switches","ShellIsPROGMAN","1");
+      endif;
+      DefaultIniEntry("Switches","JoystickDeadZone","2500"); // was UpdateToonTalkIni prior to 180800
+      DefaultIniEntry("Switches","SubtitlesSpeed","100"); // if UK subtitles set it to 90
+//      DefaultIniEntry("Switches","MaximumNumberOfHoles","2048"); // was UpdateToonTalkIni prior to 180800 // removed on 060603
+
+      DefaultIniEntry("Switches","ExclusiveMouseOK","0"); // new 180800
+
+      // following didn't work for IE 3 since once there was a cabfile it
+      // couldn't find the class that was in the codebase directory
+      // default restored on 180201
+//      DefaultIniEntry("Java","cabbase","ttclass.cab"); // was UpdateToonTalkIni prior to 180800
+//      DefaultIniEntry("Java","archive","ttclass.zip"); // was UpdateToonTalkIni prior to 180800
+// revised on 291199
+
+//      DefaultIniEntry("Directories","FileSearchPath","*\\..\\..\\Downloads;"); // new on 191000
+      szTemp = szAppPath ^ "Java";
+      if (MinimalInstall) then
+         szTemp = szTemp + ";" + szCDROMPath ^ "Java"; // new on 120304
+      endif;
+      DefaultIniEntry("Directories","FileSearchPath", szTemp); // updated 051002 -- problem here 150304 since if was minimal and is not then shouldn't have CDROM on path...
+      DefaultIniEntry("Directories","UserFiles"," "); // new on 191000
+      DefaultIniEntry("Directories","URLCacheDir"," "); // new on 191000
+      DefaultIniEntry("Directories","ClippingDir"," "); // new on 180201
+
+      // new on 310700
+      DefaultIniEntry("Network","LongDistanceBirds","1") ; // for now
+      DefaultIniEntry("Network","LogNetworkEvents","1") ; // for now
+
+      // new on 250402 - updated 190602
+      if (nIEVersion >= 4) then
+	 // the following prepended svDir ^ "Doc" ^ @LANGUAGE_SUBDIRECTORY ^ to the file name prior to 161002
+         DefaultIniEntry("Executables","HTMLStartTT","StartTTWP.htm"); // changed to WP on 220707
+         // P for Playground new on 080304 -- removed 100404 since not general default and allinstl.ini can take care of this
+         DefaultIniEntry("Executables","HTMLClickMe", svDir ^ "Doc" ^ @LANGUAGE_SUBDIRECTORY ^ "ClickMe2.htm"); // too much trouble to get ClickMe to default this
+         DefaultIniEntry("Executables","HTMLAskName", "askname.htm");
+         DefaultIniEntry("Executables","HTMLGeneralPause", "genpause.htm");
+         DefaultIniEntry("Executables","HTMLNoSavePause","nosave.htm");
+         DefaultIniEntry("Executables","HTMLNoSavePause","puzpause.htm"); // new on 141104
+         DefaultIniEntry("Executables","HTMLDemoPause", "dempause.htm");
+         DefaultIniEntry("Executables","HTMLMessageBox", "messbox.htm");
+         DefaultIniEntry("Executables","HTMLMessageBoxCheckBox", "messboxc.htm"); // new on 080304
+         DefaultIniEntry("Executables","HTMLGeneralPauseHoldingItem", "hndpause.htm");
+         DefaultIniEntry("Executables","HTMLJustSavedPause","savpause.htm");
+         // following added on 220707
+         DefaultIniEntry("Executables","HTMLCityLoadPause","ctypause.htm");
+         DefaultIniEntry("Executables","HTMLObjectLoadPause","loadpaus.htm");
+         DefaultIniEntry("Executables","HTMLCitySavePause","savctypa.htm");
+         DefaultIniEntry("Executables","HTMLObjectSavePause","savobjpa.htm");
+         DefaultIniEntry("Executables","HTMLReadURLPause","cpyurlpa.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseLogotronUK","purchase_logotron_uk.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseAnimatedPrograms","purchase_animated_programs.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseEkelunds","purchase_ekelunds.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseCnotinfor","purchase_cnotinfor.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseDivertire","purchase_divertire.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseMicronet","purchase_micronet.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseLogotron","purchase_logotron.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseNoLocation","purchase_all.htm");
+         DefaultIniEntry("Executables","HTMLPurchaseKeyInvalid","purchase_key_invalid.htm");
+         DefaultIniEntry("Executables","HTMLTrialDaysLeft","trialday.htm");
+         DefaultIniEntry("Executables","HTMLTrialOver","keyenter.htm");
+      else
+         DefaultIniEntry("Executables","HTMLStartTT"," "); // use browser if no IE 4 or better
+         DefaultIniEntry("Executables","HTMLClickMe"," ");
+         DefaultIniEntry("Executables","HTMLAskName"," ");
+         DefaultIniEntry("Executables","HTMLGeneralPause"," ");
+         DefaultIniEntry("Executables","HTMLNoSavePause"," ");
+         DefaultIniEntry("Executables","HTMLNoSavePause"," "); // new on 141104
+         DefaultIniEntry("Executables","HTMLDemoPause"," ");
+         DefaultIniEntry("Executables","HTMLMessageBox"," ");
+         DefaultIniEntry("Executables","HTMLMessageBoxCheckBox", " "); // new on 080304
+         DefaultIniEntry("Executables","HTMLGeneralPauseHoldingItem", " ");
+         DefaultIniEntry("Executables","HTMLJustSavedPause"," ");
+      endif;
+
+//    DefaultIniEntry("Switches","HTMLStartTTKioskMode"," ");
+      DefaultIniEntry("Switches","DesiredFullScreenBitsPerPixel"," ");
+//    DefaultIniEntry("Switches","BrowserToStartTTIsIE","1");
+      DefaultIniEntry("Switches","AbsoluteMouseMode",@DEFAULT_MOUSE_MODE); // should be 1 for tablets and 0 for other devices
+      DefaultIniEntry("Switches","ShowMouseCursor","0");
+//    DefaultIniEntry("Switches","DirectionalPadCenterX","81");
+//    DefaultIniEntry("Switches","DirectionalPadCenterY","20");
+//    DefaultIniEntry("Switches","DirectionalPadRadius","20");
+//    DefaultIniEntry("Switches","AllowMultipleToonTalks","0");
+
+
+      DefaultIniEntry("ButtonKeyboardEquivalents","3","<F12>");
+      // was F11 prior to 180300 but too much documentation and demos refer to old setting
+      // '.' would be a better binding if there wasn't so much history...
+//      DefaultIniEntry("ButtonKeyboardEquivalents","4","<space>");
+//      DefaultIniEntry("ButtonKeyboardEquivalents","5",".");
+      // updated on 180301
+      DefaultIniEntry("ButtonKeyboardEquivalents","4",".");
+      DefaultIniEntry("ButtonKeyboardEquivalents","5","<F11>"); // angle brackets added on 290301
+      DefaultIniEntry("ButtonKeyboardEquivalents","6","+");
+      DefaultIniEntry("ButtonKeyboardEquivalents","7","-");
+      DefaultIniEntry("ButtonKeyboardEquivalents","8","<Escape>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","9","<F1>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","10","<F2>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","11","<F3>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","12","<F4>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","13","<F5>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","14","<F6>");
+
+      DefaultIniEntry("Defaults","WindowSize"," "); // new 021104
+      DefaultIniEntry("Defaults","MouseButtons"," "); // new 021104
+      DefaultIniEntry("Defaults","MartyTalk"," "); // new 021104
+      DefaultIniEntry("Defaults","SoundOn"," ");  // new 021104
+      DefaultIniEntry("Defaults","KindOfUser"," ");  // new 021104
+      UpdateToonTalkIni("Defaults","Language","1");  // updated on 090807
+      DefaultIniEntry("Defaults","Voice"," ");  // new 021104
+
+      if (bCDROMInstall) then
+         szTemp = szCDROMPath ^ "\\ToonTalk\\Demos\\";
+         nCDROMDirLength = StrLength(szTemp);
+         nTemp = FindAllFiles( szTemp, "*.*",  szFileName,  RESET );
+         while ( nTemp = 0)
+             ParsePath  (szTemp2, szFileName, FILENAME); // just the filename
+             UpdateToonTalkIni("CDROMDemoFiles", szTemp2, "1");
+             nTemp = FindAllFiles( szTemp, "*.*",  szFileName, CONTINUE );
+         endwhile;
+         szTemp = szCDROMPath ^ "\\ToonTalk\\Demos\\"; // was HighRes prior to 230300
+         nCDROMDirLength = StrLength(szTemp);
+         nTemp = FindAllFiles( szTemp, "*.*",  szFileName,  RESET );
+         while ( nTemp = 0)
+             ParsePath  (szTemp2, szFileName, FILENAME); // just the filename
+             UpdateToonTalkIni("CDROMDemoFiles", szTemp2, "1");
+             nTemp = FindAllFiles( szTemp, "*.*",  szFileName, CONTINUE );
+         endwhile;
+      endif;
+  return 0;
+end;
+
+
+function InstallDirectX()
+  INT result;
+//  INT language_id;
+  STRING redist_dir;
+//  STRING language_name;
+  begin
+    if ( bWinNT4) then // commented out on 080301 and restored on 210301 but changed from  bWinNT to  bWinNT4
+       return 0; // can't do much with NT 4.0 -- should have DirectX already even if old ...
+    endif;
+    redist_dir = szCDROMInstallPath ^ "\\directx\\redist\\directx8\\"; // changed to 8 on 080301
+    if (ExistsDir(redist_dir) == NOTEXISTS) then // new on 140404
+       return 0;
+    endif;
+    if (bSomeDirectXInstalled) then
+       if (AskYesNo(@OK_TO_UPDATE_DIRECTX,YES) = NO) then
+           return 0;
+       endif;
+    endif;
+//    GetSystemInfo ( LANGUAGE , language_id , language_name );
+////    if (SELECTED_LANGUAGE = ISLANG_SWEDISH) then
+//    if (language_id = ISLANG_SWEDISH) then
+//       szTemp = szCDROMDrive ^ "\\Install\\DirectX\\dx5swe.exe";
+//       if (LaunchApp (szTemp  , "" ) < 0) then
+//           MessageBox(@CANT_LAUNCH + " " + szTemp,WARNING);
+//       endif;
+//       return 0;
+//    endif;
+//    redist_dir = szCDROMDrive ^ "\\install\\directx\\redist\\directx6\\";
+      redist_dir = szCDROMInstallPath ^ "\\directx\\redist\\directx8\\"; // changed to 8 on 080301
+//MessageBox(redist_dir, INFORMATION);
+    ChangeDirectory(redist_dir); // Note: This MUST be done BEFORE calling UseDLL.
+    UseDLL( redist_dir ^ "dsetup.dll" );
+    result = DirectXSetupA(GetWindowHandle(HWND_INSTALL),redist_dir,DSETUP_DIRECTX);
+    UnUseDLL( redist_dir ^ "dsetup.dll" );
+    bNeedToReboot = FALSE; // unless overridden below
+    if (result = DSETUPERR_SUCCESS_RESTART) then
+       bNeedToReboot = TRUE; // installed OK but need to restart here...
+       return 0;
+    elseif (result = DSETUPERR_SUCCESS) then
+//       szTemp = szCDROMPath ^ "\\ToonTalk\\" ^ @START_TOONTALK + ".exe"; // commmented out on 080304 since not used anymore
+//       LaunchApp(szTemp, "" );
+       return 0;
+    elseif (result = DSETUPERR_NOTPREINSTALLEDONNT) then
+       MessageBox(@NT_DIRECTX_INSTALL_PROBLEM, WARNING);
+       return -1;
+    else
+       NumToStr(szTemp , result);
+       MessageBox(@DIRECTX_INSTALL_PROBLEM + szTemp, WARNING);
+       UpdateToonTalkIni("Switches","32BitDefault","0");
+       return -1; // error of some sort -- worry about which one??
+    endif;
+  end;
+
+function DeselectWin95DependentComponents()
+   // should test sometime if filterOS does this better...
+   begin
+     // eliminate components that due to Java require long file names
+     ComponentSelectItem(MEDIA, "Java Components\\Java Classes", FALSE);
+     ComponentSelectItem(MEDIA, "Documentation\\Java Demo Documentation", FALSE);
+     // following require Win 95 or NT 4.0
+     ComponentSelectItem(MEDIA, "Program Files\\32 Bit Program Files", FALSE);
+     ComponentSelectItem(MEDIA, "Data Files\\High Resolution Graphic Files", FALSE);
+     ComponentSelectItem(MEDIA, "Demonstrations\\High Resolution Demos", FALSE);
+     ComponentSelectItem(MEDIA, "Speech Components\\English Speech Files", FALSE);
+     ComponentSelectItem(MEDIA, "Speech Components\\Swedish Speech Files", FALSE);
+     ComponentSelectItem(MEDIA, "Program Files\\Text to Speech Engine", FALSE);
+     ComponentSelectItem(MEDIA, "Debugging Components\\32 Bit Debugging Component", FALSE);
+     if (!bWinNT) then // NT 3.51 can deal with the following
+        ComponentSelectItem(MEDIA, "Java Components\\Java Compiler", FALSE);
+        // following is only useful for Java compiler
+        ComponentSelectItem(MEDIA, "Java Components\\Applet Maker Archives", FALSE);
+        // following can't be run by win 3.1
+        ComponentSelectItem(MEDIA, "Program Files\\NT Program Files", FALSE);
+        ComponentSelectItem(MEDIA, "Program Files\\NT English Program Files", FALSE);
+        ComponentSelectItem(MEDIA, "Program Files\\NT Swedish Program Files", FALSE);
+     endif;
+     if (bCDROMInstall && bWinNT && !bIsShellExplorer) then // make sure stt32.exe and its dll are available
+        ComponentSelectItem(MEDIA, "Program Files\\NT Program Files", TRUE);
+        if (bSwedish) then
+           ComponentSelectItem(MEDIA, "Program Files\\NT Swedish Program Files", TRUE);
+        else
+           ComponentSelectItem(MEDIA, "Program Files\\NT English Program Files", TRUE);
+        endif;
+     endif;
+     return 0;
+end;
+
+
+// copied from patch.rul on 091002
+//function LinkSound(szLinkName, szWaveFileName)
+//  begin
+//    AddFolderIcon (szAppPath ^ "Playground\\Sounds", szLinkName + ".lnk" , szAppPath ^ "Playground\\Sounds" ^ szWaveFileName + ".wav", "", "", 0, "", REPLACE); 
+//    return 0;
+//end;
+
+#include "c:\tt\install.rul"
+
+ // --- include script file section ---
+
+#include "sddialog.rul"

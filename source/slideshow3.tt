@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<!--   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to Window's clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. 
+Then it will appear in the ToonTalk remote control for the clipboard. 
+You can find the clipboard remote control on page 30 of the Sensor notebook. 
+Just use Dusty to vacuum it off the clipboard. 
+   What follows is in a special code and was produced by 
+Run Only (Version 3.182). To learn more about ToonTalk see www.toontalk.com.
+-->
+<ToonTalkObject Language="7" Version="3" CreatedUsing="Run Only (Version 3.182)" xmlns="http://www.toontalk.com">
+ <PictureOf GUID="hiadfildocgioiedjoeddobddfebjdpl" Index="9">
+  <Appearance>
+   <Picture Index="9">
+    <BuiltIn Code="49" PictureNumber="0" Description="a dizzy person with hair"/>
+    <Geometry Z="-1">
+     <Left>14016</Left>
+     <Bottom>8328</Bottom>
+     <Width>3718</Width>
+     <Height>7406</Height>
+    </Geometry>
+    <Active/>
+    <SeeSome/>
+    <GeometryWhenFreeAndUnflipped>
+     <Width>4760</Width>
+     <Height>9480</Height>
+    </GeometryWhenFreeAndUnflipped>
+   </Picture>
+  </Appearance>
+  <Geometry Z="-1">
+   <Width>3718</Width>
+   <Height>7406</Height>
+  </Geometry>
+  <Active/>
+  <SeeSome/>
+  <OnBack>
+   <Robot Version="3" Parameter="1" Index="22">
+    <Label><![CDATA[prev]]></Label>
+    <ThoughtBubble>
+     <Box Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1
+       <TextPad>
+        <TextValue><![CDATA[-]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[Key]]></Label>
+      </Hole>
+      <Hole>2
+       <Picture>
+        <BuiltIn Code="48" PictureNumber="0" Description="a dizzy person"/>
+        <SeeSome/>
+        <Erased/>
+        <GeometryWhenFreeAndUnflipped>
+         <Width>4760</Width>
+         <Height>9000</Height>
+        </GeometryWhenFreeAndUnflipped>
+       </Picture>
+       <Label><![CDATA[Looks]]></Label>
+      </Hole>
+      <Hole>3
+       <Box Parameter="3">
+        <NumberOfHoles>5</NumberOfHoles>
+        <Active/>
+        <Erased/>
+       </Box>
+       <Label><![CDATA[Pictures]]></Label>
+      </Hole>
+      <GeometricRelationToContainer RecordedLeaderWidthSquared="30437289" RecordedLeaderHeightSquared="37896336" WidthTimesLeaderWidth="20247390" HeightTimesLeaderHeight="15143760" XOffsetTimesLeaderWidth="5274252" YOffsetTimesLeaderHeight="18215604" Z="-2147483648"/>
+      <Active/>
+     </Box>
+     <GeometricRelationToContainer RecordedLeaderWidthSquared="90231001" RecordedLeaderHeightSquared="96412761" WidthTimesLeaderWidth="76590437" HeightTimesLeaderHeight="88341543" XOffsetTimesLeaderWidth="60670113" YOffsetTimesLeaderHeight="104375970" Z="-2147483648"/>
+     <Active/>
+     <SeeAll/>
+    </ThoughtBubble>
+    <Actions ID="51" Version="2" MadeOrMovedCount="6">
+     <MoveTo>NumberStack</MoveTo>
+     <MadeOrMoved TypeCode="0">1</MadeOrMoved>
+     <Grasp>1</Grasp>
+     <Drop>1</Drop>
+     <GraspVacuum>Vacuum</GraspVacuum>
+     <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+     <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+     <UseVacuum>1</UseVacuum>
+     <DropVacuum>Vacuum</DropVacuum>
+     <GraspMagicWand>MagicWand</GraspMagicWand>
+     <DropMagicWand>MagicWand</DropMagicWand>
+     <GraspMagicWand>MagicWand</GraspMagicWand>
+     <UseMagicWand>MyBox.3</UseMagicWand>
+     <DropOn>1</DropOn>
+     <DropMagicWand>MagicWand</DropMagicWand>
+     <MoveTo>NumberStack</MoveTo>
+     <MadeOrMoved TypeCode="0">3</MadeOrMoved>
+     <Grasp>3</Grasp>
+     <TypeTo KeyDescription="-" KeyCode="45">InHand</TypeTo>
+     <DropOn>1</DropOn>
+     <Grasp>MyBox.3</Grasp>
+     <MadeOrMoved TypeCode="10">4</MadeOrMoved>
+     <MadeOrMoved TypeCode="10">5</MadeOrMoved>
+     <DropOn>1</DropOn>
+     <Grasp>4</Grasp>
+     <DropOnRightSide>5</DropOnRightSide>
+     <GraspVacuum>Vacuum</GraspVacuum>
+     <UseVacuum>MyBox.2</UseVacuum>
+     <DropVacuum>Vacuum</DropVacuum>
+     <GraspMagicWand>MagicWand</GraspMagicWand>
+     <UseMagicWand>5.1</UseMagicWand>
+     <DropOn>MyBox.2</DropOn>
+     <DropMagicWand>MagicWand</DropMagicWand>
+     <Grasp>5</Grasp>
+     <DropOn>MyBox.3</DropOn>
+     <GraspVacuum>Vacuum</GraspVacuum>
+     <TypeTo KeyDescription="-" KeyCode="45">InHand</TypeTo>
+     <TypeTo KeyDescription="-" KeyCode="45">InHand</TypeTo>
+     <UseVacuum>1</UseVacuum>
+     <DropVacuum>Vacuum</DropVacuum>
+    </Actions>
+    <WorkingInfo SetDownCounter="0" RecentPageNumber="0">
+     <Box GUID="chlkdpnhcfdemaekjcenjoiebkefmfpm" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1
+       <RemoteControl Language="1" Code="27" Description="KeyJustPressed" Version="2">
+        <GlobalSensor/>
+        <Active/>
+       </RemoteControl>
+       <Label><![CDATA[Key]]></Label>
+      </Hole>
+      <Hole>2
+       <RemoteControl Code="15" Description="Looks">
+        <For>
+         <PictureOf Link="hiadfildocgioiedjoeddobddfebjdpl"/>
+        </For>
+        <NotFlippedOver/>
+        <Active/>
+       </RemoteControl>
+       <Label><![CDATA[Looks]]></Label>
+      </Hole>
+      <Hole>3
+       <Box>
+        <NumberOfHoles>5</NumberOfHoles>
+        <Hole>1
+         <Picture>
+          <BuiltIn Code="49" PictureNumber="0" Description="a dizzy person with hair"/>
+          <Active/>
+          <SeeSome/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>4760</Width>
+           <Height>9480</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </Picture>
+        </Hole>
+        <Hole>2
+         <Picture>
+          <BuiltIn Code="50" PictureNumber="0" Description="a dizzy person with a hat"/>
+          <Active/>
+          <SeeSome/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>4920</Width>
+           <Height>9680</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </Picture>
+        </Hole>
+        <Hole>3
+         <Picture>
+          <BuiltIn Code="7" PictureNumber="0" Description="a person sitting"/>
+          <Active/>
+          <SeeSome/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>5480</Width>
+           <Height>8960</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </Picture>
+        </Hole>
+        <Hole>4
+         <Picture>
+          <BuiltIn Code="2" PictureNumber="0" Description="a person walking"/>
+          <Active/>
+          <SeeSome/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>5600</Width>
+           <Height>9960</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </Picture>
+        </Hole>
+        <Hole>5
+         <Picture>
+          <BuiltIn Code="48" PictureNumber="0" Description="a dizzy person"/>
+          <Active/>
+          <SeeSome/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>4760</Width>
+           <Height>9000</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </Picture>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[Pictures]]></Label>
+      </Hole>
+      <Active/>
+     </Box>
+    </WorkingInfo>
+    <Next>
+     <Robot Version="3" Parameter="1" Index="22">
+      <Label><![CDATA[reset]]></Label>
+      <ThoughtBubble>
+       <Box Parameter="4">
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1
+         <TextPad>
+          <TextValue><![CDATA[*]]></TextValue>
+          <Active/>
+         </TextPad>
+         <Label><![CDATA[Key]]></Label>
+        </Hole>
+        <Hole>2
+         <Picture Parameter="2">
+          <ColorIndex>2</ColorIndex>
+          <Shape Code="0" Description="a rectangle"/>
+          <SeeSome/>
+          <Erased/>
+          <GeometryWhenFreeAndUnflipped>
+           <Width>12800</Width>
+           <Height>9600</Height>
+          </GeometryWhenFreeAndUnflipped>
+         </Picture>
+         <Label><![CDATA[Looks]]></Label>
+        </Hole>
+        <Hole>3
+         <Box Parameter="3">
+          <NumberOfHoles>5</NumberOfHoles>
+          <Active/>
+          <Erased/>
+         </Box>
+         <Label><![CDATA[Pictures]]></Label>
+        </Hole>
+        <GeometricRelationToContainer RecordedLeaderWidthSquared="34751025" RecordedLeaderHeightSquared="43230625" WidthTimesLeaderWidth="23202720" HeightTimesLeaderHeight="17193625" XOffsetTimesLeaderWidth="6030585" YOffsetTimesLeaderHeight="20763850" Z="-2147483648"/>
+        <Active/>
+       </Box>
+       <GeometricRelationToContainer RecordedLeaderWidthSquared="79049881" RecordedLeaderHeightSquared="84492864" WidthTimesLeaderWidth="71688133" HeightTimesLeaderHeight="82700424" XOffsetTimesLeaderWidth="46064271" YOffsetTimesLeaderHeight="88279968" Z="-2147483648"/>
+       <Active/>
+       <SeeAll/>
+      </ThoughtBubble>
+      <Actions ID="53" Version="2" MadeOrMovedCount="8">
+       <Grasp>MyBox.2</Grasp>
+       <Use></Use>
+       <MadeOrMoved TypeCode="9">1</MadeOrMoved>
+       <Drop>2</Drop>
+       <Grasp>1.2</Grasp>
+       <MadeOrMoved TypeCode="10">3</MadeOrMoved>
+       <Drop>3</Drop>
+       <SelectAndType KeyDescription=" " KeyCode="32">1</SelectAndType>
+       <Grasp>1.2</Grasp>
+       <MadeOrMoved TypeCode="10">4</MadeOrMoved>
+       <DropOnRightSide>3</DropOnRightSide>
+       <SelectAndType KeyDescription=" " KeyCode="32">1</SelectAndType>
+       <SelectAndType KeyDescription=" " KeyCode="32">1</SelectAndType>
+       <SelectAndType KeyDescription=" " KeyCode="32">1</SelectAndType>
+       <Grasp>1.2</Grasp>
+       <MadeOrMoved TypeCode="10">5</MadeOrMoved>
+       <DropOnRightSide>3</DropOnRightSide>
+       <SelectAndType KeyDescription=" " KeyCode="32">1</SelectAndType>
+       <Grasp>1.2</Grasp>
+       <MadeOrMoved TypeCode="10">6</MadeOrMoved>
+       <Drop>6</Drop>
+       <Grasp>2</Grasp>
+       <Use></Use>
+       <DropOn>MyBox.2</DropOn>
+       <TypeTo KeyDescription="Backspace key" KeyCode="8">3.1</TypeTo>
+       <TypeTo KeyDescription="Backspace key" KeyCode="8">3.1</TypeTo>
+       <TypeTo KeyDescription="Backspace key" KeyCode="8">3.1</TypeTo>
+       <TypeTo KeyDescription="5" KeyCode="53">3.1</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">3.1</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">3.1</TypeTo>
+       <TypeTo KeyDescription="Backspace key" KeyCode="8">3.2</TypeTo>
+       <TypeTo KeyDescription="Backspace key" KeyCode="8">3.2</TypeTo>
+       <TypeTo KeyDescription="Backspace key" KeyCode="8">3.2</TypeTo>
+       <TypeTo KeyDescription="5" KeyCode="53">3.2</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">3.2</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">3.2</TypeTo>
+       <MoveTo>NumberStack</MoveTo>
+       <MadeOrMoved TypeCode="0">7</MadeOrMoved>
+       <Grasp>7</Grasp>
+       <TypeTo KeyDescription="0" KeyCode="48">InHand</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">InHand</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">InHand</TypeTo>
+       <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+       <DropOn>3.3</DropOn>
+       <MoveTo>NumberStack</MoveTo>
+       <MadeOrMoved TypeCode="0">8</MadeOrMoved>
+       <Grasp>8</Grasp>
+       <TypeTo KeyDescription="0" KeyCode="48">InHand</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">InHand</TypeTo>
+       <TypeTo KeyDescription="0" KeyCode="48">InHand</TypeTo>
+       <TypeTo KeyDescription="=" KeyCode="61">InHand</TypeTo>
+       <DropOn>6.1</DropOn>
+       <GraspVacuum>Vacuum</GraspVacuum>
+       <UseVacuum>3</UseVacuum>
+       <UseVacuum>6</UseVacuum>
+       <DropVacuum>Vacuum</DropVacuum>
+      </Actions>
+      <WorkingInfo SetDownCounter="0" RecentPageNumber="0">
+       <Box Link="chlkdpnhcfdemaekjcenjoiebkefmfpm"/>
+      </WorkingInfo>
+      <NextAfterRunning>
+       <Robot Version="3" Parameter="1" Index="22">
+        <Label><![CDATA[Next]]></Label>
+        <ThoughtBubble>
+         <Box Parameter="4">
+          <NumberOfHoles>3</NumberOfHoles>
+          <Hole>1
+           <TextPad>
+            <TextValue><![CDATA[+]]></TextValue>
+            <VariableWidthFont/>
+            <Active/>
+           </TextPad>
+           <Label><![CDATA[Key]]></Label>
+          </Hole>
+          <Hole>2
+           <Picture Parameter="248">
+            <ColorIndex>248</ColorIndex>
+            <Shape Code="0" Description="a rectangle"/>
+            <Erased/>
+            <OnFront>
+             <TextPad>
+              <TextValue><![CDATA[***********************
+Unable to open file called
+title.bmp
+***********************]]></TextValue>
+              <ColorIndex>255</ColorIndex>
+              <VariableWidthFont/>
+              <Active/>
+              <SeeSome/>
+             </TextPad>
+            </OnFront>
+            <GeometryWhenFreeAndUnflipped>
+             <Width>8000</Width>
+             <Height>6000</Height>
+            </GeometryWhenFreeAndUnflipped>
+           </Picture>
+           <Label><![CDATA[Looks]]></Label>
+          </Hole>
+          <Hole>3
+           <Box Parameter="3">
+            <NumberOfHoles>3</NumberOfHoles>
+            <Active/>
+            <Erased/>
+           </Box>
+          </Hole>
+          <GeometricRelationToContainer RecordedLeaderWidthSquared="42250000" RecordedLeaderHeightSquared="52301824" WidthTimesLeaderWidth="28190500" HeightTimesLeaderHeight="20835392" XOffsetTimesLeaderWidth="7332000" YOffsetTimesLeaderHeight="25131200" Z="-2147483648"/>
+          <Active/>
+         </Box>
+         <GeometricRelationToContainer RecordedLeaderWidthSquared="92160000" RecordedLeaderHeightSquared="98465929" WidthTimesLeaderWidth="92160000" HeightTimesLeaderHeight="105997486" XOffsetTimesLeaderWidth="58694400" YOffsetTimesLeaderHeight="105650181" Z="-2147483648"/>
+         <Active/>
+         <SeeAll/>
+        </ThoughtBubble>
+        <Actions ID="737" Version="0" MadeOrMovedCount="3">
+         <Grasp>MyBox.3</Grasp>
+         <TypeTo KeyDescription="1" KeyCode="49">InHand</TypeTo>
+         <MadeOrMoved TypeCode="10">1</MadeOrMoved>
+         <DropOnRightSide>1</DropOnRightSide>
+         <GraspVacuum>Vacuum</GraspVacuum>
+         <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+         <TypeTo KeyDescription="+" KeyCode="43">InHand</TypeTo>
+         <UseVacuum>MyBox.2</UseVacuum>
+         <DropVacuum>Vacuum</DropVacuum>
+         <Grasp>MyBox.2</Grasp>
+         <Drop>2</Drop>
+         <Grasp>2</Grasp>
+         <Drop>2</Drop>
+         <Grasp>2</Grasp>
+         <Drop>2</Drop>
+         <Grasp>2</Grasp>
+         <DropOn>MyBox.2</DropOn>
+         <GraspMagicWand>MagicWand</GraspMagicWand>
+         <UseMagicWand>1.1</UseMagicWand>
+         <DropOn>MyBox.2</DropOn>
+         <DropMagicWand>MagicWand</DropMagicWand>
+         <Grasp>1</Grasp>
+         <DropOn>MyBox.3</DropOn>
+        </Actions>
+        <WorkingInfo SetDownCounter="0" RecentPageNumber="0">
+         <Box Link="chlkdpnhcfdemaekjcenjoiebkefmfpm"/>
+        </WorkingInfo>
+        <GeometricRelationToContainer RecordedLeaderWidthSquared="42250000" RecordedLeaderHeightSquared="45131524" WidthTimesLeaderWidth="42250000" HeightTimesLeaderHeight="45131524" XOffsetTimesLeaderWidth="21853000" YOffsetTimesLeaderHeight="37049770" Z="-2147483648"/>
+        <Active/>
+       </Robot>
+      </NextAfterRunning>
+      <GeometricRelationToContainer RecordedLeaderWidthSquared="42250000" RecordedLeaderHeightSquared="45131524" WidthTimesLeaderWidth="42250000" HeightTimesLeaderHeight="45131524" XOffsetTimesLeaderWidth="22054500" YOffsetTimesLeaderHeight="38937528" Z="-2147483648"/>
+      <Active/>
+     </Robot>
+    </Next>
+    <Active/>
+   </Robot>
+  </OnBack>
+  <OnBack>
+   <Box Link="chlkdpnhcfdemaekjcenjoiebkefmfpm"/>
+  </OnBack>
+  <GeometryWhenFreeAndUnflipped>
+   <Width>32000</Width>
+   <Height>24000</Height>
+  </GeometryWhenFreeAndUnflipped>
+ </PictureOf>
+</ToonTalkObject>

@@ -1,0 +1,45 @@
+TOONTALK: © ANIMATED PROGRAMS - VERSÃO PORTUGUÊS EUROPEU: © CNOTINFOR.LDA
+
+IMPORTANTE--LER COM ATENÇÃO: Este Acordo de Utilização ("AU") é um contrato legal entre o Utilizador (um indivíduo ou uma entidade) e CNOTINFOR, Lda em relação ao produto chamado ToonTalk, que inclui programas de computador e documentação e pode ainda incluir documentação electrónica e rotinas adicionais via Internet ("PROGRAMA TOONTALK").
+Ao instalar, copiar, ou de qualquer outra forma utilizar este SOFTWARE, o Utilizador concorda com os termos deste AU, caso contrário deverá devolver imediatamente o SOFTWARE à CNOTINFOR para ser reembolsado integralmente.
+
+LICENÇA DE UTILIZAÇÃO DO PROGRAMA TOONTALK
+==========================================
+© = Copyright = Direitos de Autor
+
+1. Copyright
+O PROGRAMA TOONTALK está protegido pela lei 109/91, de 17.Ago (Lei da Criminalidade Informática), dec-lei 252/94, de 20.Out (Lei do Software) e ainda pelas leis nacionais e internacionais sobre direitos de autor e direitos conexos. O PROGRAMA TOONTALK é licenciado, não é vendido.
+
+2. Este AU garante ao Utilizador os seguintes direitos limitados e não exclusivos: 
+   - Instalação do PROGRAMA TOONTALK num só computador ou em tantos computadores quantas as licenças adquiridas (uma licença por cada computador).
+   - Utilização do PROGRAMA TOONTALK para conceber, desenvolver, testar e correr aplicações (programas desenvolvidos com o PROGRAMA TOONTALK).
+   - Modificação dos exemplos fornecidos para conceber, desenvolver, testar e correr aplicações. Os exemplos originais ou modificados podem ser distribuídos.
+   - Os arquivos contidos nas subdirectorias "Java" e "Doc" do ToonTalk podem ser distribuídos. Outros arquivos carecem de autorização prévia.
+   - A distribuição acima referida é autorizada, desde que:
+   a) Não se faça uso do nome, logotipo ou marcas registadas dos detentores do copyright do PROGRAMA TOONTALK;
+   b) Se concorde indemnizar e defender os detentores do copyright do PROGRAMA TOONTALK contra perseguições legais, multas ou indemnizações resultantes do uso ou distribuição das aplicações desenvolvidas ou dos componentes cuja distribuição está autorizada.
+     Outras situações não previstas poderão estar sujeitas ao pagamento de royalties. Em caso de dúvida contactar a CNOTINFOR.
+
+3. Todos os direitos, o título, o PROGRAMA TOONTALK (incluindo imagens, fotografias, animações, video, audio, música, texto, e "applets" incorporados) e quaisquer cópias do PROGRAMA TOONTALK são propriedade de Animated Programs e CNOTINFOR, Lda.
+
+4. É permitido fazer cópias de segurança do PROGRAMA TOONTALK. Os materiais impressos só poderão ser copiados mediante autorização expressa.
+
+5. Não é permitido alugar o PROGRAMA TOONTALK.
+
+6. O direito de utilização pode ser transferido para terceiros, desde que o beneficiário concorde com os termos deste AU e não se conservem quaisquer cópias do todo ou de partes do PROGRAMA TOONTALK, ainda que se trate de cópias de segurança. No caso de actualizações, deverão ser transferidas também as versões anteriores que o Utilizador tenha em seu poder. 
+
+7. Sem prejuízo de outros direitos, os detentores do copyright podem terminar este acordo em caso de incumprimento de qualquer das cláusulas do mesmo. Nesse caso o Utilizador deve destruir todas as cópias e componentes do PROGRAMA TOONTALK.
+
+8. GARANTIA DE REEMBOLSO - Durante os 30 dias imediatos à compra, o PROGRAMA TOONTALK poderá ser devolvido por qualquer motivo, acompanhado de uma nota explicativa das razões da devolução. CNOTINFOR, Lda. garante o reembolso total do valor de tabela. Esta cláusula não se aplica a versões demo ou beta.
+
+9. Os detentores do copyright não garantem que o PROGRAMA TOONTALK corresponda às expectativas do Utilizador. O PROGRAMA TOONTALK e respectiva documentação é fornecido sem qualquer outra garantia além da garantia de reembolso, não podendo ser imputados aos detentores do copyright (na máxima extensão em que a lei o permitir) quaisquer danos que advenham directa ou indirectamente da utilização do PROGRAMA TOONTALK. O PROGRAMA TOONTALK é fornecido como está, sendo as consequências da sua utilização da inteira responsabilidade do Utilizador.
+
+=======================================================
+Para quaisquer dúvidas ou outras informações contactar:
+CNOTINFOR, Lda.
+Rua António Jardim, 211 - 3 FRT
+3000-038 COIMBRA
+TEL 239 792825 FAX 239 792829 Móvel 91 7600730
+
+sirbabyface@cnotinfor.pt
+www.cnotinfor.pt

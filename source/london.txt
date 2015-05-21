@@ -1,0 +1,344 @@
+
+Enhancements:
+
+1. Scales should work on any data type. Pictures in particular. Equal
+   is when they are the same picture, same box, etc. in the same sense
+   as matching in thought bubbles. (What about erased number pads,
+   boxes, etc?) There should be a fix (but probably arbitrary ordering
+   amoung pictures and the like so that they can be "sorted"). Boxes
+   need to have the same number of holes and the contents from left to
+   right need to be equal to be equal, less than to be less than
+   etc. If the sizes of the boxes differ then the one with more holes
+   is heavier. Empty holes are lighter than anything. Estimate 1 to 2
+   days.
+
+2. Notebooks should have a table of contents or index or both. They
+   should probably have title pages as well. The table of contents
+   should be easy to expand and then one can jump to a page with a
+   single click. Estimate 1 to 3 days.
+
+3. Notebooks should be visually easy to distinguish. Notebooks of
+   remote controls of a picture can have a miniture version of the
+   picture in the corner (or corners). Other notebooks could have
+   either an icon or the name of the book (e.g. Sensors, Examples,
+   Sounds, ...). Users should be able to name their own books. Names
+   are really like labels or comments and have no semantic
+   meaning. Estimate 1/2 to 1 day.
+
+4. Users should be able to name robots. The names need to be globally unique
+   and there may be complications when loading in robots or components
+   from others with name conflicts. Robots in thought bubbles only
+   match robots with the same name. (Erased robots have no name and
+   will match any robot.) Estimate 1 to 2 days.
+
+5. Being able to move backwards in time while re-training. This is
+   much much easier to implement than a general undo or ability to run
+   backwards since the world is so limitted and constrained in thought
+   bubbles. Will be very hard to implement backwards animation so
+   would just jump to the previous state when a button is pushed.
+   Estimated time 1 to 4 days. 
+
+6. Improvements for fine selection. Optional (or unobtrusive) marking
+   on finger which shows its "hot point". Optional ability to hide
+   hand but still see cursor or cross hairs and use hand while it is
+   mostly invisible. 1 to 3 days.
+
+7. Text and number pads shouldn't have interior vertical color patches
+   that currently separate each letter. 1/2 to 1 day. (Though old
+   demos will still display the old way because this change will break them.)
+
+8. Rational numbers. "/3" dropped on 10 should produce "3 1/3" for
+   example. 2 to 4 days.
+
+9. User control of what color is invisible for user pictures with "see
+   some". Easy to change the global default - hard to customize this
+   on a picture by picture basis. Global default change should take 1
+   or 2 hours.
+
+10. "Key just pressed" sensor only says "yes" once. This confused some
+    of us but is consistent. What is really needed are sensors like
+    "is q down?", "is w down?", "is e down?", etc. I don't think there
+    should be as well "is Q down" since there is only one button. You
+    need instead to test both "is q down?" and "is shift
+    down?". Estimate 1 to 2 days.
+
+11. F6 with clipboard open made duplicates of everything on the
+    floor. This is very confusing. F6 should be used for calling Tooly
+    (see below) and something hard to type like ctrl-F6 should be used
+    for putting the floor on the clipboard. The only known use of
+    putting the floor on the clipboard is for puzzle
+    creation. Estimated to take half an hour.
+
+12. F6 should call for Tooly. When Tooly comes his friends - Dusty,
+    Pumpy, Maggie, and the notebook (Bookie?) - should probably come
+    as well and move to their favorite spots. I think if this is done
+    then Tooly should clearly not follow you around on the floor. I
+    think it is OK that he does so when walking in the room. Right?
+    Estimate 1/3 to 1 day.
+
+13. Nests in thought bubbles are now interpreted to mean is there a
+    nest in the corresponding box even if it has been covered with
+    things. This means that robots have x-ray vision here but no where
+    else. Also it means you can't have a process that repeatedly does
+    something until it receives a message from a bird. Changing this
+    will break a few list processing examples (like reverse in the
+    Examples notebook) but they can be reconstructed though they will
+    now have to move nests by picking up the box they are
+    in. Alternatively there could be a way to pick up a nest even if
+    covered - e.g. control-mouse down. Estimate 1 to 2 days.
+
+14. If you vacuum something from the sensor notebook of a picture the
+    change is remembered and applies to all of your sensor
+    notebooks. Instead Marty should explain that you the notebooks are
+    "read-only". 1/2 hour.
+
+15. A robot trained to use Pumpy should ignore non-picture
+    elements. Otherwise a robot might be trained to make a box bigger
+    to see it better and then will repeatedly do so.
+
+16. Add way for ToonTalk to record audio during recording of a
+    demo. And to replay it. On replay should be able to either hear
+    old recording or add a new one. 1/2 to 1 day.
+
+17. "What am I a part of" sensor (and maybe "what are my parts
+    sensor?") are needed. 1 to 2 days.
+
+18. Coordinates should be floor relative not screen relative. 1 to 2 days.
+
+19. Clicking both mouse buttons at the same is like pressing Escape.
+    This should work only when mouse shortcuts are enabled so by default
+    it doesn't apply.
+
+Issues and ideas:
+
+1. Should remote looks show front or back when the picture is flipped?
+
+2. Should ToonTalk allow you to put multiple boxes in the thought
+   bubble which is interpreted to mean if the box given matching any
+   of these boxes then the robot should proceed? It is a cute way of
+   expressing disjunction. The current alternative is to copy the
+   robot and edit the thought bubble of the copy and join the robots
+   as a team. Besides being a bit clumsy, this makes it harder to
+   change things since both robots would need to be changed if the
+   training needs to be redone.
+
+3. Is "looks" the right name for the remote control which controls the
+   appearance of an object? Is costume any better? Would it be better
+   to change the idea to making twins that are always identical? In
+   other words a scheme where both have equal status and behavior
+   rather than the current one of a picture and its remote control for
+   its looks?
+
+4. Pictures of number and text nearly always behave like numbers or
+   text. Should this change? Or should any where that a picture of a
+   number works a number should work as well? E.g. the t-shirt of a
+   bird. If a distinction is kept then the notebook of pictures should
+   maybe have a number pad and text pad in there.
+
+5. Is the current story about type conversions (dropping something (A)
+   on an erased version of something else (B)) means that B gets the
+   appropriate value depending upon what A is. The text pad "123"
+   converts to the number 123. A box 3 long gives the number 3 to the
+   erased number underneath. And so on. Should there be a special tool
+   for type conversions instead?
+
+6. Up speed doesn't measure changes in y. I'm not sure it should but I
+   see how this could be confusing.
+
+7. Score keeper didn't get wider when it changed from 99 to 100. This
+   is appropriate for pictures since their width should change without
+   explicitly changing it. But numbers don't work that way.
+
+8. Should a truck loaded with an explicit address when run on the back
+   of a picture create a house rather than a new robot/box pair on the
+   back of the picture? Even if the address is the current address?
+   One might expect that there is no difference between putting no
+   address in the box and putting your current address. 1 hour change.
+
+9. Dropping something on the clipboard is like "cut" rather than
+   "copy". Users can of course drop a copy on the clipboard but if
+   they drop something they need on it and then clear the clipboard
+   without saving then they lose what they were maybe trying to
+   save. Maybe a copy should end up on the clipboard. What about other
+   sensors? Should "file to picture" leave the text pad around after
+   Bammer comes? 1/2 hour change.
+
+10. F4 currently calls for the last notebook you used. Maybe it should
+    always be the main notebook. 1 hour change.
+
+11. Robot acting. They have been observed to be in 5 states. Should
+    there only be 4 - inert, working, suspended on nest, and waiting
+    on sensor?
+
+12. Should there be a notion on an erased nest? (And how should it
+    look?) It would match nests whether covered or not. Isn't this too
+    weird? Is it important to find out how many elements are on top of
+    a nest? Note that you should only be able to ask (in the thought
+    bubble) that there be at least n since more may arrive right after
+    testing. 
+
+13. Should nests and birds be labeled in some way? Would this just be
+    a comment or could/should it be used to link up components? If so
+    what about name conflicts, accidental capture, etc.?
+
+14. What should happen if a robot is trained to flip a picture over
+    and remove the picture from the back and there isn't a picture on
+    the back? Fail quietly might be best.
+
+15. It should be possible (with permission) for a robot on the back of
+    a picture to add some behaviors to the back of a picture it has
+    collided with. A robot could be trained to wait for a box to
+    appear on a nest that says ["run" | box | robot_team]. That robot
+    just takes out a truck and drops the box and robot_team in the
+    truck. Since this will happen on the back of the picture the
+    robot_team and box will appear on the back of the picture.
+
+16. Here's one way to program the connecting of birds and nests of
+    independently made components. Consider the example of Stefan and
+    Christian's egg catching game. The score keeper should be a
+    component with a robot to update the score and optionally a robot to
+    report the score to anyone who asks. These robots are a team which
+    is given a box with a nest and the score (typically remote looks
+    of a number). The new idea is that the back of the score should
+    also have the bird whose nest the robots are working on. This
+    makes the score keeper a self contained entity since the bird and
+    her nest are both on the back.
+
+    The egg (or any component that need to have a bird to a score
+    keeper) should have a robot on the back that is waiting for some
+    user action while colliding with a score keeper. (E.g. the user
+    moves the egg over the score keeper and presses 'g' for grab or
+    'c' for connect or ...) This robot will obtain a copy of the score
+    keeper via the "hitting who" sensor and will flip it over. It will
+    take the bird off the back and put the bird in its box. Prior to
+    that there was some token like "no bird here" was there and it was
+    removed just before placing the bird there. The connection has now
+    been made. Multiple connnections (e.g. the point keeper and the
+    lives keeper) could be made the same way. There are some issues
+    about which bird goes where when more than 1 bird is needed. Let's
+    see how much of a problem this really is. In this example, the
+    worst that would happen is that the kid would need to reconnect
+    since the lives goes up when the egg is caught and the score goes
+    down when missed. The creator of the egg component can do things in
+    many ways. For example, when changing the score if, instead of
+    finding a bird, finds the token "no bird here" could start to
+    communicate with the user and suggest they add and connect a score
+    keeper. Users should be able to get Marty to say something.
+
+Bug fixes:
+
+1. When re-training a robot who was trained to pick up Dusty and then
+   clicking to take over after the robot has picked up Dusty lead to a
+   crash.
+
+2. Make sure that robots suspend when then encounter a nest but when
+   they have a mismatch due to matching against a sensor they let the
+   next robot in the team have a chance to try.
+
+3. Fix problems with selection of box and/or robot when on backside of
+   a picture.
+
+4. Flipped a picture and added to the backside of another flipped
+   picture. When removed and flipped back over the size was wrong.
+
+5. When erasing remote looks on the floor and dropping another picture
+   on top the position of the original picture jumped when its
+   appearance changed.
+
+6. Flipped pictures should display appropriate drop feedback (the
+   correct thing should wiggle). 
+
+7. Numbers dropped on an erased remote control for the looks didn't work.
+
+8. If you dropped "abc" on an erased number pad, Marty gave an
+   inappropriate explanation of what is wrong.
+
+9. When background is invisible objects on top didn't behave correctly
+   while they did when it was "see some" or "see all".
+
+10. My notes say "dropped on me" - any guess what this meant? And
+    "general purpose one-shot"?
+
+11. The looks remote control changes when it is in a thought bubble.
+
+12. T-shirts on birds sometimes broke things since the picture or
+    number on the t-shirt received things rather than the bird. Also
+    sometimes the t-shirt was displayed with the wrong size and with
+    the text pad backing when the bird is in a box.
+
+13. Erasing the remote looks caused code guard (ttbug32.exe) to catch
+    an error with SelectObject.
+
+14. Random should be between 0 and 999. (Don't forget the
+    documentation and what Marty says about it as well.)
+
+15. A picture dropped in a box which is then dropped in a notebook
+    when taken out again has the wrong size.
+
+16. When robots and Tooly are non-standard sizes then sometimes the
+    box appears in the thought bubble too far to the left.
+
+17. When a picture ends up the minimum y position you can reach it to
+    pick it up.
+
+18. Erasing the remote control for the looks of a number and then
+    dropping something else on top didn't work.
+
+19. When dropping a picture on another picture and the picture being
+    dropped bumps up against a wall of the room then its position is
+    changed when dropped (which is the intention when being dropped on
+    the floor).
+
+20. Some user pictures have black lines on the top and right side
+    (when "see all"). Probably due to padding when the dimensions are
+    not a multiple of 4.
+
+21. A picture lost its properties - no remote notebook came out when
+    flipped over. I was able to reproduce this by vacuuming up the
+    remote control notebook.
+
+22. Training a robot to add decoration really added it the
+    roof. Actions in a thought bubble shouldn't take place in the real
+    world. 
+
+23. Retraining of the first version of the row robot for the
+    multiplication table on the roofs of houses produced a robot with
+    an incorrect training. This version used space bar to find
+    decorations and the remote address. The retrained robot found the
+    decorations but then got confused.
+
+24. Team of robots where the first robot looked at "colliding with",
+    "up", and "left colliding?" acted funny. The first robot didn't
+    seem to let the second robot get a chance.
+
+25. Left/right collide (and up/down collide) didn't behave right when
+    moving a small picture over a large one.
+
+26. ross.cty had display problem where objects next to nest became
+    invisible when bird covered nest. Pointing to box fixed the
+    problem.
+
+27. Twice we saw a text pad get stuck on the floor. Neither hand nor
+    Dusty could touch it. No idea how to reproduce this.
+
+28. A robot trained to use Pumpy on a box crashed ToonTalk when run.
+
+29. A robot was trained to copy Richard and Celia's acceleration ball
+    together with its bird, then added the ball to the remote looks of
+    a rectangle, and bird was given an init message. Why did the nest
+    contain so many copies of "update"? And why did a robot trained to
+    count and remove copies of "update" crash?
+
+30. The "z-ordering" was not consistently used for display. E.g. the
+    rubber stamp program left hundreds of balls on background but
+    sometimes a ball was on top and sometimes it wasn't
+
+31. Saving remote looks didn't always work right.
+
+32. Double click on USR file starts ToonTalk with wrong palette. 
+    Minimizing and expanding fixes this.
+
+33. Multiplication table on roofs of houses crashed after starting 
+    second row.
+
+34. If a picture is dropped while power is off, then when power is restored the picture doesn't run unless dropped again.

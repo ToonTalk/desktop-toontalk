@@ -1,0 +1,22 @@
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to Window's clipboard. For example, you can use
+Window's Notepad or Write program. Just be sure your selection includes
+the code below and then select the Copy command in the Edit menu. 
+Then it will appear in the ToonTalk remote control for the clipboard. 
+You can find the clipboard remote control on page 30 of the Sensor notebook. 
+Just use Dusty to vacuum it off the clipboard. 
+   The following is a notebook containing 2 pages.
+   What follows is in a special code and was produced by ToonTalk(tm) 
+UK English Version 1.03. To learn more about ToonTalk see www.toontalk.com.
+1HStartToonTalkEncoding:
+CQEAVG5UbHIwMDgCACwB+AAADAAANgJiAIMAAAACACAABAAHUmVhbFVwACQYAQAAKwAB+QAA
+A1VwAADPOAIAKwAJdmVsb2NpdHkA+AEAKAClAwAAKwAAATwLiwGJAAAAAAAOYWNjZWxlcmF0
+dGlvbgD4AgAoAAMAAAArAAABPAs8AYkAAAAAAAAAAAAAAAAABSAABAAHUmVhbFVwACQLBAAA
+KwEB/wNVcAAAAQAAACsBCXZlbG9jaXR5AABkAAAAKwEOYWNjZWxlcmF0dGlvbgAAZAAAAC0B
+ILr/AAAE/wADAv8ABAAC/wAJAAH/AAQAA/8ACQAC/wAEAAH/AAgW/wAGAv8AAQT/AAIDAP8A
+Bxf/ABEN/zARDf8wEQ3/LwkW/wARFv89Bxb/AAkAAP8AF////wAAAAAAAAAAowAFIAAEAAdS
+ZWFsVXAAJAsEAAArAQH/A1VwAAABAAAAKwEJdmVsb2NpdHkAAGQAAAArAQ5hY2NlbGVyYXR0
+aW9uAABkAAAALQEguv8AAAT/AAMC/wAEAAL/AAkAAf8ABAAD/wAJAAL/AAQAAf8ACBb/AAYC
+/wABBP8AAgMA/wAHF/8AEQ3/MBEN/zARDf8vCRb/ABEW/z0HFv8ACQAA/wAX////.
+This is the end of the code for the ToonTalk object. 

@@ -1,0 +1,25 @@
+images 453 bytes 2899306
+sounds 20 bytes 557576
+
+(+ 557576 2899306)
+3456882
+
+(/ 3456882 (+ 8485 1049))
+36.2% of total
+
+(/ 46380000  (+ 8485 1049))
+48.6 % zip compression
+
+532K for EXE and DLL (without notebook stuff)
+
+1,679,616 is 48.6% of 3456882
+
+(+ 1680 532 )
+2212K total except for installation stuff
+
+730K for installation stuff
+
+Might save a little by eliminating credits screen.
+
+Also if sounds are mp3 compressed.
+

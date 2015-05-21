@@ -1,0 +1,367 @@
+// Copyright (c) 1992-2007.  Ken Kahn, Animated Programs, All rights reserved
+//
+
+#include "starttt.rch"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "starttt.h"
+//#include "ver.h"
+
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""AutoRun.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+{
+ IDM_CONTINUE, "Free Play"
+ IDM_SEE_DEMOS, "See Demos"
+ IDM_RUN_PUZZLES, "Play Game"
+#if TT_UK
+ IDS_NARRATION_FILE_SUFFIX, "UKN"
+#else
+ IDS_NARRATION_FILE_SUFFIX, "SPK"
+#endif
+ IDS_SPEAKERS_ON,
+   "Please make sure the computer's speakers are on.\rToonTalk demos are much easier to understand with narration."
+ IDS_START_TOONTALK,
+   "Start ToonTalk"
+ IDS_CDROM_MAY_BE_SLOW,
+   "Since ToonTalk was not installed on the hard drive, this may run slow or be slow to start.\rIf it is too slow, re-install ToonTalk again and choose other options." // wording updated on 120304
+
+IDS_PLEASE_WAIT, // new on 210602
+"Please wait..."   
+   
+// IDS_PUZZLE_SUBDIRECTORY,
+//   "English"
+// IDS_NEED_CDROM_TO_CONTINUE,
+// "If you insert the ToonTalk CDROM now, ToonTalk will be able to continue. "
+// IDS_WARNING_FILE
+// "Warning: file"
+// IDS_COULDNT_OPEN,
+// "could not be opened. "
+
+IDM_SET_OPTIONS,
+  "Set Options"
+
+IDM_HELP,
+  "Help"
+
+IDM_ABOUT,
+  "About"
+
+IDS_DOC_SUBDIRECTORY_NAME,
+  "English"
+
+IDC_OPTION_CAPTION,
+ "Select NEXT after answering the question by clicking on one of the small circles."
+IDC_OPTION_BACK_TEXT,
+ "<< BACK <<"
+IDC_OPTION_NEXT_TEXT,
+ ">> NEXT >>"
+IDC_OPTION_CANCEL_TEXT,
+ "CANCEL"
+IDC_OPTION_DONE_TEXT,
+ "DONE"
+
+IDS_OPTIONS_CHANGED_TEXT,
+ "Option settings will be changed as requested if you click on DONE. Run this again if you ever want to change or restore them. "
+IDS_OPTIONS_CHANGED_TEXT2,
+ "You can also set options for a single player by using the notebook on page 10 of your main ToonTalk notebook. "
+IDS_OPTIONS_RESTORED_TEXT,
+ "Option settings will be restored as requested if you click on DONE. Run this again if ever want to change them. "
+
+IDC_OPTIONS_CHANGED_CAPTION,
+ "Click on DONE to accept all your changes. "
+
+
+IDS_OPTION_NOT_INSTALLED,
+ "(Not available since no voices installed.)" // updated on 070401
+
+IDS_OPTION_AVAILABLE_ONLY_ON_CDROM,
+  "(Available only on CDROM.)"
+
+IDS_OPTION_AVAILABLE_ONLY_FOR_32BIT_VERSION,
+ "(Available only with the 32-bit version.)"
+
+ IDS_OPTION1_QUESTION,
+  "What do you want to do?"
+ IDS_OPTION1_EXPLANATION,
+  "You have the choice of restoring the options to the way they were when ToonTalk was installed or changing the current options by answering some questions. "
+ IDS_OPTION1_EXPLANATION+1,
+   "Click on NEXT after you've made your choice."
+ IDS_OPTION1_ANSWER1,
+  "I don't want to change anything. "
+ IDS_OPTION1_ANSWER2,
+  "I want to restore the original settings. "
+ IDS_OPTION1_ANSWER3,
+  "I want to change some option settings for every ToonTalk player on this computer. "
+ IDS_OPTION1_ANSWER4,
+  "I want to change some option settings for every new ToonTalk player on this computer. "
+
+/*
+ IDS_OPTION2_QUESTION,
+  "Which version of ToonTalk do want to run?"
+ IDS_OPTION2_EXPLANATION,
+  "32-bit programs are typically more capable, more robust and faster. On a few machines (mostly older ones) the 16-bit version runs better. "
+ IDS_OPTION2_EXPLANATION+1,
+  "There are some things only the 32-bit version can do. Like run with high-resolution pictures. Or have Marty speak. Or use a joystick. "
+ IDS_OPTION2_ANSWER1,
+  "I want the 16-bit version. The pictures are grainy but ToonTalk is fast. "
+ IDS_OPTION2_ANSWER2,
+   "I want the low-resolution 32-bit version. The pictures are grainy but ToonTalk is fast. "
+ IDS_OPTION2_ANSWER3,
+   "I want the high-resolution 32-bit version. The pictures are sharp but ToonTalk might be slow. "
+ */
+   // rewrote above on 230999 to reflect both new resolutions availability and deprecation of 16 bit version
+ IDS_OPTION2_QUESTION,
+  "What screen resolution do you want for ToonTalk?"
+ IDS_OPTION2_EXPLANATION,
+  "If you make the screen resolution larger then the pictures will look sharp and you'll have more room, but ToonTalk might run slow and the animation may become jerky. "
+ IDS_OPTION2_EXPLANATION+1,
+  "I suggest you try different screen resolutions until you find the best one for your computer. " // was "resolution" prior to 130201
+ IDS_OPTION2_ANSWER1,
+  "I want ToonTalk to run with 320 by 240 pixels. It is OK that pictures will look grainy since I want ToonTalk to run as fast as possible. "
+ IDS_OPTION2_ANSWER2,
+   "I want ToonTalk to run with 640 by 480 pixels. I still want ToonTalk to run fast but not that grainy. "
+ IDS_OPTION2_ANSWER3,
+   "I want ToonTalk to run with 800 by 600 pixels. I want pictures to look sharper and I want more space when I sit on the floor. I'll see if ToonTalk is slow. "
+ IDS_OPTION2_ANSWER4,
+   "I want ToonTalk to run with 1024 by 768 pixels. I want even sharper pictures and even more space. "
+ IDS_OPTION2_ANSWER5,
+   "I want ToonTalk to run with 1152 by 864 pixels. I want more space. "
+ IDS_OPTION2_ANSWER6,
+   "I want ToonTalk to run with 1280 by 1024 pixels. I'll see if ToonTalk is fast enough since I want all this space. "
+ IDS_OPTION2_ANSWER7,
+   "I want ToonTalk to run with 1600 by 1200 pixels. I want to see if my computer can run in this resolution and if so will it be fast enough. "
+
+ IDS_OPTION3_QUESTION,
+  "What size window do you want?"
+ IDS_OPTION3_EXPLANATION,
+  "Most people prefer the full-screen version of ToonTalk. On a few computers it doesn't work well. "
+ IDS_OPTION3_EXPLANATION+1,
+ // revised on 180301
+  "ToonTalk can run in any size Window but multiples of the chosen screen resolution are the fastest. If you run in a Window size larger than your screen it will look like the full-screen mode. But it might be slower or choppier than the real full-screen mode."
+ IDS_OPTION3_ANSWER1,
+  "I want the full-screen version. "
+ IDS_OPTION3_ANSWER2,
+   "I want to run ToonTalk in a window. " // revised on 180301
+ IDS_OPTION3_ANSWER3,
+   "I want to run ToonTalk in a window twice the screen resolution I just selected. " // revised on 180301 and following
+ IDS_OPTION3_ANSWER4,
+   "I want to run ToonTalk in a window three times the screen resolution I just selected. "
+ IDS_OPTION3_ANSWER5,
+   "I want to run ToonTalk in a window four times the screen resolution I just selected. "
+
+ IDS_OPTION4_QUESTION,
+  "Do you want to make the right mouse button more useful?"
+ IDS_OPTION4_EXPLANATION,
+  "Some people get left and right mixed up a lot. Others can work faster using multiple mouse buttons."
+ IDS_OPTION4_EXPLANATION+1,
+  "ToonTalk can treat all mouse buttons the same (except when flying the helicopter) or use the convention that left button means pick up or drop and right button means use or flip. "
+ IDS_OPTION4_ANSWER1,
+  "I want to keep it simple and not worry about which mouse button I'm pushing. "
+ IDS_OPTION4_ANSWER2,
+  "I want to turn ToonTalk tools on and off by clicking the right mouse button. "
+ IDS_OPTION4_ANSWER3,
+  "I want to turn ToonTalk tools on and off by clicking the right mouse button. And I want to use the middle button (or control and left button) for tossing. " // updated 180301
+
+ IDS_OPTION5_QUESTION,
+  "Do you want to change how Marty talks?"
+ IDS_OPTION5_EXPLANATION,
+#if TT_UK
+  "Marty can speak, use speech bubbles like comics, or both. And when using speech bubbles he can leave little time or lots of time between bubbles. "
+#else
+  "Marty can speak, use talk balloons like comics, or both. And when using talk balloons he can leave little time or lots of time between balloons. "
+#endif
+ IDS_OPTION5_EXPLANATION+1,
+  "Note that Marty can speak only voices have been installed on your computer. The ToonTalk CD-ROM installs a voice. "
+ IDS_OPTION5_ANSWER1,
+#if TT_UK
+  "I want Marty to speak and use speech bubbles. "
+  IDS_OPTION5_ANSWER2,
+  "I want Marty to speak and not use speech bubbles. "
+ IDS_OPTION5_ANSWER3,
+ // prior to 270999 was "Each bubbles ..."
+  "I don't want Marty to speak. Bubbles should stay up long enough for a typical 10-year to read. "
+ IDS_OPTION5_ANSWER4,
+  "I don't want Marty to speak. Bubbles should stay up long enough for a typical adult to read. "
+ IDS_OPTION5_ANSWER5,
+  "I don't want Marty to speak. Bubbles should stay up a very long time. I'll press 'PageDown' when I've read a balloon. "
+ IDS_OPTION5_ANSWER6, // new on 270999
+  "I want Marty to speak and I don't want speech bubbles but I do want subtitles."
+#else
+  "I want Marty to speak and use talk balloons. "
+ IDS_OPTION5_ANSWER2,
+  "I want Marty to speak and not use talk balloons. "
+ IDS_OPTION5_ANSWER3,
+  "I don't want Marty to speak. Each balloon should stay up long enough for a typical 10-year to read. "
+ IDS_OPTION5_ANSWER4,
+  "I don't want Marty to speak. Each balloon should stay up long enough for a typical adult to read. "
+ IDS_OPTION5_ANSWER5,
+  "I don't want Marty to speak. Each balloon should stay up a very long time. I'll press 'PageDown' when I've read a balloon. "
+ IDS_OPTION5_ANSWER6, // new on 270999
+  "I want Marty to speak and I don't want talk balloons but I do want subtitles."
+#endif
+  IDS_OPTION5_ANSWER7, // new on 110401
+ "I don't want Marty to speak but I do want subtitles."
+//  "Jag vill gärna ha textremsor men att Marty ska vara tyst."
+
+ IDS_OPTION6_QUESTION,
+//  "Do you want to hear sounds?"
+"Do you want to hear sound effects?" // updated on 170401 to reflect the way it is implemented - not clear what is right here
+ IDS_OPTION6_EXPLANATION,
+  "If you don't like hearing sounds or you don't have a speaker connected to your computer you may want to turn off sound effects. "
+ IDS_OPTION6_EXPLANATION+1,
+//  "This turns off both sound effects and if, available, Marty's speaking."
+ "This turns off sound effects but not Marty's speaking." // updated on 170401
+ IDS_OPTION6_ANSWER1,
+  "Yes, I want to hear sound effects. " // updated on 170401
+ IDS_OPTION6_ANSWER2,
+  "No, I don't want to hear sound effects. " // updated on 170401
+
+ IDS_OPTION7_QUESTION,
+  "What kind of users should ToonTalk expect?"
+ IDS_OPTION7_EXPLANATION,
+  "ToonTalk can help knowledgeable users track down problems by suggesting web pages to read. "
+ IDS_OPTION7_EXPLANATION+1,
+  "ToonTalk can also run in a museum mode where, after an idle period, it will begin to run demos automatically. "
+ IDS_OPTION7_ANSWER1,
+  "Most users are knowledgeable enough about computers to want help trouble shooting when ToonTalk isn't behaving normally. "
+ IDS_OPTION7_ANSWER2,
+  "Most users are kids or beginners and shouldn't be bothered by trouble shooting advice. "
+  IDS_OPTION7_ANSWER3,
+  "Most users are brief visitors to a museum, store, or kiosk. "
+
+ IDS_OPTION8_QUESTION,
+  "Do you want to change which language ToonTalk uses?"
+ IDS_OPTION8_EXPLANATION,
+  "ToonTalk has been translated to other languages. This changes what language Marty speaks or displays."
+ IDS_OPTION8_ANSWER1,
+  "I want ToonTalk to use "  // followed by language name
+ IDS_OPTION8_ANSWER2,
+  "I want ToonTalk to use "  // followed by language name
+ IDS_OPTION8_ANSWER3,
+  "I want ToonTalk to use "  // followed by language name
+ IDS_OPTION8_ANSWER4,
+  "I want ToonTalk to use "  // followed by language name
+ IDS_OPTION8_ANSWER5,
+  "I want ToonTalk to use "  // followed by language name
+ IDS_OPTION8_ANSWER6,
+  "I want ToonTalk to use "  // followed by language name
+ IDS_OPTION8_ANSWER7,
+  "I want ToonTalk to use "  // followed by language name
+
+ IDS_OPTION9_QUESTION,
+  "Do you want to change the voice that ToonTalk uses?"
+ IDS_OPTION9_EXPLANATION,
+  "ToonTalk can use different voices installed on your computer. This changes Marty's voice. "
+ IDS_OPTION9_ANSWER1,
+  "I want ToonTalk to use the voice named "  // followed by the mode name
+ IDS_OPTION9_ANSWER2,
+  "I want ToonTalk to use the voice named "  // followed by the mode name
+ IDS_OPTION9_ANSWER3,
+  "I want ToonTalk to use the voice named "  // followed by the mode name
+ IDS_OPTION9_ANSWER4,
+  "I want ToonTalk to use the voice named "  // followed by the mode name
+ IDS_OPTION9_ANSWER5,
+  "I want ToonTalk to use the voice named "  // followed by the mode name
+ IDS_OPTION9_ANSWER6,
+  "I want ToonTalk to use the voice named "  // followed by the mode name
+ IDS_OPTION9_ANSWER7,
+  "I want ToonTalk to use the voice named "  // followed by the mode name
+
+}
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+
+STRINGTABLE
+{
+ IDS_INTRO_DEMO, "Introductory Tour"
+ IDS_EXPLODE_DEMO, "Exploding Houses Demo"
+ IDS_SWAP_DEMO, "Swap if Bigger Demo"
+ IDS_PONG1_DEMO, "Build Ping Pong (Part 1)"
+ IDS_PONG2_DEMO, "Build Ping Pong (Part 2)"
+ IDS_PONG3_DEMO, "Build Ping Pong (Part 3)"
+ IDS_FIBONACCI_DEMO, "Fibonacci Numbers Demo"
+ IDS_FACTORIAL_DEMO, "Factorial Demo"
+ IDS_BANK_DEMO, "Bank Account Demo"
+ IDS_APPEND_DEMO, "Append Lists Demo"
+// IDS_EXPLODE_INSTRUCTIONS, "Build your own exploding bricks"
+ IDS_PLAY_PUZZLE_GAME, "Play Puzzle Game"
+ IDS_FREE_PLAY, "Free Play"
+ IDS_CONFIRM_PRINT, "The instructions can be viewed and printed by Microsoft's Word Viewer. (Colors may look wrong, but it should print right.)  Ready to view the instructions?"
+ IDS_CONFIRM_PRINT2, "Ready for the other half of the instructions?"
+ IDS_WINDOW_TITLE, "Start ToonTalk"
+ IDS_FORGET_IT, "Quit"
+
+ IDS_INTRO_DEMO_FILE, "Intro_v2"
+ IDS_EXPLODE_DEMO_FILE, "Explode2"
+ IDS_SWAP_DEMO_FILE, "Swap2"
+ IDS_PONG1_DEMO_FILE, "PongAct1_v2"
+ IDS_PONG2_DEMO_FILE, "PongAct2_v2"
+ IDS_PONG3_DEMO_FILE, "PongAct3_v2"
+ IDS_FIBONACCI_DEMO_FILE, "Fibs2"
+ IDS_FACTORIAL_DEMO_FILE, "Fact2"
+ IDS_BANK_DEMO_FILE, "Account2"
+ IDS_APPEND_DEMO_FILE, "Append2"
+// IDS_EXPLODE_INSTRUCTIONS_FILE1, "explode1.doc"
+// IDS_EXPLODE_INSTRUCTIONS_FILE2, "explode2.doc"
+ IDS_DEMO_FILE_MISSING, // new on 060401
+ "Sorry, this demo has not been installed." // new on 300507
+//  "This demo has not been installed.\rThe trial version only includes the Introductory Tour demo.\rSome demos are currently being// rebuilt. Sorry." // updated 241103
+ IDS_INSERT_CDROM, // prior to 060401 was hard coded to be in English
+  "If you insert the ToonTalk CD-ROM and wait a few seconds,\rToonTalk will be able to continue. "
+}
+
+
+
+

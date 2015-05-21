@@ -1,0 +1,38 @@
+IDS_TROUBLE_SHOOT_DIRECTX_MEDIA, // new on 100600
+ "ToonTalk had some troubles using the DirectX Media extensions to Windows to load pictures. Want to see what you can do about this?"
+
+IDS_JAVA_SENSOR_LIMITATIONS, // new on 120101
+ "Sorry. Some sensors just don't work in Java. The following sensor will be inactive in Java: "
+
+IDS_M22_MISSING, // new on 130201
+ "This installation of ToonTalk is missing the low resolution graphics data file. Click on 'Set Options' to switch to 640x480 or higher or contact support@toontalk.com."
+
+IDS_TROUBLE_SHOOT_JAVA_APPLET, // new on 170201
+ "Sorry, but something went wrong in compiling the Java applet. Do you want to read about what to do about this?"
+
+IDS_ROBOT_VACUUMED_UP_HIS_BOX, // new on 180201
+ "A robot vacuumed up his box."
+
+IDS_NO_IP_ADDRESS, // new on 010301
+ "ToonTalk can't find an IP address for this machine. Long-distance birds won't work unless you quit, connect to the Internet, and try again."
+IDS_LOADING_FOREIGN_BIRD,
+ "ToonTalk is loading a foreign bird that uses an extension to ToonTalk (a DLL)."
+IDS_ROBOT_USING_FOREIGN_BIRD,
+ "A robot is about to use a foreign bird that uses an extension to ToonTalk (a DLL)."
+IDS_OK_TO_LOAD_DLL,
+ "Is it OK to load" // followed by a file name
+IDS_OK_TO_LOAD_DLL2,
+ " " // after the file name
+
+IDS_WANT_TO_UPDATE_TT_INI_TOONTALK32_1, // new on 170301
+ "ToonTalk was installed to run" // followed by the name of an EXE file
+IDS_WANT_TO_UPDATE_TT_INI_TOONTALK32_2,
+ "Do you want to update it to run instead the version you are running now?"
+
+IDS_OPTION5_ANSWER7, // new on 110401
+ "I don't want Marty to speak but I do want subtitles."
+
+ IDS_DEMO_FILE_MISSING, // new on 060401
+  "This demo has not been installed.\rThe trial version only includes the Introductory Tour demo."
+ IDS_INSERT_CDROM, 
+  "If you insert the ToonTalk CD-ROM and wait a few seconds,\rToonTalk will be able to continue. "

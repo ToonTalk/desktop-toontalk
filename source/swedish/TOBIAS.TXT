@@ -1,0 +1,39 @@
+Subject: ToonTalk programming
+Date: Thu, 28 Nov 1996 18:48:15 -0800
+From: Zetterlund <em.zetterlund@swipnet.se>
+To: KenKahn@ToonTalk.com
+
+Hi,
+
+I'm trying to learn more about how to program in ToonTalk. I wanted to
+make a picture move when you push the arrow buttons. I programmed two
+rebots, one for the up arrow and one for the down arrow. If you press
+the down arrow the picture should move 5 pixels down.
+  When I programmed the robots I used the remote control for "reseltly
+pressed key". It worked quite fine, but the picture only moved one time
+a keypress. I can understand that since the remote control only shows
+the key for a very short period. And therefor the robot only does what
+he is programmed to one time.
+
+I could use the "last pressed key" instead, but then the picture would
+move all the time, right? How can I make thins work? What I want is to
+make the picture move when I hold the key down, 5 pixels a time.
+
+I also made a program that should make new houses when I set a switch to
+on, but when I set the switch to on I got an errormessage wanting me to
+close ToonTalk. I used a robot that started when the frame was 1 (on).
+The robot sent away another preprogrammed robot in a truck to do noting
+in a new house except for getting there with a counter (house no.).
+Maybe you'd need a better explenation to figure out what happened. As a
+matter of I tried to make a logfile of it (.dmo), but I never got one.
+Perhaps ToonTalk couldn't generate one when the error occured.
+
+I konw it's already on it's way (the CD), but I think the picture on
+page 26 (a helicopter) should be named "Helikopter" instead of "landar"
+(which means landing). I also think that the picture on page 60 (a
+rocket) should be named "Raket" not "Racket" wich means paddle (probably
+our fault).
+
+That's all for this time. Oh, congratulation for your success.
+
+Tobias

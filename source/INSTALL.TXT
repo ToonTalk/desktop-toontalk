@@ -1,0 +1,21 @@
+To find out more about ToonTalk check out http://www.toontalk.com.
+
+To install ToonTalk from the net.  
+
+You need to ftp the following to a temporary directory.
+ttbeta5.exe
+tt_disk2.z
+tt_disk3.z
+tt_disk4.z
+tt_disk5.z
+tt_disk6.z
+tt_disk7.z
+
+You then need to type the following to DOS while connected to the temporary directory:
+
+pkunzip disk1 -sPASSWORD
+
+where PASSWORD is available if you send email to KenKahn@ToonTalk.com.
+
+When done run setup on the temporary directory.
+

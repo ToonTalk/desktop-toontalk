@@ -1,0 +1,140 @@
+<HTML>
+	<HEAD>
+		<META HTTP-EQUIV="content-type"
+CONTENT="text/html;charset=iso-8859-1">
+		<META NAME="generator" CONTENT="GoLive CyberStudio">
+		<TITLE>G&ouml;r dina egna Demon</TITLE>
+		<META NAME="Version" CONTENT="8.0.4308">
+		<META NAME="Date" CONTENT="7/8/97">
+		<META NAME="Template" CONTENT="C:\Program Files\Microsoft
+Office\Office\HTML.DOT">
+	</HEAD>
+	<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" BGCOLOR="#FFFFFF">
+		<CENTER>
+			<P><B><FONT SIZE="4">G&ouml;r dina egna
+Demon</FONT></B></P>
+		</CENTER>
+		<P><B>Avancerade anv&auml;ndare:</B></P>
+		<P>F&ouml;r att skapa en demo l&auml;gga bara -o
+&lt;<I>filnamn</I>&gt; till <A
+HREF="command.htm#OutputLog">kommandoraden</A> innan du startar ToonTalk.
+Detta kommer att skapa en fil som heter filnamn.DMO i antingen "LowRes"
+eller "HighRes" underkatalog till "demos" katalogen i ToonTalk. Vilken
+underkatalog filen hamnar i beror p&aring; uppl&ouml;sningen i ToonTalk.
+&quot;dmo&quot; filen spelar in allt
+		du g&ouml;r, varje musr&ouml;relse, tryckning p&aring;
+tangenter, etc. Demon startar
+		genom att filen dubbelklickas. Ett annat s&auml;tt &auml;r
+att l&auml;gga till
+		-I &lt;filnamn&gt; till kommandoraden f&ouml;r att starta
+demon. Kolla f&ouml;rst
+		i underkatalogen &quot;demos&quot; f&ouml;r att se vilka
+namn som redan &auml;r upptagna
+		av andra demon s&aring; att dessa inte skrivs &ouml;ver.</P>
+		<P>G&ouml;r du en demo p&aring; en snabb dator och
+r&auml;knar med att demon ska
+		k&ouml;ras p&aring; l&aring;ngsamma maskiner d&aring;
+&auml;r det b&auml;st att du l&auml;gger till
+		<A HREF="command.htm#FrameDurationMinimum">-y 50</A> till
+kommandoraden medan du spelar in f&ouml;r att f&aring; din maskin att
+		g&aring; l&aring;ngsammare.</P>
+		<P><B>Att l&auml;gga till f&ouml;rklarande texter till dina
+demon</B>. N&auml;r ToonTalk b&ouml;rjar k&ouml;ra en demo som heter X
+letar programmet
+		efter en fil som heter X.set. &quot;set&quot; &auml;r det
+ursprungliga till&auml;gget
+		f&ouml;r svenska  f&ouml;rklarande texter -subtitles . Du
+		kan &auml;ndra ursprungsnamnet genom att  l&auml;gga in ett
+&quot;SubtitlesSuffix&quot;
+		i &quot;FileExtensions&quot; avdelningen i ToonTalk.ini
+file i din Windows
+		katalog. En subtitle fil g&ouml;rs med inmatningar som
+&aring;tskiljs av
+		tomma rader. Varje inmatning har tiden i millisekunder
+fr&aring;n b&ouml;rjan
+		av demon f&ouml;ljd av den f&ouml;rklarande texten. Det
+&auml;r b&auml;st att alla
+		inmatningar med text som har mer &auml;n 60 nedslag skiljs
+&aring;t. I &quot;demos&quot;
+		underkatalog i din ToonTalk installation finns m&aring;nga
+exempel p&aring;
+		subtitle files. Ett s&auml;tt att f&aring; tidtagningar i
+millisekunder &auml;r
+		att trycka F9 n&auml;r demon spelas upp. Detta kommer att
+registrera
+		tiden i din &lt;<I>username</I>&gt;.log i underkatalogen
+&quot;users&quot;. </P>
+		<P><B>Att l&auml;gga till ber&auml;ttartext till dina
+demon</B>. N&auml;r ToonTalk b&ouml;rjar k&ouml;ra en demo som heter X
+letar programmet
+		efter en fil som heter X.tal. &quot;tal&quot;  &auml;r det
+ursprungliga till&auml;gget
+		f&ouml;r svenska  ber&auml;ttartexter. Du kan &auml;ndra
+ursprungsnamnet
+		genom att  l&auml;gga in ett &quot;SubtitlesSuffix&quot; i
+&quot;NarrationFileSuffix&quot;
+		avdelningen i ToonTalk.ini file i din Windows katalog.
+N&auml;r du
+		skapar en ber&auml;ttarfil b&ouml;r du spela in den i
+avsnitt (256 &auml;r maximala
+		antalet) och d&ouml;pa dem till &quot;s01.wav&quot;,
+&quot;s02.wav&quot; och s&aring; vidare.
+		Dessa filer b&ouml;r placeras i ToonTalks huvudkatalog.
+N&auml;r du spelar
+		upp din demo ska du trycka p&aring; F11 f&ouml;r att
+s&auml;tta ig&aring;ng n&auml;sta ber&auml;ttaravsnitt.
+		Om du f&ouml;redrar att spela in och synkronisera den
+f&ouml;rinspelade
+		ber&auml;ttartexten i st&auml;llet, l&auml;gg d&aring; till
+-d 451 till kommandoraden
+		tillsammans med -o &lt;<I>filnamn</I>&gt; och tryck
+p&aring;  F11 igen n&auml;r du vill l&auml;gga till n&auml;sta
+ber&auml;ttaravsnitt.
+		N&auml;r ToonTalk avslutas kommer programmet skriva en ny
+&quot;tal&quot; i underkatalogen
+		&quot;demos&quot;.</P>
+		<P><B>Att samordna ber&auml;ttartext med f&ouml;rklarande
+text</B>. Om du vill skapa b&aring;de ber&auml;ttartext och
+f&ouml;rklarande text, &auml;r
+		det b&auml;st att du skapar ber&auml;ttartexten f&ouml;rst
+och sedan k&ouml;r din
+		demo med &quot;-d 3210&quot; som kommer att skriva in
+starttiderna f&ouml;r varje
+		avsnitt i din &lt;<I>username</I>&gt;.log i underkatalogen
+&quot;users&quot;. Sedan kan du anv&auml;nda dessa tider
+		i din subtitles file. </P>
+<P><B>Tips</B>:</P>
+
+<UL>
+</B><LI>En demofil fungerar i samma uppl&ouml;sning som den spelades in i.
+Om du har tur kan du spela in en demo i h&ouml;g uppl&ouml;sning och
+kopiera den till underkatalogen f&ouml;r l&aring;g uppl&ouml;sning och
+f&aring; den att fungera.  Se underkatalogerna till "Demos". </LI>
+<LI>En demo som spelats in med talfunktionen p&aring; kanske inte fungerar
+n&auml;r tal &auml;r inte &auml;r p&aring;. </LI>
+<LI>Tal &auml;r inte p&aring; n&auml;r du spelar upp en demo med
+ber&auml;ttartext s&aring;vida du inte <A
+HREF="command.htm#TextToSpeechUsesDirectSound">k&ouml;r med tal-till-text
+maskinen som anv&auml;nder DirectSound</A>. </LI>
+<LI>Om du skulle r&aring;ka g&ouml;ra fel n&auml;r du spelar in en demo
+beh&ouml;ver du inte g&ouml;ra om allt. Du kan k&ouml;ra tt32 -I PartlyGood
+-o NewVersion och sedan &aring;terta kontrollen precis fr&aring;n det
+st&auml;lle d&auml;r den gamla demon gick snett. </LI>
+<LI>Undvik att anv&auml;nda tangentbords-acceleratorer f&ouml;r verktyg (t
+ex 'r' f&ouml;r att f&aring; Dammis att radera saker). Dessa acceleratorer
+skiljer sig fr&aring;n spr&aring;k till spr&aring;k, vilket inneb&auml;r
+att om du anv&auml;nder dem kommer dina demon antagligen inte fungera i en
+annan spr&aring;kversion av ToonTalk. </LI>
+<LI>Om du g&ouml;r en demo f&ouml;r en anv&auml;ndare som heter Patrik,
+d&aring; kan det h&auml;nda att Patriks anv&auml;ndarprofil &auml;ndras
+n&auml;r den demon k&ouml;rs. Skriv i st&auml;llet in -t 1 p&aring;
+kommandoraden f&ouml;r att markera att detta &auml;r en "temporary"
+(tillf&auml;llig) anv&auml;ndare och att anv&auml;ndarprofilen inte ska
+sparas.</LI></UL>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+		<P>&nbsp;</P>
+	</BODY>
+</HTML>

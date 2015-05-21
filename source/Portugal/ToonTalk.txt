@@ -1,0 +1,11 @@
+Record of events for ToonTalk
+Starting at time 3348751
+Bits per pixel: 32
+Command line is: 
+-n ToonTalk -language pt -d 2468
+Last error number=87 Start MainWindow::WndProc at time 3407652 and frame 24
+Last error number=87 Start MainWindow::WndProc at time 3407934 and frame 24
+Last error number=87 Start MainWindow::WndProc at time 3430309 and frame 303
+Last error number=87 Start MainWindow::WndProc at time 3448180 and frame 464
+Last error number=87 Start MainWindow::WndProc at time 3448515 and frame 464
+476 frames in 40 seconds (11.7 FPS). (Ignoring 0 frames during the titles.)

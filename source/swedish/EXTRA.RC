@@ -1,0 +1,46 @@
+
+
+IDS_CHILDREN_HELP,
+ "the answer to the question \"What pictures are stuck on top of me?\""
+IDS_ANCESTORS_HELP,
+ "the answer to the question \"What picture am I stuck on top of, and what picture is that stuck on, and so on?\""
+IDS_CHILDREN_SHORT_LABEL,
+ "Parts"
+IDS_ANCESTORS_SHORT_LABEL,
+ "Containers"
+IDS_CHILDREN_LONG_LABEL,
+ "Parts"
+IDS_ANCESTORS_LONG_LABEL,
+ "Containers"
+IDS_AND_IT_HAS_THE_LABEL,
+ "and it has the label"
+IDS_ANSWER_CHILDREN_QUESTION,
+ "This tells us what pictures are stuck on top of"
+IDS_ANSWER_ANCESTORS_QUESTION,
+ "This tells us what pictures",
+IDS_ANSWER_ANCESTORS_QUESTION2,
+  "is stuck on top of"
+IDS_LABELED_BY,
+ "labeled by"
+IDS_ENCODING_MISSING_IN_PUZZLE,
+ "Couldn't find encoding of goal in puzzle."
+IDS_PUZZLE_CONTAINED_NON_ROBOT_AFTER_GOAL,
+"Puzzle contained a non-robot after the goal. Section ignored."
+IDS_NON_PICTURE_ON_TOP_OF_PICTURE,
+ "Non picture on top of picture added to back instead."
+IDS_GIVE_ME_AND_ILL_TALK_ABOUT_IT,
+ "If you give me something, I'll talk about it whenever I'm talking about" // followed by some ToonTalk object
+IDS_HERES_A_COPY_OF,
+"Here's a copy of" // followed by some ToonTalk object
+IDS_IT_GOES_WITH,
+"It goes with" // followed by some ToonTalk object
+IDS_OK,
+"OK"
+IDS_ILL_REMEMBER_THAT,
+"I'll remember that"
+IDS_GOES_WITH,
+"goes with"
+
+
+IDS_MY_BOX, // new on 290499
+"My Box"

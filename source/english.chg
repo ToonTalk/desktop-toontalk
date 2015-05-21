@@ -1,0 +1,11 @@
+// Changes to English.rc
+
+// on 12/16
+
+IDS_COPIER_BUTTON, // was IDS_BUTTON
+ "a magic wand button" // was "a button"
+IDS_VACUUM_BUTTON,  // was IDS_VACUUM_BUTTON_SPRITE
+ "a vacuum button" // was "a button on a vacuum"
+IDS_PUMP_BUTTON, // IDS_PUMP_BUTTON_SPRITE, // 
+ "a bike pump button"  // was "a button on a bike pump"
+

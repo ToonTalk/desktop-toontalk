@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>ToonTalk har stannats</title>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<script language="javascript" id="clientEventHandlersJS"><!--
+function sendBack(which_button) {
+   window.returnValue = which_button; // + ";" + FileName.value;
+   window.close()
+}
+// -->
+		</script>
+		<link href="../dialog.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<center>
+			ToonTalk har stannats.
+			<p>
+				<table id="Table1" cellspacing="1" cellpadding="1" width="300" border="0" align="center">
+					<tr>
+						<td>
+							<center>
+								<input id="Button1" type="button" value="Tillbaka till ToonTalk" name="Button1" onclick="sendBack('1')"></center>
+						</td>
+						<td>
+							<center>
+								<input id="Button2" type="button" value="Komma tillbaka senare" name="Button2" onclick="sendBack('2')"></center>
+						</td>
+						<td>
+							<center>
+								<input id="Button3" type="button" value="Avsluta ToonTalk" name="Button3" onclick="sendBack('3')"></center>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<center>
+								<input id="Button4" type="button" value="Spara allt" name="Button4" onclick="if (SaveMediaToo.checked) { sendBack('6') } else { sendBack('4')}"></center>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</p>
+			<p>&nbsp;</p>
+			<p>Det finns en massa olika saker du kan göra med det du sparar i din hand.</p>
+			<p><input id="SaveIt" type="button" value="Spara till en fil" name="SaveIt" onclick="if (SaveMediaToo.checked) { sendBack('8') } else { sendBack('7')}">
+			&nbsp;&nbsp;
+			<p>&nbsp; <input id="Button5" type="button" value="Spara, göra en Java Applet och visa i webbsida" name="JavaApplet" onclick="if (SaveMediaToo.checked) { sendBack('10') } else { sendBack('9')}">
+			&nbsp;&nbsp;
+			<p><input id="Button6" type="button" value="Ändra en bild" name="EditIt" onclick="sendBack('11')">
+		</center>
+		<p>
+			<center>
+				<p><input id="SaveMediaToo" type="checkbox" name="SaveMediaToo" CHECKED>
+				Jag kanske vill skicka detta till någon annans dator. (Om jag kryssar för här 
+				kommer filerna att bli större för att få med bilder och ljud.)</center>
+		</p>
+	</body>
+</html>

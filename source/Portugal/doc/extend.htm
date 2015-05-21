@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\Program Files\Microsoft Office\Office\HTML.DOT">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Como utilizar as extensões do ToonTalk</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Como Usar as Extensões
+do ToonTalk</b></font></p>
+
+<p><strong><font size="4" face="Comic Sans MS"><i>Apenas para utilizadores mais
+avançados:</i></font></strong></p>
+
+<p><font face="Comic Sans MS" size="3">As extensões do ToonTalk são <a href="BIRD.HTM">pássaros</a>
+que conseguem voar do ToonTalk para o sistema operativo. Começas só com um
+pássaro &quot;estrangeiro&quot;. Mas ele consegue trazer-te um pássaro ligado
+a qualquer extensão do ToonTalk instalada no teu sistema. Podes encontrá-lo
+perto do fim do teu <a
+href="sensor.htm">caderno de sensores</a>. Ele tem um ponto de interrogação na
+T-shirt. Para &quot;abrires&quot; uma extensão, dá ao pássaro uma caixa com 2
+buracos: o primeiro deverá ter o nome da extensão e o segundo outro pássaro
+que virá com um novo pássaro (numa caixa). Os tipos de mensagens (caixas) que
+o novo pássaro deverá dar dependem da extensão com que ele voa.</font></p>
+
+<p><font face="Comic Sans MS" size="3">Qualquer programador que consiga fazer Windows DLLs
+(Dynamic
+Link Libraries) consegue <a href="extend2.htm">criar novas extensões</a>.
+Talvez ao longo do tempo, os programadores acrescentem novas extensões, por
+exemplo para gerarem música, ou fazerem ligação à Internet, ou fazer
+gráficos 3D. Actualmente, só existe uma <a href="extendin.htm">extensão que
+pode ser instalada</a>:</font></p>
+
+<p><small><a name="FileExtension"></a></small><font face="Comic Sans MS" size="3"><b>A
+Extensão do Ficheiro -</b> Esta extensão permite-te abrir ficheiros e
+escrever neles. Deves dar a um pássaro ligado a esta extensão uma caixa com 3
+buracos. O primeiro buraco deverá ter um dos nomes de mensagens listados em
+baixo. O segundo buraco deverá ter o nome do ficheiro que queres. O terceiro
+buraco deverá ter um pássaro que irá receber uma caixa com outro pássaro.
+Este novo pássaro vai levar as mensagens para o ficheiro.</font>
+
+<dl>
+  <dt><font face="Comic Sans MS" size="3"><b>Criar um Ficheiro</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">Se o primeiro buraco contiver as
+    palavras &quot;create file&quot;, será criado um ficheiro. O
+    segundo buraco deverá conter o nome do ficheiro que queres criar. Não
+    deverá existir um ficheiro com esse nome. O nome deverá seguir as regras
+    para os nomes do sistema operativo.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Abrir</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">Se o primeiro buraco contiver a
+    palavra &quot;open&quot;, um ficheiro será aberto para ti. O segundo
+    buraco deverá conter o nome de um ficheiro que já exista. O ficheiro é
+    aberto usando o procedimento do Windows <i>CreateFile</i>.
+    Isto significa que o nome para abrir pode ser de um ficheiro, pipe, mail slot, recursos de comunicação (por
+    exemplo, &quot;LPT1&quot; ou &quot;COM1&quot;), dispositivos de
+    armazenamento, consola, ou directoria.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Abrir Porta Série</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">Se o primeiro buraco contiver as
+    palavras &quot;open serial port&quot;, será aberta uma porta série com
+    as características especificadas no nome do segundo buraco. Por exemplo, se
+    o segundo buraco contiver &quot;COM1:
+    baud=1200 parity=N data=8 stop=1&quot;, então a porta série número um do
+    teu computador será aberta a 1200 baud rate, sem paridade, dados de 8 bits
+    e stop igual a 1). Esta
+    ferramenta assenta no procedimento <i>BuildCommDCB</i> 
+    do Windows para interpretar as descrições das portas.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Mensagens para Ficheiros</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">Depois de teres aberto ou criado com
+    sucesso um ficheiro, deverás ter um pássaro que voa para esse ficheiro.
+    Ele deverá ter o nome do ficheiro na T-shirt. Podes dar-lhe uma mensagem
+    com 3 buracos. O primeiro buraco pode ter qualquer uma das mensagens listada
+    abaixo. O conteúdo do segundo buraco depende do primeiro. O terceiro buraco
+    deverá conter um pássaro que receberá uma resposta.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Read</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">O segundo buraco deverá conter um
+    número com a quantidade de letras ou caracteres que deverão ser lidos.
+    É dado ao pássaro um bloco de texto com as letras lidas do ficheiro. Se já
+    tiver chegado ao fim do ficheiro, o número de letras será menor.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Write</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">O segundo buraco deverá conter um
+    bloco de texto para acrescentar ao ficheiro. É dado ao pássaro um número que mostra o número de letras que forma acrescentadas ao ficheiro.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Read Bytes</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">O segundo buraco deverá conter um
+    número com a quantidade de letras ou de caracteres para ler. É dada ao
+    pássaro uma caixa com um buraco para cada caracter que será lido. Dentro
+    de cada buraco estará um número ASCII para o caracter. Se já tiver chegado
+    ao fim do ficheiro, o número de letras será menor.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Write Bytes</b></font></dt>
+  <dd><font face="Comic Sans MS" size="3">O segundo buraco contém uma caixa com
+    um buraco para cada byte a acrescentar ao ficheiro. Cada buraco deverá
+    conter um número entre 0 e 255. Se o número for muito grande, apenas será
+    escrito o byte menos significativo.
+    É dado ao pássaro um números com os bytes realmente acrescentadas ao ficheiro.</font></dd>
+</dl>
+
+<p><font face="Comic Sans MS" size="3">A habilidade de ler e de escrever é
+particularmente importante quando se está a trabalhar com portas de
+comunicação série ou paralelas.</font></p>
+
+<p align="center"><font face="Comic Sans MS"><small><a href="toontalk.htm">principal</a></small><small>
+| <a
+href="http://www.cnotinfor.pt/toontalk/search.htm">procura</a></small><small> | <a href="buy.htm">compra</a></small><small>
+| <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">notícias</a></small><small> | <a href="infodesk.htm">informação</a></small><small> | <a href="faq.htm">perguntas</a></small><small>
+| <a href="support.htm">apoio</a></small><small> | <a href="free.htm">downloads</a> | <a
+href="press.htm">imprensa</a></small><small> | <a href="address.htm">contacto</a></small></font></p>
+
+</body>
+</html>

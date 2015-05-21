@@ -1,0 +1,3737 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. Then it will appear
+in the ToonTalk remote control for the clipboard. You can find the
+clipboard remote control on page 30 of the Sensor notebook. Just use
+Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. 
+   What follows is in a special code and was produced by ToonTalk(r) 
+ToonTalk 2.99r. To learn more about ToonTalk visit www.toontalk.com.
+-->
+<ToonTalkObject Language="1" Version="3" xmlns="http://www.toontalk.com">
+ <Notebook ID="5" Parameter="4">
+  <Label><![CDATA[rcx api]]></Label>
+  <NumberOfPages>6</NumberOfPages>
+  <Page Language="1" Version="3" xmlns="http://www.toontalk.com">1
+   <TextPad>
+    <TextValue><![CDATA[The
+RCX
+bird]]></TextValue>
+    <Active/>
+    <InfiniteStack/>
+   </TextPad>
+  </Page>
+  <Page Language="1" Version="3" xmlns="http://www.toontalk.com">2
+   <ForeignBird Parameter="10" Index="12">
+    <MessageToMaker>
+     <Box>
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1
+       <TextPad>
+        <TextValue><![CDATA[rcx]]></TextValue>
+        <Active/>
+       </TextPad>
+      </Hole>
+      <Hole>2
+       <Bird Parameter="8">
+        <Active/>
+       </Bird>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>-14850</Left>
+       <Bottom>12675</Bottom>
+       <Width>6600</Width>
+       <Height>2400</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </MessageToMaker>
+    <Maker HandleIndex="0">
+     <ForeignBird Parameter="8">
+      <Label>
+       <PictureOf>
+        <Appearance>
+         <TextPad>
+          <TextValue><![CDATA[?]]></TextValue>
+          <VariableWidthFont/>
+          <Active/>
+          <SeeSome/>
+         </TextPad>
+        </Appearance>
+        <PartlyVisibleIfPartOfPicture/>
+        <GeometricRelationToContainer RecordedLeaderWidthSquared="41925625" RecordedLeaderHeightSquared="57380625" WidthTimesLeaderWidth="6565650" HeightTimesLeaderHeight="7196250" XOffsetTimesLeaderWidth="23672600" YOffsetTimesLeaderHeight="21202425" Z="-2147483648"/>
+        <GluedDown/>
+        <Active/>
+        <SeeSome/>
+        <GeometryWhenFreeAndUnflipped>
+         <Width>7600</Width>
+         <Height>9900</Height>
+        </GeometryWhenFreeAndUnflipped>
+       </PictureOf>
+      </Label>
+      <Geometry Z="-2147483648">
+       <Left>-11625</Left>
+       <Bottom>14800</Bottom>
+       <Width>6475</Width>
+       <Height>7575</Height>
+      </Geometry>
+      <Active/>
+     </ForeignBird>
+    </Maker>
+    <Label>
+     <PictureOf>
+      <Appearance>
+       <TextPad>
+        <TextValue><![CDATA[rcx]]></TextValue>
+        <VariableWidthFont/>
+        <Active/>
+        <SeeSome/>
+       </TextPad>
+      </Appearance>
+      <PartlyVisibleIfPartOfPicture/>
+      <GeometricRelationToContainer RecordedLeaderWidthSquared="50893956" RecordedLeaderHeightSquared="53875600" WidthTimesLeaderWidth="7897338" HeightTimesLeaderHeight="6760140" XOffsetTimesLeaderWidth="28857030" YOffsetTimesLeaderHeight="19891400" Z="0"/>
+      <GluedDown/>
+      <Active/>
+      <SeeSome/>
+      <GeometryWhenFreeAndUnflipped>
+       <Width>7600</Width>
+       <Height>9900</Height>
+      </GeometryWhenFreeAndUnflipped>
+     </PictureOf>
+    </Label>
+    <Active/>
+    <InfiniteStack/>
+   </ForeignBird>
+  </Page>
+  <Page Language="1" Version="3" xmlns="http://www.toontalk.com">3
+   <TextPad>
+    <TextValue><![CDATA[end user
+interactive
+commands]]></TextValue>
+    <Geometry Z="-2147483648">
+     <Left>10426</Left>
+     <Bottom>16780</Bottom>
+     <Width>2900</Width>
+     <Height>3745</Height>
+    </Geometry>
+    <Active/>
+   </TextPad>
+  </Page>
+  <Page Language="1" Version="3" xmlns="http://www.toontalk.com">4
+   <Notebook ID="5" Parameter="0">
+    <Label><![CDATA[RCX end user]]></Label>
+    <NumberOfPages>86</NumberOfPages>
+    <Page>1
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set tower port
+& play sound
+(port: com1
+       ...
+       comn
+       usb)]]></TextValue>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>2
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set tower port]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[USB]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[port]]></Label>
+      </Hole>
+      <Hole>3     
+       <TextPad>
+        <TextValue><![CDATA[fast sweep up]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sound]]></Label>
+      </Hole>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>3
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+tower port
+(com1..comn
+ usb)]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>5058</Left>
+       <Bottom>5424</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>4
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set tower port]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[USB]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[port]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>9045</Left>
+       <Bottom>5424</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>5
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[Motor's
+commands]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>14219</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>6
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[motors' names:
+- MotorA (or) A
+- MotorB (or) B
+- MotorC (or) C]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>14219</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>7
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[ON
+switches on
+a motor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>8
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[on]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>9
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[ON
+switches on
+a list
+of motors]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>10
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[on]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>11
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[OFF
+switches off
+a motor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>12
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[off]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>13
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[OFF
+switches off
+a list
+of motors]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>14
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[off]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>15
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FLOAT
+put a motor
+in neutral]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>16
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[float]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>17
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FLOAT
+put a list
+of motors
+in neutral]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>18
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[float]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>19
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FORWARD
+set the motor's
+direction forward]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>20
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set forward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>21
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FORWARD
+sets the motors'
+direction forward]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>22
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set forward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>23
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[BACKWARD
+set the motor's
+direction backward]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>24
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set backward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>25
+     <PictureOf xmlns="http://www.toontalk.com">
+      <Appearance>
+       <TextPad>
+        <TextValue><![CDATA[BACKWARD
+set the motors'
+direction backward]]></TextValue>
+        <Active/>
+       </TextPad>
+      </Appearance>
+      <PartlyVisibleIfPartOfPicture/>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+      <GeometryWhenFreeAndUnflipped>
+       <Width>10310</Width>
+       <Height>4860</Height>
+      </GeometryWhenFreeAndUnflipped>
+     </PictureOf>
+    </Page>
+    <Page>26
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set backward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>27
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[REVERSE
+the direction
+of a motor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>28
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[reverse direction]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>29
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[REVERSE
+the direction
+of listed motors]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>30
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[reverse direction]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>31
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[SENSORS]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>32
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[sensors name:
+- Sensor1 (or) 1
+- Sensor2 (or) 2
+- Sensor3 (or) 3]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>33
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[TYPE
+set the
+sensor's
+type]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>34
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set sensor type]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sensor]]></Label>
+      </Hole>
+      <Hole>3     
+       <TextPad>
+        <TextValue><![CDATA[light]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[type]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>35
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+sensor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>36
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get sensor]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sensor]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>37
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[VARIABLES]]></TextValue>
+      <VariableWidthFont/>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>39
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+var]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>40
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get var]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[variable]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>41
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+var]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>42
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set var]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[var1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[var]]></Label>
+      </Hole>
+      <Hole>3     
+       <Integer>255      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[value]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>43
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[SOUND]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>44
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[sound names:
+- beep
+- error
+- sweep up
+- sweep down
+- fast sweep up
+- fast sweep down]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>45
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[play
+sound]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>46
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[play sound]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[sweep up]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sound name]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>47
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[send
+message]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>48
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[send message]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[message]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>9043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>49
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+display]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>21043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>50
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set display]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[Sensor1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[source]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>21043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>51
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[PROGRAM]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>21043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>53
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[download
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>54
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[download program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[c:\filename.ext]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[filename]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>55
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[download
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>56
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[download program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[c:\filename.ext]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[filename]]></Label>
+      </Hole>
+      <Hole>3     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[program slot]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>57
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[run
+current
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>58
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>1</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[run program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>59
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[run
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>21023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>60
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[run program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[program slot]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>21023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>61
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[stop
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>62
+     <Box xmlns="http://www.toontalk.com">
+      <NumberOfHoles>1</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[stop program]]></TextValue>
+        <Active/>
+       </TextPad>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>63
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[TASK]]></TextValue>
+      <VariableWidthFont/>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>65
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[start
+task]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>66
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[start task]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>3      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[task]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>67
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[stop
+task]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>68
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[stop task]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[commans]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>4      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[task]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>69
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[datalog]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>71
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+datalog
+size]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>72
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get datalog size]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>73
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+datalog]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>74
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get datalog]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>75
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+datalog
+verbose]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>9518</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>76
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get datalog verbose]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>13505</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>77
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get datalog
+element]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>78
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get datalog element]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[element index]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>79
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get datalog
+element
+verbose]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>80
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get datalog element verbose]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[element index]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>81
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+datalog
+element]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>82
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set datalog element]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[sensor1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[source]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>83
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+datalog
+size]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>84
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set datalog size]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>100      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[size]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>9043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>85
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[VERSION
+get ttRCX's
+version]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>14281</Left>
+       <Bottom>7783</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>86
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[get ttrcx version]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>18268</Left>
+       <Bottom>7783</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <OpenToPage>1</OpenToPage>
+    <Geometry Z="-1">
+     <Left>14413</Left>
+     <Bottom>16780</Bottom>
+     <Width>2900</Width>
+     <Height>3782</Height>
+    </Geometry>
+    <Active/>
+   </Notebook>
+  </Page>
+  <Page Language="1" Version="3" xmlns="http://www.toontalk.com">5
+   <TextPad>
+    <TextValue><![CDATA[same commands
+with return
+birds]]></TextValue>
+    <Geometry Z="-2147483648">
+     <Left>9826</Left>
+     <Bottom>13655</Bottom>
+     <Width>2900</Width>
+     <Height>3745</Height>
+    </Geometry>
+    <Active/>
+   </TextPad>
+  </Page>
+  <Page Language="1" Version="3" xmlns="http://www.toontalk.com">6
+   <Notebook ID="7" Parameter="4">
+    <Label><![CDATA[RCX robots]]></Label>
+    <NumberOfPages>86</NumberOfPages>
+    <Page>1
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set tower port
+& play sound
+(port: com1
+       ...
+       comn
+       usb)]]></TextValue>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>2
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>4</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set tower port]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[USB]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[port]]></Label>
+      </Hole>
+      <Hole>3     
+       <TextPad>
+        <TextValue><![CDATA[fast sweep up]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sound]]></Label>
+      </Hole>
+      <Hole>4     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Active/>
+      <InfiniteStack/>
+     </Box>
+    </Page>
+    <Page>3
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+tower port
+(com1..comn
+ usb)]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>5058</Left>
+       <Bottom>5424</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>4
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set tower port]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[USB]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[port]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>9737</Left>
+       <Bottom>14897</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>5
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[Motor's
+commands]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>14219</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>6
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[motors' names:
+- MotorA (or) A
+- MotorB (or) B
+- MotorC (or) C]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>21899</Left>
+       <Bottom>14219</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>7
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[ON
+switches on
+a motor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>8
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[on]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>14897</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>9
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[ON
+switches on
+a list
+of motors]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>10
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[on]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>12497</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>11
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[OFF
+switches off
+a motor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>12
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[off]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>10097</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>13
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[OFF
+switches off
+a list
+of motors]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>14
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[off]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>10097</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>15
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FLOAT
+put a motor
+in neutral]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>16
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[float]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>10097</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>17
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FLOAT
+put a list
+of motors
+in neutral]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>18
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[float]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>10097</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>19
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FORWARD
+set the motor's
+direction forward]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>20
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set forward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>10097</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>21
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[FORWARD
+sets the motors'
+direction forward]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>22
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set forward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>23
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[BACKWARD
+set the motor's
+direction backward]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>24
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set backward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>25
+     <PictureOf xmlns="http://www.toontalk.com">
+      <Appearance>
+       <TextPad>
+        <TextValue><![CDATA[BACKWARD
+set the motors'
+direction backward]]></TextValue>
+        <Active/>
+       </TextPad>
+      </Appearance>
+      <PartlyVisibleIfPartOfPicture/>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+      <GeometryWhenFreeAndUnflipped>
+       <Width>10310</Width>
+       <Height>4860</Height>
+      </GeometryWhenFreeAndUnflipped>
+     </PictureOf>
+    </Page>
+    <Page>26
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set backward]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>27
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[REVERSE
+the direction
+of a motor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11819</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>28
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[reverse direction]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[A]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[motor]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>29
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[REVERSE
+the direction
+of listed motors]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>17912</Left>
+       <Bottom>11799</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>30
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[reverse direction]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Box>
+        <NumberOfHoles>3</NumberOfHoles>
+        <Hole>1       
+         <TextPad>
+          <TextValue><![CDATA[A]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>2       
+         <TextPad>
+          <TextValue><![CDATA[MotorB]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Hole>3       
+         <TextPad>
+          <TextValue><![CDATA[C]]></TextValue>
+          <Active/>
+         </TextPad>
+        </Hole>
+        <Active/>
+       </Box>
+       <Label><![CDATA[motors]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>31
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[SENSORS]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>32
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[sensors name:
+- Sensor1 (or) 1
+- Sensor2 (or) 2
+- Sensor3 (or) 3]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>33
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[TYPE
+set the
+sensor's
+type]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>34
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>4</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set sensor type]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sensor]]></Label>
+      </Hole>
+      <Hole>3     
+       <TextPad>
+        <TextValue><![CDATA[light]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[type]]></Label>
+      </Hole>
+      <Hole>4     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>5297</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>35
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+sensor]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>36
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get sensor]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <TextPad>
+        <TextValue><![CDATA[1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sensor]]></Label>
+      </Hole>
+      <Hole>3          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>4243</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>37
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[VARIABLES]]></TextValue>
+      <VariableWidthFont/>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>4223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>39
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+var]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>40
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get var]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <TextPad>
+        <TextValue><![CDATA[1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[variable]]></Label>
+      </Hole>
+      <Hole>3          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>41
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+var]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>42
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>4</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set var]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[var1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[var]]></Label>
+      </Hole>
+      <Hole>3     
+       <Integer>255      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[value]]></Label>
+      </Hole>
+      <Hole>4     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>5297</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>43
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[SOUND]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>44
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[sound names:
+- beep
+- error
+- sweep up
+- sweep down
+- fast sweep up
+- fast sweep down]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>45
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[play
+sound]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13843</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>46
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[play sound]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[sweep up]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[sound name]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>5297</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>47
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[send
+message]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>48
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[send message]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[message]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>5297</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>49
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+display]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>21043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>50
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set display]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[Sensor1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[source]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>51
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[PROGRAM]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>21043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>53
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[download
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>54
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[download program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[c:\filename.ext]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[filename]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>7717</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>55
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[download
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>56
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>4</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[download program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[c:\filename.ext]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[filename]]></Label>
+      </Hole>
+      <Hole>3     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[program slot]]></Label>
+      </Hole>
+      <Hole>4     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>57
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[run
+current
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>58
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[run program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>59
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[run
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>21023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>60
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[run program]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>1      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[program slot]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>61
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[stop
+program]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>62
+     <Box xmlns="http://www.toontalk.com">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[stop program]]></TextValue>
+        <Active/>
+       </TextPad>
+      </Hole>
+      <Hole>2     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3213</Left>
+       <Bottom>7819</Bottom>
+       <Width>3085</Width>
+       <Height>3677</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>63
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[TASK]]></TextValue>
+      <VariableWidthFont/>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>65
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[start
+task]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>66
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[start task]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>3      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[task]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>67
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[stop
+task]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>68
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[stop task]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[commans]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>4      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[task]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>3341</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>69
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[datalog]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>71
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+datalog
+size]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>72
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get datalog size]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>73
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+datalog]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>74
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get datalog]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>16223</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>75
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get
+datalog
+verbose]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>9518</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>76
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get datalog verbose]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>13505</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>77
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get datalog
+element]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>78
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get datalog element]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <Integer>1            
+        <Active/>
+       </Integer>
+       <Label><![CDATA[element index]]></Label>
+      </Hole>
+      <Hole>3          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>13823</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>79
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[get datalog
+element
+verbose]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>80
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get datalog element verbose]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <Integer>1            
+        <Active/>
+       </Integer>
+       <Label><![CDATA[element index]]></Label>
+      </Hole>
+      <Hole>3          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>16703</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>81
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+datalog
+element]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9023</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>82
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set datalog element]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <TextPad>
+        <TextValue><![CDATA[sensor1]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[source]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>7697</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>83
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[set
+datalog
+size]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>12716</Left>
+       <Bottom>9043</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>84
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>3</NumberOfHoles>
+      <Hole>1     
+       <TextPad>
+        <TextValue><![CDATA[set datalog size]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2     
+       <Integer>100      
+        <Active/>
+       </Integer>
+       <Label><![CDATA[size]]></Label>
+      </Hole>
+      <Hole>3     
+       <Bird Parameter="10" Index="12">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>6539</Left>
+       <Bottom>5297</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <Page>85
+     <TextPad xmlns="http://www.toontalk.com">
+      <TextValue><![CDATA[VERSION
+get ttRCX's
+version]]></TextValue>
+      <Geometry Z="-2147483648">
+       <Left>14281</Left>
+       <Bottom>7783</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </TextPad>
+    </Page>
+    <Page>86
+     <Box xmlns="http://www.toontalk.com" Parameter="4">
+      <NumberOfHoles>2</NumberOfHoles>
+      <Hole>1          
+       <TextPad>
+        <TextValue><![CDATA[get ttrcx version]]></TextValue>
+        <Active/>
+       </TextPad>
+       <Label><![CDATA[command]]></Label>
+      </Hole>
+      <Hole>2          
+       <Bird Parameter="10">
+        <Active/>
+       </Bird>
+       <Label><![CDATA[bird]]></Label>
+      </Hole>
+      <Geometry Z="-2147483648">
+       <Left>18268</Left>
+       <Bottom>7783</Bottom>
+       <Width>2900</Width>
+       <Height>3745</Height>
+      </Geometry>
+      <Active/>
+     </Box>
+    </Page>
+    <OpenToPage>1</OpenToPage>
+    <Geometry Z="-1">
+     <Left>13813</Left>
+     <Bottom>13655</Bottom>
+     <Width>2900</Width>
+     <Height>3745</Height>
+    </Geometry>
+    <Active/>
+   </Notebook>
+  </Page>
+  <OpenToPage>1</OpenToPage>
+  <Geometry Z="-1">
+   <Width>7250</Width>
+   <Height>5350</Height>
+  </Geometry>
+  <Active/>
+ </Notebook>
+</ToonTalkObject>

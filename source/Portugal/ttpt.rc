@@ -1,0 +1,113 @@
+#include "../toontalk.h"
+#include <winuser.h> // new on 151203
+
+// following new as of 030304
+1 VERSIONINFO 
+FILEVERSION 1,48,3159,00
+PRODUCTVERSION 3,00,0,0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0xaL
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904e4"
+  {
+   VALUE "Comments", "This implements the Portuguese ToonTalk string table. Copyright \251 Ken Kahn and Cnotinfor. 1992-2005. All rights reserved.\0"
+   VALUE "CompanyName", "Animated Programs\0"
+   VALUE "FileDescription", "ToonTalk\0"
+   VALUE "FileVersion", "48.3159.0\0"
+   VALUE "InternalName", "Version 22 string table - Portuguese\0"
+   VALUE "LegalCopyright", "Copyright \251 Ken Kahn and Cnotinfor. 1992-2005\0"
+   VALUE "LegalTrademarks", "ToonTalk is a registered trademark of Animated Programs\0"
+   VALUE "OriginalFilename", "PTVer22.dll\0"
+   VALUE "ProductName", "ToonTalk 3\0"
+   VALUE "ProductVersion", "48.3159.0\0"
+  }
+ }
+}
+
+ASK_NAME_DIALOG DIALOG 6, 48, 181, 66
+STYLE DS_SYSMODAL | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Benvindo ao ToonTalk"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "", IDC_EDIT1, "EDIT", ES_LEFT | WS_CHILD | WS_VISIBLE | WS_BORDER | WS_TABSTOP, 40, 14, 104, 10
+ CONTROL "Olá.  Escreve o teu nome.", -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 34, 2, 117, 8
+ CONTROL "E como é queres ser?", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE, 43, 28, 94, 8
+ CONTROL "Com cabelo", IDC_BUTTON1, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 4, 44, 50, 14
+ CONTROL "Com chapéu", IDC_BUTTON2, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 64, 44, 50, 14
+ CONTROL "Careca", IDC_BUTTON3, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 124, 44, 50, 14
+}
+
+LOADING_WAIT DIALOG 24, 19, 77, 22
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_THICKFRAME
+CAPTION "A ler do CDROM"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "A carregar. Espera por favor.", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 4, 6, 68, 9
+}
+
+//TOONTALK_PALETTE RCDATA "toontalk.pal"
+
+// this only used so that old demos like Pongact2 and 3 run after expanding the set of pictures
+//NOTEBOOK_PICTURES_OLD RCDATA "\tt\english\toontalk.o2"
+
+NOTEBOOK_PICTURES RCDATA "toontalk.2"
+NOTEBOOK_GLOBAL_REMOTES RCDATA "toontalk.4"
+NOTEBOOK_EXAMPLES RCDATA "toontalk.6"
+NOTEBOOK_SOUNDS RCDATA "toontalk.8"
+NOTEBOOK_OPTIONS RCDATA "toontalk.10"
+NOTEBOOK_LOCAL_REMOTES RCDATA "toontalk.rem"
+NOTEBOOK_MAIN RCDATA "toontalk.bok"
+
+//NOTEBOOK_NICKY_SALLY RCDATA "nickysal.bok" // -- needed for the third part of the Pong demo
+
+PAUSED_DIALOG DIALOG 2, 31, 204, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk Aguardando"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Voltar ao ToonTalk", IDCONTINUETOONTALK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 3, 20, 63, 14
+ CONTROL "Voltar mais tarde", IDMINIMIZETOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 20, 57, 14
+ CONTROL "Sair do ToonTalk", IDQUITTOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 136, 20, 61, 14
+ CONTROL "ToonTalk interrompido. ", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 4, 4, 191, 12
+ CONTROL "Gravar Tudo", ID_SAVE_EVERYTHING, "BUTTON", BS_PUSHBUTTON | BS_CENTER | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 4, 44, 192, 12
+}
+
+DEMO_PAUSED_DIALOG DIALOG 2, 31, 204, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Exemplo do ToonTalk Parado"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Voltar ao Exemplo", IDCONTINUETOONTALK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 5, 35, 63, 14
+ CONTROL "Tomar o Controlo", IDQUITDEMO, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 35, 59, 14
+ CONTROL "Sair do Exemplo", IDQUITTOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 138, 35, 61, 14
+ CONTROL "O Exemplo do ToonTalk foi interrompido.  ", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 36, 11, 131, 19
+}
+
+PAUSED_NO_SAVE_DIALOG DIALOG 2, 31, 204, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk Parado"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Voltar ao ToonTalk", IDCONTINUETOONTALK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 3, 20, 63, 14
+ CONTROL "Voltar mais tarde", IDMINIMIZETOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 73, 20, 57, 14
+ CONTROL "Sair do ToonTalk", IDQUITTOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 136, 20, 61, 14
+ CONTROL "ToonTalk foi interrompido. ", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 4, 4, 191, 12
+}
+
+INTERRUPTED_DIALOG DIALOG 2, 31, 204, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk Parado"
+FONT 16, "MS Sans Serif"
+{
+ CONTROL "Voltar mais tarde", IDMINIMIZETOONTALK, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 75, 35, 57, 14
+ CONTROL "ToonTalk foi interrompido por outro programa. ", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 6, 9, 191, 19
+}
+
+
+
+

@@ -1,0 +1,614 @@
+// Copyright (c) 1992,1999. Ken Kahn, Animated Programs, All rights reserved
+
+// This file contains those ToonTalk string entries used by the puzzle game
+// some entries are also used in Free Play and demos.
+
+// To translate this file simply replace the items within quotes.
+// leave the upper case items alone.
+// Anything following two /s is just a comment and can be ignored.
+// Spaces within quotes are important and should be retained.
+//
+
+IDS_JANUARY,
+"Janvier"
+IDS_FEBRUARY,
+"Février"
+IDS_MARCH,
+"Mars"
+IDS_APRIL,
+"Avril"
+IDS_MAY,
+"Mai"
+IDS_JUNE,
+"Juin"
+IDS_JULY,
+"Juillet"
+IDS_AUGUST,
+"Août"
+IDS_SEPTEMBER,
+"Septembre"
+IDS_OCTOBER,
+"Octobre"
+IDS_NOVEMBER,
+"Novembre"
+IDS_DECEMBER,
+"Décembre"
+IDS_NO_SUCH_MONTH,
+"Désolé, je ne connais pas de mois appelé"
+IDS_BAD_DATE,
+"Je n'ai jamais entendu parler d'une telle date"
+IDS_TODAY_IS,
+"Voyons. Aujourd'hui est"
+IDS_THANKS,
+"Merci"
+IDS_AND_YOU_WERE_BORN,
+"et tu es né(e)"
+IDS_SO_YOU_ARE,
+"donc tu as"
+IDS_YEARS_AND,
+"ans et" 
+IDS_DAYS_OLD,
+"jours"
+IDS_TODAY,
+"aujourd'hui" 
+IDS_OR_SENTENCE_START,
+"Ou"
+IDS_ITS_YOUR_BIRTHDAY,
+"Super, c'est ton anniversaire. Joyeux Anniversaire! "
+IDS_HAD_BIRTHDAY_RECENTLY,
+"J'espère que tu as eu un très heureux anniversaire. "
+IDS_BIRTHDAY_SOON,
+"Cool! Ton anniversaire est très bientôt. J'espère que tu t'amuseras bien. "
+IDS_COME_HERE_FOR_HINTS,
+"Si tu veux que je t'aides, viens par ici. "
+IDS_BOMB_TO_RESTART,
+"Tu peux recommencer en prenant la bombe et en appuyant sur la touche espace. "
+IDS_PUT_NEST_IN_BOX,
+"Tu dois mettre le nid dans la boîte. "
+IDS_NEED_ALL_7_DAYS,
+"Désolé, il faut mettre les 7 jours dans la boîte, pas seulement"
+ // as in "Sorry, but we need all 7 days on the nest, not just 5. "
+IDS_NEED_NUMBERS_UNDERNEATH,
+ // as in "Sorry, but we need at least 5 numbers on the nest, not just 3. " 
+" Désolé, mais il faut mettre au moins 5 nombres dans la boîte, pas seulement" 
+IDS_NO_CHANGING_NUMBERS,
+"Désolé, aucun des nombres ne peut changer. "
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+"Désolé, les nombres doivent être plus grands que 0. "
+IDS_LAST_NUMBER_WAS,
+"Mmm, la dernière fois, le nombre était"
+IDS_AFTER_WAITING_8_SECONDS,
+"après avoir attendu environ 8 secondes.  Et maintenant, le nombre est"
+IDS_AFTER_WAITING_14_SECONDS,
+" après avoir attendu 14 secondes. "
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"Mes senseurs ne détectent pas de nouvelle maison construite par l'équipe du camion. Je suis désolé."
+IDS_OUT_OF_MAGIC,
+"la Baguette Magique n'a plus de magie"
+
+IDS_MILLISECONDS,  // added 12/3
+ "millisecondes"
+ 
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyz"
+
+IDS_SOLVED_ALL_PUZZLES,   // revised on 9/1/97
+// "Bravo. Tu as résolu tous les puzzles! Va voir la page Web de ToonTalk pour trouver d'autres puzzles. "
+ "Bien. L'ordinateur et l'horloge marchent maintenant. Merci. Je pense que je peux finir tout seul."
+IDS_SOLVED_ALL_PUZZLES2,
+ "Tu trouveras un petit cadeau à la fin de ton carnet à la page 4 de ton carnet (dans \"Jeu Libre\"). "
+IDS_CHECK_FOR_MORE_PUZZLES,
+"De nouveaux puzzles ont peut-être été ajoutés sur la page Web de ToonTalk. Va voir à www.toontalk.com. "
+
+IDS_WE_NEED_THE_NUMBER_THAT_WAS_ON_THE_FLOOR,
+ "Nous avons besoin du nombre qui était par terre. "
+IDS_NUMBER_SHOULD_HAVE_GROWN_OVER_A_THOUSAND,
+ "Le nombre aurait dû augmenter d'au moins mille à présent. "
+
+ // updated and moved here on 8/11/97
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL, // should be needed if -puzzle is used in unlikely ways or recovering from an error
+  "Oh zut! Je ne peut pas créer le prochain puzzle car j'ai besoin de trucs des puzzles précédents.  Est-ce que c'est OK si je te renvoie en arrière de"  // some number
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL2,  // followed by
+ "puzzles?"
+
+IDS_LESS_THAN, // added 8/27/97
+"moins que"
+
+IDS_BAD_TIME, // added 8/28/97
+"Ce ne peut pas être une heure correcte. L'heure ne peut pas inclure de nombre comme" // followed by a number and a period
+
+
+// Following combined to make the following (with numbers changed)
+// I see you are 0 seconds old.  I mean 1 seconds old.  No, it's 2 seconds old.
+// I wonder how many seconds until you are 3 seconds old. Could you please go next
+// door and figure it out for me?
+IDS_AGE_IN_SECONDS1,
+ "Je vois que tu est agé de" // followed by a number
+IDS_AGE_IN_SECONDS2,
+ "secondes."
+IDS_AGE_IN_SECONDS3,
+ "Je veux dire"
+IDS_AGE_IN_SECONDS4,
+ "Non, c'est"
+IDS_AGE_IN_SECONDS5,
+ "Je me demande combien de secondes en plus jusqu'à ce que tu soit agé de"
+IDS_AGE_IN_SECONDS6,
+ "Peux-tu s'il te plait aller voir à la porte d'à côté et trouver la réponse pour moi?"
+
+// Following combined to form
+// "Maybe you should do something special in 3 days and 4 hours to celebrate being 390 million seconds old. "
+IDS_MAYBE_YOU_SHOULD_DO_SOMETHING_SPECIAL,
+ "Peut-être que tu devrais faire la fête dans "
+IDS_TO_CELEBRATE_BEING,
+  "car tu seras âgé(e) de "
+IDS_MILLIONS_OF_SECONDS_OLD,
+ "millions de secondes. "
+
+IDS_FINISHED_ALL_PUZZLES_START_AGAIN,
+ "Tu as fini tous les puzzles. Veux-tu recommencer depuis le début?"
+
+IDS_WAIT_FOR_BIRD_TO_BRING_MESSAGE,
+ "Bien. Attendons que l'oiseau apporte le message. "
+IDS_GIVING_UP_ON_BIRD,
+ "J'abandonne. On a attendu cet oiseau assez longtemps. "
+IDS_NEST_SHOULD_BE_EMPTY,
+ "Désolé, le nid devrait être vide. "
+
+IDS_NOT_CHANGING_FAST_ENOUGH,
+ " Désolé, le nombre devrait changer plus vite. "
+IDS_NOT_CHANGING_SLOW_ENOUGH,
+ " Désolé, le nombre devrait changer plus lentement. "
+IDS_NOT_CHANGING_AT_ALL,
+ " Désolé, le nombre devrait changer. "
+
+IDS_THE_NUMBER_OF_ROBOTS_ON_THE_BACK_SHOULD_BE,
+ "Le nombre de robots sur la face arrière devrait être"  // followed by a number
+
+IDS_DAYS,
+"jours"
+IDS_HOURS,
+"heures"
+IDS_DAY,
+"jour"
+IDS_HOUR,
+"heure"
+IDS_MINUTES,
+"minutes"
+
+IDS_AS_I_WAS_SAYING, // added 12/5
+ "Quand tu es parti(e) la dernière fois, j'avais encore des choses à te dire. "
+IDS_WHAT_DOTS_MEAN,
+ "Quand j'ai des choses à te dire, tu verras \"...\" en bas. "
+IDS_THATS_WHAT_I_WANTED_SAY, // added 12/5
+ "C'est ce que j'essayais de te dire plus tôt. "
+
+IDS_ORDER_OF_THINGS_MATTER, // added 12/12
+"Désolé d'être pinailleur, les objets doivent être placés dans les trous exactement dans le bon ordre. "
+IDS_BIGGER_THAN, // added 12/13
+"plus grand que"
+
+  // many ToonTalk data types have 4 entries:
+  // indefinite singular. As in "You are holding A NUMBER."
+  // definite singular.  As in "You can drop THE NUMBER by clicking a mouse button."
+  // plural.  As in "You are pointing to a stack of NUMBERS."
+  // pronoun (accusative, i.e. used as the object not subject)
+  // As in "You are holding a number.  You can drop IT by clicking a mouse button."
+  // Note if the pronoun is troublesome (e.g. due to word order) you may wish
+  // to just repeat the definite singular for the pronoun entry.
+
+ IDS_NUMBER_TYPE_INDEFINITE,
+  "un nombre"
+ IDS_NUMBER_TYPE_DEFINITE,
+  "le nombre"
+ IDS_NUMBER_TYPE_PLURAL,
+  "des nombres"
+ IDS_NUMBER_TYPE_PRONOUN,
+ "le"
+ IDS_EXPANDER_TYPE_INDEFINITE,
+  "Pumpy la pompe à vélo"
+ IDS_EXPANDER_TYPE_DEFINITE,
+  "Pumpy la pompe à vélo"
+  IDS_EXPANDER_TYPE_PLURAL,
+  "Pumpy la pompe à vélo"
+ IDS_EXPANDER_TYPE_PRONOUN,
+ "la"
+ IDS_VACUUM_TYPE_INDEFINITE,
+  "Dusty l'aspirateur"
+  IDS_VACUUM_TYPE_DEFINITE,
+  "Dusty l'aspirateur"
+  IDS_VACUUM_TYPE_PLURAL,
+  "Dusty l'aspirateur"
+  IDS_VACUUM_TYPE_PRONOUN,
+ "le"
+ IDS_COPIER_TYPE_INDEFINITE,
+  "une baguette magique"
+ IDS_COPIER_TYPE_DEFINITE,
+  "la baguette magique"
+ IDS_COPIER_TYPE_PLURAL,
+  "des baguettes magiques"
+ IDS_COPIER_TYPE_PRONOUN,
+ "la"
+ IDS_THOUGHT_BUBBLE_TYPE_INDEFINITE,
+  "une bulle"
+ IDS_THOUGHT_BUBBLE_TYPE_DEFINITE,
+  "la bulle"
+ IDS_THOUGHT_BUBBLE_TYPE_PLURAL,
+  "des bulles"
+ IDS_THOUGHT_BUBBLE_TYPE_PRONOUN,
+ "la"
+ IDS_ROBOT_TYPE_INDEFINITE,
+  "un robot"
+ IDS_ROBOT_TYPE_DEFINITE,
+  "le robot"
+ IDS_ROBOT_TYPE_PLURAL,
+  "des robots"
+ IDS_ROBOT_TYPE_PRONOUN,
+ "le"
+ IDS_NEST_TYPE_INDEFINITE,
+  "un nid"
+ IDS_NEST_TYPE_DEFINITE,
+  "le nid"
+ IDS_NEST_TYPE_PLURAL,
+  "des nids"
+ IDS_NEST_TYPE_PRONOUN,
+ "le"
+ IDS_BIRD_TYPE_INDEFINITE,
+  "un oiseau"
+ IDS_BIRD_TYPE_DEFINITE,
+  "l'oiseau"
+ IDS_BIRD_TYPE_PLURAL,
+  "des oiseaux"
+ IDS_BIRD_TYPE_PRONOUN,
+ "le"
+ IDS_TRUCK_TYPE_INDEFINITE,
+  "un camion"
+ IDS_TRUCK_TYPE_DEFINITE,
+  "le camion"
+ IDS_TRUCK_TYPE_PLURAL,
+  "des camions"
+ IDS_TRUCK_TYPE_PRONOUN,
+ "le"
+ IDS_BOOK_TYPE_INDEFINITE,
+  "un carnet"
+ IDS_BOOK_TYPE_DEFINITE,
+  "le carnet"
+ IDS_BOOK_TYPE_PLURAL,
+  "des carnets"
+ IDS_BOOK_TYPE_PRONOUN,
+ "le"
+ IDS_CUBBY_TYPE_INDEFINITE,
+   // "Cubby" is the name small children give to the "cubby hole" where they
+   // put their things while at school.  Turns out some adults didn't know the word.
+   // So box is used now.
+  "une boîte"
+ IDS_CUBBY_TYPE_DEFINITE,
+  "la boîte"
+ IDS_CUBBY_TYPE_PLURAL,
+  "des boîtes"
+ IDS_CUBBY_TYPE_PRONOUN,
+ "la"
+ IDS_TOOLBOX_TYPE_INDEFINITE,
+  "Tooly la boîte à outils"
+ IDS_TOOLBOX_TYPE_DEFINITE,
+  "Tooly la boîte à outils"
+ IDS_TOOLBOX_TYPE_PLURAL,
+  "Tooly la boîte à outils"
+ IDS_TOOLBOX_TYPE_PRONOUN,
+ "la"
+ IDS_PICT_TYPE_INDEFINITE,
+  "une image"
+ IDS_PICT_TYPE_DEFINITE,
+  "l'image"
+ IDS_PICT_TYPE_PLURAL,
+  " des images "
+ IDS_PICT_TYPE_PRONOUN,
+ "la"
+ IDS_BOMB_TYPE_INDEFINITE,
+  "une bombe"
+ IDS_BOMB_TYPE_DEFINITE,
+  "la bombe"
+ IDS_BOMB_TYPE_PLURAL,
+  "des bombes"
+ IDS_BOMB_TYPE_PRONOUN,
+ "la"
+ IDS_TEXT_TYPE_INDEFINITE,
+  "un bloc de texte"
+ IDS_TEXT_TYPE_DEFINITE,
+  "le bloc de texte"
+ IDS_TEXT_TYPE_PLURAL,
+  "des blocs de texte"
+ IDS_TEXT_TYPE_PRONOUN,
+ "le"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_INDEFINITE,
+  "un bloc de texte"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_DEFINITE,
+  "le bloc de texte"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_PLURAL,
+  "des blocs de texte"
+ IDS_VARIABLE_WIDTH_TEXT_TYPE_PRONOUN,
+ "le"
+ IDS_REMOTE_PICTURE_TYPE_INDEFINITE,
+  // There are 2 kinds of remote controls in ToonTalk.
+  // Those for controlling pictures which are in the notebook on the back of a picture.
+  // And those for controlling and sensing global things like the keyboard or mouse (found on page 10 of the main notebook).
+  "une télécommande"
+ IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+  "la télécommande"
+ IDS_REMOTE_PICTURE_TYPE_PLURAL,
+  "des télécommandes"
+ IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "la"
+ IDS_BLANK_NUMBER_TYPE_INDEFINITE,
+  "un bloc de chiffres vide"
+ IDS_BLANK_NUMBER_TYPE_DEFINITE,
+  "le bloc de chiffres vide"
+ IDS_BLANK_NUMBER_TYPE_PLURAL,
+  "des blocs de chiffres vide"
+ IDS_BLANK_NUMBER_TYPE_PRONOUN,
+ "le"
+ IDS_BLANK_CUBBY_TYPE_INDEFINITE,
+  "une boîte vide"
+ IDS_LABELED_CUBBY_TYPE_INDEFINITE,
+  "une boîte"
+ IDS_LABELED_CUBBY_TYPE_DEFINITE,
+  "la boîte"
+ IDS_LABELED_CUBBY_TYPE_PLURAL,
+  "des boîtes"
+ IDS_LABELED_CUBBY_TYPE_PRONOUN,
+ "la"
+ IDS_BLANK_PICTURE_TYPE_INDEFINITE,
+  "une image vide"
+ IDS_BLANK_PICTURE_TYPE_DEFINITE,
+  "l'image vide"
+ IDS_BLANK_PICTURE_TYPE_PLURAL,
+  "des images vides"
+ IDS_BLANK_PICTURE_TYPE_PRONOUN,
+ "la"
+ IDS_BLANK_TEXT_TYPE_INDEFINITE,
+  "un bloc de texte vide"
+ IDS_BLANK_TEXT_TYPE_DEFINITE,
+  "le bloc de texte vide"
+ IDS_BLANK_TEXT_TYPE_PLURAL,
+  "des blocs de texte vide"
+ IDS_BLANK_TEXT_TYPE_PRONOUN,
+ "le"
+ IDS_PICT_WITH_INSIDES_TYPE_INDEFINITE,
+  "une image"
+ IDS_PICT_WITH_INSIDES_TYPE_DEFINITE,
+  "l'image"
+ IDS_PICT_WITH_INSIDES_TYPE_PLURAL,
+  "des images"
+ IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+ "la"
+ IDS_REMOTE_INTEGER_TYPE_INDEFINITE,
+  "un capteur à affichage numérique"
+ IDS_REMOTE_INTEGER_TYPE_DEFINITE,
+  "le capteur à affichage numérique"
+ IDS_REMOTE_INTEGER_TYPE_PLURAL,
+  "des capteur à affichage numérique"
+ IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+ "le"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_INDEFINITE,
+ // some remote controls display a picture, some text and some numbers
+ // nearly all of them are sensors only (e.g. the time)
+ // while a few like city size are both a sensor and a remote control
+  "un capteur à affichage numérique"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_DEFINITE,
+  "le capteur à affichage numérique"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PLURAL,
+  "des capteur à affichage numérique"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+ "le"
+ IDS_SCALE_PICTURE_TYPE_INDEFINITE,
+  "une balance"
+ IDS_SCALE_PICTURE_TYPE_DEFINITE,
+  "la balance"
+ IDS_SCALE_PICTURE_TYPE_PLURAL,
+  "des balances"
+ IDS_SCALE_PICTURE_TYPE_PRONOUN,
+ "la"
+ IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+  // A very useful facility which enables a user object to change its appearance
+  // The remote control for the appearance of something looks just like the thing.
+  // To replace an appearance a user (or a robot) erases this kind of remote control
+  // and drops the new appearance on it.
+  "une télécommande de l'apparence d'un objet"
+ IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+  "la télécommande de l'apparence d'un objet"
+ IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+  "des télécommandes de l'apparence d'un objet"
+ IDS_REMOTE_APPEARANCE_TYPE_PRONOUN,
+ "la"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+  "une image de quelque chose"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_DEFINITE,
+  "l'image de quelque chose"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PLURAL,
+  "des images de choses"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PRONOUN,
+ "la"
+ IDS_USER_PICTURE_TYPE_INDEFINITE,
+  "une image provenant d'un fichier personnel"
+ IDS_USER_PICTURE_TYPE_DEFINITE,
+  "l'image provenant d'un fichier personnel"
+ IDS_USER_PICTURE_TYPE_PLURAL,
+  "des images provenant d'un fichier personnel"
+ IDS_USER_PICTURE_TYPE_PRONOUN,
+ "la"
+
+ // new on 8/30
+// revised on 10/13
+IDS_PUZZLE_SINKING,
+//  "Zizzle Island is sinking. "
+"Zizzle Island était une île très sympa avant qu'un désastre s'abatte sur elle. Elle a commencé à couler dans la mer!"
+IDS_PUZZLE_CRASH,
+//  "Marty comes to the rescue. "
+"Marty le martien passait justement par là. Il est venu au secours de tout le monde. "
+IDS_PUZZLE_HURT,
+//  "After rescuing everyone he crashes. "
+"Il avait déplacé presque toutes les maisons de l'île, quand il a eu des problèmes de moteur et qu'il s'est écrasé. "
+IDS_PUZZLE_RESCUE,
+//"You volunteer to rescue Marty. "
+"Marty le sauveteur a besoin d'être secouru à son tour. Tu te portes volontaire pour sauter en parachute et aller l'aider. "
+IDS_FIRST_PUZZLE_GREETING1,
+ "Salut. Je m'appelle Marty. "
+IDS_FIRST_PUZZLE_GREETING2,
+ "Tu dois être"
+IDS_FIRST_PUZZLE_GREETING3,
+ "Eh bien, je suis drôlement content de te voir!"
+IDS_RESTART_PUZZLE_GREETING1,
+ "Ca fait plaisir de te revoir. Je me souviens où nous en étions. "
+IDS_RESTART_PUZZLE_GREETING2,
+ "Merci d'être revenu. Continuons à essayer de réparer le vaisseau. "
+IDS_RESTART_PUZZLE_GREETING3,
+ "C'est super de te revoir. Voyons voir, où en étions nous? "
+IDS_TOO_WIDE_TO_SEE,
+ "Désolé, c'est trop large pour voir tout à la fois. "
+IDS_TOO_NARROW_TO_SEE,
+ "Désolé, c'est trop petit, je ne peux pas voir les lettres. "
+// for puzzle engine
+IDS_BAD_PUZZLE_FILE,
+ "Oh zut. Le fichier du puzzle a quelque chose qui cloche. Désolé. "
+IDS_ALL_HINTS_GIVEN1,
+ // The expression "a broken record" is from records (before there were CDs) that
+ // when scratched would repeat a phrase over and over again.  I'm not sure if it
+ // is clear to children of the 1990s.
+ // When translating these 3 versions IDS_ALL_HINTS_GIVEN just try to make them
+ // different but mean the same thing
+ "Je sais que j'ai l'air d'un vieux disque raillé, mais bon je me répète. "
+IDS_ALL_HINTS_GIVEN2,
+ "Je m'excuse de répéter la même chose, mais je ne sais pas quoi te dire d'autre. "
+IDS_ALL_HINTS_GIVEN3,
+"J'aimerais bien savoir comment t'aider, mais je ne peux pas penser à autre chose que ce que je t'ai déjà dit. "
+IDS_NO_HINTS,
+ "Non."  //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_NEGATIVE_AGE,
+ "Donc tu n'es pas encore né? " //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_VERY_YOUNG1,
+ "Incroyable! Je ne savais pas que les enfants de la Terre de"
+IDS_VERY_YOUNG2,
+ "ans étaient si intelligents. "
+IDS_VERY_OLD1,
+ "Ca alors, tu as"
+IDS_VERY_OLD2,
+ "ans. Tu es drôlement vieux! "
+IDS_LIKE_INSIDE_A_COMPUTER,  // was "Like inside a computer" prior to 8/25/97
+ "A l'intérieur d'un ordinateur"
+IDS_SEE_IF_YOU_CAN_MAKE_THAT_NUMBER,
+ "Essaye de fabriquer ce nombre. "
+IDS_WE_NEED1,
+ "Nous avons besoin de"
+IDS_WE_NEED2,
+ "nous avons besoin de"
+IDS_SIT_DOWN_AND_GET,
+ "Vas t'asseoir dans l'autre maison et prends"
+IDS_BASIC_HINT1,  // second "the" was missing -- added on 10/15/97
+ "Rentres par la porte de l'autre maison et ensuite appuies sur un bouton de la souris. "
+IDS_BASIC_HINT2,
+ "Tu peux saisir un objet en appuyant sur le bouton de la souris quand tu pointes dessus. "
+IDS_WHILE_HOLDING,
+ "En tenant"
+IDS_PRESS_ESC_AND_COME_BACK,
+ "appuies sur 'Echap' pour te mettre debout et revenir ici. "
+IDS_WE_DONT_NEED,
+  // As in "We don't need a number.  We need a box." -- Marty says this in the puzzle game.
+ "Désolé. On n'a pas besoin de"
+IDS_SOMETHING_IS_MISSING,
+// was  "Something is missing from" // changed 1/20/97
+ "Il manque quelque chose dans la boîte. "
+IDS_SOMETHING_IS_MISSING2,
+ "Ou bien c'est placé au mauvais endroit. "  //  Try again. removed on 8/31/97 since is a seperate entry now
+IDS_NOT_IT1,
+ "Non. "
+IDS_NOT_IT2,
+ "Ce n'est pas ça. "
+IDS_NOT_IT3,
+ "Désolé, ce n'est pas ce dont on a besoin. "
+//IDS_WRONG_TRY_AGAIN,
+// "Something's wrong with that. Try again. "
+IDS_SOMETHING_WRONG, // revised on 8/31/97 -- broke the two sentences apart
+ "Quelque chose ne marche pas. "
+IDS_TRY_AGAIN1,
+ "Essayes encore. "
+IDS_TRY_AGAIN2,
+ "Essayons à nouveau. "
+// new on 9/24
+IDS_CONGRATULATIONS,
+ "Bravo"
+IDS_CONGRATULATIONS2,
+ "Très bien"
+IDS_CONGRATULATIONS3,
+ "Bien joué"
+IDS_CONGRATULATIONS4,
+ "Super"
+IDS_CONGRATULATIONS5,
+ "Bien"
+IDS_CONGRATULATIONS6,
+ "Tu as réussi"
+
+IDS_TROUBLE_SHOOT_QUIT_ON_FIRST_PUZZLE,   // added 2/1/98
+ "Voulez-vous lire quelques conseils?"
+IDS_TROUBLE_SHOOT_QUIT_ON_EARLY_ROBOT_PUZZLE,
+ "Voulez-vous quelques conseils sur comment utiliser les robots dans les puzzles?"
+
+IDS_HELLO1,
+  "Salut"
+ IDS_HELLO2,
+  "Comment ca va"
+ IDS_HELLO3,
+  "Bonjour"
+ IDS_HELLO4,
+  "Salut"
+ IDS_HELLO5,
+  "Bienvenue"
+ IDS_HELLO6,
+  "Bonjour"
+ IDS_MARTIAN_INTRODUCTION,
+  "Marty à son poste. "
+
+IDS_REPEAT1,
+"Voici ce que j'ai dit. "
+IDS_REPEAT2,
+"Je vais répéter ce que j'ai dit. "
+IDS_REPEAT3,
+"Je vais le redire. "
+
+// following is combined as "a box with one hole" or "a box with 4 holes"
+ IDS_BOX_WITH,
+  "une boîte avec "
+ IDS_BOX_WITH2, // after 4 holes in example above
+  " "
+ IDS_ONE_HOLE,
+  "un trou"
+ IDS_HOLES,
+  " trous"
+ IDS_HOLES0, // before 4 holes in example above
+  " "
+
+ IDS_MARTY_TALKS_FUNNY,  // added 4/8/97 -- only used if speech is enabled
+ "Ce n'est pas toujours facile de traduire du martien en langues de la Terre.  Ma machine à traduire me fait dire des choses un peu bizarres parfois. J'espère que tu pourras quand même me comprendre. "
+
+ IDS_WE_DONT_NEED2, // this will only work in the next Beta release - it'll  be ignored by the product release
+  // The X in "We don't need a number X."
+" "
+
+ IDS_THOUSANDS_COMMA,
+ // unfortunately if you change this to " " it will show a million as 1000000. Any other value will work. Changing it to "  " (2 spaces) will print as 1  000  000.
+ "."  // e.g. "1.000.000"
+
+IDS_EXPANDER_KEY_COMMANDS,
+ // Each letter is a keyboard shortcut to put Pumpy's button in that state
+ // this (and the IDS_COPIER_KEY_COMMANDS and IDS_VACUUM_KEY_COMMANDS)
+ // should be as easy to remember as possible and must be unique
+ // IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2 documents this
+ "BTWLSNG" // for the first letter of Big, Tall, Wide, Little, Short, Narrow, Good-Size
+IDS_VACUUM_KEY_COMMANDS,
+ // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "SRE"  // for Suck, Reverse, Erase
+IDS_COPIER_KEY_COMMANDS,
+  // See comment for IDS_EXPANDER_KEY_COMMANDS
+ "COS" // For Copy, Copy-and-restore-Original, Copy-self
+
+

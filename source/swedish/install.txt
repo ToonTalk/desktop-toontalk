@@ -1,0 +1,58 @@
+CANT_READ_MANUAL=Det verkar som att din dator inte har någon Web browser
+installerad. Det kommer göra det svårt att läsa manualen till ToonTalk.
+Tyvärr.
+TITLE_MAIN=Installerar ToonTalk Beta 8B ...
+INSTALL_IE=Det krävs en Web browser för att läsa dokumentationen till
+ToonTalk. Det verkar som att din dator inte har någon installerad. Du får
+nu chansen att installera Microsofts Internet Explorer.
+DIRECTX_INSTALLATION_NEXT=Installationen är klar förutom att vi nu behöver
+installera Microsofts DirectX game extensions.\n
+TOONTALK_32_BIT_ICON_LABEL="ToonTalk (32-bitars version)"
+TOONTALK_STATUS_TITLE=Nyheter om ToonTalk
+ERROR_MOVEDATA=Det uppstod ett fel under flyttningen av data: %d
+REBOOT_TITLE=Du behöver starta om din dator innan du kör ToonTalk.
+IE_DONT_RESTART=Det finns forfarande mer saker att installera så gå inte
+med på att starta om datorn efter installationen av Internet Explorer.
+Avsluta installationen av Internet Explorer innan du fortsätter med
+installationen av DirectX eller startar ToonTalk.
+DIRECTX_INSTALL_PROBLEM=Det uppstod ett fel då DirectX installerades.
+32-bitars versionen av ToonTalk kommer kanske inte fungera. 16-bitars
+versionen kommer fortfarande att fungera. Felkod =
+TITLE_CAPTIONBAR=ToonTalk Beta 8B Installation
+TOONTALK_READY_TO_RUN_PROGRAM_MANAGER=Vi är klara att starta ToonTalk nu.
+NT_DIRECTX_INSTALL_PROBLEM=Installationen misslyckades. Versionen av
+DirectX som förinstallerades med Windows NT är lägre än den som krävs för
+att köra ToonTalk. För att få uppdaterade DirectX Windows NT komponenter
+se: ftp://ftp.microsoft.com/bussys/winnt/winnt-public/fixes
+WING_DEVICE_WARNING=Något gick fel då "device=dva.386" skulle läggas till
+i delen "386Enh" i system.ini.\n16-bitars versionen av ToonTalk kommer
+förmodligen inte fungera.
+NOHELP_HTML1=</B></FONT><P>Tyvärr, det installerades inte någon hjälp på
+hårddisken. Om du har internet kan du titta på <A
+HREF="http://www.toontalk.com/Swedish/doc.htm">Hjälpreda för ToonTalk
+användare</A> på World Wide Web. Om ToonTalks CD-ROM has satts i spelaren
+så titta på <A HREF="
+JAVA_SYSTEM_CLASSES_NOT_FOUND=Kunde inte hitta Java systemklasserna. Detta
+kommer endast att påverka Java Applet tillverkaren. Se delen "ToonTalk to
+Java Translation" i readme.txt filen för fler detaljer.
+CANT_LAUNCH=Tyvärr, men kunde inte starta
+NOHELP_HTML2=">Klicka här</A> för hjälp. Marsmänniskan Marty kan också ge
+hjälp inuti ToonTalk. </P></BODY>\n</HTML>
+REBOOT_MESSAGE=Ÿr det OK att starta om din dator nu? (Var god stäng andra
+applikationer först.)
+ERROR_VGARESOLUTION=Det här programmet kräver VGA eller bättre upplösning.
+RUN_TOONTALK_NOW=Starta ToonTalk nu.
+SHORTCUT_ON_YOUR_DESKTOP=Vill du att jag ska lägga till en ikon för
+ToonTalk på ditt skrivbord?
+TOONTALK_16_BIT_ICON_LABEL="ToonTalk (16-bitars version)"
+TOONTALK_32_BIT_HIGH_RESOLUTION_ICON_LABEL="ToonTalk (Hög upplösning)"
+INSTALLATION_COMPLETE_TITLE=Installationen av ToonTalk är nu färdig.
+TOONTALK_READY_TO_RUN_EXPLORER=Vi är klara att köra ToonTalk nu.\n\nI
+framtiden startar du ToonTalk genom att klicka på Startknappen och sen
+välja Program och sen ToonTalk.
+NO_NAME=Namnlös
+ERROR_UNINSTSETUP=Installationen av unInstaller misslyckades. Du kommer
+kanske inte att kunna avinstallera den här produkten.
+TOONTALK_READY_TO_RUN_DESKTOP=Vi är klara att köra ToonTalk nu.\n\nI
+framtiden startar du ToonTalk genom att klicka på ikonen för ToonTalk på
+ditt skrivbord.

@@ -1,0 +1,276 @@
+// Copyright (c) 1992-2009.  Ken Kahn, Animated Programs, All rights reserved.
+
+// static strings that are included when builing ToonTalk
+
+IDC_NO_SUCH_STRING_SWEDISH,
+" Oj dÅEjag kan tyv‰rr inte komma ihÂg vad jag skulle s‰ga. "
+IDC_NO_SUCH_STRING_GERMAN,
+" Oh, es tut mir leid. Ich habe vergessen, was ich sagen wollte. "
+IDC_NO_SUCH_STRING_BRAZILIAN_PORTUGUESE,
+ " Ah, desculpe... esqueci o que ia falar..."
+IDC_NO_SUCH_STRING_PORTUGAL_PORTUGUESE,
+ " Ahh, n„o sei o que ia dizer... "
+IDC_NO_SUCH_STRING, // default
+" Ahh, sorry I can't remember what I was going to say. "
+IDC_TROUBLE_SHOOTING_HELP_SWEDISH,
+"Det ‰r nÂgot fel med ToonTalk. Vill du ha hj‰lp att hitta felet?"
+IDC_TROUBLE_SHOOTING_HELP,
+"Something is wrong with ToonTalk. Do you want help trouble shooting?"
+
+IDC_INSERT_CD_ROM, // this could have translations
+"If you insert the ToonTalk CD-ROM and wait a few seconds, ToonTalk will be able to continue."
+IDC_COULD_NOT_OPEN_FILE,
+"Warning: could not open the file: "
+
+IDC_WINDOWS_ERROR,
+"Oh boy, Windows just reported an error -- who knows what'll happen now."
+
+IDC_COULDNT_FIND_STRING,
+"Warning: couldn't find string #"
+IDC_LANGUAGE,
+"Language"
+IDC_VERSIONS,
+"Versions"
+
+IDC_AMERICAN,
+"American"
+IDC_ENGLISH,
+"English"
+IDC_CDROM_DEMO_FILES,
+"CDROMDemoFiles"
+IDC_DOC_DIRECTORY,
+"doc"
+IDC_HTM,
+"htm"
+IDC_OPEN,
+"open"
+IDC_START,
+"start "
+IDC_SWITCHES,
+"Switches"
+IDC_TOONTALK_STARTED,
+"ToonTalkStarted"
+IDC_USER,
+"User"
+IDC_PREVIOUS_NAME,
+"PreviousName"
+IDC_NO_TEMP_DIR_WARNING_GIVEN,
+"NoTempDirWarningGiven"
+IDC_FULL_SCREEN_MODE_STARTED,
+"FullScreenModeStarted"
+IDC_LOG_NAME_COUNTER,
+"LogNameCounter"
+IDC_INSTALLATION_DEFAULTS,
+"InstallationDefaults"
+IDC_DISPDIB_NOT_POSSIBLE,
+"DispDIBNotPossible"
+IDC_FULL_SCREEN_MODE_NOT_AVAILABLE,
+"Full screen mode not available for this version of Windows NT."
+IDC_DEFAULTS,
+"Defaults"
+IDC_LAST_CHANGED,
+"LastChanged"
+
+IDC_CDROM_FILES,
+"CDROMFiles"
+IDC_ENGLISH_IS_AMERICAN,
+"EnglishIsAmerican"
+IDC_AUTO_DEMO_MAX_IDLE,
+"AutoDemoMaxIdle"
+IDC_JOYSTICK_DEAD_ZONE,
+"JoystickDeadZone"
+IDC_TURN_OFF_JOYSTICK_AUTO_CENTER,
+"TurnOffJoystickAutoCenter"
+IDC_SUBTITLES_SPEED,
+"SubtitlesSpeed"
+IDC_GENERATE_ROBOT_NAMES,
+"GenerateRobotNames"
+IDC_MAXIMUM_NUMBER_OF_HOLES,
+"MaximumNumberOfHoles"
+IDC_DIRECTORIES,
+"Directories"
+IDC_EXECUTABLES,
+"Executables"
+
+IDC_DEFAULT_USER,
+"DefaultUser"
+IDC_STRING_LIBRARY_DLL_32,
+"StringLibraryDll32"
+IDC_STRING_LIBRARY_DLL_16,
+"StringLibraryDll16"
+
+IDC_MESSAGE_BOX_TITLE,
+"ToonTalk"
+ICD_TROUBLE_LOADING_DLL,
+"Sorry, couldn't load a DLL resource file. If restarting Windows doesn't fix this, then re-install ToonTalk. If the problem persists report it to support@toontalk.com."
+
+IDC_FAIL_TO_CREATE_FONT,
+"Failed to create a font object."
+IDC_CREATING_FONT_WITHOUT_DELETING_OLD,
+"Creating new font without deleting old one."
+IDC_SELECTING_A_FOND_WHILE_OLD_FONT_SELECTED,
+"Selecting a font while old font is still selected."
+IDC_ERROR_FROM_TEXT_OUT,
+"Some problems putting text on screen."
+
+
+// moved here from common.rc on 020799
+IDS_FILE_EXTENSIONS,
+"FileExtensions"
+IDS_NARRATION_FILE_SUFFIX_KEY,
+"NarrationFileSuffix"
+IDS_DATA_FILE_SUFFIX,
+"DataFileSuffix"
+IDC_CLIPPING_DIR,
+"ClippingDir"
+
+IDS_RESIND_DOT,
+"resind."
+IDS_USR,
+"usr"
+IDS_MAIN_DIR,
+"MainDir"
+IDS_CDROM_DIR,
+"CDROMdir"
+IDS_TEMP_DIR,
+"TempDir"
+IDS_GENERATE_LOGS,
+"GenerateLogs"
+IDS_AUTO_DEMO_SUBTITLE,
+"AutoDemoSubtitle"
+IDS_PREVIOUS_START_TOONTALK_COMMAND,
+"PreviousStartToonTalkCommandLine"
+//IDS_USER,
+//"User"
+IDS_DEMO_DIRECTORY,
+"Demos"
+//IDS_HIGH_RES_DEMO_DIRECTORY,
+//"\\HighRes"
+//IDS_LOW_RES_DEMO_DIRECTORY, // obsolete now
+//"\\LowRes"
+IDS_USERS_DIRECTORY,
+"Users"
+IDS_TEAM_NAME_COUNTER,
+"TeamNameCounter"
+IDS_ROBOT_COUNTER,
+"RobotCounter"
+
+// new on 020799
+IDC_FILE_IS_TOO_SMALL,
+ " is a file that is smaller than it should be.\rPerhaps part of the file was lost during downloading.\rPlease re-install."
+IDC_IS_AN_INVALID_VIDEO_MODE,
+ " is an invalid video mode."
+IDC_TT32_DLL,
+ "TT32.DLL"
+IDC_TT16_DLL,
+ "TT16.DLL"
+IDC_BRITISH,
+"British"
+IDC_SWEDISH,
+"Swedish"
+IDC_PORTUGUESE,
+"Portuguese"
+IDC_PORTUGUESE_IS_BRAZILIAN, // new concept on 020799
+"PortugueseIsBrazilian"
+IDC_GERMAN,
+"German"
+IDC_TURKISH,
+"Turkish"
+IDC_JAPANESE,
+"Japanese"
+IDC_ITALIAN, // new on 110803
+"Italian"
+
+//IDC_HIGH_RES_DEMO_PATH,
+//"Demos\\HighRes"
+//IDC_LOW_RES_DEMO_PATH, // obsolete now
+//"Demos\\LowRes"
+IDC_TOO_MANY_TEMPORARY_FILES,
+"Too many temporary files."
+IDC_BASE64_CHARACTERS,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-"  // on 150200 replaced final / with - to avoid file:// mailer problems
+IDS_BAD_CLIPBOARD_CHARACTER_IS,
+"Bad clipboard character is: "
+IDC_GENERAL_TEXT_TO_SPEECH_ENGINE,
+"GeneralTextToSpeechEngine"
+IDC_JAVA_PICTURE_HIGH_RES_PATH,
+"Java\\Pictures\\M25"
+IDC_JAVA_PICTURE_LOW_RES_PATH,
+"Java\\Pictures\\M22"
+IDC_JAVA_SOUND_PATH,
+"Java\\Sounds"
+IDC_JAVA_PATH,
+"Java\\"
+IDC_FROM,
+" from "
+IDC_DOT_TXT,
+".txt"
+
+IDC_NO_WORKING_SET_TYPES,
+"Robot's events missing a START_EVENT or else never expected to reference arguments."
+
+// replaced by IDS_ROBOT_WOULD_NOT_ACCEPT on 030805
+//IDC_ROBOT_WOULD_NOT_ACCEPT, // maybe this should be language dependent
+// "the robot would not accept something"
+
+IDC_DEFAULT_KEYBOARD_ACCELERATORS, // should be the same as IDS_KEYBOARD_ACCELERATORS
+ "duhupffd"
+
+IDS_OLD_DEMO_FILE_COOKIE,
+ "TnTkD000"
+
+IDS_DEMO_FILE_COOKIE, // moved here on 200799
+"TTDMO000" // changed cookie so that old EXEs complain when trying to run one of the new ones
+
+IDC_BACKGROUND_FILE_NAME0,
+"floora"
+IDC_BACKGROUND_FILE_NAME1,
+"rooma"
+IDC_BACKGROUND_FILE_NAME2,
+"roomb"
+IDC_BACKGROUND_FILE_NAME3,
+"roomc"
+IDC_BACKGROUND_FILE_NAME4,
+"bigbubbl"
+IDC_BACKGROUND_FILE_NAME5,
+"sinking"
+IDC_BACKGROUND_FILE_NAME6,
+"crash"
+IDC_BACKGROUND_FILE_NAME7,
+"hurt"
+IDC_BACKGROUND_FILE_NAME8,
+"rescue"
+IDC_BACKGROUND_FILE_NAME9,
+"inrocket"
+IDC_BACKGROUND_FILE_NAME10,
+"opening"
+IDC_BACKGROUND_FILE_NAME11,
+"floorb"
+IDC_BACKGROUND_FILE_NAME12,
+"floorc"
+IDC_BACKGROUND_FILE_NAME13,
+"credits"
+IDC_BACKGROUND_FILE_NAME14,
+"floord"
+
+//IDC_JAVA_PICTURE, // new on 270301
+// "picture_"
+
+IDC_TT_INI,
+//"TTtrial.ini"
+"ToonTalk.ini"
+
+IDS_TOONTALK_VERSION_NUMBER,
+//"Version 3 (Internal version 3.188)"
+// "Run Only (Version 3.182)"
+// "ToonTalk Trial Version 2.39b" // b is new on 170401 since it fixes the WAV bug
+"ToonTalk 3 (version 3.191)"
+
+IDC_TOONTALK_EXE_NAME, // new on 170301
+ "TT3191"
+
+IDC_STRING_DLL_SUFFIX, // new on 010302
+ "VER22.DLL" // 22 is the latest_version_number
+
+// these typically end up in the users log file
+#include "debug.rc"

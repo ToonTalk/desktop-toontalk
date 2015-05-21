@@ -1,0 +1,456 @@
+Subject: manual
+Date: Tue, 29 Oct 1996 22:17:36 +0100
+From: Lennart <lennart.mogren@mailbox.swipnet.se>
+Reply-To: lennart.mogren@mailbox.swipnet.se
+To: Ken Kahn <kenkahn@toontalk.com>, Tobias <em.zetterlund@swipnet.se>
+
+Hi Ken,
+Well, damn it, I think found a way to go about it this time.
+Check the files I have attached and see if if they are OK. I'm going to
+work as fast as I can and I think I can just skip the stuff I feel is
+too advanced and hope for a simple but useful manual.
+Tomorrow I'll be away the whole day and start up in the evening again.
+Then I'll have Thursday till the evening. I 'll do my best to have it
+finished by then and let you and Tobias check it while I'm away for the
+weekend.
+
+Yours
+Lennart
+
+    --------------------------------------------------------------------
+
+                            Fåglar och deras bon
+
+                       A picture will be added here.
+
+Inuti Verktygslådan kan du hitta en stor mängd fågelbon. Om du tar ut ett
+kommer du att se ett ägg i det. Om du sätter ner det kommer en fågel att
+kläckas. En fågel tycker om att ta allt den får och lägga det i sitt bo.
+Även om hennes bo har flyttats till någon annan del av staden, kommer hon
+att hitta det. En speciell sak med fåglar är att de bara tycker om saker
+som är rektangulära. Hon tar sifferkort och textkort och lådor - inget
+annat. Som tur är, finns det massor med andra saker som kan finnas i lådor.
+Hon tar en låda med bon som tillhör andra fåglar och till med en låda med
+andra fåglar i. Om hon vill lägga något i sitt bo och det redan ligger
+något där, lägger hon den nya saken på botten av högen av det som finns
+där.
+
+När en fågel lagt något i sitt bo återvänder hon dit hon var tidigare.
+
+Fågelkopior. Om du använder din Trollstav för att kopiera en fågel då tror
+båda fåglarna att ett och samma bo är deras. Men det är inte något problem
+faktiskt. Dom delar gärna på boet.
+
+Kopior av fågelbon. Om du använder staven för att kopiera ett bo och sen
+ger fågeln som kläcktes i det boet någonting, då får fågeln bekymmer. Hon
+tror att båda bona är hennes och vill ta med sig det hon fått till bägge
+bona. Det klarar hon av genom att kopiera både sig själv och det hon håller
+i. På det viset får varje bo en kopia. De nya kopiorna av fågeln flyger
+iväg när dom lagt ifrån sig det dom haft med sig.
+
+Avancerat tips. Om en robot väntar sig något i en låda och det ligger ett
+bo där i stället, då kommer roboten vänta och hoppas att fågeln ska lägga
+det han väntar på i boet. Det är ett jättebra sätt att få robotar i olika
+hus att samarbeta och utväxla medddelanden. Ett exempel på det är när en
+hel drös med robotar samarbetar för klura ut primtal.
+
+    --------------------------------------------------------------------
+
+                                   Lådor
+
+Lådor är bra att förvara saker i. du kan läggat sifferkort och textkort i
+dom, liksom fåglar och fågelbon, vågar, bilder, och till och med andra
+lådor. ToonTalk kommer senare att kunna lägga mera i lådor, som robotar,
+lastbilar, bomber, och anteckningsböcker.
+
+Du kan koppla ihop två lådor genom att släppa en låda på kanten av en annan
+låda. Dom måste täcka varandra lite grann när man släpper. Medan du håller
+i en låda kan du trycka 0 till 9. På så vis kommer lådan att få så många
+fack som du skriver. Om den nya storleken är mindre, då kommer den extra
+delen av lådan till höger ramla av. Du kan dela upp en låda genom att
+släppa den på en siffra. Anta att att en låda med 5 fack släpps på en 3:a.
+Då delas den i två lådor, en med 3 fack och en med 2 fack.
+
+Tips. Du kan lära upp en robot för att hitta eller ändra vilken del av en
+låda som helst bara genom att gå till ett fack och ta ut saker eller lägga
+tillbaka dom.
+
+Avancerat tips. Om du inte vet vilket fack du ska arbeta med medan du
+tränar honom men du kommer att ha fackets nummer när roboten arbetar, då
+kan du göra så här. När du tränar en robot ge honom en låda med siffran och
+lådan du vill att han ska arbeta med (och vad han nu kan behöva mera). Lär
+roboten att ta ur siffran och lägga ner den och sen ta ut lådan och släppa
+den på siffran. Nu är facket som roboten ska arbeta med det första facket
+av den del av lådan som är till höger. Låt roboten göra det du vill med det
+facket och lägg sedan ihop lådans två delar och lägg tillbaka den där du
+hittade den.
+
+Lådor utan fack. Om du trycker 0 medan du håller i en låda kommer du att
+märka att du håller i en låda utan fack. Det är inte särskilt mycket du kan
+göra med sådana lådor. Du kan koppla ihop dom med andra lådor och då
+försvinner dom. Det är sånt som dataforskare tycker är roligt.
+
+Tomma lådor. Dammis kan hjälpa dig att göra en tom låda. Dom kommer väl
+till pass i en robots tankebubbla när du vill vara säker på att en robot
+har en låda men du inte bryr dig om hur många fack lådan har. Du kan också
+använda dom för att "spränga" ett textkort. Om du släpper ett textkort som
+"cat" på en tom låda kommer lådan förvandlas till en med 3 fack. Det första
+kommer att innehålla bara "c", det andra facket "a", och det tredje facket
+"t".
+
+    --------------------------------------------------------------------
+
+                     Hjälpreda för ToonTalk användare
+
+   * Att hantera marsmänniskan, Marty.
+   * Att använda Dammis, Pumpas och Trollstaven.
+   * Siffer och text kort.
+   * Lådor.
+   * Fåglar och fågelbon.
+   * Vågar för att jämföra saker.
+   * Att lära robotar.
+   * Lastbilar för att bygga nya hus.
+   * Bomber för att ta bort hus.
+   * Din anteckningsbok
+   * Att använda bilder och animationer.
+   * Att använda ljud.
+   * Att flyga och landa med helikoptern.
+   * Att sätta sig ner och ställa sig upp.
+   * Att göra saker på golvet.
+   * Att ställa in ToonTalk som du själv vill.
+   * Att använda sensorer sensors.
+   * Att köra Windows Media Control Interface (MCI)
+   * Tips.
+   * Vanliga frågor.
+   * Översikt över alla snabbkommandon.
+   * Tillval för kommandon.
+
+    --------------------------------------------------------------------
+
+                       [Picture of Dusty the Vacuum]
+
+        Dammsugaren dammis suger bort saker och spottar ut dom igen
+
+Om du håller ner mellanslag medan du håller Dammis startar han och suger
+bort saker tills du trycker på mellanslag igen. Det finns också särskilda
+snabbkommandon när du håller i honom.
+
+    --------------------------------------------------------------------
+
+                           ToonTalks tangentbord
+
+Du behöver inte lägga alla de följande snabbkommandona på minnet. Det allra
+mesta kan du göra med musen och mellanslag. Många av dessa snabbkommandon
+är bara till för att göra det snabbare.
+
+När programmet börjar:
+
+Tryck på valfri tangent för att gå till nästa skärmbild. 'Esc' gör att du
+hoppar över inledningen.
+
+När du spelar en demo:
+
+Om du trycker på en valfri tangent, gör ToonTalk en paus och ger dig
+möjlighet att välja att avsluta, spela själv eller gå tillbaka till demon.
+
+Att flyga, gå eller att vara på golvet:
+
+Tryck på piltangenterna för att gå i vilken som helst av 8 riktningar. (På
+en del tangentbord har bara 4 piltangenter en påskrift. Det står Home, Page
+Up, Page Down, och End och dom kan användas för gå diagonalt. Du kan hålla
+ner dom för att fortsätta att gå i den riktningen. Du kan till och med
+hålla ner två samtidigt och gå åt bägge hållen.
+
+Om du trycker Pil upp och Pil höger samtidigt går du snett uppåt till
+höger. Om du trycker Pil ner och Pil vänster samtidigt går du snett neråt
+till vänster.
+
+Tryck på Pause för att stoppa ToonTalk och få möjlighet att välja avsluta,
+komma igen senare eller fortsätta ToonTalk.
+
+Tryck F7 för att snabba på det som händer på skärmen.
+
+Tryck F8 för att stänga av alla robotar och rörliga bilder i hela staden.
+Trycker du F8 igen så sätts dom igång.
+
+Tryck F11 för att spara en bild av det du ser på skärmen. Du hittar bilden
+i den katalog som hetere ToonTalk frm1234.bmp. 1234 är numret på den ruta
+du tog bilden av.
+
+Tryck F12 för att ta en bild av skärmen och spara i Windows Urklipp.
+
+PageDown-knappen gör attMarty går vidare med nästa sak han har att berätta.
+
+PageUp-knappen får Marty att upprepa det senaste han sa.
+
+Att flyga och landa:
+
+Tryck u eller U för att flyga upp (högre). Det går bra att hålla ner den
+högra musknappen också.
+
+Tryck d eller D för att dala ner (mot marken). Det går bra att hålla ner
+den vänstra musknappen också.
+
+Att gå utomhus:
+
+Tryck h eller H för att få helikoptern dit du är. Att klicka på en musknapp
+går också bra.
+
+Att gå inomhus
+
+Tryck på valfri tangent för att sätta dig ner.
+
+På golvet eller i en tankebubbla:
+
+Tryck Escape (det brukar stå Esc) för att avsluta.
+
+Tryck F1 för att hämta Marty eller, om han redan är framme, för att skicka
+iväg honom.
+
+Och om din hand är tom och du inte pekar på något.
+
+Tryck u eller U för att ställa dig up.
+
+Tryck p eller P för att plocka upp det som är under fingret.
+
+Tryck f eller F flippa eller vända.
+
+Tryck F9 för att gömma din hand om den är synlig eller visa den om den är
+osynlig. Se också hur du har kontroll över handens synlighet.
+
+Och om du håller något(förutom textkort).
+
+Tryck f eller F för att flippa eller vända det (om det är möjligt).
+
+Tryck d eller D föra att droppa eller släppa det.
+
+Och om du håller i ett verktyg:
+
+Tryck mellanslag för att sätta igång eller stänga av verktyget. (
+Trollstaven stänger av sig själv när den använts.)
+
+Och om du håller iDusty:
+
+Tryck s eller S för att ändra Dammis så att han suger bort saker och är
+igång. (Suger bort är grundläget.)
+
+Tryck r eller R så att han rensar saker och sätts igång. (rensar)
+
+Tryck b ellerB för att få honom att spotta ut saker och sätta igång honom.
+(Baklänges)
+
+Tryck F2 för att hämta Dammis.Han kommer direkt till din hand. Om du
+trycker F2 igen går det fortare.
+
+Och om du håller Pumpas:
+
+Tryck s eller S för att få Pumpas att göra saker större och sätta igång
+honom. (grundläge)
+
+Tryck h eller H för att få honom att göra saker högre och sätta igång
+honom.
+
+Tryck b or B för att få honom att göra saker bredare och sätta igång honom.
+
+Tryck m or M för att få honom att göra saker mindre och sätta igång honom.
+
+Tryck t or T för att få honom att göra saker tunnare och sätta igång honom.
+
+Tryck k or K to för att få honom att göra saker kortare och sätta igång
+honom.
+
+Tryck x eller X för att få honom att göra en sak till en "bra" storlek.
+
+Tryck F3 för att hämta honom direkt in i din hand. Trycker du F3 igen så
+skyndar han sig.
+
+Och om du håller i Trollstaven:
+
+Tryck o or O för att göra en kopia av originalet till saken under staven.
+
+Tryck k or K för att göra en kopia av saken.
+
+Tryck s eller S för att få staven att göra en kopia av sig själv.
+
+Tryck F5 för att få staven att komma flygande till din hand. Trycker du F5
+igen kommer den att skynda sig på.
+
+Och om du håller i en bomb:
+
+Tryck valfri tangent för att smälla av bomben.
+
+Och om du håller i eller pekar på en anteckningsbok:
+
+Tryck - eller Backsteg för att komma till föregående sida (sista sidan om
+du är på den första).
+
+Tryck + eller mellanslag för att gå till nästa sida.
+
+Tryck siffror (0 till 9) för att mata in ett sidnummer.
+
+Tryck F4 för att få den senaste anteckningsboken komma flygande. Trycker du
+F4 kommer den snabbare.
+
+Och om du håller en siffra eller pekar på en siffra
+
+Tryck siffror (0 till 9) för att mata in ett siffertal.
+
+Tryck Backsteg för att radera den sista siffran.
+
+Tryck +, -, /, *, x, %, ^, & , | eller = för att utföra en bearbetning av
+talet, t ex addera, subtrahera, minska med och så vidare.
+
+Tryck f eller F för att flippa eller vända på ett sifferta. Fungerar bara
+om du håller i en siffra.)
+
+Och om du håller i eller pekar på ett textkort:
+
+Bara skriv den text du vill ha.
+
+Tryck Backsteg för att radera den sista bokstaven.
+
+Och om du håller i eller pekar på en bild eller en animation:
+
+Tryck + eller mellanslag föra att gå till nästa next avsnitt, färg eller
+del.
+
+Tryck - eller Backsteg för att gå tillbaka
+
+Tryck f eller F för att flippa eller vända.
+
+    --------------------------------------------------------------------
+
+                       [Picture of Marty the Martian]
+
+ Iag är marsmänniskan Marty och jag är alltid redo att dyka upp och hjälpa
+                                   till.
+
+    --------------------------------------------------------------------
+
+                              ToonTalk siffror
+
+                       There will be a picture here.
+
+Inuti Verktygslådan finns en bunt med sifferkort med siffran 1 på. Om du
+släpper en siffra, t ex 2, på en annan siffra, t ex 7, kommer dom att
+adderas eller läggas ihop av Hammarmusen. Om du trycker en tangent för att
+göra en uträkning innan du släpper 2:an så kommer detta att hända:
+
+   * x eller * -- multiplicerar (7x2 blir 1 4)
+   * / -- dividerar (7/2 blir 3)
+   * % -- visar rest (7/2 blir 1)
+   * = -- är lika med översta siffran (blir 2)
+   * - -- gör talet negativt (7 plus -2 blir 5)
+
+The following operations on numbers as strings of bits are supported as
+well but only advanced users need to worry about them.
+
+   * ~ -- complements all the bits (NOT 2 becomes -3)
+   * & -- bitwise and of numbers (7 AND 2 becomes 2 - only bit in common)
+   * | -- bitwise or of numbers (7 OR 2 becomes 7)
+   * ^ -- bitwise exclusive or of numbers (7 XOR 2 becomes 5)
+
+Du kan ändra ett siffertal med tangenterna när du pekar på det eller håller
+i det. Du kan också släppa ett tal på en anteckningsbok för att gå till den
+sidan. Om du släpper en siffra på ett textkort kommer du att ändra på
+första eller sista bokstaven beroende på vilken sida om kortet du släppte
+den på.T ex om du släpper en 2:a till höger om ett textkort som det står
+"ABC", på kommer det bli "ABE".
+
+Tomma sifferkort.
+
+Ett tomt sifferkort kan vara vilket tal som helst. dom är bra att ha inne i
+tankebubblan på en robot. Dom kan också användas för något som kallas
+"konvertering". Du kan ändra ett texkort som visar en siffra till en siffra
+genom att släppa det på ett tomt sifferkort. Eller så kan du ta en låda och
+släppa den på ett tomt sifferkort och då kommer kortet visa hur många fack
+lådan har. Du måste använda Dammis för att rensa siffror från ett kort och
+tömma det.
+
+    --------------------------------------------------------------------
+
+                           [Pumpy the Bike Pump]
+
+           Cykelpumpen Pumpas kan göra saker större och mindre.
+
+Om du trycker ner mellanslag medan du håller i honom så kommer han blåsa
+upp allt som är under slangens munstycke. Det finns särskilda
+snabbkommandon så att han kan göra saker mindre, längre, kortare, bredare
+och smalare.
+
+    --------------------------------------------------------------------
+
+                             Vågar jämför saker
+
+                           [A picture of a scale]
+
+Inuti Verktygslådan, hittar du en massa vågar. Du kan använda vågar för att
+ta reda på vilket siffertal som är störst eller vilket ord eller vilken
+mening som kommer först i alfabetisk ordning. Släpp en våg i ett fack på en
+låda som har fack på bägge sidor om vågen. Om du lägger siffror i facken
+kommer vågen att tippa över mot den största (eller tyngsta) siffran. Om du
+lägger i textkort i stället kommer vågen att tippa över mot det som kommer
+sist i alfabetisk ordning.
+
+                        More pictures will be here.
+
+Avancerat Tips. Du kan lära en robot att göra något om ett tal är större än
+ett annat och en annan robot att göra något annat om talet är mindre (och
+till och med en tredje robot för det fallet när talen är lika stora).
+"Swapdemon" visar ett exempel på hur man tränar en robot att byta plats på
+två tal, om det första är mindre än det andra.
+
+    --------------------------------------------------------------------
+
+                             ToonTalk Textkort
+
+                       There will be a picture here.
+
+Det ligger en mycket tjock bunt med textkort med bokstaven "A" inne i
+Verktygslådan. Du kan ta upp ett och skriva ord, meningar eller vad du
+vill. Om du trycker Enter så ger du kortet en ny rad. Om du släpper ett
+textkort på ett annat kommer Hammarmusen och slår ihop dom. Och om du
+släpper "Talk" till höger om "Toon" så får du "ToonTalk". Om du släpper det
+till vänster om Toon så får du "TalkToon".
+
+Tips. Du kan släppa textkort på en anteckningsbok för att hitta sidan med
+just den texten.
+
+Tips. Du kan släppa en siffra på ett textkort. Då ändras den första eller
+sista bokstaven på kortet (beroende på vilken sida om kortet du släpper
+siffran på) lika många steg framåt i alfabetet. Om du släpper 2 på "a" får
+du alltså "c".
+
+Tomma textkort
+
+Dammis kan hjälpa dig att göra tomma textkort. Dom kommer väl till pass
+inne i en robots tankebubbla. En robot tar ju bara emot lådor som liknar
+det som finns i hans tankebubbla. Det här är ett sätt att göra roboten
+mindre nogräknad. Om en låda i hans tankebubbla innehåller textkort som det
+står "OK" på då godtar han bara lådor med textkort som det står "OK" på.
+Men om du rensar och tömmer det så godtar han glatt textkort med vad som
+helst skrivet på.
+
+Tomma textkort kan användas för att konvertera ett tal till text. Släpp ett
+siffertal på ett tomt kort så får du ett textkort med samma siffror på.
+Fast det ser ut som ett tal är det nu skrivet på ett textkort i stället för
+ett sifferkort.
+
+    --------------------------------------------------------------------
+
+                                  [Image]
+
+                        Trollstaven kopierar saker
+
+Plocka bara upp den och rör stavens spets över den sak du vill kopiera. Den
+sak du valt börjar då att skaka. Tryck på mellanslag så har du en kopia.
+Ett tryck till på mellanslag gör att du släpper kopian. Det finns särskilda
+kommandon att använda när du håller i staven.
+
+Ett tips. En sak staven kan göra är att kopiera en sak som Dammis rensat så
+att kopian inte blir rensad. Kopian ser då ut som saken gjorde innan Dammis
+rensade den. Det här kan du göra med staven genom att trycka o eller O. Ett
+fint trick är att ta ut en upplärd robot från en anteckningsbok och sedan
+kopiera lådan i hans tankebubbla så att du får tillbaka den låda som
+användes när han blev upplärd första gången. Om du släpper kopian på
+roboten, så ser du att han gör det han blev lärd att göra.

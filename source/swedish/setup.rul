@@ -1,0 +1,1496 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  IIIIIII SSSSSS
+//    II    SS                          InstallShield (R)
+//    II    SSSSSS      (c) 1996-1997, InstallShield Software Corporation
+//    II        SS      (c) 1990-1996, InstallShield Corporation
+//  IIIIIII SSSSSS                     All Rights Reserved.
+//
+//
+//  This code is generated as a starting setup template.  You should
+//  modify it to provide all necessary steps for your setup.
+//
+//
+//    File Name:  Setup.rul
+//
+//  Description:  InstallShield script
+//
+//     Comments:  This template script performs a basic setup on a
+//                Windows 95 or Windows NT 4.0 platform. With minor
+//                modifications, this template can be adapted to create
+//                new, customized setups.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#include "c:\tt\guid.h"
+#include "c:\tt\dsetup.h"
+
+  // Include header file
+#include "sdlang.h"
+#include "sddialog.h"
+
+////////////////////// string defines ////////////////////////////
+
+#define UNINST_LOGFILE_NAME      "Uninst.isu"
+
+//////////////////// installation declarations ///////////////////
+
+  // ----- DLL prototypes -----
+
+
+     // your DLL prototypes
+
+
+  // ---- script prototypes -----
+
+     // generated
+     prototype ShowDialogs();
+     prototype MoveFileData();
+     prototype HandleMoveDataError( NUMBER );
+     prototype ProcessBeforeDataMove();
+     prototype ProcessAfterDataMove();
+     prototype SetupRegistry();
+     prototype SetupFolders();
+     prototype CleanUpInstall();
+     prototype SetupInstall();
+     prototype SetupScreen();
+     prototype CheckRequirements();
+     prototype DialogShowSdWelcome();
+     prototype DialogShowSdLicense();
+     prototype DialogShowSdAskDestPath();
+     prototype DialogShowSdSetupType();
+     prototype DialogShowSdComponentDialog2();
+     prototype DialogShowSdFinishReboot();
+
+     // your prototypes
+     prototype UpdateToonTalkIni();
+     prototype CreateAndRegister(STRING, STRING, STRING);
+     prototype CreateAndRegisterIfNew(STRING, STRING, STRING);
+     prototype DefaultIniEntry(STRING, STRING, STRING);
+     prototype InstallWinG();
+     prototype InstallDirectX();
+ //    prototype LONG dsetup.DirectXSetup(HWND, STRING, LONG);
+     prototype INT dsetup.DirectXSetupA(HWND,BYREF STRING,LONG);
+     prototype DeselectWin95DependentComponents();
+
+  // ----- global variables ------
+
+     // generated
+     BOOL        bWinNT, bWinNT4, bIsShellExplorer, bInstallAborted, bIs32BitSetup;
+     STRING      svDir;
+     STRING      svName, svCompany, svSerial;
+     STRING      svDefGroup;
+     STRING      szAppPath;
+     STRING      svSetupType;
+
+
+     // your global variables
+     BOOL bCDROMInstall, bDirectXPossible; // bInstallMinimum, bInstallFull, ;
+ //    BOOL bTextToSpeech, bTextToSpeechOnCDROM;
+//     BOOL b32Possible, bInstall32;
+     BOOL bSomeDirectXInstalled, bOldDirectXInstalled, bNeedToReboot; // bNeedToInstallDirectX
+     BOOL bWinGAlreadyInstalled;
+     BOOL bShortcutOnDesktop;
+     STRING szCDROMDrive, szShortAppPath, szTTExecutablePath, szTTExecutableName, szStartTTPath, szStartTTName;
+     INT nvType;
+     STRING szTemp, szTemp2, szIgnore;
+     INT nTemp, nIgnore;
+     STRING svLogFile;  // was local to original code
+     BOOL bSwedish;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//   MAIN PROGRAM
+//
+//      The setup begins here by hiding the visible setup
+//      window.  This is done to allow all the titles, images, etc. to
+//      be established before showing the main window.  The following
+//      logic then performs the setup in a series of steps.
+//
+///////////////////////////////////////////////////////////////////////////////
+program
+    Disable( BACKGROUND );
+
+    CheckRequirements();
+
+    SetupInstall();
+
+    SetupScreen();
+
+    if (ShowDialogs()<0) goto end_install;
+
+    if (ProcessBeforeDataMove()<0) goto end_install;
+
+    if (MoveFileData()<0) goto end_install;
+
+    if (ProcessAfterDataMove()<0) goto end_install;
+
+    if (InstallWinG()<0) goto end_install;
+
+    if (UpdateToonTalkIni() < 0) goto end_install;
+
+    if (SetupRegistry()<0) goto end_install;
+
+    if (SetupFolders()<0) goto end_install;
+
+    if (bDirectXPossible) then
+        if (InstallDirectX()<0) goto end_install;
+    endif;
+
+  end_install:
+
+    CleanUpInstall();
+
+     // If an unrecoverable error occurred, clean up the partial installation.
+     // Otherwise, exit normally.
+
+    if (bInstallAborted) then
+        abort;
+    endif;
+
+endprogram
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  ShowDialogs                                                    //
+//                                                                           //
+//  Purpose:  This function manages the display and navigation               //
+//            the standard dialogs that exist in a setup.                    //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ShowDialogs()
+    NUMBER  nResult;
+ begin
+
+    Dlg_Start:
+        // beginning of dialogs label
+
+    Dlg_SdWelcome:
+        nResult = DialogShowSdWelcome();
+        if (nResult = BACK) goto Dlg_Start;
+
+    Dlg_SdLicense:
+        if (!bSwedish) then
+           nResult = DialogShowSdLicense();
+           if (nResult = BACK) goto Dlg_SdWelcome;
+        endif;
+
+    Dlg_SdAskDestPath:
+        nResult = DialogShowSdAskDestPath();
+        if (bSwedish) then
+           if (nResult = BACK) goto Dlg_SdWelcome;
+        else
+           if (nResult = BACK) goto Dlg_SdLicense;
+        endif;
+
+    Dlg_SdSetupType:
+        nResult = DialogShowSdSetupType();
+        if (nResult = BACK) goto Dlg_SdAskDestPath;
+
+    Dlg_SdComponentDialog2:
+        if ((nResult = BACK) && (svSetupType != "Custom") && (svSetupType != "")) then
+           goto Dlg_SdSetupType;
+        endif;
+        nResult = DialogShowSdComponentDialog2();
+        if (nResult = BACK) goto Dlg_SdSetupType;
+
+    return 0;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessBeforeDataMove                                           //
+//                                                                           //
+//  Purpose: This function performs any necessary operations prior to the    //
+//           actual data move operation.                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessBeforeDataMove()
+//    STRING svLogFile;
+    NUMBER nResult;
+ begin
+
+  InstallationInfo( @COMPANY_NAME, @PRODUCT_NAME, @PRODUCT_VERSION, @PRODUCT_KEY );
+
+  svLogFile = UNINST_LOGFILE_NAME;
+
+  nResult = DeinstallStart( svDir, svLogFile, @UNINST_KEY, 0 );
+  if (nResult < 0) then
+      MessageBox( @ERROR_UNINSTSETUP, WARNING );
+  endif;
+
+  szAppPath = TARGETDIR; // TODO : if your application .exe is in a subdir of TARGETDIR then add subdir
+
+  if ((bIs32BitSetup) && (bIsShellExplorer)) then
+      RegDBSetItem( REGDB_APPPATH, szAppPath );
+      RegDBSetItem( REGDB_APPPATH_DEFAULT, szAppPath ^ @PRODUCT_KEY );
+      RegDBSetItem( REGDB_UNINSTALL_NAME, @UNINST_DISPLAY_NAME );
+  endif;
+
+  // my additions:
+
+  if (!bIsShellExplorer) then
+     DeselectWin95DependentComponents();
+  endif;
+
+//  if (bWinNT4 && ComponentIsItemSelected (MEDIA, "Program Files\\32 Bit Program Files")) then
+//     ComponentSelectItem(MEDIA, "Program Files\\32 Bit Program Files", FALSE);
+//     ComponentSelectItem(MEDIA, "Program Files\\NT 4 Program Files", TRUE);
+//  endif;
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  MoveFileData                                                   //
+//                                                                           //
+//  Purpose:  This function handles the data movement for                    //
+//            the setup.                                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function MoveFileData()
+    NUMBER nResult, nDisk;
+ begin
+
+  nDisk = 1;
+  SetStatusWindow( 0, "" );
+  Disable( DIALOGCACHE );
+  Enable( STATUS );
+  StatusUpdate( ON, 100 );
+  nResult = ComponentMoveData( MEDIA, nDisk, 0 );
+
+  HandleMoveDataError( nResult );
+
+  Disable( STATUS );
+
+  return nResult;
+
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: HandleMoveDataError                                             //
+//                                                                           //
+//  Purpose: This function handles the error (if any) during the move data   //
+//           operation.                                                      //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function HandleMoveDataError( nResult )
+  STRING svMedia, svComponent, svFileGroup, svFile;
+  NUMBER nvError;
+ begin
+
+  switch (nResult)
+  case 0:
+       return 0;
+  default:
+    ComponentError(svMedia, svComponent, svFileGroup, svFile, nvError);
+//    if (svFileGroup = "Java Classes") then
+//       return 0; // warn? -- OK to skip for 16bit systems
+//    endif;
+    SprintfBox(INFORMATION, "ComponentMoveData Error Information",
+            "An error occured trying to move files:\n\n" +
+            "Media Name: %s\nComponent: %s\nFile Group: %s\n" +
+            "File: %s\nInstallShield Error Number: %ld",
+            svMedia, svComponent, svFileGroup, svFile, nvError);
+//       SprintfBox( SEVERE, @TITLE_CAPTIONBAR, @ERROR_MOVEDATA, nResult );
+       bInstallAborted = TRUE;
+       return nResult;
+  endswitch;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessAfterDataMove                                            //
+//                                                                           //
+//  Purpose: This function performs any necessary operations needed after    //
+//           all data has been moved.                                        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessAfterDataMove()
+    STRING szReferenceFile;
+ begin
+
+  // TODO : update self-registered files and other processes that
+  //        should be performed after the data has been moved.
+
+  // DeinstallSetReference specifies a file to be checked before
+  // uninstallation. If the file is in use, uninstallation will not proceed.
+
+  szReferenceFile = svDir ^ @PRODUCT_KEY; // TODO : If your file is in a subdir of svDir add that here
+  DeinstallSetReference( szReferenceFile );
+
+  // my additions
+  WriteProfString(@ToonTalkIni,"Switches","InstallCompleted","0"); //re-written later
+  if (!bCDROMInstall) then
+     szTTExecutableName = @FLOPPY_EXECUTABLE;
+  elseif (bDirectXPossible) then
+     szTTExecutableName = "tt32";
+  else
+     szTTExecutableName = "tt16";
+  endif;
+  szShortAppPath = szAppPath;
+  LongPathToShortPath(szShortAppPath);
+//  bInstallMinimum = FALSE; // unless changed below
+  if (ExistsDir(szShortAppPath) != EXISTS ||
+      FindFile(szShortAppPath,szTTExecutableName + ".exe",szIgnore) < 0) then
+     if (bCDROMInstall) then
+        szShortAppPath = szCDROMDrive ^ "\\ToonTalk\\";
+//        bInstallMinimum = TRUE;
+     else
+        MessageBox(szTTExecutableName + ".exe not installed on " + szAppPath,WARNING);
+ //       return -1;
+     endif;
+  endif;
+  szTTExecutablePath = szShortAppPath ^ szTTExecutableName + ".exe";
+  if (bWinNT) then // && !bIsShellExplorer) then // problem running 16 bit version on Win 3.51
+      szStartTTName = "STT32";
+  else
+      szStartTTName = "StartTT";
+  endif;
+  if (FindFile(szShortAppPath, szStartTTName + ".exe", szIgnore) < 0) then
+     // only if customized away this
+//     if (bWinNT) then
+//        szStartTTName = "STT32";
+//     endif;
+     szStartTTPath = szCDROMDrive ^ "\\ToonTalk\\" ^ szStartTTName + ".exe";
+   else
+     szStartTTPath = szShortAppPath ^ szStartTTName + ".exe";
+  endif;
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupRegistry                                                   //
+//                                                                           //
+//  Purpose: This function makes the registry entries for this setup.        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupRegistry()
+   STRING szSpeechPath, szVCEFileName, szVCEPath;
+ begin
+   if (bIsShellExplorer && bCDROMInstall) then // Speech is possible
+      szTemp = szCDROMDrive + "\\install\\speech\\SpchAPI.exe /Q:A"; // is /Q:U better??
+     Enable(HOURGLASS);
+     if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then // install Microsoft Speech API
+        MessageBox(@CANT_LAUNCH + " " + szTemp,WARNING);
+     endif;
+     Disable(HOURGLASS);
+      /* Need to register the following for Microsoft Text-to-speech engine
+        HKEY_LOCAL_MACHINE\Software\Voice\TextToSpeech\Engine, MSTTS= {1B6BF820-9299-101B-8A19-265D428C60FF}
+        HKEY_CLASSES_ROOT\CLSID\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}=MSTTS
+        HKEY_CLASSES_ROOT\CLSID\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\InprocServer32=$(WINDOWS)\Speech\MSTTS.DLL
+        HKEY_CLASSES_ROOT \CLSID\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\InprocServer32, ThreadingModel=Apartment
+      */
+      RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+      CreateAndRegister("Software\\Voice\\TextToSpeech\\Engine","MSTTS",
+                        "{1B6BF820-9299-101B-8A19-265D428C60FF}");
+      // following makes things work but isn't documented as needed:
+      CreateAndRegister("Software\\Voice\\TextToSpeech\\Engine","",
+                        "{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}");
+      RegDBSetDefaultRoot(HKEY_CLASSES_ROOT);
+//      if (RegDBKeyExist("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}") < 0) then
+      CreateAndRegister("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}","","MSTTS");
+// following was needed for SAPI 2.0
+//         RegDBCreateKeyEx("CLSID\\{D67C0280-C743-11CD-80E5-00AA003E4B50}",
+//                          "Text to Speech Enumerator");
+//         RegDBCreateKeyEx("CLSID\\{CB96B400-C743-11cd-80E5-00AA003E4B50}",
+//                          "Audio Destination Object");
+
+// following was for SAPI 2.0 to use the CDROM VCE files
+//      szTemp = szAppPath ^ "\\Speech\\";
+//      if (ExistsDir(szTemp) != EXISTS ||
+//          FindFile(szTemp,"MSTTS.DLL",szIgnore) < 0) then
+         // was not installed on hard disk
+//        szTemp = szCDROMDrive ^ "\\ToonTalk\\Speech\\MSTTS.DLL";
+//      else
+//         szTemp = szAppPath ^ "\\Speech\\MSTTS.DLL";
+//      endif;
+//      WriteProfString(@ToonTalkIni,"Executables","SpeechEngine",szTemp);
+      if (bCDROMInstall) then
+       szSpeechPath = szCDROMDrive ^ "\\toontalk\\speech\\";
+       RegDBSetDefaultRoot(HKEY_LOCAL_MACHINE);
+       if (ExistsDir(szSpeechPath) == 0 &&
+           FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, RESET) == 0) then
+          ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+          CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          while (FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, CONTINUE) == 0)
+            ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+            CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          endwhile;
+       endif;
+       szSpeechPath = szAppPath ^ "\\Speech\\";
+       // do it over again for the hard drive
+       if (ExistsDir(szSpeechPath) == 0 &&
+           FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, RESET) == 0) then
+          ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+          CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          while (FindAllFiles(szSpeechPath, "*.VCE", szVCEPath, CONTINUE) == 0)
+            ParsePath(szVCEFileName,szVCEPath,FILENAME_ONLY);
+            CreateAndRegister("\\Software\\Microsoft\\MSTTS\\ConcatVoices",szVCEFileName,szVCEPath);
+          endwhile;
+       endif;
+      endif;
+      RegDBSetDefaultRoot(HKEY_CLASSES_ROOT);
+      szTemp = WINDIR ^ "speech\\mstts.dll";
+      CreateAndRegister("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\\InprocServer32","",
+                        szTemp);
+      CreateAndRegister("CLSID\\{2a46E4C0-4EDA-101B-931A-00AA0047BA4F}\\InprocServer32", "ThreadingModel",
+                         "Apartment");
+/* Following was needed for SAPI 2.0
+      // put speech.dll on system directory so I don't interfere with
+      // other speech engines
+      szTemp2 = WINDIR ^ "speech\\Speech.dll";
+
+      RegDBCreateKeyEx("CLSID\\{D67C0280-C743-11CD-80E5-00AA003E4B50}\\InprocServer32",
+                          szTemp2);
+      RegDBCreateKeyEx("CLSID\\{CB96B400-C743-11cd-80E5-00AA003E4B50}\\InprocServer32",
+                          szTemp2);
+      RegDBCreateKeyEx("CLSID\\{D67C0280-C743-11cd-80E5-00AA003E4B50}\\InprocServer32\\ThreadingModel",
+                          "Apartment");
+      RegDBCreateKeyEx("CLSID\\{CB96B400-C743-11cd-80E5-00AA003E4B50}\\InprocServer32\\ThreadingModel",
+                          "Apartment");
+     endif;
+*/
+//     RegDBCreateKey("ToonTalk");
+//     RegDBCreateKey("ToonTalk\\shell\\open");
+//     RegDBCreateKey("ToonTalk\\shell\\open\\command");
+     endif;
+     nvType = REGDB_STRING;
+     RegDBCreateKeyEx("ToonTalk\\shell\\open\\command","");
+     RegDBSetKeyValueEx("ToonTalk\\shell\\open\\command","",nvType,szTTExecutablePath + " %1",-1);
+     CreateAndRegisterIfNew(".DMO", "", "ToonTalk");
+     CreateAndRegisterIfNew(".USR", "", "ToonTalk");
+     CreateAndRegisterIfNew(".PZL", "", "ToonTalk");
+     CreateAndRegisterIfNew(".CTY", "", "ToonTalk");
+     Disable(LOGGING);
+     szTemp = BETA_GUID;
+     CreateAndRegisterIfNew(szTemp,"",@EXPIRES);
+     if (bSwedish) then
+        szTemp = BETA_GUID_8C;  // until demos are redone -- even the Swedish ones
+        CreateAndRegister(szTemp,"",@EXPIRES);
+     endif;
+     Enable(LOGGING);
+     if (RegDBKeyExist(".HTM") < 0) then
+        // offer to install web browser if CDROM
+        // NOTE that if a browser was installed and removed improperly there may still be
+        // a key but no association
+        if (bCDROMInstall) then
+           MessageBox(@INSTALL_IE,INFORMATION);
+           if (bIsShellExplorer) then
+              MessageBox(@IE_DONT_RESTART,WARNING);
+              szTemp = szCDROMDrive ^ "\\install\\" ^ @IE_WIN95_PATH;
+          else
+              szTemp = szCDROMDrive ^ "\\install\\" ^ @IE_WIN31_PATH;
+          endif;
+              if (LaunchAppAndWait(szTemp,"",WAIT) < 0) then
+                 MessageBox(@CANT_LAUNCH + " " + szTemp,WARNING);
+              endif;
+        else
+           MessageBox(@CANT_READ_MANUAL,WARNING);
+        endif;
+     endif;
+/*
+     if (bWinNT && szStartTTName != "STT32") then
+        VarSave(SRCTARGETDIR);
+        TARGETDIR = szAppPath;
+        SRCDIR = szAppPath;
+        // start ToonTalk executables with 32bit versions
+        RenameFile("StartTT.EXE","STT16.EXE");
+        SRCDIR = szCDROMDrive ^ "\\Install\\";
+        CopyFile( "STT32.EXE", "StartTT.EXE" );
+        VarRestore(SRCTARGETDIR);
+  //      RenameFile("STT32.EXE","StartTT.EXE");
+     endif;
+*/
+     WriteProfString(@ToonTalkIni,"Switches","InstallCompleted","1");
+     DefaultIniEntry("Switches","AutoDemoSubtitle"," ");
+     DefaultIniEntry("Switches","ShowSubtitles","1");
+     DefaultIniEntry("Switches","RobotCounter","100"); // only about 50 demo robots on page 6
+//     if (!bDirectXAlreadyInstalled && bInstall32) then
+//        MessageBox(@INSTALL_DIRECTX_NEXT,INFORMATION);
+//        szTemp = SRCDIR ^ "\\DirectX\\DirectX\\dxsetup.exe";
+//        LaunchAppAndWait(szTemp,"",WAIT);
+//     endif;
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Function: SetupFolders
+//
+//  Purpose: This function creates all the folders and shortcuts for the
+//           setup.  This includes program groups and items for Windows 3.1.
+//
+///////////////////////////////////////////////////////////////////////////////
+function SetupFolders()
+  STRING szWorkingDir, szProgram;
+  NUMBER nvFileHandle;
+ begin
+
+
+  // TODO : Add all your folder (program group) along with shortcuts (program items)
+  //
+  //
+  //    CreateProgramFolder, AddFolderIcon....
+  //
+  //    Note : for 16-bit setups you should add an uninstaller icon pointing to
+  //           your log file.  Under 32-bit this is automatically done by Windows.
+
+  DeleteProgramFolder("ToonTalk"); // to start with a fresh folder
+  CreateProgramFolder("ToonTalk");
+
+//  szTemp = "StartTT.EXE";
+//  if (bWinNT && bInstallMinimum) then
+//     szTemp = "STT32.EXE";
+ // endif;
+//  if (!bInstallMinimum) then
+     szWorkingDir =  szAppPath;
+//  else // was SRCDIR ^ szTemp;
+//     szWorkingDir = szCDROMDrive ^ "\\ToonTalk\\";
+//  endif;
+//  szCmdLinePath = szWorkingDir ^ szTemp;
+//  LongPathToShortPath(szCmdLinePath);
+  LongPathToShortPath(szWorkingDir);
+//  if (bDirectXPossible) then
+//      szProgram = szStartTTPath + " -32 1 -v 22 -language " + @LANGUAGE_NAME;
+//      AddFolderIcon("ToonTalk", @TOONTALK_32_BIT_ICON_LABEL,
+//                    szProgram, szWorkingDir, "", 0, "", REPLACE);
+//      szProgram = szStartTTPath + " -32 1 -v 25 -language " + @LANGUAGE_NAME;
+//      AddFolderIcon("ToonTalk", @TOONTALK_32_BIT_HIGH_RESOLUTION_ICON_LABEL,
+//                    szProgram, szWorkingDir, "", 0, "", REPLACE);
+//  endif;
+  szProgram = szStartTTPath; // + " -32 0 -v 22 -language " + @LANGUAGE_NAME;
+//  if (bDirectXPossible) then
+//     szTemp = @TOONTALK_16_BIT_ICON_LABEL;
+//  else
+     szTemp = @PRODUCT_NAME;
+//  endif;
+  AddFolderIcon("ToonTalk", szTemp,
+                szProgram, szWorkingDir, "", 0, "", REPLACE);
+  szProgram = szStartTTPath; // leave all the defaults to toontalk.ini
+  if (bIsShellExplorer) then
+     // should really not ask if already there but update it automatically
+     if (AskYesNo( @SHORTCUT_ON_YOUR_DESKTOP , YES ) == YES) then
+        bShortcutOnDesktop = TRUE;
+        AddFolderIcon(FOLDER_DESKTOP, @PRODUCT_NAME,
+                      szProgram, szWorkingDir, "", 0, "", REPLACE);
+     endif;
+  endif;
+  szTemp = svLogFile;
+  LongPathToShortPath(szTemp);
+  szProgram = UNINST + " -f" + szTemp;
+  AddFolderIcon("ToonTalk", @UN_INSTALL_TITLE,
+                szProgram, WINDIR, "", 0, "", REPLACE);
+  szTemp = szAppPath ^ "\\doc\\" ^ @LANGUAGE_SUBDIRECTORY;
+  // could provide a status.txt version if no browser available
+  szProgram = szAppPath ^ "Status.htm";
+  LongPathToShortPath(szProgram);
+  AddFolderIcon("ToonTalk", @TOONTALK_STATUS_TITLE,
+                szProgram, szWorkingDir, "", 0, "", REPLACE);
+  CreateDir(szTemp);
+  if (FindFile(szTemp, "doc.htm", szTemp2) < 0 ) then
+     // first I copy any old file there so it is logged for un-install
+     VarSave(SRCTARGETDIR);
+     TARGETDIR = szTemp;
+     SRCDIR = SUPPORTDIR;
+     XCopyFile("help.htm", "", COMP_NORMAL);
+     VarRestore(SRCTARGETDIR);
+     OpenFileMode(FILE_MODE_BINARY);
+     CreateFile(nvFileHandle, szTemp, "help.htm");
+     szTemp2 = @HTML_HEADER1;
+     WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+     szTemp2 = @HTML_HEADER2;
+     WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+     szTemp2 = @NOHELP_HTML1;
+     WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+//     if (FindFile(szTemp, "doc.htm", szIgnore) < 0) then
+         szTemp2 = "file:///" + szCDROMDrive ^ "\\Toontalk\\Doc\\" ^ @LANGUAGE_SUBDIRECTORY ^ "\\doc.htm";
+//     else
+//         szTemp2 = "doc.htm";
+//     endif;
+     WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+     szTemp2 = @NOHELP_HTML2;
+     WriteBytes(nvFileHandle, szTemp2, 0, StrLength(szTemp2));
+     CloseFile (nvFileHandle);
+  endif; // else regular help.htm overrides what was there
+  szTemp2 = szAppPath ^ "\\doc\\" ^ @LANGUAGE_SUBDIRECTORY ^ "\\help.htm";
+  LongPathToShortPath(szTemp2);
+  AddFolderIcon("ToonTalk", "ToonTalk Help", szTemp2, "", "", 0, "", REPLACE);
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: CleanUpInstall                                                  //
+//                                                                           //
+//  Purpose: This cleans up the setup.  Anything that should                 //
+//           be released or deleted at the end of the setup should           //
+//           be done here.                                                   //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CleanUpInstall()
+ begin
+
+
+  if (bInstallAborted) then
+      return 0;
+  endif;
+
+  DialogShowSdFinishReboot();
+
+  if (BATCH_INSTALL) then // ensure locked files are properly written
+      CommitSharedFiles(0);
+  endif;
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupInstall                                                    //
+//                                                                           //
+//  Purpose: This will setup the installation.  Any general initialization   //
+//           needed for the installation should be performed here.           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupInstall()
+ begin
+
+  Enable( CORECOMPONENTHANDLING );
+
+  bInstallAborted = FALSE;
+
+  if (bIs32BitSetup) then
+      svDir = PROGRAMFILES ^ @COMPANY_NAME ^ @PRODUCT_NAME;
+  else
+      svDir = PROGRAMFILES ^ @COMPANY_NAME16 ^ @PRODUCT_NAME16; // use shorten names
+  endif;
+
+  TARGETDIR  = svDir;
+
+  SdProductName( @PRODUCT_NAME );
+
+  Enable( DIALOGCACHE );
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  SetupScreen                                                    //
+//                                                                           //
+//  Purpose:  This function establishes  the screen look.  This includes     //
+//            colors, fonts, and text to be displayed.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupScreen()
+ begin
+
+  Enable( FULLWINDOWMODE );
+  SetTitle( @TITLE_MAIN, 24, WHITE );
+
+  SetTitle( @TITLE_CAPTIONBAR, 0, BACKGROUNDCAPTION ); // Caption bar text.
+
+  Enable( BACKGROUND );
+
+  Delay( 1 );
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  CheckRequirements                                              //
+//                                                                           //
+//  Purpose:  This function checks all minimum requirements for the          //
+//            application being installed.  If any fail, then the user       //
+//            is informed and the setup is terminated.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CheckRequirements()
+    NUMBER  nvDx, nvDy, nvResult;
+    STRING  svResult;
+
+    STRING svVersionNumber, svPath;
+
+ begin
+
+  bWinNT           = FALSE;
+  bWinNT4          = FALSE;
+  bIsShellExplorer = FALSE;
+
+  if (GetProfString(@ToonTalkIni, "Versions", @PRODUCT_KIND, svResult) = 0) then
+     if (svResult != @PRODUCT_VERSION) then
+        if (AskYesNo ( @PROCEED_DESPITE_OLD_INSTALLATION , YES ) = YES) then
+           abort;
+        endif;
+     endif;
+   endif;
+
+//  bTestInstall = TRUE;
+  bCDROMInstall = (StrCompare ( "CDROM" , @PRODUCT_KIND ) = 0);
+//  bNeedToInstallDirectX = FALSE; // until proven otherwise
+
+  // Check screen resolution.
+  GetExtents( nvDx, nvDy );
+
+  if (nvDy < 480) then
+      MessageBox( @ERROR_VGARESOLUTION, WARNING );
+      abort;
+  endif;
+
+  // set 'setup' operation mode
+  bIs32BitSetup = TRUE;
+  GetSystemInfo( ISTYPE, nvResult, svResult );
+  if (nvResult = 16) then
+      bIs32BitSetup = FALSE; // running 16-bit setup
+//      return 0; // no additional information required
+//  endif;
+  else
+  // --- 32-bit testing after this point ---
+
+     // Determine the target system's operating system.
+     GetSystemInfo( OS, nvResult, svResult );
+
+     if (nvResult =  IS_WINDOWSNT) then
+         // Running Windows NT.
+         bWinNT = TRUE;
+
+         // Check to see if the shell being used is EXPLORER shell.
+         if (GetSystemInfo( OSMAJOR, nvResult, svResult ) = 0) then
+             if (nvResult >= 4) then
+                 bIsShellExplorer = TRUE;
+             endif;
+             if (nvResult = 4) then
+                 bWinNT4 = TRUE;
+             endif;
+         endif;
+
+     elseif (nvResult = IS_WINDOWS95 ) then
+         bIsShellExplorer = TRUE;
+
+     endif;
+  endif;
+
+  // my additions
+
+  if (bIsShellExplorer) then
+     // Trying to leave it completely up to Microsoft now
+     // thanks to Eric Felton on the net for the following:
+     if (VerFindFileVersion ( "ddraw.dll" , svPath , svVersionNumber ) == FILE_NOT_FOUND) then
+         bSomeDirectXInstalled = FALSE;
+     else
+         bSomeDirectXInstalled = TRUE;
+         bOldDirectXInstalled = (VerCompare ( svVersionNumber , @DDRAW_VERSION_NUMBER , VERSION ) = LESS_THAN);
+     endif;
+  else
+     nTemp = ComponentFilterOS(MEDIA , 0 , ISOSL_WIN95|ISOSL_NT40 , TRUE);
+  endif;
+  if (bCDROMInstall) then
+     bDirectXPossible = bIsShellExplorer;
+//     ParsePath(szCDROMDrive, SRCDIR, DISK);
+     if (SRCDISK = "." || SRCDISK = ".\\") then // this happens on 16 bit systems...
+        AskText ("Please enter the drive for your CDROM", "D:", szCDROMDrive);
+     else
+         szCDROMDrive = SRCDISK;
+     endif;
+     // for debuggin
+//     WriteProfString(@ToonTalkIni,"Directories","SRCDISK",SRCDISK);
+  else
+     bDirectXPossible = FALSE;
+//     szCDROMDrive = "d:"; // for testing
+  endif;
+
+
+  szTemp = WINDIR ^ "\\System\\"; // WinG expects it to be on System not System32 if it exists
+  bWinGAlreadyInstalled = (FindFile(szTemp,"wing.dll",szTemp2) = 0);
+
+  bShortcutOnDesktop = FALSE; // unless proven otherwise
+
+  bSwedish = (@LANGUAGE_NAME == "Swedish");
+
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdWelcome                                             //
+//                                                                           //
+//  Purpose: This function handles the standard welcome dialog.              //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdWelcome()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+
+  szTitle = "";
+  szMsg   = "";
+  nResult = SdWelcome( szTitle, szMsg );
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdLicense                                             //
+//                                                                           //
+//  Purpose: This function displays the license agreement dialog.            //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdLicense()
+    NUMBER nResult;
+    STRING szTitle, szMsg, szQuestion, szLicenseFile;
+ begin
+
+  szLicenseFile = SUPPORTDIR ^ "license.txt";
+  szTitle    = "";
+  szMsg      = "";
+  szQuestion = "";
+  nResult    = SdLicense( szTitle, szMsg, szQuestion, szLicenseFile );
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdAskDestPath                                         //
+//                                                                           //
+//  Purpose: This function asks the user for the destination directory.      //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdAskDestPath()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+
+  szTitle = "";
+  szMsg   = "";
+  nResult = SdAskDestPath( szTitle, szMsg, svDir, 0 );
+
+  TARGETDIR = svDir;
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdSetupType                                           //
+//                                                                           //
+//  Purpose: This function displays the standard setup type dialog.          //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdSetupType()
+    NUMBER nResult, nType;
+    STRING szTitle, szMsg;
+ begin
+
+  if (!bCDROMInstall) then
+    svSetupType = "Internet Beta";
+    return 0;
+  endif;
+  szTitle = "";
+  szMsg   = "";
+  switch (svSetupType)
+  case "Typical":
+       nType = TYPICAL;
+  case "Custom":
+       nType = CUSTOM;
+  case "Compact":
+       nType = COMPACT;
+  case "":
+       svSetupType = "Typical";
+       nType = TYPICAL;
+  endswitch;
+
+
+  nResult = SetupType( szTitle, szMsg, "", nType, 0 );
+  switch (nResult)
+  case COMPACT:
+       svSetupType = "Compact";
+/*
+       ComponentSelectItem(MEDIA, "Program Files", FALSE);
+       ComponentSelectItem(MEDIA, "Program Files/WinG 16 Bit Extension", TRUE);
+       ComponentSelectItem(MEDIA, "Documentation", FALSE);
+       ComponentSelectItem(MEDIA, "Demonstrations", FALSE);
+       ComponentSelectItem(MEDIA, "Java Components", FALSE);
+       ComponentSelectItem(MEDIA, "Puzzles", FALSE);
+       ComponentSelectItem(MEDIA, "Speech Components", FALSE);
+       ComponentSelectItem(MEDIA, "Data Files", FALSE);
+       ComponentSelectItem(MEDIA, "Debugging Components", FALSE);
+*/
+  case TYPICAL:
+       svSetupType = "Typical";
+  case CUSTOM:
+       svSetupType = "Custom";
+  endswitch;
+
+//  nResult = SdSetupTypeEx( szTitle, szMsg, "", svSetupType, 0 );
+//  ComponentSetupTypeSet (MEDIA, "Typical");
+//  svSetupType = "Typical";
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdComponentDialog2                                    //
+//                                                                           //
+//  Purpose: This function displays the custom component dialog.             //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdComponentDialog2()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+
+  if (bSwedish && (svSetupType != "Custom") && (svSetupType != "")) then
+     // this a work around of an InstallShield bug
+     ComponentSelectItem(MEDIA, "Speech Components\\Swedish Speech Files", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Applet Maker Archives", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Java Compiler", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Audio Data Files", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\Low Resolution Graphics", FALSE);
+     ComponentSelectItem(MEDIA, "Java Components\\High Resolution Graphics", FALSE);
+  endif;
+
+  if ((svSetupType != "Custom") && (svSetupType != "")) then
+      return 0;
+  endif;
+
+  if (!bIsShellExplorer) then // will reset them again but this way they should look deselected
+     DeselectWin95DependentComponents();
+  endif;
+
+  szTitle  = "";
+  szMsg    = "";
+  nResult  = SdComponentDialog2( szTitle, szMsg, svDir, "" );
+
+  return nResult;
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdFinishReboot                                        //
+//                                                                           //
+//  Purpose: This function will show the last dialog of the product.         //
+//           It will allow the user to reboot and/or show some readme text.  //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdFinishReboot()
+    NUMBER nResult, nDefOptions;
+    STRING szTitle, szMsg1, szMsg2, szOption1, szOption2;
+    NUMBER bOpt1, bOpt2;
+ begin
+
+   bOpt2 = FALSE;
+   szMsg1 = "";
+   szMsg2 = "";
+   szOption1 = "";
+   szOption2 = "";
+
+//  if (bDirectXPossible && !bDirectXAlreadyInstalled) then
+//      bOpt1 = FALSE;
+//      SdFinish(@INSTALLATION_COMPLETE_TITLE, @DIRECTX_INSTALLATION_NEXT, szMsg2, szOption1, szOption2, bOpt1, bOpt2 );
+//      InstallDirectX();
+//      if (bNeedToReboot) then
+         // only reason so far is DirectX wants to reboot so...
+//         return RebootDialog(@REBOOT_TITLE,@REBOOT_MESSAGE, SYS_BOOTWIN);
+//      endif;
+//      return 0;
+//  endif;
+
+  if (bNeedToReboot) then
+         // only reason so far is DirectX wants to reboot so...
+         return RebootDialog(@REBOOT_TITLE,@REBOOT_MESSAGE, SYS_BOOTWIN);
+  endif;
+
+  if (!BATCH_INSTALL) then
+
+      bOpt1 = TRUE; // was FALSE
+
+//      nResult = SdFinish( szTitle, szMsg1, szMsg2, szOption1, szOption2, bOpt1, bOpt2 );
+      if (bIsShellExplorer) then
+         if (bShortcutOnDesktop) then
+            szMsg1 = @TOONTALK_READY_TO_RUN_DESKTOP;
+         else
+            szMsg1 = @TOONTALK_READY_TO_RUN_EXPLORER;
+         endif;
+      else
+         szMsg1 = @TOONTALK_READY_TO_RUN_PROGRAM_MANAGER;
+      endif;
+      nResult = SdFinish(@INSTALLATION_COMPLETE_TITLE, szMsg1, szMsg2, @RUN_TOONTALK_NOW, szOption2, bOpt1, bOpt2 );
+      if (bOpt1) then
+          if (bCDROMInstall) then
+             szTemp = szCDROMDrive ^ "\\ToonTalk\\StartTT.exe";
+          else
+             szTemp = szShortAppPath ^ "StartTT.exe";
+          endif;
+          if (LaunchApp(szTemp, "" ) < 0) then
+              MessageBox(@CANT_LAUNCH + " " + szTemp,WARNING);
+          endif;
+      endif;
+      return 0;
+  endif;
+
+  nDefOptions = SYS_BOOTMACHINE;
+  szTitle     = "";
+  szMsg1      = "";
+  szMsg2      = "";
+  nResult     = SdFinishReboot(szTitle, szMsg1, nDefOptions, szMsg2, 0 );
+
+  return nResult;
+ end;
+
+// my additions follow:
+
+function UpdateToonTalkIni()
+  STRING szFileName;
+  INT nTemp, nCDROMDirLength;
+  BOOL bUsersWantsDebuggingVersion;
+  begin
+     if (bCDROMInstall) then
+        szTemp = szCDROMDrive ^ "\\ToonTalk\\";
+        WriteProfString(@ToonTalkIni, "Directories", "CDROMdir", szTemp);
+      else
+        WriteProfString(@ToonTalkIni, "Directories", "CDROMdir", "");
+      endif;
+      szShortAppPath = szAppPath;
+      LongPathToShortPath(szShortAppPath);
+//      if (bInstallMinimum) then
+//          szTemp = szCDROMDrive ^ "\\ToonTalk\\";
+//      else
+//          szTemp = szShortAppPath ^ "\\";
+//      endif;
+//      WriteProfString(@ToonTalkIni, "Directories", "EXEdir",szTemp);
+     // wrong place but this should get done since miminal install won't create them
+      szTemp = szShortAppPath ^ "\\Demos\\";
+      CreateDir(szTemp);
+      szTemp = szShortAppPath ^ "\\Demos\\HighRes\\";
+      CreateDir(szTemp);
+      szTemp = szShortAppPath ^ "\\Demos\\LowRes\\";
+      CreateDir(szTemp);
+
+      szTemp = szShortAppPath ^ "\\Users\\";
+      CreateDir(szTemp);
+//      WriteProfString  (@ToonTalkIni, "Directories", "UsersDir", szTemp);
+      szTemp = szShortAppPath ^ "\\"; // to be consistent
+      WriteProfString  (@ToonTalkIni, "Directories", "MainDir", szTemp);
+      szTemp = szShortAppPath ^ "\\temp\\";
+      CreateDir(szTemp);
+      WriteProfString  (@ToonTalkIni, "Directories", "TempDir",szTemp);
+//      if (bInstallFull || !bCDROMInstall) then
+//          szTemp = szShortAppPath ^ "\\Demos\\";
+//      else
+//          szTemp = szCDROMDrive ^ "\\ToonTalk\\Demos\\";
+//      endif;
+//      WriteProfString(@ToonTalkIni, "Directories", "DemoDir", szTemp);
+//      if (bInstallMinimum) then
+//          szTemp = szCDROMDrive ^ "\\ToonTalk\\Puzzles\\";
+//      else
+//          szTemp = szShortAppPath ^ "\\Puzzles\\";
+//          CreateDir(szTemp);
+//      endif;
+//      WriteProfString(@ToonTalkIni,"Directories","PuzzleDir",szTemp);
+      szTemp = szShortAppPath ^ "\\java\\";
+      CreateDir(szTemp);
+//      WriteProfString(@ToonTalkIni, "Directories", "JavaDir",szTemp);
+//      szTemp2 = WINDIR ^ "java\\classes\\";
+//      if (ExistsDir(szTemp2) != EXISTS ||
+//          FindFile(szTemp2, "classes.zip", szTemp ) < 0 ) then
+//          MessageBox(@JAVA_SYSTEM_CLASSES_NOT_FOUND, WARNING);
+//      endif;
+//      szTemp = WINDIR ^ "java\\classes\\classes.zip";
+//      szTemp = szShortAppPath ^ "\\java\\" ^ "ttclass.zip";
+//      szTemp2 = szShortAppPath ^ "\\java\\" ^ "system.zip";
+//      WriteProfString(@ToonTalkIni, "Directories", "JavaClassDir", szTemp + ";" + szTemp2);
+      // m25 looks nicer -- users can choose m22 if they want
+//      szTemp = szShortAppPath ^ "\\Java\\Pictures\\M25\\";
+//      if (ExistsDir(szTemp) != EXISTS) then
+//         szTemp = szShortAppPath ^ "\\Java\\Pictures\\M22\\";
+//         if (ExistsDir(szTemp) != EXISTS) then
+//            szTemp = szCDROMDrive ^ "\\ToonTalk\\Java\\Pictures\\M22\\";
+//         endif;
+//      endif;
+//      WriteProfString(@ToonTalkIni, "Directories", "GIFDir", szTemp);
+//      szTemp = szShortAppPath ^ "\\Java\\Sounds\\";
+//      if (ExistsDir(szTemp) != EXISTS) then
+//         szTemp = szCDROMDrive ^ "\\ToonTalk\\Java\\Sounds\\";
+//      endif;
+//      WriteProfString(@ToonTalkIni, "Directories", "SoundDir", szTemp);
+      DefaultIniEntry("User", "PreviousName",@NO_NAME);
+      DefaultIniEntry("User", "TextToSpeechMode"," ");
+      WriteProfString(@ToonTalkIni, "Versions", "Language", @LANGUAGE_NAME);
+      WriteProfString(@ToonTalkIni, "Versions", "Language1", @LANGUAGE_NAME);
+      if (bSwedish) then // 2nd choice for Swedish version
+         WriteProfString(@ToonTalkIni, "Versions", "Language2", "English");
+      endif;
+//      WriteProfString(@ToonTalkIni, "Versions", "Language1", @LANGUAGE_NAME_FOR_DIALOG);
+//      WriteProfString(@ToonTalkIni,"Executables","WelcomeToonTalk",@WELCOME_EXE);
+      // let the language DLL decide this
+      DefaultIniEntry("FileExtensions","SubtitlesSuffix"," ");
+      WriteProfString(@ToonTalkIni,"FileExtensions",
+                      "DataFileSuffix",@DATA_FILE_SUFFIX);
+//      szTemp = szAppPath ^ "javac16.bat";
+//      if (n32Possible = FALSE) then
+//         szTemp = " ";
+//      else
+//      szTemp = szShortAppPath ^ "jump\\";
+//      if (ExistsDir(szTemp) != EXISTS ||
+//          FindFile(szTemp, "jump.exe", szIgnore) < 0) then
+//         szTemp = szCDROMDrive ^ "\\ToonTalk\\jump\\jump.exe";
+//      else
+//         szTemp = szShortAppPath ^ "jump\\jump.exe";
+//      endif;
+//     WriteProfString(@ToonTalkIni,"Executables","JavaCompiler",szTemp);
+//      if (SWEDISH = TRUE) then
+//         WriteProfString(@ToonTalkIni, "Versions", "Release", "2.0");
+//         WriteProfString(@ToonTalkIni, "Versions", "Beta", " ");
+//      else
+      WriteProfString(@ToonTalkIni, "Versions", @PRODUCT_KIND, @PRODUCT_VERSION);
+//      endif;
+      WriteProfString(@ToonTalkIni,"Executables","StartToonTalk",szStartTTName);
+//      if (bInstall16) then
+      bUsersWantsDebuggingVersion = FALSE;
+      if (!bCDROMInstall) then
+         szTemp = @FLOPPY_EXECUTABLE;
+//      elseif (FindFile(szAppPath,"TTBug16.exe",szIgnore) < 0) then
+//         szTemp = "TT16";
+//      elseif (AskYesNo (@OK_TO_MAKE_DEBUGGING_VERSION_DEFAULT, YES) == YES) then
+//         szTemp = "TTBug16";
+//         bUsersWantsDebuggingVersion = TRUE;
+      else
+        szTemp = "TT16";
+      endif;
+      WriteProfString(@ToonTalkIni,"Executables","ToonTalk16",szTemp);
+      WriteProfString(@ToonTalkIni,"Executables","DemoToonTalk16",szTemp);
+      if (FindFile(szAppPath,"TTBug32.exe",szIgnore) < 0) then
+         szTemp = "TT32";
+      elseif (AskYesNo (@OK_TO_MAKE_DEBUGGING_VERSION_DEFAULT, YES) == YES) then
+         szTemp = "TTBug32";
+         bUsersWantsDebuggingVersion = TRUE;
+      else
+         szTemp = "TT32";
+      endif;
+//      WriteProfString(@ToonTalkIni,"Executables","DemoToonTalk16","TT168c");
+//      if (bWinNT4) then // since there is no DirectX and TTBug32 caused problems on NT
+//         szTemp = "TT32NT4";
+//      else
+//      if (!bUsersWantsDebuggingVersion || FindFile(szAppPath,"TTBug32.exe",szIgnore) < 0) then
+//         szTemp = "TT32";
+//      else
+//         szTemp = "TTBug32";
+//      endif;
+      WriteProfString(@ToonTalkIni,"Executables","ToonTalk32",szTemp);
+      WriteProfString(@ToonTalkIni,"Executables","DemoToonTalk32",szTemp);
+//      WriteProfString(@ToonTalkIni,"Executables","DemoToonTalk32","TT168c"); // a little lie for now
+      DefaultIniEntry("Executables","SpeechEngine"," ");
+      DefaultIniEntry("FileExtensions","NarrationFileSuffix"," ");
+      if (bDirectXPossible) then
+//         DefaultIniEntry("Switches","32BitDefault","1");
+         WriteProfString(@ToonTalkIni,"InstallationDefaults","Version","2");
+      else
+         WriteProfString(@ToonTalkIni,"InstallationDefaults","Version","1");
+      endif;
+      if (bCDROMInstall && bIsShellExplorer) then // speak is possible
+         WriteProfString(@ToonTalkIni,"InstallationDefaults","MartyTalk","1");
+         WriteProfString(@ToonTalkIni,"Versions","TextToSpeech","1");
+         WriteProfString(@ToonTalkIni,"Versions","32Bit","1");
+         WriteProfString(@ToonTalkIni,"Versions","640x480","1");
+      else
+         WriteProfString(@ToonTalkIni,"InstallationDefaults","MartyTalk","3");
+//         WriteProfString(@ToonTalkIni,"Versions","TextToSpeech","0"); // implicit
+      endif;
+      WriteProfString(@ToonTalkIni,"Versions","16Bit","1"); // always available
+      DefaultIniEntry("Versions","EnglishIsAmerican","1");
+      DefaultIniEntry("Switches","GenerateLogs","0");
+      DefaultIniEntry("Switches","AutoDemoMaxIdle","120");  // 2 minute default
+      if (bWinNT) then // && !bIsShellExplorer) then
+         // at least on the NT 4.0 machine at Center for Software Development
+         // it runs black (but runs)
+         WriteProfString(@ToonTalkIni,"Switches","DispDIBNotPossible","1");
+         WriteProfString(@ToonTalkIni,"InstallationDefaults","WindowSize","1"); // was 3 but not good default for 32bit version
+      else
+         WriteProfString(@ToonTalkIni,"Switches","DispDIBNotPossible","0");
+         WriteProfString(@ToonTalkIni,"InstallationDefaults","WindowSize","1");
+      endif;
+      WriteProfString(@ToonTalkIni,"Switches","GenerateRobotNames","1");
+      WriteProfString(@ToonTalkIni,"Switches","RunAppletInNewWindow","0");
+      if (bIsShellExplorer) then
+         WriteProfString(@ToonTalkIni,"Switches","ShellIsPROGMAN","0");
+      else
+         WriteProfString(@ToonTalkIni,"Switches","ShellIsPROGMAN","1");
+      endif;
+      // following didn't work for IE 3 since once there was a cabfile it
+      // couldn't find the class that was in the codebase directory
+      WriteProfString(@ToonTalkIni,"Java","cabbase"," "); //ttclass.cab");
+      WriteProfString(@ToonTalkIni,"Java","archive"," "); //ttclass.zip");
+      DefaultIniEntry("ButtonKeyboardEquivalents","3","-");
+      DefaultIniEntry("ButtonKeyboardEquivalents","4","<F1>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","5","<Escape>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","6","<F2>");
+      if (bCDROMInstall) then
+         szTemp = szCDROMDrive ^ "\\ToonTalk\\Demos\\";
+         nCDROMDirLength = StrLength(szTemp);
+         nTemp = FindAllFiles( szTemp, "*.*",  szFileName,  RESET );
+         while ( nTemp = 0)
+             ParsePath  (szTemp2, szFileName, FILENAME); // just the filename
+             WriteProfString(@ToonTalkIni, "CDROMDemoFiles", szTemp2, "1");
+             nTemp = FindAllFiles( szTemp, "*.*",  szFileName, CONTINUE );
+         endwhile;
+         szTemp = szCDROMDrive ^ "\\ToonTalk\\Demos\\HighRes\\"; // LowRes shouldn't be any different
+         nCDROMDirLength = StrLength(szTemp);
+         nTemp = FindAllFiles( szTemp, "*.*",  szFileName,  RESET );
+         while ( nTemp = 0)
+             ParsePath  (szTemp2, szFileName, FILENAME); // just the filename
+             WriteProfString(@ToonTalkIni, "CDROMDemoFiles", szTemp2, "1");
+             nTemp = FindAllFiles( szTemp, "*.*",  szFileName, CONTINUE );
+         endwhile;
+      endif;
+  return 0;
+end;
+
+function CreateAndRegister(szKey, szName, szValue)
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+     endif;
+     // set's value even if old
+     RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     return 0;
+end;
+
+function CreateAndRegisterIfNew(szKey, szName, szValue)
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+        // set's value only if new
+        RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     endif;
+   return 0;
+end;
+
+function InstallWinG()
+  STRING szText;
+  begin
+    if (bWinGAlreadyInstalled) then
+       return 0; // already installed
+    endif;
+    if (!bIsShellExplorer && !bWinNT) then // really just Win 3.1 needs this
+       VarSave(SRCTARGETDIR);
+       TARGETDIR = WINSYSDIR; // this didn't work right on NT 3.51 or NT 4.0
+       szText = "device=" + WINSYSDIR ^ "dva.386";
+       SRCDIR = WINDIR;
+       if (FileGrep("system.ini","device=dva.386",szIgnore,nIgnore,RESTART) < 0) then
+           if (FileGrep("system.ini",szText,szIgnore,nIgnore,RESTART) < 0) then
+              // can't find either form of device=dva.386
+              if (AddProfString("system.ini","386Enh","device","dva.386") < 0) then
+                  MessageBox(@WING_DEVICE_WARNING,WARNING);
+              endif;
+           endif;
+        endif;
+        VarRestore(SRCTARGETDIR);
+     endif;
+     return 0;
+  end;
+
+function InstallDirectX()
+  INT result;
+//  INT language_id;
+  STRING redist_dir;
+//  STRING language_name;
+  begin
+    if (bWinNT) then
+       return 0; // can't do much with NT -- should have DirectX already...
+    endif;
+    if (bSomeDirectXInstalled) then
+       if (AskYesNo(@OK_TO_UPDATE_DIRECTX,YES) = NO) then
+           return 0;
+       endif;
+    endif;
+//    GetSystemInfo ( LANGUAGE , language_id , language_name );
+////    if (SELECTED_LANGUAGE = ISLANG_SWEDISH) then
+//    if (language_id = ISLANG_SWEDISH) then
+//       szTemp = szCDROMDrive ^ "\\Install\\DirectX\\dx5swe.exe";
+//       if (LaunchApp (szTemp  , "" ) < 0) then
+//           MessageBox(@CANT_LAUNCH + " " + szTemp,WARNING);
+//       endif;
+//       return 0;
+//    endif;
+    redist_dir = szCDROMDrive ^ "\\install\\directx\\redist\\directx\\";
+//MessageBox(redist_dir, INFORMATION);
+    ChangeDirectory(redist_dir); // Note: This MUST be done BEFORE calling UseDLL.
+    UseDLL( redist_dir ^ "dsetup.dll" );
+    result = DirectXSetupA(GetWindowHandle(HWND_INSTALL),redist_dir,DSETUP_DIRECTX);
+    UnUseDLL( redist_dir ^ "dsetup.dll" );
+    bNeedToReboot = FALSE; // unless overridden below
+    if (result = DSETUPERR_SUCCESS_RESTART) then
+       bNeedToReboot = TRUE; // installed OK but need to restart here...
+       return 0;
+    elseif (result = DSETUPERR_SUCCESS) then
+       szTemp = szCDROMDrive ^ "\\ToonTalk\\StartTT.exe";
+//       LaunchApp(szTemp, "" );
+       return 0;
+    elseif (result = DSETUPERR_NOTPREINSTALLEDONNT) then
+       MessageBox(@NT_DIRECTX_INSTALL_PROBLEM, WARNING);
+       return -1;
+    else
+       NumToStr(szTemp , result);
+       MessageBox(@DIRECTX_INSTALL_PROBLEM + szTemp, WARNING);
+       WriteProfString(@ToonTalkIni,"Switches","32BitDefault","0");
+       return -1; // error of some sort -- worry about which one??
+    endif;
+  end;
+//
+ function DefaultIniEntry(szSectionName, szKeyName, szValue)
+   begin
+     if (GetProfString(@ToonTalkIni, szSectionName, szKeyName, szIgnore) < 0) then
+         WriteProfString(@ToonTalkIni, szSectionName, szKeyName, szValue);
+         return -1;
+     endif;
+     return 0;
+  end;
+
+function DeselectWin95DependentComponents()
+   // should test sometime if filterOS does this better...
+   begin
+     // eliminate components that due to Java require long file names
+     ComponentSelectItem(MEDIA, "Java Components\\Java Classes", FALSE);
+     ComponentSelectItem(MEDIA, "Documentation\\Java Demo Documentation", FALSE);
+     // following require Win 95 or NT 4.0
+     ComponentSelectItem(MEDIA, "Program Files\\32 Bit Program Files", FALSE);
+     ComponentSelectItem(MEDIA, "Program Files\\NT Program Files", FALSE);
+     ComponentSelectItem(MEDIA, "Program Files\\NT English Program Files", FALSE);
+     ComponentSelectItem(MEDIA, "Program Files\\NT Swedish Program Files", FALSE);
+     ComponentSelectItem(MEDIA, "Data Files\\High Resolution Graphic Files", FALSE);
+     ComponentSelectItem(MEDIA, "Demonstrations\\High Resolution Demos", FALSE);
+     ComponentSelectItem(MEDIA, "Speech Components\\English Speech Files", FALSE);
+     ComponentSelectItem(MEDIA, "Speech Components\\Swedish Speech Files", FALSE);
+     ComponentSelectItem(MEDIA, "Program Files\\Text to Speech Engine", FALSE);
+     ComponentSelectItem(MEDIA, "Debugging Components\\32 Bit Debugging Component", FALSE);
+     if (!bWinNT) then // NT 3.51 can deal with the following
+        ComponentSelectItem(MEDIA, "Java Components\\Java Compiler", FALSE);
+        // following is only useful for Java compiler
+        ComponentSelectItem(MEDIA, "Java Components\\Applet Maker Archives", FALSE);
+     endif;
+     return 0;
+end;
+
+ // --- include script file section ---
+
+#include "sddialog.rul"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

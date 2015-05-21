@@ -1,0 +1,27 @@
+//-----------------------------------------------------------------------
+//            InstallSHIELD Version 2.0 Resource DLL Example
+//             Resource DLL RC-file for Example Installation
+// Copyright (c) 1993, Stirling Technologies, Inc. All Rights Reserved.
+//-----------------------------------------------------------------------
+
+//-----------------------------------------------------------------------
+//      File:   MYRES.RC
+//
+//      This file defines all referenced resources
+//-----------------------------------------------------------------------
+
+
+
+//#include <windows.h>
+
+#ifndef ES_READONLY
+#define ES_READONLY         0x00000800L
+#define ES_WANTRETURN       0x00001000L
+#endif
+
+
+#include "DIALOGS.H"
+rcinclude DIALOGS.DLG
+
+
+

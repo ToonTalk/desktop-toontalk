@@ -1,0 +1,179 @@
+ IDS_BOMB_USED_HOUSE_HELP4,
+  "Você pode se sentar em segurança clicando em " // --- (970122) The "on" will have different translations depending on what follows it. For "the left mouse button" we're gonna have to change this sentence ...
+
+Ken:
+ IDS_BOMB_USED_HOUSE_HELP4,
+  "You can set it down safely by clicking on "
+
+I think I should restructure these as
+"You can set it down safely by " +  "clicking on the left mouse button" + "."
+and
+"You can set it down safely by " +  "clicking on any mouse button" + "."
+
+On the to do list.
+
+-------------------
+IDS_NEW_MAIN_CUBBY,
+  "ir trabalhar em" // --- (970122) These sentences may be gender dependent
+IDS_COPIER_APPLY_NEST,
+ "usar a varinha mágica em "  // --- (970122) 
+
+Ken:
+
+IDS_NEW_MAIN_CUBBY,
+  "switch to working on" // always followed by a description of some box
+
+IDS_COPIER_APPLY_NEST,
+ "use the magic wand on"        
+// this can be followed by nearly anything so a general solution
+// to gender matching like you proposed on 1/21 is needed
+// however in this case would it work to paraphrase this as
+// "use the magic wand to copy"
+// to avoid the problem with "on"?
+
+--------------
+ IDS_SCALE_KEYBOARD_HELP,
+  "Quando uma balança estiver se equilibrando você poderá alterar o modo com que ela se inclina apertando a tecla de espaço. " // --- (970122) I didn't notice anything different. What should happen when I press the space bar?
+
+// That was a bug that took most of the morning to fix. 
+// Thanks for reporting it.
+// The fix will be on your CDROM.
+// The idea is that scales can be changed if they are totering
+// or have blanks on both sides of them -- otherwise you would
+// be constructing a contradiction.  Useful in thought bubbles.
+
+-----------------------
+
+IDS_WHAT_IS_ON_TOP_OF,
+  "o que estiver por cima do" // --- (970122) In order to fix this sentence, we will need to use "on top of the" + "nest", instead of "on top of" + "the nest"
+
+Ken:
+I'm not sure I understand why this helps...
+
+-------------------
+
+IDS_TOONTALK_VERSION_NUMBER,
+  "Beta Version 6." // (970122) But is this to be translated or not?
+
+Ken:
+I think we should leave it untranslated.  It means someone can
+look at something from someone's clipboard and know which version
+of ToonTalk is came from.
+
+---------------
+IDS_BETA_TO_EXPIRE_SOON,
+  "Já é hora de obter uma nova versão do ToonTalk. Estaversão beta deixará de funcionar dia primeiro de julho." // --- (970122) I wrote down the dead line as July 1st. Isn't it better to write the date as a number (ie. 01/07/97) instead of having to change this file everytime?
+
+Ken:  You are right.  Or since I have the names of months I could add
+the month automatically and always end on the first of the month.  I think
+this should work for most languuages (e.g. "... stop working on the first of"
++ month).
+
+On the to do list.
+
+--------------------------
+
+IDS_IN,
+ "no" // --- (970122) Again, "in" will have different translations depending on the word that follows it. I translated "in" to "in the", so "in" + "the truck" will have to be modified to "in the" + "truck". The same is gonna work for "hole". Is that ok for you?
+
+Ken:
+Do you mean that the translation of "in" depends upon the gender of the 
+following noun phrase or that it depends upon which word (or words) follow
+it?  I guess I'm reluctant to break it as you suggest since it is contrary
+to grammar.  The "the" is part of the noun phrase "the truck".  If this
+is just an issue of the gender of the following noun phrase I think I
+should deal with gender properly instead.
+
+------------
+IDS_ON, // added 12/3
+ "no"  // --- (970122) as in "use Pumpy on" --> we have the same gender problem here. The translation will differ depending on the gender of the object that Pumpy is being used on
+
+Ken:
+Again sounds like gender needs to be dealt with generally.
+
+-------
+// --- (970122) There is a way to structure the sentence
+like in English, but it will require a few changes (ie. remove the
+space between some of the words, and change the verbs that appears in
+the infinitive). For example: "You can drop" + <space> + <pronoun> +
+<space> + "by clicking a button" would become "Você pode largá-"
++ <pronoun> + <space> + "apertando um botão", where "largá-" is
+a modified version of "largar" (to drop). If you think this would be
+fine, please show me the verbs that are used in these phrases for me
+to convert them. I have already changed all the pronouns and also a
+few of the verbs (IDS_DROP_HELP, IDS_PICK_UP_HELP,
+IDS_BUTTON_CLICKED_HELP1, IDS_BUTTON_CYCLE_HELP1) to this new
+format. If any of these is wrong, please return it to the original
+translation.
+
+Ken:
+Do I understand that the problem is that the form of the verb depends
+upon the gender?  Or am I confused.
+
+Your proposal would cause problems for other languages -- wouldn't it?
+
+--------------------
+
+THE_LEFT_PAGE_OF, // added 12/13
+"a página à esquerda do" // --- (970122) I translated to "the left page of the". We will need to add "notebook", instead of "the notebook". Is this alright?
+THE_RIGHT_PAGE_OF, // added 12/13
+"a página à direita do" // --- (970122) Same as above
+
+Ken:
+Again this doesn't follow the grammatical structure very well
+("noun phrase" -> [article noun]).  While languages differ
+as to whether the article is attached to the noun or whether
+it comes first or second in all languages it forms a grammatical
+unit.
+
+I would prefer a solution that have 2 forms of THE_LEFT_PAGE_OF
+say THE_LEFT_PAGE_OF_FEMININE and THE_LEFT_PAGE_OF_MASCULINE.
+
+----------------
+IDS_BUILT_IN_SOUND_PRONOUN,
+ "lo" // --- (970122) Where is this used?
+
+In Beta 6 there is a new data type which are sounds.  They replace
+the old scheme where text pads where used to sometimes name sounds.
+The new data type looks like a text pad with a different color but
+the operations on it are different.
+
+--------
+IDS_REMOTE_TEXT_PICTURE_TYPE_PRONOUN,
+ "lo" // (970122) Where is this used?
+
+For sensors, remote controls, and options (page 10) they sometimes
+have a picture (like the collision sensor) and sometimes text (like
+the one that controls how visible a picture is).  Internally they
+are now different but Marty should refer to them the same so it should
+be the same as
+IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "la"
+
+which they are not.  I think of them both as sensors/remote-controls which
+happen to have different appearances (text vs. picture).  So they should
+have the same pronoun, right?
+
+---------------
+Ken:
+
+Regarding
+
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyz"
+
+Does one say in Portuguese that there are 26 letters and some of those
+letters have accents or are the accented letters thought of as distinct
+letters?
+
+This matters for a few of the puzzles and also if you drop the number 1
+on a letter you get the next letter.  This isn't well defined right
+now for accented letters.
+
+On a related topic have you tried using scales to compare letters with
+accents?  I think it should work OK...
+
+-------
+

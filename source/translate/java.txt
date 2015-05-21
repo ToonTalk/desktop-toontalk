@@ -1,0 +1,11 @@
+// the portion in quotes needs translation
+
+IDS_START = "START"; // as a label on button
+IDS_STOP = "STOP"; // as a label on button
+IDS_NOT_STARTED = "NOT STARTED";
+IDS_STOPPED = "Stopped.";
+IDS_RESUMED = "Resumed.";
+IDS_RUNNING = "Running.";
+IDS_WAITING_FOR_PICTURE = "Waiting for a picture to load.";
+IDS_WAITING_FOR_USER_INPUT = "Waiting for user input.";
+IDS_ALL_ROBOTS_FINISHED = "All robots have finished.";

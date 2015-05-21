@@ -1,0 +1,6 @@
+NAME           BRTT32
+DESCRIPTION    'Brazilian Portuguese strings for ToonTalk (c) 1992, 1996 Ken Kahn, Animated Programs'
+EXETYPE        WINDOWS
+STUB				'WINSTUB.EXE'
+CODE           PRELOAD MOVEABLE 
+DATA           PRELOAD SINGLE

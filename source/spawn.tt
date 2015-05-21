@@ -1,0 +1,58 @@
+This team of ToonTalk robots takes a box with one hole containing a
+box (usually a nest that receives a box). The box should contain all
+the things you want placed into a truck. This team enables the remote
+execution of program if the nest is filled by a long-distance bird.
+
+Created by Ken Kahn on 050500.
+
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Select all of the text
+and then use the Copy command in the Edit menu. Then it will appear
+in the ToonTalk remote control for the clipboard. You can find the
+clipboard remote control on page 30 of the Sensor notebook. Just use
+Dusty to vacuum it off the clipboard. Control-v is a shortcut for pasting. 
+   The following is a robot who wants a box with 2 holes. The first hole
+contains a box with 0 holes. The second hole contains a truck containing
+a box with one hole which contains the number 1 and a robot who wants a
+box with one hole which contains any number. If given a box like that he
+will move to the stack of numbers. And pick up a number. And drop it on
+the first hole inside his box. If given a box like that he will pick up
+what's in the second hole inside his box. And drop it. And grab a copy
+of Dusty. And push the space bar to change what he is holding. And use
+Dusty to vacuum his box. And release Dusty. And grab a copy of Dusty.
+And push '+' to change what he is holding. And run Dusty in reverse to
+restore. And release Dusty. And pick up what's in the first hole inside
+his box. And drop it. And pick up his box. And push '1' while pointing
+to his box. And drop it. And grab a copy of Dusty. And push '1' while
+pointing to Dusty. And use Dusty to vacuum the second thing he made or
+found. And use Dusty to vacuum the new box. And release Dusty.
+Otherwise, he'll give the box to the robot behind him in line. The
+second robot wants a box with 2 holes. The first hole contains any box.
+The second hole contains a truck. If given a box like that he will pick
+up what's in the first hole inside his box. And push Backspace key to
+change what he is holding. And drop it on the first hole inside his box.
+And pick up the new box. And drop it. And pick up what's in the first
+hole inside the new box. And drop it into the truck in the second hole
+inside his box. And grab a copy of Dusty. And push '1' while pointing to
+Dusty. And use Dusty to vacuum the new box. And release Dusty.
+Otherwise, he'll give the box to the robot behind him in line. The third
+robot wants a box with one hole which contains any box. If given a box
+like that he will move to the stack of boxes. And pick up a box. And
+drop it just right of his box. And move to the stack of trucks. And pick
+up a truck. And drop it on the second hole inside his box.
+   What follows is in a special code and was produced by ToonTalk(tm) 
+Beta 070500. To learn more about ToonTalk see www.toontalk.com.
+;BStartToonTalkEncoding:
+Bf8w-wwAUmVhbGx5DVNwYXdu-wIK-wACAAr-AAAACP8BCv8AAQAA-wEAAAArAAAABf8w-wYA
+Q291bnRz-wIK-wABAAD-AQAAACsBACAC-wAAAf8AAQT-AAIAAP8ABxT-AAkAAP8AF------+
+INH-BAAD-wAHAAH-AAgU-wANA-8AEQ3-IA4A-wAQA-8ADQP-ABEN-ysPAP8AEAP-AAcAAP8A
+CBX-AAcA-wARAP8xAgIK-wAIAP8ADQP-MRED-zEOFf8ADhb-ABAD-wAX----Bf8w-wwAU3Bh
+d24NV29ya2Vy-wIK-wACAAr-AQIABf8w-wYAQ291bnRz-wIK-wABAAD-AQAAACsBACAC-wAA
+Af8AAQT-AAIAAP8ABxT-AAkAAP8AF-----8K-wABAAD-AQAAACsAAAj--iDQ-wQAAf8ABwAA
+-wARDf8IAgAK-wAJAAD-AAcU-wAIFP8ABxQA-wAUAAH-AA0D-zERA-8xDhT-ABAD-wAX----
+Bf8w-wsAU3RhcnQNU3Bhd27-Agr-AAEACv8BAgAF-zD-BgBDb3VudHP-Agr-AAEAAP8BAAAA
+KwEAIAL-AAAB-wABBP8AAgAA-wAHFP8ACQAA-wAX-----wr-AAEAAP8BAAAAKwAAIM--BAAC
+-wABBv8AAgAK-wAHFP8ACwD-AAEI-wACAQj-AAcV-wAJAAH-ABf-----.
+This is the end of the code for the ToonTalk object. 

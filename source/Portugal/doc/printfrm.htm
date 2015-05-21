@@ -1,0 +1,226 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Nota de encomenda para enviar por fax ou correio</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<font face="Comic Sans MS"><script>
+    function processForm(form) {
+        var checkBlanks = "Nome Apelido Endereço Localidade Cod_Postal Quantidade";
+        for (var i = 0; i < form.elements.length; i++) {
+           if (form.elements[i].type == "text" &&
+               checkBlanks.indexOf(form.elements[i].name) != -1 &&
+               form.elements[i].value == "") {
+              alert("É necessário preencher o campo " + form.elements[i].name + ".");
+              form.elements[i].focus();
+//              form.elements[i].select();
+              return false;
+           } else if (form.elements[i].name == "Quantidade") {
+              var number = parseInt(form.elements[i].value,10);
+              if (isNaN(number) || number < 1) {
+                 alert("A quantidade tem de ser superior a zero.");
+                 form.elements[i].focus();
+                 form.elements[i].select();
+                 return false;
+              }
+           } else if (form.elements[i].name == "Email" && 
+                      form.elements[i].value != "" &&
+                      form.elements[i].value.indexOf('@', 0) == -1) {
+              alert("Falta @ no endereço de correio electrónico.");
+              form.elements[i].focus();
+              form.elements[i].select();
+              return false;
+           } else if (form.elements[i].name == "Payment_Method") {
+              var index = form.elements[i].selectedIndex;
+              if (index == 0) {
+                 alert("Escolha um método de pagamento.");
+                 form.elements[i].focus();
+                 return false;
+              } else if (index >= 1 && index <= 4) { // credit card
+                 for (var j = i+1; j < i+3; j++) { // make sure next 2 elements are not blank
+                    if (form.elements[j].value == "") {
+                       alert("Com cartão de crédito, é necessário preencher o campo  " + 
+                             form.elements[j].name + ".");
+                       form.elements[j].focus();
+                       return false;
+                    }
+                 }
+              } else if (index == 5) { // phone me for credit card info
+                 if (form.elements[2].value == "") { // 2 is phone number
+                    alert("Por favor, indique o número de telefone.");
+                    form.elements[2].focus();
+                    return false;
+                 }
+              }
+           }
+        }
+        alert("Já pode imprimir carregando no botão da impressora.  Envie por fax para 239 792829.");
+        return false; // since not really submitting anything
+     }
+</script>
+</font>
+
+<h1 align="center"><font face="Comic Sans MS"><strong><small>ToonTalk - Nota de
+encomenda</small></strong></font></h1>
+
+<p><font face="Comic Sans MS" size="3">Os itens a <font color="#FF0000">vermelho</font>
+(com </font><font
+color="#FF0000" face="Comic Sans MS" size="3">*</font><font face="Comic Sans MS" size="3">)
+têm de ser preenchidos. Esta nota de encomenda só é válida para a versão em
+Português Europeu.</font></p>
+
+<form name="Form" onsubmit="return processForm(this)">
+  <table border="0">
+    <tr>
+      <td><font color="#FF0000" face="Comic Sans MS" size="3">Nome *....................</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Nome"></font></td>
+    </tr>
+    <tr>
+      <td><font color="#FF0000" face="Comic Sans MS" size="3">Apelido *......................</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Apelido"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Telefone ...............</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Phone_Number"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Empresa ou Escola .....</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Company_Name"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Correio electrónico.........</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Email"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Fax ....................</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Fax"></font></td>
+    </tr>
+    <tr>
+      <td><font color="#FF0000" face="Comic Sans MS" size="3">Endereço Postal *........</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Endereço"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Endereço (cont) ....</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Endereço2"></font></td>
+    </tr>
+    <tr>
+      <td><font color="#FF0000" face="Comic Sans MS" size="3">Localidade
+        *......................</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Localidade"></font></td>
+    </tr>
+    <tr>
+      <td><font color="#FF0000" face="Comic Sans MS" size="3">Código Postal *....</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Cod_Postal"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">País............................</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40" name="Country"></font></td>
+    </tr>
+  </table>
+  <p><font face="Comic Sans MS" size="3">A informação fornecida será usada
+  exclusivamente para processar a encomenda e enviar informações relacionadas
+  com novos produtos.</font></p>
+  <p><font face="Comic Sans MS" size="3"><input type="checkbox"
+  name="Shipping_Endereço_Residence?" value="ON">Assinale se a morada fornecida
+  é uma residência.</font></p>
+  <p><font face="Comic Sans MS" size="3"><input type="checkbox"
+  name="Credit_statement_to_ship_to_Endereço?" value="ON">Assinale no caso de
+  optar por pagamento via cartão de crédito..</font></p>
+  <p><font face="Comic Sans MS" size="3">Escolha o método de pagamento. Imprima
+  e envia por fax para 239 792829. Ou envie por correio para CNOTINFOR, Rua
+  Antonio Jardim, 211 - 3 FRT 3000-038 COIMBRA. Indique o número de
+  contribuinte para receber uma factura. Se o pagamento é efectuado por uma
+  escola ou organização, imprima em papel timbrado ou preencha uma
+  requisição oficial.</font></p>
+  <p><font face="Comic Sans MS" size="3"><select name="Payment_Method" size="1">
+    <option selected>Escolha o método de pagamento</option>
+    <option>Visa</option>
+    <option>MasterCard</option>
+    <option>Por favor, telefonem-me</option>
+    <option>Envio cheque à ordem de CNOTINFOR</option>
+    <option>Por favor, enviem à cobrança</option>
+  </select></font></p>
+  <table border="0">
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Cartão de crédito Visa/MasterCard
+        Nº.</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40"
+      name="Visa_MasterCard_N"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Data de validade (mês/ano) ....</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40"
+      name="Data_Validade"></font></td>
+    </tr>
+    <tr>
+      <td><font face="Comic Sans MS" size="3">Nome impresso no cartão .......</font></td>
+      <td><font face="Comic Sans MS" size="3"><input type="text" size="40"
+      name="Nome_Cartao"></font></td>
+    </tr>
+  </table>
+  <p><font face="Comic Sans MS" size="3">Acrescentar sempre as despesas de
+  envio. 1.000$ (</font><font face="Comic Sans MS" size="2">EUR 4,99)</font><font face="Comic Sans MS" size="3">
+  para Continente e Ilhas, independentemente da quantidade. O envio será
+  efectuado no prazo máximo de 5 dias úteis após a recepção do pedido.</font></p>
+  <p><font face="Comic Sans MS"><strong>Preço </strong></font><font SIZE="2" face="Comic Sans MS">Iva incluído a 17%. (<a href="http://www.cnotinfor.pt/toontalk/printfrm.htm">Os
+preços podem ser alterados sem aviso prévio</a>) </font></p>
+<font SIZE="2">
+
+<table border="0" width="596">
+  <tr>
+    <td width="176"></font><font SIZE="2" face="Comic Sans MS">Uma cópia:</font></td>
+    <td width="412"><font size="2" face="Comic Sans MS">7.900$ (EUR 39,41)</font></td>
+  <font SIZE="2">
+  </tr>
+  <tr>
+    <td width="176"></font><font SIZE="2" face="Comic Sans MS">Cópias
+    adicionais:</font></td>
+    <td width="412"><font size="2" face="Comic Sans MS">5.900$ (EUR 29,43) cada</font></td>
+  </tr>
+  <tr>
+    <td width="176"><font size="2" face="Comic Sans MS">10 ou mais cópias:</font></td>
+    <td width="412"><font size="2" face="Comic Sans MS">4.900$ (EUR 24,44) cada</font></td>
+  </tr>
+  <tr>
+    <td width="176"><font face="Comic Sans MS" size="2">Despesas de envio</font></td>
+    <td width="412"><font face="Comic Sans MS" size="2">1.000$ (EUR 4,99), para
+      qualquer quantidade</font></td>
+  </tr>
+</table>
+
+<p><font color="#FF0000" face="Comic Sans MS" size="3">Quantidade encomendada</font><font
+  face="Comic Sans MS" size="3"> .... <input type="text" size="4" name="Quantidade" value="1"></font></p>
+  <p><small><font face="Comic Sans MS"><select name="How_heard" size="1">
+    <option selected>Por favor, diga-nos como conheceu o ToonTalk</option>
+    <option>Internet</option>
+    <option>Jornal ou Revista</option>
+    <option>Amigo ou Parente</option>
+    <option>Professor</option>
+    <option>Televisão</option>
+    <option>Feira</option>
+    <option>Outro</option>
+  </select></font></small></p>
+  <p><font face="Comic Sans MS" size="3">Caso pretenda que a sua encomenda
+  receba um tratamento especial, utilize o espaço em baixo. Por exemplo, se se
+  tratar de uma prenda e quiser que a factura seja enviada para uma morada
+  diferente. Podemos, neste caso incluir uma nota, se assim o pretender.</font></p>
+  <div align="left"><p><font face="Comic Sans MS" size="3"><textarea
+  name="Special_Instructions" rows="6" cols="63" wrap="virtual"></textarea></font></p>
+  </div><div align="left"><p><font color="#FF0000" face="Comic Sans MS" size="4"><input
+  type="submit" name="CheckForm" value="Verificar Pedido"></font><font color="#FF0000"
+  face="Comic Sans MS" size="5"> </font></p>
+  </div><div align="center"><center><p><font face="Comic Sans MS"><small><a
+  href="toontalk.htm">principal</a></small><small> | <a href="http://www.cnotinfor.pt/toontalk/search.htm">procura</a></small><small>
+    | <a href="buy.htm">compra</a></small><small> | <a href="doc.htm">manual</a> | <a href="whatsnew.htm">notícias</a></small><small>
+    | <a href="infodesk.htm">informação</a></small><small>
+  | <a href="faq.htm">perguntas</a></small><small> | <a href="support.htm">apoio</a></small><small>
+    | <a href="free.htm">downloads</a>
+  | <a href="press.htm">imprensa</a></small><small> | <a href="address.htm">contacto</a></small></font></p>
+  </center></div><div align="left"><p>&nbsp;</p>
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+&lt;SCRIPT language=javascript src="http://www.toontalk.com/agent.js"&gt;&lt;/SCRIPT&gt;
+
+&lt;SCRIPT language=javascript src="http://www.toontalk.com/English/strings.js"&gt;&lt;/SCRIPT&gt;
+
+&lt;SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl&gt;
+&lt;!--
+		reactToAgentClicked(CharacterID, Button, Shift, X, Y);
+--&gt;
+		&lt;/SCRIPT&gt;
+
+&lt;SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl&gt;
+&lt;!--
+      idleAgent(CharacterID);
+--&gt;
+		&lt;/SCRIPT&gt;
+
+&lt;OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT&gt;&lt;/OBJECT&gt;&lt;INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="http://www.toontalk.com/reading.gif" name=Image1&gt;

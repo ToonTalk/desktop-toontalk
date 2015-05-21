@@ -1,0 +1,787 @@
+// Copyright (c) 1992,1999. Ken Kahn, Animated Programs, All rights reserved
+
+// This file contains those ToonTalk string entries used by the puzzle game
+// some entries are also used in Free Play and demos.
+
+// To translate this file simply replace the items within quotes.
+// leave the upper case items alone.
+// Anything following two /s is just a comment and can be ignored.
+// Spaces within quotes are important and should be retained.
+//
+
+IDS_JANUARY,
+  "January"
+  //"‚PŒ"
+IDS_FEBRUARY,
+  "February"
+  //"‚QŒ"
+IDS_MARCH,
+  "March"
+  //"‚RŒ"
+IDS_APRIL,
+  "April"
+  //"‚SŒ"
+IDS_MAY,
+  "May"
+  //"‚TŒ"
+IDS_JUNE,
+  "June"
+  //"‚UŒ"
+IDS_JULY,
+  "July"
+  //"‚VŒ"
+IDS_AUGUST,
+  "August"
+  //"‚WŒ"
+IDS_SEPTEMBER,
+  "September"
+  //"‚XŒ"
+IDS_OCTOBER,
+  "October"
+  //"‚P‚OŒ"
+IDS_NOVEMBER,
+  "November"
+  //"‚P‚PŒ"
+IDS_DECEMBER,
+  "December"
+  //"‚P‚QŒ"
+IDS_NO_SUCH_MONTH,
+  //"Sorry, I don't know any month called"
+  L"‚Ç‚ÌŒ\216‚©‚í‚©‚ç‚È‚¢‚æF"
+IDS_BAD_DATE,
+  //"I never heard of a date like"
+  "‚»‚¤‚¢‚¤“ú•t‚ğ•·‚¢‚½‚±‚Æ‚È‚¢‚æF"
+IDS_TODAY_IS,
+  //"Let's see. Today is"
+  "‚¦‚¦‚ÆA¡“ú‚Í"
+IDS_THANKS,
+  //"Thanks"
+  "‚ ‚è‚ª‚Æ‚¤"
+IDS_AND_YOU_WERE_BORN,
+  //"and you were born"
+  "‚»‚µ‚ÄŒN‚ª¶‚Ü‚ê‚½‚Ì‚Í"
+IDS_SO_YOU_ARE, // used in "so you are 3104 days old"
+  //"so you are" 
+  "‚Æ‚¢‚¤‚í‚¯‚ÅAŒN‚Í¶‚Ü‚ê‚Ä‚©‚ç"
+IDS_SO_YOU_ARE2, // used after "3104 days old" in the example above
+  ""
+IDS_YEARS_AND,
+  //"years and" 
+  "Ë‚Æ"
+IDS_DAYS_OLD,
+  //"days old"
+  "“ú"
+IDS_TODAY,
+  //"today" 
+  //"¡“ú"
+  "‚¾‚ËB"
+IDS_OR_SENTENCE_START,
+  //"Or"
+  "‚Ü‚½‚ÍA"
+IDS_ITS_YOUR_BIRTHDAY,
+  //"Wow, it's your birthday. Happy Birthday! "
+  "‚í‚¨AŒN‚Ì‚½‚ñ‚¶‚å‚¤‚Ñ‚¾‚ËB‚¨‚ß‚Å‚Æ‚¤I"
+IDS_HAD_BIRTHDAY_RECENTLY,
+  //"I hope you had a really happy birthday. "
+  "‚Æ‚Á‚Ä‚à ‚·‚Ä‚«‚È ‚½‚ñ‚¶‚å‚¤‚Ñ ‚¾‚Á‚½‚ñ‚¾‚ë‚¤‚ËB"
+IDS_BIRTHDAY_SOON,
+  //"Neat! Your birthday is coming really soon. Hope you have a good one. "
+  "‚·‚²‚¢I‚à‚¤‚·‚® ŒN‚Ì ‚½‚ñ‚¶‚å‚¤‚Ñ‚ª ‚­‚é‚í‚¯‚¾‚ËBŠy‚µ‚¢ ‚½‚ñ‚¶‚å‚¤‚Ñ‚ğI"
+IDS_COME_HERE_FOR_HINTS,
+  //"If you want me to help you come over here. "
+  "‚í‚½‚µ‚É •‚¯‚É —ˆ‚Ä‚Ù‚µ‚©‚Á‚½‚çA‚±‚±‚É —ˆ‚é‚ñ‚¾B"
+IDS_BOMB_TO_RESTART,
+  //"You can start over again by picking up the bomb and pressing the space bar. "
+  L"”š’e‚ğ\32\216‚¿ã‚°‚Ä\32ƒXƒy[ƒXƒL[‚ğ\32‰Ÿ‚·‚Æ\32‚à‚¤ˆê“x\32‚â‚è’¼‚¹‚éB"
+IDS_PUT_NEST_IN_BOX,
+  //"You need to put the nest in the box. "
+  "’¹‚Ì‘ƒ‚ğ ƒ{ƒbƒNƒX‚Ì ’†‚É “ü‚ê‚é‚ñ‚¾B"
+IDS_NEED_ALL_7_DAYS,
+  //"Sorry, but we need all 7 days on the nest, not just"
+  L"\216c”OA‘ƒ‚Ì’†‚É‚Í\32‚V‚Â‚Ì—j“ú\32‘S•”‚ª\32•K—v‚È‚ñ‚¾B"
+  // as in "Sorry, but we need all 7 days on the nest, not just 5. "
+IDS_NEED_NUMBERS_UNDERNEATH,
+  //"Sorry, but we need at least 5 numbers on the nest, not just" 
+  // as in "Sorry, but we need at least 5 numbers on the nest, not just 3. " 
+  L"\216c”OA‘ƒ‚Ì’†‚É‚Í\32Å’á‚T‚Â‚Ì\32”\216š‚ª\32•K—v‚È‚ñ‚¾B"
+IDS_NO_CHANGING_NUMBERS,
+  //"Sorry but none of the numbers should be changing. "
+  L"\216c”OA‚Ç‚Ì”\216š‚à\32•Ï‚¦‚Ä‚Í‚¢‚¯‚È‚¢B"
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+  //"Sorry but all the numbers have to be more than 0. "
+  L"\216c”OA‚·‚×‚Ä‚Ì\32”\216š‚ª\32‚O‚æ‚è\32‘å‚«‚­‚È‚¯‚ê‚Î\32‚¢‚¯‚È‚¢‚ñ‚¾B"
+IDS_LAST_NUMBER_WAS,
+  //"Hmmm, last time the number was"
+  L"ƒt[ƒ€A‚±‚Ì‘O‚Ì\32”\216š‚Í"
+IDS_AFTER_WAITING_8_SECONDS,
+  //"after waiting about 8 seconds.  And now the number is"
+  L"‚W•bŠÔ\32‘Ò‚Â‚ÆA”\216š‚Í"
+IDS_AFTER_WAITING_14_SECONDS,
+  //"after waiting 14 seconds. "
+  "‚P‚S•bŠÔ ‘Ò‚Â‚Æ"
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+  //"My sensors aren't showing a new house built by the crew in the truck. Sorry. "
+  L"‚í‚½‚µ‚Ì\32ƒZƒ“ƒT[‚Í\32ƒgƒ‰ƒbƒN‚Ì\32ƒƒ“ƒo[‚ª\32Œš‚Ä‚½\32V‚µ‚¢‰Æ‚ğ\32\216w‚µ‚Ä‚¢‚È‚¢B"
+IDS_OUT_OF_MAGIC,
+  //"the Magic Wand is out of magic"
+  L"–‚–@‚Ì‚Â‚¦‚Í\32\216g‚¦‚È‚¢F"
+IDS_MILLISECONDS,  // added 12/3
+  //"milliseconds"
+  "1000•ª‚Ì1•b"
+IDS_ALPHABET_UPPER_CASE,
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+  "abcdefghijklmnopqrstuvwxyz"
+IDS_SOLVED_ALL_PUZZLES,   // revised on 9/1/97
+  // "Good job. You solved all the puzzles! Check the ToonTalk web page for more puzzles. "
+  //"Great. The computer and clock are working now. Thanks. I think I can finish the rest on my own. "
+  L"‚·‚²‚¢BƒRƒ“ƒsƒ…[ƒ^‚Æ\32\216Œv‚Í\32‚Ü‚½\32“®‚«\216n‚ß‚Ä‚¢‚éB‚ ‚è‚ª‚Æ‚¤B‚ ‚Æ‚Í\32‚í‚½‚µ‚Pl‚Å\32‚Å‚«‚éB"
+IDS_SOLVED_ALL_PUZZLES2,
+  //"You'll find a little present at the end of the notebook on page 4 of your notebook (in ""Free Play""). "
+  "ŒN‚Ì ƒm[ƒg‚Ì ‚Sƒy[ƒW‚É ‚¿‚¢‚³‚È ƒvƒŒƒ[ƒ“ƒg‚ª ‚ ‚éB"
+IDS_CHECK_FOR_MORE_PUZZLES,
+  //"New puzzles might have been added to the ToonTalk web page. See www.toontalk.com. "
+  "V‚µ‚¢ ƒpƒYƒ‹‚ª ToonTalk‚Ì Webƒy[ƒW‚É ‘‚¦‚Ä‚¢‚é‚©‚à ’m‚ê‚È‚¢Bwww.toontalk.com‚ğ Œ©‚Ä‚²‚ç‚ñB"
+IDS_WE_NEED_THE_NUMBER_THAT_WAS_ON_THE_FLOOR,
+  //"We need the number that was on the floor. "
+  L"°‚Ì\32ã‚É‚ ‚é\32”\216š‚ª\32‚Ù‚µ‚¢‚ñ‚¾B"
+IDS_NUMBER_SHOULD_HAVE_GROWN_OVER_A_THOUSAND,
+  //"The number should have grown to over a thousand by now. "
+  L"”\216š‚Í\32¡\321000ˆÈã‚É\32‚È‚Á‚Ä‚é‚Í‚¸‚¾B"
+  // updated and moved here on 8/11/97
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL, // should be needed if -puzzle is used in unlikely ways or recovering from an error
+  //"Oh boy! I can't make the next puzzle since it needs stuff from earlier puzzles.  Is it OK if I send you back"  // some number
+  L"‚¨‚âA‘O‚Ì\32ƒpƒYƒ‹‚Ì\32Œ‹‰Ê‚ª\32‚È‚¢‚Æ\32\216Ÿ‚Ì\32ƒpƒYƒ‹‚Í\32‚Å‚«‚È‚¢B"
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL2,  // followed by
+  //"puzzles?"
+  "‚Ì ƒpƒYƒ‹‚É –ß‚Á‚Ä‚à ‚¢‚¢‚©‚ÈH"
+IDS_LESS_THAN, // added 8/27/97
+  //"less than"
+  "ƒ"
+IDS_BAD_TIME, // added 8/28/97
+  //"This can't be a correct time. The time can't include a number like" // followed by a number and a period
+  L"‚±‚ê‚Í\32³‚µ‚¢\216ŠÔ‚¶‚á‚È‚¢‚æF"
+  // Following combined to make the following (with numbers changed)
+  // I see you are 0 seconds old.  I mean 1 seconds old.  No, it's 2 seconds old.
+  // I wonder how many seconds until you are 3 seconds old. Could you please go next
+  // door and figure it out for me?
+IDS_AGE_IN_SECONDS1,
+  //"I see you are" // followed by a number
+  "ŒN‚Í"
+IDS_AGE_IN_SECONDS2,
+  //"seconds old."
+  "•bË‚¾‚ËB"
+IDS_AGE_IN_SECONDS3,
+  //"I mean"
+  "‚Â‚Ü‚è"
+IDS_AGE_IN_SECONDS4,
+  //"No, it's"
+  "‚¢‚âA"
+IDS_AGE_IN_SECONDS5,
+  //"I wonder how many seconds until you are"
+  "‰½•b ‚ ‚é‚Ì‚©‚ÈAŒN‚ª"
+IDS_AGE_IN_SECONDS6,
+  //"Could you please go next door and figure it out for me?"
+  L"•bË‚É\32‚È‚é‚Ü‚Å‚ÉB‚Æ‚È‚è‚É\32s‚Á‚Ä\32‚»‚ê‚ğ\32Œv\216Z‚µ‚Ä\32‚­‚ê‚È‚¢‚©H"
+  // Following combined to form
+  // "Maybe you should do something special in 3 days and 4 hours to celebrate being 390 million seconds old. "
+IDS_MAYBE_YOU_SHOULD_DO_SOMETHING_SPECIAL,
+  //"Maybe you should do something special in"
+  "ŒN‚Í"
+IDS_TO_CELEBRATE_BEING,
+  //"to celebrate being"
+  "ˆÈ“à‚É"
+IDS_MILLIONS_OF_SECONDS_OLD,
+  //"million seconds old. "
+  "•S–œ•bË‚É ‚È‚Á‚½‚±‚Æ‚Ì ‚¨j‚¢‚É ‚È‚É‚© “Á•Ê‚È‚±‚Æ‚ğ ‚·‚é‚×‚«‚¾B"
+IDS_FINISHED_ALL_PUZZLES_START_AGAIN,
+  //"You have done all the available puzzles. Want to start over again?"
+  "ŒN‚Í ‚·‚×‚Ä‚Ì ƒpƒYƒ‹‚ğ ƒNƒŠƒA‚µ‚½B‚à‚¤ˆê“x ‚Í‚¶‚ß‚©‚ç ‚â‚è‚½‚¢H"
+IDS_WAIT_FOR_BIRD_TO_BRING_MESSAGE,
+  //"Good. Let's wait for the bird to bring the message. "
+  L"‚æ‚ë‚µ‚¢B¬’¹‚ª\32ƒƒbƒZ[ƒW‚ğ\32\216‚Á‚Ä\32—ˆ‚é‚Ì‚ğ\32‘Ò‚Æ‚¤B"
+IDS_GIVING_UP_ON_BIRD,
+  //"I'm giving up on that bird. We've waited long enough. "
+  "‚»‚Ì¬’¹‚Í ‚à‚¤ ‚ ‚«‚ç‚ß‚éB"
+IDS_NEST_SHOULD_BE_EMPTY,
+  //"Sorry, but the nest should be empty. "
+  L"\216c”OA’¹‚Ì‘ƒ‚Í\32‚©‚ç‚Å\32‚È‚­‚¿‚áB"
+IDS_NOT_CHANGING_FAST_ENOUGH,
+  //"Sorry, but the number should be changing faster. "
+  L"\216c”OA”\216š‚Í\32‚à‚Á‚Æ\32‘¬‚­\32•Ï‚í‚é\32‚Í‚¸‚¾B"
+IDS_NOT_CHANGING_SLOW_ENOUGH,
+  //"Sorry, but the number should be changing slower. "
+  L"\216c”OA”\216š‚Í\32‚à‚Á‚Æ\32‚ä‚Á‚­‚è\32•Ï‚í‚é\32‚Í‚¸‚¾B"
+IDS_NOT_CHANGING_AT_ALL,
+  //"Sorry, but the number should be changing. "
+  L"\216c”OA”\216š‚ª\32•Ï‚í‚ç‚È‚¢B"
+IDS_THE_NUMBER_OF_ROBOTS_ON_THE_BACK_SHOULD_BE,
+  //"The number of robots on the back should be"  // followed by a number
+  L"ƒƒ{ƒbƒg‚Ì\32”w’†‚Ì\32”\216š‚ÍA"
+IDS_DAYS,
+  //"days"
+  "“ú"
+IDS_HOURS,
+  //"hours"
+  L"!\216ŠÔ"
+IDS_DAY,
+  //"day"
+  "“ú"
+IDS_HOUR,
+  //"hour"
+  L"!\216ŠÔ"
+IDS_MINUTES,
+  //"minutes"
+  "•ª"
+
+IDS_AS_I_WAS_SAYING, // added 12/5
+  //"When you left last time there was more I wanted to tell you. "
+  L"‚³‚Á‚«\32‚±‚±‚©‚ç\32o‚Ä‚¢‚Á‚½\216A‚à‚Á‚Æ\32Œ¾‚¢‚½‚¢‚±‚Æ‚ª\32‚ ‚Á‚½‚ñ‚¾B"
+IDS_WHAT_DOTS_MEAN,
+  //"When I have more to say you'll see ""..."" at the bottom. "
+  L"‚Ü‚¾\32‚È‚É‚©\32Œ¾‚¢‚½‚¢\216‚ÍAˆê”Ô‰º‚É\32...‚Æ\32o‚éB"
+IDS_THATS_WHAT_I_WANTED_SAY, // added 12/5
+  //"That was what I was trying to say earlier. "
+  "‘O‚É Œ¾‚¨‚¤‚Æ ‚µ‚½‚Ì‚Í ‚»‚Ì‚±‚Æ‚¾B"
+
+IDS_ORDER_OF_THINGS_MATTER, // added 12/12
+  //"Sorry to be fussy, but the order of things in the holes has to be just right. "
+  L"\216c”OAŒŠ‚Ì\32’†‚ğ\32®—‚·‚é\32•K—v‚ª\32‚ ‚éB"
+IDS_BIGGER_THAN, // added 12/13
+  //"bigger than"
+  "„"
+
+  // many ToonTalk data types have 4 entries:
+  // indefinite singular. As in "You are holding A NUMBER."
+  // definite singular.  As in "You can drop THE NUMBER by clicking a mouse button."
+  // plural.  As in "You are pointing to a stack of NUMBERS."
+  // pronoun (accusative, i.e. used as the object not subject)
+  // As in "You are holding a number.  You can drop IT by clicking a mouse button."
+  // Note if the pronoun is troublesome (e.g. due to word order) you may wish
+  // to just repeat the definite singular for the pronoun entry.
+
+IDS_NUMBER_TYPE_INDEFINITE,
+  //"a number"
+  L"!”\216š"
+IDS_NUMBER_TYPE_DEFINITE,
+  //"the number"
+  L"!”\216š"
+IDS_NUMBER_TYPE_PLURAL,
+  //"numbers"
+  L"!”\216š"
+IDS_NUMBER_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_EXPANDER_TYPE_INDEFINITE,
+  //"Pumpy the Bike Pump"
+  L"!\216©“]\216Ô‚Ì‹ó‹C“ü‚êƒpƒ“ƒsƒB"
+IDS_EXPANDER_TYPE_DEFINITE,
+  //"Pumpy the Bike Pump"
+  L"!\216©“]\216Ô‚Ì‹ó‹C“ü‚êƒpƒ“ƒsƒB"
+IDS_EXPANDER_TYPE_PLURAL,
+  //"Pumpy the Bike Pump"
+  L"!\216©“]\216Ô‚Ì‹ó‹C“ü‚êƒpƒ“ƒsƒB"
+IDS_EXPANDER_TYPE_PRONOUN,
+  //"him"
+  "”Ş"
+IDS_VACUUM_TYPE_INDEFINITE,
+  //"Dusty the Vacuum"
+  "‚»‚¤‚¶‹@ƒ_ƒXƒeƒB"
+IDS_VACUUM_TYPE_DEFINITE,
+  //"Dusty the Vacuum"
+  "‚»‚¤‚¶‹@ƒ_ƒXƒeƒB"
+IDS_VACUUM_TYPE_PLURAL,
+  //"Dusty the Vacuum"
+  "‚»‚¤‚¶‹@ƒ_ƒXƒeƒB"
+IDS_VACUUM_TYPE_PRONOUN,
+  //"him"
+  "”Ş"
+IDS_COPIER_TYPE_INDEFINITE,
+  //"a magic wand"
+ "–‚–@‚Ì‚Â‚¦"
+IDS_COPIER_TYPE_DEFINITE,
+  //"the magic wand"
+  "–‚–@‚Ì‚Â‚¦"
+IDS_COPIER_TYPE_PLURAL,
+  //"magic wands"
+  "–‚–@‚Ì‚Â‚¦" 
+IDS_COPIER_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_THOUGHT_BUBBLE_TYPE_INDEFINITE,
+  //"a thought bubble"
+  L"!\216vl"
+IDS_THOUGHT_BUBBLE_TYPE_DEFINITE,
+  //"the thought bubble"
+  L"!\216vl"
+IDS_THOUGHT_BUBBLE_TYPE_PLURAL,
+  //"thought bubbles"
+  L"!\216vl"
+IDS_THOUGHT_BUBBLE_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_ROBOT_TYPE_INDEFINITE,
+  //"a robot"
+  "ƒƒ{ƒbƒg"
+IDS_ROBOT_TYPE_DEFINITE,
+  //"the robot"
+  "ƒƒ{ƒbƒg"
+IDS_ROBOT_TYPE_PLURAL,
+  //"robots"
+  "ƒƒ{ƒbƒg"
+IDS_ROBOT_TYPE_PRONOUN,
+  //"him"
+  "”Ş"
+IDS_NEST_TYPE_INDEFINITE,
+  //"a nest"
+  "’¹‚Ì‘ƒ"
+IDS_NEST_TYPE_DEFINITE,
+  //"the nest"
+  "’¹‚Ì‘ƒ"
+IDS_NEST_TYPE_PLURAL,
+  //"nests"
+  "’¹‚Ì‘ƒ"
+IDS_NEST_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_BIRD_TYPE_INDEFINITE,
+  //"a bird"
+  "¬’¹"
+IDS_BIRD_TYPE_DEFINITE,
+  //"the bird"
+  "¬’¹"
+IDS_BIRD_TYPE_PLURAL,
+  //"birds"
+  "¬’¹"
+IDS_BIRD_TYPE_PRONOUN,
+  //"her"
+  "¬’¹"
+IDS_TRUCK_TYPE_INDEFINITE,
+  //"a truck"
+  "ƒgƒ‰ƒbƒN"
+IDS_TRUCK_TYPE_DEFINITE,
+  //"the truck"
+  "ƒgƒ‰ƒbƒN"
+IDS_TRUCK_TYPE_PLURAL,
+  //"trucks"
+  "ƒgƒ‰ƒbƒN"
+IDS_TRUCK_TYPE_PRONOUN,
+  // "it"
+  "‚»‚ê"
+IDS_BOOK_TYPE_INDEFINITE,
+  //"a notebook"
+  "ƒm[ƒg"
+IDS_BOOK_TYPE_DEFINITE,
+  //"the notebook"
+  "ƒm[ƒg"
+IDS_BOOK_TYPE_PLURAL,
+  //"notebooks"
+  "ƒm[ƒg"
+IDS_BOOK_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_CUBBY_TYPE_INDEFINITE,
+   // "Cubby" is the name small children give to the "cubby hole" where they
+   // put their things while at school.  Turns out some adults didn't know the word.
+   // So box is used now.
+  //"a box"
+  "ƒ{ƒbƒNƒX"
+IDS_CUBBY_TYPE_DEFINITE,
+  //"the box"
+  "ƒ{ƒbƒNƒX"
+IDS_CUBBY_TYPE_PLURAL,
+  //"boxes"
+  "ƒ{ƒbƒNƒX"
+IDS_CUBBY_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_TOOLBOX_TYPE_INDEFINITE,
+  //"Tooly the Toolbox"
+  "“¹‹ï” ‚Ìƒc[ƒŠƒB"
+IDS_TOOLBOX_TYPE_DEFINITE,
+  //"Tooly the Toolbox"
+  "ƒc[ƒŠƒB"
+IDS_TOOLBOX_TYPE_PLURAL,
+  //"Tooly the Toolbox"
+  "ƒc[ƒŠƒB"
+IDS_TOOLBOX_TYPE_PRONOUN,
+  //"him"
+  "”Ş"
+IDS_PICT_TYPE_INDEFINITE,
+  //"a picture"
+  "ƒsƒNƒ`ƒƒ"
+IDS_PICT_TYPE_DEFINITE,
+  //"the picture"
+  "ƒsƒNƒ`ƒƒ"
+IDS_PICT_TYPE_PLURAL,
+  //"pictures"
+  "ƒsƒNƒ`ƒƒ"
+IDS_PICT_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_BOMB_TYPE_INDEFINITE,
+  //"a bomb"
+  "”š’e"
+IDS_BOMB_TYPE_DEFINITE,
+  //"the bomb"
+  "”š’e"
+IDS_BOMB_TYPE_PLURAL,
+  //"bombs"
+  "”š’e"
+IDS_BOMB_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_TEXT_TYPE_INDEFINITE,
+  //"a text pad"
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_TEXT_TYPE_DEFINITE,
+  //"the text pad"
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_TEXT_TYPE_PLURAL,
+  //"text pads"
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_TEXT_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_VARIABLE_WIDTH_TEXT_TYPE_INDEFINITE,
+  //"a text pad"
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_VARIABLE_WIDTH_TEXT_TYPE_DEFINITE,
+  //"the text pad"
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_VARIABLE_WIDTH_TEXT_TYPE_PLURAL,
+  //"text pads"
+  "ƒeƒLƒXƒgƒpƒbƒh"
+IDS_VARIABLE_WIDTH_TEXT_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_REMOTE_PICTURE_TYPE_INDEFINITE,
+  // There are 2 kinds of remote controls in ToonTalk.
+  // Those for controlling pictures which are in the notebook on the back of a picture.
+  // And those for controlling and sensing global things like the keyboard or mouse (found on page 10 of the main notebook).
+  //"a remote control"
+ "ƒŠƒ‚ƒRƒ“"
+IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+  //"the remote control"
+ "ƒŠƒ‚ƒRƒ“"
+IDS_REMOTE_PICTURE_TYPE_PLURAL,
+  //"remote controls"
+  "ƒŠƒ‚ƒRƒ“"
+IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_BLANK_NUMBER_TYPE_INDEFINITE,
+  //"a blank number pad"
+  L"!ƒuƒ‰ƒ“ƒN”\216šƒpƒbƒh"
+IDS_BLANK_NUMBER_TYPE_DEFINITE,
+  //"the blank number pad"
+  L"!ƒuƒ‰ƒ“ƒN”\216šƒpƒbƒh"
+IDS_BLANK_NUMBER_TYPE_PLURAL,
+  //"blank number pads"
+  L"!ƒuƒ‰ƒ“ƒN”\216šƒpƒbƒhƒpƒbƒh"
+IDS_BLANK_NUMBER_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_BLANK_CUBBY_TYPE_INDEFINITE,
+  //"a blank box"
+  "ƒuƒ‰ƒ“ƒNƒ{ƒbƒNƒX"
+IDS_LABELED_CUBBY_TYPE_INDEFINITE,
+  //"a box"
+  "ƒ{ƒbƒNƒX"
+IDS_LABELED_CUBBY_TYPE_DEFINITE,
+  //"the box"
+  "ƒ{ƒbƒNƒX"
+IDS_LABELED_CUBBY_TYPE_PLURAL,
+  //"boxes"
+  "ƒ{ƒbƒNƒX"
+IDS_LABELED_CUBBY_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_BLANK_PICTURE_TYPE_INDEFINITE,
+  //"a blank picture"
+  "ƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ"
+IDS_BLANK_PICTURE_TYPE_DEFINITE,
+  //"the blank picture"
+  "ƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ"
+IDS_BLANK_PICTURE_TYPE_PLURAL,
+  //"blank pictures"
+  "ƒuƒ‰ƒ“ƒNƒsƒNƒ`ƒƒ"
+IDS_BLANK_PICTURE_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_BLANK_TEXT_TYPE_INDEFINITE,
+  //"a blank text pad"
+  "ƒuƒ‰ƒ“ƒNƒeƒLƒXƒgƒpƒbƒh"
+IDS_BLANK_TEXT_TYPE_DEFINITE,
+  //"the blank text pad"
+  "ƒuƒ‰ƒ“ƒNƒeƒLƒXƒgƒpƒbƒh"
+IDS_BLANK_TEXT_TYPE_PLURAL,
+  //"blank text pads"
+  "ƒuƒ‰ƒ“ƒNƒeƒLƒXƒgƒpƒbƒh"
+IDS_BLANK_TEXT_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_PICT_WITH_INSIDES_TYPE_INDEFINITE,
+  //"a picture"
+  "ƒsƒNƒ`ƒƒ"
+IDS_PICT_WITH_INSIDES_TYPE_DEFINITE,
+  //"the picture"
+  "ƒsƒNƒ`ƒƒ"
+IDS_PICT_WITH_INSIDES_TYPE_PLURAL,
+  //"pictures"
+  "ƒsƒNƒ`ƒƒ"
+IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_REMOTE_INTEGER_TYPE_INDEFINITE,
+  //"a sensor with a number display"
+  L"!”\216š•t‚«ƒZƒ“ƒT["
+IDS_REMOTE_INTEGER_TYPE_DEFINITE,
+  //"the sensor with a number display"
+  L"!”\216š•t‚«ƒZƒ“ƒT["
+IDS_REMOTE_INTEGER_TYPE_PLURAL,
+  //"sensors with a number display"
+  L"!”\216š•t‚«ƒZƒ“ƒT["
+IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_INDEFINITE,
+  // some remote controls display a picture, some text and some numbers
+  // nearly all of them are sensors only (e.g. the time)
+  // while a few like city size are both a sensor and a remote control
+  //"a sensor with a number display"
+  L"!”\216š•t‚«ƒZƒ“ƒT["
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_DEFINITE,
+  //"the sensor with a number display"
+  L"!”\216š•t‚«ƒZƒ“ƒT["
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_PLURAL,
+  //"sensors with a number display"
+  L"!”\216š•t‚«ƒZƒ“ƒT["
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_SCALE_PICTURE_TYPE_INDEFINITE,
+  //"a scale"
+  "ƒXƒP[ƒ‹"
+IDS_SCALE_PICTURE_TYPE_DEFINITE,
+  //"the scale"
+  "ƒXƒP[ƒ‹"
+IDS_SCALE_PICTURE_TYPE_PLURAL,
+  //"scales"
+  "ƒXƒP[ƒ‹"
+IDS_SCALE_PICTURE_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+  // A very useful facility which enables a user object to change its appearance
+  // The remote control for the appearance of something looks just like the thing.
+  // To replace an appearance a user (or a robot) erases this kind of remote control
+  // and drops the new appearance on it.
+  //"a remote control for how something looks"
+  //‰½‚ÉŒ©‚¦‚é‚©A‚Ì‚½‚ß‚ÌƒŠƒ‚ƒRƒ“
+  "ŠOŒ©ƒŠƒ‚ƒRƒ“"
+IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+  //"the remote control for how something looks"
+  //‚»‚ÌA‰½‚ÉŒ©‚¦‚é‚©A‚Ì‚½‚ß‚ÌƒŠƒ‚ƒRƒ“
+  "ŠOŒ©ƒŠƒ‚ƒRƒ“"
+IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+  //"remote controls for how things look"
+  //•¡”‚ÌA‰½‚ÉŒ©‚¦‚é‚©A‚Ì‚½‚ß‚ÌƒŠƒ‚ƒRƒ“
+  "ŠOŒ©ƒŠƒ‚ƒRƒ“"
+IDS_REMOTE_APPEARANCE_TYPE_PRONOUN,
+  // "it"
+  //‚»‚ÌA‰½‚ÉŒ©‚¦‚é‚©A‚Ì‚½‚ß‚ÌƒŠƒ‚ƒRƒ“
+  "‚»‚ê"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+  //"a picture of something"
+  "‚È‚É‚©‚ÌƒsƒNƒ`ƒƒ"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_DEFINITE,
+  //"the picture of something"
+  "‚È‚É‚©‚ÌƒsƒNƒ`ƒƒ" 
+IDS_PICTURE_WITH_INDIRECTION_TYPE_PLURAL,
+  //"pictures of things"
+  "‚È‚É‚©‚ÌƒsƒNƒ`ƒƒ"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+IDS_USER_PICTURE_TYPE_INDEFINITE,
+  //"a picture from a user file"
+  "ƒ†[ƒU[ƒtƒ@ƒCƒ‹‚©‚ç‚ÌƒsƒNƒ`ƒƒ"
+IDS_USER_PICTURE_TYPE_DEFINITE,
+  //"the picture from a user file"
+  "ƒ†[ƒU[ƒtƒ@ƒCƒ‹‚©‚ç‚ÌƒsƒNƒ`ƒƒ"
+IDS_USER_PICTURE_TYPE_PLURAL,
+  //"pictures from user files"
+  "ƒ†[ƒU[ƒtƒ@ƒCƒ‹‚©‚ç‚ÌƒsƒNƒ`ƒƒ"
+IDS_USER_PICTURE_TYPE_PRONOUN,
+  //"it"
+  "‚»‚ê"
+
+// new on 8/30
+// revised on 10/13
+IDS_PUZZLE_SINKING,
+  //  "Zizzle Island is sinking. "
+  //"Zizzle Island was a nice place before disaster struck. It's starting to sink!"
+  L"‘å\216S\216–‚ª\32P‚¤‘OAZizzle“‡‚Í\32‚·‚Ä‚«‚È\32êŠ‚Å\32‚ ‚Á‚½B‚Æ‚±‚ë‚ªAZizzle“‡‚Í\32’¾‚İ\216n‚ß‚½‚Ì‚¾I"
+IDS_PUZZLE_CRASH,
+  //  "Marty comes to the rescue. "
+  //"Marty the Martian just happens to be flying by. He rescues everyone. "
+  "‰Î¯l‚Ì ƒ}[ƒeƒB‚ÍA‚¿‚å‚¤‚Ç ‚»‚±‚ğ ’Ê‚è‚©‚©‚Á‚½Bƒ}[ƒeƒB‚ÍAŠF‚ğ ‹~‚¨‚¤‚Æ‚µ‚½B"
+IDS_PUZZLE_HURT,
+  //  "After rescuing everyone he crashes. "
+  //"He moves almost all of the houses off the island but then he gets engine trouble and crashes. "
+  L"”Ş‚Í\32‰Æ‚Ì\32‚Ù‚Æ‚ñ‚Ç\32‚·‚×‚Ä‚ğ\32“‡‚©‚ç\32‚Í‚È‚ê‚½Š‚É\32ˆÚ“®‚³‚¹‚½B‚µ‚©‚µA‚»‚Ì’¼ŒãA”Ş‚Ì\32‰F’ˆ‘D‚Í\32’Ä—\216‚µ‚½B"
+IDS_PUZZLE_RESCUE,
+  //"You volunteer to rescue Marty. "
+  //"Marty the rescuer needs to be rescued. You volunteer to parachute down to help him. "
+  "‹~•‚µ‚Ä‚­‚ê‚½ ƒ}[ƒeƒB‚ğ •ú‚Á‚Ä‚Í ‚¨‚¯‚È‚¢B”Ş‚ğ ‹~‚¤‚½‚ßA‚ ‚È‚½‚Í ƒpƒ‰ƒVƒ…[ƒg‚Å ~‰º‚µ‚½B"
+IDS_FIRST_PUZZLE_GREETING1,
+  //"Hi. I'm Marty. "
+  "‚±‚ñ‚É‚¿‚ÍA‚í‚½‚µ‚Í ƒ}[ƒeƒBB"
+IDS_FIRST_PUZZLE_GREETING2,
+  //"You must be"
+  "ŒN‚Í"
+IDS_FIRST_PUZZLE_GREETING3,
+  //"Boy, am I glad to see you!"
+  "‚Í‚¶‚ß‚Ü‚µ‚ÄA‚æ‚ë‚µ‚­B"
+IDS_RESTART_PUZZLE_GREETING1,
+  //"I'm glad to see you again. I remember where we were. "
+  "‚Ü‚½ ‰ï‚¦‚½‚ËA‚±‚Ì‘O‚Í ‚Ç‚±‚Ü‚Å ‚â‚Á‚½‚©‚ÈB"
+
+IDS_RESTART_PUZZLE_GREETING2,
+  //"Thanks for coming back. Let's get back to fixing the ship. "
+  "–ß‚Á‚Ä‚«‚Ä‚­‚ê‚Ä ‚ ‚è‚ª‚Æ‚¤B‚Ü‚½ ‚¢‚Á‚µ‚å‚É ‘D‚ğ ’¼‚»‚¤B"
+IDS_RESTART_PUZZLE_GREETING3,
+  //"It's great to see you again. Let's see, where were we? "
+  "‚Ü‚½ ‰ï‚¦‚Ä ‚Æ‚Ä‚à ‚¤‚ê‚µ‚¢B‚¦‚¦‚ÆA‚Ç‚±‚Ü‚Å s‚Á‚½‚Ì‚©‚ÈB"
+IDS_TOO_WIDE_TO_SEE,
+  //"Sorry, that's too wide to see all at once. "
+  L"\216c”OA•‚ª\32L‚·‚¬‚Ä\32ˆê“x‚É‚Í\32Œ©‚ç‚ê‚È‚¢B"
+IDS_TOO_NARROW_TO_SEE,
+  //"Sorry, that's so narrow I can't see the letters. "
+  L"\216c”OA•‚ª\32‚¹‚Ü‚­‚Ä\32\216š‚ª\32“Ç‚ß‚È‚¢B"
+
+// for puzzle engine
+IDS_BAD_PUZZLE_FILE,
+  //"Oh boy. Something is wrong with the puzzle file. Sorry. "
+  "‚¨‚âAƒpƒYƒ‹ƒtƒ@ƒCƒ‹‚ª ‚È‚ñ‚© ŠÔˆá‚Á‚Ä‚¢‚éB"
+IDS_ALL_HINTS_GIVEN1,
+  // The expression "a broken record" is from records (before there were CDs) that
+  // when scratched would repeat a phrase over and over again.  I'm not sure if it
+  // is clear to children of the 1990s.
+  // When translating these 3 versions IDS_ALL_HINTS_GIVEN just try to make them
+  // different but mean the same thing
+  //"I know I sound like a broken record but here I go again. "
+  "‚±‚í‚ê‚½ ƒŒƒR[ƒh ‚İ‚½‚¢‚¾‚Á‚Ä ‚í‚©‚Á‚Ä‚éA‚Å‚à ‚à‚¤ˆê“xŒ¾‚¤B"
+IDS_ALL_HINTS_GIVEN2,
+  //"Sorry about repeating myself but I don't know what else to say. "
+  "“¯‚¶‚±‚Æ ‚­‚è‚©‚¦‚µ‚Ä ‚²‚ß‚ñA‚Å‚à ‚±‚ê‚µ‚© •û–@‚ª ‚È‚¢‚ñ‚¾B"
+IDS_ALL_HINTS_GIVEN3,
+  //"I wish I knew how to help you. All I can think of is what I said last time. "
+  L"‰½‚Æ‚©\32\216è“`‚Á‚Ä\32‚ ‚°‚ç‚ê‚ê‚Î\32‚¢‚¢‚ñ‚¾‚¯‚ÇB\216v‚¢‚Â‚­‚Ì‚ÍA‚³‚Á‚«\32Œ¾‚Á‚½‚±‚Æ\32‚¾‚¯‚È‚ñ‚¾B"
+IDS_NO_HINTS,
+  //"Nope."  //  Try again. removed on 8/31/97 since is a seperate entry now
+  L"!\216c”O" 
+IDS_NEGATIVE_AGE,
+  // "So you aren't born yet? " //  Try again. removed on 8/31/97 since is a seperate entry now
+  "ŒN‚Í ‚Ü‚¾ ¶‚Ü‚ê‚Ä ‚¢‚È‚¢‚¾‚ë‚¤H"
+IDS_VERY_YOUNG1,
+  //"Amazing! I didn't know that"
+  "‹Á‚¢‚½"
+IDS_VERY_YOUNG2,
+  // "year old Earth children were so smart. "
+  L"Ë‚Ì\32’n‹…‚Ì\32\216q‹Ÿ‚ª\32‚±‚ñ‚È‚É\32‚©‚µ‚±‚¢‚È‚ñ‚ÄB"
+IDS_VERY_OLD1,
+  //"Boy,"
+  "‚¦‚ÁA"
+IDS_VERY_OLD2,
+  // "years old. You sure are old! "
+  "ËI–{“–H"
+IDS_LIKE_INSIDE_A_COMPUTER,  // was "Like inside a computer" prior to 8/25/97
+  //"Inside a computer"
+  "ƒRƒ“ƒsƒ…[ƒ^‚Ì “à•”‚Å‚ÍA"
+IDS_SEE_IF_YOU_CAN_MAKE_THAT_NUMBER,
+  //"See if you can make that number. "
+  L"‚»‚Ì”\216š‚ª\32‚Å‚«‚é‚©\32‚Ç‚¤‚©\32‚â‚Á‚Ä‚²‚ç‚ñB"
+IDS_WE_NEED1,
+  //"We need"
+  "•K—v‚È‚Ì‚ÍA"
+IDS_WE_NEED2,
+  //"we need"
+  "‚ª•K—v‚È‚ñ‚¾"
+IDS_SIT_DOWN_AND_GET,
+  //"Sit down in the other house and get"
+  "‚Æ‚È‚è‚Ì ‰Æ‚Ì’†‚Å À‚é‚ñ‚¾A"
+IDS_BASIC_HINT1,  // second "the" was missing -- added on 10/15/97
+  //"Walk through the door of the other house and then press a mouse button. "
+  "‚Æ‚È‚è‚Ì ‰Æ‚É “ü‚Á‚ÄAƒ}ƒEƒX‚ğ ‰Ÿ‚·‚ñ‚¾B"
+
+IDS_BASIC_HINT2,
+  //"You can pick something up by clicking the mouse button while pointing to it. "
+  L"‚Ù‚µ‚¢‚à‚Ì‚Í\32ƒ}ƒEƒX‚ğ\32ƒNƒŠƒbƒN‚·‚é‚Æ\32\216è‚É\32“ü‚éB"
+IDS_WHILE_HOLDING,
+  //"While holding"
+  " "
+IDS_PRESS_ESC_AND_COME_BACK,
+  //"press 'Escape' to stand up and come back here. "
+  L"‚ğ\32\216è‚Å\32‚Â‚©‚ñ‚¾‚Ü‚Ü\32‚d‚“‚ƒƒL[‚ğ\32‰Ÿ‚µA—§‚¿ã‚ª‚Á‚Ä\32‚±‚¿‚ç‚É\32–ß‚Á‚Ä‚­‚é‚ñ‚¾B"
+IDS_WE_DONT_NEED,
+  // As in "We don't need a number.  We need a box." -- Marty says this in the puzzle game.
+  //"Sorry. We don't need"
+  "‚²‚ß‚ñA‚±‚ê‚Í"
+IDS_WE_DONT_NEED2,
+  //"Sorry. We don't need"
+  " "
+IDS_SOMETHING_IS_MISSING,
+  // was  "Something is missing from" // changed 1/20/97
+  //"Something is missing from the box. "
+  "ƒ{ƒbƒNƒX‚Ì ’†‚É ‰½‚© ‚½‚è‚È‚¢‚ñ‚¾B"
+IDS_SOMETHING_IS_MISSING2,
+  //"Or it's in the wrong place. "  //  Try again. removed on 8/31/97 since is a seperate entry now
+  "‚»‚ê‚Æ‚à ŠÔˆá‚Á‚½ êŠ‚É ‚¨‚¢‚½‚Ì‚©‚àB"
+IDS_NOT_IT1,
+  //"Nope. "
+  L"!\216c”O‚Å‚µ‚½B"
+IDS_NOT_IT2,
+  //"That's not it. "
+  "‚»‚¤‚¶‚á‚È‚¢B"
+IDS_NOT_IT3,
+  //"Sorry, that's not what we need. "
+  "‚²‚ß‚ñA‚»‚ê‚¶‚á‚È‚¢B"
+  //IDS_WRONG_TRY_AGAIN,
+  // "Something's wrong with that. Try again. "
+IDS_SOMETHING_WRONG, // revised on 8/31/97 -- broke the two sentences apart
+  //"Something's wrong with that. "
+  "‚È‚É‚© ˆá‚Á‚Ä‚¢‚éB"
+IDS_TRY_AGAIN1,
+  //"Try again. "
+  "‚à‚¤ˆê“x ‚â‚Á‚Ä‚İ‚æ‚¤B"
+IDS_TRY_AGAIN2,
+  //"Let's do it again. "
+  "‚à‚¤ˆê“x ‚â‚è’¼‚»‚¤B"
+
+// new on 9/24
+IDS_CONGRATULATIONS,
+  //"Good job"
+  "—Ç‚­‚Å‚«‚½"
+IDS_CONGRATULATIONS2,
+  //"Nice"
+  "‚¤‚Ü‚¢"
+IDS_CONGRATULATIONS3,
+  //"Good going"
+  L"!ã\216è‚­‚¢‚Á‚½‚Ë"
+IDS_CONGRATULATIONS4,
+  //"Great"
+  "‚·‚²‚¢"
+IDS_CONGRATULATIONS5,
+  //"Good"
+  "‚æ‚µ"
+IDS_CONGRATULATIONS6,
+  //"Well done"
+  L"!ã\216è"
+IDS_TROUBLE_SHOOT_QUIT_ON_FIRST_PUZZLE,   // added 2/1/98
+  //"Would you like to read some hints?"
+  "ƒqƒ“ƒg‚ğ Œ©‚½‚¢H"
+IDS_TROUBLE_SHOOT_QUIT_ON_EARLY_ROBOT_PUZZLE,
+  //"Would you like to see some hints for how to deal with robots in puzzles?"
+  "ƒƒ{ƒbƒg‚Ì ˆµ‚¢•û‚ğ ‚à‚Á‚Æ ’m‚è‚½‚¢H"

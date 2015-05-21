@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>ToonTalk - Op&ccedil;&otilde;es de linha de comando do Toon Talk</title>
+<link rel="stylesheet" type="text/css" href="../toontalk.css">
+</head>
+
+<body link="#0000ff" vlink="#800080" bgcolor="#ffffff">
+
+<div align="center">
+<a name="topo"></a>
+<table width=468 cellspacing=0 cellpadding=0 border=0><tr><td>
+
+<p>
+<table width=460 cellspacing=0 cellpadding=0 border=0><tr><td>
+<div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a>
+<hr size=1>
+    </td></tr>
+</table>
+
+<h2>Op&ccedil;&otilde;es de linha de comando do Toon Talk</h2>
+
+<p>Quando você inicia o Toon Talk, ele pergunta o seu nome. Você pode, em vez disso, fornecer seu nome na linha de comando. Você também pode clicar em "Set Options" (Definir op&ccedil;&otilde;es) e alterar muitas das opções listadas abaixo muito facilmente. Quase todas as opções descritas abaixo podem ser controladas por itens da <a href="options.html">agenda de opções </a> incluída na página 10 de sua  <a href="notebook.html">agenda</a> principal do Toon Talk.
+
+<p><b><i>Apenas para usuários avançados:</i></b>
+
+<p>De forma alternativa você pode personalizar o Toon Talk através da edição do item de programa do Windows (Windows 3.1) ou do atalho (Windows 95) chamado "Toon Talk" (Alt-Enter quando o ícone é selecionado). Após a parte que vem no StartTT.exe, você pode acrescentar qualquer das seguintes opções separadas por espaços. Note que se o atalho termina com ", então coloque essas opções depois das aspas. Esses comandos irão cancelar quaisquer das opções selecionadas através do clique em "Set Options".
+
+<dl>
+  <dt><small><a name="UserName"></a></small>-n&lt;name&gt; (nome) </dt>
+  <dd>O nome pode ter qualquer tamanho, mas não deve conter espaços ou caracteres especiais. As primeiras oito letras do nome serão utilizadas como o nome do arquivo para o trabalho salvo. O nome "default" (padrão) é "No Name"( Sem Nome).Se você acrescentar isso, não será solicitado a inserir um nome de usuário.</dd>
+  <dt>-h (cabeça)</dt>
+  <dd>A cabeça pode ser 0 (careca), 1 (cabelo de menina) ou 2 (chapéu). O "default"&eacute; 2.</dd>
+  <dt>-s (som)</dt>
+  <dd>O som pode ser 0, para desligar o áudio. Se o sistema trava intermitentemente, isso pode se dever às más interações entre o driver de som e o Toon Talk. Veja se o 0 corrige o problema, e por favor informe-nos.</dd>
+  <dt>-f (tela cheia)</dt>
+  <dd>A tela cheia pode ser 0 (tela pequena 320x240), 1 (tela cheia com os gráficos do Windows fechados) ou 2 (640x480, Windows normal). A opção 1 tende a parecer um pouco mais bonita, e em algumas máquinas mais rápida, mas tem o problema de travar freqüentemente quando encontra um "bug". Algumas vezes, quando isso ocorre, a máquina precisa ser reiniciada.  A opção 1 também funcionará a despeito da resolução da tela ou do número de cores. Também sob a opção 1 os comandos <alt> do Windows não funcionam. A opção 1 não funciona com alguns sistemas Windows NT.</dd>
+  <dt><a name="OutputLog"></a>-o </dt>
+  <dd>Tudo que é feito é gravado no arquivo. Pode ser recuperado por - i. É um grande meio de localizar um "bug". A extensão .DMO é acrescentada.</dd>
+  <dt>- i &lt;input log file name&gt;</dt>
+  <dd>Refaz todas as ações gravadas quando a opção -o foi utilizada. -I se comporta da mesma forma, mas reduzirá para a velocidade de gravação original se estiver rodando em uma máquina mais rápida.</dd>
+  <dt>-c (tamanho da cidade)</dt>
+  <dd>O tamanho "default" da cidade é de 10x10 blocos (cada bloco comporta 4 casas). O tamanho máximo da cidade é 255x255. Se negativo, iniciará a cidade com casas aleatórias. Seu computador precisa de muita memória e espaço livre em disco para rodar o Toon Talk com grandes cidades ativas.</dd>
+  <dt>-b &lt;0,1,2 ou 3&gt;</dt>
+  <dd>Descreve o número de botões do mouse normalmente disponíveis. O "default"é 1. Vide "botões do mouse" para detalhes. <a href="mouse.html">mouse buttons</a> for details.</dd>
+  <dt>-r (percentagem de velocidade de leitura) </dt>
+  <dd>A velocidade de leitura controla quanto tempo o texto permanece em um balão de diálogo. Cem por cento é o "default". Números maiores fazem o texto permanecer por menos tempo. </dd>
+  <dt>-l (tamanho da letra nos balões de diálogo) </dt>
+  <dd>O "default"é 100 por cento. </dd>
+  <dt><small><a name="FontChange"></a></small>-font_variable <font name> (nome da fonte variável) </dt>
+  <dd>Extensão variável da fonte utilizada nos balões de diálogo do M&aacute;rcio e em outros lugares. Se seu nome tiver um espaço, como em "New Modern", digite como new_modern. Arial é o "default". </dd>
+  <dt>-font_fixed (nome da fonte fixa) </dt>
+  <dd>Extensão fixa da fonte utilizada em grupos de texto e números e em outros lugares.Courier New é o "default". </dd>
+  <dt>-m (memória cache). </dt>
+  <dd>O "default" é 100 (o qual utiliza 25% da memória livre). Números maiores deverão acelerar o sistema, mas deixarão menos memória para outras funções. </dd>
+  <dt>-u (perfil do usuário mantido) </dt>
+  <dd>O 1 significa manter o registro em *.usr. no qual as operações  foram executadas e personalizar conforme a ajuda. A opção 0 o desativa. O "default" é 1. </dd>
+  <dt>-a (nível de conselho) </dt>
+  <dd>A escala varia de 0 a 6. Se estiver em 0, então M&aacute;rcio dirá tudo o que é possível. Se estiver em 6, então ele não dirá nada. O "default" é 2. </dd>
+  <dt><small><a name="TemporaryUser"></a></small>-t <temporary user> (usuário temporário) </dt>
+  <dd>O 1 significa não ler ou gerar arquivos do usuário para a agenda. O "default" é 0. </dd>
+  <dt>-q<Toon Talk speed> (velocidade do Toon Talk) </dt>
+  <dd>Cem é o "default". Números maiores aceleram todas as animações. </dd>
+  <dt><a name="FrameDurationMinimum">-</a>-y< minimum frame duration in milliseconds> (duração mínima de quadros por milissegundos) </dt>
+  <dd>0 "default &eacute; 0.Cinq&uuml;enta, por exemplo, resultará em uma taxa máxima de 20 quadros por segundo, mesmo em um computador muito rápido. </dd>
+  <dt>-k <user is system debugger> </dt>
+  <dd>Se -k for 1 então os arquivos do M&aacute;rcio e.log cont&ecirc;m mais informação acerca de quaisquer problemas encontrados. O "default"é 0. </dd>
+  <dt>-bird <see birds returning outside> (veja os pássaros retornando de fora)</dt>
+  <dd>Se for 0, então os pássaros não despenderão tempo para retornar depois de entregar algo em um ninho quando o programador está observando de fora. O "default" é 1. </dd>
+  <dt>-j (rodando versão japonesa do Windows 3.1) </dt>
+  <dd>O 1 significa não exibir a tela de título. Parece funcionar para uma incompatibilidade entre o Win 3.1J e o WinG, ambos da Microsoft. Usualmente, a primeira vez que o texto é exibido, estará em branco. </dd>
+  <dt>-puzzle (desafio) </dt>
+  <dd>Inicia o Toon Talk rodando o <a
+    href="make_pzl.html">desafio</a> contido no nome do arquivo. O nome do arquivo também pode ser um número no qual o quebra-cabeça do sistema nomeado p<number>.pzl é utilizado. Se você olhar no <username>.log no subdiretório "Users" (Usuários), verá quais quebra-cabeças fez mais  recentemente. </dd>
+  <dt>-next_puzzle 1 (próximo desafio)</dt>
+  <dd>Inicia o Toon Talk no próximo desafio neste nome de usuário. Ele começará com o primeiro desafio, se nenhum desafio foi resolvido por este usuário. </dd>
+  <dt>-autdemo &lt;0,1 ou 2&gt; </dt>
+  <dd>0 "default" &eacute; &eacute; 0 e desliga o modo auto demo. O 1 significa que, quando ocioso por 30 segundos, o sistema exibe repetidamente o "tour" introdutório. Se alguém começar a "play game" (jogar) ou "free play" (jogo livre), então ele esperará 120 segundos. Isto é controlado pela linha em seu toontalk.ini no diretório do Windows que lê o "AutoDemoMaxIdle=120". Se for -autdemo 2, a única diferença é que ele passará por todos os demos, um a um, quando ocioso. </dd>
+  <dt>-subtitles (velocidade das legendas) </dt>
+  <dd>Se houver a exibição de exemplos e legendas, então  os exibirá a uma velocidade de leitura cujo "default" é 100. Se a velocidade é 0, então nenhum a legenda é exibida. A língua "default" das legendas pode ser alterada pelo "SubtitlesSuffix=ust" na seção "Executables" do ToonTalk.ini, onde UST é o sufixo de legendas para inglês americano, SET para sueco, e assim por diante. </dd>
+  <dt><a name="TextToSpeech">-speak &lt;0,1&gt;</a> </dt>
+  <dd>O 1 ativa a função texto-narração se estiver rodando na versão de 32 bits. Zero a desativa. O 1 é o "default" na versão de 32 bits e 0 na de 16 bits. </dd>
+  <dt>-balloon <0,1> </dt>
+  <dd>O 1 ativa os balões de palavras para o M&aacute;rcio. O "default" é 1. </dd>
+  <dt><small><a name="TextToSpeechUsesDirectSound"></a></small>
+  -tts_uses_ds &lt;0,1&gt;</dt>
+  <dd>O 1 significa que o programa de texto-narração utiliza DirectSound. Ele habilita simultaneamente a narração e os efeitos sonoros. O "default" começando com a versão 1.04 do ToonTalk é 1. (Antes dessa versão o Microsoft Speech API 3.0 era utilizado, e apresentou grandes atrasos.) Isto é apenas para a versão de 32 bits. </dd>
+  <dt><small><a name="MouseSensitivity"></a></small>--mouse_sensitivity <sensitivity>
+    &lt;sensitivity&gt; </dt>
+  <dd>Cem é o normal.Um número maior que 100 fará com que pequenos movimentos do mouse produzam grandes movimentos no Toon Talk. Um número menor que 100 tornará o mouse menos sensível. </dd>
+</dl>
+
+<p>
+<hr size=1><div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a></div></td>
+
+</tr></table>
+</div>
+</body></html>
+
+<!--  FuturArte Editora Ltda.                                     Divertire  -->

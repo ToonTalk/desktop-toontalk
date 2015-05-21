@@ -1,0 +1,89 @@
+FuturArte Editora Ltda.	
+ATENÇÃO! 
+LEIA CUIDADOSAMENTE ANTES DE USAR
+CONTRATO DE LICENÇA
+
+Este instrumento é um Contrato de Licença entre V. Sa., na qualidade de usuário final (Licenciado), e a FuturArte Editora Ltda., na qualidade de licenciadora (FuturArte). 0 simples ato de abertura da embalagem lacrada do suporte físico que contém o software (CD-ROM, disco, etc.) implica na concordância expressa de V. Sa., em aceitar todos os termos e condições abaixo estabelecidos. Caso V. Sa., não concorde com os termos e condições abaixo estipulados, não abra esta embalagem. Devolva-a imediatamente ao local no qual foi adquirido e V. Sa. será integralmente reembolsada pelo valor pago.
+Este contrato contém o inteiro teor do acordo ajustado entre a FuturArte e V. Sa., como segue:
+
+1.Concessão de Licença
+
+A FuturArte licencia à V. Sa. o uso não exclusivo e intransferível do programa de computador (Software) e respectivos manuais, guias de usuário e demais documentação técnica acondicionados nesta embalagem (doravante denominados Manuais), mediante o pagamento dos valores ajustados pelas partes em instrumento apartado.
+
+2.Direitos de propriedade
+
+A licenciada reconhece que o Software, logotipos, marcas, insígnias, símbolos, sinais distintivos, Manuais e quaisquer outros materiais de suporte correlatos, aos quais a Licenciada venha a ter acesso, constituem, conforme a caso, propriedade da FuturArte ou de seus fornecedores, sendo protegidos por legislação, internacional e nacional, aplicável, dentre outros, à propriedade industrial, direito de autor e segredo de fábrica ou negócio, conforme o caso.
+
+3.Obrigações da Licenciada
+
+A Licenciada obriga-se a:
+
+a) Utilizar uma cópia do Software em um único terminal ligado a um computador mono-usuário, exceto se o Software foi adquirido para utilização em rede ou sistema multi-usuário, caso em que poderá ser utilizado em uma rede de computadores ou mais de um computador, conforme o caso, desde que a licenciada tenha adquirido e alocado ao menos 1 (um) original dos Manuais de cada usuário simultâneo;
+
+b) Não copiar o Software, exceto, para fins de salvaguarda e arquivo, nem os Manuais o demais materiais de suporte correlatos, sendo vedado o uso simultâneo do Software original com a cópia de salvaguarda e arquivo;
+
+c) Não remover os avisos de direitos autorais ou outros avisos de direitos de propriedade intelectual constantes do Software e dos Manuais;
+
+d) Tomar todas as providências necessárias para evitar que seus diretores, prepostos, empregados, ou quaisquer terceiros venham a copiar ou de qualquer forma divulgar o Software e/ou os Manuais, no todo ou em parte;
+
+e) Não ceder, doar, alugar, vender ou de qualquer forma transferir a terceiros o Software e/ou Manuais, no todo ou em parte;
+
+f) Não utilizar ou permitir que seja utilizada engenharia reversa no Software, ou que o mesmo seja decompilado ou decomposto;
+
+g) Pagar os valores ajustados (nos termos da Cláusula 1, acima), sob pena de rescisão automática do Contrato, ficando a Licenciada obrigada a restituir, imediatamente, o Software e eventuais cópias do mesmo, bem como os Manuais e eventuais outros materiais correlatos.
+
+4.Garantia
+
+A FuturArte declara e garante que
+
+a) Tem o direito de Iicenciar o Software sem violar direitos de propriedade intelectual de terceiros;
+
+b) OS SUPORTES FÍSICOS CONTENDO 0 SOFTWARE ESTARÃO LIVRES DE
+DEFEITOS DE FABRICAÇAO, SENDO CERTO QUE EVENTUAIS SUPORTES FÍSICOS 
+DEFEITUOSOS SERÃO SUBSTITUÍDOS PELA FUTURARTE, DESDE QUE A LICENCIADA NOTIFIQUE TAL FATO, POR ESCRITO, A FUTURARTE, NO PRAZO DE 90 (NOVENTA) DIAS, CONTADO DA DATA DE ENTREGA DO SOFTWARE;
+
+c) 0 SOFTWARE OPERARÁ SUBSTANCIALMENTE EM CONFORMIDADE COM AS ESPECIFICAÇÕES DOS MANUAIS, BEM ASSIM QUE ENVIDARÁ ESFORÇOS PARA CORRIGIR EVENTUAIS DEFEITOS OU DEFICIÊNCIAS DE FUNCIONAMENTO DO MESMO, DURANTE 0 PRAZO DE 90 (NOVENTA) DIAS, CONTADO DA DATA DE ENTREGA DO SOFTWARE, DESDE QUE A LICENCIADA NOTIFIQUE A FUTURARTE, POR ESCRITO, ACERCA DA OCORRÊNCIA DE TAIS DEFEITOS OU DEFICIÊNCIAS DENTRO DO SUPRA ALUDIDO PRAZO;
+
+A licenciada reconhece e aceita que o estado da técnica não permite a elaboração de programas de computador totalmente isentos de vícios ou defeitos e que assim sendo, a FuturArte e/ou seus fornecedores não poderão garantir que o Software operará ininterruptamente ou livre de vícios ou defeitos;
+
+As garantias previstas nesta Cláusula são as únicas oferecidas pela FuturArte e/ou seus fornecedores à licenciada, ficando excluída qualquer outra, expressa ou implícita.
+
+5.Limitações de Responsabilidade
+
+a) EM HIPÓTESE ALGUMA A FUTURARTE E/OU SEUS FORNECEDORES SERÃO RESPONSÁVEIS POR QUALQUER APLICAÇÃO OU UTILIZAÇÃO QUE A LICENCIADA VENHA A FAZER DO SOFTWARE. A FUTURARTE E/OU SEUS FORNECEDORES TÃO POUCO SERÃO RESPONSABILIZADOS POR QUALOUER DANO EMERGENTE, LUCRO CESSANTE OU OUTROS DANOS INDIRETOS EVENTUALMENTE SOFRIDOS PELA LICENCIADA OU POR TERCEIROS, INDEPENDENTEMENTE DA CAUSA OU ORIGEM DOS MESMOS;
+
+b) SOB NENHUMA CIRCUNSTÂNCIA A RESPONSABILIDADE DA FUTURARTE E/OU SEUS FORNECEDORES, SOB QUALQUER DISPOSIÇÃO DESTE CONTRATO, EXCEDERA O VALOR DA LICENÇA DO SOFTWARE CAUSADOR DE EVENTUAL DANO OU PREJUIZO;
+
+c) NOS CASOS EM QUE A FUTURARTE FOR MERA COMERCIANTE DO SOFTWARE OBJETO DESTE CONTRATO, EM HIPÓTESE ALGUMA SERÁ RESPONSÁVEL PELOS VÍCIOS OU DEFEITOS DE CONCEPÇÃO DO SOFTWARE, BEM ASSIM POR DECLARAÇÕES, ATOS, OMISSÕES OU OBRIGAÇÕES DE SEUS FORNECEDORES.
+
+6.Prazo Contratual e Rescisão
+
+0 Contrato vigorará até sua rescisão:
+
+a) Pela licenciada, a qualquer tempo, sem direito à restituição das quantias pagas pelo Software, mediante a destruição do Software, Manuais e eventual(ais) cópias dos mesmos, devendo imediatamente notificar a FuturArte de que tal providência foi tomada;
+
+b) Pela FuturArte, a qualquer tempo, sem prejuízo das perdas e danos cabíveis, inclusive custas judiciais e honorários advocatícios na base de 20% (vinte por cento) sobre o valor de causa, caso a Licenciada descumpra quaisquer obrigações assumidas sob o Contrato; e
+
+c) Pela FuturArte, se a Licenciada requerer ou tiver requirida sua dissolução ou falência
+
+7.Foro e Prevalência
+
+Fica eleito, desde já, com exclusão de qualquer outro, por mais privilegiado que seja, o foro da Capital do Estado de São Paulo, para dirimir toda e qualquer dúvida ou pendência oriunda deste Contrato. Em caso de conflito entre os termos deste Contrato e o Código de Defesa do Consumidor, prevalecerá este último.
+
+8.Registro deste Contrato
+
+Este Contrato encontra-se registrado no  8 º Cartório de Registro  de Títulos e Documentos do Estado de São Paulo, sob o n.º  199208.
+
+
+Via do Usuário. Mantenha este comprovante em seu poder.
+
+FUTURARTE EDITORA LTDA. - RUA OSVALDO CRUZ,1056 CEP: 09540-280, SÃO CAETANO DO SUL - SP
+
+
+
+
+
+
+
+
+

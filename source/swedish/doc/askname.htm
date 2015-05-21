@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Vad heter du?</title>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<script language="javascript" id="clientEventHandlersJS">
+var parameters = null; // changed on 011002
+
+var noTimeTravelInPuzzleGame = "Tidsmaskinen fungerar inte när man gör uppdragen. ";
+
+function currentParameter(name) {
+   if (parameters == null) { // new on 011002
+      if (typeof window.dialogArguments == "undefined") {
+         return("***DEFINED ONLY WHEN RUN FROM TOONTALK***")
+      };
+      parameters = window.dialogArguments.split(";")
+   };
+   for (var i = 0; i < parameters.length; i = i+2) {
+      if (parameters[i] == name) {
+         return(parameters[i+1]) // like an alist
+      }    
+   };
+   return(0) // just in case
+}
+function agentTest() {
+// translators -- ignore this section for now
+	AgentControl.Connected = true	// temp patch for IE4 PP1 -- really needed?
+	AgentControl.Characters.Load("Peedy", "C:\\WINNT\\msagent\\chars\\peedy.acs");
+	// Note that JScript strings require 2 slashes for every single slash in a string
+	Peedy = AgentControl.Characters.Character("Peedy")
+	// Note that use of the Character method, which is optional in VBScript, is required in JScript
+
+	Peedy.Get("state", "Showing, Speaking")
+	Peedy.Get("animation", "Greet, GreetReturn")
+	Peedy.Show();	// Unlike VBScript, JScript requires parens even in the absence of arguments
+//	Peedy.Speak("The number is " + UserName.left);
+	Peedy.Get("state","Hiding")
+	Peedy.MoveTo(350,200);
+	Peedy.Play("Greet");
+	Peedy.Speak('Welcome to ToonTalk! What is your name?');
+//	Peedy.Play("GreetReturn");
+	Peedy.Speak("And how do you want to look?");
+	Peedy.Play("GestureRight");
+}
+function loadBody() 	{
+	//get the arguments
+//	var arrArgs = new Array();
+//   arrArgs = window.dialogArguments.split(";");
+     UserName.value = currentParameter("old_name"); // was window.dialogArguments;
+     UserName.select();
+     if (currentParameter("time_travel_enabled") == "-1") { // e.g. no time travel - e.g. puzzle game
+		  TimeTravel.disabled = true; // new on 250903
+		  TimeTravel.checked = false;
+		  TimeTravel.nextSibling.data = noTimeTravelInPuzzleGame;
+	  } else {
+        TimeTravel.checked = (currentParameter("time_travel_enabled") != "0");
+     };
+//     agentTest(); 
+}
+function sendBack(which_button) {
+    window.returnValue = "-n " + UserName.value + " -h " + which_button; // order matters if old user name and changing head appearance
+    if (TimeTravel.checked) {
+		 window.returnValue = window.returnValue + ' -time_travel_enabled 1';
+	 } else {
+	    window.returnValue = window.returnValue + ' -time_travel_enabled 0';
+	 };	
+    window.close();
+}
+		</script>
+		<link rel="stylesheet" type="text/css" href="../dialog.css">
+	</head>
+	<body onload="loadBody()">
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 height=50 width=50 
+classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F viewastext>
+	</OBJECT>
+		<center>
+			<p>Hej! Skriv ditt namn här.</p>
+		</center>
+		<center>
+			<p><input id="UserName" type="text" class="text" size="171" value="No Name" name="UserName"
+					style="WIDTH: 630px; HEIGHT: 44px"></p>
+		</center>
+		<center>
+			<p>Klicka på en av de här bilderna:</p>
+		</center>
+		<center>
+			<P><input id="image3" type="image" name="LongHair" src="../hairhead.jpg" style="BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BORDER-BOTTOM-STYLE: outset"
+					width="64" height="61" onclick="sendBack('1')"> <input id="Image1" style="BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BORDER-BOTTOM-STYLE: outset"
+					type="image" src="../hathead.jpg" name="Hat" width="58" height="65" onclick="sendBack('2')">
+				<input id="Image2" style="BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BORDER-BOTTOM-STYLE: outset"
+					type="image" src="../baldhead.jpg" name="Bald" width="64" height="54" onclick="sendBack('0')">
+			</P>
+			<P>&nbsp;</P>
+		</center>
+		<DIV align="left"><INPUT id="TimeTravel" type="checkbox" name="TimeTravel">Jag 
+			vill slå på tidsmaskinen så att jag kan rätta till misstag om något blir fel. 
+			Detta kan göra Toontalk långsamt. <A href="ttravel.htm">Klicka här</A> för 
+			hjälp.</DIV>
+	</body>
+</html>

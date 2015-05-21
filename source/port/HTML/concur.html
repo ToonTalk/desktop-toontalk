@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>ToonTalk - Concorrência e o Toon Talk</title>
+<link rel="stylesheet" type="text/css" href="../toontalk.css">
+</head>
+
+<body link="#0000ff" vlink="#800080" bgcolor="#ffffff">
+
+<div align="center">
+<a name="topo"></a>
+<table width=468 cellspacing=0 cellpadding=0 border=0><tr><td>
+
+<p>
+<table width=460 cellspacing=0 cellpadding=0 border=0><tr><td>
+<div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a>
+<hr size=1>
+    </td></tr>
+</table>
+
+<h2>Concorrência e o Toon Talk</h2>
+
+<p>Antes que eu tente explicar a computação concorrente no Toon Talk e por que é difícil estender linguagens seq&uuml;enciais para que sejam concorrentes, explicarei a relação entre concorrência, paralelismo e computação distribuída. Os processos paralelos são aqueles que estão rodando no interior do mesmo sistema do computador.
+O sistema tipicamente tem mais de um processador. Os processos distribuídos são aqueles que rodam tipicamente em diferentes sistemas de computador conectados via rede. A distinção entre paralelo e distribuído é importante  porque  a computação distribuída está tipicamente a caminho do limite organizacional ou de segurança.
+Portanto apenas a computação distribuída precisa se preocupar com segurança, alocação de recursos, recuperação de falhas de hardware e coisas semelhantes. Em discussões em que a distinção não é importante, eu faço referência a processos concorrentes, isto é, processos que podem ser tanto paralelos quanto distribuídos.
+
+<p>O Toon Talk é totalmente uma linguagem de programação concorrente. Isto porque todos os subcálculos  são expressos como processos novos, independentes. Se um robô precisa que outros robôs realizem algum subcálculo, ele deve ser treinado para carregar um caminhão  com aqueles outros robôs. A nova casa construída pela equipe no caminhão é um novo processo.
+Diferentemente de linguagens convencionais (C, Java, Logo, Lisp, Fortran, Cobol, Perl, Basic etc.), não há um modo de expressar uma chamada de rotina no Toon Talk. Uma chamada para um procedimento transfere o controle para o procedimento de tal forma que o programa, após a chamado do procedimento, tem de esperar até que o procedimento termine.
+Quando o procedimento está terminado, ela retorna (algumas vezes retornando um valor). O programa de chamada pode então reiniciar onde ele estava quando o procedimento foi chamado. Pode-se obter o comportamento equivalente no Toon Talk através do treino de um robô para carregar um caminhão com robôs e uma caixa com um pássaro nela.
+O robô deve colocar o ninho do pássaro nesta caixa e não fazer nada mais. Aquele robô ou outros membros da equipe devem ser programados para procurar por algo no ninho. Conseq&uuml;entemente, este processo será suspenso até que os robôs que foram colocados no caminhão dêem algo ao pássaro. Os robôs aguardando no ninho verão o que foi entregue e retomarão a computação. Em outras palavras, uma chamada de rotina ou de procedimento no Toon Talk é apenas um padrão muito especial do uso de caminhões, pássaros e robôs. O Toon Talk apenas fornece ao programador a capacidade mais geral de expressar a geração de novos processos. 
+
+<p>A ausência de rotinas no Toon Talk o torna muito mais adequado para ter um número muito maior de processos do que as linguagens de programação convencionais. A razão para isso é que todos implementam chamadas de rotina utilizando uma estrutura de dados chamada de pilha. As pilhas são um meio muito efetivo de implementar chamadas de procedimentos, inclusive chamadas recursivas. O problema é que cada processo (mesmo se suspenso) precisa de sua própria pilha.
+Isto torna o processo algo custoso. Um processo no Toon Talk só precisa de 2 indicadores: para o programa (a equipe de robôs) e para os dados (a caixa). Não há pilha; não há nada mais. Eu testei o Toon Talk com dezenas de milhares de casas (isto é, processos). Em contraste, quando utilizei Java, ela parou de funcionar quando eu tinha apenas algumas centenas de processos. 
+
+<p>As linguagens convencionais têm <i>estado associado</i>. As mesmas variáveis, estruturas de dados e objetos podem ser acessados a partir de diferentes processos (processos que associam dados são freqüentemente chamados  "threads"). O estado associado é necessário nestas linguagens de forma que os "threads" trabalhem em conjunto. Esta associação entre processos independentes concorrentes é, entretanto, muito perigosa.
+
+Ela leva à condições de corrida. Considere uma variável, <i>A</i>, que se supõe que represente  o saldo atual de uma conta de poupança. (<i>A</i>  poderia ser uma variável global ou um exemplo de variável de um objeto &#150; ambas as espécies de variáveis têm esse problema.) Uma rotina foi escrita para sacar <i>X</i> de <i>A</i> depois de verificar se <i>X</i> é menor ou igual a <i>A.</i> Ela o faz dotando A para <i>A-X</i>. Em outras palavras, a rotina permite uma retirada apenas se houver fundos suficientes na conta. Agora nos permita introduzir a concorrência. Suponha que há uma conta com dez dólares e um processo gostaria de retirar 9 dólares e outro processo quer retirar 8 dólares. Com azar ambas as retiradas podem ocorrer. E ainda pior, o saldo pode ser 1 dólar, 2 dólares ou -7 dólares depois do processamento das duas retiradas. Como? Considere este enredo;
+
+<p>O processo 1 verifica que <i>A</i> é menor que <i>X</i> e calcula que <i>A-X</i> seja 1, mas antes de designar <i>A</i> para 1, o processo 2 se inicia e vê que <i><i>A</i></i> ainda é dez, e portanto processa a retirada inteira e ajusta <i>A</i> para 2. O processo 1 é retomado onde parou e ajusta <i>A</i> para 1.
+
+<p>Então como as linguagens convencionais lidam com condições de corrida? Elas introduzem novas idéias de programação: fechamentos ou regiões críticas. Por exemplo, o procedimento de retirada poderia obter um fechamento em <i>A</i>  de forma que nenhum outro processo pudesse acessá-lo. Poderia então ser seguro compará-lo a <i>X</i>, calcular <i>A- X</i> e ajustar <i><i>A</i></i> ao resultado. Não apenas isso acrescenta complexidade à tarefa de fazer programas, mas pode levar a novos problemas: especialmente situações sem saída. Suponha que o processo 1 fecha <i>A</i> e então necessita encontrar o valor de B que é fechado pelo processo 2. 
+Então o processo 1 é suspenso e espera que o processo 2 abra B. Mas o que acontece se o processo 2 precisa então acessar o valor de <i>A</i>?  
+<i>A</i> está fechado, então o processo 2 também é suspenso. Isso é freqüentemente chamado de um abraço mortal. Você poderia pensar que seria simples programar de forma tal que se evitasse esta espécie de dependência mútua. Mas o ciclo de dependência pode envolver centenas de processos.
+
+<p>Então por que o Toon Talk não sofre desses problemas? A razão é que o Toon talk não tem estado associado. Uma caixa só pode existir em um lugar. E os robôs na mesma casa fazem turnos - eles nunca trabalham na mesma caixa ao mesmo tempo. A ausência de estados associados é a forma pela qual o Toon Talk evita corridas ou problemas sem saída.
+Mas isso n&atilde;o limita a expressividade da linguagem? Poderia fazê-lo, se não fosse para pássaros. O fato de que cópias do mesmo pássaro voam para o mesmo ninho proporciona um meio para comunicação muitos-para-um que pode ser usado em vez do estado associado. Como exemplo, considere o demo do Toon Talk da conta bancária. Múltiplos processos podem retirar dinheiro da mesma conta. Cada processo tem uma cópia de um pássaro cujo ninho está na caixa que está representando a conta bancária. Os robôs em casas diferentes podem dar aos pássaros solicitações de retiradas da conta, dando aos pássaros caixas contendo a quantia de dinheiro a ser retirada. Nós não sabemos qual caixa terminará no topo do ninho &#150; mas todas elas serão empilhadas no ninho (Em outras palavras, as solicitações são enfileiradas no ninho).
+Os robôs trabalhando na caixa pela conta verão uma caixa aparecer no ninho para uma solicitação de retirada. Eles irão processar a solicitação antes de começar a nova solicitação. Não há problema, mesmo se o cálculo do novo saldo exigir um novo subcálculo. O robô carregará o caminhão com robôs e uma caixa para calcular o novo saldo. E então ele colocará o ninho que receberá o resultado no local onde o saldo atual está mantido. A próxima solicitação não será processada até que o subcálculo dê ao pássaro o novo saldo e o ninho apropriado seja coberto.
+
+<p>Em resumo, tentativas de adicionar concorrência às linguagens com rotinas e estado associado conduzem à complexidade, implementações custosas de processos e erros que são muito difíceis de localizar. O Toon Talk, em contraste, foi projetado desde o início para ser concorrente. No Toon Talk não há a necessidade de introduzir fechamentos ou regiões críticas, os processos custam muito pouco e condições de corrida e situações sem saída são evitados.
+
+<p>
+<hr size=1><div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a></div></td>
+
+</tr></table>
+</div>
+</body></html>
+
+<!--  FuturArte Editora Ltda.                                     Divertire  -->

@@ -1,0 +1,32 @@
+Error 00001. 0x400000 (Thread 0xFFC76819):
+Exception 0xC0000005: Access violation at 0x43BECC.
+| winmain.cpp line 1597:
+| #endif
+| 	tt_current_time = 0;
+|>	last_clipboard_size = -1;
+| 	last_clipboard_string = NULL;
+| //	FreeResource(bitmap_resource);
+Call Tree:
+   0x00500ABC(=TT32.EXE:0x01:0FFABC) winmain.cpp#1597
+   0x005079C3(=TT32.EXE:0x01:1069C3) winmain.cpp#5092
+   0x00517B92(=TT32.EXE:0x01:116B92)
+
+------------------------------------------
+Error 00001. 0x400000 (Thread 0xFFC5F0B5):
+Exception 0xC0000005: Access violation at 0xFFFFFFFF.
+Call Tree:
+   0x01C51A11
+
+------------------------------------------
+Error 00001. 0x400000 (Thread 0xFFC5924D):
+Exception 0xC0000005: Access violation at 0xFFFFFFFF.
+Call Tree:
+   0x01C51A31
+
+------------------------------------------
+Error 00001. 0x400000 (Thread 0xFFC4694D):
+Exception 0xC0000005: Access violation at 0xFFFFFFFF.
+Call Tree:
+   0x01C51A31
+
+------------------------------------------

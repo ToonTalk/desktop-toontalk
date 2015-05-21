@@ -1,0 +1,11 @@
+IDS_MY_BOX, // new on 290499
+"Minha Caixa"
+
+IDS_THAT_REMINDS_ME_OF, // new on 290699
+ // for example, "You are holding a box that reminds me of the text "isto é um comentário"".
+ "que me lembra de"
+IDS_THAT_REMINDS_ME_OF2, // used after "this is a comment" above.
+ " "
+
+IDS_SOMETHING, // new on 300699
+"algo"

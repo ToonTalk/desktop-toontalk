@@ -1,0 +1,211 @@
+// Copyright (c) 1992-2005.  Ken Kahn, Animated Programs, All rights reserved
+//Microsoft Visual C++ generated resource script.
+
+#define TT_ENGLISH 1
+//
+#define BITMAP_4	4
+#define BITMAP_3	3
+//#include "welcome.rch"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "clickme.h"
+//#include "ver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+LARGEICON ICON "autorun.ico"
+SMALL                   ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+CLICKME ACCELERATORS 
+{
+ VK_ESCAPE, IDM_EXIT, VIRTKEY
+ VK_RETURN, IDM_CONTINUE, VIRTKEY
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO 
+FILEVERSION 1,50,3183,0
+PRODUCTVERSION 3,0,0,0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0xaL
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904e4"
+  {
+   VALUE "Comments", "This offers to run or install ToonTalk 3\0"
+   VALUE "CompanyName", "Animated Programs\0"
+   VALUE "FileDescription", "Welcome to ToonTalk\0"
+   VALUE "FileVersion", "50.3183.0\0"
+   VALUE "InternalName", "Welcome\0"
+   VALUE "LegalCopyright", "Copyright \251 Ken Kahn 1992-2006\0"
+   VALUE "LegalTrademarks", "ToonTalk is a registered trademark of Animated Programs\0"
+   VALUE "OriginalFilename", "ClickMe.exe\0"
+   VALUE "ProductName", "Welcome to ToonTalk 3\0"
+   VALUE "ProductVersion", "50.3183.0\0"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x409, 1252
+ }
+
+}
+
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""AutoRun.h""\r\n"
+    "#include ""ver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+#if TT_ENGLISH
+STRINGTABLE
+{
+ IDM_CONTINUE, "Yes"
+ IDM_EXIT, "Not now"
+ IDM_INSTALL, "Install"
+// ID_APPNAME, "StartTT"
+ IDS_WINDOW_NAME, "ToonTalk Welcome"
+ IDS_YES_INSTALL, "Yes, install"
+ IDS_NO_INSTALL, "No, don't install"
+}
+
+#elif TT_SWEDISH
+STRINGTABLE
+{
+ IDM_CONTINUE, "Javisst"
+ IDM_EXIT, "Inte nu"
+ IDM_INSTALL, "Installera"
+// ID_APPNAME, "StartaTT"
+ IDS_WINDOW_NAME, "Välkommen till ToonTalk"
+ IDS_YES_INSTALL, "Ja, installera"
+ IDS_NO_INSTALL, "Nej, installera inte"
+}
+#elif TT_PORTUGUESE||TT_EUROPEAN_PORTUGUESE
+STRINGTABLE
+{
+ IDM_CONTINUE, "Sim"
+ IDM_EXIT, "Não"
+ IDM_INSTALL, "Instalar"
+// ID_APPNAME, "StartTT"
+ IDS_WINDOW_NAME, "Bem-vindo ao ToonTalk"
+ IDS_YES_INSTALL, "Sim, instalar"
+ IDS_NO_INSTALL, "Não, não instalar"
+}
+#endif
+
+STRINGTABLE
+{
+ ID_COMPANY, "Animated Programs"
+
+}
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+#if TT_ENGLISH
+WELCOME BITMAP "english\welcome.bmp"
+//WELCOME16 BITMAP "english\welcom16.bmp"
+INSTALL BITMAP "english\instltt.bmp"
+//INSTALL16 BITMAP "english\insttt16.bmp"
+#elif TT_SWEDISH
+WELCOME BITMAP "swedish\welcome.bmp"
+//WELCOME16 BITMAP "swedish\welcom16.bmp"
+INSTALL BITMAP "swedish\instltt.bmp"
+//INSTALL16 BITMAP "swedish\insttt16.bmp"
+#elif TT_PORTUGUESE
+WELCOME BITMAP "port\welcome.bmp"
+//WELCOME16 BITMAP "port\welcom16.bmp"
+INSTALL BITMAP "port\instltt.bmp"
+//INSTALL16 BITMAP "port\insttt16.bmp"
+#elif TT_EUROPEAN_PORTUGUESE
+WELCOME BITMAP "portugal\welcome.bmp"
+INSTALL BITMAP "portugal\instltt.bmp"
+#endif

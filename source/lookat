@@ -1,0 +1,168 @@
+Turbo Dump  Version 5.0.13.1 Copyright (c) 1988, 1997 Borland International
+                    Display of File IFORCE2.DLL
+
+Old Executable Header
+
+DOS File Size                                      12600h  ( 75264. )
+Load Image Size                                      450h  (  1104. )
+Relocation Table entry count                          0000h  (     0. )
+Relocation Table address                              0040h  (    64. )
+Size of header record      (in paragraphs)            0004h  (     4. )
+Minimum Memory Requirement (in paragraphs)            0000h  (     0. )
+Maximum Memory Requirement (in paragraphs)            FFFFh  ( 65535. )
+File load checksum                                    0000h  (     0. )
+Overlay Number                                        0000h  (     0. )
+
+Initial Stack Segment  (SS:SP)			  0000:00B8
+Program Entry Point    (CS:IP)			  0000:0000
+
+
+Portable Executable (PE) File
+
+Header base: 00000080
+
+CPU type                 80386
+Flags                    210E [ executable backwards 32bit library ]
+DLL flags                0000 [ ]
+Linker Version           5.0
+Time stamp               34352AC0
+O/S Version              4.0
+User Version             0.0
+Subsystem Version        4.0
+Subsystem                0002 [ Windows GUI ]
+Object count             00000005
+Symbols offset           00000000
+Symbols count            00000000
+Optional header size     00E0
+Magic #                  10B
+Code size                0000B600
+Init Data size           00008000
+Uninit Data size         00000000
+Entry RVA                00004F60
+Image base               10000000
+Code base                00001000
+Data base                0000D000
+Object/File align        00001000/00000200
+Reserved                 00000000
+Image size               00017000
+Header size              00000400
+Checksum                 00000000
+Stack reserve/commit     00100000/00001000
+Heap reserve/commit      00100000/00001000
+Number interesting RVAs  00000010
+Name                   RVA       Size  
+------------------  --------  --------
+Exports             0000DE40  0000017F
+Imports             00014000  0000003C
+Resources           00000000  00000000
+Exceptions          00000000  00000000
+Security            00000000  00000000
+Fixups              00015000  00000BC0
+Debug               00000000  00000000
+Description         00000000  00000000
+TLS                 00000000  00000000
+Callbacks           00000000  00000000
+reserved            00000000  00000000
+reserved            00014138  000000FC
+reserved            00000000  00000000
+reserved            00000000  00000000
+reserved            00000000  00000000
+
+Object table:
+#   Name      VirtSize    RVA     PhysSize  Phys off  Flags   
+--  --------  --------  --------  --------  --------  --------
+01  .text     0000B5DC  00001000  0000B600  00000400  60000020 [CER]
+02  .rdata    00000FBF  0000D000  00001000  0000BA00  40000040 [IR]
+03  .data     000055F0  0000E000  00004200  0000CA00  C0000040 [IRW]
+04  .idata    00000676  00014000  00000800  00010C00  C0000040 [IRW]
+05  .reloc    00001056  00015000  00001200  00011400  42000040 [IDR]
+
+Key to section flags:
+  C - contains code
+  D - discardable
+  E - executable
+  I - contains initialized data
+  R - readable
+  W - writeable
+
+Imports from KERNEL32.dll
+    TlsFree(hint = 0249)
+    LoadResource(hint = 0195)
+    FindResourceA(hint = 0089)
+    OutputDebugStringA(hint = 01ba)
+    MultiByteToWideChar(hint = 01ab)
+    MulDiv(hint = 01aa)
+    GetModuleFileNameA(hint = 00fc)
+    HeapAlloc(hint = 0168)
+    HeapFree(hint = 016e)
+    GetCommandLineA(hint = 00aa)
+    GetProcAddress(hint = 0116)
+    GetModuleHandleA(hint = 00fe)
+    GetVersion(hint = 014c)
+    HeapDestroy(hint = 016c)
+    HeapCreate(hint = 016a)
+    VirtualFree(hint = 025e)
+    InitializeCriticalSection(hint = 0179)
+    DeleteCriticalSection(hint = 004c)
+    EnterCriticalSection(hint = 0058)
+    LeaveCriticalSection(hint = 018f)
+    ExitProcess(hint = 006b)
+    VirtualAlloc(hint = 025b)
+    GetLastError(hint = 00f4)
+    ReadFile(hint = 01d6)
+    SetHandleCount(hint = 021b)
+    GetStdHandle(hint = 012a)
+    GetFileType(hint = 00ef)
+    GetStartupInfoA(hint = 0128)
+    SetFilePointer(hint = 0219)
+    CloseHandle(hint = 0018)
+    TerminateProcess(hint = 0246)
+    GetCurrentProcess(hint = 00d3)
+    GetCurrentThreadId(hint = 00d6)
+    TlsSetValue(hint = 024b)
+    TlsAlloc(hint = 0248)
+    LockResource(hint = 01a3)
+    SetLastError(hint = 021e)
+    TlsGetValue(hint = 024a)
+    InterlockedIncrement(hint = 017e)
+    GetCPInfo(hint = 00a3)
+    GetACP(hint = 009d)
+    GetOEMCP(hint = 0109)
+    FreeEnvironmentStringsA(hint = 0096)
+    FreeEnvironmentStringsW(hint = 0097)
+    GetEnvironmentStrings(hint = 00e1)
+    GetEnvironmentStringsW(hint = 00e3)
+    WideCharToMultiByte(hint = 026e)
+    WriteFile(hint = 027b)
+    SetStdHandle(hint = 0229)
+    FlushFileBuffers(hint = 008e)
+    CreateFileA(hint = 0031)
+    GetStringTypeA(hint = 012b)
+    GetStringTypeW(hint = 012e)
+    InterlockedDecrement(hint = 017b)
+    LoadLibraryA(hint = 0190)
+    SetEndOfFile(hint = 0210)
+    LCMapStringA(hint = 018d)
+    LCMapStringW(hint = 018e)
+    GetLocaleInfoA(hint = 00f6)
+    GetLocaleInfoW(hint = 00f7)
+
+Imports from ole32.dll
+    CLSIDFromString(hint = 0006)
+
+Exports from IFORCE2.dll
+  10 exported name(s), 10 export addresse(s).  Ordinal base is 1.
+    Ordinal RVA       Name
+    ------- --------  ----
+    0000    000014a0  _IFCreateEffectStructs@12
+    0001    000015a0  _IFCreateEffects@12
+    0002    00001160  _IFLoadProjectFile@8
+    0003    00001340  _IFLoadProjectObjectPointer@8
+    0004    00001060  _IFLoadProjectPointer@8
+    0005    00001010  _IFLoadProjectResource@12
+    0006    00001570  _IFReleaseEffectStructs@8
+    0007    000016d0  _IFReleaseEffects@8
+    0008    000013f0  _IFReleaseProject@4
+    0009    00001000  _IForceDLLMain@12
+
+

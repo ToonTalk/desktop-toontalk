@@ -1,0 +1,572 @@
+New 551 linguagem
+New 552 br
+New 554 utilizada
+New 555 legendas
+New 556 portanto
+New 605 alfabeto
+New 606 letras
+New 607 devolveria
+New 609 aguardaria
+New 611 caixinha
+New 612 mensagens
+New 613 comando
+New 678 iniciar
+New 765 in
+New 772 ini
+New 788 inic
+New 818 inici
+New 819 finalmente
+New 820 inicia
+New 821 apagálo
+New 823 apertaria
+New 824 teclaria
+New 825 digitaria
+New 827 ei
+New 829 multiplicar
+New 830 treinamento
+New 831 lembrese
+New 832 faça
+New 833 seguinte
+New 834 colocasse
+New 842 esperaria
+New 843 apagaria
+New 844 os
+New 854 próximo
+New 859 cuspila
+New 866 vezes
+New 867 estava
+New 869 mais
+New 870 pelo
+New 871 esperou
+New 872 levantaria
+New 873 deixaria
+New 874 retiraria
+New 875 segundafeira
+New 876 terçafeira
+New 883 domingo
+New 884 aspirou
+New 913 sensor
+New 916 repetiria
+New 917 propósito
+New 919 saiu
+New 922 sairia
+New 929 sentaria
+New 930 interessante
+New 931 espere
+New 932 sentou
+New 933 tragame
+New 935 pegue
+New 936 tente
+New 946 pegou
+New 949 mensage
+New 955 registrar
+New 959 tempo
+New 962 treine
+New 1004 giraria
+New 1016 girou
+New 1038 digitou
+New 1042 tijolo
+New 1059 provavelmente
+New 1144 terceira
+New 1147 indicando
+New 1156 exatamente
+New 1162 lá
+New 1193 maior
+New 1206 ao
+New 1211 errado
+New 1217 ajudálo
+New 1223 aqui
+New 1224 vamos
+New 1227 mente
+New 1233 colocariao
+New 1239 inserir
+New 1240 treinar
+New 1244 entrar
+New 1246 der
+New 1247 grandes
+New 1252 despertador
+New 1255 necessários
+New 1257 faz
+New 1258 juntos
+New 1259 vamos ligálo
+New 1260 de palavras
+New 1261 para começar
+New 1262 bom começo
+New 1263 colocálo sobre
+New 1265 juntandoa com
+New 1266 tente unir
+New 1267 próxima letra
+New 1269 colocaria próxima
+New 1270 uma interrogação
+New 1278 para chamála
+New 1279 para chamar
+New 1284 para comandos
+New 1287 de volta
+New 1288 em seguida
+New 1290 que bobagem
+New 1295 precisaremos consertálo
+New 1297 pudesse multiplicar
+New 1299 após terminar
+New 1300 necessário pressionar
+New 1303 para interromper
+New 1306 asper aparecesse
+New 1307 então apagou
+New 1313 asper aparecer
+New 1323 colocouo sobre
+New 1325 às vezes
+New 1331 você substituiu
+New 1332 velho robô
+New 1334 no lugar
+New 1345 robô tiraria
+New 1352 depois deu
+New 1353 ao calendário
+New 1362 ovo dentro
+New 1363 em diante
+New 1364 tente encher
+New 1365 você devolveu
+New 1386 ninho coberto
+New 1387 sem zeros
+New 1393 desta vez
+New 1394 logo que
+New 1396 robô começar
+New 1398 imenso número
+New 1574 você levantou
+New 1605 se afastou
+New 1716 você desceu
+New 1831 quarteirão para
+New 1832 você entrou
+New 1833 você acendeu
+New 1834 casa antiga
+New 1835 seguiria para
+New 1836 deixeo por
+New 1837 tempo até
+New 1838 colocandoo sobre
+New 1839 quando acabar
+New 1840 outro membro
+New 1841 robô misterioso
+New 1842 dessa maneira
+New 1843 ver se
+New 1844 que verifica
+New 1845 este desafio
+New 1846 você deixou
+New 1847 toca toca
+New 1848 você esvaziou
+New 1849 depois limparia
+New 1850 dessa vez
+New 1851 que acontece
+New 1852 depois usou
+New 1853 já sei
+New 1854 quando nós
+New 1855 robô começará
+New 1856 enquanto segurava
+New 1857 enquanto seguro
+New 1858 ele mostra
+New 1859 nova caixa
+New 1860 por fim
+New 1861 parte referente
+New 1862 da manhã
+New 1863 se for
+New 1864 da tarde
+New 1865 tente obter
+New 1866 hora certa
+New 1867 podemos deixar
+New 1868 para esconder
+New 1869 ela voltará
+New 1870 talvez usasse
+New 1871 hora exata
+New 1872 número menor
+New 1873 para têla
+New 1874 nos ajude
+New 1875 utiliz aria
+New 1876 consegue trazer
+New 1877 tivesse treinado
+New 1878 vamos preencher
+New 1879 desse tipo
+New 1880 colocála no
+New 1881 consegue adicionar
+New 1882 lembra daquele
+New 1883 você ensinou
+New 1884 deve fazer
+New 1885 ele terminasse
+New 1886 me mexer
+New 1887 ele concluísse
+New 1888 pode transformar
+New 1889 minha amiga
+New 1890 ou alargar
+New 1891 um ponto
+New 1892 ir até
+New 1893 têla feito
+New 1894 pode usar
+New 1895 resultado acaba
+New 1896 ca ixa
+New 1897 para acender
+New 1898 um time
+New 1899 pode pressionar
+New 1900 perto do
+New 1901 está funcionando
+New 1902 os dois
+New 1903 buracos cujo
+New 1904 da fila
+New 1905 algumas coisas
+New 1906 cópias do
+New 1907 que fica
+New 1908 algo retangular
+New 1909 mas todos
+New 1910 últimos dígitos
+New 1911 que precisava
+New 1912 que muda
+New 1913 que treinei
+New 1914 quando tiver
+New 1915 robôs trabalhando
+New 1916 últimos fizeram
+New 1917 você entrará
+New 1918 tente mudar
+New 1919 mudando sobre
+New 1920 para eles
+New 1921 ao que fez
+New 1922 você tentou copiar
+New 1923 precisaremos de todo
+New 1924 para passar para
+New 1925 uma vez que
+New 1926 você viu que
+New 1927 você tentou dar
+New 1928 você tentou colocar
+New 1929 se você aumentou
+New 1930 coisas do tipo
+New 1931 graças aos números
+New 1932 eu nasci em
+New 1933 eu pegaria toda
+New 1934 somar várias vezes
+New 1935 vamos tentar novamente
+New 1936 zero continue crescendo
+New 1937 pressionaria esc pois
+New 1938 robô precisa fazer
+New 1939 veja se consegue
+New 1940 treino do robô
+New 1941 asper apareceu porque
+New 1942 você tentou aspirar
+New 1943 você deveria ter
+New 1944 robô pode multiplicar
+New 1945 quando ele terminar
+New 1946 depois  daria
+New 1947 em diante até
+New 1948 se eu pudesse
+New 1949 esperaria até que
+New 1950 caixa  com
+New 1951 zero para unilas
+New 1952 zero que restou
+New 1953 colocálo no chão
+New 1954 número do chão
+New 1955 deu ao pombo
+New 1956 voltaria para dentro
+New 1957 você se levantou
+New 1958 em seguida retornaria
+New 1959 relógio da nave
+New 1960 eu iria até
+New 1961 treinariao para copiar
+New 1962 depois  devolveria
+New 1963 asper para remover
+New 1964 robô misterioso será
+New 1965 caixa ao time
+New 1966 você notou que
+New 1967 asper para apagar
+New 1968 dála ao pombo
+New 1969 caixa aos robôs
+New 1970 no lug ar
+New 1971 cada segundo se
+New 1972 girarmos de novo
+New 1973 em seguida testaria
+New 1974 traria de volta
+New 1975 você apontou para
+New 1976 estamos quase terminando
+New 1977 se agora for
+New 1978 parte dos minutos
+New 1979 tentar de novo
+New 1980 no tijolo rosa
+New 1981 voltaria para cá
+New 1982 leva coisas para
+New 1983 são sensores remotos
+New 1984 robô várias vezes
+New 1985 computador consegue formar
+New 1986 um que mostre
+New 1987 dar uma voltinha
+New 1988 teclado está funcionando
+New 1989 três burac os
+New 1990 não coincide com
+New 1991 esc para concluir
+New 1992 simplificar desse jeito
+New 1993 você colocou seu
+New 1994 você fez uma
+New 1995 em ser exato
+New 1996 um robô produzir
+New 1997 formar um número
+New 1998 dois dos números
+New 1999 robô que quer
+New 2000 vem de marte
+New 2001 juntandoa para obter
+New 2002 também está quebrado
+New 2003 depois de treinálo
+New 2004 com anos bissextos
+New 2005 que já treinou
+New 2006 que treinou anteriormente
+New 2007 os robôs começaram
+New 2008 dos robôs sobre
+New 2009 de novo; então
+New 2010 para vêlo funcionar
+New 2011 da mesma maneira
+New 2012 que são cópias
+New 2013 que vai ficando
+New 2014 acabou de treinar
+New 2015 treinou na parte
+New 2016 clique irá soltar
+New 2017 só irá aceitar
+New 2018 deve conter leitura
+New 2019 deveria conter escrita
+New 2020 deve conter abrir
+New 2021 esperou até que
+New 2022 requer boa pontaria
+New 2023 computador também precisa
+New 2024 se precisar da
+New 2025 as letras juntas
+New 2026 você pensou em
+New 2027 ninho perto da
+New 2028 faz contagem regressiva
+New 2029 está fazendo todo
+New 2030 um dos zeros
+New 2031 você deve dar
+New 2032 são úteis dentro
+New 2033 unindo as caixas
+New 2034 letras minúsculas de
+New 2035 para contar até
+New 2036 com uma parte
+New 2037 trabalhando para mim
+New 2038 quando quero que
+New 2039 texto para ter
+New 2040 mais fácil iniciar
+New 2041 agora estamos prontos
+New 2042 repleta de times
+New 2043 atrás deveria ser
+New 2044 computador terá todos
+New 2045 para subtrair quando
+New 2046 ou um grupo
+New 2047 ela se inclina
+New 2048 seus próprios sons
+New 2049 ou uma fila
+New 2050 num tamanho adequado
+New 2051 final da caixa com
+New 2052 caixa ficou muito estreita
+New 2053 eu simplesmente ficaria alterando
+New 2054 também precisaremos de pontuação
+New 2055 uma vírgula será suficiente
+New 2056 vírgula no lado direito
+New 2057 se por algum motivo
+New 2058 de aumentar no botão
+New 2059 às palavras que pegamos
+New 2060 mês que você nasceu
+New 2061 pelo seu calendário terrestre
+New 2062 você entendeu como treinar
+New 2063 quando ela tem muito
+New 2064 mais fácil aspirar toda
+New 2065 se fosse eu daria
+New 2066 caixa da maneira correta
+New 2067 resposta deverá estar dentro
+New 2068 resultado na próxima caixa
+New 2069 dand oa ao robô
+New 2070 ninho com pelo menos
+New 2071 pombo colocou pelo menos
+New 2072 pombo colocasse pelo menos
+New 2073 números que não mudam
+New 2074 precisaremos somar aqueles números
+New 2075 me afastaria das casas
+New 2076 acho que cada mil
+New 2077 depois que ele começar
+New 2078 ficou de pé por
+New 2079 timer  passar de
+New 2080 quase igual ao último
+New 2081 gostaria de poder ajudálo
+New 2082 palavra secreta ap arecesse
+New 2083 um pouco complicado; assim
+New 2084 caixa ao antigo robô
+New 2085 caixa ao novo robô
+New 2086 voltou rápido até aqui
+New 2087 sala por pelo menos
+New 2088 sairia rapidamente de lá
+New 2089 vamos fazer um igual
+New 2090 indicação do que aparece
+New 2091 ele deve ser rápido
+New 2092 você clicou no botão
+New 2093 para girálo de novo
+New 2094 timer de milissegundos sobre
+New 2095 trei naria para copiar
+New 2096 para registrar os milissegundos
+New 2097 os timers de segundos
+New 2098 número ficar muito grande
+New 2099 depois copiaria aquele robô
+New 2100 caixa que ele tinha
+New 2101 no quarto bu raco
+New 2102 no terce iro buraco
+New 2103 se for de tarde
+New 2104 você pode querer usar
+New 2105 se cometeu um erro
+New 2106 eu colocaria os timers
+New 2107 esconderia minha mão pressionando
+New 2108 hora do seu nascimento
+New 2109 parte referente às horas
+New 2110 se você nasceu às
+New 2111 parte referente aos minutos
+New 2112 minha máquina de tradução
+New 2113 mas que não mudam
+New 2114 para somar todos os
+New 2115 um robô contar regressivamente
+New 2116 alguns números ficam mudando
+New 2117 resposta deve ser encontrada
+New 2118 mudar coisas na caixa
+New 2119 ficou todo branco sozinho
+New 2120 robô que tirei do
+New 2121 da caixa com apenas
+New 2122 um robô que registre
+New 2123 um pombo esperar exatamene
+New 2124 apagaria todos os números
+New 2125 anteriormente para subtrair quando
+New 2126 os dias da semana
+New 2127 você pode começar tudo
+New 2128 veja se você consegue
+New 2129 teremos de utilizar robôs
+New 2130 multiplicar os números restantes
+New 2131 para testar as coisas
+New 2132 ele estivesse funcionando bem
+New 2133 só funcionará uma vez
+New 2134 alguma coisa está faltando
+New 2135 isso até acabar com
+New 2136 você lembrou de colocar
+New 2137 botão até que apareça
+New 2138 ponto no lado esquerdo
+New 2139 mesmo até que apareça
+New 2140 em breve precisaremos utilizar
+New 2141 depois que ele parar
+New 2142 tivesse chance de trabalhar
+New 2143 zero extra dentro do
+New 2144 relógio está quase funcionando
+New 2145 quatro buracos ao robô
+New 2146 os timers de novo
+New 2147 acabei de copiar atrás
+New 2148 caso precise começar tudo
+New 2149 ele somasse todos os
+New 2150 são muito úteis dentro
+New 2151 experimentálo em um novo
+New 2152 freqüentemente quero um monte
+New 2153 ainda está na sala
+New 2154 então pode trazer somente
+New 2155 computador deve ter todos
+New 2156 você fez duas cópias
+New 2157 ele pare de mudar
+New 2158 da fila que gostar
+New 2159 que você me trouxe
+New 2160 mas isso também não
+New 2161 não podem ser esvaziadas
+New 2162 deveria estar agora com
+New 2163 um dos números restantes
+New 2164 consegue imaginar como fazer
+New 2165 tenho de treinar robôs
+New 2166 as coisas estão indo bem
+New 2167 ele também precisa de letras
+New 2168 computador agora possui letras maiúsculas
+New 2169 assim ela estreitará as coisas
+New 2170 ponto de interrogação no meio
+New 2171 parte final da mangueira sobre
+New 2172 soprana não está mostrando um
+New 2173 teclado também deve estar funcionando
+New 2174 dia do seu aniversário dentro
+New 2175 data de meu aniversário dentro
+New 2176 seria fácil saber se bambam
+New 2177 para acompanhar quantos zeros adicionamos
+New 2178 há várias maneiras de fazêlo
+New 2179 números inteiros diferentes começando do
+New 2180 robô pára após esses quatr
+New 2181 robô será útil mais tarde
+New 2182 robô ainda está trabalhando lá
+New 2183 vamos nos livrar da casa
+New 2184 segundos antes de sentar novamente
+New 2185 caixa coincide com seus pensamentos
+New 2186 robô não fosse tão lento
+New 2187 trabalhar na parte de trás
+New 2188 tempo em milhares de segundos
+New 2189 estamos fazendo um bom progresso
+New 2190 ele não volta ao zero
+New 2191 se ele estivesse trabalhando corretamente
+New 2192 lado esquerdo do tijolo rosa
+New 2193 para visualizar melhor as coisas
+New 2194 eu lhe mostrarei algo simples
+New 2195 imagino quantos minutos até então
+New 2196 imagino quantos dias até então
+New 2197 ele descobriu parte da resposta
+New 2198 ajustar os timers de horas
+New 2199 se podemos fazer melhor ainda
+New 2200 então mudála para finalmente colocála
+New 2201 muito diferente daquele que você
+New 2202 os resultados do último buraco
+New 2203 para me certificar de que
+New 2204 os robôs são extremamente rápidos
+New 2205 computador necessita mais do que números
+New 2206 botão da soprana até que apareça
+New 2207 aquilo realmente estava difícil de ver
+New 2208 robô só consegue se lembrar de
+New 2209 em vez de dias da semana
+New 2210 ficou de pé durante pelo menos
+New 2211 ninho ninho antes que ele entregue
+New 2212 provavelmente terei de dar uma mãozinha
+New 2213 não importa qual robô trabalhará primeiro
+New 2214 número mudaria de mil em mil
+New 2215 melhor até do que um novo
+New 2216 você provavelmente não sabe quando nasceu
+New 2217 um palpite seu também pode ajudar
+New 2218 os primeiros dois números são multiplicados
+New 2219 nem sempre faz todas as mágicas
+New 2220 mostrar que duas coisas são iguais
+New 2221 têm de ser maiores do que
+New 2222 ocupado fazendo aquilo que foi treinado
+New 2223 robôs de casas diferentes trabalhem juntos
+New 2224 para transformar um dos ds em um
+New 2225 mas ele também precisará de letras pequenas
+New 2226 soprana fará as coisas ficarem mais larga
+New 2227 calcular quantos minutos existem em um dia
+New 2228 balança deve mostrar que eles são iguais
+New 2229 devemos tentar algo para parar nossos robôs
+New 2230 nova casa do outro lado do foguete
+New 2231 agora temos um bom timer de milissegundos
+New 2232 que tal um timer de minuto agora
+New 2233 mas observe que quando os segundos ultrapassam
+New 2234 sua mãe ou seu pai podem lembrar
+New 2235 estou contente por você ter verificado como
+New 2236 em ambos os lados são os mesmos
+New 2237 ou de baixo de alguma outra coisa
+New 2238 os timers maiores antes de colocálos sobre
+New 2239 sala para que ele pudesse terminar mais rapidamente
+New 2240 podemos calcular quantos segundos há em um ano
+New 2241 com certeza há muitos segundos em um ano
+New 2242 eu ficaria de pé quando cansasse de esperar
+New 2243 segundos antes de sair voando com uma mensagem
+New 2244 estou contente que você tenha entendido como fazer
+New 2245 me levantaria por alguns segundos para dar tempo
+New 2246 mas esqueci de lhe dizer que precisaremos de
+New 2247 contagem regressiva pode ser um membro do time
+New 2248 eu queria saber quantos segundos de vida você tem
+New 2249 relógio precisará saber quantos segundos há em um dia
+New 2250 seguir vamos calcular quantos segundos há em um dia
+New 2251 turma de trabalhadores naquele caminhão construiu uma casa nova
+New 2252 os robôs podem fazer mais se trabalham em grupos
+New 2253 diminuíla para que você possa ver todas as letras
+New 2254 você só precisa limpar as coisas que irão mudar
+New 2255 crescer ou fazer qualquer coisa que eu as programe
+New 2256 eles só conseguem fazer aquilo que você os treinou
+New 2257 os robôs são bons para realizar um mesmo trabalho repetidamente
+New 2258 agora vamos tentar entender quantos segundos existem em uma hora
+New 2259 afastese até não poder mais ouvir ou ver os pombos
+New 2260 até naves precisam de despertadores para lembrálas de fazer coisas
+New 2261 estamos prontos para calcular quantas horas há em um ano
+New 2262 com certeza os robôs facilitam as coisas de vez em quando
+New 2263 caixa de letras era muito grande para ser vista por inteiro
+New 2264 de admirar que você possa fazer muita coisa em um ano
+New 2265 não gosta de trabalhar na mesma casa como um outro robô
+New 2266 misterioso que já está treinado pa ra produzir uma palavra secreta quando
+

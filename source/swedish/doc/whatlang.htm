@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Att st&auml;lla in spr&aring;ket f&ouml;r ToonTalk</title>
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script language="javascript" src="../common.js"></script>
+		<script id="clientEventHandlersJS" language="javascript">
+var oneLanguageInstalledString = "That is the only language that has been installed."; // needs translation
+var languageWantedString = "I want ToonTalk to use ";
+var noLanguagesInstalledString = "Can't find any languages. Maybe you need to re-install or contact support@toontalk.com";
+var nextDialog = "whatvce.htm";
+var category = "Language";
+		</script>
+		<link rel="stylesheet" type="text/css" href="../dialog.css">
+	</head>
+
+	<body>
+		Vill du &auml;ndra det spr&aring;k som ToonTalk anv&auml;nder?
+		<p>
+		<form name="Buttons" id="Form1">
+		<script><!--
+var availableLanguagesString = currentParameter("Languages"); // should be Languages
+            if (availableLanguagesString == "" || availableLanguagesString == null) {
+               document.writeln("<p>" + noLanguagesInstalledString + "</p>");
+            } else { 
+               var availableLanguages = availableLanguagesString.split('{');
+               for (var i = 0; i < availableLanguages.length; i++) {
+                  document.writeln('<P><INPUT id="Radio1" type="radio" name="RadioGroup" value="' + (i+1) + '"');
+                  if (i == 0 && availableLanguages.length == 1) { // first one check if only one
+                     document.writeln(" CHECKED");
+                  }; 
+                  document.writeln('>&nbsp;' + languageWantedString + availableLanguages[i] + '.</P>');
+               };
+               if (availableLanguages.length == 1) {
+                  document.writeln(oneLanguageInstalledString);
+               }
+            }
+// -->
+		</script>
+		<p>
+		</form>
+		<p>ToonTalk har &ouml;versatts till flera spr&aring;k. H&auml;r kan du &auml;ndra det spr&aring;k Marty talar eller visar.</p>
+		<p>
+		<script language="javascript" src="BNCD.js"></script>
+	</body>
+
+</html>

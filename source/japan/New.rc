@@ -1,0 +1,701 @@
+// added 12/26/96
+
+IDS_SOUND_INDEFINITE,
+ //"a sound"
+ "音"
+IDS_SOUND_DEFINITE,
+ //"the sound"
+ "その音"
+IDS_SOUND_PLURAL,
+ //"sounds"
+ "音"
+IDS_SOUND_PRONOUN,
+ //"it"
+ "それ"
+  
+IDS_REMOTE_TEXT_PICTURE_TYPE_INDEFINITE,
+//  "a remote control"
+ "リモコン"
+IDS_REMOTE_TEXT_PICTURE_TYPE_DEFINITE,
+//  "the remote control"
+ "そのリモコン"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PLURAL,
+//  "remote controls"
+ "リモコン"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PRONOUN,
+// "it"
+ "それ"
+
+IDS_TYPING_SOUND_NAMES_OBSOLETE,
+// "It is better to take sounds from the sounds notebook. If you type the name of a sound and you send this to someone in another country it might not work."
+ L"音の\32ノートから\32音を\32\216謔闖oしたほうが\32いい。音の\32名前を\32タイプして、それを\32別の国に\32いる\32だれかに\32送っても、それは\32うまく\32聞こえない\32だろう。"
+IDS_SOUND_HELP, // added 1/14
+//"You can make that sound by pressing "
+ ""
+IDS_SOUND_HELP2,
+// " "
+ "を 押せば、その音を 作れる。"
+
+IDS_ANY_SOUND, // add 1/16
+// "any sound"
+ "音"
+IDS_BLANK_SOUND, // add 1/16
+// "an erased built in sound"
+ "消された音"
+
+IDS_TURN_BOMB_ON_HELP,  // added 1/20
+// removed also on 9/26/97
+//"You can also set off a bomb you are holding by pressing the space bar. "
+ "スペースキーを 押して、爆弾に 点火することも できる。"
+
+IDS_MARTIAN_SPEAK_HELP, // added 3/26/97
+// "whether I speak, show word balloons, or both"
+L"\216рｪ\32話すか、吹き出しに\32するか、それとも\32両方か"
+IDS_MARTIAN_SPEAK,
+// "speak"
+"話す"
+IDS_MARTIAN_BALLOONS,
+// "word balloons"
+"吹き出し"
+IDS_MARTIAN_SPEAK_AND_BALLOONS,
+// "speak and balloons"
+"話しと 吹き出し"
+IDS_MARTIAN_SPEAKS_ONLY_IN_32BITS,
+ "Sorry, but I can speak only if you are running the 32 bit version of ToonTalk."
+
+
+IDS_MARTIAN_SPEAK_REMOTE_LONG_LABEL,   // added 3/27/97
+// "How\rMarty\rTalks"
+"マーティの\r話し方"
+IDS_MARTIAN_SPEAK_REMOTE_SHORT_LABEL,
+//  "Marty Talks"
+"マーティの話し方"
+
+IDS_MARTY_TALKS_FUNNY,  // added 4/8/97 -- only used if speech is enabled
+// "Translating Martian to Earth languages isn't always so easy.  My translation machine sometimes makes me sound kind of funny. I hope you can understand me anyway. "
+ L"火星語を\32地球語に\32ほんやくするのは、そう\32簡単では\32ないんだ。わたしの\32ほんやく機は\32\216栫X\32おかしくなる。わたしの\32いうことを\32君が\32わかれば\32いいんだけど。"
+
+IDS_CLIPBOARD_REMOTE_FULL_HELP1, // added 4/22/97
+// "If something is on the clipboard of Windows, then you'll see it here.  You can use Dusty to vacuum it off and spit it out again. "
+L"何かが\32Windowsの\32クリップボードに\32あれば、それを\32ここで\32見れる。それを\32吸い込んだり、はきだすのに\32ダスティが\32\216gえる。"
+IDS_CLIPBOARD_REMOTE_FULL_HELP2,
+// "If the clipboard is empty, then the remote control will look black.  You can drop something on the remote control to put it on the clipboard. "
+L"クリップボードが\32からだと、リモコンは\32黒く\32見える。君は\32そこへ\32何かを\32予216とすことが\32できる。"
+
+IDS_USER_PICTURE_NOT_256_COLORS, // added 5/8/97
+ "Sorry, but the 16 bit version of ToonTalk can only read pictures with 256 colors. "
+
+// added on 6/13-97
+IDS_CIRCLE_PAGE,
+// "Oval" // if width and height are same then is a circle otherwise is an ellipse -- oval is just non-technical name for this
+"だ円"
+IDS_ROUNDED_RECTANGLE_PAGE,
+// "Rounded\rRectangle"
+L"!角の丸い\r長\216l角"
+IDS_LINE_TOWARDS_UPPER_RIGHT,
+// "Line\rup"   // as you move to the right
+"直線\r右上がり"
+IDS_LINE_TOWARDS_LOWER_RIGHT,
+// "Line\rdown"
+"直線\r右下がり"
+IDS_HOLLOW_CIRCLE_PAGE,
+// "Hollow\rOval"
+"穴あき\rだ円"
+IDS_ROUNDED_HOLLOW_RECTANGLE_PAGE,
+// "Hollow\rRounded\rRectangle"
+L"!穴あき\r角の丸い\r長\216l角"
+IDS_DOTTED_LINE_TOWARDS_UPPER_RIGHT,
+// "Dotted\rline up"
+"点線\r右上がり"
+IDS_DOTTED_LINE_TOWARDS_LOWER_RIGHT,
+// "Dotted\rline down"
+"点線\r右下がり"
+IDS_HOLLOW_RECTANGLE,
+// "Hollow\rRectangle"
+L"!穴あき\r長\216l角"
+
+IDS_SYNTHETIC_RECTANGLE,
+// "a rectangle"
+L"!長\216l角"
+IDS_SYNTHETIC_OVAL,
+// "an oval"
+"だ円"
+IDS_SYNTHETIC_ROUNDED_RECTANGLE,
+// "a rounded rectangle"
+L"!角の丸い長\216l角"
+IDS_SYNTHETIC_LINE_UP,
+// "a line going up"
+"上がる直線"
+IDS_SYNTHETIC_LINE_DOWN,
+// "a line going down"
+"下がる直線"
+IDS_SYNTHETIC_HOLLOW_OVAL,
+// "a hollow oval"
+"穴あきのだ円"
+IDS_SYNTHETIC_ROUNDED_HOLLOW_RECTANGLE,
+// "a rounded hollow rectangle"
+L"!角の丸い穴あきの長\216l角"
+IDS_SYNTHETIC_DOTTED_LINE_UP,
+// "a dotted line going up"
+"上がる点線"
+IDS_SYNTHETIC_DOTTED_LINE_DOWN,
+// "a dotted line going down"
+"下がる点線"
+IDS_SYNTHETIC_HOLLOW_RECTANGLE,
+// "a hollow rectangle"
+L"!穴あきの長\216l角"
+
+// the following is now used to generate names for robots rather than the current numbers you see on their chests
+// The names are generated as strings of consonants-vowel repeated as necessary.
+// For English I am skipping "y" and "q" since they are a bit of problem.
+IDS_VOWELS_FOR_ROBOT_NAMES,  // added 6/24 for naming robots
+"aeiou" // y is pretty special
+IDS_CONSONANTS_FOR_ROBOT_NAMES,
+"bcdfghjklmnprstvwxz"  // q is special
+
+IDS_AGE_OF_LABEL,
+"Age of\r"
+
+IDS_BAD_ROBOT_NAMES,  
+  // these are generated names that are NOT used because they are in this list - this list should include names not child appropriate
+  // all names are consonant vowel consonant ... pattern
+" cum kaka kike rape dago fag nad fuc fuk god sod nig jap wog fok kum jew tit wop git sex sux fux lez pube dike puke "
+
+IDS_GENERATE_JAVA_APPLET_HELP,  // added 9/15/97
+// "If you press the Pause button while holding a robot, a picture, or a truck and then select ""Come back later"", then a copy of what you are holding will appear in Windows as a Java applet in your Web browser. "
+"ロボットや ピクチャや トラックをつ かみながら PAUSEキーを押 し、""後で戻る""を えらぶと、"
+IDS_OK_IF_MARTY_SUGGESTS_STUFF_YOU_ONCE_DID,  // added 9/15/97
+// "Hi. It has been a while since you last ran ToonTalk. Is it OK if Marty suggests things you have already done, but might have forgotten about?"
+"ハイ。久しぶり。マーティが 君の 前にやったことを 話しても いいかな、でも 忘れてるかな？"
+
+IDS_JOYSTICK_LABEL, // I use the word "joystick" but I've noticed that Microsoft switched from "joystick" to "game controller" since
+// that is more accurate -- this includes game pads, flying yokes, etc.
+// "Joystick "
+ "ジョイスティック"
+IDS_JOYSTICK_BUTTONS_LONG_LABEL,
+// "Joystick\rButtons\rClicked"
+ "ジョイスティック\rボタン\rクリックされた"
+IDS_JOYSTICK_BUTTONS_DOWN_LONG_LABEL,
+// "Joystick\rButtons\rDown"
+ "ジョイスティック\rボタン\r押された"
+
+IDS_JOYSTICK_X_SPEED_SHORT_LABEL,
+// "X Speed"
+ "X スピード"
+IDS_JOYSTICK_Y_SPEED_SHORT_LABEL,
+// "Y Speed"
+ "Y スピード"
+IDS_JOYSTICK_Z_SPEED_SHORT_LABEL,
+// "Z Speed"
+ "Z スピード"
+IDS_JOYSTICK_X_AXIS_SHORT_LABEL,
+// "X Axis"
+ "X 座標"
+IDS_JOYSTICK_Y_AXIS_SHORT_LABEL,
+// "Y Axis"
+ "Y 座標"
+IDS_JOYSTICK_Z_AXIS_SHORT_LABEL,
+// "Z Axis"
+ "Z 座標"
+IDS_JOYSTICK_X_SPEED_LONG_LABEL,
+// "Joystick\rX Speed"
+ "ジョイスティック\rX スピード"
+IDS_JOYSTICK_Y_SPEED_LONG_LABEL,
+// "Joystick\rY Speed"
+ "ジョイスティック\rY スピード"
+IDS_JOYSTICK_Z_SPEED_LONG_LABEL,
+// "Joystick\rZ Speed"
+ "ジョイスティック\rZ スピード"
+IDS_JOYSTICK_X_AXIS_LONG_LABEL,
+// "Joystick\rX Axis"
+ "ジョイスティック\rX 座標"
+IDS_JOYSTICK_Y_AXIS_LONG_LABEL,
+// "Joystick\rY Axis"
+ "ジョイスティック\rY 座標"
+IDS_JOYSTICK_Z_AXIS_LONG_LABEL,
+// "Joystick\rZ Axis"
+ "ジョイスティック\rZ 座標"
+
+IDS_JOYSTICK_SPEED_X_HELP,  // added 9/19/97
+// "the amount a joystick is moved to the left or right"
+ "ジョイスティックの左右の移動量"
+IDS_JOYSTICK_SPEED_Y_HELP,
+// "the amount a joystick is moved to the top or bottom"
+ "ジョイスティックの上下の移動量"
+IDS_JOYSTICK_SPEED_Z_HELP,
+// "the amount a joystick is moved forward or backward (this is often the throttle control) or zero if it doesn't sense this"
+ "ジョイスティックの前後の移動量"
+IDS_JOYSTICK_AXIS_ROTATION_X_HELP,
+ "the amount a joystick is rotated left/right, or zero if it doesn't sense rotation"
+IDS_JOYSTICK_AXIS_ROTATION_Y_HELP,
+ "the amount a joystick is rotated up/down, or zero if it doesn't sense rotation"
+IDS_JOYSTICK_AXIS_ROTATION_Z_HELP,
+ "the amount a joystick is rotated forward/backward, or zero if it doesn't sense rotation"
+IDS_JOYSTICK_BUTTONS_HELP_START1, // used for all buttons and joysticks
+ "the answer to the question ""Was button number" // followed by a number
+IDS_JOYSTICK_BUTTONS_HELP_START2,
+ "just clicked?"""
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START1,
+ "the answer to the question ""Is button number" // followed by a number
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START2,
+ "down?"""
+IDS_OF_JOYSTICK_NUMBER,
+ "of joystick number" // followed by a number
+
+IDS_TEXT_TO_MCI_FULL_HELP,
+// "This is for sending commands to Microsoft Windows Media Control Interface (MCI). "
+ "これは、マイクロソフトの メディア コントロール インタフェースに コマンドを 送るための ものだ。"
+IDS_TEXT_TO_MCI_FULL_HELP2,
+// "Just drop the text you want to send to it. "
+ L"君が\32送りたい\32テキストを\32予216す\32だけだ。"
+IDS_TEXT_TO_SPEECH_FULL_HELP,
+// "This is for speaking the text. "
+ "これは、テキストを 話すための もの。"
+IDS_TEXT_TO_SPEECH_FULL_HELP2,
+ "This only works with the 32-bit version of ToonTalk. "
+IDS_TEXT_TO_SPEECH_FULL_HELP3,
+// "Just drop the text you want to hear on it. "
+ L"君が\32聞きたい\32テキストを\32そこに\32予216す\32だけだ。"
+IDS_TEXT_TO_MCI_HELP,
+// "a place to drop text for Media Control Interface"
+ L"メディア\32コントロール\32インタフェース用に\32テキストを\32予216す\32場所"
+IDS_TEXT_TO_SPEECH_HELP,
+// "a place to drop text to hear it spoken"
+ L"それを\32聞くために\32テキストを\32予216す\32場所"
+
+
+
+IDS_TEXT_TO_SPEECH_SHORT_LABEL,
+// "Speech"
+ "スピーチ"
+IDS_TEXT_TO_MCI_LONG_LABEL,
+// "Media\rControl\rInterface"
+ "メディア\rコントロール\rインタフェース"
+IDS_TEXT_TO_SPEECH_LONG_LABEL,
+// "Text to\rSpeech"
+ "テキストツー\rスピーチ"
+IDS_ON_TOP_OF_IT_IS,
+  // 9/24/97 -- "It" always refers to a remote control and it is followed by a description of what was dropped on it
+// "On top of it is"
+ "その上に あるのは、"
+
+IDS_TEXT_TO_MCI_SHORT_LABEL,
+"MCI"
+
+IDS_SOUNDS_ON_PAGE8,   // revised on 9/26/97
+// was "Sounds that work can be found on page 8 of your notebook. "
+//"ToonTalk's sounds can be found on page 8 of your notebook. There are sensors on page 4 of your notebook for making your own sounds. "
+"ToonTalkの 音は、君の ノートの ８ページに ある。４ページには、オリジナル サウンドを 作るための センサーも ある。"
+
+IDS_WANT_TO_LEARN_ABOUT_COMMAND_LINE, // add 9/26/97
+// "Would you like to learn about the command line options now?"
+ "コマンド ラインの オプションに ついて 今 知りたい？"
+IDS_THE_SPACE_BAR, // or is "the space button" more kid friendly?
+// "the space bar"
+ "スペースバー"
+IDS_OR,
+// "or"
+ "か"
+IDS_SECOND_JOYSTICK_BUTTON,
+  // used with the above as in "You can do that by pressing the space bar or the second joystick button."
+// "the second joystick button"
+ "２番目の ジョイスティック ボタン"
+
+IDS_DROP_ON_BLANK_NUMBER_TO_OBTAIN_ARITY_HELP, // revised on 9/26/97
+//  "You find out how many holes a box has by dropping it on a blank number pad. You can make a number pad blank by using Dusty the Vacuum. Just remember to use "
+//  "You can find out how many holes a box has by dropping it on a blank number pad. You can make a number pad blank by using Dusty the Vacuum. "
+ L"ブランク\32数\216噬pッドの\32上に\32それを\32予216せば、ボックスに\32いくつ\32穴が\32あるか\32わかる。そうじ機\32ダスティを\32\216gえば、数\216噬pッドを\32ブランクに\32できる。" 
+
+IDS_VACUUM_SUCK_HELP, // revised on 9/26/97
+// was "If you click on "
+//  "If, while holding him, you click on "
+ "彼を つかみながら"
+
+IDS_VACUUM_SUCK_HELP2_2, 
+//  " "
+ " "
+
+IDS_LOG_REPLAY_ERROR,
+// "Sorry, something went wrong replaying a demo log. Please report this problem to Support@ToonTalk.com."
+ "ごめん、デモの リプレイの 何かが おかしい。レポートを Support@ToonTalk.comに 送ってほしい。"
+
+IDS_ROBOT_ON_PICTURE_STOPPED, // revised on 10/8/97
+// "A robot on the back of a picture name George ...
+//"A robot on the back of a picture named"
+ " "
+IDS_ROBOT_ON_PICTURE_STOPPED2,
+// " " // used after name given above
+ "という名前のピクチャのうら側にいるロボット"
+IDS_ROBOT_ON_FLOOR_STOPPED,
+// "A robot on the floor stopped because "
+//"A robot on the floor named"
+ ""
+IDS_ROBOT_ON_FLOOR_STOPPED2,
+// " " // used after name given above
+ "という 名前の 床の 上にいる ロボット"
+IDS_REMOTE_ROBOT_ABORT,
+//  "A robot somewhere stopped because "
+// "A robot somewhere named"
+ " "
+IDS_REMOTE_ROBOT_ABORT2,
+//  " " // used after name given above
+ "という 名前の ロボット"
+IDS_STOPPED_BECAUSE_HE, // used only together with the above
+//"stopped because"  // he removed on 11/12/97
+ " "
+IDS_STOPPED_BECAUSE_HE2,
+// " " // after the reason is given
+ "なので ストップした"
+
+IDS_BOMBS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT, // added 10/10/97
+// "bombs only work inside of houses or on the back of a picture"
+ L"爆弾は\32家の中か、ピクチャの\32うら側だけで\32\216gえる"
+IDS_TRUCKS_START_DRIVING_ONLY_INSIDE_OF_HOUSES_ABORT,
+// "trucks drive away only if they are inside of a house or on the back of a picture"
+ "トラックは、家の中か、ピクチャの うら側だけで 動く"
+IDS_BIRDS_ONLY_START_FLYING_FROM_INSIDE_A_HOUSE_ABORT,
+// "birds only start flying from inside of a house or on the back of a picture"
+ "鳥は、家の中か、ピクチャの うら側だけで 飛ぶ"
+IDS_ROBOTS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT,
+// "robots only start working when inside of a house or on the back of a picture"
+ "ロボットは、家の中か、ピクチャの うら側だけで 働く"
+
+IDS_ROBOT_HAS_NON_MATCHING_BOX, // revised on 10/15/97
+ // was "Uhm, excuse me but a robot has a box that doesn't match his thought bubble and there is no robot he can give it to. "
+// "Uhm, excuse me but"
+ "ウーン、ごめん でも"
+IDS_ROBOT_HAS_NON_MATCHING_BOX2,
+// "has a box that doesn't match his thought bubble and there is no robot he can give it to. "
+ L"は、彼の\32\216v考の\32中と\32一致しない\32ボックスを\32\216揩ﾁている。そして、その\32ボックスを\32渡せる\32ロボットは\32いない。"
+
+IDS_ABOUT_TO_GENERATE_JAVA_APPLET,
+// "ToonTalk is about to generate a Java applet of what you are holding in your hand.\rIf all goes well, in a minute your browser should be showing it. "
+ L"!ToonTalkは君がつかんでいるものをJavaアプレットにしようとしている。\rすべてうまくいったら、しばらくすると君のブラウザはそれを表\216ｦする。"
+
+// added 10/27/97
+IDS_ROOM_DECORATION_HELP,
+// "adding and removing decoration to the wall"
+ "かべかざりの 追加と さくじょ"
+IDS_HOUSE_DECORATION_HELP,
+// "adding and removing decoration to the front of the house"
+ "家の 前面かざりの 追加と さくじょ"
+IDS_ROOF_DECORATION_HELP,
+// "adding and removing decoration to the roof"
+ "屋根かざりの 追加と さくじょ"
+
+IDS_ROOM_DECORATION_SHORT_LABEL,
+//"Room"
+ "部屋"
+IDS_HOUSE_DECORATION_SHORT_LABEL,
+//"House"
+ "家"
+IDS_ROOF_DECORATION_SHORT_LABEL,
+//"Roof"
+ "屋根"
+
+IDS_ROOM_DECORATION_LONG_LABEL,
+// "Wall\rDecoration"
+ "かべ\rかざり"
+IDS_HOUSE_DECORATION_LONG_LABEL,
+// "House\rDecoration"
+ "家\rかざり"
+IDS_ROOF_DECORATION_LONG_LABEL,
+// "Roof\rDecoration"
+ "部屋\rかざり"
+
+ // add 11/6/97
+IDS_TROUBLE_SHOOT_DISPDIB_ABNORMAL_EXIT,
+//"The last time ToonTalk ran it did not exit properly. Would you like some advice on what to do?"
+ "前回 ToonTalkは、正常に 終了して いない。どうしたら いいか アドバイスを 聞きたい？"
+IDS_TROUBLE_SHOOT_GENERAL_ABNORMAL_EXIT,
+//"The last time ToonTalk ran it did not exit properly. Would you like some advice?"
+ "前回 ToonTalkは、正常に 終了して いない。アドバイスを 聞きたい？"
+IDS_TROUBLE_SHOOT_TOO_SLOW,
+//"ToonTalk ran very slowly. Would like some advice about how to get it to run faster?"
+ "ToonTalkは、とても おそく 動いている。どうやって 速くするか アドバイスが ほしい？"
+IDS_TROUBLE_SHOOT_VERY_FAST_IN_LOW_RESOLUTION,
+//"There is a version of ToonTalk that runs with sharper higher-quality images.  Want to learn more about it?"
+ "ToonTalkの 画面を もっと きれいに できる。どうやったら いいか 知りたい？"
+IDS_TROUBLE_SHOOT_JOYSTICK_CALIBRATION,
+//IDS_JOYSTICK_STUCK,  // added 9/23/97
+// "Your joystick sent the helicopter to the edge. If this is a mistake, you'll need to calibrate your joystick. Do you want to learn how to do that?"
+ "君の ジョイスティックは、ヘリコプタを 端まで 行かせた。もし ちがってたら、君の ジョイスティックを 調整する 必要が ある。どうやるか 知りたい？"
+IDS_TROUBLE_SHOOT_DIRECTX,
+// "ToonTalk had some troubles using the DirectX game extensions to Windows. Want to see what you can do about this?"
+ L"Windowsの\32DirectX\32ゲーム\32拡張機能を\32\216gうのに\32問題が\32ある。どうしたら\32いいか\32知りたい？"
+IDS_TROUBLE_SHOOT_MOUSE,
+//IDS_MOUSE_MOVEMENT_WRONG, // just goes into the log for now
+//"Windows is telling me that the mouse has moved more than is possible. This happens when running ToonTalk on a Mac which is running Windows. Sorry. Try using the arrow keys instead."
+ L"マウスが\32移動しすぎると\32Windowsが\32けいこくしている。これは、Mac用の\32Windows上で、ToonTalkを\32動かしたときに\32おこる。悪いけど、矢印キーを\32かわりに\32\216gってほしい。"
+IDS_TROUBLE_SHOOT_BAD_DEMO,
+//"The demo couldn't complete as it was supposed to. Do you want to learn how to fix this?"
+ "デモが 予定通りに 終わらなかった。どうやって なおしたら いいか 知りたい？"
+IDS_BETA_EXPIRED,  // revised on 11/23/97
+//  "Sorry, this beta or trial version is too old. Do you want to learn how to get a new one? "
+ L"ごめん、この\32バージョンは\32古すぎる。どうやって\32新しい\32バージョンを\32\216閧ﾉ\32入れるか\32知りたい？"
+
+//IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+// "A robot was going to put something into something but it's been vacuumed. "
+IDS_ROBOT_MISSING_RECIPIENT_ABORT,  // just a shorter version of the above
+//"was going to put something into something but it's been vacuumed away"
+ "は、何かを くっつけようと していた、でも それは 吸い込まれて しまっている"
+IDS_TROUBLES_LAUNCHING_BROWSER,
+//"Sorry. Something went wrong trying to launch a web browser like Netscape Navigator or Microsoft Internet Explorer."
+ "ごめん。ネットスケープ ナビゲータや マイクロソフト インターネット エクスプローラの ような ブラウザを 起動できない。"
+IDS_CITY_SAVED,
+//" City saved."
+ "保存された街。"
+
+IDS_NO_FILE_NAME_FOR_USER_MEDIA_FILE,  // revised 12/15/97
+// was "ToonTalk is confused and is trying to get a picture and doesn't know the file name. "
+// "ToonTalk had troubles finding a file named"
+ "ToonTalkは ファイルを 見つけられなかった。"
+
+IDS_FORCE_FEEDBACK_JOYSTICK_LABEL, // added 2/27/98
+//"Force\rFeedback\rJoystick "
+ "きょうせいてき\rフィードバック\rジョイスティック"
+IDS_FORCE_FEEDBACK_DURATION_SHORT_LABEL,
+//"Duration"
+ "けいぞく"
+IDS_FORCE_FEEDBACK_GAIN_SHORT_LABEL,
+//"Strength"
+ "強さ"
+IDS_FORCE_FEEDBACK_DIRECTION_SHORT_LABEL,
+//"Direction"
+ "方向"
+// added 3/2/988
+
+IDS_FORCE_FEEDBACK_DURATION_REMOTE_HELP,
+ "the duration (in thousandths of a second)"
+IDS_FORCE_FEEDBACK_GAIN_REMOTE_HELP,
+ "the strength (100 is full-strength)"
+IDS_FORCE_FEEDBACK_DIRECTION_HELP,
+ "the direction in degrees"
+ // all 3 of the above are followed by
+IDS_FORCE_FEEDBACK_EFFECT_HELP,
+ "of the force feedback effect named"
+
+IDS_CANT_MAKE_JAVA_APPLET_OF_PRIMITIVE_BIRD, // added 3/4/98
+// "Sorry, but a Java applet of something that has foreign birds in it probably won't work."
+ L"ごめん、でも\32知らない\32小鳥を\32\216揩ﾁている\32何かの\32Javaアプレットは、たぶん\32動かない。"
+
+IDS_PRIMITIVE_BIRD_DIDNT_HANDLE, // added 3/5/98
+// "A bird took something to Windows, but Windows didn't know what to do with it. "
+ "小鳥は 何かを Windowsに 運んだ、でも Windowsは、それで 何を すればいいか 知らなかった。"
+
+IDS_PRIMITIVE_BIRD_LABEL,
+// "Foreign\rBird"
+ "見知らぬ\r小鳥"
+
+IDS_A_PRIMITIVE_BIRD,
+// "a bird who flies outside of ToonTalk"
+ "ToonTalkの 外で ファイルを 作る 小鳥"
+IDS_DLL_PRIMITIVE_BIRD_HELP,
+//  "You should give the bird a box with 2 holes. The first hole should be the name of a ToonTalk extension. The second hole should contain a bird who will be given a box with a new bird."
+ L"君は、二つ穴の\32ボックスを\32小鳥に\32渡すべきだ。最初の\32穴には、ToonTalkの\32拡張\216qの\32名前が、２番目の\32穴には、新しい\32小鳥と\32いっしょの\32ボックスを\32渡された小鳥が\32入って\32いなければ\32ならない。"
+
+IDS_BIRD_TAKES_READ_AND_WRITE_MESSAGES,
+//  "This bird takes Read and Write messages to a file named "
+ "この 小鳥は、Readと Writeという メッセージを ファイルに 運ぶ："
+//IDS_NO_FILE_FOR_EXTENSION_FILE,
+// "Sorry. I couldn't find a ToonTalk extension file named "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION,
+// "File messages should be boxes with 3 holes whose third hole contains a bird who receives replies. For reading, the first hole should contain ""Read"" and the second the number of letters to read. "
+ " "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION2,
+// "For writing, the first hole should contain ""Write"" and the second the text pad to add to the file. "
+ "書き込みは、最初の穴に、""Write""を 入れ、２番目の穴に、ファイルに 追加する テキストパッドを 入れる。"
+IDS_READ_MANUAL_FOR_MORE_HELP,
+// "Read ToonTalk help for more information. "
+ "もっと 情報が ほしければ、ToonTalkヘルプを 読むこと。"
+IDS_CREATE_FILE_HELP,
+// "Messages for this bird should be boxes with 3 holes. The first hole should contain ""Open"", ""Create File"", or ""Open Serial Port"". "
+ L"この小鳥へ\32渡す\32メッセージは、\216Oつ穴の\32ボックス。最初の穴には、""Open""か\32""Create\32File""か\32""Open\32Serial\32Port""を\32入れる。"
+IDS_CREATE_FILE_HELP2,
+// "In the second hole there should be a file name. The third hole should contain a bird. This bird will receive another bird for reading and writing from the file. "
+ L"２番目の\32穴には、ファイル名が\32入る。３番目の\32穴には\32小鳥が\32入る。この小鳥は、ファイルの\32読み書きの\32ため、別の\32小鳥を\32\216ｯとる。"
+IDS_IMPROPER_CREATE_FILE_MESSAGE,
+// "A bird took something to the ToonTalk file extension, but it wasn't a proper message. "
+ L"小鳥は\32何かを\32ToonTalkファイル\32拡張\216qに\32運んだ、でも\32それは、正しい\32メッセージでは\32なかった。"
+IDS_BIRD_TAKES_MESSAGE_TO_OPEN_A_FILE,
+// "This bird takes messages to create or open files. "
+ "この 小鳥は、ファイルを 作ったり 開いたりする メッセージを 運ぶ。"
+IDS_TROUBLE_OPENING_A_FILE,
+// "Had troubles opening the file named "
+ "この ファイルは 開けない："
+IDS_IMPROPER_READ_OR_WRITE_MESSAGE,
+// "A bird took something to a Windows file, but it wasn't a proper message. "
+ "小鳥は、Windowsに 何かを 運んだ、でも それは、正しい メッセージでは なかった。"
+
+IDS_TROUBLE_SHOOT_EXTENSION_NOT_INSTALLED, // added 3/20
+ "A ToonTalk extension is needed, but it has not been installed. Would you like to learn how to install extensions? "
+IDS_TOO_MANY_HOLES, // added 3/30
+ "Sorry, but a box can't have too many holes. See www.toontalk.com/English/ttini.htm to learn how to change this. "
+
+IDS_TRIAL_VERSION_CANT_SAVE, // added 5/1-98 but only used if "trial" version of ToonTalk
+ "Sorry, but this is a trial version of ToonTalk, so changes to your notebook will be lost when you quit ToonTalk."
+
+IDS_ROBOTS_CANT_GIVE_BOXES_TO_ROBOTS, // added 5/3/98
+ "Sorry, but you can't train robots to give boxes to other robots. Put the robot and box in a truck instead."
+
+IDS_CANT_SAVE_CITY, // added 5/11/98
+  "Sorry, the Trial Version can't save cities."
+
+ // A blank robot is a robot that has been erased by Dusty
+ // only useful inside thought bubbles to express that the corresponding thing should be a robot, but any one will do
+  IDS_BLANK_ROBOT_TYPE_INDEFINITE, // added 5/21/98
+  "a blank robot"
+ IDS_BLANK_ROBOT_TYPE_DEFINITE,
+  "the blank robot"
+ IDS_BLANK_ROBOT_TYPE_PLURAL,
+  "blank robots"
+ IDS_BLANK_ROBOT_TYPE_PRONOUN,
+ "him"
+
+
+ IDS_ENGLISH_LIKE_ADJECTIVES_AND_PRONOUNS, // new on 5/22/98
+ "1" // should be "0" for languages where there is gender agreement between adjectives and nouns and only one form of "it"
+ // only if "1" does the following need to be translated as well
+ IDS_IT,
+ "it"
+ IDS_NEW,
+ "new"
+ IDS_FIRST_NEW,
+ "first new"
+ IDS_NEWEST,
+ "newest"
+ IDS_TO_LAST,
+ "to last"
+ IDS_THE,
+ "the"
+ // end of special no gender section
+
+IDS_BAD_FLOOR_IN_CITY_FILE,
+ "Something is wrong with a part of a city file describing what's on the floor of a house."
+IDS_BAD_ROOM_IN_CITY_FILE,
+ "Something is wrong with a part of a city file describing what's on the wall inside a house."
+
+IDS_TOO_BIG_TO_SAVE, // new on 5/27/98
+ "could not be saved\rbecause it has too much stuff in it."
+
+IDS_NEST_TOO_FULL_TO_SAVE,
+ "There are more than 1000 items on a nest that is being saved. Some items will be lost."
+IDS_SAVING_TOO_MANY_NESTS,
+"Too many nests being saved in notebook. Can't save more than 255 at one time -- sorry."
+IDS_LEGO_SERIAL_PORT_NOT_IN_32BIT,
+"This serial port interface is not supported in the 32-bit version of ToonTalk. "
+
+// And translate "Do you want to see your log file?" as a comment here
+
+IDS_TROUBLE_SHOOT_TTS_SELECT_FAILURE, // added 6/12/98
+ "Text-to-speech engine failed to start properly. Do you want to know what you can do to fix this?"
+
+IDS_TOONTALK_WEB_PAGE, // new on 8/19/98
+ "To learn more about ToonTalk see www.toontalk.com."
+
+IDS_ROBOT_LOST_TRACK_OF_THINGS, // new on 10/16/98
+ "A robot has lost track of things. It didn't expect to have to keep track of this many things."
+IDS_EXPECTED_TO_KEEP_TRACK, // used to generate sentences like
+// A robot B expected to keep track of only 3 things.
+ "expected to keep track of only"
+
+IDS_TRIAL_VERSION_DOES_NOT_GENERATE_JAVA, // added 10/21/98
+ "Sorry, but the trial version does not generate Java applets."
+
+IDS_A_ROBOT_NAMED, // split off from IDS_ROBOT_HAS_NON_MATCHING_BOX on 280199
+ "a robot named" // followed by a robot name
+
+// also on 280199 removed "a robot" from
+// IDS_ROBOT_COULDNT_FIND_ITEM, IDS_ROBOT_COULDNT_FIND_NEST, IDS_ROBOT_COULDNT_FIND_PLACE,
+// IDS_ROBOT_COULDNT_FIND_BIRD, IDS_ROBOT_COULDNT_FIND_PLACE_TO_RELEASE,
+// IDS_ROBOT_EXPECTED_BOX_BUT, IDS_ROBOT_DIDNT_FIND_ROBOT_IN_TRUCK,
+// IDS_ROBOT_COULDNT_USE_IN_VACUUM,IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+// IDS_ROBOT_THING_NOT_IN_ROOM, IDS_SOMETHING_NOT_IN_NOTEBOOK,
+
+// On 5/4/99 added the following:
+
+
+IDS_CHILDREN_HELP,
+ "the answer to the question ""What pictures are stuck on top of me?"""
+IDS_ANCESTORS_HELP,
+ "the answer to the question ""What picture am I stuck on top of, and what picture is that stuck on, and so on?"""
+IDS_CHILDREN_SHORT_LABEL,
+ "Parts"
+IDS_ANCESTORS_SHORT_LABEL,
+ "Containers"
+IDS_CHILDREN_LONG_LABEL,
+ "Parts"
+IDS_ANCESTORS_LONG_LABEL,
+ "Containers"
+IDS_AND_IT_HAS_THE_LABEL,
+ "and it has the label"
+IDS_ANSWER_CHILDREN_QUESTION,
+ "This tells us what pictures are stuck on top of"
+IDS_ANSWER_ANCESTORS_QUESTION,
+ "This tells us what pictures"
+IDS_ANSWER_ANCESTORS_QUESTION2,
+  "is stuck on top of"
+IDS_LABELED_BY,
+ "labeled by"
+IDS_LABELED_BY2,
+ " "
+IDS_ENCODING_MISSING_IN_PUZZLE,
+ "Couldn't find encoding of goal in puzzle."
+IDS_PUZZLE_CONTAINED_NON_ROBOT_AFTER_GOAL,
+"Puzzle contained a non-robot after the goal. Section ignored."
+IDS_NON_PICTURE_ON_TOP_OF_PICTURE,
+ "Non picture on top of picture added to back instead."
+IDS_GIVE_ME_AND_ILL_TALK_ABOUT_IT,
+ "If you give me something, I'll talk about it whenever I'm talking about" // followed by some ToonTalk object
+IDS_HERES_A_COPY_OF,
+"Here's a copy of" // followed by some ToonTalk object
+IDS_HERES_A_COPY_OF2,
+ " "
+IDS_IT_GOES_WITH,
+"It goes with" // followed by some ToonTalk object
+IDS_IT_GOES_WITH2,
+ " "
+IDS_OK,
+"OK"
+IDS_ILL_REMEMBER_THAT,
+"I'll remember that"
+IDS_GOES_WITH,
+"goes with"
+
+
+IDS_TRILLION_SINGULAR,
+// "one trillion"
+"１兆"
+IDS_TRILLION_PLURAL,
+// "trillion"
+"１兆"
+IDS_BILLION_SINGULAR,
+// "one billion"
+"１０億"
+IDS_BILLION_PLURAL,
+// "billion"
+"１０億"
+IDS_MILLION_SINGULAR,
+// "one million"
+"１００万"
+IDS_MILLION_PLURAL,
+// "million"
+"１００万"
+IDS_THOUSAND_SINGULAR,
+// "thousand"
+"千"
+IDS_THOUSAND_PLURAL,
+// "thousand"
+"千"
+IDS_HUNDRED_SINGULAR,
+// "hundred"
+"百"
+IDS_HUNDRED_PLURAL,
+// "hundred"
+"百"
+
+//IDS_MY_BOX, // new on 290499
+//"My Box"
+
+
+

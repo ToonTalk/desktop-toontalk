@@ -1,0 +1,3790 @@
+// Copyright (c) 1992-2000. Ken Kahn, Animated Programs, All rights reserved
+
+// To translate this file simply replace the items within quotes.
+
+// leave the upper case items alone.
+// Anything following two /s is just a comment and can be ignored.
+// Spaces within quotes are important and should be retained.
+
+#include "strings.h"
+ STRINGTABLE {
+
+
+IDS_TOOLBOX_FROM_SIDE,
+"Verktygslådan från sidan"
+IDS_TOOLBOX_FROM_ABOVE,
+"Verktygslådan ovanifrån"
+IDS_PERSON_WALKING,
+"en som går"
+IDS_WIRE,
+"en tråd"
+IDS_HELICOPTER_FLYING,
+"en helikopter som flyger"
+IDS_PICT_FRAME,
+"en bildram"
+IDS_HELICOPTER_LANDING,
+"en helikopter som landar"
+IDS_PERSON_SITTING,
+"en som sitter"
+IDS_TALL_HOUSE_ABOVE,
+"det höga huset ovanifrån"
+IDS_TALL_HOUSE_SIDE,
+"det höga huset från sidan"
+IDS_TALL_HOUSE_DOOR,
+"dörren till det höga huset"
+IDS_BIG_HOUSE_DOOR,
+"dörren till det stora huset"
+IDS_NUMBER_PAD,
+"ett sifferkort"
+IDS_SCALE,
+"en våg"
+IDS_VACUUM,
+"Dammis"
+IDS_EXPANDER,
+"Pumpas"
+IDS_COPIER,
+"en trollstav"
+IDS_THOUGHT_BUBBLE,
+"en tankebubbla"
+IDS_ROBOT,
+"en robot"
+IDS_NEST,
+"ett fågelbo"
+IDS_BIRD,
+"en fågel"
+IDS_BOMB,
+"en bomb"
+IDS_NOTEBOOOK,
+//"en antecknings_bok"
+"en bok"
+IDS_BOX,
+"en låda"
+IDS_MOUSE_WITH_HAMMER,
+"en mus med en hammare"
+IDS_ARM,
+"en arm"
+IDS_HAND,
+"en hand"
+IDS_HAND_HOLDING_WAND,
+"en hand som håller en trollstav"
+//IDS_PICTURES_SPRITE,
+//"en eller annan bild"
+IDS_PUMP_BUTTON, // new 10/19
+//"button on a bike pump"
+"en knapp"
+IDS_HEAD_WITH_HAIR,
+"ett huvud med hår"
+IDS_HEAD_WITH_HAT,
+"ett huvud med keps"
+//IDS_PLATFORM,
+//"en plattform"
+IDS_VACUUM_BUTTON,  // new on 12/13
+"en knapp"
+IDS_SWITCH,
+"en strömbrytare"
+IDS_PERSON_WITH_HAT_SITTING,
+"en person med keps som sitter"
+IDS_PERSON_HAIR_SITTING,
+"en person med hår som sitter"
+IDS_BIG_HOUSE_SIDE,
+"det stora huset från utsidan"
+IDS_BIG_HOUSE_ABOVE,
+"det stora huset ovanifrån"
+IDS_WIDE_HOUSE_SIDE,
+"det breda huset från sidan"
+IDS_WIDE_HOUSE_ABOVE,
+"det breda huset ovanifrån"
+IDS_WIDE_HOUSE_DOOR,
+"dörren till det breda huset"
+IDS_MARTIAN,
+"Marty"
+IDS_TRUCK_INSIDE_HOUSE,
+"en lastbil inne i huset"
+IDS_TRUCK_ABOVE,
+"en lastbil ovanifrån"
+IDS_TRUCK_SIDE,
+"en lastbil från sidan"
+IDS_TALK_BALLOON,
+"en pratbubbla"
+//IDS_LETTER_PLATE,
+//"en bokstavsbricka"
+//IDS_COPIER_BUTTON, // revised 10/19
+// "en knapp"
+IDS_TEXT_PAD,
+"ett textkort"
+IDS_BOOK_PAGE_TURNING,
+"en sida i antecknings_boken som vänds"
+IDS_DIZZY_PERSON,
+"en person som är yr i huvudet"
+IDS_DIZZY_PERSON_WITH_HAIR,
+"en person med hår som är yr i huvudet"
+IDS_DIZZY_PERSON_WITH_HAT,
+"en person med mössa som är yr i huvudet"
+IDS_EXPLOSION,
+"en explosion"
+//IDS_MARTIAN_TALKING,
+//"Marty talar"
+IDS_BROKEN_ROCKET_DOOR,
+//   "a door to a broken rocket" -- I didn't bother Lennart with this...
+"dörren till en raket"
+IDS_HIT_OR_MISS,
+"teckningen med träff eller miss"
+IDS_BALL,
+"en boll"
+IDS_PADDLE,
+"en racket"
+IDS_PERSON_WALKING_PICTURE,
+"en person som går"
+IDS_FLOWER_SPRITE,
+"en blomma"
+IDS_TREE_SPRITE,
+"ett träd"
+IDS_TRAFFIC_LIGHT_SPRITE,
+"ett trafikljus"
+IDS_ROCKET_SPRITE,
+"en raket"
+IDS_RECTANGLE,
+"en rektangel"
+IDS_BACKGROUND,
+"en bakgrund"
+IDS_PAGE_BEGIN_SENTENCE,
+"Sida"
+IDS_CONTAINS,
+"innehåller "
+IDS_NUMBER_TYPE_INDEFINITE,
+"en siffra"
+IDS_NUMBER_TYPE_PRONOUN,
+"en"
+IDS_NUMBER_TYPE_DEFINITE,
+"siffran"
+IDS_NUMBER_TYPE_PLURAL,
+"siffror"
+IDS_EXPANDER_TYPE_INDEFINITE,
+"Cykelpumpen Pumpas"
+IDS_EXPANDER_TYPE_PRONOUN,
+"honom"
+IDS_EXPANDER_TYPE_DEFINITE,
+"Cykelpumpen Pumpas"
+IDS_EXPANDER_TYPE_PLURAL,
+"Cykelpumpen Pumpas"
+IDS_VACUUM_TYPE_INDEFINITE,
+"Dammsugaren Dammis"
+IDS_VACUUM_TYPE_PRONOUN,
+"honom"
+IDS_VACUUM_TYPE_DEFINITE,
+"Dammsugaren Dammis"
+IDS_VACUUM_TYPE_PLURAL,
+"Dammsugaren Dammis"
+IDS_COPIER_TYPE_INDEFINITE,
+"en trollstav"
+IDS_COPIER_TYPE_PRONOUN,
+"en"
+IDS_COPIER_TYPE_DEFINITE,
+"trollstaven"
+IDS_COPIER_TYPE_PLURAL,
+"trollstavar"
+IDS_THOUGHT_BUBBLE_TYPE_INDEFINITE,
+"en tankebubbla"
+IDS_THOUGHT_BUBBLE_TYPE_PRONOUN,
+"en"
+IDS_THOUGHT_BUBBLE_TYPE_DEFINITE,
+"tankebubblan"
+IDS_THOUGHT_BUBBLE_TYPE_PLURAL,
+"tankebubblor"
+IDS_ROBOT_TYPE_INDEFINITE,
+"en robot"
+IDS_ROBOT_TYPE_PRONOUN,
+"honom"
+IDS_ROBOT_TYPE_DEFINITE,
+"roboten"
+IDS_ROBOT_TYPE_PLURAL,
+"robotar"
+IDS_NEST_TYPE_INDEFINITE,
+"ett fågelbo"
+IDS_NEST_TYPE_PRONOUN,
+"ett"
+IDS_NEST_TYPE_DEFINITE,
+"fågelboet"
+IDS_NEST_TYPE_PLURAL,
+"fågelbona"
+IDS_BIRD_TYPE_INDEFINITE,
+"en fågel"
+IDS_BIRD_TYPE_PRONOUN,
+"en"
+IDS_BIRD_TYPE_DEFINITE,
+"fågeln"
+IDS_BIRD_TYPE_PLURAL,
+"fåglar"
+IDS_TRUCK_TYPE_INDEFINITE,
+"en lastbil"
+IDS_TRUCK_TYPE_PRONOUN,
+"en"
+IDS_TRUCK_TYPE_DEFINITE,
+"lastbilen"
+IDS_TRUCK_TYPE_PLURAL,
+"lastbilar"
+IDS_BOOK_TYPE_INDEFINITE,
+"en antecknings_bok"
+IDS_BOOK_TYPE_PRONOUN,
+"en"
+IDS_BOOK_TYPE_DEFINITE,
+"antecknings_boken"
+IDS_BOOK_TYPE_PLURAL,
+"antecknings_böcker"
+IDS_CUBBY_TYPE_INDEFINITE,
+"en låda"
+IDS_CUBBY_TYPE_PRONOUN,
+"en"
+IDS_CUBBY_TYPE_DEFINITE,
+"lådan"
+IDS_CUBBY_TYPE_PLURAL,
+"lådor"
+IDS_TOOLBOX_TYPE_INDEFINITE,
+"Verktygslådan "
+IDS_TOOLBOX_TYPE_PRONOUN,
+"honom"
+IDS_TOOLBOX_TYPE_DEFINITE,
+"Verktygslådan "
+IDS_TOOLBOX_TYPE_PLURAL,
+"Verktygslådan "
+IDS_PICT_TYPE_INDEFINITE,
+"en bild"
+IDS_PICT_TYPE_PRONOUN,
+"en"
+IDS_PICT_TYPE_DEFINITE,
+"bilden"
+IDS_PICT_TYPE_PLURAL,
+"bilder"
+IDS_BOMB_TYPE_INDEFINITE,
+"en bomb"
+IDS_BOMB_TYPE_PRONOUN,
+"en"
+IDS_BOMB_TYPE_DEFINITE,
+"bomben"
+IDS_BOMB_TYPE_PLURAL,
+"bomber"
+IDS_TEXT_TYPE_INDEFINITE,
+"ett textkort"
+IDS_TEXT_TYPE_PRONOUN,
+"ett"
+IDS_TEXT_TYPE_DEFINITE,
+"textkortet"
+IDS_TEXT_TYPE_PLURAL,
+"textkort"
+IDS_REMOTE_PICTURE_TYPE_INDEFINITE,
+"en fjärrkontroll"
+IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+"en"
+IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+"fjärrkontrollen"
+IDS_REMOTE_PICTURE_TYPE_PLURAL,
+"fjärrkontroller"
+IDS_BLANK_NUMBER_TYPE_INDEFINITE,
+"ett tomt sifferkort"
+IDS_BLANK_NUMBER_TYPE_PRONOUN,
+"ett"
+IDS_BLANK_NUMBER_TYPE_DEFINITE,
+"det tomma sifferkortet"
+IDS_BLANK_NUMBER_TYPE_PLURAL,
+"tomma sifferkort"
+IDS_BLANK_CUBBY_TYPE_INDEFINITE,
+"en rensad låda"
+IDS_BLANK_CUBBY_TYPE_PRONOUN,
+"en"
+IDS_LABELED_CUBBY_TYPE_INDEFINITE,
+"en låda"
+IDS_LABELED_CUBBY_TYPE_PRONOUN,
+"en"
+IDS_LABELED_CUBBY_TYPE_DEFINITE,
+"lådan"
+IDS_LABELED_CUBBY_TYPE_PLURAL,
+"lådor"
+IDS_BLANK_PICTURE_TYPE_INDEFINITE,
+"en tom bild"
+IDS_BLANK_PICTURE_TYPE_PRONOUN,
+"en"
+IDS_BLANK_PICTURE_TYPE_DEFINITE,
+"den tomma bilden"
+IDS_BLANK_PICTURE_TYPE_PLURAL,
+"tomma bilder"
+IDS_BLANK_TEXT_TYPE_INDEFINITE,
+"ett tomt textkort"
+IDS_BLANK_TEXT_TYPE_PRONOUN,
+"ett"
+IDS_BLANK_TEXT_TYPE_DEFINITE,
+"det tomma textkortet"
+IDS_BLANK_TEXT_TYPE_PLURAL,
+"tomma textkort"
+IDS_PICT_WITH_INSIDES_TYPE_INDEFINITE,
+"en bild"
+IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+"en"
+IDS_PICT_WITH_INSIDES_TYPE_DEFINITE,
+"bilden"
+IDS_PICT_WITH_INSIDES_TYPE_PLURAL,
+"bilder"
+IDS_REMOTE_INTEGER_TYPE_INDEFINITE,
+"en fjärrstyrd siffra"
+IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+"en"
+IDS_REMOTE_INTEGER_TYPE_DEFINITE,
+"den fjärrstyrda siffran"
+IDS_REMOTE_INTEGER_TYPE_PLURAL,
+"fjärrstyrda siffror"
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_INDEFINITE,
+"en fjärrstyrd siffra"
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+"en"
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_DEFINITE,
+"den fjärrstyrda siffran"
+IDS_GLOBAL_REMOTE_INTEGER_TYPE_PLURAL,
+"fjärrstyrda siffror"
+IDS_SCALE_PICTURE_TYPE_INDEFINITE,
+"en våg"
+IDS_SCALE_PICTURE_TYPE_PRONOUN,
+"en"
+IDS_SCALE_PICTURE_TYPE_DEFINITE,
+"vågen"
+IDS_SCALE_PICTURE_TYPE_PLURAL,
+"vågar"
+IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+"en fjärrkontroll för hur något ser ut"
+IDS_REMOTE_APPEARANCE_TYPE_PRONOUN,
+"en"
+IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+"fjärrkontrollen för hur något ser ut"
+IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+"fjärrkontroller för hur något ser ut"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+"en bild av något"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_PRONOUN,
+"en"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_DEFINITE,
+"bilden av något"
+IDS_PICTURE_WITH_INDIRECTION_TYPE_PLURAL,
+"bilder av något"
+IDS_THE_ROBOTS_HAND,
+"robotens hand"
+IDS_YOUR_HAND,
+"din hand"
+//IDS_BEGIN_THE_ROBOT_IS,
+//"Roboten är"
+IDS_THE_ROBOT_IS,
+"roboten är"
+//IDS_BEGIN_YOU_ARE,
+//"Du är"
+IDS_YOU_ARE,
+"du är"
+IDS_TEXT_WITH_ANYTHING,
+"ett textkort med vad som helst skrivet"
+IDS_BLANK_TEXT_PAD,
+"ett tomt textkort"
+IDS_PAD_WITH_TEXT,
+"ett textkort med texten "
+IDS_ON_IT,
+" på"
+IDS_NOTHING,
+"ingenting"
+IDS_ROBOT_WITHOUT_A_THOUGHT,
+//"en robot utan tanke"
+"en robot med en tom tankebubbla"
+IDS_FIRST,
+"första"
+IDS_SECOND,
+"andra"
+IDS_THIRD,
+"tredje"
+IDS_FOURTH,
+"fjärde"
+IDS_FIFTH,
+"femte"
+IDS_SIXTH,
+"sjätte"
+IDS_SEVENTH,
+"sjunde"
+IDS_EIGHTH,
+"åttonde"
+IDS_NINTH,
+"nionde"
+IDS_TENTH,
+"tionde"
+IDS_ELEVENTH,
+"elfte"
+IDS_TWELFTH,
+"tolfte"
+IDS_THIRTEENTH,
+"trettonde"
+IDS_CARDINAL_MOD_IS_0,
+":e"
+IDS_CARDINAL_MOD_IS_1,
+":a"
+IDS_CARDINAL_MOD_IS_2,
+":a"
+IDS_CARDINAL_MOD_IS_3
+":e"
+IDS_CARDINAL_MOD_IS_4,
+":e"
+IDS_CARDINAL_MOD_IS_5,
+":e"
+IDS_CARDINAL_MOD_IS_6,
+":e"
+IDS_CARDINAL_MOD_IS_7,
+":e"
+IDS_CARDINAL_MOD_IS_8,
+":e"
+IDS_CARDINAL_MOD_IS_9,
+":e"
+IDS_YOU_ARE_POINTING_TO,
+"Du pekar på "
+IDS_YOU_ARE_HOLDING,
+"Du håller "
+IDS_UNDER,
+"Under "
+IDS_IS,
+" är "
+//IDS_TH,
+//":e"
+IDS_THE_RIGHT_MOUSE_BUTTON,
+"den högra musknappen"
+IDS_NEST_HATCHED_BIRD_HELP,
+"Ägget i boet kommer att kläckas när du sätter ner boet. "
+IDS_NEST_RECEIVED_ITEM_FROM_BIRD_HELP,
+"Om du ger fågeln något tar den med det till boet. "
+IDS_NEST_ITEM_REMOVED_HELP,
+"Du kan ta "
+IDS_THINGS,
+"saker"
+IDS_NEST_ITEM_REMOVED_HELP2,
+" upp ur boet med handen eller med Dammis dammsugaren. "
+IDS_NEST_ITEM_ADDED_HELP,
+"Du kan lägga en rektangulär sak i boet genom att släppa den där. "
+IDS_NEST_ITEM_ADDED_HELP2,
+"Jag brukar låta fågeln göra det i stället. "
+IDS_NEST_HELP_GIVEN_HELP,
+"Nu har jag sagt allt jag vet om fågelbon. "
+IDS_NEST_HELP_GIVEN_HELP2,
+"Jag använder fåglar och fågelbon när jag vill att robotar i olika hus ska samarbeta. "
+IDS_NEST_HELP_GIVEN_HELP3,
+"Om du vill att jag ska säga allt jag vet om fågelbon, peka då på ett fågelbo och tryck två gånger på F1. "
+IDS_NEST_HELP_GIVEN_BIRDS,
+"Jag berättar mer om fåglar om du pekar på en fågel och trycker två gånger på F1. "
+IDS_BIRD_RECEIVED_ITEM_HELP,
+"Om du ger fågeln något som är rektangulärt, så tar den det till fågelboet. "
+IDS_BIRD_RECEIVED_ITEM_HELP2,
+"Om du vill att den ska ta med sig andra saker, lägg dem i en låda och ge fågeln lådan. "
+IDS_BIRD_HELP_GIVEN_HELP,
+"Nu har jag berättat allt jag vet om fåglar. "
+IDS_BIRD_HELP_GIVEN_HELP2,
+"Om du vill att jag ska berätta allt jag vet om fåglar, peka på en fågel och tryck två gånger på F1. "
+IDS_BIRD_HELP_GIVEN_NESTS,
+//"Jag ska berätta mer om fåglar om du pekar på en fågel och trycker två gånger på F1. "
+"Jag ska berätta mer om fågelbon om du pekar på ett fågelbo och trycker två gånger på F1. "
+
+
+IDS_ON_TOP,
+" ovanpå"
+IDS_BIRD_RECUR_ABORT,
+"fågeln fick något som hade fågelboet i sig"
+IDS_BOMB_USED_HOUSE_HELP,
+"Du kan spränga det här huset genom att klicka på "
+ IDS_BOMB_USED_HOUSE_HELP2,
+"När du håller en bomb inne i ett hus, kan du spränga huset genom att klicka på "
+IDS_BOMB_USED_HOUSE_HELP3,
+"Du och dina verktyg kommer att klara sig bra och Dammis kommer att suga upp allt annat. "
+IDS_BOMB_USED_HOUSE_HELP4,
+"Du kan lugnt lägga ner den genom att klicka på "
+ IDS_BOMB_USED_TB_HELP,
+"Du kan lära upp den här roboten att spränga huset den är i genom att klicka på "
+IDS_BOMB_USED_TB_HELP2,
+"När du arbetar med en robot som har plockat upp en bomb, kan du få den att spränga huset den är i genom att klicka på "
+IDS_BOMB_USED_TB_HELP3,
+"Det här kommer att avsluta träningen av roboten. "
+IDS_BOMB_USED_TB_HELP4,
+" Innan jag använder en robot som lärt sig använda bomber, brukar jag alltid lägga den i antecknings_boken. "
+IDS_BOMB_HELP_GIVEN_HELP,
+"Nu har jag berättat allt jag vet om bomber. "
+IDS_BOMB_HELP_GIVEN_HELP2,
+"Om du vill att jag ska berätta allt jag vet om bomber, så tryck bara två gånger på F1. "
+IDS_CUBBY_BAD_CONTENTS_ABORT,
+"han försökte lägga något i lådan vilket inte går"
+ IDS_CUBBY_BLANK_HELP,
+"Du kan använda tomma lådor inne i tankebubblorna så att roboten kan arbeta med en låda som har hur många fack som helst."
+IDS_CUBBY_BLANK_HELP2,
+"Det är en rensad låda som kan passa ihop med vilken låda som helst. "
+IDS_CUBBY_CONTENTS_REMOVED_HELP,
+"Du kan ta något ur en låda med "  // din
+IDS_CUBBY_CONTENTS_REMOVED_HELP2,
+" eller med Dammis. "
+IDS_CUBBY_CONTENTS_REMOVED_HELP3,
+"Den kommer att darra när den är färdig. "
+IDS_CUBBY_CONCATENATION_HELP,
+"Du kan sätta ihop två lådor genom att släppa en vid sidan av den andra. "
+IDS_CUBBY_SIZE_CHANGED_HELP,
+"Du kan ändra antalet fack genom att trycka på en siffertangent från 0 till 9. "
+IDS_CUBBY_SIZE_CHANGED_HELP2,
+"Vill du ha en låda med fler än 9 fack kan du släppa en vid sidan av den andra. "
+IDS_CUBBY_SIZE_CHANGED_HELP3,
+"Om du trycker '+' så får du ett fack till. "
+IDS_CUBBY_SIZE_CHANGED_HELP4,
+"Om du trycker '-' så tas facket till höger bort. "
+IDS_CUBBY_SIZE_CHANGED_HELP5,
+"Du kan använda siffertangenterna för att ändra på antalet fack i den låda som du håller i. "
+IDS_CUBBY_LABELED_HELP,
+"Du kan sätta en etikett på ett fack genom att peka strax under det och samtidigt skriva. "
+IDS_CUBBY_HELP_GIVEN_HELP,
+"Nu har jag har berättat allt jag vet om lådor. "
+ IDS_CUBBY_HELP_GIVEN_HELP2,
+"Om du vill att jag ska berätta det jag vet om lådor en gång till, så kan du trycka på F1 samtidigt som du pekar på en låda. "
+IDS_ANY_BOX,
+"vilken låda som helst"
+IDS_BOX_WITH,
+"en låda med "
+IDS_ONE_HOLE,
+"ett fack"
+IDS_HOLES,
+" fack"
+//IDS_WHOSE,
+//" vars "
+//IDS_AND_WHOSE,
+//" och vars "
+IDS_HOLE_LABELED_WITH,
+//"fack med etiketten "  // revised on 8/26/97
+"facket med etiketten "
+IDS_HOLE_CONTAINS,
+//"fack innehåller "
+// For example, "Det första facket innehåller ..."
+"facket innehåller "
+IDS_AND_BEGIN_SENTENCE,
+"Och"
+IDS_THE_LETTER,
+" "
+IDS_MOVE_TO,
+"flytta till"
+IDS_SELECT_COPIER,
+"ta en trollstav"
+IDS_APPLY_COPIER,
+"använda trollstaven på"
+//IDS_APPLY_COPIER_NUMBER,
+//"använd trollstaven (med talet kopplat till den) på"
+IDS_RELEASE_COPIER,
+"släppa trollstaven"
+IDS_GRASP_ITEM,
+"plocka upp"
+IDS_RELEASE_ITEM,
+"släppa"
+IDS_RELEASE_ITEM2,
+" på golvet"
+IDS_RELEASE_ITEM_ON,
+"släppa"
+IDS_RELEASE_ITEM_ON2,
+" på"
+IDS_RELEASE_ITEM_LEFT_OF,
+"släppa"
+IDS_RELEASE_ITEM_LEFT_OF2,
+" strax till vänster om"
+IDS_RELEASE_ITEM_RIGHT_OF,
+"släppa"
+IDS_RELEASE_ITEM_RIGHT_OF2,
+" strax till höger om"
+//IDS_APPLY_NUMBER,
+//"tryck ner talet på"
+IDS_SELECT_VACUUM,
+"ta en kopia av Dammis"
+IDS_APPLY_VACUUM,
+"använda Dammis för att suga upp"
+IDS_APPLY_VACUUM_RESTORE,
+"köra Dammis baklänges för att spotta ut"
+IDS_RELEASE_VACUUM,
+"släppa Dammis"
+IDS_SEND_TO,
+"trycka"
+IDS_RELEASE_IN_NEST,
+"släppa fågelboet och se hur en fågel kläcks"
+IDS_GIVE_BIRD,
+"ge"
+IDS_GIVE_BIRD2,
+" till fågeln"
+IDS_RELEASE_IN_TRUCK,
+"släppa"
+IDS_RELEASE_IN_TRUCK2,
+" ner på lastbilen"
+IDS_DESTROY_HOUSE,
+"har sprängt huset han är i"
+IDS_APPLY_ITEM_HELD,
+"använda"
+IDS_LABEL_CHARACTER,
+"lägga till"
+IDS_CHARACTER_AND_SELECT,
+"trycka"
+IDS_GRASP_NEST,
+"plocka upp"
+IDS_NEW_MAIN_CUBBY,
+"växla till att arbeta med"
+IDS_COPIER_APPLY_NEST,
+"använda trollstaven på"
+IDS_VACUUM_APPLY_NEST,
+"använda Dammis för att suga upp"
+IDS_APPLY_GRASPED_NEST,
+"använda"
+IDS_RELEASE_EXPANDER,
+"släppa Pumpas"
+IDS_WHAT_I_JUST_COPIED,
+"det som han nyss kopierade"
+IDS_WHAT_IM_HOLDING,
+"det som han håller i"
+IDS_EVENT_ARG1,
+"lådan som han arbetar med"
+IDS_EVENT_ARG3,
+"trollstaven"
+IDS_EVENT_ARG4,
+"Dammis"
+IDS_EVENT_ARG5,
+"bunten med siffror"
+IDS_EVENT_ARG6,
+"bunten med texter"
+IDS_EVENT_ARG7,
+"bunten med lådor"
+IDS_EVENT_ARG8,
+"bunten med fågelbon"
+IDS_EVENT_ARG9,
+"bunten med lastbilar"
+IDS_EVENT_ARG10,
+"antecknings_boken som kommer från verktygslådan"
+IDS_EVENT_ARG11,
+"bunten med robotar"
+IDS_EVENT_ARG12,
+"bunten med vågar"
+IDS_EVENT_ARG13,
+"bunten med bomber"
+IDS_EVENT_ARG14,
+"det som han håller i"
+IDS_EVENT_ARG15,
+"Pumpas"
+IDS_WHICH_IS,
+" som är "
+IDS_STACK_TYPE1,
+"ett tal"
+IDS_STACK_TYPE2,
+"en text"
+IDS_STACK_TYPE3,
+"en låda"
+IDS_STACK_TYPE4,
+"ett fågelbo"
+IDS_STACK_TYPE5,
+"en lastbil"
+IDS_STACK_TYPE6,
+"en robot"
+IDS_STACK_TYPE7,
+"en våg"
+IDS_STACK_TYPE8,
+"en bomb"
+IDS_THE_LAST_THING, // "saken" added 8/26/97
+" det senaste saken han gjorde eller hittade"
+//IDS_THE,
+//"den" // just the default if all else fails
+IDS_TO_LAST_THING1,
+ " "
+IDS_TO_LAST_THING2, // "saken" added 8/26/97
+" saken till det senaste han gjorde eller hittade"
+IDS_PAGE_OF1,
+ "den"
+IDS_PAGE_OF2,
+"sidan för"
+IDS_HOLE_OF1,
+ "det"
+IDS_HOLE_OF2,
+//"facket för"  // revised 8/26/97
+"facket i"
+IDS_HOLE_INSIDE1, // added 8/23/97
+"det"
+IDS_HOLE_INSIDE2, // added 8/23/97
+"facket inuti"
+IDS_BYE1,
+"Hej då!"
+IDS_BYE2,
+"Hej så länge!"
+IDS_BYE3,
+"Vi ses!"
+IDS_GOOD1,
+"Bra. "
+IDS_GOOD2,
+"OK. "
+IDS_GOOD3,
+"Just det. "
+IDS_PREFACE_HELP,
+"Det här är allt jag vet om "
+IDS_SITTING_HELP,
+"Du kan sätta dig ner genom att klicka på en musknapp. Du kan resa dig igen genom att trycka på 'Esc' tangenten. "
+IDS_RECALL_MARTIAN_HELP,
+"Jag ska stanna kvar och hjälpa dig. Om du vill få bort mig, klicka bara på F1 så försvinner jag. "
+IDS_IDS_RECALL_MARTIAN_HELP2,
+"Om jag är borta, får du tillbaka mig med F1. "
+ IDS_LEAVE_FLOOR_HELP,
+"Visste du att kan resa dig från golvet genom att trycka på 'Esc'-knappen? "
+IDS_LEAVE_FLOOR_HELP2,
+"Försök det någon gång. "
+IDS_LEAVE_TB_HELP,
+"När du är färdig, tryck bara 'Esc'-knappen för att komma tillbaka till golvet. "
+IDS_HURRY_UP_HELP,
+"Visste du att F7 sätter stopp för animationer som är i gång? "
+IDS_HURRY_UP_HELP2,
+"Det gäller mitt pratande också! "
+IDS_PAUSE_HELP,
+"Om du vill göra en paus i ToonTalk, så tryck bara på pausknappen. "
+IDS_TARGETED_HELP_HELP,
+"Om du vill att jag ska berätta allt jag vet om något, skicka då bort mig genom att trycka på F1, peka på det du vill veta något om och tryck på F1 igen. "
+IDS_HELLO1,
+"Hej"
+IDS_HELLO2,
+"Goddagens"
+IDS_HELLO3,
+"Hejsan"
+IDS_HELLO4,
+"Hallå där"
+IDS_HELLO5,
+"Välkommen"
+IDS_HELLO6,
+"Tjena"
+IDS_MARTIAN_INTRODUCTION,
+//"Det här är Marty. "
+ "Jag heter Marty. "
+IDS_ABORT_MOUSE_TROUBLES,
+"Hammarmusen fick problem med sin hammare"
+IDS_ABORT_NUMBER_TOO_LARGE,
+"talet skulle bli större än datorn klarar av"
+IDS_ABORT_NUMBER_TOO_SMALL,
+"talet skulle bli mindre än datorn klarade av"
+IDS_ABORT_NUMBER_TOO_SMALL_OR_BIG,
+"talet skulle bli större eller mindre än datorn klarade av"
+//IDS_REMOTE_IDENTIFIER1,
+//"vänster/höger position"
+//IDS_REMOTE_IDENTIFIER2,
+//"upp/ner position"
+//IDS_REMOTE_IDENTIFIER3,
+//"hastighet åt höger"
+//IDS_REMOTE_IDENTIFIER4,
+//"hastighet uppåt"
+//IDS_REMOTE_IDENTIFIER5,
+//"bredd"
+//IDS_REMOTE_IDENTIFIER6,
+//"höjd"
+//IDS_REMOTE_IDENTIFIER7,
+//"bild nummer"
+//IDS_REMOTE_IDENTIFIER8,
+//"animation för träff eller miss"
+//IDS_REMOTE_IDENTIFIER9,
+//"krockar med vem?"
+//IDS_REMOTE_IDENTIFIER10,
+//"musens hastighet åt höger"
+//IDS_REMOTE_IDENTIFIER11,
+//"musens hastighet uppåt"
+//IDS_REMOTE_IDENTIFIER12,
+//"tiden i millisekunder (tusendels sekunder) sedan senaste filmrutan"
+//IDS_REMOTE_IDENTIFIER13,
+//"slumptal"
+IDS_A_REMOTE_CONTROL_FOR,
+"en fjärrkontroll för " // final space was missing - added 051199
+IDS_ANY_NUMBER,
+"vilket tal som helst"
+IDS_BLANK_NUMBER_PAD,
+"ett tomt sifferkort"
+IDS_THE_NUMBER,
+"talet "
+IDS_SOMETHING_WHICH_WILL_MULTIPLY,
+"något som multipliceras med "
+IDS_SOMETHING_WHICH_WILL_DIVIDE,
+"något som delas med "
+IDS_AND_KEEP_REMAINDER,
+" och bara behåll resten"
+IDS_SOMETHING_WHICH_WILL_CHANGE_NUMBER,
+"något som kommer ändra talet som det släpps på "
+IDS_SOMETHING_WHICH_WILL_OR,
+"något som kommer att ELLER bitarna i numret nedanför med "
+IDS_SOMETHING_WHICH_WILL_AND,
+"något som kommer att OCH bitarna i numret nedanför med "
+IDS_SOMETHING_WHICH_WILL_XOR,
+"något som kommer att exklusivt ELLER bitarna i numret nedanför med "
+IDS_THE_OPERATION,
+"operationen "
+IDS_INTS_BLANK_HELP,
+"Du kan använda tomma sifferkort inne i tankebubblor så att roboten tar emot vilket tal som helst på ett kort. "
+IDS_INTS_BLANK_HELP2,
+" Ett sifferkort utan tal betyder att vilket tal som helst kan skrivas in. "
+IDS_INTS_ADDITION_HELP,
+"Du kan lägga ihop två tal genom att släppa det ena på det andra. "
+IDS_INTS_DIGITS_ADDED_HELP,
+"Du kan skriva in ett tal. "
+IDS_INTS_DIGITS_ADDED_HELP3,
+"Du kan också skriva in ett tal medan du håller i ett tal. "
+IDS_INTS_DIGITS_REMOVED_HELP,
+"Du kan radera siffror genom att trycka på sudd-tangenten. "
+IDS_INTS_DIGITS_REMOVED_HELP2,
+"Om du tar bort den sista siffran så blir det 0. "
+IDS_INTS_MADE_NEGATIVE_HELP,
+"Du kan ändra "
+IDS_INTO,
+" till "
+IDS_INTS_MADE_NEGATIVE_HELP2,
+" genom att trycka på minus tangenten. "
+IDS_INTS_MADE_NEGATIVE_HELP3,
+"Om du sedan släpper "
+IDS_INTS_MADE_NEGATIVE_HELP4,
+" på ett annat tal så kommer du dra bort "
+IDS_INTS_MULTIPLICATION_HELP,
+"Du kan multiplicera med "
+IDS_INTS_MULTIPLICATION_HELP2,
+" genom att trycka på x tangenten. "
+IDS_INTS_MULTIPLICATION_HELP3,
+"Sen släpper du det bara på talet som du vill multiplicera med "
+IDS_INTS_MULTIPLICATION_HELP4,
+"Tangenterna för x och * går lika bra. "
+IDS_INTS_DIVISION_HELP,
+"Du kan dela med "
+IDS_INTS_DIVISION_HELP2,
+" genom att trycka på tangenten för /. "
+IDS_INTS_DIVISION_HELP3,
+"Då släpper du den bara på ett annat tal. "
+ IDS_INTS_DIVISION_HELP4,
+"Resten kommer inte räknas in. "
+IDS_INTS_DIVISION_HELP5,
+"Eftersom talet är 0 kommer divisionen inte att fungera. "
+IDS_INTS_MODULO_HELP,
+"För att få fram resten (och inte dividenden eller talet som delas) så kan du använda % tangenten (shift 5). "
+IDS_INTS_MODULO_HELP3,
+"För att få resten när man delar med "
+IDS_INTS_MODULO_HELP4,
+" tryck % (tryck shift och 5). "
+IDS_INTS_MODULO_HELP5,
+"Släpp det bara på ett annat tal. "
+IDS_INTS_BITWISE_HELP,
+"Detta är verkligen en avancerad sak. "
+IDS_INTS_BITWISE_HELP2,
+"Du kan behandla ett tal som om det var en massa bitar som antingen är 0 eller 1. "
+IDS_INTS_BITWISE_HELP3,
+"Det här talet är "
+IDS_INTS_BITWISE_HELP4,
+"Så här kan du göra. "
+IDS_INTS_BITWISE_HELP5,
+"~ för komplement. | för ELLER. & för OCH. Och ^ för exklusivt ELLER. "
+IDS_INTS_BITWISE_HELP56,
+"Det är OK om du undrar vad de här är. Det är bara att prova dem. "
+IDS_NUMBER_HELP_GIVEN_HELP,
+"Jag har berättat allt jag vet om siffror. "
+IDS_IDS_NUMBER_HELP_GIVEN_HELP2,
+"Om du vill att jag ska berätta allt jag vet om siffror en gång till, så kan du trycka på F1 medan du pekar på en siffra. "
+IDS_X_HELP,
+"avståndet från den vänstra sidan"
+IDS_Y_HELP,
+"avståndet från botten alltså sidan längst ner"
+IDS_X_SPEED_HELP,
+"hastigheten åt höger"
+IDS_Y_SPEED_HELP,
+"hastigheten uppåt"
+IDS_WIDTH_HELP,
+"bredden"
+IDS_HEIGHT_HELP,
+"höjden"
+IDS_PARAMETER_HELP,
+"bildväljaren"
+IDS_COLLIDE_HELP,
+"detektor som visar en enkel animation på antingen en krock eller en miss. Du kan ändra en krock till en miss genom att peka på detektorn och trycka på mellanslag"
+ IDS_COLLIDE_WHO_HELP,
+"det som visar vem den krockar med"
+IDS_MOUSE_X_HELP,
+"musens hastighet åt höger"
+IDS_MOUSE_Y_HELP,
+"musens hastighet uppåt"
+IDS_TIMER_HELP,
+"antalet millisekunder (tusendels sekunder) sedan sista filmrutan"
+IDS_RANDOM_HELP,
+"ett slumptal mellan 0 och 1000"
+IDS_X_COLLIDE_HELP,
+"krockdetektor för rörelse i sidled"
+IDS_Y_COLLIDE_HELP,
+"krockdetektor för rörelse uppåt och neråt"
+IDS_APPEARANCE_HELP,
+"hur den ser ut"
+IDS_VISIBLE_HELP,
+"hur bra den syns"
+IDS_END_OF_ANIMATION_HELP,
+"svaret på frågan \"Har min animation stannat?\""
+ IDS_GRASPED_HELP,
+"om den hålls i en hand"
+IDS_SELECTED_HELP,
+"om den skakar och är beredd att bli tagen eller använd"
+IDS_RELEASED_HELP,
+"om den just släppts"
+IDS_MOUSE_LEFT_BUTTON_HELP,
+"om den vänstra musknappen just blivit klickad"
+IDS_MOUSE_MIDDLE_BUTTON_HELP,
+"om musknappen i mitten just blivit klickad"
+IDS_MOUSE_RIGHT_BUTTON_HELP,
+"om den högra musknappen just blivit klickad"
+IDS_MOUSE_LEFT_BUTTON_DOWN_HELP,
+"den vänstra musknappen är nertryckt"
+IDS_MOUSE_MIDDLE_BUTTON_DOWN_HELP,
+"om musknappen i mitten är ner tryckt"
+IDS_MOUSE_RIGHT_BUTTON_DOWN_HELP,
+"om den högra musknappen är nertryckt"
+IDS_KEYBOARD_BUTTON_HELP,
+"den tangent du just tryckt på"
+IDS_LAST_KEYSTROKE_HELP,
+"den senaste tangenten som blivit nertryckt"
+IDS_SHIFT_DOWN_HELP,
+"om shift tangenten är nertryckt"
+IDS_CONTROL_DOWN_HELP,
+"om kontrolltangenten är nertryckt"
+IDS_HAND_VISIBLE_HELP,
+"om din hand är gömd"
+IDS_CLIPBOARD_HELP,
+"urklippet för att klistra in saker till och från andra program"
+IDS_AVENUE_HELP,
+"vilken gata, i nordlig riktning, som det här huset ligger vid"
+IDS_STREET_HELP,
+"vilken gata, i västlig riktning, som det här huset ligger vid"
+IDS_SOUND_ON_HELP,
+"om ljudeffekter är på"
+IDS_LETTER_SIZE_HELP,
+"storleken på bokstäverna i mina pratbubblor (100 är normalt)"
+IDS_READING_SPEED_HELP,
+"hur länge jag talar om någonting innan jag ändrar det som står i min pratbubbla (100 är normalt)"
+IDS_MARTIAN_ADVICE_LEVEL_HELP,
+"hur pratsam jag är"
+IDS_PROGRAMMER_HEAD_HELP,
+"om du har keps, långt hår eller är skallig"
+IDS_SCREEN_SIZE_HELP,
+"fönsterstorleken"
+IDS_SYSTEM_SPEED_HELP,
+"hastigheten på det som händer i ToonTalk (100 är normalt)"
+IDS_CITY_SIZE_HELP,
+"storleken på staden"
+IDS_SYSTEM_SLEEP_HELP,
+"antalet millisekunder, om det är möjligt, som varje filmruta ska ta"
+IDS_MOUSE_BUTTONS_HELP,
+"om den högra knappen och mittenknappen ska ha en särskild betydelse när man är på golvet"
+IDS_LEGO_SERIAL_PORT_HELP,
+"vilken seriell port en HyperBot(tm) kontroll är kopplad till"
+IDS_MARTIAN_FONT_HELP,
+"typsnittet i mina pratbubblor"
+IDS_REMOTE_DESCRIPTION,
+"Detta tal är en fjärrkontroll för "
+IDS_REMOTE_COLOR_DESCRIPTION,
+"Talet är en färg numrerad från 0 till 255. "
+IDS_REMOTE_PARAMETER_DESCRIPTION,
+"Talet väljer vilken bild som ska visas. "
+IDS_REMOTE_NUMBER_DESCRIPTION2,
+"Talet är"
+IDS_OF_THE_PICTURE,
+"för bilden"
+IDS_REMOTE_NUMBER_DESCRIPTION3,
+"Om du ändrar talet, då kommer "
+IDS_REMOTE_NUMBER_DESCRIPTION4,
+" ändras efter det. "
+IDS_REMOTE_NUMBER_DESCRIPTION5,
+"Du kan ändra fjärrkontroller precis som vanliga tal. "
+IDS_REMOTE_NUMBER_DESCRIPTION6,
+"Detta tal visar "
+IDS_REMOTE_NUMBER_DESCRIPTION7,
+"Du kan inte ändra det som vanliga tal. "
+IDS_REMOTE_NUMBER_DESCRIPTION8,
+"När jag vill sluta ändra brukar jag släppa det på en 0. "
+IDS_REMOTE_PICTURE_DESCRIPTION,
+"Den här filmen visar om "
+IDS_REMOTE_PICTURE_DESCRIPTION2,
+" är på väg att krocka med något annat. "
+IDS_REMOTE_PICTURE_DESCRIPTION3,
+"Det här är en bild av det som "
+IDS_REMOTE_PICTURE_DESCRIPTION4,
+" är på väg att krocka med. Den är svart om det inte blir en krock. "
+IDS_SINCE,
+"Eftersom "
+IDS_REMOTE_NUMBER_DESCRIPTION9,
+"den är bakvänd måste du vända tillbaka den för att pröva det här. "
+IDS_BOOK_KEY_FORWARD_HELP,
+"Du kan bläddra till nästa sida genom att trycka '+' eller mellanslag. "
+IDS_BOOK_KEY_BACKWARD_HELP,
+"Du kan bläddra till föregående sida genom att trycka på '-' tangenten. "
+IDS_BOOK_KEY_BACKWARD_HELP2,
+"Eftersom det ligger på första sidan,"
+IDS_BOOK_KEY_BACKWARD_HELP3,
+"Om antecknings_boken är uppslagen på första sidan,"
+IDS_BOOK_KEY_BACKWARD_HELP4,
+" kan du komma till sista sidan genom att trycka på - tangenten. "
+ IDS_BOOK_KEY_NUMBER_HELP,
+"Du kan bläddra fram till en sida genom att trycka sidans nummer. "
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP,
+"Du kan spara allt du gör på en tom sida. "
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP2,
+"Släpp bara något på en tom sida så blir det en jättebunt med kopior. "
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP3,
+"Allt du lägger in i antecknings_boken sparas där, även om du startar om datorn. "
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP4,
+"Dammis kan ta bort saker som du inte längre vill ha kvar. "
+IDS_BOOK_RIGHT_PAGE_ADDED_HELP5,
+"Varför inte bläddra till en tom sida och prova? "
+IDS_BOOK_PAGE_REMOVED_HELP,
+"Dammis kan ta bort saker från en antecknings_bok. "
+IDS_BOOK_PAGE_REMOVED_HELP2,
+"Du kan få fram honom genom att trycka på F2. "
+IDS_BOOK_PAGE_REMOVED_HELP3,
+"Om du tar bort något av misstag kan Dammis spotta ut det och du kan lägga tillbaka det. "
+IDS_BOOK_LEFT_PAGE_ADDED_HELP,
+"Jag brukar använda vänstersidan för text eller bilder som talar om vad som finns på högersidan. "
+IDS_BOOK_LEFT_PAGE_ADDED_HELP2,
+"Du kan bara släppa en text eller en bild på den. "
+IDS_BOOK_LEFT_PAGE_ADDED_HELP3,
+"Du kan sen snabbt söka upp en sida genom att släppa samma text eller bild. "
+IDS_BOOK_LEFT_PAGE_ADDED_HELP4,
+" är tom så du kan släppa något där. "
+IDS_BOOK_PAGE_TOKEN_HELP,
+"Ett smart sätt att komma till en viss sida "
+IDS_BOOK_PAGE_TOKEN_HELP2,
+" är att släppa "
+IDS_BOOK_PAGE_TOKEN_HELP3,
+" på antecknings_boken. "
+IDS_BOOK_PAGE_TOKEN_HELP4,
+"Du kan bläddra till en sida som det är något på och försöka. "
+IDS_BOOK_PAGE_TOKEN_HELP5,
+"Du kan söka upp en sida med text på genom att släppa ett kort med samma text på antecknings_boken. "
+IDS_BOOK_PAGE_TOKEN_HELP6,
+"Om du släpper text för att söka, räcker det med en bit av texten. "
+IDS_BOOK_PAGE_TOKEN_HELP7,
+"Bara tillräckligt för känna igen sidan. "
+IDS_BOOK_PAGE_NUMBER_HELP,
+"Du kan också bläddra fram till en sida genom att släppa ett sifferkort på en sida med något på. "
+IDS_BOOK_CALLED_HELP,
+"När du trycker på F4 så kommer den senaste antecknings_boken flygande. "
+IDS_BOOK_HELP_GIVEN_HELP,
+"Nu har jag berättat allt jag vet om antecknings_böcker. "
+IDS_BOOK_HELP_GIVEN_HELP2,
+"Om du vill att jag ska berätta allt jag vet om antecknings_böcker, tryck då två gånger på F1 samtidigt som du pekar på en antecknings_bok. "
+IDS_BOOK_CONTAINING,
+"en antecknings_bok"
+IDS_BOOK_DESCRIPTION1,
+"Den kan innehålla allting, även andra antecknings_böcker"
+IDS_BOOK_DESCRIPTION2,
+"Den här antecknings_boken är full med bilder"
+IDS_BOOK_DESCRIPTION3,
+"Den här antecknings_boken är full med sensorer och fjärrkontroller"
+IDS_BOOK_DESCRIPTION4,
+"den är full med exempel på program"
+IDS_BOOK_DESCRIPTION5,
+"Det är lagrat i filen "
+IDS_PAGES,
+" sidor"
+IDS_IT_CONTAINS_REMOTE,
+"Den innehåller fjärrkontroller för "
+IDS_BLANK_NOTEBOOK,
+"Tom\rAntecknings_bok"
+IDS_MAIN_BOOK_DESCRIPTION,
+"Detta är antecknings_boken som kommer från Verktygslådan. Alla ändringar du gör i den kommer att sparas även om du stänger av datorn"
+IDS_MOVIES_NOTEBOOK,
+"Bilder"
+IDS_SENSORS_NOTEBOOK,
+"Sensorer"
+IDS_BIRDS_NOTEBOOK,
+"Användbara\rFåglar"
+IDS_RECTANGLE_PAGE,
+"Rektangel"
+IDS_BALL_PAGE,
+"Boll"
+IDS_PADDLE_PAGE,
+"Racket"
+IDS_PERSON_WALK_PAGE,
+"Person\rsom går"
+IDS_PERSON_DIZZY_PAGE1,
+"Person\rsom är yr\ri huvudet"
+IDS_PERSON_DIZZY_PAGE2,
+"Person\rsom är yr\ri huvudet"
+IDS_PERSON_DIZZY_PAGE3,
+"Person\rsom är yr\ri huvudet"
+IDS_PERSON_SIT_PAGE1,
+"Person\rsom sitter"
+IDS_PERSON_SIT_PAGE2,
+"Person\rsom sitter"
+IDS_PERSON_SIT_PAGE3,
+"Person\rsom sitter"
+IDS_TOOLBOX_PAGE,
+"Verktygslåda"
+IDS_HELIOCOPTER_PAGE,
+"Helikopter"
+IDS_HELICOPTER_LANDING_PAGE,
+"Helikopter\rLandar"
+IDS_EXPLOSION_PAGE,
+"Explosion"
+IDS_BOMB_PAGE,
+"Bomb"
+IDS_HOUSE_SIDE_PAGE1,
+"Husets\rsida"
+IDS_HOUSE_TOP_PAGE1,
+"Husets\rovansida"
+IDS_HOUSE_SIDE_PAGE2,
+"Husets\rsida"
+IDS_HOUSE_TOP_PAGE2,
+"Husets\rovansida"
+IDS_HOUSE_SIDE_PAGE3,
+"Husets\rsida"
+IDS_HOUSE_TOP_PAGE3,
+"Husets\rovansida"
+IDS_ROBOT_PAGE,
+"Robot"
+IDS_NEST_PAGE,
+"Fågelbo"
+IDS_BIRD_PAGE,
+"Fågel"
+IDS_MOUSE_PAGE,
+"Mus"
+IDS_VACUUM_PAGE,
+"Dammsugare"
+IDS_EXPANDER_PAGE,
+"Pump"
+IDS_COPIER_PAGE,
+"Trollstav"
+IDS_MARTIAN_PAGE1,
+"Marsmänniska"
+IDS_MARTIAN_PAGE2,
+//"Marsmänniska"
+"Raket"
+IDS_TRUCK_PAGE1,
+"Lastbil"
+IDS_TRUCK_PAGE2,
+"Lastbil"
+IDS_TRUCK_PAGE3,
+"Lastbil"
+IDS_THOUGHT_BUBBLE_PAGE,
+"Tankebubbla"
+IDS_TALK_BALLOON_PAGE,
+"Pratbubbla"
+IDS_PLATE_PAGE,
+"Knapp" //"Bricka"
+IDS_PAD_PAGE,
+"Kort"
+IDS_BOOK_PAGE,
+"Antecknings_bok"
+IDS_FRAME_PAGE,
+"Ram"
+IDS_ARM_PAGE,
+"Arm"
+IDS_HAND_PAGE1,
+"Hand"
+IDS_HAND_PAGE2,
+"Hand"
+IDS_SWITCH_PAGE,
+"Strömbrytare"
+IDS_WIRE_PAGE,
+"Tråd"
+IDS_FLOWER_PAGE,
+"Blomma"
+IDS_TREE_PAGE,
+"Träd"
+IDS_TRAFFIC_LIGHT_PAGE,
+"Trafikljus"
+IDS_MOUSE_X_SHORT_LABEL,
+"Mus höger"
+IDS_MOUSE_Y_SHORT_LABEL,
+"Mus upp"
+IDS_MOUSE_LEFT_BUTTON_SHORT_LABEL,
+"Vänster klick"
+IDS_MOUSE_MIDDLE_BUTTON_SHORT_LABEL,
+"Mitten klick"
+IDS_MOUSE_RIGHT_BUTTON_SHORT_LABEL,
+"Höger klick"
+IDS_MOUSE_LEFT_BUTTON_DOWN_SHORT_LABEL,
+"Vänster ner"
+IDS_MOUSE_MIDDLE_BUTTON_DOWN_SHORT_LABEL,
+"Mitten ner"
+IDS_MOUSE_RIGHT_BUTTON_DOWN_SHORT_LABEL,
+"Höger ner"
+IDS_KEYBOARD_BUTTON_SHORT_LABEL,
+"Tangent"
+IDS_LAST_KEYSTROKE_SHORT_LABEL,
+"Senaste tangent"
+IDS_SHIFT_DOWN_SHORT_LABEL,
+"Shift ner"
+IDS_CONTROL_DOWN_SHORT_LABEL,
+"Kontroll ner"
+IDS_TIMER_SHORT_LABEL,
+"Tidtagare"
+IDS_RANDOM_SHORT_LABEL,
+"Slump"
+IDS_HAND_VISIBLE_SHORT_LABEL,
+"Hand?"
+IDS_CLIPBOARD_SHORT_LABEL,
+"Urklipp"
+IDS_AVENUE_SHORT_LABEL,
+"Gata"
+IDS_STREET_SHORT_LABEL,
+"Gata"
+IDS_SOUND_ON_SHORT_LABEL,
+"Ljud?"
+IDS_LETTER_SIZE_SHORT_LABEL,
+"Storlek för bokstäver"
+IDS_READING_SPEED_SHORT_LABEL,
+"Hastighet för tal"
+IDS_MARTIAN_ADVICE_LEVEL_SHORT_LABEL,
+"Martys tal"
+IDS_PROGRAMMER_HEAD_SHORT_LABEL,
+"Ditt huvud"
+IDS_SCREEN_SIZE_SHORT_LABEL,
+"Fönsterstorlek"
+IDS_SYSTEM_SPEED_SHORT_LABEL,
+"Hastighet för ToonTalk"
+IDS_CITY_SIZE_SHORT_LABEL
+"Storlek på stad"
+IDS_SYSTEM_SLEEP_SHORT_LABEL,
+"Tid för varje filmruta"
+IDS_MOUSE_BUTTONS_SHORT_LABEL,
+"Musknappar"
+IDS_LEGO_SERIAL_PORT_SHORT_LABEL,
+"Seriell port"
+IDS_MARTIAN_FONT_SHORT_LABEL,
+"Martys typsnitt"
+IDS_MOUSE_X_LONG_LABEL,
+"Musens\rhastighet\råt höger"
+IDS_MOUSE_Y_LONG_LABEL,
+"Musens\rhastighet\ruppåt"
+IDS_MOUSE_LEFT_BUTTON_LONG_LABEL,
+"Musens\rvänstra\rknapp"
+IDS_MOUSE_MIDDLE_BUTTON_LONG_LABEL,
+"Musens\rmitt\rknapp"
+IDS_MOUSE_RIGHT_BUTTON_LONG_LABEL,
+"Musens\rhögra\rknapp"
+IDS_MOUSE_LEFT_BUTTON_DOWN_LONG_LABEL,
+"Musens\rvänstra\rknapp\rnere"
+IDS_MOUSE_MIDDLE_BUTTON_DOWN_LONG_LABEL,
+"Musens\rmitt\rknapp\rnere"
+IDS_MOUSE_RIGHT_BUTTON_DOWN_LONG_LABEL,
+"Musens\rhögra\rknapp\rnere"
+IDS_KEYBOARD_BUTTON_LONG_LABEL,
+"Nyss\rtryckt\rtangent"
+IDS_LAST_KEYSTROKE_LONG_LABEL,
+"Senaste\rtangenttryck"
+IDS_SHIFT_DOWN_LONG_LABEL,
+"Shift\rnere"
+IDS_CONTROL_DOWN_LONG_LABEL,
+"Kontroll\rnere"
+IDS_TIMER_LONG_LABEL,
+"Tusendels-\rsekunder\rsedan\rsenaste\rfilmruta"
+IDS_RANDOM_LONG_LABEL,
+"Tal\rmellan\r0 och 1000"
+IDS_HAND_VISIBLE_LONG_LABEL,
+"Hand\rsynlig?"
+IDS_CLIPBOARD_LONG_LABEL,
+"Till och från\randra\rprogram"
+IDS_AVENUE_LONG_LABEL,
+"Min\radress"
+IDS_STREET_LONG_LABEL,
+"Min\radress"
+IDS_SOUND_ON_LONG_LABEL,
+"Ljud\rpå?"
+IDS_LETTER_SIZE_LONG_LABEL,
+"Storlek\rpå\rMartys\rbokstäver"
+IDS_READING_SPEED_LONG_LABEL,
+"Hastighet\rför\rMartys\rtal"
+IDS_MARTIAN_ADVICE_LEVEL_LONG_LABEL,
+"Hur mycket\rMarty pratar"
+IDS_PROGRAMMER_HEAD_LONG_LABEL,
+"Utseendet\rpå\rditt\rhuvud"
+IDS_SCREEN_SIZE_LONG_LABEL,
+"Fönstrets\rstorlek"
+IDS_SYSTEM_SPEED_LONG_LABEL,
+"ToonTalks\rhastighet"
+IDS_CITY_SIZE_LONG_LABEL
+"Stadens\rstorlek"
+IDS_SYSTEM_SLEEP_LONG_LABEL,
+"Tid\rför\rfilmruta"
+IDS_MOUSE_BUTTONS_LONG_LABEL,
+"Musknappens\ranvändning"
+IDS_LEGO_SERIAL_PORT_LONG_LABEL,
+"Seriell\rport"
+IDS_MARTIAN_FONT_LONG_LABEL,
+"Martys\rtypsnitt"
+IDS_ANY_PICTURE,
+"vilken bild som helst"
+IDS_PICT_OF,
+"en bild på"
+IDS_MOVIE_OF,
+"en film på"
+IDS_BLANK_PICTURE_OF,
+"en tom bild på"
+IDS_PICT_DESCRIPTION1,
+" bilder ovanpå"
+IDS_PICT_DESCRIPTION2,
+" med en bild ovanpå"
+//IDS_BEGIN_THE,
+//""
+//IDS_AND_THE,
+//"Och "
+
+IDS_THING_ON_TOP1,
+ "det"
+IDS_THING_ON_TOP2,
+"som är högs upp är "
+//"saken som är ovanpå är "
+//" det som är ovanpå är "
+
+IDS_ON_THE_BACK,
+"på baksidan"
+IDS_THING_ON_THE_BACK1,
+"det"
+IDS_THING_ON_THE_BACK2,
+"som finns på baksidan är "
+//"saken som är på baksidan är "
+//" det som är på baksidan är "
+IDS_FLIPPING_MOVIE,
+"en bild som vänds"
+IDS_FLIP_SIDE_OF,
+"den andra sidan av"
+IDS_PICT_BLANKED_TB_HELP2,
+"Tomma bilder är användbara inuti tankebubblor. "
+IDS_PICT_BLANKED_TB_HELP3,
+"Roboten med en tom bild i sin tankebubbla kommer att ta emot vilken bild som helst i det fack han arbetar med. "
+IDS_PICT_ADDED_PICTURE_HELP,
+"Visste du att du kan sätta ihop två bilder genom att släppa en bild på en annan? "
+IDS_PICT_REMOVED_PICTURE_HELP,
+"Du kan ta bort en bild från en bild genom att använda Dammis dammsugaren "
+IDS_PICT_REMOVED_PICTURE_HELP2,
+"Du kan hämta Dammis genom att trycka på F2. "
+IDS_PICT_CHANGED_KEY_HELP,
+"Den här bilden är verkligen "
+IDS_PICT_CHANGED_KEY_HELP2,
+"Du kan växla mellan dem "
+IDS_PICT_CHANGED_KEY_HELP3,
+"En del bilder kan ändras "
+IDS_PICT_CHANGED_KEY_HELP4,
+"genom att trycka på + eller - när den är markerad eller du håller i den. "
+IDS_MOVIES,
+" bilder"
+IDS_PICT_COLOR_KEY_HELP,
+//"Den här bilden är faktiskt en rektangel. "  // revised 8/26/97
+"Den här bilden är en färglagd geometrisk figur. "
+IDS_PICT_COLOR_KEY_HELP2,
+//"En del bilder är faktiskt bara rektanglar. "
+"En del bilder är färglagda geometriska figurer. "
+IDS_PICT_COLOR_KEY_HELP3,
+"Du kan ändra färgen genom att trycka + eller -. "  // revised 081199
+IDS_EXPANDER_ON_PICTURE_HELP,
+"Pumpas Cykelpumpen kan få en bild att växa, krympa eller bli utsträckt. "
+IDS_EXPANDER_ON_PICTURE_HELP2,
+"Du kan hämta honom genom att trycka F3. "
+IDS_PICT_TOSSED_HELP,
+"Du kan ge den här en knuff genom att trycka på "
+IDS_PICT_TOSSED_HELP2,
+"Du kan knuffa till en bild genom att trycka "
+IDS_PICT_FLIPPED_HELP,
+"Du kan vända en bild genom att trycka "
+IDS_PICT_FLIPPED_HELP2,
+" när du håller en bild. "
+IDS_PICT_FLIPPED_BACK_HELP,
+"Du kan vända tillbaka en bild genom att trycka "
+IDS_AGAIN,
+" igen"
+IDS_PICT_FLIPPED_BACK_HELP2,
+" när du håller en bild som är vänd. "
+IDS_PICT_PROGRAM_ADDED_HELP,
+"Robotar kan arbeta på baksidan av bilder. "
+IDS_PICT_PROGRAM_ADDED_HELP2,
+"Släpp dom bara på baksidan. Och lådor för dem att arbeta i också. "
+IDS_PICT_PROGRAM_ADDED_HELP3,
+"Robotarna kommer att börja arbeta när du vänder tillbaka bilderna och släpper dem. "
+IDS_PICT_PROGRAM_ADDED_HELP4,
+"Det är så jag gör \"smarta\" bilder som kan studsa, explodera, växa, eller vad jag programmerar dem till. "
+IDS_PICT_PROGRAM_REMOVED_HELP,
+//"Dammis kan ta bort de saker du lagt på baksidan av en bild. " // revised 8/26/97
+"Du kan ta bort saker från baksidan av en bild med din hand eller med Dammis. "
+IDS_PICT_HELP_GIVEN_HELP,
+"Nu har jag sagt allt jag vet om bilder. "
+IDS_PICT_HELP_GIVEN_HELP2,
+"Om du vill att jag ska repetera allt jag har berättat om bilder så tryck två gånger på F1 medan du pekar på en bild. "
+IDS_ABORT_CANT_FLIP_SCALE,
+//"musknapparna får ingenting att hända när du håller i en våg"     // revised 8/26/97
+"du kan inte ändra en våg genom att klicka musknapparna"
+IDS_X_SHORT_LABEL,
+"Åt höger"
+IDS_Y_SHORT_LABEL,
+"Uppåt"
+IDS_X_SPEED_SHORT_LABEL,
+"Hastighet åt höger"
+IDS_Y_SPEED_SHORT_LABEL,
+"Hastighet uppåt"
+IDS_WIDTH_SHORT_LABEL,
+"Bredd"
+IDS_HEIGHT_SHORT_LABEL,
+"Höjd"
+IDS_PARAMETER_SHORT_LABEL,
+"Bild #"
+IDS_COLLIDE_SHORT_LABEL,
+"Krocka?"
+IDS_COLLIDE_WHO_SHORT_LABEL,
+"Träffa vem?"
+IDS_X_COLLIDE_SHORT_LABEL,
+"Krocka till höger?"
+IDS_Y_COLLIDE_SHORT_LABEL,
+"Krocka uppåt?"
+IDS_APPEARANCE_SHORT_LABEL,
+"Utseende"
+IDS_VISIBLE_SHORT_LABEL,
+"Synlig?"
+IDS_END_OF_ANIMATION_SHORT_LABEL,
+"Färdig?"
+IDS_GRASPED_SHORT_LABEL,
+"Ska den hållas?"
+IDS_SELECTED_SHORT_LABEL,
+"Vald?"
+IDS_RELEASED_SHORT_LABEL,
+"Släppt?"
+IDS_X_LONG_LABEL,
+"Från\rvänster\rsida"
+IDS_Y_LONG_LABEL,
+"Nerifrån"
+IDS_X_SPEED_LONG_LABEL,
+"Hastighet\råt\rhöger"
+IDS_Y_SPEED_LONG_LABEL,
+"Hastighet\ruppåt"
+IDS_WIDTH_LONG_LABEL,
+"Bredd"
+IDS_HEIGHT_LONG_LABEL,
+"Höjd"
+IDS_PARAMETER_LONG_LABEL,
+"Vilken\rbild"
+IDS_COLLIDE_LONG_LABEL,
+"Krockar\rden?"
+IDS_COLLIDE_WHO_LONG_LABEL,
+"Träffa\rvem?"
+IDS_X_COLLIDE_LONG_LABEL,
+"Vänster\rhöger\rträff?"
+IDS_Y_COLLIDE_LONG_LABEL,
+"Upp\rner\rträff?"
+IDS_APPEARANCE_LONG_LABEL,
+"Utseende"
+IDS_VISIBLE_LONG_LABEL,
+"Synlig?"
+IDS_END_OF_ANIMATION_LONG_LABEL,
+"Animation\rfärdig?"
+IDS_GRASPED_LONG_LABEL,
+"Hålls\ri\rhand?"
+IDS_SELECTED_LONG_LABEL,
+"Vald?"
+IDS_RELEASED_LONG_LABEL,
+"Nyligen\rsläppt?"
+IDS_ABORT_PICTURE_FLIPPED_OVER,
+//"bilden är vänd"  // revised 8/26/97
+"du kan inte lägga bilder på baksidan av en bild"
+IDS_ABORT_PICTURE_NOT_FLIPPED_OVER,
+//"bilden är inte vänd till baksidan"  // revised 8/26/97
+"du kan bara lägga till robotar och lådor på baksidan av en bild"
+IDS_ABORT_ROBOT_CANT_FIND_TOOL,
+"han hade problem att hitta vilket verktyg den skulle använda"
+IDS_ABORT_ROBOT_CANT_RELEASE,
+"han försökte släppa något som den inte höll i"
+ IDS_ROBOT_PROBLEMS_RELEASING,
+"han hade problem att släppa något"
+IDS_ROBOT_DESCRIBE1,
+"en robot utan tankebubbla"
+IDS_ROBOT_DESCRIBE2,
+"en robot som vill "
+IDS_ROBOT_DESCRIBE3,  // preceeding . removed 3/11/97
+"Om den får en sådan låda kommer han "
+IDS_ROBOT_DESCRIBE4,
+"Annars kommer han att ge lådan till roboten bakom honom i kön. "
+IDS_ROBOT_DESCRIBE5_1,
+"den"
+IDS_ROBOT_DESCRIBE5_2,
+"robot vill "
+IDS_STACK_OF,
+"en bunt "
+IDS_PICK_UP_HELP,
+"Du kan plocka upp"
+IDS_PICK_UP_HELP2,
+"genom att klicka"
+//IDS_HOLDING,
+//" håller "
+IDS_DROP_HELP,
+"Du kan släppa"
+//"Du kan släppa den genom att trycka på"
+
+IDS_ABORT_TEXT_ALREADY_EMPTY,
+"texten är redan tom"
+IDS_ABORT_TEXT_TOO_LONG,
+"texten är för lång"
+//IDS_TEXT_BLANKED_TB_HELP,
+//"Eftersom det tomma textkortet ligger i en tankebubbla kommer roboten att ta emot vilken text som helst på den platsen. "
+IDS_TEXT_BLANKED_TB_HELP2,
+"Tomma textkort är användbara inuti tankebubblor. "
+IDS_TEXT_BLANKED_TB_HELP3,
+"Roboten, som har ett tomt textkort i sin tankebubbla, kommer att ta emot vilken text som helst på ett kort i samma fack på lådan han arbetar med. "
+IDS_TEXT_LETTERS_ADDED_HELP,
+"Du kan lägga till bokstäver till det kortet genom att skriva en bokstav. "
+IDS_TEXT_LETTERS_ADDED_HELP2,
+"Du kan också lägga till bokstäver medan "
+IDS_TEXT_LETTERS_ADDED_HELP3,
+" du håller i ett textkort. "
+IDS_TEXT_LETTERS_REMOVED_HELP,
+"Du kan ta bort bokstäver genom att trycka på mellanslag. "
+IDS_TEXT_MADE_MULTIPLE_LINES_HELP,
+"Du kan få texten att byta rad genom att trycka på Enter. "
+IDS_TEXT_CONCATENATION_HELP,
+"Du kan sätta ihop två textkort genom att släppa det ena på det andra. "
+IDS_TEXT_NUMBER_CONCATENATION_HELP,
+"Om du släpper siffror på det här kommer de att läggas till texten. "
+IDS_TEXT_NUMBER_CONCATENATION_HELP2,
+"Till exempel: om du släpper "
+IDS_TEXT_NUMBER_CONCATENATION_HELP3,
+" på den här så får du "
+IDS_TEXT_NUMBER_CONCATENATION_HELP4,
+"'. "
+IDS_TEXT_NUMBER_CONCATENATION_HELP5,
+"Om du släpper en siffra på ett textkort så får du en bokstav längre fram i alfabetet. "
+IDS_TEXT_NUMBER_CONCATENATION_HELP6,
+"Till exempel, om du släpper 3 på ABC får du ABF. "
+ IDS_TEXT_HELP_GIVEN_HELP,
+"Nu har jag berättat allt jag vet om textkort. "
+IDS_TEXT_HELP_GIVEN_HELP2,
+"Om du vill att jag ska berätta allt igen, tryck då på F1 två gånger medan du pekar på ett textkort. "
+IDS_ABORT_TEXT_BAD_INDEX,
+"siffran är större än längden på texten"
+IDS_EMPTY_THOUGHT_BUBBLE_DESCRIPTION,
+"tom tankebubbla"
+IDS_THOUGHT_BUBBLE_DESCRIPTION,
+"tankebubbla som innehåller "
+//IDS_GENERIC_TOOL_HELP,
+//"Jag ska berätta mer om hur man använder "
+//IDS_GENERIC_TOOL_HELP2,
+//" om du plockar upp den. "
+IDS_EXPANDER_DESCRIPTION,
+"Pumpas cykelpumpen"
+IDS_EXPANDER_DESCRIPTION1,
+"Pumpas"
+IDS_EXPANDER_GREW_ITEM_HELP,
+//"Pumpas kan ändra storleken på saken han är över. "
+"Pumpas kan göra saker små eller stora, långa eller korta, och tjocka eller smala. " 
+
+IDS_EXPANDER_GREW_ITEM_HELP2,
+"Om du håller ner "
+IDS_EXPANDER_GREW_ITEM_HELP3,
+"Pumpas kommer att göra"
+//IDS_BIGGER,
+//" större"
+//IDS_EXPANDER_SHRUNK_ITEM_HELP,
+//"Om du håller ner "
+//IDS_EXPANDER_SHRUNK_ITEM_HELP2,
+//" Pumpas kommer att göra "
+//IDS_EXPANDER_SHRUNK_ITEM_HELP3,
+//"Men nästa gång du trycker ner den kommer "
+//IDS_EXPANDER_SHRUNK_ITEM_HELP4,
+//" att bli mindre. "
+//IDS_EXPANDER_GREW_Y_HELP,
+//"Om du trycker på"
+//IDS_EXPANDER_GREW_Y_HELP3,
+//" bara att bli längre"
+//IDS_EXPANDER_GREW_X_HELP4,
+//"Men nästa gång blir den bredare istället. "
+IDS_EXPANDER_CALLED_HELP,
+"Om du någonsin vill att Pumpas ska hoppa till din "
+IDS_EXPANDER_CALLED_HELP2,
+" så tryck bara på F3. "
+IDS_EXPANDER_CALLED_HELP3,
+"Han skyndar sig om du trycker på F3 två gånger. "
+IDS_EXPANDER_HELP_GIVEN_HELP,
+"Jag har sagt allt jag vet om Pumpas. "
+IDS_EXPANDER_HELP_GIVEN_HELP2,
+"Jag säger allt jag sagt om Pumpas igen om du trycker två gånger på F1 samtidigt som du håller i honom. "
+ IDS_VACUUM_DESCRIPTION,
+"Dammis dammsugaren"
+IDS_VACUUM_DESCRIPTION1,
+"Dammis"
+IDS_VACUUM_RESTORE_HELP,
+"Dammis kan spotta ut "
+IDS_VACUUM_RESTORE_HELP2,
+"det han senast sög upp"
+IDS_VACUUM_RESTORE_HELP3,
+"om du klickar på"
+//IDS_VACUUM_RESTORE_HELP4,
+//"Dammis spottar ut saker om man försöker att suga upp golvet. "
+IDS_VACUUM_BLANK_HELP,
+"Dammis kommer att "
+IDS_VACUUM_BLANK_HELP2,
+//"ett text- eller sifferkort eller en rensad låda under honom"
+"något under hans näsa"
+IDS_VACUUM_BLANK_HELP3,
+"om du klickar på"
+IDS_VACUUM_SUCK_HELP,
+//"Om du klickar på "
+"Om du, medan du håller i honom, klickar på "
+IDS_VACUUM_SUCK_HELP2,
+" kommer Dammis att suga upp "
+//IDS_VACUUM_SUCK_HELP3,
+//"Han kommer att spotta ut det igen om du försöker dammsuga golvet. "
+ IDS_VACUUM_SUCK_HELP4,
+"det som är under honom. "
+//IDS_VACUUM_SUCK_ITEM_HELP,
+//"Om du klickar på "
+//IDS_VACUUM_SUCK_ITEM_HELP2,
+//" kommer Dammis att "
+//IDS_VACUUM_SUCK_ITEM_HELP3,
+//"Han spottar ut det om du försöker att suga upp golvet. "
+// IDS_OUT_OF,
+//" utav "
+IDS_VACUUM_CALLED_HELP,
+"Om du någonsin vill att Dammis ska springa till din "
+IDS_VACUUM_CALLED_HELP2,
+" så tryck bara på F2 knappen. "
+IDS_VACUUM_CALLED_HELP3,
+"Om du trycker två gånger på F2 kommer han riktigt fort. "
+IDS_VACUUM_HELP_GIVEN_HELP,
+"Jag har sagt allt jag vet om Dammis. "
+IDS_VACUUM_HELP_GIVEN_HELP2,
+"Jag använder honom ibland till att flytta saker mellan hus. "
+IDS_VACUUM_HELP_GIVEN_HELP3,
+"Om du vill att jag ska berätta allt om Dammis igen, så tryck på F1 två gånger. "
+IDS_COPIER_APPLIED_HELP,
+"Du kan kopiera "
+IDS_COPIER_APPLIED_HELP2,
+"det som är under trollstavens topp"
+IDS_COPIER_APPLIED_HELP3,
+" genom att klicka på "
+IDS_COPIER_RELEASED_HELP,
+"Du kan ställa in "
+IDS_COPIER_RELEASED_HELP2,
+"det du kopierar"
+IDS_COPIER_RELEASED_HELP3,
+" ner genom att klicka på"
+IDS_COPIER_RELEASED_HELP4,
+"Ett andra klick kommer att ställa ner trollstaven. "
+IDS_COPIER_CALLED_HELP,
+"Om du någonsin vill att trollstaven ska flytta till din "
+IDS_COPIER_CALLED_HELP2,
+" så tryck på F5. "
+IDS_COPIER_CALLED_HELP3,
+"Den skyndar sig verkligen om du trycker på F5 två gånger. "
+IDS_COPIER_HELP_GIVEN_HELP,
+"Det är allt jag kan säga om trollstavar. "
+IDS_COPIER_HELP_GIVEN_HELP2,
+"Om du vill att jag ska repetera allt det jag sagt om trollstaven så tryck två gånger på F1. "
+IDS_TRUCK_RECEIVED_CARGO_HELP,
+"Efter att du lastat en lastbil med en robot och en låda som han kan arbeta med, kommer lastbilens manskap att köra iväg och bygga ett nytt hus. "
+IDS_TRUCK_RECEIVED_ROBOT_HELP,
+"Om du släpper en robot eller ett robotlag på lastbilen, kommer de att bli placerade på golvet i det nya huset. "
+IDS_TRUCK_RECEIVED_CUBBY_HELP,
+"Om du släpper en låda på lastbilen, kommer den att bli placerad på golvet i det nya huset. "
+IDS_TRUCK_RECEIVED_HOUSE_PICTURE_HELP,
+"Om du släpper en bild av ett hus på lastbilen kommer lastbilens manskap att bygga ett hus som ser ut som det på bilden. Du kan hitta bilder på hus i antecknings_boken som finns på sidan 2 i antecknings_boken som kommer från verktygslådan. "
+IDS_TRUCK_RECEIVED_ADDRESS_HELP,
+"Om du släpper ett gatunummer på lastbilen kommer lastbilens manskap bygga ett hus så nära den angivna adressen de kan. Om du inte ger dem en adress bygger de huset någonstans i närheten. "
+IDS_TRUCK_RECEIVED_ADDRESS_HELP2,
+"På sidan 4 i anteckningsboken kan du hitta adressen till det hus du är i. En adress ändrar sig om du släpper en siffra på det."
+IDS_TRUCK_RECEIVED_ROBOT_HELP2,
+"Om du släpper en rad robotar på lastbilen, kommer manskapet att ställa robotarna på det nya husets golv och ge dem en låda från lastbilen. "
+IDS_TRUCKS_CARGO_REMOVED_HELP,
+"Du kan ta saker från en lastbil med handen eller med Dammis hjälp. "
+IDS_TRUCK_HELP_GIVEN_HELP,
+"Jag har sagt allt jag vet om lastbilar. "
+IDS_TRUCK_HELP_GIVEN_HELP2,
+"Om du vill att jag ska repetera allt jag sagt om lastbilar ska du trycka på F1 samtidigt som du pekar på en lastbil. "
+//IDS_WELCOME_MESSAGE,
+//"Välkommen till ToonTalk(tm)! Använd musknapparna för att flyga. Detta är svensk version 1.0. Copyright (c) 1992, 1996, Ken Kahn. All rights reserved. Dela inte ut kopior. Se README.TXT filen för mer information."
+IDS_VACUUM_SUCK_GENERIC,
+"Använda Dammis genom att flytta hans mun över någonting. "
+IDS_EXAMPLES_NOTEBOOK,
+"Exempel"
+IDS_SAID_ENOUGH,
+"... Jag har sagt nog. "
+IDS_SCALE_TO_LEFT,
+"en våg lutad åt vänster"
+IDS_SCALE_TO_RIGHT,
+"en våg lutad åt höger"
+IDS_SCALE_BALANCED,
+"en balanserad våg"
+IDS_SCALE_MOVING,
+"en vacklande våg"
+IDS_SCALE_USE1,
+"Vågar kan användas till att jämföra saker. "
+IDS_SCALE_USE2,
+"Sätt ihop tre lådor för att testa den. Sätt sedan en våg i mittenhålet. "
+IDS_SCALE_USE3,
+"Släpp siffror i hålen bredvid vågen och se hur vågen lutar. "
+IDS_SCALE_USE4,
+"Man kan jämföra text också. "
+IDS_SCALE_KEYBOARD_HELP,
+"Om en våg vacklar kan du få vågen att luta åt olika håll genom att trycka på mellanslag. "
+IDS_ROBOT_TRAIN1,
+"Detta är vad jag gör om jag vill lära en robot någonting. "
+IDS_ROBOT_TRAIN2,
+"Jag startar med att ge honom en låda av den typ jag vill han ska arbeta med. "
+IDS_ROBOT_TRAIN3,
+"Roboten kommer då att visa en värld med bara lådan han fick och verktygslådan med dess vänner. "
+IDS_ROBOT_TRAIN4,
+"Sedan låter jag roboten göra det jag vill att den ska göra, till exempel, byta lådan eller att lasta en lastbil. "
+IDS_ROBOT_TRAIN5,
+"När jag är klar trycker jag på 'Esc' tangenten och roboten kan nu göra det jag lärde den. "
+IDS_ROBOT_ACCEPTS,
+"Denna robot tar endast emot "
+IDS_ROBOT_ACCEPTS2,
+"En robot tar endast emot en låda om den passar den låda som finns i hans tankebubbla. "
+IDS_ROBOT_LESS_FUSSY1,
+"Du kan göra honom mindre petig genom att använda Dammis på hans tankebubbla. "
+IDS_ROBOT_LESS_FUSSY2,
+"Allting i hans tankar måste finnas i lådan innan han gör det. "
+IDS_ROBOT_LESS_FUSSY3,
+"Om hans tankebubbla saknar någonting, tar han emot vad som helst i samma låda. "
+IDS_ROBOT_TRY_OUT1,
+"Jag testar oftast en robot efter att jag tränat den. "
+IDS_ROBOT_TRY_OUT2,
+"Släpp bara en låda som han tycker om på honom och se hur han arbetar. "
+IDS_ROBOT_TRY_OUT3,
+"Om du vill stoppa honom, tag bara tag i honom. (Eller slå av strömmen med F8) "
+IDS_ROBOT_SAVE,
+"Efter att jag testat en robot brukar jag spara honom genom att släppa honom i en antecknings_bok. "
+IDS_ROBOT_LOAD_TRUCK1,
+"Jag vill ofta ha många robotar som arbetar åt mig. "
+IDS_ROBOT_LOAD_TRUCK2,
+"Det skulle bli för rörigt att ha alla på golvet, "
+IDS_ROBOT_LOAD_TRUCK3,
+"så jag skickar iväg dem till nya hus genom att släppa dem i lastbilar. "
+IDS_ROBOTS_LINE_UP1,
+"Robotar är ganska korkade. "
+IDS_ROBOTS_LINE_UP2,
+"De kan bara tänka på en sak. "
+IDS_ROBOTS_LINE_UP3,
+"De kan bara göra det som de är tränade till att göra. "
+IDS_ROBOTS_LINE_UP4,
+"Lyckligtvis kan ett lag av robotar göra ganska mycket. "
+IDS_ROBOTS_LINE_UP5,
+"Om jag släpper en robot på en annan robot hamnar han bakom den andra. "
+IDS_ROBOTS_LINE_UP6,
+"Om en robot inte tycker om lådan han har fått, ger han det till roboten bakom honom i kön. "
+IDS_ROBOTS_LINE_UP7,
+"Den första roboten i kön som tycker om lådan, börjar att arbeta med den. "
+IDS_ROBOTS_LINE_UP8,
+"När han är klar ger han tillbaka den till den första roboten i kön. Han ger den till sig själv om han arbetar ensam. "
+IDS_ROBOTS_LINE_UP9,
+"På sidan 6 i antecknings_boken, som kommer ur verktygslådan, hittar du en antecknings_bok med robotlag som jag har tränat. "
+IDS_ROBOT_HELP_GIVEN1,
+"Det var nog allt jag kunde komma att tänka på angående robotar. "
+IDS_ROBOT_HELP_GIVEN2,
+"Om du vill att jag ska repetera allt jag vet om robotar så tryck två gånger på F1 medan du pekar på en robot. "
+IDS_ROBOT_BUSY,
+"en upptagen robot som gör det den blev tränad att göra"
+IDS_ROBOT_WAITING_FOR_PICTURE,
+"en robot som väntar på att bilden som finns på baksidan ska bli vänd"
+IDS_ROBOT_WAITING_FOR_ROBOT,
+"en robot som väntar på att en annan robot ska bli klar först"
+IDS_ROBOT_TRAINED_TO,
+"Han har blivit tränad att"
+IDS_ROBOT_WAITING_FOR_ITEM,
+"En robot som väntar på att något ska synas i"
+IDS_HIS_BOX,
+" hans låda"
+IDS_HE_WILL_THEN,
+"Då kommer han att "
+//IDS_ROBOT_WHO_WHEN_GIVEN,
+//"robot som när den får "
+//IDS_WILL_THEN,
+//" kommer då att "
+IDS_MORE_ROBOT_SAID_ENOUGH,
+"Det finns fler robotar, men jag har sagt nog. "
+IDS_PROGRAMMER_ABORT,
+"Det fungerade inte eftersom "
+IDS_ROBOT_ABORT,
+"Roboten stannade eftersom "
+IDS_REMOTE_ROBOT_ABORT,
+// "En robot stannade någonstans eftersom "
+"En robot på något ställe med namnet"
+
+IDS_HELICOPTER_SOUND,
+"Helikopter"
+IDS_BIRD_HATCH_SOUND,
+"Fågel\rkläcks"
+IDS_BIRD_FLY_SOUND,
+"Fågel\rflyger"
+IDS_TRUCK_ENGINE_SOUND,
+"Bil"
+IDS_MAGIC_SOUND,
+"Magi"
+IDS_BE_WOP_SOUND,
+"Be wop"
+IDS_BE_YAW_SOUND,
+"Be yaw"
+IDS_SPIRAL_IN_SOUND,
+"Spiral in"
+IDS_SPIRAL_OUT_SOUND,
+"Spiral ut"
+IDS_BOOK_DROP_SOUND,
+"Dunk"
+IDS_DOOR_CREAK_SOUND,
+"Dörr 1"
+IDS_DUSTBUSTER_SOUND,
+"Dammis"
+IDS_EXPLOSION_SOUND,
+"Explosion"
+IDS_HAND_PUMP_SOUND,
+"Pumpas"
+IDS_OUCH_SOUND,
+"Ouch"
+IDS_PLOP_SOUND,
+"Plop"
+IDS_POP_SOUND,
+"Pop"
+//IDS_SYSTEM_ERROR_SOUND,
+//"Fel"
+IDS_PAGE_TURNING_SOUND,
+"Bläddra"
+IDS_STEP_SOUND,
+"Steg 1"
+IDS_NEAT_EFFECT_SOUND,
+"Effekt"
+IDS_TRUCK_DRIVE_SOUND,
+"Lastbil"
+IDS_BIKE_BELL_SOUND,
+"Ringning"
+IDS_BOING1_SOUND,
+"Boing 1"
+//IDS_BOING2_SOUND,
+//"Boing 2"
+//IDS_BOING3_SOUND,
+//"Boing 3"
+IDS_CALCULATING_SOUND,
+"Data"
+IDS_LOTS_OF_SILLY_SOUNDS_SOUND,
+"Många ljud"
+IDS_WHIT_SOUND,
+"Whit"
+IDS_DEFLATING_SOUND,
+"Pys"
+IDS_DOOR_SOUND,
+"Dörr 2"
+//IDS_DOORKNOB_SOUND,
+//"D=F6rr 3"
+//IDS_STEP2_SOUND,
+//"Steg 2"
+//IDS_STEP3_SOUND,
+//"Steg 3"
+//IDS_STEP4_SOUND,
+//"Steg 4"
+IDS_GLASS_HIGH_SOUND,
+"Glas 1"
+IDS_GLASS_LOW_SOUND,
+"Glas 2"
+//IDS_COUGH_SOUND,
+//"Host"
+//IDS_SAUCER_LANDING_SOUND,
+//"Tefat"
+IDS_SHUTDOWN_SOUND,
+"Stäng av"
+IDS_SPIT_SOUND,
+"Spjutt"
+IDS_SWITCH_SOUND,
+"Omslag"
+IDS_TELEPORT_SOUND,
+"Teleport"
+//IDS_HORSE_TROT_SOUND,
+//"Häst"
+IDS_TWING_SOUND,
+"Twing"
+
+
+IDS_EMPTY_NEST,
+"ett tomt fågelbo"
+IDS_COVERED_NEST,
+"ett bo täckt av "
+IDS_AND,
+"och"
+IDS_REMOVE_FROM_EMPTY_NEST,
+"Varning: en fågel försökte att flytta en bunt från ett tomt bo. "
+IDS_NEST_WITH_EGG,
+"ett fågelbo med ett ägg"
+IDS_CANT_ADD_TO_STACK_OF_NESTS,
+"bunten av fågelbon vill inte ta emot någonting"
+IDS_CANT_ADD_TO_NEST,
+"fågelboet vill inte ta emot någonting"
+IDS_BIRD_TOO_BUSY,
+"fågeln är för upptagen för att kunna ta emot någonting"
+IDS_BIRD_WONT_ACCEPT,
+"fågeln tar endast emot saker som är rektangulära"
+//IDS_EXPECTED_BIRD_IN_BOX,
+//"Förväntade att en fågel skulle vara i en låda, men något annat var där. "
+IDS_BIRDS_NEST_IN_VACUUM,
+"fågelns bo är inuti en dammsugare"
+IDS_BIRDS_NEST_IN_BUBBLE,
+"fågelns bo är inuti en tankebubbla"
+IDS_BIRD_CANT_FIND_NEST,
+"En fågel vill flyga till sitt bo, men kan inte hitta det. "
+IDS_BIRD_RETURNED_TO_OCCUPIED_CUBBY,
+"En fågel försökte återvända till sitt bo i en låda, men det var inte tomt. "
+IDS_BOX_WONT_ACCEPT,
+"lådan tog inte emot något som släpptes på den"
+IDS_TOO_MANY_BOXES_INSIDE_BOXES,
+" Brydde sig inte om att en låda släpptes i en annan låda eftersom det redan fanns för många lådor där."
+IDS_ONLY_BLANK_BOX_CAN_ACCEPT,
+"endast en rensad låda kan ta emot textkort eller sifferkort"
+IDS_BOX_INSIDE_SELF,
+"Ojdå! På något sätt försöker en låda lägga sig i sig själv"
+IDS_CANT_ADD_NON_BOX,
+"en robot trodde att han hade en låda han skulle addera till en annan låda, men han hade något annat istället"
+IDS_TEXT_OR_NUMBER_TO_BOX_HELP,
+"Om du släpper ett sifferkort eller ett textkort på en rensad låda, kommer lådan att förstora texten så att den får en bokstav per hål. "
+IDS_VACUUM_TO_BLANK_HELP,
+"Du kan använda Dammis till att göra en låda tom. "
+IDS_DROP_ON_NUMBER_TO_BREAK_HELP,
+"Du kan bryta en låda i bitar genom att släppa den på en siffra. En del kommer att få lika många hål som siffran och de andra kommer att ha så många som är kvar. "
+IDS_CANT_ADD_TO_BOX_LABEL,
+"du kan inte addera till lådans etikett"
+IDS_UNEXPECTED_NOT_IN_BOX,
+"Något fel med ToonTalk. Det frågades efter storleken på någonting som inte fanns i något av lådans hål. "
+IDS_BOX_DOESNT_HAVE_EXPECTED_HOLE,
+"Något fel. ToonTalk försökte hitta ett hål en låda inte hade"
+IDS_REMOVE_FROM_BOX_BUT_NOT_THERE,
+"Något är fel med ToonTalk eftersom det försökte flytta något från en låda som inte finns i någon låda. "
+IDS_CUBBY_LABEL_TOO_LONG,
+"En etikett på en låda i en antecknings_bok måste vara 255 tecken eller mindre. "
+IDS_FILE_DESCRIBING_BOX_BAD,
+"Något fel med en fil som beskriver en låda. "
+IDS_ADD_TO_BACKGROUND_ALREADY_THERE,
+"Problem med ToonTalk. ToonTalk försökte ta bort något från en bakgrund som inte visste att den var där. "
+//IDS_ADD_TO_BACKGROUND_BUT_ALREADY_THERE,
+//"ToonTalk har problem eftersom det ödslade tid åt att försöka addera något till en bakgrund, som redan kände till det. "
+IDS_REMOVE_PART_BUT_NO_PARTS,
+"Problem med ToonTalk eftersom det försökte ta bort sista delen av något som inte hade någon del kvar. "
+IDS_BOMB_WONT_ACCEPT,
+"bomber tar inte emot någonting alls"
+IDS_ROBOT_TRAINING_LOST,
+"ToonTalk hade problem med att läsa en fil om en antecknings_bok. En robot i antecknings_boken har förlorat sin träning. "
+IDS_CONFUSED_ABOUT_ROBOT_DESCRIPTION,
+"... Ah, förlåt men jag har problem med att förstå vad den här roboten gör. "
+IDS_DO_NOTHING,
+"gör inte något"
+IDS_VACUUM_TO_BLANK,
+"använd Dammis till att rensa"
+IDS_SPECIAL_MAGIC_WAND_USE,
+"använd trollstaven medan du håller kontroll nere på"
+IDS_KEY_WHILE_POINTING,
+" medan du pekar på" // remove " tangent"
+IDS_KEY_AFTER_MOVING,
+" efter att du flyttat till"  // remove " tangent"
+IDS_KEY_WHILE_HOLDING,
+" för att ändra"  // remove " tangent"
+IDS_TO_LABEL_OF,
+" till etiketten för"
+//IDS_NEW,
+//"ny"
+//IDS_FIRST_NEW,
+//"första nya"
+//IDS_NEWEST,
+//"nyaste"
+//IDS_TO_LAST
+//"till sista"
+IDS_MADE_OR_FOUND1,
+" "
+IDS_MADE_OR_FOUND2,
+"saken han gjorde eller hittade"
+//"saker han gjorde eller hittade"
+IDS_ROBOT_IN_TRUCK,
+"roboten i lastbilen"
+IDS_BOX_IN_TRUCK,
+"lådan i lastbilen"
+IDS_HOUSE_PICTURE_IN_TRUCK,
+"bilden på ett hus i lastbilen"
+IDS_AVENUE_IN_TRUCK,
+"gatunumret i lastbilen"
+IDS_STREET_IN_TRUCK,
+"gatunumret i lastbilen"
+IDS_UNKNOWN_IN_TRUCK,
+"något i lastbilen"
+IDS_WHATS_ON,
+//"vad är på"  // revised on 8/26/97
+"det som är på"
+IDS_WHATS_IN,
+//"vad är i"
+"det som är i"
+IDS_PAGE,
+"sida"
+//IDS_OF
+//"av"
+IDS_ROBOT_COULDNT_FIND_ITEM,
+"kunde inte hitta något han skulle ta upp. "
+IDS_ROBOT_COUNT_FIND_NEST,
+"kunde inte hitta ett fågelbo han skulle ta upp. "
+IDS_ROBOT_COULDNT_FIND_PLACE,
+"kunde inte hitta stället han skulle göra något på. "
+IDS_ROBOT_COULDNT_FIND_BIRD,
+"var tränad att ge en fågel något, men nu är inte fågeln där den förväntades att vara. Han kommer att försöka ändå. "
+IDS_ROBOT_EXPECTED_BOX_BUT,
+"förväntade sig en box men hittade något annat istället. "
+IDS_COULDNT_FIND_SOMETHING,
+"ToonTalk kunde inte hitta något. "
+IDS_ROBOT_DIDNT_FIND_ROBOT_IN_TRUCK,
+"trodde att han skulle hitta en annan robot i lastbilen, men det fanns ingen där. "
+//IDS_ROBOT_DIDNT_FIND_BOX_IN_TRUCK,
+//"trodde att han skulle hitta en låda i lastbilen, men det fanns ingen där. "
+//IDS_ROBOT_DIDNT_FIND_HOUSE_PICTURE_IN_TRUCK,
+//"En robot trodde att han skulle hitta en bild på ett hus i lastbilen, men det fanns ingen där. "
+//IDS_ROBOT_DIDNT_FIND_AVENUE_IN_TRUCK,
+//"En robot trodde att han skulle hitta ett gatunummer i lastbilen, men det fanns inget där. "
+//IDS_ROBOT_DIDNT_FIND_STREET_IN_TRUCK,
+//"En robot trodde att han skulle hitta ett gatunummer i lastbilen, men det fanns inget där. "
+//IDS_ROBOT_DIDNT_FIND_UNKNOWN_IN_TRUCK,
+//"En robot trodde att han skulle hitta något i lastbilen, men det fanns inget där. "
+IDS_ROBOT_COULDNT_USE_IN_VACUUM,
+"skulle använda något, men det hade dammsugits upp!"
+IDS_ROBOT_COULDNT_PUT_IN_VACUUM, // was commented out - restored on 280199
+"skulle släppa något över något, men det hade dammsugits upp. "
+IDS_ROBOT_THING_NOT_IN_ROOM,
+"skulle släppa något över något, men det finns inte i rummet längre. "
+IDS_SOMETHING_NOT_IN_NOTEBOOK,
+"förväntade sig att hitta något i en antecknings_bok, men gjorde det inte. "
+IDS_BOX_OR_NEST_MISSING,
+"En robot förväntade sig att hitta en låda, eller ett fullt fågelbo men gjorde det inte. "
+IDS_TOO_MANY_HOLES_FOR_ROBOT,
+"En robot kan inte komma ihåg mer än 254 hål. "
+
+IDS_EMPTY_TEXT,
+"tomt textkort"
+IDS_IN_THOUGHT_BUBBLE_HELP1,
+"Du är nu i robotens tankebubbla. "
+IDS_IN_THOUGHT_BUBBLE_HELP2,
+"Du kan träna roboten genom att visa honom vad han ska göra. "
+IDS_LEFT_THOUGHT_BUBBLE_HELP,
+"För att testa roboten kan du ge honom en likadan låda som finns i hans tankebubbla."
+IDS_RIGHT_MOUSE_BUTTON_WITH_ONE_BUTTON,
+"en musknapp samtidigt som du trycker ner shift"
+IDS_LEFT_BUTTON_WITH_ONE_BUTTON,
+"någon musknapp"
+IDS_THE_LEFT_MOUSE_BUTTON,
+"vänstra musknappen"
+IDS_MIDDLE_BUTTON_WITH_THREE,
+"mellersta musknappen"
+IDS_MIDDLE_BOTTON_WITH_TWO,
+"högra musknappen samtidigt som du trycker ner kontroll ('Ctrl')"
+IDS_MIDDLE_BUTTON_WITH_ONE,
+"någon musknapp samtidigt som du trycker ner kontroll ('Ctrl')"
+IDS_ALL_HOUSES_DESTROYED,
+"Du lyckades förstöra alla hus, så jag byggde några fler. "
+IDS_BAD_HOUSE_VIEW,
+"Något fel i ToonTalk - något hus kan ha försvunnit. "
+IDS_COMMAND_LINE_ODD_ARGS1,
+"Problem med kommandoraden. "
+IDS_COMMAND_LINE_ODD_ARGS2,
+" bryr sig inte om kommandoraden."
+IDS_COMMAND_LINE_H_WRONG1,
+"Kommandoraden har -h "
+IDS_COMMAND_LINE_H_WRONG2,
+" men det kan bara vara -h 0 (skallig), -h 1 (hår), eller -h 2 (keps). "
+IDS_COMMAND_LINE_B_WRONG,
+" är fel antal musknappar. 1, 2, eller 3 är OK. "
+IDS_COMMAND_LINE_UNKNOWN_OPTION,
+"Kommandoraden har okända val: "
+IDS_NO_NAME_IS_YOUR_NAME,
+"Jag uppfattade aldrig ditt namn, så tills vidare kallar jag dig"
+IDS_NO_NAME_IS_YOUR_NAME2,
+ "Namnlös"
+IDS_NO_NAME_IS_YOUR_NAME3,
+ "och sparar allting under det namnet. "
+IDS_TROUBLE_WANT_TO_CONTINUE,
+"Vill du fortsätta trots dessa problem?"
+IDS_TIME_NEGATIVE,
+"ToonTalk har använts så länge att det ställer om dess interna klocka. "
+IDS_OUT_OF_MEMORY,
+"Tyvärr, men minnet tog slut. Du måste starta om. "
+IDS_MEMORY_LOW,
+"Lite minne. Tar bort 20% av minnet som används till att snabba upp saker. "
+IDS_MEMORY_LOW2
+"Lite minne. Tar bort sista delen av minnet som används till att snabba upp saker. "
+IDS_F8_HELP1,
+"Om du någon gång vill stanna alla robotar kan du trycka på F8 för att slå av strömmen. "
+IDS_F8_HELP2,
+"Om du trycker en gång till slår du på strömmen och startar upp dem igen. "
+IDS_F8_HELP3,
+"Samma sak med rörliga bilder och filmer. "
+IDS_EXCUSE_ME1,
+"Uh, ursäkta mig. "
+IDS_EXCUSE_ME2,
+"Umm, ledsen att jag stör. "
+IDS_EXCUSE_ME3,
+"Oj, förlåt. "
+IDS_ROBOT_ON_PICTURE_STOPPED,
+"En robot på baksidan av en bild stannade eftersom "
+// was "A robot on the back of a picture stopped because " or  "En robot på baksidan av en bild stannade eftersom "
+"En robot på baksidan av en bild med namnet"
+IDS_ROBOT_ON_FLOOR_STOPPED,
+//"En robot på golvet stannade eftersom "
+"En robot på golvet med namnet"
+IDS_MOUSE_DIDNT_COME_OUT,
+"Hammarmusen kom inte ut eftersom "
+IDS_TRUCK_DIDNT_LEAVE_BECAUSE,
+"lastbilen körde inte iväg och byggde ett hus eftersom "
+IDS_NUMBER_STACK_WONT_ACCEPT,
+"bunten med sifferkort skulle inte ta emot någonting"
+IDS_NUMBER_WONT_ACCEPT,
+"sifferkortet tog inte emot någonting"
+IDS_NUMBER_UNDERNEATH_IS_NEGATIVE,
+"siffran under lådan är negativ"
+IDS_NUMBER_UNDERNEATH_TOO_BIG,
+"siffran under lådan är större än antalet hål"
+IDS_ONLY_NUMBERS_ON_NUMBERS
+"du kan endast släppa sifferkort på sifferkort eller textkort"
+IDS_TOP_NUMBER_IS_BLANK,
+"det översta sifferkortet är tomt"
+IDS_CANT_DIVIDE_BY_ZERO,
+"du kan inte dela med noll"
+IDS_COMBINED_WITH,
+"som har blivit kombinerat med"
+
+IDS_THOUSANDS_COMMA,
+" " // empty string triggers error messages
+
+IDS_CONVERT_TO_NUMBER_HELP,
+"Om du släpper något på ett tomt sifferkort kommer det att bli omvandlat till en siffra, om det är möjligt. "
+IDS_EQUAL_OPERATOR_ON_NUMBERS,
+"Om du skriver '=' och sedan släpper det på ett annat sifferkort blir det"
+IDS_VACUUM_TO_BLANK_NUMBER,
+"Du kan använda Dammis, dammsugaren, till att rensa en låda. "
+IDS_WHILE_HOLDING_A_NUMBER,
+"samtidigt som du håller ett sifferkort kommer det att vända sig upp och ner. "
+IDS_PRESS_AGAIN_TO_FLIP_BACK,
+"Om du trycker igen vänds det tillbaka. "
+IDS_SENSOR_ARITHMETIC_PROBLEM,
+"En sensor hade problem med aritmetik eftersom "
+IDS_TROUBLE_NUMBER_REMOVED,
+"Numret som orsakade problem har tagits bort. "
+//IDS_THIS_NUMBER,
+//"Detta sifferkort"
+IDS_A_SENSOR,
+"en sensor"
+IDS_A_REMOTE_CONTROL,
+"en fjärrkontroll"
+IDS_FOR,
+"för"
+IDS_AND_COMBINED_WITH,
+"Och den var kombinerad med"
+IDS_SENSOR_UNDERNEATH,
+"en sensor är under"
+IDS_CANT_CHANGE_SENSOR,
+"kan inte ändra värdet på en sensor"
+
+IDS_BALD,
+"skallig"
+IDS_LONG_HAIR,
+"långt hår"
+IDS_HAT,
+"keps"
+IDS_NO_MOUSE_SHORTCUTS,
+"Inga mus\rgenvägar"
+IDS_RIGHT_BUTTON_SHORTCUT,
+"höger knapp\rgenväg"
+IDS_RIGHT_AND_MIDDLE_SHORTCUTS,
+"mitten- & höger\rknapps genvägar"
+IDS_FULL_SCREEN,
+"Fullskärm"
+IDS_COLLIDING_SIDE_OR_NOT,
+"kolliderar på sidan med någonting. "
+IDS_COLLIDING_TOP_OR_NOT,
+"kolliderar med toppen eller bottnen på något. "
+IDS_IF_YOU_CHANGE_APPEARANCE,
+"Om du ändrar utseendet på denna bild så "
+IDS_CHANGE_SAME_WAY,
+"kommer att ändras på samma sätt. "
+IDS_CONTROLLING_WHETHER,
+"Detta är till för att kontrollera huruvida"
+IDS_VISIBLE_PART_OR_NOT,
+"är synlig, delvis synlig eller osynlig. "
+IDS_SPACE_WILL_CHANGE_THEM,
+"Mellanslag byter mellan dem. "
+IDS_ANSWER_QUESTION_ANIMATION,
+"Detta svarar på frågan om animationen av"
+IDS_IS_FINISHED
+"är klar. "
+IDS_WHETHER_HAND_VISIBLE,
+"Detta visar om din hand är synlig. "
+IDS_SPACE_WILL_SWITCH_IT,
+"Mellanslag samtidigt som du pekar på den växlar mellan på och av. "
+IDS_WHETHER_SOUND_ON,
+"Detta visar om det ska göras några ljudeffekter i ToonTalk. "
+IDS_MIDDLE_AND_RIGHT_SHORTCUTS_ON,
+"Detta ändrar vad mitten- och högerknappen på musen gör när du är på golvet. "
+IDS_MAKE_RIGHT_BUTTON_SHORTCUT,
+"Du kan göra högra musknappen till en genväg för shift och klick. "
+IDS_AND_RIGHT_BUTTON_SHORTCUT,
+"Och du kan göra mittenknappen till en genväg för kontroll och klick. "
+IDS_THIS_TEXT_PAD,
+"Detta textkort är"
+IDS_THIS_IS,
+"Detta är"
+IDS_TURN_OFF_COLLISION_WITH_SPACE,
+"Du kan ändra en kollision till en miss genom att peka på detektorn och trycka på mellanslag. "
+IDS_BOOK_DESCRIPTION6,
+"Denna är full av ljud"
+IDS_BOOK_DESCRIPTION7,
+"Denna är full av systeminställningar"
+IDS_CONTAINING,
+"som innehåller"
+IDS_NOTEBOOK_IN_VACUUM,
+"Antecknings_boken är i Dammis dammsugaren. Han kan spotta ut den. "
+IDS_WARNING_FILE
+"Varning: filen"
+IDS_COULDNT_OPEN,
+"kunde inte öppnas. "
+IDS_CANT_ADD_TO_NOTEBOOK_IN_BUBBLE,
+"Ledsen, men det går inte att lägga till något i en antecknings_bok inuti en tankebubbla. "
+IDS_TEMPORARY_USER_CANT_SAVE,
+"Eftersom du är en temporär användare kan du inte spara detta i antecknings_boken. "
+IDS_ONLY_NOTEBOOKS_TO_MAIN,
+"Ledsen, men nu kan du bara lägga till antecknings_böcker i antecknings_boken som kommer ur verktygslådan. "
+IDS_NOTEBOOK_PAGE_DIDNT_ACCEPT,
+"sidan i en antecknings_bok tog inte emot någonting"
+IDS_NOTEBOOK_DIDNT_ACCEPT,
+"en antecknings_bok tog inte emot något"
+IDS_SOUNDS_NOTEBOOK,
+"Ljud"
+IDS_OPTIONS_NOTEBOOK,
+"Inställningar"
+IDS_OUTLET,
+"ut"
+IDS_INLET,
+"in"
+IDS_COUNT,
+"antal"
+IDS_SOUND,
+"Ljud"
+IDS_SORRY_BUT_FILE,
+"Tyvärr, men jag tror inte att filen"
+IDS_NOT_NOTEBOOK_FILE,
+"är en fil för en antecknings_bok. "
+IDS_NOTEBOOK_FUTURE_VERSION,
+"Tyvärr, men en antecknings_bok var gjord i en senare version av ToonTalk! "
+IDS_THIS_VERSION_CANT
+"Denna version kan inte läsa"
+IDS_GET_NEW_VERSION,
+". Du borde kanske skaffa en nyare version. "
+IDS_TOONTALK_MIXED_UP,
+"ToonTalk rörde ihop det. "
+IDS_COULDNT_RECOGNIZE_NOTEBOOK_FILE,
+"Varning: kunde inte känna igen något i en fil för en antecknings_bok. "
+IDS_TOONTALK_OR_FILE_BAD,
+"Något fel med ToonTalk eller så är en bildfil dålig. "
+IDS_REMOTE_APPEARANCE_CONTROL,
+"en fjärrkontroll för en annans utseende"
+IDS_WHICH_IS_INVISIBLE,
+"som är osynlig"
+IDS_WHICH_IS_PARTLY_VISIBLE,
+"som delvis är synlig"
+IDS_JUST_A_NOTEBOOK,
+"är bara en antecknings_bok"
+IDS_ARE,
+"är"
+IDS_WITH,
+"med"
+IDS_PICTURE_ON_BLANK_PICTURE,
+"Du kan ändra utseendet på en tom bild genom att släppa en annan bild på den. "
+IDS_OR_NUMBER_OR_TEXT
+"Eller ett sifferkort eller ett textkort. "
+IDS_VACUUM_PICTURE_BLANK,
+"Dammis, dammsugaren, kan göra en bild tom. "
+IDS_NOTEBOOK_OF_REMOTES_FLIES,
+"En antecknings_bok full av fjärrkontroller för bilden kommer att flyga ut. "
+IDS_CANT_FLIP_REMOTES,
+"du kan inte vända upp och ner på en fjärrkontroll för en annans utseende"
+IDS_IGNORED_DROP_TOO_MANY_LEVELS,
+"Brydde sig inte om att en bild släpptes på en annan eftersom det redan finns så många bilder på bilder. "
+IDS_CANT_FLIP_USED_FILE_TO_PICTURE_REMOTE,
+"kan inte vända på den här. Du kan dammsuga bort bilden och sedan vända den"
+IDS_CANT_FLIP_UNUSED_FILE_TO_PICTURE_REMOTE,
+"kan inte vända på den här. Allt du kan göra är att släppa filnamnet på en bild på den. "
+IDS_FILE_TO_SOUND_FULL_HELP,
+"Den här är till för att spela dina egna ljudeffekter och musik. Släpp bara namnet på en WAVE eller MIDI fil på den. Då kommer filen att spelas tills den är slut eller blir uppsugen av Dammis. "
+IDS_FILE_TO_PICTURE_FULL_HELP,
+"Den här är till för att visa dina egna bilder i ToonTalk. Släpp bara filnamnet på bilden (i BMP format) på den och dammsug sedan upp resultatet. "
+IDS_USER_SPRITE,
+"en bild från en fil"
+IDS_SCALES_CANT_ADD_TO_PICTURE,
+"vågar kan inte släppas på en bild"
+IDS_UNFLIPPED_PICTURES_NOT_ON_FLIPPED_PICTURES,
+"bilder kan inte släppas på upp och ner vända bilder"
+IDS_PICTURE_WONT_ACCEPT_SOMETHING,
+"bilden skulle inte ta emot någonting"
+IDS_SCALE_TEXT_HELP1,
+"Så här kan du använda en våg till att jämföra text. "
+IDS_SCALE_TEXT_HELP2,
+"Först tar du tre ihopsatta lådor och sätter några ord i det första och tredje hålet. "
+IDS_SCALE_HELP3,
+"Och sen sätter du en våg i det mittersta hålet. "
+IDS_SCALE_NUMBER_HELP1,
+"Så här kan du använda en våg för att jämföra siffror. "
+IDS_SCALE_NUMBER_HELP2,
+"Först sätter du ihop tre lådor. Sätt sedan några siffror i första och tredje hålet. "
+IDS_REMOTE_CANT_ACCEPT_THAT,
+"fjärrkontrollen för hur någonting ser ut kan inte ta emot det föremålet"
+IDS_PICTURE_WAITING_FOR_MOUSE,
+"bilden som släpptes väntar på Hammarmusen"
+IDS_PICTURE_UNDERNEATH_WAITING_FOR_MOUSE,
+"bilden som är under väntar redan på Hammarmusen"
+IDS_PICTURE_DROPPED_IS_REMOTE,
+"bilden som släpps är en fjärrkontroll"
+IDS_SORRY_WAIT_TIL_NEXT_TIME,
+"Detta kommer inte att ändras förrän nästa gång du startar ToonTalk. "
+IDS_CONFUSED_ABOUT_PROGRAMMER,
+"ToonTalk är förvirrat över vad användaren gör. "
+IDS_F8_PRESSED_HELP,
+"Du slog precis av strömmen och stannade alla robotar. Du kan starta upp dem igen genom att trycka på F8. "
+IDS_F9_PRESSED_HELP,
+"Din hand är nu gömd. För att se den igen tryck bara F9. "
+IDS_ONLY_PORTS_1_OR_2,
+"Kunde endast öppna de seriella portarna 1 och 2. "
+IDS_TROUBLES_OPENING_PORT,
+"Problem med att öppna seriell port. "
+IDS_SERIAL_PORT_PROBLEMS,
+"Problem med seriell port. "
+IDS_COULDNT_FIND_CONTROLLER,
+"Kunde inte hitta en HyperBot kontroll i datorns seriella port. "
+IDS_TROUBLES_USING_PORT,
+"Problem med att skicka ut saker via en seriell port. "
+//IDS_ROBOT_WHO_STOPPED,
+//"en robot stoppades. "
+IDS_ROBOT_STOPPED_BY_F8,
+"en robot stoppades genom att strömmen bröts. F8 slår på strömmen och startar honom igen"
+IDS_A_HOLE,
+"ett hål"
+IDS_AND_THERE_ARE,
+"Och det finns"
+IDS_ROBOTS_IN_FRONT,
+"robotar framför honom"
+IDS_AND_ONE_ROBOT_IN_FRONT,
+"Och det finns en robot framför honom"
+IDS_ROBOTS_BEHIND,
+"robotar bakom honom"
+IDS_AND_ONE_ROBOT_BEHIND,
+"Och det finns en robot bakom honom"
+IDS_ROBOT_LOST_TRACK,
+"en robot tappade bort saker"
+IDS_ROBOT_FILE_BAD,
+"Något fel med en fil som sparar en robot i en antecknings_bok. Roboten är försvunnen. "
+IDS_TROUBLES_LOADING_ROBOT,
+"Problem med att ladda en robot från en antecknings_bok. Tyvärr, men den är försvunnen. "
+IDS_TROUBLE_FIGURING_OUT_ROBOT,
+"Jag har lite problem med att förstå vad de här robotarna gör. "
+IDS_ROBOT_HAS_NON_MATCHING_BOX,
+//"Uhm, ursäkta mig men en robot har en låda som inte passar den som finns i hans tankebubbla och det finns inte någon annan robot han kan ge den till. "
+"Uhm, ursäkta mig men"
+//IDS_WHEN_FINISHED_WILL_TELL_WHERE,
+//"När ToonTalk är färdigt kan jag visa dig var den finns. "
+IDS_ROBOTS_CANT_TRAIN_ROBOTS,
+"Tyvärr, men robotar kan inte träna robotar. "
+IDS_FUSSY_ROBOT_HELP1,
+"Ah, tyvärr men robotar är verkligen petiga. De tar bara emot lådor. "
+IDS_FUSSY_ROBOT_HELP2,
+"Lyckligtvis kan du lägga saker i lådor. "
+IDS_TOO_MANY_THINGS_ON_SCREEN,
+"ToonTalk kan bara hålla reda på de saker som finns på skärmen och det har tappat några. "
+IDS_DISPLAY_LOST_TRACK_OF_STUFF,
+"ToonTalks saker på skärmen tappade bort några saker. "
+IDS_TOONTALK_BROKEN,
+"Ojdå! ToonTalk är sönder. Det försöker ta sönder något två gånger. "
+IDS_TOONTALK_USED_AFTER_DESTROYING,
+"Något är fel med ToonTalk. Det försökte använda något efter att ha förstört det. "
+IDS_TOONTALK_DESTROY_ON_FLOOR,
+"Något är fel med ToonTalk. Det försökte förstöra något som fortfarande är på golvet. "
+IDS_TOONTALK_DESTROY_PART_OF_SOMETHING,
+"ToonTalk har något fel. Det försökte ta sönder en del av något. "
+IDS_BAD_DAT_FILE,
+"Tyvärr, men du verkar ha en gammal eller dålig DAT-fil. "
+IDS_NEED_TO_REINSTALL,
+"Du måste kanske installera om ToonTalk. "
+IDS_PICK_NONEXISTENT_MOVIE,
+"ToonTalk rörde ihop det och försökte välja en animation som inte fanns. "
+//IDS_ONE,
+//"ett"
+//IDS_IT,
+//"den"
+//IDS_UP,
+//"upp"
+//IDS_CACHE_FREED_TWICE,
+//"Cache-minnet har blivit frigjort två gånger. Tyvärr, men ToonTalk är förvirrat. "
+IDS_FREEING_PROTECTED_CACHE,
+"ToonTalk är förvirrat och försöker att frigöra lite cache-minne, vilket det inte borde. "
+IDS_CACHING_NON_SAVING,
+"ToonTalk är förvirrat eftersom det lade något i cache-minnet som inte sparades någon gång. "
+IDS_DESTROYING_SAME_PICTURE_TWICE,
+"Det är fel på ToonTalk eftersom det försöker förstöra en bild två gånger. "
+IDS_CANT_FIND_FILE,
+"Tyvärr, men jag kan inte hitta den filen "
+IDS_BUT_FILE_IS,
+"Tyvärr, men filen"
+IDS_FILE_DAMAGED,
+"är trasig. Du måste installera om den. "
+IDS_CANT_FIND_RESIND,
+"Tyvärr, jag kan inte hitta filen RESIND.DAT som jag behöver. "
+IDS_RESIND_DAMAGED,
+"Tyvärr, men filen RESIND.DAT är trasig. Var god installera om den. "
+IDS_NOT_ENOUGH_MEMORY_FOR_NEXT_SOUND,
+"ToonTalk har problem eftersom det inte finns tillräckligt med cache-minne för att lagra ljudet. "
+IDS_HAS_PARTS_BUT_DOESNT,
+"ToonTalk trodde att någonting hade vissa delar, men som det inte kunde hitta. "
+IDS_HAS_PARTS_BUT_DOESNT2,
+"Något kanske slutar med fel storlek eller på fel ställe. Tyvärr. "
+IDS_CONVERT_TO_TEXT_HELP,
+"Du kan göra text av någonting genom att släppa det på ett tomt textkort. "
+IDS_BACKSPACE_TO_REMOVE_EMPTY_LINE,
+"Sudd-tangenten tar bort en tom rad. "
+//IDS_TEXT_SOUND_HELP1,
+//"Ibland ger textkort ifrån sig ljud som \"pop\". "
+//IDS_TEXT_SOUND_HELP2,
+//"När det gör det kan du höra ljudet genom att trycka på "
+//IDS_SOUNDS_ON_PAGE8,
+//"Ljud som fungerar kan du hitta på sidan 8 i antecknings_boken som kommer från verktygslådan. "
+IDS_BLANK_TEXT_DIDNT_ACCEPT,
+"det tomma textkortet tog inte emot något"
+IDS_ITEM_ON_TOP_IS_BLANK,
+"det översta objektet är tomt"
+IDS_ONLY_TEXT_OR_NUMBERS_ON_TEXT,
+"du kan bara lägga till textkort eller sifferkort till textkort"
+IDS_TEXT_TOO_LONG,
+"texten blev för lång"
+IDS_IT_AS_COPY_WAND,
+"den"
+//IDS_HIM_AS_NON_WAND_TOOL,
+//"honom"
+//IDS_IF_YOU_PICK_HIM,
+//"om du tar upp honom. "
+//IDS_THEN,
+//"då"
+//IDS_AS_BEFORE,
+//"som förut. "
+IDS_PUMP_IN_VACUUM_WHEN_CALLED,
+"Pumpas är i Dammis. Dammis kan spotta ut honom. "
+IDS_CANT_BE_MADE_BLANK,
+"vissa saker kan inte göras tomma"
+IDS_VACUUM_SPIT_HELP,
+//"Om du försöker att suga upp golvet spottar han ut de saker han sugit upp. "
+"Om du vill få Dammis att spotta ut något han sugit bort, kan du trycka på 'R'. "
+IDS_VACUUM_IN_VACUUM_HELP,
+"Dammis är i en annan dammsugare. Den dammsugaren kan spotta ut honom. "
+IDS_WAND_IN_VACUUM_WHEN_CALLED,
+"Trollstaven är i Dammis dammsugaren. Dammis kan spotta ut den. "
+IDS_IF_YOU_PRESS,
+"Om du trycker på"
+IDS_COPY_BLANKS_TO_NON_BLANKS,
+"så kommer den att kopiera och ändra tomma till icke tomma. "
+IDS_TOOLBOX_DIDNT_ACCEPT_SOMETHING,
+"Verktygslådan tog inte emot något"
+IDS_TRUCK_ALREADY_HAS_ROBOTS,
+"lastbilen har redan robotar med sig"
+IDS_TRUCK_ALREADY_HAS_BOX,
+"lastbilen har redan en låda med sig"
+IDS_TRUCK_HELP,
+"allt du kan lägga i en lastbil är en låda, en robot, en adress och en bild på ett hus"
+IDS_TRUCK_CANT_ACCEPT,
+"något som inte var en låda, en robot, en adress eller en bild på ett hus släpptes på lastbilen"
+IDS_TRUCK_STOPPED_BECAUSE_CITY_FULL
+"staden är proppfull av hus"
+IDS_VIDEO_MODE_BAD,
+"Grafikläget är inte understött. Kanske är din -v n inställning fel. "
+IDS_FULL_SCREEN_INITIALIZATION_PROBLEMS,
+"Det blev problem när jag skulle byta till fullskärms_läge. Tyvärr. "
+IDS_FULL_SCREEN_PROBLEMS,
+"Varning, problem med fullskärms_läge. "
+IDS_TOONTALK_WINDOW_TITLE,
+"ToonTalk"
+IDS_TOONTALK_BETTER_256,
+"Hej. ToonTalk går mycket bättre om du ändrar så att Windows kör med 256 färger. "
+//IDS_WINDOWS_NOT_256_BAD,
+//"Eftersom Windows inte kör med 256 färger kommer detta kanske att se dåligt ut. "
+IDS_ASK_NAME_FAILURE,
+"Något gick fel när jag försökte göra en dialogruta som frågar efter ditt namn. "
+IDS_OPTIONS_NOTEBOOK_HELP1,
+"Det finns mycket du kan ändra i ToonTalk. "
+IDS_OPTIONS_NOTEBOOK_HELP2,
+"Till exempel, hur du ser ut eller hur snabbt jag pratar. Till och med hur mycket jag pratar! "
+IDS_OPTIONS_NOTEBOOK_HELP3,
+"För att ändra saker kan du testa de olika valen i antecknings_boken för inställningar på sidan 10 i antecknings_boken som, kommer ur verktygslådan. "
+IDS_NO_HIGH_RES_IN_16_BITS,
+"Tyvärr, men det går bara att köra ToonTalk i hög upplösning om du kör 32 bitars versionen av ToonTalk. " IDS_BAD_VIDEO_MODE1,
+"Tyvärr, men grafikläget"
+IDS_BAD_VIDEO_MODE2,
+"går inte att använda. Det förinställda läget används istället. "
+IDS_NEED_CDROM_TO_CONTINUE,
+"Om du stoppar i ToonTalk CD-ROM skivan nu kan ToonTalk fortsätta. "
+IDS_NEED_CDROM_FOR_NARRATION,
+"Om du stoppar i ToonTalk CD-ROM skivan nu kommer du att kunna höra berättelsen om denna Demo. "
+IDS_WHAT_IS_ON_TOP_OF,
+"vad finns ovanpå"
+IDS_MAIN_CUBBY_IN_TRUCK_NO_LOOP,
+"Den här roboten kommer att arbeta en gång och sedan stanna eftersom du tränar honom att sätta boxen han arbetar på i lastbilen, så efter att lastbilen kört iväg kommer han aldrig att se den igen. " 
+IDS_SCALE_WONT_ACCEPT,
+"vågen tar inte emot något som släpps på den"
+IDS_UUENCODING_HEADER,
+"   Detta är resultatet av \"inklistring\" av ett ToonTalk objekt. Du kan lägga in"
+IDS_UUENCODING_HEADER2,
+"detta i filer eller email. För att använda det behövs ett program"
+IDS_UUENCODING_HEADER3,
+"som kan kopiera det till Windows klippbord. Du kan, till exempel, använda"
+IDS_UUENCODING_HEADER4,
+"Windows NotePad eller Write. Var bara säker på att din markering omfattar"
+IDS_UUENCODING_HEADER5,
+"koden nedan och välj sedan Kopiera i Redigera-menyn. "
+IDS_UUENCODING_HEADER6,
+"Då kommer det att synas i ToonTalks fjärrkontroll för klippbordet. "
+IDS_UUENCODING_HEADER7,
+"Du kan hitta fjärrkontrollen för Urklipp på sidan 30 i anteckningsboken för Sensorer. "
+IDS_UUENCODING_HEADER8,
+"Använd bara Dammis till att dammsuga det från klippbordet. "
+IDS_UUENCODING_FOOTER,
+"Detta är slutet på koden för ToonTalk objektet. "
+IDS_WHAT_FOLLOWS_IS_CODE,
+" Det som följer är en specialkod som producerades av ToonTalk(TM) "
+IDS_FOLLOWING_IS,
+"Det är "
+IDS_TOONTALK_VERSION_NUMBER,
+"Svensk Version Beta 15" 
+
+IDS_BETA_TO_EXPIRE1,
+"Det är dags att skaffa en ny version av ToonTalk. (Gå till http://www.toontalk.com.) "
+IDS_BETA_TO_EXPIRE2,
+// followed by a number
+"Den här versionen av ToonTalk upphör att fungera om"
+IDS_BETA_TO_EXPIRE3
+"dagar."
+IDS_FOR_EXAMPLE,
+"till exempel"
+IDS_WHICH_ORIGINALLY_WAS,
+"som ursprungligen var"
+IDS_AVENUE_HOUSE_IS_ON,
+"Detta är en sensor som visar vilken gata, i nordlig riktning, detta hus finns på. "
+IDS_YOU_CHANGE_IT_BY,
+"Du kan ändra den genom att släppa sifferkort på den. "
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_AVENUE_TO_BUILD,
+"Om du släpper en av dessa på en lastbil kommer lastbilens manskap att bygga ett hus på närmaste tomma tomt på denna gata. "
+IDS_STREET_HOUSE_IS_ON,
+"Detta är en sensor som visar vilken gata, i västligt riktning, detta hus finns på. "
+IDS_GOOD_FOR_TELLING_TRUCK_WHICH_STREET_TO_BUILD,
+"Om du släpper en av dessa på en lastbil kommer lastbilens manskap att bygga ett hus på närmaste tomma tomt på denna gata. "
+IDS_DROP_ON_BLANK_NUMBER_TO_OBTAIN_ARITY_HELP,
+"Du kan ta reda på hur många hål en låda har genom att släppa den på ett tomt sifferkort. Du kan göra ett sifferkort tomt genom att använda Dammis dammsugaren. "
+//IDS_ABANDON_FULL_SCREEN,
+//"ToonTalk kraschade förra gången det användes. Problemet var kanske att ToonTalk kördes i fullskärms-läge. Läget får animationerna att se bättre ut, men gör att en del datorer kraschar. "
+//IDS_ABANDON_FULL_SCREEN2,
+//"Inställningarna för skärmläget hittar du i antecknings_boken som finns på sidan 10 i antecknings_boken som kommer från verktygslådan. Ska jag ändra skärmläget?"
+IDS_TOO_MANY_THINGS_FOR_ROBOT,
+"Robotar kan bra hålla reda på ett visst antal saker. Den här roboten blev förvirrad eftersom den har för mycket att hålla reda på. "
+IDS_LEFT,
+"vänster"
+IDS_RIGHT,
+"höger"
+IDS_COULDNT_FIND_PAGE,
+"kunde inte hitta sidan i antecknings_boken"
+IDS_UNKNOWN_MCI_ERROR,
+"Något MCI fel, men jag vet inte vad. "
+IDS_ROBOT_COULDNT_FIND_PLACE_TO_RELEASE,
+"kunde inte hitta stället där han skulle släppa något"
+IDS_UNABLE_TO_OPEN_FILE,
+"Kunde inte öppna log fil"
+IDS_ITLL_SWITCH_TO_THE_NEXT_VALUE,
+"den kommer att slå om till nästa värde. "
+IDS_ITLL_SWITCH_TO_THE_PREVIOUS_VALUE,
+"den kommer att slå om till det gamla värdet. "
+IDS_IF_YOU_PICK_UP_AND_PRESS,
+"Om du tar upp den och trycker på"
+IDS_JUST_THE_SPACE_BUTTON,
+"tryck bara på mellanslag"
+//IDS_JUST,
+//"bara"
+//IDS_OR,
+//"eller"
+IDS_OR_JUST,
+ "eller bara"
+IDS_IN,
+"i"
+IDS_WARNING,
+"Varning"
+IDS_BYTES,
+"bytes"
+//IDS_MEMORY_IS_LOW,
+//"Varning. Lite minne. Minnet som användes till att snabba upp saker minskade med "
+//IDS_IT_IS_NOW,
+//"Det är nu"
+IDS_CANT_ADD_TO_SIDE_OF_BLANK_BOX,
+"inget kommer att sticka åt sidan i en rensad låda"
+IDS_CITY_SIZE_CANT_BE_LESS_THAN,  // revised 8/26/97
+//"Det minsta du kan göra staden är -255 för en 255 gånger 255 kvarter stor stad som slumpvis är fylld av hus. "
+"Det minsta talet du kan använda för en stads storlek är -255. Detta skapar en stad som är 255 gånger 255 och eftersom talet är negativt blir staden slumpvis fylld av hus. "
+IDS_CITY_SIZE_CANT_BE_MORE_THAN,
+"Det största en stad kan vara är 255 gånger 255 kvarter. "
+
+
+//IDS_AVENUE,
+//"Gata"
+//IDS_STREET,
+//"Gata"
+IDS_AVENUE,
+"Gata i nord/sydlig riktning"
+IDS_STREET,
+"Gata i öst/västlig riktning"
+
+IDS_NO_FILE_NAME_FOR_USER_MEDIA_FILE,
+//"ToonTalk vet inte vad som ska göras och försöker få fram en bild och vet inte filens namn. "
+"ToonTalk fick problem att hitta en fil som heter"
+IDS_TROUBLES_READING_PICTURE_FILE,
+"Fick lite problem att läsa filen"
+
+
+//IDS_FULL_SCREEN_MODE_TOO_SLOW,
+// "Full screen mode is taking a surprising long time. You might want to try ToonTalk without it. "
+//"Att visa ToonTalk över hela skärmen går väldigt långsamt. Du kanske skulle pröva att visa ToonTalk i ett mindre fönster. "
+IDS_FILE_TO_PICTURE_HELP,
+//  "a place to drop the file name of a picture to turn it into a picture"
+"ett ställe där du kan släppa filnamnet på en bild för att du ska få fram bilden"
+IDS_FILE_TO_SOUND_HELP,
+//  "a place to drop the file name of a sound to hear it"
+"ett ställe där du kan släppa filnamnet på ett ljud för att du ska få ljudet uppspelat"
+IDS_FILE_TO_PICTURE_SHORT_LABEL,
+// "Picture in"
+"Bild in"
+IDS_FILE_TO_SOUND_SHORT_LABEL,
+//  "Sound in"
+"Ljud in"
+IDS_FILE_TO_PICTURE_LONG_LABEL,
+// "File to\rPicture"
+"Fil till\rBild"
+IDS_FILE_TO_SOUND_LONG_LABEL,
+//  "File to\rSound"
+"Fil till\rLjud"
+
+
+IDS_SORRY_USER_PICTURE_TOO_BIG,
+ "Tyvärr kan 16 bitarsversionen av ToonTalk inte hantera bilder som är större än skärmen. "
+IDS_TROUBLES_READING_SOUND_FILE,
+ "ToonTalk fick tyvärr problem att läsa ljudfilen. "
+IDS_REMEMBER_FILE,
+"Om du ska skicka detta till någon på en annan dator kom då ihåg att också skicka med"
+
+// added 8/23/96
+ IDS_RESULT_OF_SAVING_ROOM,
+"Så här blir det när man sparar allting i ett rum. "
+IDS_WHICH_CONTAINS,
+"som innehåller"
+IDS_WHO_IS_HOLDING,
+"som håller"
+IDS_WHO_CAN_ONLY_REMEMBER,
+"som bara kan komma ihåg"
+IDS_ACTIONS,
+"handlingar"
+//IDS_WHICH_IS_HELD_BY,
+//"som hålls av "
+IDS_STEP
+"Steg"
+IDS_STEPS,
+"Steg"
+IDS_WHICH_HAS_ENOUGH_MAGIC,
+"som har tillräckligt mycket magisk kraft för att "
+IDS_USE,
+"använda"
+IDS_USES,
+"använder"
+//IDS_HIM,
+//"honom"
+//IDS_HER,
+//"henne"
+IDS_CANT_ADD_TO_REMOTE_NOTEBOOK,
+"Tyvärr, men du kan inte spara något i en anteckningsbok som hör till en speciell bild. Där ska bara kontroller och sensorer finnas. "
+IDS_BAD_PUZZLE_FILE,
+"Jisses! Något fel med uppdragsfilen. Vad synd. "
+//IDS_SOLVED_ALL_PUZZLES,
+//"Bravo. Du lyckades lösa alla uppdrag! Kolla in ToonTalks hemsida där du kan hitta fler uppdrag. "
+IDS_ALL_HINTS_GIVEN1,
+"Jag vet att det låter som om jag hakat upp mig, men nu sätter jag igång igen. "
+IDS_ALL_HINTS_GIVEN2,
+"Jag ber om ursäkt för att jag säger samma sak igen, men jag vet inte vad jag ska ta mig till. "
+IDS_ALL_HINTS_GIVEN3,
+"Jag önskar att jag visste hur jag skulle kunna hjälpa dig. Det enda jag kan komma på är det jag sa förra gången. "
+IDS_NO_HINTS,
+"Nix. "
+IDS_NEGATIVE_AGE,
+"Jasså, så du är inte född ännu? "
+IDS_VERY_YOUNG1,
+"Otroligt! Jag visste inte att "
+IDS_VERY_YOUNG2,
+"år gamla barn på Jorden var så smarta. "
+IDS_VERY_OLD1,
+"Oj då,"
+IDS_VERY_OLD2,
+"år gammal. Du är verkligen gammal! "
+IDS_LIKE_INSIDE_A_COMPUTER,
+//"Som inuti en dator "  // revised 8/27/97
+"Datorns sätt att ange "
+IDS_SEE_IF_YOU_CAN_MAKE_THAT_NUMBER,
+"Försök göra ett sifferkort med det talet på. "
+IDS_WE_NEED1,
+"Vi behöver"
+IDS_WE_NEED2,
+"vi behöver"
+IDS_SIT_DOWN_AND_GET,
+"Sätt dig ned i det andra huset och ta"
+IDS_BASIC_HINT1,
+"Gå in genom dörren i det andra huset och tryck sedan på en musknapp. "
+IDS_BASIC_HINT2,
+"Du kan plocka upp något genom att klicka på musen och samtidigt peka på föremålet. "
+IDS_WHILE_HOLDING,
+"Medan du håller "
+IDS_PRESS_ESC_AND_COME_BACK,
+"tryck på 'Esc' för att ställa dig upp och kom sedan tillbaka. "
+IDS_WE_DONT_NEED,
+"Tyvärr, men vi behöver inte"
+IDS_SOMETHING_IS_MISSING,
+"Det fattas något i lådan. "
+IDS_SOMETHING_IS_MISSING2,
+"Eller så har saken hamnat på fel ställe. Försök igen. "
+IDS_NOT_IT1,
+"Nix. "
+IDS_NOT_IT2,
+"Nej, det stämmer inte. "
+IDS_NOT_IT3,
+"Beklagar, det är inte vad vi behöver. "
+//IDS_WRONG_TRY_AGAIN,
+//"Det är något fel med det där. Försök igen. "
+IDS_SOMETHING_WRONG,
+"Det är något fel med det där. "
+IDS_TRY_AGAIN1,
+"Försök igen. "
+IDS_TRY_AGAIN2,
+ "Prova igen. "
+
+
+// new on 9/24 
+IDS_CONGRATULATIONS,
+ "Fint"
+IDS_CONGRATULATIONS2,
+ "Utmärkt"
+IDS_CONGRATULATIONS3,
+ "Bra jobbat"
+IDS_CONGRATULATIONS4,
+ "Bra"
+IDS_CONGRATULATIONS5,
+ "Det gjorde du bra"
+IDS_CONGRATULATIONS6,
+ "Utomordentligt"
+
+IDS_PUZZLE_SINKING,
+//  "Ön Zizzle  är på väg att sjunka."
+"Ön Zizzle var en härlig plats före katastrofen.\rDen börjar sjunka!"
+IDS_PUZZLE_CRASH,
+//  "Marty kommer till undsättning."
+"Marsmänniskan Marty råkar flyga förbi. Han räddar alla."
+IDS_PUZZLE_HURT,
+//  "När han räddat alla så kraschlandar han."
+"Han flyttar bort nästan alla husen från ön men sen får han motorproblem och kraschlandar."
+IDS_PUZZLE_RESCUE,
+//"Du ställer upp på att rädda Marty."
+"Räddaren Marty behöver själv bli räddad. Du anmäler dig som frivillig att hoppa ner i fallskärm för att hjälpa honom."
+
+IDS_FIRST_PUZZLE_GREETING1,
+"Hej. Det är jag som är Marty. "
+IDS_FIRST_PUZZLE_GREETING2,
+"Och du är väl"
+IDS_FIRST_PUZZLE_GREETING3,
+"Gissa om jag är glad att träffa dig!"
+IDS_RESTART_PUZZLE_GREETING1,
+"Vad roligt att träffa dig igen. Jag kommer ihåg var vi var någonstans. "
+IDS_RESTART_PUZZLE_GREETING2,
+"Vad snällt av dig att komma tillbaka. Vi kan väl fortsätta att laga skeppet. "
+IDS_RESTART_PUZZLE_GREETING3,
+"Härligt att träffa dig igen. Få se nu, var var vi. "
+IDS_TOO_WIDE_TO_SEE,
+"Tyvärr är det där lite för brett för att se allt. "
+IDS_TOO_NARROW_TO_SEE,
+"Tyvärr är det där för smalt för att jag ska kunna se bokstäverna. "
+
+IDS_EXPANDER_KEY_COMMANDS,
+"SHBMKTX"
+//"SLTMKNB"
+IDS_WHO_IS_READY_TO,
+"som kan"
+IDS_THAT_IS_READY_TO,
+"som kan"
+IDS_MAKE_THINGS,
+"göra saker"
+IDS_EXPANDER_STATE0,
+"större"
+IDS_EXPANDER_STATE1,
+//"längre"
+"högre"
+IDS_EXPANDER_STATE2,
+//"tjockare"
+"bredare"
+IDS_EXPANDER_STATE3,
+"mindre"
+IDS_EXPANDER_STATE4,
+"kortare"
+IDS_EXPANDER_STATE5,
+//"smalare"
+"tunnare"
+IDS_EXPANDER_STATE6,
+"en bra storlek"
+IDS_VACUUM_KEY_COMMANDS,
+"SBR"
+IDS_VACUUM_STATE0,
+"suga bort saker"
+IDS_VACUUM_STATE1,
+"spotta ut sånt som han sugit bort"
+IDS_VACUUM_STATE2,
+"suga bort saker från en yta så att den blir ren" 
+IDS_COPIER_KEY_COMMANDS,
+"KOS"
+IDS_COPIER_STATE0,
+"kopiera saker"
+IDS_COPIER_STATE1,
+"kopiera saker och om de är tomma, återställa dem i det skick de var från början" 
+IDS_COPIER_STATE2,
+"kopiera sig själv"
+IDS_BUTTON_TYPE_INDEFINITE,
+"en knapp"
+IDS_BUTTON_TYPE_PRONOUN,
+"en"
+IDS_BUTTON_TYPE_DEFINITE,
+"knappen"
+IDS_BUTTON_TYPE_PLURAL,
+"knappar"
+
+IDS_BUTTON_CLICKED_HELP1,
+"Du kan ändra"
+IDS_BUTTON_CLICKED_HELP2,
+"att göra något annat om du klickar på knappen. " 
+IDS_BUTTON_CYCLE_HELP1,
+"Du kan också ändra"
+IDS_BUTTON_CYCLE_HELP2,
+"att göra något annat om du trycker på + eller -. "  // revised 081199
+IDS_BUTTON_LETTER_TYPED_HELP1,
+"Du kan ta upp det"
+IDS_BUTTON_LETTER_TYPED_HELP2,
+"kommer att göra genom att trycka en av de här bokstäverna:" 
+IDS_BUTTON_HELP_GIVEN_HELP1,
+"Jag har berättat allt jag vet om knappar. " 
+IDS_BUTTON_HELP_GIVEN_HELP2,
+"Om du vill att jag ska berätta allt jag vet om knappar igen, tryck då två gånger på F1 och peka samtidigt på en knapp. "
+IDS_BUTTON_HELP_GIVEN_HELP3,
+"Jag ska berätta mer om"
+IDS_COPIER_BUTTON_HELP_GIVEN_HELP,
+"om du plockar upp den. "
+IDS_EXPANDER_BUTTON_HELP_GIVEN_HELP,
+"om du plockar upp honom. "
+IDS_VACUUM_BUTTON_HELP_GIVEN_HELP,
+"om du plockar upp honom. "
+IDS_EXPANDER_CHANGED_STATE_VIA_BUTTON_HELP, 
+//"Du kan ändra Pumpas så att han gör saker mindre, eller längre, eller tjockare genom att trycka på knappen på hans bröst. "
+
+"Du kan ändra Pumpas så att han gör saker mindre, eller högre, eller bredare genom att trycka på knappen på hans bröst. "
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP1, 
+"Du kan ändra på Pumpas genom att rycka på en av de här tangenterna"
+IDS_EXPANDER_CHANGED_STATE_VIA_KEYBOARD_HELP2,
+//"'S' för stor, 'H' för hög, 'B' för bred, 'L' för liten, 'K' för kort, 'T' för tunn, och 'X' för en bra storlek. "
+"'S' för stor, 'H' för hög, 'B' för bred, 'M' för mindre, 'K' för kort, 'T' för tunn, och 'X' för en bra storlek. "
+IDS_EXPANDER_SELECTION_HELP,
+"allt som är under änden på hans slang"
+IDS_TURN_EXPANDER_ON_HELP,
+"Du kan också sätta igång honom eller stänga av honom medan du håller i honom, om du samtidigt trycker på mellanslag. "
+IDS_TURN_VACUUM_ON_HELP,
+"Du kan också sätta igång honom eller stänga av honom medan du håller i honom, om du samtidigt trycker på mellanslag. "
+IDS_TURN_COPIER_ON_HELP,
+"Du kan också sätta igång den eller stänga av den medan du håller i den, om du samtidigt trycker på mellanslag. " 
+
+IDS_VACUUM_CHANGED_STATE_VIA_BUTTON_HELP, 
+"Du kan ändra på Dammis så att han spottar ut saker eller bara suger bort det som ligger ovanpå saker genom att trycka på knappen på hans näsa. "
+IDS_VACUUM_CHANGED_STATE_VIA_KEYBOARD_HELP, 
+"Du kan ändra på Dammis genom at trycka på 'S' föra att suga bort, 'R' för att rensa, och 'B' för baklänges (spotta ut). "
+IDS_COPIER_CHANGED_STATE_VIA_BUTTON_HELP, 
+"Du kan ändra på Trollstaven så att den kopierar sig själv eller kopierar saker och återställer dem genom att trycka på knappen längst ut. "
+IDS_COPIER_CHANGED_STATE_VIA_KEYBOARD_HELP, 
+"Du kan ändra på Trollstaven genom att trycka på 'K' för att kopiera, 'O' för att kopiera och göra till original, och 'S' för att kopiera sig själv. "
+//IDS_PUSH_R,
+//"tryck på 'R'"
+//IDS_CHAR_O,
+//"'O'"
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP,
+"Du kan få mig att säga nästa sak genom att trycka på knappen för 'Nästa'. " 
+IDS_TYPING_PAGE_UP_AND_DOWN_HELP2,
+"Och om du trycker på Föregående får du mig att säga det senaste en gång till. " 
+
+IDS_REPEAT1,
+"Det här är vad jag sa nyss. "
+IDS_REPEAT2,
+"Jag ska säga det en gång till. "
+IDS_REPEAT3,
+"Jag säger det igen. "
+IDS_BAD_DEMO_LOG,
+"Det är något fel på demo loggen. Jag avslutar. "
+IDS_TROUBLES_COPYING_FROM_CDROM,
+"ToonTalk fick problem att kopiera temp filer till "
+IDS_TROUBLES_COPYING_FROM_CDROM2,
+". Det kanske inte finns tillräckligt med utrymme på hårddisken. "
+IDS_TROUBLES_COPYING_FROM_CDROM3,
+"ToonTalk kommer att köras från CDROM. Det kanske går långsamt. "
+
+IDS_JANUARY,
+"Januari"
+IDS_FEBRUARY,
+"Februari"
+IDS_MARCH,
+"Mars"
+IDS_APRIL,
+"April"
+IDS_MAY,
+"Maj"
+IDS_JUNE,
+"Juni"
+IDS_JULY,
+"Juli"
+IDS_AUGUST,
+"Augusti"
+IDS_SEPTEMBER,
+"September"
+IDS_OCTOBER,
+"Oktober"
+IDS_NOVEMBER,
+"November"
+IDS_DECEMBER,
+"December"
+IDS_NO_SUCH_MONTH,
+"Jag känner tyvärr inte till nån månad som heter"
+IDS_BAD_DATE,
+"Jag har aldrig hört talas om ett datum som"
+IDS_TODAY_IS,
+"Vänta nu, i dag är det"
+IDS_THANKS,
+"Tackar"
+IDS_AND_YOU_WERE_BORN,
+"och du föddes den"
+IDS_SO_YOU_ARE,
+"så du är"
+IDS_YEARS_AND,
+"år och"
+IDS_DAYS_OLD,
+"dar gammal"
+IDS_TODAY,
+"i dag"
+IDS_OR_SENTENCE_START,
+"Eller"
+IDS_ITS_YOUR_BIRTHDAY,
+"Oj oj! Det är din födelsedag i dag. Grattis! " 
+IDS_HAD_BIRTHDAY_RECENTLY,
+"Jag hoppas du haft en riktigt härlig födelsedag. " 
+IDS_BIRTHDAY_SOON,
+"Vad spännande! Det är snart din födelsedag. Hoppas den blir riktigt rolig." 
+IDS_COME_HERE_FOR_HINTS,
+"Om du vill ha min hjälp får du komma över hit. " 
+IDS_BOMB_TO_RESTART,
+"Du kan börja om igen genom att ta upp bomben och trycka på mellanslag. "
+IDS_PUT_NEST_IN_BOX,
+"Du måste lägga fågelboet i lådan. "
+IDS_NEED_ALL_7_DAYS,
+"Ursäkta, men vi behöver få alla veckans sju dagar på boet, inte bara"
+IDS_NEED_NUMBERS_UNDERNEATH,
+"Ursäkta, men vi behöver få minst 5 tal på boet, inte bara"
+IDS_NO_CHANGING_NUMBERS,
+"Ursäkta, men inga tal får ändras. "
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+"Ursäkat, men alla tal måste vara större än 0. "
+IDS_LAST_NUMBER_WAS,
+"Hmmm, förra gången var talet"
+IDS_AFTER_WAITING_8_SECONDS,
+"efter 8 sekunders väntan.  Och nu är talet"
+IDS_AFTER_WAITING_14_SECONDS,
+"efter 14 sekunders väntan. "
+IDS_OUT_OF_MAGIC,
+"trollstaven har förlorat sin trollkraft"
+
+IDS_WANT_TO_PLAY_NOW,
+ "Hallå där! Vill du spela ToonTalk nu?"
+IDS_PLAY_DEMOS_OR_BUILD,
+// "Vill du titta på demoprogram som andra gjort eller spela ToonTalk själv?"
+ "Vill du göra uppdrag, titta på demoprogram som andra gjort, eller bygga program?"
+IDS_PICK_DEMO,
+ "Ja, vi har massor med demoprogram. Det är bara att välja och vraka."
+IDS_INSTALL_FIRST,
+ "Bra, men innan vi börjar ska vi installera ToonTalk, eller hur?"
+
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"Mina sensorer visar inte att det byggts något nytt hus av bygglaget i lastbilen. Tyvärr. "
+IDS_GRASP_EXPANDER,
+ "plocka upp en cykelpump"
+IDS_EXPANDER_APPLY,
+ "använd Pumpas"
+IDS_MILLISECONDS,
+ "millisekunder"
+IDS_ON,
+ "på"  // as in "använd Pumpas på"
+
+IDS_AS_I_WAS_SAYING,
+ "När du slutade förra gången hade jag en del kvar att berätta. "
+IDS_WHAT_DOTS_MEAN,
+ "När jag har mera att säga kommer du att få se \"...\" längst ner."    // was mera att så
+IDS_THATS_WHAT_I_WANTED_SAY,
+ "Det var det jag försökte säga förra gången. "
+
+
+IDS_TOONTALK_CREDITS,
+"Animeringar av Greg Savoia, Kim Tempest och Brian Anderson. Översättningar till svenska av Lennart Mogren och Tobias Zetterlund. Rösterna (Rebecca och Ruben Sznajderman) inspelade av Jinglebeat Music. "
+IDS_TOONTALK_CREDITS2,
+"Martys röst av David Kahn. Allt annat av Ken Kahn. Ett särskilt tack till Markus, David, och Mary."
+
+IDS_PUZZLE_SUBDIRECTORY,
+ "Swedish"
+IDS_NARRATION_FILE_SUFFIX,
+ "TAL"
+IDS_SUBTITLES_FILE_SUFFIX,
+ "SET"
+//IDS_START_TOONTALK_NAME,
+//"StartToonTalkSE"
+IDS_NATURAL_LANGUAGE,
+"Swedish"
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyzåäö"
+
+IDS_ORDER_OF_THINGS_MATTER, // added 12/12
+"Ledsen om jag krånglar, men ordningen på saker i facken måste vara den rätta. "
+
+IDS_BIGGER_THAN, // 12/13
+"större än"
+
+THE_LEFT_PAGE_OF, // added 12/13
+"den vänstra sidan av"
+THE_RIGHT_PAGE_OF, // added 12/13
+"den högra sidan av"
+IDS_PICT_OF_DEFINITE, // added 12/13
+"bilden på"
+IDS_MOVIE_OF_DEFINITE,
+"filmen med"
+IDS_PICT_OF_PLURAL,
+"bilderna på"
+IDS_MOVIE_OF_PLURAL,
+"filmer med"
+IDS_PICTURES,
+" bilder"
+IDS_STACK_OF_DEFINITE, // added 12/21
+"bunten med "
+IDS_STACK_OF_PLURAL, // added 12/21
+ "buntar med "
+
+IDS_STACK_OF_PRONOUN, // added 12/21
+ "den"
+
+IDS_BLANK_PICTURE_OF_DEFINITE, // added 12/20
+"den suddade bilden på"
+IDS_BLANK_PICTURE_OF_PLURAL, // added 12/20
+"suddade bilder på"
+IDS_PICT_OF_PRONOUN, // added 12/21
+"den"
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+"den"
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+"den"
+IDS_COPIER_BUTTON, // revised 10/19 -- really the wand button but ok...
+"en knapp på Trollstaven"
+IDS_SOUND_INDEFINITE,
+"ett ljud"
+IDS_SOUND_DEFINITE,
+"ljudet"
+IDS_SOUND_PLURAL,
+"ljud"
+IDS_SOUND_PRONOUN,
+"det"// referring to "ljudet"
+IDS_TYPING_SOUND_NAMES_OBSOLETE,
+"Det går bättre om du tar ljud från anteckningsboken med ljud. Om du skriver namnet på ett ljud och skickar det till någon i ett annat land så kanske det inte fungerar."
+
+IDS_CUBBY_HOLE_FILLED_HELP,
+"Du kan lägga något i en rensad låda genom att släppa det ovanför den rensade lådan. "
+
+IDS_SOUND_HELP, // added 1/14
+"Du kan åstadkomma det ljudet genom att trycka på "
+IDS_ANY_SOUND, // add 1/16
+"vilket ljud som helst"
+IDS_BLANK_SOUND, // add 1/16
+"ett inbyggt ljud som raderats"
+IDS_TURN_BOMB_ON_HELP,  // added 1/20
+"Du kan också spränga en bomb du håller i genom att trycka på mellanslag. "
+
+IDS_MARTIAN_SPEAK_HELP, // added 3/26/97
+ "om jag talar, visar pratbubblor, eller båda" // "whether I speak, show word balloons, or both"
+IDS_MARTIAN_SPEAK,
+ "tal" // speak
+IDS_MARTIAN_BALLOONS,
+ "pratbubblor"   // word balloons
+IDS_MARTIAN_SPEAK_AND_BALLOONS,
+ "tal och pratbubblor" // "speak and balloons"
+IDS_MARTIAN_SPEAKS_ONLY_IN_32BITS,
+ "Tyvärr kan jag tala enbart om du kör 32 bitarsversionen av ToonTalk."
+
+IDS_MARTY_TALKS_FUNNY,
+ "Att översätta mars_människornas språk till jordens språk är inte alltid så lätt. Min översättnings_maskin gör att jag kan låta lite konstigt ibland. Jag hoppas du kan förstå mig i alla fall. "
+
+IDS_MARTIAN_SPEAK_REMOTE_LONG_LABEL,   // added 3/27/97
+ "Hur\rMarty\rtalar"  // "How\rMarty\rTalks"
+IDS_MARTIAN_SPEAK_REMOTE_SHORT_LABEL,
+ "Marty talar" // "Marty Talks"
+
+IDS_SPEECH_ENGINE_VOICE,
+ "SEMarty"
+
+IDS_CLIPBOARD_REMOTE_FULL_HELP1, // added 4/22/97
+ "Om något ligger i Windows klippbok, då kan du se det här. Du kan använda Dammis för att suga upp det  och sedan spotta ut det igen. "
+IDS_CLIPBOARD_REMOTE_FULL_HELP2,
+ "Om klippboken är tom, då kommer fjärkontrollen att vara svart.  Du kan släppa saker på fjärrkontrollen för att lägga det i klippboken. "
+
+IDS_USER_PICTURE_NOT_256_COLORS, // added 5/8/97
+"Tyvärr, 16 bitarsversionen av ToonTalk kan bara läsa bilder i 256 färger. "
+
+// added on 6/13-97
+IDS_CIRCLE_PAGE,
+"Oval" // om bredd och höjd är lika så är det en cirkel annars en ellips --
+// oval är bara ett vardagligt uttryck för denna
+IDS_ROUNDED_RECTANGLE_PAGE,
+"Rundad\rRektangel"
+IDS_LINE_TOWARDS_UPPER_RIGHT,
+"Linje\ruppåt" // när du rör dig åt höger
+IDS_LINE_TOWARDS_LOWER_RIGHT,
+"Linje\rnedåt"
+IDS_HOLLOW_CIRCLE_PAGE,
+"Tom\rOval"
+IDS_ROUNDED_HOLLOW_RECTANGLE_PAGE,
+"Tom\rRundad\rRektangel"
+IDS_DOTTED_LINE_TOWARDS_UPPER_RIGHT,
+"Prickad\rlinje uppåt"
+IDS_DOTTED_LINE_TOWARDS_LOWER_RIGHT,
+"Prickad\rlinje nedåt"
+IDS_HOLLOW_RECTANGLE,
+"Tom\rRektangel"
+IDS_SYNTHETIC_RECTANGLE,
+"en rektangel"
+IDS_SYNTHETIC_OVAL,
+"en oval"
+IDS_SYNTHETIC_ROUNDED_RECTANGLE,
+"en rundad rektangel"
+IDS_SYNTHETIC_LINE_UP,
+"en linje som går uppåt"
+IDS_SYNTHETIC_LINE_DOWN,
+"en linje som går nedåt"
+IDS_SYNTHETIC_HOLLOW_OVAL,
+"en tom oval"
+IDS_SYNTHETIC_ROUNDED_HOLLOW_RECTANGLE,
+"en rundad tom rektangel"
+IDS_SYNTHETIC_DOTTED_LINE_UP,
+"en prickad linje som går uppåt"
+IDS_SYNTHETIC_DOTTED_LINE_DOWN,
+"en prickad linje som går nedåt"
+IDS_SYNTHETIC_HOLLOW_RECTANGLE,
+"en tom rektangel"
+
+// the following will soon be used to generate names for robots rather than
+//the current numbers you see on their chests
+// The names are generated as
+// strings of constant-vowel repeated as necessary.
+// For English I am skipping "y" and "q" since they are a bit of problem.
+IDS_VOWELS_FOR_ROBOT_NAMES, // added 6/24 for naming robots
+"aeiou" // y is pretty special
+IDS_CONSONANTS_FOR_ROBOT_NAMES,
+"bcdfghjklmnprstvwxz" // q is special
+
+//rcinclude "..\new.rc"
+rcinclude "..\sensors.rc"
+rcinclude "..\common.rc"
+rcinclude "java.rc"
+
+// recent additions:
+
+IDS_LESS_THAN, // added 8/27/97
+"mindre än"
+
+IDS_BAD_TIME, // added 8/28/97
+"Det här kan inte vara en riktig tid. Tiden kan inte innehålla siffror som" // followed by a number and a period
+
+// Following combined to make the following (with numbers changed)
+// I see you are 0 seconds old.  I mean 1 seconds old.  No, it's 2 seconds old.
+// I wonder how many seconds until you are 3 seconds old. Could you please go next
+// door and figure it out for me?
+IDS_AGE_IN_SECONDS1,
+"Jag ser att du är" // followed by a number
+IDS_AGE_IN_SECONDS2,
+"sekunder gammal."
+IDS_AGE_IN_SECONDS3,
+"Jag menar"
+IDS_AGE_IN_SECONDS4,
+"Nej, det ska vara"
+IDS_AGE_IN_SECONDS5,
+"Jag undrar hur många sekunder det dröjer innan du är"
+IDS_AGE_IN_SECONDS6,
+"Skulle du kunna gå in i nästa hus och ta reda på det åt mig?"
+
+IDS_MAYBE_YOU_SHOULD_DO_SOMETHING_SPECIAL,
+"Du borde kanske göra något speciellt i"
+IDS_TO_CELEBRATE_BEING,
+"för att fira att du är"
+IDS_MILLIONS_OF_SECONDS_OLD,
+"millisekunder gammal. "
+
+IDS_FINISHED_ALL_PUZZLES_START_AGAIN,
+"Du har klarat av alla tillgängliga uppdrag. Vill du börja om på nytt igen?"
+IDS_WAIT_FOR_BIRD_TO_BRING_MESSAGE,
+"Bra. Vi väntar tills fågeln kommer med meddelandet. "
+IDS_GIVING_UP_ON_BIRD,
+"Jag ger upp. Vi har väntat länge nog på fågeln. "
+IDS_NEST_SHOULD_BE_EMPTY,
+"Tyvärr, men boet borde vara tomt. "
+
+IDS_NOT_CHANGING_FAST_ENOUGH,
+"Tyvärr, men siffran borde ändra sig snabbare. "
+IDS_NOT_CHANGING_SLOW_ENOUGH,
+"Tyvärr, men siffran borde ändra sig långsammare. "
+IDS_NOT_CHANGING_AT_ALL,
+"Tyvärr, men siffran borde ändra sig. "
+
+IDS_THE_NUMBER_OF_ROBOTS_ON_THE_BACK_SHOULD_BE,
+"Antalet robotar på baksidan borde vara"
+
+IDS_DAYS,
+"dagar"
+IDS_HOURS,
+"timmar"
+IDS_DAY,
+"dag"
+IDS_HOUR,
+"timme"
+IDS_MINUTES,
+"minuter"
+
+IDS_AGE_OF_LABEL,
+"ålder av\r"
+
+IDS_SOLVED_ALL_PUZZLES, // revised on 9/1/97
+// old version: "Good job. You solved all the puzzles! Check the ToonTalk web page for more puzzles. "
+"Jättebra! Datorn och klockan fungerar nu. Tack ska du ha. Jag tror att jag kan klara av resten själv nu. "
+IDS_SOLVED_ALL_PUZZLES2,
+"Du kommer att hitta en liten present i slutet av anteckningsboken som finns på sidan fyra i anteckningsboken som kommer från verktygslådan i \"Leka Fritt\". "
+IDS_CHECK_FOR_MORE_PUZZLES,
+"Det kan tänkas att det har kommit fler uppdrag till ToonTalks websida. Se www.toontalk.com/Swedish. "
+
+IDS_WE_NEED_THE_NUMBER_THAT_WAS_ON_THE_FLOOR,
+"Vi behöver sifferkortet som låg på golvet. "
+IDS_NUMBER_SHOULD_HAVE_GROWN_OVER_A_THOUSAND,
+"Siffran borde ha ökat till över ett tusen vi det här laget. "
+
+IDS_BAD_ROBOT_NAMES,
+ " "
+
+IDS_GENERATE_JAVA_APPLET_HELP,
+"Om du håller ner knappen \"Pause\" medan du håller i en bild eller en lastbil och sedan väljer \"Kom tillbaka senare\", då kommer en kopia av det du håller i att dyka upp i Windows som en Java applet i din webbläsare. "
+IDS_OK_IF_MARTY_SUGGESTS_STUFF_YOU_ONCE_DID,
+"Hej. Det var ett tag sedan du senast körde ToonTalk. Är det OK om Marty berättar om saker du redan gjort, men kanske hunnit glömma?"
+
+IDS_JOYSTICK_LABEL, // I use the word "joystick" but I've noticed that
+// Microsoft switched from "joystick" to "game controller" since
+// that is more accurate -- this includes game pads, flying yokes, etc.
+"Styrspak "
+IDS_JOYSTICK_BUTTONS_LONG_LABEL,
+"Styrspakens\rKnappar\rTryckta"
+IDS_JOYSTICK_BUTTONS_DOWN_LONG_LABEL,
+"Styrspakens\rKnappar\rNere"
+IDS_JOYSTICK_X_SPEED_SHORT_LABEL,
+"X Hastighet"
+IDS_JOYSTICK_Y_SPEED_SHORT_LABEL,
+"Y Hastighet"
+IDS_JOYSTICK_Z_SPEED_SHORT_LABEL,
+"Z Hastighet"
+IDS_JOYSTICK_X_AXIS_SHORT_LABEL,
+"X Axel"
+IDS_JOYSTICK_Y_AXIS_SHORT_LABEL,
+"Y Axel"
+IDS_JOYSTICK_Z_AXIS_SHORT_LABEL,
+"Z Axel"
+IDS_JOYSTICK_X_SPEED_LONG_LABEL,
+"Styrspakens\rX Hastighet"
+IDS_JOYSTICK_Y_SPEED_LONG_LABEL,
+"Styrspakens\rY Hastighet"
+IDS_JOYSTICK_Z_SPEED_LONG_LABEL,
+"Styrspakens\rZ Hastighet"
+IDS_JOYSTICK_X_AXIS_LONG_LABEL,
+"Styrspakens\rX Axel"
+IDS_JOYSTICK_Y_AXIS_LONG_LABEL,
+"Styrspakens\rY Axel"
+IDS_JOYSTICK_Z_AXIS_LONG_LABEL,
+"Styrspakens\rZ Axel"
+IDS_JOYSTICK_SPEED_X_HELP, // added 9/19/97
+"värdet en styrspak flyttas till vänster eller höger"
+IDS_JOYSTICK_SPEED_Y_HELP,
+"värdet en styrspak flyttas upp eller ned"
+IDS_JOYSTICK_SPEED_Z_HELP,
+"värdet en styrspak flyttas framåt eller bakåt (är ofta gasreglaget) eller noll om den inte kan känna detta"
+IDS_JOYSTICK_AXIS_ROTATION_X_HELP,
+"värdet en styrspak roteras vänster/höger eller noll om den inte kan känna rotation"
+IDS_JOYSTICK_AXIS_ROTATION_Y_HELP,
+"värdet en styrspak roteras up/ned eller noll om den inte kan känna rotation"
+IDS_JOYSTICK_AXIS_ROTATION_Z_HELP,
+"värdet en styrspak roteras framåt/bakåt eller noll om den inte kan känna rotation"
+IDS_JOYSTICK_BUTTONS_HELP_START1, // used for all buttons and joysticks
+"svaret på frågan \"Trycktes knapp nummer" // followed by a number
+IDS_JOYSTICK_BUTTONS_HELP_START2,
+"nyss ned?\""
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START1,
+"svaret på frågan \"Är knapp nummer" // followed by a number
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START2,
+"nedtryckt?\""
+IDS_OF_JOYSTICK_NUMBER,
+"på styrspak nummer" // followed by a number
+//IDS_JOYSTICK_STUCK, // added 9/23/97
+IDS_TROUBLE_SHOOT_JOYSTICK_CALIBRATION,
+"Din styrspak skickade helikoptern till kanten. Om detta är ett misstag behöver du kalibrera din styrspak. Vill du lära dig hur man gör det?"
+IDS_TEXT_TO_MCI_FULL_HELP,
+"Detta är för att skicka kommandon till Microsoft Windows Media Control Interface (MCI). "
+IDS_TEXT_TO_MCI_FULL_HELP2,
+"Släpp bara texten du vill skicka till det. "
+IDS_TEXT_TO_SPEECH_FULL_HELP,
+"Detta är för att säga texten. "
+IDS_TEXT_TO_SPEECH_FULL_HELP2,
+"Detta fungerar bara med 32-bitars versionen av ToonTalk. "
+IDS_TEXT_TO_SPEECH_FULL_HELP3,
+"Släpp bara texten du vill höra på det. "
+IDS_TEXT_TO_MCI_HELP,
+"ett ställe att släppa text till Media Control Interface"
+IDS_TEXT_TO_SPEECH_HELP,
+"ett ställe att släppa text för att höra det sägas"
+IDS_TEXT_TO_MCI_SHORT_LABEL,
+"MCI"
+IDS_TEXT_TO_SPEECH_SHORT_LABEL,
+"Tal"
+IDS_TEXT_TO_MCI_LONG_LABEL,
+"Media\rControl\rInterface"
+IDS_TEXT_TO_SPEECH_LONG_LABEL,
+"Text till\rTal"
+IDS_ON_TOP_OF_IT_IS,
+ // 9/24/97 -- "It" always refers to a remote control and it is followed
+ // by a description of what was dropped on it
+"Ovanpå det finns"
+IDS_SOUNDS_ON_PAGE8, // revised on 9/26/97
+// was "Sounds that work can be found on page 8 of your notebook. "
+"ToonTalks ljud hittar du på sidan åtta i anteckningsboken. På sidan fyra finns sensorer till att göra dina egna ljud. "
+IDS_WANT_TO_LEARN_ABOUT_COMMAND_LINE, // add 9/26/97
+"Skulle du vilja lära dig några alternativ på kommandoraden nu?"
+IDS_THE_SPACE_BAR, // or is "the space button" more kid friendly?
+"mellanslagstangenten"
+IDS_OR,
+"eller"
+IDS_SECOND_JOYSTICK_BUTTON,
+// used with the above as in "You can do that by pressing the space bar
+// or the second joystick button."
+"styrspakens andra knapp"
+IDS_WELCOME_MESSAGE, // feel free to add a second copyright for the translation here
+"(c) 1992-2000. Ken Kahn. All rights reserved."
+IDS_LOG_REPLAY_ERROR,
+"Tyvärr, något gick snett då en demo log skulle spelas upp igen. Var god rapportera detta problem till Support@ToonTalk.com."
+IDS_STOPPED_BECAUSE_HE, // used only together with the above
+"stannade eftersom"  // " han" removed on 11/12/97
+IDS_BOMBS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT, // added 10/10/97
+"bomber fungerar bara i hus eller på baksidan av en bild"
+IDS_TRUCKS_START_DRIVING_ONLY_INSIDE_OF_HOUSES_ABORT,
+"lastbilar kör bara iväg om de är i ett hus eller på baksidan av en bild"
+IDS_BIRDS_ONLY_START_FLYING_FROM_INSIDE_A_HOUSE_ABORT,
+"fåglar flyger bara iväg om de är i ett hus eller på baksidan av en bild"
+IDS_ROBOTS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT,
+"robotar börjar bara arbeta då de är i ett hus eller på baksidan av en bild"
+IDS_ROBOT_HAS_NON_MATCHING_BOX2,
+"har en låda som inte passar innehållet i sin tankebubbla och det finns inte någon robot han kan ge den till. "
+IDS_ABOUT_TO_GENERATE_JAVA_APPLET,
+"ToonTalk skall generera en Java applet av det du håller i din hand.\rOm allt går som det ska borde din web browser snart visa det."
+
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL,
+// should be needed if -puzzle is used in unlikely ways or recovering from an error
+"Ojdå! Jag kan inte göra nästa uppdrag eftersom det behöver saker från tidigare uppdrag. Är det OK om jag skickar tillbaka dig" // some number
+IDS_GO_BACK_TO_START_OF_PUZZLE_LEVEL2, // followed by
+"uppdrag?"
+
+IDS_ROBOT_MISSING_RECIPIENT_ABORT,  // just a shorter version of the above
+//"was going to put something into something but it's been vacuumed away"
+"skulle släppa något över något, men det hade dammsugits upp"
+
+// added 10/27/97
+IDS_ROOM_DECORATION_HELP,
+"att lägga till eller ta bort utsmyckningar på väggen"
+IDS_HOUSE_DECORATION_HELP,
+"att lägga till eller ta bort utsmyckningar på husets framsida"
+IDS_ROOF_DECORATION_HELP,
+"att lägga till eller ta bort utsmyckningar på husets yttertak"
+IDS_ROOM_DECORATION_SHORT_LABEL,
+"Rum"
+IDS_HOUSE_DECORATION_SHORT_LABEL,
+"Hus"
+IDS_ROOF_DECORATION_SHORT_LABEL,
+"Yttertak"
+IDS_ROOM_DECORATION_LONG_LABEL,
+"Vägg\rUtsmyckning"
+IDS_HOUSE_DECORATION_LONG_LABEL,
+"Hus\rUtsmyckning"
+IDS_ROOF_DECORATION_LONG_LABEL,
+"Yttertak\rUtsmyckning"
+
+IDS_TROUBLE_SHOOT_DISPDIB_ABNORMAL_EXIT,
+"När ToonTalk kördes förra gången blev programmet inte avslutat som det skulle. Vill du ha några tips om hur problemet kan undersökas?"
+IDS_TROUBLE_SHOOT_GENERAL_ABNORMAL_EXIT,
+"När ToonTalk kördes förra gången blev programmet inte avslutat som det skulle. Vill du ha några tips om hur problemet kan undersökas?"
+IDS_TROUBLE_SHOOT_TOO_SLOW,
+"ToonTalk kördes mycket långsamt. Vill du ha några tips om hur du kan få programmet att köras snabbare?"
+IDS_TROUBLE_SHOOT_VERY_FAST_IN_LOW_RESOLUTION,
+"Det finns en version av ToonTalk som körs med skarpare bilder av bättre kvalitet. Vill du få reda på mera om den?"
+IDS_TROUBLE_SHOOT_DIRECTX,
+"ToonTalk fick problem att använda DirectX spel tillägg för Windows. Vill du se vad du kan göra åt den saken?"
+IDS_TROUBLE_SHOOT_MOUSE,
+//IDS_MOUSE_MOVEMENT_WRONG, // just goes into the log for now
+"Windows säger mig att musen har rört sig mera än vad som är tillåtet. Detta händer när ToonTalk körs på en Mac som har Windows. Tyvärr. Försök att använda piltangenterna i stället."
+IDS_TROUBLE_SHOOT_BAD_DEMO,
+"Demon kunde inte köras färdigt som den var tänkt att göra. Vill du få reda på hur man gör för att åtgärda detta?"
+IDS_BETA_EXPIRED, // revised on 11/23/97 // was "Du kan tyvärr inte köra
+"Du kan tyvärr inte köra denna version. Det är en beta- eller provversion och den är för gammal. Vill du få reda på hur du skaffar en nyare version? "
+IDS_TROUBLES_LAUNCHING_BROWSER,
+"Tyvärr. Något blev fel när du försökte starta en webbläsare som Netscape Navigator eller Microsoft Internet Explorer."
+IDS_CITY_SAVED,
+" Staden har sparats." // Preceded by the name of the player
+
+IDS_TROUBLE_SHOOT_QUIT_ON_FIRST_PUZZLE,   // added 2/1/98
+//"Would you like to read some hints?"
+"Skulle du vilja få hjälp och läsa några råd och tips?"
+IDS_TROUBLE_SHOOT_QUIT_ON_EARLY_ROBOT_PUZZLE,
+//"Would you like to see some hints for how to deal with robots in puzzles?"
+"Vill du ha några råd och tips om hur du ska hantera robotar i uppdragen?"
+
+IDS_FORCE_FEEDBACK_JOYSTICK_LABEL, // added 2/27/98
+"Force\rFeedback\rJoystick "
+IDS_FORCE_FEEDBACK_DURATION_SHORT_LABEL,
+"Varaktighet"
+IDS_FORCE_FEEDBACK_GAIN_SHORT_LABEL,
+"Styrka"
+IDS_FORCE_FEEDBACK_DIRECTION_SHORT_LABEL,
+"Riktning"
+
+// added 3/2/988
+
+IDS_FORCE_FEEDBACK_DURATION_REMOTE_HELP,
+"varaktigheten (i tusendels sekunder)"
+IDS_FORCE_FEEDBACK_GAIN_REMOTE_HELP,
+"styrkan (100 är full styrka)"
+IDS_FORCE_FEEDBACK_DIRECTION_HELP,
+"riktningen i grader"
+// all 3 of the above are followed by
+IDS_FORCE_FEEDBACK_EFFECT_HELP,
+"av den \"force feedback\" effekt som heter"
+
+IDS_CANT_MAKE_JAVA_APPLET_OF_PRIMITIVE_BIRD, // added 3/4/98
+"Ledsen, men en Java applet med något som har främmande fåglar i sig kommer förmodligen inte fungera."
+
+IDS_PRIMITIVE_BIRD_DIDNT_HANDLE, // added 3/5/98
+"En fågel tog något till Windows, men Windows visste inte vad det skulle användas till. "
+
+IDS_PRIMITIVE_BIRD_LABEL,
+"Främmande\rFågel"
+
+IDS_A_PRIMITIVE_BIRD,
+"en fågel som flyger utanför ToonTalk"
+IDS_DLL_PRIMITIVE_BIRD_HELP,
+"Du bör ge fågeln en låda med 2 fack. Det första facket bör vara namnet på ett ToonTalk-tillägg. Det andra facket bör innehålla en fågel som får en låda med en ny fågel."
+
+IDS_BIRD_TAKES_READ_AND_WRITE_MESSAGES,
+"Den här fågeln tar Läs och Skriv meddelanden till en fil som heter "
+//IDS_NO_FILE_FOR_EXTENSION_FILE,
+//"Tyvärr. Jag kunde inte hitta ett ToonTalk-tilläg som heter "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION,
+//File messages (Not sure about this-does "File" means "Arkiv" or does this
+//mean that we're talking about messages intended for a file? - In the latter
+//case it would be)
+"Meddelanden till filer bör vara lådor med tre fack varav det tredje facket innehåller en fågel som tar emot svar. "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION2,
+"För läsning bör det första facket innehålla \"Read\" och det andra facket antalet bokstäver som ska läsas. För skrivning, bör det första facket innehålla \"Write\" och det andra facket textkortet som ska skrivas till filen. "
+IDS_CREATE_FILE_HELP,
+"Meddelanden till den här fågeln bör vara lådor med 3 fack. "
+IDS_CREATE_FILE_HELP2,
+"Det första facket bör innehålla \"Open\", \"Open Serial Port\", eller \"Create File\". I det andra facket bör det ligga ett filnamn. Det tredje facket bör innehålla en fågel. Denna fågel kommer att ta emot en annan fågel för att läsa och skriva från filen. "
+IDS_IMPROPER_CREATE_FILE_MESSAGE,
+"en fågel tog något till ToonTalk-tillägget, men det var inte ett riktigt meddelande. "
+IDS_BIRD_TAKES_MESSAGE_TO_OPEN_A_FILE,
+"Den här fågeln tar meddelanden till öppna filer. "
+IDS_TROUBLE_OPENING_A_FILE,
+"Fick problem att öppna filen som heter "
+IDS_IMPROPER_READ_OR_WRITE_MESSAGE,
+"En fågel tog något till en Windows-fil, men det var inte ett riktigt meddelande. "
+
+IDS_TROUBLE_SHOOT_EXTENSION_NOT_INSTALLED, // added 3/20
+"Ett ToonTalk-tillägg behövs, men det har inte installerats. Skulle du vilja lära dig hur man installerar tillägg? "
+IDS_READ_MANUAL_FOR_MORE_HELP,
+"Läs ToonTalks Hjälpreda för att få mera information. "
+IDS_TOO_MANY_HOLES, // added 3/30
+"Tyvärr, men en låda kan inte ha alltför många fack. Se närmare www.toontalk.com/Swedish/ttini.htm för att få reda på hur du kan ändra detta. "
+
+IDS_ROBOTS_CANT_GIVE_BOXES_TO_ROBOTS,
+"Tyvärr, men du kan inte lära robotar att ge lådor till andra robotar. Lägg roboten och lådan i en lastbil i stället."
+
+IDS_ENGLISH_LIKE_ADJECTIVES_AND_PRONOUNS, // new on 5/22/98
+ "0" // should be "0" for languages which there is gender agreement between adjectives and nouns and only one form of "it"
+
+// don't bother translating this unless I create a crippled trial version
+IDS_TRIAL_VERSION_CANT_SAVE, // added 5/1-98 but only used if "trial" version of ToonTalk
+"Tyvärr, men detta är en demoversion av ToonTalk, så ändringarna i din anteckningsbok kommer att försvinna när du avlutar ToonTalk."
+IDS_CANT_SAVE_CITY, // added 5/11/98
+  "Tyvärr, denna demoversion av ToonTalk kan inte spara städer."
+
+// A blank robot is a robot that has been erased by Dusty
+ // only useful inside thought bubbles to express that the corresponding thing should be a robot, but any one will do
+IDS_BLANK_ROBOT_TYPE_INDEFINITE, // added 5/21/98
+   "en tom robot"
+IDS_BLANK_ROBOT_TYPE_DEFINITE,
+   "den tomma roboten"
+IDS_BLANK_ROBOT_TYPE_PLURAL,
+   "tomma robotar"
+IDS_BLANK_ROBOT_TYPE_PRONOUN,
+  "honom"
+
+ IDS_BAD_FLOOR_IN_CITY_FILE,
+//   "Something wrong with a part of a city file describing what's on the floor of a house."
+"Det är något fel på en fil som beskriver vad som finns på golvet i ett hus i staden."
+
+IDS_BAD_ROOM_IN_CITY_FILE,
+//"Something wrong with a part of a city file describing what's on the wall inside a house."
+"Det är något fel på en fil som beskriver vad som finns på väggen i ett hus i staden."
+
+
+IDS_TOO_BIG_TO_SAVE, // new on 5/27/98
+//"could not be saved\rbecause it has too much stuff in it."
+"kunde inte sparas\reftersom innehållet är för stort."
+IDS_NEST_TOO_FULL_TO_SAVE,
+//"There are more than 1000 items on a nest that is being saved. Some items will be lost."
+"Det är fler än 1000 saker i ett fågelbo som är på väg att sparas. En del av dessa saker kommer att gå förlorade."
+IDS_SAVING_TOO_MANY_NESTS,
+//"Too many nests being saved in notebook. Can't save more than 255 at one time -- sorry."
+"Alltför många fågelbon är på väg att sparas i anteckningsbok. Kan tyvärr inte spara fler än 255 åt gången -- tyvärr."
+IDS_LEGO_SERIAL_PORT_NOT_IN_32BIT,
+//"This serial port interface is not supported in the 32-bit version of ToonTalk. "
+"Detta gränssnitt för seriell port stöds inte av 32-bitarsversionen av ToonTalk. "
+
+IDS_TROUBLE_SHOOT_TTS_SELECT_FAILURE, // added 6/12/98
+// "Text-to-speech engine failed to start properly. Do you want to know what you can do to fix this?"
+"Text-till-tal-funktionen startade inte som den skulle. Vill du veta vad du kan göra för att fixa detta?"
+
+
+IDS_TOONTALK_WEB_PAGE, // new on 8/19/98
+"För att få reda på mera om ToonTalk, gå till www.toontalk.com."
+
+IDS_ROBOT_LOST_TRACK_OF_THINGS, // new on 10/16/98
+"En robot har tappat räkningen på saker. Den räknade inte med att behöva hålla reda på så här många saker."
+IDS_EXPECTED_TO_KEEP_TRACK, // used to generate sentences like
+//En robot B räknade med att bara behöva hålla reda på 3 saker.
+"räknade bara med att behöva hålla reda på"
+
+IDS_A_ROBOT_NAMED, // split off from IDS_ROBOT_HAS_NON_MATCHING_BOX on 280199
+"en robot med namnet" // followed by a robot name
+
+		
+IDS_TRILLION_SINGULAR, // moved here 050499 from number_replacement
+ "en biljon"
+IDS_TRILLION_PLURAL,
+ "biljoner"
+IDS_BILLION_SINGULAR,
+ "en miljard",
+IDS_BILLION_PLURAL
+ "miljarder"
+IDS_MILLION_SINGULAR,
+ "en miljon"
+IDS_MILLION_PLURAL,
+ "miljoner"
+IDS_THOUSAND_SINGULAR,
+ "tusen"
+IDS_THOUSAND_PLURAL,
+ "tusen"
+IDS_HUNDRED_SINGULAR,
+ "hundra"
+IDS_HUNDRED_PLURAL,
+ "hundra"
+
+IDS_CHILDREN_HELP,
+ "svaret på frågan ""Vilka bilder ligger ovanpå mig?"""
+IDS_ANCESTORS_HELP,
+ "svaret på frågan""Vilken bild ligger jag ovanpå, och vilken bild ligger den på, och så vidare?"""
+IDS_CHILDREN_SHORT_LABEL,
+ "Delar"
+IDS_ANCESTORS_SHORT_LABEL,
+ "Behållare"
+IDS_CHILDREN_LONG_LABEL,
+ "Delar"
+IDS_ANCESTORS_LONG_LABEL,
+ "Behållare"
+IDS_AND_IT_HAS_THE_LABEL,
+ "och den har etiketten"
+IDS_ANSWER_CHILDREN_QUESTION,
+ "Det här säger vilka bilder som ligger ovanpå"
+IDS_ANSWER_ANCESTORS_QUESTION,
+ "Det här säger vilka bilder som"
+IDS_ANSWER_ANCESTORS_QUESTION2,
+  "ligger ovanpå"
+IDS_LABELED_BY,
+ "fått etiketten av"
+IDS_LABELED_BY2,
+ " "
+IDS_ENCODING_MISSING_IN_PUZZLE,
+ "Kunde inte hitta koden för uppdragets mål."
+IDS_PUZZLE_CONTAINED_NON_ROBOT_AFTER_GOAL,
+"Uppdraget innehöll en icke-robot efter målet. Markeringen registreras inte."
+IDS_NON_PICTURE_ON_TOP_OF_PICTURE,
+ "Det som inte var en bild, och låg ovanpå en bild, har lagts på baksidan av en bild i stället."
+IDS_GIVE_ME_AND_ILL_TALK_ABOUT_IT,
+ "Om du ger mig något, så ska jag tala om det när jag talar om"
+// followed by some ToonTalk object
+IDS_HERES_A_COPY_OF,
+"Här är en kopia av" // followed by some ToonTalk object
+IDS_HERES_A_COPY_OF2,
+ " "
+IDS_IT_GOES_WITH,
+"Detta hör ihop med" // followed by some ToonTalk object
+IDS_IT_GOES_WITH2,
+ " "
+IDS_OK,
+"OK"
+IDS_ILL_REMEMBER_THAT,
+"Det ska jag komma ihåg"
+
+IDS_GOES_WITH,
+"hör ihop med"
+
+IDS_MY_BOX, // new on 290499
+"Min låda"
+
+IDS_THAT_REMINDS_ME_OF, // new on 290699
+ // for example, "Du håller  i en låda som får mig att tänka på textent "detta är en kommentar"".
+ "som får mig att tänka på"
+IDS_THAT_REMINDS_ME_OF2, // used after "this is a comment" above.
+ " "
+
+IDS_SOMETHING, // new on 300699
+"något"
+
+IDS_ANY_ROBOT, // new on 090799
+"vilken robot som helst"
+
+IDS_ANY_FORCE_EFFECT, // new on 160799
+ "vilken joy stick effekt som helst"
+IDS_BLANK_FORCE_EFFECT,
+ "en joy stick effekt som raderats"
+IDS_FORCE_EFFECT_TYPE_INDEFINITE,
+ "en joy stick effekt"
+IDS_FORCE_EFFECT_TYPE_DEFINITE,
+ "joy stick effekten"
+IDS_FORCE_EFFECT_TYPE_PLURAL,
+ "joy stick effekter"
+IDS_FORCE_EFFECT_TYPE_PRONOUN,
+ "den"
+
+ // new on 200799
+IDS_KEYBOARD_ACCELERATORS,
+  // be sure that no letter occurs twice in the same situation in the following
+  // Each letter corresponds to a keyboard command:
+
+  // D - Ner när du är i helikoptern
+  // U - Upp när du är i helikoptern
+
+  // H - Helikopter när du går utanför huset
+
+  // U - Ställer dig upp när du inte håller något i handen
+  // P - Tar upp det som ligger under fingret om du inte håller i något
+  // F - Tar upp och vänder på det som ligger under fingret om du inte håller i något
+
+  // F - Vänder det du håller i, t ex en bild eller ett kort
+  // D - Släpper när du håller i något
+ "duhupffd"
+
+// The following indicate what should seperate words in sentences.
+// In Japanese it should be the special keyword "NOTHING" which means no space between phrases or words
+IDS_SPACE_BEFORE_PRONOUNS,
+ // in Portuguese this should be "-"
+ " "
+IDS_SPACE_BEFORE_OR_AFTER_NUMBERS,
+ " "
+IDS_DEFAULT_SPACE_BETWEEN_WORDS,
+ " "
+
+ // the following also need to be updated for Asian languages
+IDS_COMMA,
+ ","
+IDS_END_SENTENCE,
+ ". "
+IDS_END_QUESTION,
+ "? "
+IDS_END_SENTENCE_EXCLAMATION,
+ "! "
+
+IDS_NOT_A_GOOD_DEMO_FILE,
+ "är en dålig ToonTalk demo fil."
+IDS_DEMO_FILE_NEED_NEWER_VERSION_OF_TOONTALK,
+ "Demofilen kan bara köras i senare versioner av ToonTalk. Det är bäst att du uppgraderar. Gå till www.toontalk.com."
+
+IDS_FORCE_EFFECT_HELP, // added 7/31/99
+"Den effekten kan du känna genom att trycka "
+IDS_FORCE_EFFECT_HELP2,
+ " "
+IDS_FORCE_EFFECTS_ON_PAGE4,
+"Mera om krafteffekterna kan du hitta i din anteckningsbok i slutet av anteckningsboken för sensorer.."
+
+
+IDS_UNKNOWN_PROBLEM_READING_A_URL, // new on 9/14/99
+"Det blev problem med att läsa en fil från internet."
+IDS_SHOULD_TOONTALK_STOP_READING_URLS,
+"Vill du att ToonTalk ska sluta upp och leta efter filer från internet?"
+
+IDS_TOOLBOX_IN_VACUUM_HELP, // new on 170999
+"Verktygslådan kommer inte eftersom den ligger i Dammis. Låt Dammis spotta ut den. "
+
+IDS_MOUSE_RELEASED, // new on 311099
+"ToonTalk no longer using the mouse - Press Control-F8 to start using it again."
+
+IDS_MARTAIN_SPEAK_WITH_SUBTITLES, // new on 101199
+  "speak and subtitles"
+
+IDS_COPY_OF_ME, // new on 121199 
+  "Copy\rof me"
+
+IDS_WANT_TO_SEE_LOG, // new on 221199
+"Vill du se din loggfil?"
+
+IDS_LANGUAGE_SHORT_LABEL,
+ "Språk"
+IDS_LANGUAGE_LONG_LABEL,
+ "Språk\rsom används"
+IDS_LANGUAGE_HELP,
+ "vilket språk ToonTalk använder"
+
+IDS_SPACE_NO_LONGER_CHANGES_PICTURES, // new on 221199
+ "En robot trycker på mellantangenten hela tiden för att ändra en bild. Mellanslag ändrar inte längre bilder. Ska jag ändra sådana robotar så att de trycker
+'+' i stället?"
+
+IDS_SPACE_NO_LONGER_CHANGES_REMOTE_CONTROLS,
+ "En robot trycker på mellantangenten hela tiden för att ändra en fjärrkontroll. Mellanslag ändrar inte längre fjärrrkontroller. Ska jag ändra sådana robotar så att de
+trycker '+' i stället?"
+IDS_ROBOT_UPDATED_WHEN_RUN,
+ "Robotar kommer att uppdateras första gången de körs. Spara uppdaterade robotar så slipper du få frågan igen nästa gång du kör.."
+
+IDS_INTERNAL_ERROR_STARTING_TOONTALK, // new on 151299
+"Tyvärr uppstod ett internt fel när ToonTalk startade. Underliga saker händer ibland."
+IDS_INTERNAL_ERROR,
+"Tyvärr har ett internt fel uppstått. Underliga saker händer ibland."
+IDS_INTERNAL_ERROR_EXITING,
+"Ett internt fel uppstod när ToonTalk var på väg att avslutas."
+IDS_KEEP_GOING_DESPITE_INTERNAL_ERROR,
+" Vill du att ToonTalk ska försöka fortsätta i alla fall?"
+IDS_INTERNAL_ERROR_LOADING_CITY,
+"Tyvärr uppstod ett internt fel när ToonTalk skulle ladda in en stad. Underliga saker händer ibland."
+IDS_INTERNAL_ERROR_LOADING_PAGE,
+"Tyvärr uppstod ett internt fel när ToonTalk skulle ladda in en sida i en anteckningsbok. Förmodligen har sidan försvunnit."
+IDS_INTERNAL_ERROR_LOADING_ITEM,
+"Tyvärr uppstod ett internt fel när ToonTalk skulle ladda in någonting. Förmodligen har det försvunnit."
+
+IDS_DISPLAY_NUMBER_BEFORE_STREET, // new on 080100
+"1" // 1 betyder att adresser kommer att bli "5:e gatan" och "4:e avenyn"
+    // 0 betyder att adresser kommer att bli "gata fem" och "aveny fyra"
+//(translated of course)
+
+IDS_NETWORK_NESTS_NOT_SUPPORTED_YET,
+"ToonTalk håller på och laddar in ett fågelbo som arbetar via ett nätverk. Tyvärr kan inte denna version av ToonTalk hantera nätverk. Det som kommer från nätverket kommer inte att
+behandlas. Gå till www.toontalk.com för information uppgraderingar."
+
+
+}

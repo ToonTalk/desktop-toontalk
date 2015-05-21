@@ -1,0 +1,7 @@
+Record of events for ToonTalk
+Command line is: 
+-direct_input 0 -f 0  -v 800 -n ToonTalk  -o test1 -d 2468
+revisit (frame=1)
+revisit (frame=1)
+revisit (frame=1)
+295 frames in 18 seconds (15.5 FPS). (Ignoring 0 frames during the titles.)

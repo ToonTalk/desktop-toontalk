@@ -1,0 +1,65 @@
+/****************************************************************************
+
+
+nbrushes.RC
+
+produced by Borland Resource Workshop
+
+
+*****************************************************************************/
+
+#define RCDATA_14	14
+#define RCDATA_13	13
+#define RCDATA_12	12
+#define RCDATA_11	11
+#define RCDATA_10	10
+#define RCDATA_9	9
+#define RCDATA_8	8
+#define RCDATA_7	7
+#define RCDATA_6	6
+#define RCDATA_5	5
+#define RCDATA_4	4
+#define RCDATA_3	3
+#define RCDATA_2	2
+#define RCDATA_1	1
+RCDATA_1 RCDATA "F:/KimSep26/BRUSHES/Lawn1s.bmp"
+
+
+RCDATA_2 RCDATA "F:/KimSep26/BRUSHES/Lawn2s.bmp"
+
+
+RCDATA_3 RCDATA "F:/KimSep26/BRUSHES/Lawn4s.bmp"
+
+
+RCDATA_4 RCDATA "F:/KimSep26/BRUSHES/Lawnsids.bmp"
+
+
+RCDATA_5 RCDATA "F:/KimSep26/BRUSHES/Roofas.bmp"
+
+
+RCDATA_6 RCDATA "F:/KimSep26/BRUSHES/Roofbs.bmp"
+
+
+RCDATA_7 RCDATA "F:/KimSep26/BRUSHES/Roofcs.bmp"
+
+
+RCDATA_8 RCDATA "F:/KimSep26/BRUSHES/Street1s.bmp"
+
+
+RCDATA_9 RCDATA "F:/KimSep26/BRUSHES/Street2s.bmp"
+
+
+RCDATA_10 RCDATA "F:/KimSep26/BRUSHES/Street4s.bmp"
+
+
+RCDATA_11 RCDATA "F:/KimSep26/BRUSHES/Streetss.bmp"
+
+
+RCDATA_12 RCDATA "F:/KimSep26/BRUSHES/Water1s.bmp"
+
+
+RCDATA_13 RCDATA "F:/KimSep26/BRUSHES/Water2s.bmp"
+
+
+RCDATA_14 RCDATA "F:/KimSep26/BRUSHES/Water4s.bmp"
+

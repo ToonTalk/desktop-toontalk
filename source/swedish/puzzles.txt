@@ -1,0 +1,922 @@
+Received: from proxy2.ba.best.com (root@proxy2.ba.best.com [206.184.139.13]) by shellx.best.com (8.8.5/8.8.3) with ESMTP id CAA12369 for <kenkahn@shellx.best.com>; Tue, 4 Mar 1997 02:19:39 -0800 (PST)
+Received: from mailbox.swip.net (mailbox.swip.net [193.12.122.1]) by proxy2.ba.best.com (8.8.5/8.8.3) with ESMTP id CAA29811 for <KenKahn@ToonTalk.com>; Tue, 4 Mar 1997 02:19:10 -0800 (PST)
+Received: from default (dialup75-3-1.swipnet.se [130.244.75.41]) 
+          by mailbox.swip.net (8.7.6swip/8.7.3) with SMTP 
+          id LAA20932; 
+          Tue, 4 Mar 1997 11:18:59 +0100 (MET)
+Message-ID: <331BF6E1.2DD3@mailbox.swipnet.se>
+Date: Tue, 04 Mar 1997 11:18:09 +0100
+From: Lennart Mogren <lennart.mogren@mailbox.swipnet.se>
+Reply-To: lennart.mogren@mailbox.swipnet.se
+X-Mailer: Mozilla 3.0 (Win95; I)
+MIME-Version: 1.0
+To: Ken Kahn <KenKahn@ToonTalk.com>
+CC: Tobias <em.zetterlund@swipnet.se>
+Subject: puzzles checked Swedish
+Content-Type: multipart/mixed; boundary="------------59FE27EB2B41"
+
+This is a multi-part message in MIME format.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hi,
+These are the .pzl files I've found with only minor changes, lost
+letters and and the like. 
+
+>From 41.pzl and onwards there are no translations in the batch I have. I
+guess these are the ones Tobias is going to translate and maybe some
+more. We'll send them as soon as we have them ready. 
+
+Did the Word document I sent work OK this time? I guess so since you
+never said anything about it.
+Yours
+Lennart
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P1.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P1.pzl"
+
+Tack f=F6r att du kommer och hj=E4lper mig med rymdskeppet.
+OK, f=F6rst beh=F6ver vi laga skeppets dator.
+Den beh=F6ver siffror f=F6r att fungera. Skulle inte du kunna g=E5 in i h=
+uset
+bredvid och komma tillbaka med en l=E5da det finns en etta och en tv=E5a =
+i?
+S=E4tt dig bara ned i det andra huset och sl=E4pp ned siffrorna i l=E5dan=
+=2E
+Ta sedan upp den och tryck p=E5 'Esc' f=F6r att kunna ta med dig den till=
+baka.
+Om du f=E5r problem kan du komma tillbaka s=E5 ska jag f=F6rs=F6ka hj=E4l=
+pa dig.
+
+Anv=E4nd musknapparna till att =
+
+sitta, ta upp och sl=E4ppa. =
+
+Vi beh=F6ver #########.
+
+S=E5 h=E4r blir det n=E4r man sparar allting i ett rum. =
+
+4!@%!(%@*ATAnATAlAkA0A0A5A/C?C!CMAeAdAAC'AEAsAcA'AACsAtAdBlAlAeArA.C+CdA
+uAACdAiAgAACuApApA.AvB8C!C!CvA?C!C!C3CDA!C!CHB:C!C!C|A D D C+C!C#C!C D D
+JA.C!C!CDA<C!C!CeBUA!C!CrA@C!C!CxA D D C!C"C!C!C!C+A!C.D2C!C!C[AAA!C!C+D
+5C!C!C.A<C!C!CiA D D C!C#C!C!C!C+A!C4BbA!C!C9CDA!C!CDB*C!C!CdB-C!C!CgA D
+ D C D..
+
+The following is a box with 2 holes whose first hole contains the number
+1 and whose second hole contains the number 2
+4!@%!(%@+C!C#C!C!C"C!C!C!C+A!C!C#C!C!C!C+A!C..
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+Vi f=F6rs=F6ker igen. Lade du m=E4rke till att du kan ta upp siffror och =
+sl=E4ppa
+dem =F6ver h=E5len i l=E5dan?
+
+OK. Detta =E4r vad jag skulle g=F6ra om jag kunde. Jag skulle ta upp etta=
+n
+och sl=E4ppa den i f=F6rsta h=E5let. Sen skulle jag ta upp tv=E5an och sl=
+=E4ppa
+den i det andra h=E5let. Sen skulle jag ta med mig hela l=E5dan tillbaka.=
+
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P4.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P4.pzl"
+
+Vi kommer att beh=F6va ett riktigt stort tal. Se efter om du kan g=F6ra
+ett tal som =E4r st=F6rre =E4n 1000. Du kan anv=E4nda min trollstav till =
+att
+g=F6ra det. Som allting fr=E5n Mars kan du s=E4tta ig=E5ng trollstaven ge=
+nom att
+trycka p=E5 mellanslag efter du tagit upp den. Lycka till.
+
+Vi beh=F6ver ett tal
+som =E4r st=F6rre =E4n 1000.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A!C"C!C!C!C+A!CZA0A!C!C=3DD@C!C!C=3DD9C!C!CSB@C!=
+C!C
+$D D D C$C!C+C!C!C!C0A6C!C!CkBGA!C!C!CKA!C!C8B,C!C!C%D D D C D..
+
+1024
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+Kom du p=E5 hur du skulle anv=E4nda trollstaven? Ta upp den, peka med sta=
+vens
+topp p=E5 sifferkortet och tryck sen p=E5 mellanslag.
+
+N=E4r du kopierat n=E5gonting kan du sl=E4ppa ned det genom att klicka p=E5=
+ musen.
+
+Trollstavar kan anv=E4ndas till att dubblera tal.
+
+Kopiera bara ett nummer och sl=E4pp kopian ovanp=E5.
+
+S=E5 h=E4r skulle jag g=F6ra det. Jag skulle ta upp trollstaven och kopie=
+ra ettan.
+Jag skulle sl=E4ppa kopian p=E5 orginalet. Sen skulle jag kopiera tv=E5an=
+ och
+sl=E4ppa den p=E5 tv=E5an. S=E5 skulle jag h=E5lla p=E5 tills trollstaven=
+ f=E5r slut p=E5
+magi. Resultatet skulle bli ett tal som =E4r st=F6rre =E4n 1000.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P8.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P8.pzl"
+
+Ibland f=E5r jag saker gjorda genom att tr=E4na robotar att =
+
+g=F6ra saker f=F6r mig. Men med mina skador kan jag inte g=F6ra n=E5gonti=
+ng.
+Se efter om du kan tr=E4na en robot att g=F6ra en l=E5da med tv=E5 nollor=
+ i
+och ta sedan med dig den tillbaka hit.
+
+Vi beh=F6ver #####
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A-A#C"C$C!C"C!C!C!C.B8C!C!C+B3C!C!CAD(A!C!C0A*A
+!C!C}A D D C+C!C"C!C!C!C!C!C!C+A!CBA<A!C!C}A,A!C!CPA:A!C!C`B&A!C!C{A D D
+ C D..
+
+The following is a box with 2 holes whose first hole contains the number
+0 and whose second hole contains the number 0.
+4!@%!(%@+C!C#C!C!C!C!C!C!C+A!C!C!C!C!C!C+A!C..
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+BringInVacuumWhenRobotFails =3D off
+
+M=E4rkte du att roboten har en trollstav som endast han kan anv=E4nda?
+
+Du kan tr=E4na roboten om du ger honom l=E5dan.
+
+N=E4r roboten =E4r tr=E4nad ger du bara honom l=E5dan s=E5 g=F6r han
+det han blev tr=E4nad att g=F6ra.
+
+S=E5 h=E4r skulle jag g=F6ra detta. Jag skulle ta upp l=E5dan och sl=E4pp=
+a den p=E5 roboten.
+Sen skulle jag tr=E4na honom att kopiera l=E5dan och sl=E4ppa den p=E5 ka=
+nten av den andra.
+Sen skulle jag ge roboten l=E5dan och v=E4nta p=E5 att han blir klar. Sen=
+ skulle jag ta
+upp l=E5dan och =E5terv=E4nda.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P9.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P9.pzl"
+
+Kommer du ih=E5g n=E4r du gjorde ett sifferkort med talet 1024 p=E5
+genom att anv=E4nda trollstaven om och om igen?
+Ja, datorn kommer att beh=F6va =E4nnu st=F6rre siffror.
+F=F6rs=F6k att f=E5 en robot att g=F6ra ett sifferkort med en siffra
+som =E4r st=F6rre =E4n 1 000 000 000.
+
+Vi beh=F6ver en siffra
+st=F6rre =E4n
+1 000 000 000.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A-A#C"C$C!C?C!C!C!CzB8C!C!C+B*C!C!CAD(A!C!C0A*A
+!C!CyA D D C+C!C"C!C!C"C!C!C!C+A!CCABA!C!CaB/A!C!C(C8A!C!CXA%A!C!C}A D D
+ C D..
+
+1073741824
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+Tr=E4nade du roboten att dubblera siffran i l=E5dan?
+
+Du kan l=E5ta roboten dubblera en siffra genom att kopiera siffran och
+sedan sl=E4ppa kopian p=E5 originalet.
+
+Gav du roboten l=E5dan efter att du tr=E4nat honom?
+
+Roboten stannade eftersom han =E4r s=E5 petig att han endast tar emot
+exakt det han t=E4nker p=E5. Men Dammis kan hj=E4lpa till.
+
+F=F6rs=F6kte du att rensa sifferkortet i hans tankebubbla?
+
+Detta =E4r klurigt. S=E5 h=E4r skulle jag g=F6ra. Jag skulle ge roboten l=
+=E5dan
+och l=E5ta honom kopiera sifferkortet med 1 p=E5 och sedan sl=E4ppa kopia=
+n
+p=E5 originalet f=F6r att dubblera det. Sen skulle jag ta upp Dammis och =
+h=E5lla
+hans mun =F6ver sifferkortet med 1 p=E5 i robotens tankebubbla och trycka=
+ p=E5 r.
+N=E4r han rensat klart skulle jag st=E4nga av honom med mellanslag.
+Sen skulle jag ge roboten l=E5dan och v=E4nta till han blir klar.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P11.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P11.pzl"
+
+Ok, se efter om du kan g=F6ra en l=E5da med tre nollor i. Ta med dig
+l=E5dan med tre nollor inuti det andra h=E5let i en annan l=E5da.
+
+Vi beh=F6ver
+#######
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C#C!C+C!C"C!C!C!C!C!C!C+A!C+C!C#C!C!C!C!C!C
+!C+A!C!C!C!C!C!C+A!CkB$C!C!C#B8A!C!CwAvA!C!C?D?C!C!CMA D D C D..
+
+   The following is a box with 2 holes whose second hole contains a box
+with 3 holes whose first hole contains the number 0 and whose second
+hole contains the number 0 and whose third hole contains the number 0.
+4!@%!(%@+C!C#C!C D+C!C$C!C!C!C!C!C!C+A!C!C!C!C!C!C+A!C!C!C!C!C!C+A!C..
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+F=F6rs=F6kte du ta ut l=E5dan med tv=E5 nollor i?
+
+F=F6rs=F6kte du ta ut l=E5dan med bara en nolla i?
+
+F=F6rs=F6kte du s=E4tta ihop dem?
+
+Satte du tillbaka resultatet i andra h=E5let?
+
+S=E5 synd. Detta =E4r vad jag skulle g=F6ra om jag kunde. Jag skulle ta
+upp l=E5dan med tv=E5 nollor i och sl=E4ppa ned den. Sen skulle jag ta l=E5=
+dan
+med en nolla i och sl=E4ppa den p=E5 kanten av den andra l=E5dan. Jag sku=
+lle
+ta upp den ihopsatta l=E5dan och sl=E4ppa ned den i det andra h=E5let i
+den tomma l=E5dan. Sen skulle jag ta upp det hela.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P14.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P14.pzl"
+
+F=F6rs=F6k att g=F6ra en l=E5da som inneh=E5ller 1, 2, 4, 8, 16, 32.
+
+Vi beh=F6ver
+#########
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C#C!C+C!C"C!C!C)C!C!C!C+A!C+C!C$C!C!C"C!C!C
+!C+A!C!C#C!C!C!C+A!C!C%C!C!C!C+A!C`A&C!C!CwB>A!C!C3C]A!C!C5C;C!C!C)D D D
+ C$C!C%C!C!C!C<A(A!C!C_A&A!C!C!CKA!C!C8B,C!C!CzA D D C D..
+
+   The following is a box with 6 holes whose first hole contains the numb=
+er
+1 and whose second hole contains the number 2 and whose third hole
+contains the number 4 and whose fourth hole contains the number 8 and
+whose fifth hole contains the number 16 and whose sixth hole contains
+the number 32.
+4!@%!(%@+C!C'C!C!C"C!C!C!C+A!C!C#C!C!C!C+A!C!C%C!C!C!C+A!C!C)C!C!C!C+A!C
+!C1C!C!C!C+A!C!CAC!C!C!C+A!C..
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+Tog du ut l=E5dan med ettan, tv=E5an och fyran i?
+
+Anv=E4nde du trollstaven till att kopiera l=E5dan med =E5ttan i?
+
+F=F6rs=F6kte du att s=E4tta ihop l=E5dan med ettan, tv=E5an och fyran i
+med den som inneh=E5ller en =E5tta?
+
+Kopierade du =E5ttan och sl=E4ppte kopian p=E5 originalet f=F6r
+att g=F6ra 16?
+
+Kopierade du l=E5dan med 16 i?
+
+Satte du ihop l=E5dan med den som inneh=F6ll 1, 2, 4 och 8?
+
+Dubblerade du 16 och f=E4ste l=E5dan med 32 till de andra?
+
+Kom du ih=E5g att st=E4lla dig upp medan du h=F6ll l=E5dan med
+1, 2, 4, 8, 16 och 32 i?
+
+Detta =E4r vad jag skulle g=F6ra om jag kunde. Jag skulle ta ut
+l=E5dan med 1 ,2 och 4 i och sl=E4ppa den p=E5 golvet. Jag skulle ta
+upp trollstaven och kopiera l=E5dan med =E5ttan i. Jag skulle s=E4tta
+ihop en av l=E5dorna med =E5tta i med l=E5dan som inneh=E5ller 1, 2 och 4=
+=2E
+Sen skulle jag kopiera =E5ttan och sl=E4ppa den p=E5 originalet f=F6r att=
+
+g=F6ra den till 16. Jag skulle kopiera l=E5dan med 16 i och f=E4sta den
+i den andra l=E5dan. Jag skulle kopiera 16 p=E5 samma s=E4tt som f=F6rut
+f=F6r att f=E5 32 och sedan s=E4tta ihop den l=E5dan med den andra.
+Till sist skulle jag ta upp den resulterande l=E5dan.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P15.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P15.pzl"
+
+Nu =E4r det bara en sak kvar innan datorn har alla siffror den beh=F6ver.=
+
+Tr=E4na en robot att g=F6ra en l=E5da som inneh=E5ller 1, 2, 4, 8, 16 osv=
+ =E4nda upp
+till 1 073 741 824.
+
+Vi beh=F6ver
+    .
+osv.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C#C!C+C!C"C!C!CAC!C!C!C+A!C+C!C'C!C!C"C!C!C
+!C+A!C!C#C!C!C!C+A!C!C%C!C!C!C+A!C!C)C!C!C!C+A!C!C1C!C!C!C+A!C!CAC!C!C!C
++A!C8D'C!C!CMA3C!C!C8DdA!C!CxBAC!C!CqA D D C-A5C"C$C!C2A!C!C!CvB,A!C!CwA
+@C!C!CAD(A!C!C0A*A!C!CmA D D C D..
+
+The following is a box with 31 holes whose first hole contains the
+number 1 and whose second hole contains the number 2 and whose third
+hole contains the number 4 and whose fourth hole contains the number 8
+and whose fifth hole contains the number 16 and whose sixth hole
+contains the number 32 and whose seventh hole contains the number 64 and
+whose eighth hole contains the number 128 and whose ninth hole contains
+the number 256 and whose tenth hole contains the number 512 and whose
+eleventh hole contains the number 1,024 and whose twelth hole contains
+the number 2,048 and whose thirteenth hole contains the number 4,096 and
+whose 14th hole contains the number 8,192 and whose 15th hole contains
+the number 16,384 and whose 16th hole contains the number 32,768 and
+whose 17th hole contains the number 65,536 and whose 18th hole contains
+the number 131,072 and whose 19th hole contains the number 262,144 and
+whose 20th hole contains the number 524,288 and whose 21st hole contains
+the number 1,048,576 and whose 22nd hole contains the number 2,097,152
+and whose 23rd hole contains the number 4,194,304 and whose 24th hole
+contains the number 8,388,608 and whose 25th hole contains the number
+16,777,216 and whose 26th hole contains the number 33,554,432 and whose
+27th hole contains the number 67,108,864 and whose 28th hole contains
+the number 134,217,728 and whose 29th hole contains the number
+268,435,456 and whose 30th hole contains the number 536,870,912 and
+whose 31st hole contains the number 1,073,741,824.
+4!@%!(%@+C!C@C!C!C"C!C!C!C+A!C!C#C!C!C!C+A!C!C%C!C!C!C+A!C!C)C!C!C!C+A!C
+!C1C!C!C!C+A!C!CAC!C!C!C+A!C!C@A!C!C!C+A!C!C!D!C!C!C+A!C!C!C"C!C!C+A!C!C
+!C#C!C!C+A!C!C!C%C!C!C+A!C!C!C)C!C!C+A!C!C!C1C!C!C+A!C!C!CAC!C!C+A!C!C!C
+@A!C!C+A!C!C!C!D!C!C+A!C!C!C!C"C!C+A!C!C!C!C#C!C+A!C!C!C!C%C!C+A!C!C!C!C
+)C!C+A!C!C!C!C1C!C+A!C!C!C!CAC!C+A!C!C!C!C@A!C+A!C!C!C!C!D!C+A!C!C!C!C!C
+"C+A!C!C!C!C!C#C+A!C!C!C!C!C%C+A!C!C!C!C!C)C+A!C!C!C!C!C1C+A!C!C!C!C!CAC
++A!C!C!C!C!C@A+A!C..
+
+Goal box: 34 64 200 14
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+Du vet att den h=E4r roboten inte =E4r s=E5 v=E4rst olik den du precis tr=
+=E4nade.
+
+Den h=E4r roboten beh=F6ver dubblera den f=F6rsta siffran varje g=E5ng.
+
+N=E4r roboten v=E4l har dubblerat siffran kan han kopiera l=E5dan som inn=
+eh=E5ller sifferkortet.
+
+Har du f=F6rs=F6kt tr=E4na roboten att koppla ihop l=E5dan med =E5ttan i =
+med slutet p=E5
+l=E5dan som inneh=E5ller 1, 2 och 4?
+
+Roboten =E4r petig om du inte anv=E4nder Dammis till att suga upp lite sa=
+ker
+fr=E5n hans tankebubbla.
+
+Gav du l=E5dan till roboten och v=E4ntade till han blev klar?
+
+Om jag kunde r=F6ra mig skulle jag g=F6ra l=E5dan s=E5 h=E4r. Jag skulle =
+ge roboten
+l=E5dan. Jag skulle tr=E4na roboten till att kopiera fyran som finns i f=F6=
+rsta h=E5let
+och sl=E4ppa ner kopian f=F6r att dubblera den. Sen skulle jag tr=E4na ro=
+boten till
+att kopiera l=E5dan med =E5ttan i och sl=E4ppa ned kopian. Sen skulle rob=
+oten f=E5
+sl=E4ppa ned trollstaven och sedan s=E4tta ihop l=E5dan med 1, 2 och 4 i =
+med l=E5dan
+som inneh=E5ller en =E5tta. Roboten skulle sen f=E5r s=E4tta tillbaka res=
+ultatet f=F6r att
+vara klar. Jag skulle ge honom l=E5dan och n=E4r Dammis kommer skulle jag=
+ suga
+upp den f=F6rsta fyran och den andra l=E5dan fr=E5n l=E5dan i robotens ta=
+nkebubbla.
+Jag skulle ge roboten l=E5dan igen och v=E4nta till han blir klar.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P16.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P16.pzl"
+
+Med dessa siffror kan datorn g=F6ra vilket tal som helst bara det =E4r mi=
+ndre
+=E4n 2 147 483 647. Den kan g=F6ra vilket tal den vill med hj=E4lp av de =
+siffror
+du tagit med dig till mig. Se efter om du kan g=F6ra det. Se efter om du =
+kan
+ta med dig =E5ret du f=F6ddes. Jag har f=F6rst=E5tt att du =E4r f=F6dd ef=
+ter 1900 s=E5 ta
+bara med dig de tv=E5 sista siffrorna. Om du t.ex. f=F6ddes 1985 beh=F6ve=
+r du
+bara ta med dig 85.
+
+Ta med dig ett tal
+t.ex. 85 om du
+f=F6ddes 1985.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A/C"C!CAA'DnB D D?CGA!C!CDB*C!C!C!D-C!C!CYA D D
+ C+C!C@C!C!C"C!C!C!C+A!C!C#C!C!C!C+A!C!C%C!C!C!C+A!C!C)C!C!C!C+A!C!C1C!C
+!C!C+A!C!CAC!C!C!C+A!C!C@A!C!C!C+A!C!C!D!C!C!C+A!C!C!C"C!C!C+A!C!C!C#C!C
+!C+A!C!C!C%C!C!C+A!C!C!C)C!C!C+A!C!C!C1C!C!C+A!C!C!CAC!C!C+A!C!C!C@A!C!C
++A!C!C!C!D!C!C+A!C!C!C!C"C!C+A!C!C!C!C#C!C+A!C!C!C!C%C!C+A!C!C!C!C)C!C+A
+!C!C!C!C1C!C+A!C!C!C!CAC!C+A!C!C!C!C@A!C+A!C!C!C!C!D!C+A!C!C!C!C!C"C+A!C
+!C!C!C!C#C+A!C!C!C!C!C%C+A!C!C!C!C!C)C+A!C!C!C!C!C1C+A!C!C!C!C!CAC+A!C!C
+!C!C!C@A+A!C!C!C!C!CMA.A!C!CTAMA"C!CeB#A!C!C@C D D C D..
+
+   The following is a blank number pad.
+4!@%!(%@!C7C!C!C!C+A"C..
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+UserPuzzle =3D off
+
+F=F6rs=F6kte du ta ut och addera siffrorna?
+
+Jag tror att det =E4r enklare att b=F6rja med de stora siffrorna. 64
+=E4r nog det b=E4sta talet att b=F6rja med om du inte f=F6ddes f=F6re 196=
+4.
+
+Om jag klantade till det och talet blev f=F6r stort skulle jag komma ih=E5=
+g vilket
+tal det var jag adderade som jag inte ville ha och f=F6rs=F6ka igen. Jag =
+skulle =E4ven
+h=E5lla reda p=E5 skillnaden mellan talet jag vill ha och talet jag har.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P22.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P22.pzl"
+
+Nu ska vi se om du kan l=E4gga till D, E och F till det h=E4r.
+
+Vi beh=F6ver
+ #####
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C$C!C!C"C!C!C!C+A!C+C!C"C!C/C"C!CCA+C!C$C!C
+/C"C!CAA/C"C!CBA/C"C!CCA"B%C!C!CmA4A!C!C@BlA!C!C@B3C!C!C{A D D C$C!C%C!C
+!C!CPA1C!C!C<D=3DC!C!C!CKA!C!C8B,C!C!C|A D D C D..
+
+   The following is a box with 6 holes whose first hole contains a pad wi=
+th
+the text "A" on it and whose second hole contains a pad with the text
+"B" on it and whose third hole contains a pad with the text "C" on it
+and whose fourth hole contains a pad with the text "D" on it and whose
+fifth hole contains a pad with the text "E" on it and whose sixth hole
+contains a pad with the text "F" on it.
+4!@%!(%@+C!C'C!C/C"C!CAA/C"C!CBA/C"C!CCA/C"C!CDA/C"C!CEA/C"C!CFA..
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+F=F6rs=F6kte du att kopiera ettan och sl=E4ppa den p=E5 textkortet med C?=
+
+
+Kopierade du l=E5dan med D?
+
+Kopierade du ettan igen och f=F6r att f=F6rvandla ett av textkorten med D=
+
+till ett med E?
+
+Kopierade du l=E5dan med E?
+
+Har du f=F6rs=F6kt att kombinera l=E5dorna s=E5 att du f=E5r en med A, B,=
+ C, D och E?
+
+Sl=E4ppte du ettan p=E5 l=E5dan med ett E?
+
+Satte du ihop L=E5dan med F med de andra l=E5dorna?
+
+OK, det jag skulle g=F6ra f=F6rst =E4r att ta ut l=E5dan med A, B och C o=
+ch sl=E4ppa
+ned den. Sen skulle jag kopiera ettan och sl=E4ppa den p=E5 l=E5dan som i=
+nneh=E5ller
+ett C. Sen skulle jag kopiera l=E5dan med D och s=E4tta ihop den med l=E5=
+dan
+som inneh=E5ller A, B och C. Jag skulle g=F6ra det igen f=F6r att f=E5 en=
+ l=E5da med E
+och s=E4tta ihop den med l=E5dan som inneh=E5ller A, B, C och D. Sen skul=
+le jag
+sl=E4ppa ettan p=E5 l=E5dan med E. Jag skulle ta l=E5dan med F och s=E4tt=
+a ihop den
+med de =F6vriga och ta upp resultatet.
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P26.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P26.pzl"
+
+Vi beh=F6ver skiljetecken ocks=E5. En l=E5da som inneh=E5ller
+ett textkort med en punkt, ett fr=E5getecken och ett komma
+skulle duga.
+
+Vi beh=F6ver
+ #####
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A/C"C!C?A~A.A!C!C4C1A!C!C4A;C!C!C4A!A!C!CnA D D
+ C/C"C!C,A>BQA!C!C!B<C!C!C@B5C!C!C1D;C!C!ClA D D C/C"C!C.AaA%C!C!C{B3C!C
+!CyB?C!C!CtA'A!C!CmA D D C+C!C$C!C D D D&B4A!C!CfB'A!C!C`B.C!C!C6A%C!C!C
+vA D D C D..
+
+   The following is a box with 3 holes whose first hole contains a pad wi=
+th
+the text "." on it and whose second hole contains a pad with the text
+"?" on it and whose third hole contains a pad with the text "," on it.
+4!@%!(%@+C!C$C!C/C"C!C.A/C"C!C?A/C"C!C,A..
+This is the end of the code for the ToonTalk object.
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+
+Till detta uppdrag beh=F6ver du sikta noggrant.
+
+Testade du att sl=E4ppa punkten p=E5 l=E5dans v=E4nstra sida?
+
+Och att sl=E4ppa kommatecknet p=E5 l=E5dans h=F6gra sida?
+
+Och sen sl=E4ppa fr=E5getecknet i mitten?
+
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P27.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P27.pzl"
+
+Jisses, det var verkligen sv=E5rt att se. Vi anv=E4nder Pumpas till att g=
+=F6ra l=E5dan
+s=E5 stor att man kan se den tydligt. Om han inte finns i n=E4rheten s=E5=
+ kan du kalla
+p=E5 honom genom att trycka p=E5 F3.
+
+G=F6r l=E5dan s=E5 stor
+att man kan se
+den tydligt.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C$C!C/C"C!C.A/C"C!C?A/C"C!C,A`AGA!C!CyB4A!C
+!C`B.C!C!C6A%C!C!CwA D D C"C!CbA_B D D7D_B D D%C)A!C!CXB@A!C!CpA D D C D.=
+=2E
+
+   The following is a box with 3 holes whose first hole contains a pad wi=
+th
+the text "." on it and whose second hole contains a pad with the text
+"?" on it and whose third hole contains a pad with the text "," on it.
+   What follows is in a special code and was produced by ToonTalk(tm) =
+
+Beta Version 5.
+4!@%!(%@+C!C$C!C/C"C!C.A/C"C!C?A/C"C!C,A..
+This is the end of the code for the ToonTalk object.
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+UserPuzzle =3D off
+
+Kom du ih=E5g att trycka p=E5 F3 f=F6r att kalla p=E5 Pumpas?
+
+Tog du upp Pumpas och lade =E4nden av slangen p=E5 den lilla l=E5dan och
+tryckte p=E5 mellanslag?
+
+Om Pumpas knapp av n=E5gon anledning inte visar ett 'S' f=F6r st=F6rre s=E5=
+ klicka p=E5
+hans knapp tills den g=F6r det.
+
+Om du l=E5dan blev f=F6r stor kan du klicka p=E5 Pumpas knapp tills den v=
+isar
+ett 'M' f=F6r mindre och anv=E4nda honom igen.
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P33.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P33.pzl"
+
+Nu ska vi ta reda p=E5 hur m=E5nga sekunder det g=E5r p=E5 en timma. Kom =
+ih=E5g
+att robotar arbetar mycket snabbare n=E4r man inte tittar p=E5.
+
+Vi beh=F6ver ta
+reda p=E5 vad
+60 X 60 blir.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C#C!C!C<A!C!C!C+A!C!C!C!C!C!C+A!C=3DDFA!C!C,=
+A
+9A!C!C1D3A!C!C@B3C!C!C0D D D C D..
+
+3600
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+SavedRobotsNotAdded =3D off
+UserPuzzle =3D off
+
+F=F6rs=F6kte du att ge l=E5dan till roboten?
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P28.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P28.pzl"
+
+Datorn beh=F6ver ord ocks=E5. De =E4r till kommandon, meddelanden och s=E5=
+dant.
+F=F6rs=F6k g=F6ra "start" kommandot. Om du beh=F6ver trollstaven s=E5 try=
+ck bara
+p=E5 F5 s=E5 kommer den.
+
+Vi beh=F6ver
+ordet "start".
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A$C!C"C!C!C!C,BqB D D&AiB D D8AJA!C!C8B,C!C!C,D
+ D D C/C"C!CrA0A)C!C!C-D<A!C!CDB*C!C!CdB-C!C!C4D D D C/C"C!CaA4A7C!C!CpB
+<A!C!CDB*C!C!CdB-C!C!C2D D D C/C"C!CtApA%A!C!CpB<A!C!CDB*C!C!CdB-C!C!C0D
+ D D C/C"C!CsAXA3A!C!C!D>A!C!CDB*C!C!CdB-C!C!C.D D D C D..
+
+start
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+
+Tryckte du p=E5 F5 f=F6r att kalla p=E5 trollstaven?
+
+Anv=E4nde du trollstaven till att kopiera textkortet med t?
+
+Sl=E4ppte du ett textkort med t p=E5 h=F6gra sidan om ett med s?
+
+Sl=E4ppte du bokst=E4verna tillsammans?
+
+OK, detta =E4r vad jag skulle g=F6ra. Jag skulle ta upp trollstaven, peka=
+ p=E5
+'t' och trycka p=E5 mellanslag f=F6r att kopiera bokstaven. Jag skulle sl=
+=E4ppa
+ned textkortet och trollstaven. Sen skulle jag sl=E4ppa ett 't' p=E5 h=F6=
+gra sidan av
+'s'. Sen skulle jag sl=E4ppa 'a' p=E5 h=F6gra sidan av "st". Och 'r' p=E5=
+ h=F6gra
+sidan av "sta". Och slutligen 't' p=E5 h=F6gra sidan av "star".
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P31.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P31.pzl"
+
+Datorn fungerar nu n=E4r vi har f=E5tt siffrorna och bokst=E4verna
+att fungera. J=E4ttebra! Tangentbordet borde ocks=E5 fungera nu.
+F=F6rs=F6k g=F6ra en l=E5da som inneh=E5ller din f=F6delsedag.
+
+Vi beh=F6ver n=E5got
+som Januari 29.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C#C!C/C"C!CAA!C"C!C!C!C+A!C3D,C!C!C`A+A!C!C
+zBdA!C!ClB7C!C!CnA D D C D..
+
+   The following is a box with 2 holes whose first hole contains a blank
+text pad and whose second hole contains a blank number pad.
+   What follows is in a special code and was produced by ToonTalk(tm) =
+
+Beta Version 5.
+4!@%!(%@+C!C#C!C"A"C!CAA!C"C!C!C!C+A"C..
+This is the end of the code for the ToonTalk object.
+
+Flipping =3D off
+FunctionKeys =3D off
+UserPuzzle =3D off
+
+F=F6rs=F6kte du ta upp ettan och skriva in dagen du =E4r f=F6dd?
+
+F=F6rs=F6kte du ta upp textkortet med ett A, sudda ut det, och sen skriva=
+
+m=E5naden du =E4r f=F6dd?
+
+Enligt kalendern som finns p=E5 Jorden =E4r jag f=F6dd den 29 Januari (Ja=
+g vet
+inte vilket =E5r) s=E5 jag skulle ta upp ettan, skriva 2 och 9 och sen l=E4=
+gga
+tillbaka sifferkortet med 29. Sen skulle jag ta upp textkortet med A, sud=
+da
+ut A, sen skriva "Januari" och sen l=E4gga tillbaka det. Jag skulle till =
+sist
+ta upp l=E5dan med min f=F6delsedag.
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P32.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P32.pzl"
+
+Jag undrar hur m=E5nga sekunder du =E4r. =C5nej! Skeppets klocka =E4r tra=
+sig ocks=E5.
+Den f=E5r vi laga h=E4rn=E4st. OK? F=F6rst m=E5ste klockan f=E5 veta hur =
+m=E5nga sekunder
+det g=E5r p=E5 en dag. Det skulle vara enkelt att komma p=E5 om Hammarmus=
+en kunde
+multiplicera men det fungerar inte heller just nu. Multiplicering =E4r ju=
+ bara
+addering m=E5nga g=E5nger. Robotar =E4r bra p=E5 att g=F6ra samma saker o=
+m och om
+igen. Se efter om du kan g=F6ra en robot som hj=E4lper oss att komma p=E5=
+ hur
+m=E5nga minuter det g=E5r p=E5 en dag.
+
+Vi beh=F6ver
+komma p=E5 vad
+60 * 24 blir.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A+C!C#C!C!C<A!C!C!C+A!C!C!C!C!C!C+A!C8A=3DA!C!C}=
+A
+&A!C!C1D3A!C!C@B3C!C!C}A D D C-A#C"C$C!C9C!C!C!C,A#A!C!CcB+C!C!CAD(A!C!C
+LB)A!C!CyA D D C D..
+
+1440
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+RobotsAreLostWhenSolved =3D off
+UserPuzzle =3D off
+
+F=F6rs=F6kte du att ge l=E5dan till roboten?
+
+T=E4nkte du p=E5 att kopiera sifferkortet med 60 n=E4r du var i robotens
+tankebubbla?
+
+T=E4nkte du p=E5 att sl=E4ppa sifferkortet med 60 p=E5 det med 0 efter ko=
+pieringen?
+
+S=F6g du upp sifferkortet med 0 fr=E5n robotens tankebubbla n=E4r du var =
+klar?
+
+Det jag skulle g=F6ra om jag kunde ta mig =F6ver till huset =E4r att ge r=
+oboten
+l=E5dan. Sen skulle jag tr=E4na roboten att kopiera sifferkortet med 60 o=
+ch
+sl=E4ppa det p=E5 sifferkortet med 0. Eftersom roboten inte kommer ih=E5g=
+ mer =E4n
+tv=E5 steg beh=F6ver jag inte trycka p=E5 'Esc' f=F6r att avsluta tr=E4ni=
+ngen. Sen
+skulle jag ge honom l=E5dan och n=E4r Dammis kom skulle jag suga upp noll=
+an
+fr=E5n hans tankebubbla. Och sen skulle jag ge roboten l=E5dan igen. Jag =
+borde
+finna svaret d=E4r nollan fanns.
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P38.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P38.pzl"
+
+Nu ska vi ta reda p=E5 hur m=E5nga sekunder det g=E5r p=E5 en dag.
+
+Vi beh=F6ver veta vad
+24 X 60 X 60 blir.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A!C!C!C!C!C+A!C8B,C!C!CeBNA!C!CDB*C!C!CdB-C!C!C
+4D D D C!C!C!C!C!C+A!C,A;C!C!CxBNA!C!CDB*C!C!CdB-C!C!C3D D D C+C!C'C!C!C
+<A!C!C!C+A!C!C9C!C!C!C+A!C-C%C!C.C#C;B!C;B!C!C!C!C!C!C!C!C!C!C+A!C!C"C!C
+!C!C+A!C!C!C!C!C!C+A!C(B}B D DvB8A!C!C|A|A!C!C@B3C!C!C2D D D C D..
+
+86400
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+SavedRobotsNotAdded =3D off
+RobotsAreLostWhenSolved =3D off
+
+Testade du att ge hela l=E5dan till roboten du nyss tr=E4nat?
+
+Kom Dammis eftersom sifferkortet med 365 i robotens tankebubbla inte
+st=E4mde =F6verens med 60?
+
+F=F6rs=F6kte du suga upp sifferkortet med 365 och ge l=E5dan till roboten=
+ igen?
+
+S=E5g du att den kommit p=E5 en del av svaret? Du borde ha 60 multiplicer=
+at med
+24 i sista h=E5let.
+
+Visste du att du kan anv=E4nda en robot igen efter att du =E4ndrat p=E5 s=
+aker
+i l=E5dan? Roboten kan multiplicera 60 och 1440 om du =E4ndrar l=E5dan p=E5=
+ r=E4tt
+s=E4tt.
+
+M=E4rkte du att de f=F6rsta tv=E5 siffrorna multipliceras och att svaret =
+finns i
+det sista h=E5let?
+
+F=F6rs=F6kte du att ta ut sifferkotet med 60 och l=E4gga dit 1440 ist=E4l=
+let?
+
+Lade du en extra nolla d=E4r 1440 fanns?
+
+Bytte du plats p=E5 det andra sifferkortet med 24 och den andra extra nol=
+lan?
+
+Bytte du plats p=E5 det f=F6rsta sifferkortet med 24 och sifferkortet med=
+ 60?
+
+Gav du l=E5dan till roboten igen och v=E4ntade tills han blev klar?
+
+OK, Jag skulle ta den gamla roboten och suga upp sifferkortet med 365 i
+l=E5dan i hans tankebubbla. Sen skulle jag ge l=E5dan till roboten och st=
+=E4lla
+mig upp s=E5 att han blir klar snabbare. Jag skulle s=E4tta mig ned igen =
+och
+ta ut 60 och s=E4tta in 1440 ist=E4llet. Sen skulle jag l=E4gga nollan i =
+det
+tomma h=E5let. Jag skulle l=E5ta roboten ta ut det andra sifferkortet med=
+ 24
+och l=E4gga dit den andra nollan ist=E4llet. Sen skulle jag ta ut det f=F6=
+rsta
+sifferkortet med 24 och l=E4gga dit 60 ist=E4llet. Sen skulle jag ge l=E5=
+dan till
+roboten igen. N=E4r han =E4r klar borde l=E5dans sista h=E5l inneh=E5lla =
+svaret.
+--------------59FE27EB2B41
+Content-Type: text/plain; charset=iso-8859-1; name="P39.pzl"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline; filename="P39.pzl"
+
+Till slut kan vi ta reda p=E5 hur m=E5nga sekunder det g=E5r p=E5 ett =E5=
+r.
+
+Vi beh=F6ver veta
+365 X 24 X 60 X 60.
+
+This is the result of saving everything in a room.
+4!@%!(%@*ATAnATAlAkA0A0A5A,CdA:C!C!CPBnB D DdA!C!C!CgA&C!C!C:D D D C!C<A
+!C!C!C+A!CDAaA!C!C0DLA!C!C)D4C!C!CdB-C!C!C!D D D C!C<A!C!C!C+A!C4ADA!C!C
+WAMA!C!C)D4C!C!CdB-C!C!C C D D C!C9C!C!C!C+A!ChB&A!C!CWAMA!C!C)D4C!C!CdB
+-C!C!C~A D D C!CmA"C!C!C+A!CLB"C!C!C;BMA!C!CLA>C!C!CdB-C!C!C}A D D C+C!C
+'C!C D D-C!C!C.C#C;B!C;B!C!C!C!C!C!C!C!C!C!C+A!C!C"C!C!C!C+A!C!C!C!C!C!C
++A!CLB/C!C!CzB;C!C!CzAeA!C!CdB-C!C!C1D D D C+C!C'C!C D D-C!C!C.C#C;B!C;B
+!C!C!C!C!C!C!C!C!C!C+A!C!C"C!C!C!C+A!C!C!C!C!C!C+A!C#C/C!C!CPB8A!C!CzAeA
+!C!CdB-C!C!C0D D D C+C!C'C!C D D-C!C!C.C#C;B!C;B!C!C!C!C!C!C!C!C!C!C+A!C
+!C"C!C!C!C+A!C!C!C!C!C!C+A!C(A/C!C!CbB)A!C!C8BeA!C!C.A.C!C!C/D D D C D..
+
+31536000
+
+NumberTyping =3D off
+TextTyping =3D off
+Flipping =3D off
+FunctionKeys =3D off
+SavedRobotsNotAdded =3D off
+
+Testade du att l=E4gga tv=E5 siffror i den =F6versta l=E5dan? Och sen ge =
+det till
+roboten?
+
+Testade du att l=E4gga svaret i n=E4sta b=E5da tillsammans med en av de
+kvarvarande siffrorna?
+
+Anv=E4nde du den tredje l=E5dan till att multiplicera de =E5terst=E5ende =
+siffrorna?
+
+Det finns m=E5nga s=E4tt att g=F6ra detta. Jag skulle l=E4gga 365 och 24 =
+i den
+f=F6rsta l=E5dan och ge den till roboten. Sen skulle jag l=E4gga de b=E5d=
+a
+sifferkorten med 60 i den andra l=E5dan och ge den till roboten. Sen skul=
+le
+jag ta resultaten fr=E5n l=E5dornas sista h=E5l och l=E4gga dem i den tre=
+dje l=E5dan
+och ge den till roboten.
+--------------59FE27EB2B41--

@@ -1,0 +1,915 @@
+// Copyright (c) 1992,1999. Ken Kahn, Animated Programs, All rights reserved
+
+// strings shared between different language versions:
+
+
+// These should only appear while debugging
+
+// these could be changed to common(IDC_*) sometime
+
+IDS_FRONT_WALL,
+"wall of a room"
+IDS_LEFT_CORNER,
+"left corner of a room"
+IDS_RIGHT_CORNER,
+"right corner of a room"
+IDS_WALL_SPRITE,
+"a wall"
+IDS_ROOM_DOOR,
+"door from inside a room"
+
+IDS_BASE64_START_TOKEN,
+  "StartToonTalkEncoding:"
+IDS_UUENCODING_START_TOKEN, // kept only for old versions (prior to base64 encoding)
+  "8!@%!(%"
+  // used to end with @
+  // must now be an odd number of characters -- first digit version number
+// probably no need to translate the rest of this file
+// low priority and possibly won't be part of final version:
+// can do the following better now using cardinals...
+ IDS_LEGO_HELP1,
+  "first output of the HyperBot controller"
+ IDS_LEGO_HELP2,
+  "second output of the HyperBot controller"
+ IDS_LEGO_HELP3,
+  "third output of the HyperBot controller"
+ IDS_LEGO_HELP4,
+  "fourth output of the HyperBot controller"
+ IDS_LEGO_HELP5,
+  "fifth output of the HyperBot controller"
+ IDS_LEGO_HELP6,
+  "sixth output of the HyperBot controller"
+ IDS_LEGO_HELP7,
+  "seventh output of the HyperBot controller"
+ IDS_LEGO_HELP8,
+  "eighth output of the HyperBot controller"
+ IDS_LEGO_HELP9,
+  "first input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP10,
+  "second input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP11,
+  "third input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP12,
+  "fourth input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP13,
+  "fifth input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP14,
+  "sixth input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP15,
+  "seventh input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP16,
+  "eight input of the HyperBot controller (is 1 if the sensor is on)"
+ IDS_LEGO_HELP17,
+  "number of times the first input of the HyperBot controller has been on since the previous frame"
+ IDS_LEGO_HELP18,
+  "number of times the second input of the HyperBot controller has been on since the previous frame"
+ IDS_LEGO_HELP19,
+  "number of times the third input of the HyperBot controller has been on since the previous frame"
+ IDS_LEGO_HELP20,
+  "number of times the fourth input of the HyperBot controller has been on since the previous frame"
+ IDS_LEGO_HELP21,
+  "number of times the fifth input of the HyperBot controller has been on since the previous frame"
+ IDS_LEGO_HELP22,
+  "number of times the sixth input of the HyperBot controller has been on since the previous frame"
+ IDS_LEGO_HELP23,
+  "number of times the seventh input of the HyperBot controller has been on since the previous frame"
+ IDS_LEGO_HELP24,
+  "number of times the eighth input of the HyperBot controller has been on since the previous frame"
+// IDS_MATH_WIZARD,
+//  " who accepts math problems"
+// IDS_MOUSE_WIZARD,
+//  " who handles mouse messages"
+// IDS_SERIAL_PORT_WIZARD,
+//  " who controls the serial port to the HyperBot controller"
+// IDS_SPRITE_WIZARD,
+//  " who handles sprites"
+
+  // following only used when TT_DEBUG on
+IDS_DESTROYED_TWICE,
+ "Something destroyed twice."
+IDS_IMPROPER_SPRITE_FILE,
+ "Improper Sprite file: "
+IDS_IMPROPER_SPRITE_VERSION,
+ "Improper Sprite file version:"
+IDS_VERSION_IS,
+ " version is "
+IDS_BAD_IMAGE_COUNT,
+ "Bad image count in "
+IDS_UNEXPECTED_END_OF_SPRITE_FILE,
+ "Unexpected end of sprite file: "
+IDS_SPRITE_FILE_BAD_FORMAT,
+ "Sprite files do not support format: "
+IDS_BACKGROUND_INDEX_TOO_BIG,
+ "Background index too big "
+IDS_MS_TO_DISPLAY_FOLLOWERS,
+ " ms to display the followers of "
+IDS_AND_WAS_CACHED,
+ " and was cached."
+IDS_MS_TO_DISPLAY,
+ " ms to display -- "    
+IDS_ACTION_STOPPED_BECAUSE,
+ "an action stopped because "
+IDS_PART_OF_TWO_THINGS,
+ "ToonTalk confused trying to make something a part of two things."
+IDS_PART_OF_SOMETHING_WHILE_STILL_ON_FLOOR,
+ "Warning: something became a part of something else while still on the floor. Problem fixed."
+IDS_PART_OF_SOMETHING_AND_NOT,
+ "ToonTalk confused!  It thought something was a part of something and it wasn't."
+IDS_WAS_CACHED_AND_REMOVED,
+ " was cached and removed from "
+IDS_CACHED_WITHOUT_FOLLOWERS,
+ " which was cached without followers." 
+IDS_GIVEN_NEW_BACKGROUND_WHILE_ON_FLOOR,
+ "Warning: something given a new background while it still is on the old one."
+IDS_PART_BUT_OF_WHO,
+ "Sorry but ToonTalk has a part which doesn't know what it is a part of. "
+IDS_ANIMATING_TO_VARIABLE_GOAL,
+ "Animating to variable goal at "
+IDS_ANIMATING_TO_GOAL,
+ "Animating to goal " 
+IDS_NOW_KEEPING,
+ "Now keeping every "
+IDS_FRAME_SINCE_AVERAGE_DURATION,
+ " frame since average duration is "
+IDS_INDEX_WAS,
+ "Index was "
+IDS_ORIGINAL_CYCLE_VALUE_WAS,
+ " and original cycle value was " 
+IDS_CURRENT_DURATION_IS,
+ " current duration is " 
+IDS_SKIPPED_INDEX,
+ "Skipped index from "
+IDS_SHOULD_NOT_SKIP_SO_MANY,
+ "Should not be skipping so many images. " 
+IDS_AND_USED_INSTEAD,
+ " and used instead "
+IDS_FRAME_EQUAL,
+ " (frame="
+IDS_AND_HAS_BECOME,
+ " and has become " 
+IDS_CYCLE_DURATION_IS,
+ "Cycle duration is " 
+IDS_AND_CYCLE_VALUE_IS,
+ " and cycle value is "
+IDS_SCALING_AND_DRAWING,
+ "Scaling and drawing "
+IDS_BYTES_LONG_IMAGE,
+ " bytes long image #"
+IDS_MAXIMUM_MEMORY_FOR_CACHING,
+ "Maximum memory used for caching is "
+IDS_WHILE_FREE_MEMORY_IS,
+ " while free memory is " 
+IDS_MEMORY_USED_IN_CACHE,
+ "Memory used in cache " 
+IDS_TOTAL_CACHE_SAVINGS,
+ "Total savings due to stuff currently in the cache is "
+IDS_CANT_FIND_FREE_CACHE_ENTRY,
+ "ToonTalk has problems trying to find a free cache entry." 
+IDS_FREE_CACHE_FAILED,
+ "Free some cache failed so didn't cache image #" 
+IDS_BAD_CACHE_ENTRY,
+ "Bad candidate cache entry: "
+IDS_NOT_OK_TO_CACHE,
+ " not ok to cache since animation in progress"
+IDS_DAMAGED_RESIND_FILE,
+ "Damaged file: resind.dat status code = "
+IDS_BRUSH_NUMBER_MISMATCH,
+"Mismatch in number of brushes in resind file"
+
+// used for debugging and the like
+IDS_TYPE_NAME1,
+ "INTEGER"
+IDS_TYPE_NAME2,
+ "EXPANDER"
+IDS_TYPE_NAME3,
+ "VACUUM"
+IDS_TYPE_NAME4,
+ "COPIER"
+IDS_TYPE_NAME5,
+ "THOUGHT_BUBBLE"
+IDS_TYPE_NAME6,
+ "ROBOT"
+IDS_TYPE_NAME7,
+ "NEST"
+IDS_TYPE_NAME8,
+ "BIRD"
+IDS_TYPE_NAME9,
+ "TRUCK"
+IDS_TYPE_NAME10,
+ "PROGRAM_PAD"
+IDS_TYPE_NAME11,
+ "CUBBY"
+IDS_TYPE_NAME12,
+ "TOOLBOX"
+IDS_TYPE_NAME13,
+ "PICTURE"
+IDS_TYPE_NAME14,
+ "BOMB"
+IDS_TYPE_NAME15,
+ "TEXT"
+IDS_TYPE_NAME16,
+ "REMOTE_PICTURE"
+IDS_TYPE_NAME17,
+ "LAST_MANIPULABLE"
+IDS_TYPE_NAME18,
+ "PICTURE_INSIDES"
+IDS_TYPE_NAME19,
+ "PROGRAMMER"
+IDS_TYPE_NAME20,
+ "DOOR"
+IDS_TYPE_NAME21,
+ "OPEN_DOOR"
+IDS_TYPE_NAME22,
+ "HOUSE_ABOVE"
+IDS_TYPE_NAME23,
+ "HOUSE"
+IDS_TYPE_NAME24,
+ "HELICOPTER"
+IDS_TYPE_NAME25,
+ "ROBOT_IN_TRAINING"
+IDS_TYPE_NAME26,
+ "PROGRAMMER_ARM"
+IDS_TYPE_NAME27,
+ "MOUSE_WITH_HAMMER"
+IDS_TYPE_NAME28,
+ "TALK_BALLOON"
+IDS_TYPE_NAME29,
+ "MARTIAN"
+IDS_TYPE_NAME30,
+ "BLANK_INTEGER"
+IDS_TYPE_NAME31,
+ "ERROR_INTEGER"
+IDS_TYPE_NAME32,
+ "BLANK_CUBBY"
+IDS_TYPE_NAME33,
+ "LABELED_CUBBY"
+IDS_TYPE_NAME34,
+ "BLANK_PICTURE"
+IDS_TYPE_NAME35,
+ "BLANK_TEXT"
+IDS_TYPE_NAME36,
+ "PICTURE_WITH_INSIDES"
+IDS_TYPE_NAME37,
+ "REMOTE_INTEGER"
+IDS_TYPE_NAME38,
+ "GLOBAL_REMOTE_INTEGER"
+IDS_TYPE_NAME39,
+ "PICTURE_SCALE"
+IDS_TYPE_NAME40,
+ "REMOTE_APPEARANCE"
+IDS_TYPE_NAME41,
+ "PICTURE_WITH_INDIRECTION"
+IDS_TYPE_NAME42,
+ "USER_PICTURE"
+IDS_TYPE_NAME43,
+ "WHOLE_FLOOR"
+IDS_TYPE_NAME44,
+ "WHOLE_CITY"
+IDS_TYPE_NAME45,
+ "ROBOT_WITH_TOOL"
+IDS_TYPE_NAME46,
+ "ROBOT_WITH_TRAINING_COUNTER"
+IDS_TYPE_NAME47,
+ "TOOL_BUTTON"
+IDS_TYPE_NAME48,
+ "WHOLE_ROOM"
+IDS_TYPE_NAME49,
+ "VARIABLE_WIDTH_TEXT"
+IDS_TYPE_NAME50,
+ "SOUND"
+IDS_TYPE_NAME51,
+ "REMOTE_TEXT_PICTURE"
+IDS_TYPE_NAME52,
+ "BLANK_SOUND"
+IDS_TYPE_NAME53,
+ "GLOBAL_USER_REMOTE"
+IDS_TYPE_NAME54,
+ "USER_SOUND"
+IDS_TYPE_NAME55,
+ "SPEECH_SOUND"
+IDS_TYPE_NAME56,
+ "MCI_SOUND"
+IDS_TYPE_NAME57,
+ "BUILT_IN_SOUND"
+IDS_TYPE_NAME58,
+ "BLANK_USER_SOUND"
+IDS_TYPE_NAME59,
+ "BLANK_SPEECH_SOUND"
+IDS_TYPE_NAME60,
+ "BLANK_MCI_SOUND"
+IDS_TYPE_NAME61,
+ "BLANK_BUILT_IN_SOUND"
+IDS_TYPE_NAME62,
+ "BLANK_USER_PICTURE"
+IDS_TYPE_NAME63,
+ "GLOBAL_JOYSTICK0_REMOTE_INTEGER"
+IDS_TYPE_NAME64,
+ "GLOBAL_JOYSTICK1_REMOTE_INTEGER"
+IDS_TYPE_NAME65,
+ "GLOBAL_JOYSTICK2_REMOTE_INTEGER"
+IDS_TYPE_NAME66,
+ "GLOBAL_JOYSTICK3_REMOTE_INTEGER"
+IDS_TYPE_NAME67,
+ "GLOBAL_JOYSTICK4_REMOTE_INTEGER"
+IDS_TYPE_NAME68,
+ "GLOBAL_JOYSTICK5_REMOTE_INTEGER"
+IDS_TYPE_NAME69,
+ "GLOBAL_JOYSTICK6_REMOTE_INTEGER"
+IDS_TYPE_NAME70,
+ "GLOBAL_JOYSTICK7_REMOTE_INTEGER"
+IDS_TYPE_NAME71,
+ "GLOBAL_JOYSTICK8_REMOTE_INTEGER"
+IDS_TYPE_NAME72,
+ "GLOBAL_JOYSTICK9_REMOTE_INTEGER"
+IDS_TYPE_NAME73,
+ "GLOBAL_JOYSTICK10_REMOTE_INTEGER"
+IDS_TYPE_NAME74,
+ "GLOBAL_JOYSTICK11_REMOTE_INTEGER"
+IDS_TYPE_NAME75,
+ "GLOBAL_JOYSTICK12_REMOTE_INTEGER"
+IDS_TYPE_NAME76,
+ "GLOBAL_JOYSTICK13_REMOTE_INTEGER"
+IDS_TYPE_NAME77,
+ "GLOBAL_JOYSTICK14_REMOTE_INTEGER"
+IDS_TYPE_NAME78,
+ "GLOBAL_JOYSTICK15_REMOTE_INTEGER"
+IDS_TYPE_NAME79,
+ "GLOBAL_JOYSTICK16_REMOTE_INTEGER"
+IDS_TYPE_NAME80,
+ "GLOBAL_JOYSTICK17_REMOTE_INTEGER"
+IDS_TYPE_NAME81,
+ "GLOBAL_JOYSTICK18_REMOTE_INTEGER"
+IDS_TYPE_NAME82,
+ "GLOBAL_JOYSTICK19_REMOTE_INTEGER"
+IDS_TYPE_NAME83,
+ "GLOBAL_JOYSTICK20_REMOTE_INTEGER"
+IDS_TYPE_NAME84,
+ "GLOBAL_JOYSTICK21_REMOTE_INTEGER"
+IDS_TYPE_NAME85,
+ "GLOBAL_JOYSTICK22_REMOTE_INTEGER"
+IDS_TYPE_NAME86,
+ "GLOBAL_JOYSTICK23_REMOTE_INTEGER"
+IDS_TYPE_NAME87,
+ "GLOBAL_JOYSTICK24_REMOTE_INTEGER"
+IDS_TYPE_NAME88,
+ "GLOBAL_JOYSTICK25_REMOTE_INTEGER"
+IDS_TYPE_NAME89,
+ "GLOBAL_JOYSTICK26_REMOTE_INTEGER"
+IDS_TYPE_NAME90,
+ "GLOBAL_JOYSTICK27_REMOTE_INTEGER"
+IDS_TYPE_NAME91,
+ "GLOBAL_JOYSTICK28_REMOTE_INTEGER"
+IDS_TYPE_NAME92,
+ "GLOBAL_JOYSTICK29_REMOTE_INTEGER"
+IDS_TYPE_NAME93,
+ "GLOBAL_JOYSTICK30_REMOTE_INTEGER"
+IDS_TYPE_NAME94,
+ "GLOBAL_JOYSTICK31_REMOTE_INTEGER"
+IDS_TYPE_NAME95,
+ "GLOBAL_HYPERBOT_REMOTE_INTEGER"
+//IDS_TYPE_NAME254,
+// "NONE_GIVEN"
+
+// for debuggin only
+
+IDS_CLEAN_STATUS1,
+ "clean"
+IDS_CLEAN_STATUS2,
+"clean but on top of dirty"
+IDS_CLEAN_STATUS3,
+ "clean but at least one follower dirty"
+IDS_CLEAN_STATUS4,
+ "moved"
+IDS_CLEAN_STATUS5,
+ "dirty"
+IDS_CLEAN_STATUS6,
+ "dirty but completely obscured"
+
+// more debuggin and error messages
+//IDS_BAD_DAT_FILE,
+// "Bad DAT file."
+IDS_SCALED_TO,
+ "Scaled to "
+//IDS_MILLISECONDS,
+// "milliseconds"
+IDS_RECTANGULAR,
+ " (rectangular) "
+IDS_WITH_SIZE,
+ " with size "
+IDS_WHOSE_SPEED_IS,
+ " whose speedup is 1/"
+IDS_AND_SAVINGS_IS,
+ " and savings is "
+IDS_CACHED_IMAGE,
+ "Cached image #"
+IDS_AT_CACHE,
+ " at cache #"
+IDS_CACHE_IMAGE,
+ "Caching image #"
+IDS_USING_CACHE,
+ " using cache #"
+SIZE_IS,
+ " size is "
+IDS_FOR_SOUND,
+ " for sound #"
+IDS_TIMES,
+ "times"
+IDS_IS_PART_OF_ITSELF,
+ "Oh boy! Trying to make something a part of itself!"
+IDS_PROBLEM_LOADING_AN_IMAGE,
+ "Problem loading an image"
+IDS_IMAGE_SIZE_WRONG,
+ "Image size wrong."
+IDS_NEGATIVE_SAVINGS_STRETCH_CACHE,
+ "Negative savings for stretch cache: "
+IDS_MS_TO_STRETCH,
+ " ms to stretch and "
+IDS_MS_TO_BLIT_RESULT,
+ " ms to blit the result"
+IDS_ORIGINAL_SIZE_IS,
+ "The original size is "
+IDS_NEW_SIZE_IS,
+ " and the new size is "
+IDS_MS_SAVED_BY_STRETCH_CACHE,
+ " ms saved by putting stretching image in cache "
+IDS_BYTES_FOR_RESULT,
+ " bytes for result -- index "
+IDS_MS_CREATED_CACHED_SURFACE,
+ " ms to create cached surface "
+IDS_PARENTHETICALLY_COMPRESSED,
+ "(compressed)"
+IDS_CACHING_SOUND,
+ "Caching sound #"
+IDS_USING_CACHE_NUMBER,
+ " using cache #"
+IDS_SIZE_IS,
+ " size is "
+IDS_PRIORITY_WAS,
+ "'s priority was "
+IDS_AND_NOW_IS,
+ " and is now "
+IDS_OK_TO_CACHE,
+ " ok to cache:"
+IDS_INVALIDATION_COST,
+ " Invalidation cost = "
+IDS_CLEAN_RUN_AVERAGE,
+ "; clean run average = "
+IDS_DISPLAY_COST,
+ "; display cost = "
+IDS_CANT_OPEN_FILE,
+ "Can't open file: "
+IDS_DAMAGED_FILE,
+ "Damaged file: "
+IDS_PROBLEMS_INITIALIZING_BRUSHES,
+ "Problems initializing brushes."
+
+// following only used for debugging
+IDS_DEBUG_START_EVENT,
+ "START_EVENT"
+IDS_DEBUG_SELECT_STACK_ITEM,
+ "SELECT_STACK_ITEM"
+IDS_DEBUG_NEW_ITEM,
+ "NEW_ITEM" // caught by floor
+IDS_DEBUG_GRASP_COPIER,
+ "GRASP_COPIER"
+IDS_DEBUG_COPIER_APPLY,
+ "COPIER_APPLY"
+IDS_DEBUG_GRASP_EXPANDER,
+ "GRASP_EXPANDER"
+IDS_DEBUG_RELEASE_COPIER,
+ "RELEASE_COPIER"
+IDS_DEBUG_GRASP_ITEM,
+ "GRASP_ITEM"
+IDS_DEBUG_RELEASE_ITEM,
+ "RELEASE_ITEM"
+IDS_DEBUG_RELEASE_ITEM_ON,
+ "RELEASE_ITEM_ON"
+IDS_DEBUG_RELEASE_ITEM_LEFT_OF,
+ "RELEASE_ITEM_LEFT_OF"
+IDS_DEBUG_RELEASE_ITEM_RIGHT_OF,
+ "RELEASE_ITEM_RIGHT_OF"
+IDS_DEBUG_EXPANDER_APPLY,
+ "EXPANDER_APPLY"
+IDS_DEBUG_GRASP_VACUUM,
+ "GRASP_VACUUM"
+IDS_DEBUG_VACUUM_APPLY,
+ "VACUUM_APPLY"
+IDS_DEBUG_VACUUM_APPLY_RESTORE,
+ "VACUUM_APPLY_RESTORE"
+IDS_DEBUG_RELEASE_VACUUM,
+ "RELEASE_VACUUM" // can replace with RELEASE_ITEM
+IDS_DEBUG_KEYBOARD_CHARACTER,
+ "KEYBOARD_CHARACTER"
+// NEW_CUBBY_SIZE
+// hatch_bird can be merged with NEW_ITEM
+IDS_DEBUG_HATCH_BIRD,
+ "HATCH_BIRD" // taken care of by floor
+IDS_DEBUG_GIVE_BIRD_ITEM,
+ "GIVE_BIRD_ITEM"
+IDS_DEBUG_DROP_ITEM_IN_TRUCK,
+ "DROP_ITEM_IN_TRUCK"
+IDS_DEBUG_DESTROY_HOUSE,
+ "DESTROY_HOUSE"
+// need 2 versions -- one that applied to floor
+IDS_DEBUG_APPLY_GRASPED_ITEM,
+ "APPLY_GRASPED_ITEM"
+IDS_DEBUG_LAST_EVENT,
+ "LAST_EVENT"
+IDS_DEBUG_LABEL_CHARACTER,
+ "LABEL_CHARACTER"
+IDS_DEBUG_KEYBOARD_CHARACTER_AND_SELECT,
+ "KEYBOARD_CHARACTER_AND_SELECT"
+IDS_DEBUG_GRASP_NEST,
+ "GRASP_NEST"
+IDS_DEBUG_NEW_MAIN_CUBBY,
+ "NEW_MAIN_CUBBY"
+IDS_DEBUG_COPIER_APPLY_NEST,
+ "COPIER_APPLY_NEST"
+IDS_DEBUG_VACUUM_APPLY_NEST,
+ "VACUUM_APPLY_NEST"
+IDS_DEBUG_APPLY_GRASPED_NEST,
+ "APPLY_GRASPED_NEST"
+IDS_DEBUG_RELEASE_EXPANDER,
+ "RELEASE_EXPANDER"
+IDS_DEBUG_SERIAL_NUMBER,
+ "SERIAL_NUMBER"
+
+
+IDS_IDS_EVENT_ARG_DEBUG,
+ "MAIN_CUBBY"
+IDS_IDS_EVENT_ARG_DEBUG+1,
+ " "
+IDS_IDS_EVENT_ARG_DEBUG+2,
+ "A_COPIER"
+ IDS_IDS_EVENT_ARG_DEBUG+3,
+ "A_VACUUM"
+ IDS_IDS_EVENT_ARG_DEBUG+4,
+ "INTEGER_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+5,
+ "TEXT_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+6,
+ "CUBBY_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+7,
+ "NEST_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+8,
+ "TRUCK_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+9,
+ "PROGRAM_PADS"
+ IDS_IDS_EVENT_ARG_DEBUG+10,
+ "ROBOT_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+11,
+ "SCALE_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+12,
+ "BOMB_STACK"
+ IDS_IDS_EVENT_ARG_DEBUG+13,
+ "ITEM_HELD"
+ IDS_IDS_EVENT_ARG_DEBUG+14,
+ "AN_EXPANDER"
+
+// the following is the encoding of a seconds timer which is a reward
+// for solving puzzles
+IDS_SECONDS_TIMER0,
+""//4!@%!(%A(A!C#B!C!C!C+A!C!C!C<A,CNA!C*D!C!C!C#C!C+C!C'C!C(A!C8D{A#C!C+A!C"
+IDS_SECONDS_TIMER1,
+""//!C!C<A,CNA!C*D!C!C!C#C!CAC!C#C!C'CTAiAmAeArA!C%A(D!C!C!C+A!C,C!C!C'CLAoA"
+IDS_SECONDS_TIMER2,
+""//oAkAsA!C'A!C!C<A$C&B!C&B!C!C!C!C!C!C!C!C!C!C!C!C!C&CAC!C#C!C'CTAiAmAeArA"
+IDS_SECONDS_TIMER3,
+""//!C%A(D!C!C!C+A\"C,C!C!C'CLAoAoAkAsA!C!C\"C!C!C!C+A\"CAC5B D#C!C\"C D!C$C#C D"
+IDS_SECONDS_TIMER4,
+""//!C%C!C!C D!C*C!C\"C D!C'C#C D!C8C D!C!C!C!C!C!C!C!C-C&C!C.C#C=B!C=B!C!C!C"
+IDS_SECONDS_TIMER5,
+""//!C!C!C8B|A#C!C+A!C'A!C!C<A$C&B!C&B!C!C!C!C!C!C\"C!C!C!C+A!C!ChB$C!C!C+A!C"
+IDS_SECONDS_TIMER6,
+""//!C!C!C!C!C!C!C!C&C+C!C'C!C!CYBkB!C!C+A\"C-C%C!C.C#C=B!C=B!C!C!C!C!C!ChB$C"
+IDS_SECONDS_TIMER7,
+""//!C!C+A\"C!C\"C!C!C!C+A\"C!C\"C!C!C!C+A\"C!ChB$C!C!C+A\"CAC6B D#C!C#C D!C$C#C D"
+IDS_SECONDS_TIMER8,
+""//!C%C!C%C D!C*C!C$C D!C%C!C&C D!C*C!C#C D!C'C#C D!C8C D!C!C!C!C!C!C!C!C.."
+
+IDS_INVALID_TYPE,
+ "thing with invalid type"
+IDS_NONE_GIVEN,
+ "NONE_GIVEN"
+
+IDS_TROUBLE_SHOOT_DISPDIB_ABNORMAL_EXIT_HELP_FILE,
+"dispdib"
+IDS_TROUBLE_SHOOT_GENERAL_ABNORMAL_HELP_FILE,
+"abnormal"
+IDS_TROUBLE_SHOOT_TOO_SLOW_HELP_FILE,
+"tooslow"
+IDS_TROUBLE_SHOOT_VERY_FAST_IN_LOW_RESOLUTION_HELP_FILE,
+"highres"
+IDS_TROUBLE_SHOOT_JOYSTICK_CALIBRATION_HELP_FILE,
+"joycalib"
+IDS_TROUBLE_SHOOT_DIRECTX_HELP_FILE,
+"directx"
+IDS_TROUBLE_SHOOT_MOUSE_HELP_FILE,
+"badmouse"
+IDS_TROUBLE_SHOOT_GENERAL_TROUBLE_HELP_FILE,
+"abnormal" // same advice for now
+IDS_TROUBLE_SHOOT_BAD_INSTALLATION_HELP_FILE,
+"badinstl"
+IDS_TROUBLE_SHOOT_BAD_DEMO_HELP_FILE,
+"baddemo"
+IDS_TROUBLE_TRIAL_PERIOD_OVER_HELP_FILE,
+"trialovr"
+IDS_TROUBLE_SHOOT_QUIT_ON_FIRST_PUZZLE_HELP_FILE,
+"puzzle1"
+IDS_TROUBLE_SHOOT_QUIT_ON_EARLY_ROBOT_PUZZLE_HELP_FILE,
+"robotpuz"
+IDS_TROUBLE_SHOOT_EXTENSION_NOT_INSTALLED_HELP_FILE,
+"extendin"
+IDS_TROUBLE_SHOOT_TTS_SELECT_FAILURE_HELP_FILE,
+"ttselect"
+
+IDS_PUZZLE_SWITCH,
+"FunctionKeys"
+IDS_PUZZLE_SWITCH+1,
+"NumberTyping"
+IDS_PUZZLE_SWITCH+2,
+"TextTyping"
+IDS_PUZZLE_SWITCH+3,
+"Flipping"
+IDS_PUZZLE_SWITCH+4,
+"GraspingNonEstentials"
+IDS_PUZZLE_SWITCH+5,
+"ResetOnSolution"
+IDS_PUZZLE_SWITCH+6,
+"BringInVacuumWhenRobotFails"
+IDS_PUZZLE_SWITCH+7,
+"UserPuzzle"
+IDS_PUZZLE_SWITCH+8,
+"RobotsAreLostWhenSolved"
+IDS_PUZZLE_SWITCH+9,
+"SavedRobotsNotAdded"
+IDS_PUZZLE_SWITCH+10,
+"GoodSolutionsPosted"
+IDS_PUZZLE_SWITCH+11,
+"HandEmptyAfterPosting"
+
+
+IDS_SOUND_FILE_NAME+0,
+"helicopt"
+IDS_SOUND_FILE_NAME+1,
+  "sparrow2"
+IDS_SOUND_FILE_NAME+2,
+  "pigeon2"
+IDS_SOUND_FILE_NAME+3,
+  "hot_rod2"
+IDS_SOUND_FILE_NAME+4,
+  "angels_f"
+IDS_SOUND_FILE_NAME+5,
+  "b_wop"
+IDS_SOUND_FILE_NAME+6,
+  "electric"
+IDS_SOUND_FILE_NAME+7,
+  "spiralin"
+IDS_SOUND_FILE_NAME+8,
+  "out_spir"
+IDS_SOUND_FILE_NAME+9,
+  "book_dro"
+IDS_SOUND_FILE_NAME+10,
+  "door_cr4"
+IDS_SOUND_FILE_NAME+11,
+  "dustbus2"
+IDS_SOUND_FILE_NAME+12,
+  "exp2"
+IDS_SOUND_FILE_NAME+13,
+  "hand_pum"
+IDS_SOUND_FILE_NAME+14,
+  "ouch"
+IDS_SOUND_FILE_NAME+15,
+  "plop"
+IDS_SOUND_FILE_NAME+16,
+  "pop"
+IDS_SOUND_FILE_NAME+17,
+  "ins_step"
+IDS_SOUND_FILE_NAME+18,
+  "type"
+IDS_SOUND_FILE_NAME+19,
+  "traf2"
+IDS_SOUND_FILE_NAME+20, //was system_e
+  "turning1"
+IDS_SOUND_FILE_NAME+21,
+  " "
+IDS_SOUND_FILE_NAME+22, // was walk2
+  "neat_eff"
+IDS_SOUND_FILE_NAME+23,
+  "drive"
+IDS_SOUND_FILE_NAME+24,
+  "bellbike"
+IDS_SOUND_FILE_NAME+25,
+  "boing3"
+IDS_SOUND_FILE_NAME+26,
+  " "
+IDS_SOUND_FILE_NAME+27, // was boing5
+  " "
+IDS_SOUND_FILE_NAME+28, // boing_
+  "calc"
+IDS_SOUND_FILE_NAME+29,
+  "comedy1"
+IDS_SOUND_FILE_NAME+30,
+  "comedy2"
+IDS_SOUND_FILE_NAME+31,
+  "deflatin"
+IDS_SOUND_FILE_NAME+32,
+  "door1"
+IDS_SOUND_FILE_NAME+33,
+  " "
+IDS_SOUND_FILE_NAME+34, // doorknob
+  " "
+IDS_SOUND_FILE_NAME+35, //was fstep19
+  " "
+IDS_SOUND_FILE_NAME+36, // fstep30
+  "fstep33"
+IDS_SOUND_FILE_NAME+37,
+  "glass_hi"
+IDS_SOUND_FILE_NAME+38,
+  "glass_lo"
+IDS_SOUND_FILE_NAME+39,
+  " "
+IDS_SOUND_FILE_NAME+40, //was kofwom
+  " "
+IDS_SOUND_FILE_NAME+41, //was scifi2
+  " "
+IDS_SOUND_FILE_NAME+42,
+  "shutdown"
+IDS_SOUND_FILE_NAME+43,
+  "spit1"
+IDS_SOUND_FILE_NAME+44,
+  "switch"
+IDS_SOUND_FILE_NAME+45,
+  "teleport"
+IDS_SOUND_FILE_NAME+46,
+  ""
+IDS_SOUND_FILE_NAME+47, //was trot
+  "twingy"
+
+IDS_PROBLEM_DECODING_A_PICTURE,
+ "Problem decoding a picture."
+IDS_PUZZLE_FOUND_WRONG_TOKEN,
+ "Puzzle reading floor items but has found the wrong token."
+IDS_PUZZLE_PART_TOO_LONG,
+ "Puzzle part too long."
+IDS_NO_EQUAL_SIGN_IN_PUZZLE,
+ "No equal sign after keyword in puzzle file."
+IDS_CANT_FIND_PICTURE_FOR_PUZZLE,
+ "Can't find a picture to connect remote controls to in a puzzle."
+IDS_FORCE_FEEDBACK_NOT_AVAILABLE,
+ "Force Feedback not available"
+
+IDS_TOO_MUCH_TO_PASS_TO_WINDOWS,
+ "Too much to convert to pass to Windows"
+IDS_SOMETHING_WRONG_WITH_TYPE_STRING1,
+ "Something wrong with type string "
+IDS_SOMETHING_WRONG_WITH_TYPE_STRING2,
+ " from Windows."
+IDS_SOMETHING_WENT_WRONG_PLAYING_A_SOUND,
+ "Something went wrong playing a sound."
+IDS_MEMORY_LOW_1,
+ "Memory low.  Recycling last "
+IDS_MEMORY_LOW_2,
+ "% of memory used to speed things up."
+IDS_JAVA_SOUNDS_AND_PICTURES_MISSING,  // here since should only happen for Internet version...
+ "This installation does not include sounds and pictures needed for making Java applets. Sorry."
+IDS_PROBLEM_FIND_JAVA_MEDIA_FILE,
+ "Problems finding the Java media file "
+IDS_PROBLEM_COPYING_JAVA_MEDIA_FILE,
+ "Problems copying the Java media file "
+IDS_PROBLEM_FIND_NAME_OF_JAVA_FILE,
+ "Problems finding the name of java file # "
+IDS_TOO_MANY_THINGS_TO_DUMP,
+ "Too many things to dump!"
+
+
+IDS_32BIT_LIBRARY_PREFIX,
+"TT"
+IDS_16BIT_LIBRARY_PREFIX,
+"T16"
+IDS_DLL,
+"DLL"
+IDS_STRING_BIRD,
+"[SB]"
+IDS_HANDLE,
+"[H]"
+
+IDS_NARRATION_FILE_COOKIE,
+"TnTkS001"
+IDS_EVENT_TOKEN_MISSING,
+"Problem in replay: event counter token missing in log."
+IDS_BOOLEAN_EVENT_TOKEN_EXPECTED,
+"Boolean event token expected."
+IDS_DEMO_EXTENSION,
+"dmo"
+IDS_DEMO_DIRECTORY,
+"Demos"
+IDS_HIGH_RES_DEMO_DIRECTORY,
+"\\HighRes"
+IDS_LOW_RES_DEMO_DIRECTORY,
+"\\LowRes"
+IDS_FILE_EXTENSIONS,
+"FileExtensions"
+IDS_NARRATION_FILE_SUFFIX_KEY,
+"NarrationFileSuffix"
+//IDS_DEFAULTS,
+//"Defaults"
+IDS_SUBTITLES_EXTENSION,
+"SubtitlesSuffix"
+IDS_UNABLE_TO_OPEN_LOG_FILE,
+"Unable to open output log file "
+IDS_DEMO_FILE_COOKIE,
+"TnTkD000"
+IDS_DOT_WAV,
+".wav"
+
+IDS_USERS_DIRECTORY,
+"Users"
+IDS_BUTTON_KEYBOARD_EQUIVALENTS,
+"ButtonKeyboardEquivalents"
+IDS_JAVA_FILE_SUFFIX,
+"JavaFileSuffix"
+IDS_JAVA_COMPILER,
+"JavaCompiler"
+IDS_JUMP,
+"jump"
+IDS_EXE,
+"exe"
+IDS_JAVASHOW_BAT,
+"javashow.bat"
+IDS_CALL,
+"call "
+IDS_O_CLASSPATH,
+" -O -classpath "
+IDS_SYSTEM,
+"system"
+IDS_ZIP,
+"zip"
+IDS_JAVA,
+"java"
+IDS_TT_CLASS,
+"ttclass"
+//IDS_SWITCHES,
+//"Switches"
+IDS_RUN_APPLET_IN_NEW_WINDOW,
+"RunAppletInNewWindow"
+IDS_DOT_CLASS,
+".class "
+IDS_ARCHIVE,
+"archive"
+IDS_USER,
+"User"
+IDS_HTML_EXTRA,
+"HTMLExtra"
+IDS_CABBASE,
+"cabbase"
+IDS_SHELL_IS_PROGMAN,
+"ShellIsPROGMAN"
+//IDS_TOONTALK_INI,
+//"ToonTalk.ini"
+IDS_JAVA_COMPILER_PROBLEM,
+"Java compiler problem.  Error code = "
+IDS_RUNNING,
+" running "
+IDS_OPEN,
+"open"
+IDS_TEXT_TO_SPEECH_MODE,
+"TextToSpeechMode"
+
+IDS_TEXT_TO_SPEECH,
+"TextToSpeech"
+IDS_PROBLEM_STARTING_TEXT_TO_SPEECH_ENGINE,
+"Problem starting text to speech engine. Marty will just use talk balloons."
+IDS_SET_OPTIONS_TO_TURN_OFF_SPEECH,
+"If you click on 'Set Options' and turn off speech you will not see this message again."
+IDS_CAN_SHUT_DOWN_OLE,
+"Can't shut down OLE."
+IDS_DATA_FILE_SUFFIX,
+"DataFileSuffix"
+IDS_STATUS_EQUALS,
+" status = "
+IDS_RESIND_DOT,
+"resind."
+IDS_USR,
+"usr"
+IDS_MAIN_DIR,
+"MainDir"
+IDS_CDROM_DIR,
+"CDROMdir"
+IDS_TEMP_DIR,
+"TempDir"
+IDS_GENERATE_LOGS,
+"GenerateLogs"
+IDS_AUTO_DEMO_SUBTITLE,
+"AutoDemoSubtitle"
+IDS_PREVIOUS_START_TOONTALK_COMMAND,
+"PreviousStartToonTalkCommandLine"
+
+
+IDS_TEAM_NAME_COUNTER,
+"TeamNameCounter"
+IDS_ROBOT_COUNTER,
+"RobotCounter"
+
+
+#include "javacom.rc"

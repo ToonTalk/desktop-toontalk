@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: jpnt32 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/japan.res" /i "\tt\japan" /d "NDEBUG" "C:\tt\japan\japan.rc"" 
+Creating temporary file "c:\windows\TEMP\RSP3104.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/jpnt32.pdb" /machine:I386 /out:"Release/jpnt32.dll" /implib:"Release/jpnt32.lib" 
+.\Release\jpnt32.obj
+.\Release\StdAfx.obj
+.\Release\japan.res
+]
+Creating command line "link.exe @c:\windows\TEMP\RSP3104.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+   Creating library Release/jpnt32.lib and object Release/jpnt32.exp
+
+
+
+<h3>Results</h3>
+jpnt32.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,108 @@
+// used guidgen to make these -- found at C:\Program Files\Microsoft Visual Studio .NET 2003\Common7\Tools\guidgen.exe
+//beta 8B
+//#define BETA_GUID "CLSID\\{BDC285C0-1628-11D1-B49A-28970BC10000}\\data1"
+// beta 8C
+#define BETA_GUID_8C "CLSID\\{83002980-389A-11D1-B49A-30400AC10000}\\data1"
+// beta 9
+//#define BETA_GUID "CLSID\\{75961C20-56BB-11D1-B49A-C8970BC10000}\\data1"
+// beta 10
+//#define BETA_GUID "CLSID\\{D7A319A0-8B2B-11D1-B49A-40970BC10000}\\data1"
+// beta 10b
+// beta 11
+//#define BETA_GUID "CLSID\\{326D8460-B052-11D1-B49A-F4970BC10000}\\data1"
+//beta 12
+//#define BETA_GUID "CLSID\\{CE0D1460-E344-11d1-B49A-40980BC10000}\\data1"
+//beta 13
+//#define BETA_GUID "CLSID\\{C0756A20-011F-11d2-B49A-586D0BC10000}\\data1"
+// beta 13A
+//#define BETA_GUID "CLSID\\{10ECF140-19E3-11d2-B49A-F0A951C10000}\\data1"
+// beta 14 and trial 1.01
+//#define BETA_GUID "CLSID\\{88E671C0-4054-11d2-B49A-80E051C10000}\\data1"
+// beta 14B and trial 1.04 (Oct 16 '98)
+// renamed rather than commented out so that installation can refer to it
+// and can install both versions
+#define BETA_GUID14B "CLSID\\{A07F3EE0-64CE-11d2-B49A-D0E451C10000}\\data1"
+// beta 15 (May 2 '99)
+//#define BETA_GUID "CLSID\\{5B7E1060-006D-11D3-B49A-005004141BDE}\\data1"
+// beta 16 (June 10 '99)
+//#define BETA_GUID "CLSID\\{5163F712-1F60-11D3-AED6-005004141BDE}\\data1"
+// beta 17 (July 25 '99)
+//#define BETA_GUID "CLSID\\{ECD41BA0-42D4-11D3-AF1A-0080C88DEB64}\\data1"
+// beta 18 (Sept 13 '99)
+//#define BETA_GUID "CLSID\\{82615640-69C4-11D3-AF1A-0080C88DEB64}\\data1"
+// beta 19 (Sept 30 '99)
+//#define BETA_GUID "CLSID\\{4F6F6380-7752-11D3-AF1A-0080C88DEB64}\\data1"
+// beta 20 (Nov 29 '99)
+//#define BETA_GUID "CLSID\\{47564760-A644-11D3-AF1A-0080C88DEB64}\\data1"
+// beta 21
+//#define BETA_GUID "CLSID\\{C12BC1E0-E632-11D3-AF1A-0080C88DEB64}\\data1"
+// beta 22 and 2.00
+//#define BETA_GUID "CLSID\\{A1A93900-FE7F-11D3-AF1A-0080C88DEB64}\\data1"
+// beta 23 and 2.09 (June 9, 2000)
+//#define BETA_GUID "CLSID\\{7B82B600-3DF6-11d4-AF1A-0080C88DEB64}\\data1"
+// beta 24 (Oct 19, 2000)
+//#define BETA_GUID "CLSID\\{0B935EA2-C7DF-4e7b-9259-8C96F8692008}\\data1"
+// beta 25 Dec 12, 2000
+//#define BETA_GUID "CLSID\\{CC39F486-FC4D-4783-AF6A-E7D986DFB988}\\data1"
+// beta 26 Feb 15, 2001
+//#define BETA_GUID "CLSID\\{89D48C80-E169-4a4e-AEE7-827EE470C09E}\\data1"
+// beta 27 March 6, 2001
+//#define BETA_GUID "CLSID\\{F679E654-9087-478c-8186-2E6F95A9915C}\\data1"
+// beta 28 March 19, 2001
+//#define BETA_GUID "CLSID\\{15511EB1-1EA8-4ac3-9CBC-11583F219D9E}\\data1"
+// beta 29 April 2, 2001
+//#define BETA_GUID "CLSID\\{69146D3A-93EC-4253-8657-F328ECD3BE7C}\\data1"
+// beta 30 April 13, 2001
+//#define BETA_GUID "CLSID\\{2423253B-4C00-47eb-81FD-15DF7ADD830D}\\data1"
+// beta 31 June 26, 2001
+//#define BETA_GUID "CLSID\\{E5C15536-050F-4e4e-93DA-E6DF7C941AF6}\\data1"
+// beta 32 August 17, 2001
+//#define BETA_GUID "CLSID\\{6A0FC567-C61B-47b7-B7BF-1CE40A01528E}\\data1"
+// beta 33 December 10, 2001
+//#define BETA_GUID "CLSID\\{5025C19C-BDD9-4c65-8D20-74D7745A8F0A}\\data1"
+//beta 34 February 17, 2002
+//#define BETA_GUID "CLSID\\{348C5D71-6B40-4431-885A-C4FB0BC34979}\\data1"
+// beta 34b March 26, 2002
+//#define BETA_GUID "CLSID\\{D305549C-6BF5-4066-9E17-711B801CE6FE}\\data1"
+// beta 35 April 26, 2002
+//#define BETA_GUID "CLSID\\{64084297-87F5-40ce-854B-A7AC1F3F3DF8}\\data1"
+// beta 36 - August 30, 2002
+//#define BETA_GUID "CLSID\\{72A491DE-7E09-4f2c-9A72-73C184ECA15D}\\data1"
+//beta 37 - Oct 4, 2002
+//#define BETA_GUID "CLSID\\{CC69E279-A4DD-4fba-B1F4-953C0CDA1C74}\\data1"
+// beta 38 - feb 3, 2003
+//#define BETA_GUID "CLSID\\{F2AA1CBF-F7F0-4d52-9E93-AAD9267F0BC8}\\data1"
+// beta 39 - June 23, 2003
+//#define BETA_GUID "CLSID\\{5197A2CE-BE4C-4d35-B03A-49F4C3E72A27}\\data1"
+// beta 40 - August 12, 2003
+//#define BETA_GUID "CLSID\\{6FE40644-F3B0-4bba-91FF-43806C46CD9D}\\data1"
+// beta 41 - November 24, 2003
+//#define BETA_GUID "CLSID\\{38CFF0EE-EDF3-44a0-80B2-1FA567D00625}\\data1"
+// beta 42 - April 10, 2004
+//#define BETA_GUID "CLSID\\{B6C68A15-A617-44d3-A8FC-8ECCEDFC8B1F}\\data1"
+// beta 43 - June 18, 2004
+//#define BETA_GUID "CLSID\\{655D8661-FF5A-49f6-BEB4-DE7535CA8076}\\data1"
+// beta 44 -- July 19, 2004
+//#define BETA_GUID "CLSID\\{BAD1F7FB-F6D4-4ecc-8EA2-9C097542526E}\\data1"
+// beta 45 -- Sept 27, 2004
+//#define BETA_GUID "CLSID\\{207604D3-4F42-4273-B42F-1DC3E62BA0B7}\\data1"
+//#define BETA_GUID "CLSID\\{568ED239-903C-4119-AE3D-E1643B793F5C}\\data1"
+// Beta 46 -- Nov 14, 2004
+//#define BETA_GUID "CLSID\\{05870717-AB69-4ef5-A2FA-2FDC110394EF}\\data1"
+// Beta 47 -- Dec 27, 2004
+//#define BETA_GUID "CLSID\\{32DDB8BC-0EB4-4b92-917B-2D60A1B8FC77}\\data1"
+// Beta 48 -- May 5, 2005
+//#define BETA_GUID "CLSID\\{C26ED017-43DE-4184-B1F7-42142BD5F384}\\data1"
+// Beta 49 -- August 6, 2005
+// #define BETA_GUID "CLSID\\{14060353-FC41-4005-8AFE-C89739015AEB}\\data1"
+// Beta 50 -- December 8, 2005
+//#define BETA_GUID "CLSID\\{63750A01-2252-4ce6-BD11-92C084F902FF}\\data1"
+// Beta 51 -- May 21, 2006
+//#define BETA_GUID "CLSID\\{387951F2-3B1E-4800-A69C-225C1C89F7F5}\\data1"
+// Beta 52 -- May 28, 2007
+#define BETA_GUID "CLSID\\{9F1BF5B8-7710-426b-AF4B-EBF69825D139}\\data1"
+// Trial 3, August 14 2007
+
+
+
+

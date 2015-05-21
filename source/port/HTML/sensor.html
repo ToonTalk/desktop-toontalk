@@ -1,0 +1,194 @@
+<html>
+<head>
+<title>ToonTalk - Utilizando sensores</title>
+<link rel="stylesheet" type="text/css" href="../toontalk.css">
+</head>
+
+<body link="#0000ff" vlink="#800080" bgcolor="#ffffff">
+
+<div align="center">
+<a name="topo"></a>
+<table width=468 cellspacing=0 cellpadding=0 border=0><tr><td>
+
+<p>
+<table width=460 cellspacing=0 cellpadding=0 border=0><tr><td>
+<div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a>
+<hr size=1>
+    </td></tr>
+</table>
+
+<h2>Utilizando sensores</h2>
+
+<p>Na página 4 de sua agenda principal existe 
+uma agenda cheia de sensores. Eles são muito úteis para fazer as coisas responderem ao mouse e ao teclado.
+Há também sensores para a medição do tempo, obter números aleatórios e para o endereço da casa. Alguns sensores são para trazer imagens, sons, texto e objetos do Toon Talk, a partir de fora. Os sensores funcionam de forma muito similar aos <a href="remote.html" OnMouseOver="window.status=' '; return true">controladores para imagens</a>. 
+  
+
+<p>Os sensores na agenda são:  
+<dl> 
+  <dt><b>Página 2 - Velocidade direita do mouse</b> 
+    </dt>
+  <dd>Este sensor mede quão rápido o mouse 
+do computador ( não <a href="bammer.html" OnMouseOver="window.status=' '; return true">Bambam</a>) está se movendo da esquerda 
+para a direita. Se for negativo, o mouse estará se movendo da direita para  a esquerda. Uma velocidade de 1.000 significa que o mouse pode se mover através da tela em 1 segundo. </dd>
+  <dt><b>Página 4 - Velocidade para cima do mouse</b> 
+    </dt>
+  <dd>Este sensor mede quão rápido o mouse 
+do computador está se movendo para cima. Se for negativo, o mouse está se movendo para baixo. Uma velocidade de 1.000 significa que o mouse pode cruzar a tela em<br>1 segundo.</dd>
+  <dt><b>Página 6 - Botão esquerdo do mouse clicado</b> 
+    </dt>
+  <dd>Este sensor responde à questão "o botão 
+esquerdo do mouse foi clicado agora?". Se você apertar o botão esquerdo do 
+mouse, ele se alterará de "não" para "sim", e então novamente para " não", muito rapidamente. Mas um robô pode percebê-lo e reagir a ele como "sim". </dd>
+  <dt><b>Página 8 - Botão do meio do mouse clicado</b> 
+    </dt>
+  <dd>Este sensor responde à questão "o botão 
+do meio do mouse foi clicado?". Se você pressionar o botão do meio do mouse, ele se alterará de "não" para "sim", e então novamente para "não", muito rapidamente. 
+    </dd>
+  <dt><b>Página 10 - Botão direito do mouse clicado</b> 
+    </dt>
+  <dd>Este sensor responde à pergunta "o botão 
+direito do mouse foi clicado?". Se você clicar o botão direito do mouse, ele se alterará de "não" para "sim", e então novamente para "não", muito rapidamente. 
+    </dd>
+  <dt><b>Página 12 - Botão esquerdo do mouse abaixado</b> 
+    </dt>
+  <dd>Este sensor responde à questão "está 
+o botão esquerdo do mouse abaixado agora?". Se você pressionar o botão esquerdo do mouse, ele se alterará de "não" para "sim", e permanecerá deste modo até que você solte o botão. </dd>
+  <dt><b>Página 14 - Botão do meio do mouse abaixado</b> 
+    </dt>
+  <dd>Este sensor responde à questão "está 
+o botão do meio do mouse abaixado agora?". Se você pressionar o botão do meio do mouse, ele se alterará de "não" para "sim", e permanecerá deste modo até que você solte o botão. </dd>
+  <dt><b>Página 16 - Botão direito do mouse abaixado</b> 
+    </dt>
+  <dd>Este sensor responde à questão "está 
+o botão direito do mouse abaixado agora?". Se você pressionar o botão direito do mouse, ele se alterará de "não" para "sim", e permanecerá deste modo até que você o solte o bot&atilde;o. </dd>
+  <dt><b>Página 18 - Tecla pressionada</b> 
+    </dt>
+  <dd>Este sensor mostra o botão do teclado 
+que foi pressionado. Quando você aperta uma tecla, este sensor vai de em branco, para mostrar uma tecla, para em branco muito rapidamente. Um robô pode ser treinado para perceber a mudança. </dd>
+  <dt><b>Página 20 - Última tecla pressionada</b> 
+    </dt>
+  <dd>Este sensor responde à questão "qual 
+foi a última tecla do teclado pressionada?". Ele exibe a tecla até que outra tecla seja pressionada. </dd>
+  <dt><a name="OLE_LINK2"><b>Página 22 - Botão Shift abaixado</b></a>
+   </dt>
+  <dd><a name="OLE_LINK2">Este sensor responde 
+    à questão "está o botão <i>shift</i> do teclado <br> abaixado agora?".</a> </dd>
+  <dt><b>Página 24 - Botão <i>Control</i> abaixado</b> 
+    </dt>
+  <dd>Este sensor responde à questão "está 
+o botão <i>control</i> ( normalmente, <i>Ctrl</i>) do teclado abaixado agora?". </dd>
+  <dt><b>Página 26 - milissegundos desde o último quadro</b> </dt>
+  <dd>Este sensor responde a questão "quanto 
+    tempo se passou desde que você respondeu à esta questão? ". A resposta é em  milissegundos (um milésimo de segundo). Utilizando este sensor é possível construir "timers" e relógios. </dd>
+  <dt><b>Página 28 - Números entre 0 e 1.000</b> </dt>
+  <dd>Este sensor responde à questão "qual 
+é o número entre 0 e 1.000?". Ele funciona melhor sendo aleatório, tal como 
+jogar uma moeda ou lançar dados. Se você desejar uma cópia dela, isso não 
+o fará baixar a zero. </dd>
+  <dt><a name="Clipboard"><b>Página 30 - Para e a partir de outros programas</b></a></dt>
+  <dd><a name="Clipboard">Este sensor conecta o
+Toon Talk ao clipboard do Microsoft Windows. Se você colocar algo neste sensor quando ele estiver vazio (negro), então Bammer irá amassar o que você colocou no clipboard. Você pode ir agora para algum outro programa do Windows, tal
+como o programa de e-mail ou o processador de texto e selecionar Colar de 
+seu menu (normalmente, no seu menu Editar.) O texto que foi colado pode ser salvo em arquivos, enviado por e-mail, ou qualquer coisa assim. Quando você quiser ir para outro lugar e trazer algo de fora, apenas selecione o texto que o Toon Talk gerou e selecione Copiar no menu. O sensor do clipboard do Toon Talk irá agora exibir o objeto que foi copiado. Você pode utilizar</a> <a href="dusty.html" OnMouseOver="window.status=' '; return true">Asper</a> 
+    para removê-lo do clipboard e então expeli-lo. Você pode também copiar o texto para o Toon Talk deste modo. </dd>
+  <dt><a name="HandVisible"><b>Página 32 - Mãos  visíveis?</b> </a></dt>
+  <dd><a name="HandVisible">Este sensor responde 
+à questão "sua mão está visível?". Você pode pressionar a barra de espaço  enquanto estiver apontando para ou segurando este sensor e você tornará sua mão invisível se estiver visível, e vice-versa.
+Quando estiver jogando um jogo como o Pingue-pongue (na página 24 da agenda de amostras na página 6 da sua agenda principal), você, normalmente, desejará ocultar sua mão.
+Esta é uma boa forma de fazer os robôs trabalharem para você quando o jogo começar. Apertando F9, sua mão será escondida também. Apertando-o novamente, a exibirá.</a> 
+    </dd>
+  <dt><a name="PictureFile"><b>Página 34 - Arquivos para imagens</b> </a></dt>
+  <dd><a name="PictureFile">Este sensor converte 
+nomes de arquivos em imagens. Apenas coloque um grupo de texto com o nome 
+de um arquivo de um BMP do Windows no sensor e </a><a href="bammer.html" OnMouseOver="window.status=' '; return true">Bambam</a> 
+o amassará. Você pode então remover a imagem utilizando <a href="dusty.html" OnMouseOver="window.status=' '; return true">Asper</a>. 
+    Você pode fazer arquivos BMP de vários modos &#150; o programa Paint Brush, incluído no Windows, pode fazê-lo. Você pode fazer com que a cor negra em suas imagens 
+fique transparente se utilizar o <a href="remote.html#Visible" OnMouseOver="window.status=' '; return true">controlador 
+de visibilidade</a> para sua imagem. A versão de 16 bits do Toon Talk não 
+pode utilizar arquivos BMP com mais de 256 cores, ou maiores do que 64 kbytes. 
+Atualmente, a versão de 32 bits exibe, adequadamente, arquivos BMP com mais 
+de 256 cores apenas se o modo de vídeo do computador estiver ajustado para 
+256 cores. </dd>
+  <dt><a name="SoundFile"><b>Página 36 - Arquivo para som</b></a></dt>
+  <dd><a name="SoundFile">Este sensor converte 
+nomes de arquivos em sons. Apenas coloque um grupo de texto com o nome de um arquivo de Windows WAV (sons) no sensor e </a><a href="bammer.html" OnMouseOver="window.status=' '; return true">Bambam</a> 
+    irá amassá-lo. O som irá tocar até que termine ou você utilize <a href="dusty.html" OnMouseOver="window.status=' '; return true">Asper</a> 
+    para esvaziá-lo. Você pode obter um <a
+    href="sound.html" OnMouseOver="window.status=' '; return true">grupo de som</a> que poderá usar muitas vezes. Apenas esvazie 
+o sensor e faça Asper expeli-lo. Se seus arquivos wave estiverem no subdiretório "usuários" do Toon Talk, então você pode utilizar apenas o nome abreviado do 
+arquivo. Você pode tocar um arquivo de música utilizando o seguinte controle remoto MCI. </dd>
+  <dt><a name="TextToMCI"></a><b>Página 38 - Interface de Controle de Mídia (MCI)</b> </dt>
+  <dd>Se você colocar um grupo de texto neste 
+sensor, o texto é enviado para <a href="mci.html" OnMouseOver="window.status=' '; return true">a Interface de Controle 
+de Mídia (MCI) do Windows</a>. Esta é uma forma geral de tocar diferentes 
+tipos de mídia. Você pode esvaziar o <a
+    href="sound.html" OnMouseOver="window.status=' '; return true">grupo de som</a> recém-criado e utilizá-lo como qualquer 
+som. Por exemplo, colocando "play c:\windows\media\canyon.mid" neste controlador criará um grupo para tocar o arquivo MIDI "canyon.mid". </dd>
+  <dt><a name="TextToSpeech"></a><b>Página 40 - Texto para narração</b> </dt>
+  <dd>Se você colocar um grupo de texto neste 
+sensor, o texto é falado. Isto funciona apenas na versão de 32 bits de Toon 
+Talk com o texto para fala instalado. Isto cria um <a href="sound.html" OnMouseOver="window.status=' '; return true">grupo 
+    de som</a> que você pode esvaziar do sensor.</dd>
+  <dt><b>Página 42 - Decoração da parede</b> </dt>
+  <dd>Contém uma imagem da parede da sala. 
+Você pode colocar imagens e texto sobre ele e a parede da sala se parecerá 
+exatamente como este sensor. </dd>
+  <dt><b>Página 44 - Decoração da casa</b> </dt>
+  <dd>Contém uma imagem da frente da casa. 
+Você pode colocar imagens e texto sobre ele e a casa se parecerá exatamente 
+como este sensor. </dd>
+  <dt><b>Página 46 - Decoração do telhado</b> </dt>
+  <dd>Contém uma imagem do telhado da casa. 
+Você pode colocar imagens e texto sobre ele e o telhado da casa se parecerá 
+exatamente como este sensor. </dd>
+  <dt><a name="Address"><b>Página 48 - Meu endereço</b> 
+    </a></dt>
+  <dd><a name="Address">Nesta página há uma 
+caixa com dois sensores exibindo o </a><a href="location.html" OnMouseOver="window.status=' '; return true">endereço da 
+casa</a> neles. O primeiro sensor mostra o número da avenida e o segundo, o 
+número da rua. As avenidas vão do norte para o sul. As ruas, do leste para 
+o oeste.
+Você pode fazer novos endereços a partir dos antigos. Se você colocar 
+um endereço em um <a href="truck.html" OnMouseOver="window.status=' '; return true">caminhão</a>, então a equipe construirá 
+uma casa o mais perto possível daquele endereço. </dd>
+  <dt><b>Página 50 - Pássaro exterior</b> </dt>
+  <dd>Contém um <a href="extend.html" OnMouseOver="window.status=' '; return true"> pássaro 
+que pode voar para fora do Toon Talk</a> e fazer conexões com o sistema operacional e outros serviços externos. </dd>
+  <dt><b>Página 52 - Joystick</b> </dt>
+  <dd><a name="Joysticks"></a>Uma agenda dos 
+sensores de joystick. Esta agenda só aparecerá se você estiver rodando a vers&atilde;o de 32 bits do Toon Talk no Windows 95 e tiver um joystick conectado ao seu computador.
+Você pode precisar informar ao <a href="joycalib.html" OnMouseOver="window.status=' '; return true">Windows 95 acerca de seu joystick ou controlador de jogo.</a> 
+Se você tiver mais de um joystick conectado ao seu computador, as seguintes 
+páginas terão agendas para esses joysticks. Há muitos sensores de joysticks. 
+    </dd>
+</dl>
+
+<p>
+<hr size=1><div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a></div></td>
+
+</tr></table>
+</div>
+</body></html>
+
+<!--  FuturArte Editora Ltda.                                     Divertire  -->

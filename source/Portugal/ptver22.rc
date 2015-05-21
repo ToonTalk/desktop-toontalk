@@ -1,0 +1,3493 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+/////////////////////////////////////////////////////////////////////////////
+// Portuguese (Portugal) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PTG)
+#ifdef _WIN32
+//LANGUAGE LANG_PORTUGUESE, SUBLANG_PORTUGUESE
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    1                       "Engenhocas vista de lado"
+    2                       "Engenhocas vista de cima"
+    3                       "uma pessoa a andar"
+    4                       "uma mola"
+    5                       "um helicóptero a voar"
+    6                       "uma moldura"
+    7                       "um helicóptero a poisar"
+    8                       "uma pessoa a ajoelhar-se"
+    9                       "a casa alta vista de cima"
+    10                      "a casa alta vista de lado"
+    11                      "a porta da casa alta"
+    12                      "a porta da casa grande"
+    13                      "um bloco numérico"
+    14                      "uma balança"
+    15                      "Limpopó"
+END
+
+STRINGTABLE 
+BEGIN
+    16                      "Artolas"
+    17                      "Varinha Mágica"
+    18                      "um balão de pensamento "
+    19                      "um robô"
+    20                      "um ninho"
+    21                      "um pássaro"
+    22                      "uma bomba"
+    23                      "um caderno"
+    24                      "uma caixa"
+    25                      "um rato com um martelo"
+    26                      "um braço"
+    27                      "uma mão"
+    28                      "uma mão a segurar a varinha mágica"
+    29                      "um botão da bomba de ar "
+    30                      "uma cabeça com cabelo"
+    31                      "uma cabeça com chapéu"
+END
+
+STRINGTABLE 
+BEGIN
+    32                      "um botão do aspirador "
+    33                      "um interruptor"
+    34                      "uma pessoa com chapéu a ajoelhar-se"
+    35                      "uma pessoa com cabelo a ajoelhar-se"
+    36                      "a casa grande vista de lado"
+    37                      "a casa grande vista de cima"
+    38                      "a casa larga vista de lado"
+    39                      "a casa larga vista de cima"
+    40                      "a porta da casa larga"
+    41                      "ET"
+    42                      "um camião dentro de uma casa"
+    43                      "um camião visto de cima"
+    44                      "um camião visto de lado"
+    45                      "um balão de fala"
+    46                      "um botão da varinha mágica"
+    47                      "um bloco de texto"
+END
+
+STRINGTABLE 
+BEGIN
+    48                      "um caderno com uma página a virar"
+    49                      "uma pessoa tonta"
+    50                      "uma pessoa tonta com cabelo"
+    51                      "uma pessoa tonta com chapéu"
+    52                      "uma explosão"
+    53                      "uma porta para um foguetão avariado"
+    54                      "a animação da colisão ou falha"
+    55                      "uma bola"
+    56                      "uma raquete"
+    57                      "uma pessoa a andar"
+    58                      "uma flor"
+    59                      "uma árvore"
+    60                      "um semáforo"
+    61                      "um rectângulo"
+    62                      "a imagem de um ficheiro"
+    63                      "uma nave"
+END
+
+STRINGTABLE 
+BEGIN
+    64                      "parede de um quarto"
+    65                      "canto esquerdo de um quarto"
+    66                      "canto direito de um quarto"
+    67                      "uma parede"
+    68                      "porta vista de dentro de um quarto"
+    69                      "um fundo"
+END
+
+STRINGTABLE 
+BEGIN
+    129                     "na mão do robô"
+    130                     "para a tua mão"
+    132                     "o robô está"
+    134                     "tu estás"
+    135                     "Página"
+    136                     "contém "
+END
+
+STRINGTABLE 
+BEGIN
+    161                     "um bloco de texto"
+    162                     "um bloco de texto limpo"
+    163                     "um bloco com texto"
+    164                     "nele"
+    165                     "nada"
+    166                     "um robô que não tem pensamento"
+    167                     "primeiro"
+    168                     "segundo"
+    169                     "terceiro"
+    170                     "quarto"
+    171                     "quinto"
+    172                     "sexto"
+    173                     "Tu estás a apontar para "
+    174                     "Tu estás a segurar "
+    175                     "Debaixo "
+END
+
+STRINGTABLE 
+BEGIN
+    176                     " está "
+    178                     "o botão direito do rato"
+END
+
+STRINGTABLE 
+BEGIN
+    193                     "O ovo do ninho choca quando o poisares. "
+    195                     "Podes tirar "
+    196                     "coisas"
+    197                     " do ninho com a mão ou com o Limpopó, o aspirador. "
+    198                     "Podes pôr coisas rectangulares no ninho, largando-as em cima dele. "
+    199                     "Costumo deixar ser o pássaro fazer isso. "
+    200                     "Já te disse tudo o que sei sobre ninhos. "
+    201                     "Uso pássaros e ninhos quando quero que os robôs trabalhem juntos em casas diferentes. "
+    202                     "Se quiseres que repita tudo o que sei sobre ninhos, carrega duas vezes em F1 enquanto apontas para um ninho. "
+    203                     "Posso ensinar-te mais sobre os pássaros, se carregares duas vezes em F1 enquanto apontas para um pássaro. "
+END
+
+STRINGTABLE 
+BEGIN
+    209                     "Se deres uma coisa rectangular a um pássaro, ele leva-a para o ninho. "
+    210                     "Se quiseres que ele leve outras coisas, tens de as pôr numa caixa e dar-lhe a caixa. "
+    211                     "Já te disse tudo o que sei sobre pássaros. "
+    212                     "Se quiseres que repita tudo o que sei sobre pássaros, carrega duas vezes em F1 enquanto apontas para um pássaro "
+    213                     "Posso ensinar-te mais coisas sobre os ninhos, se carregares duas vezes em F1 enquanto apontas para um ninho. "
+    215                     " em cima"
+    216                     "deste ao pássaro uma coisa com o ninho dele"
+END
+
+STRINGTABLE 
+BEGIN
+    225                     "Podes fazer explodir esta casa carregando n"
+    226                     "Enquanto seguras uma bomba dentro de uma casa, podes fazer explodir a casa carregando n"
+    227                     "Tu e as tuas ferramentas sobrevivem; e o Limpopó aspira tudo o que estiver no chão. "
+    228                     "Podes poisá-lo com segurança carregando n"
+    229                     "Podes ensinar um robô a fazer explodir a casa onde ele está, carregando n"
+    230                     "Ao ensinar um robô com uma bomba, podes fazer explodir a casa onde ele está, carregando n"
+    231                     "Isso termina a aula do robô. "
+    232                     "Antes de testar um robô ensinado a mexer em bombas, ponho-o sempre no caderno. "
+    233                     "Já te disse tudo o que sei sobre bombas. "
+    234                     "Se quiseres que eu repita tudo o que disse sobre bombas, carrega duas vezes em F1. "
+END
+
+STRINGTABLE 
+BEGIN
+    241                     "ele tentou pôr numa caixa uma coisa que não se pode pôr em caixas"
+    242                     "Se um robô tiver uma caixa limpa no balão de pensamento, trabalha com caixas com qualquer número de buracos. "
+    244                     "É uma caixa limpa igual às outras. "
+    245                     "Podes pôr qualquer coisa dentro de uma caixa, largando-a num buraco. "
+    246                     "Podes tirar coisas dos buracos com "
+    247                     " ou com o Limpopó. "
+    248                     "Abana quando for altura. "
+    249                     "Podes juntar duas caixas, largando uma encostada ao lado de outra. "
+    250                     "Podes mudar o número de buracos, carregando num número de 0 a 9. "
+    251                     "Se quiseres uma caixa com mais de 9 buracos, larga uma ao lado de outra. "
+    252                     "Se carregares em + é acrescentado um buraco. "
+    253                     "Se carregares em - é largado o último buraco. "
+    254                     "Podes utilizar o teclado para alterar o número de buracos, enquanto seguras uma caixa. "
+    255                     "Podes rotular um buraco, apontando para ele e escrevendo. "
+END
+
+STRINGTABLE 
+BEGIN
+    256                     "Já te disse tudo o que sei sobre caixas. "
+    257                     "Se quiseres que eu repita tudo o que disse sobre caixas, carrega duas vezes em F1 enquanto apontas para uma caixa. "
+    258                     "qualquer caixa"
+    259                     "uma caixa com "
+    260                     "um buraco"
+    261                     " buracos"
+    264                     "etiqueta do buraco com "
+    266                     "buraco contém "
+END
+
+STRINGTABLE 
+BEGIN
+    273                     "E"
+END
+
+STRINGTABLE 
+BEGIN
+    289                     "vai"
+    293                     "apanha uma varinha mágica"
+    295                     "usa a varinha mágica no"
+    297                     "apanha uma bomba de ar "
+    299                     "larga a varinha mágica"
+    301                     "apanhar"
+    303                     "largar"
+END
+
+STRINGTABLE 
+BEGIN
+    304                     " no chão"
+    305                     "larga"
+    306                     " no"
+    307                     "largar"
+    308                     " à esquerda junto "
+    309                     "larga"
+    310                     " à direita junto"
+    311                     "usar a Artolas "
+    312                     " durante"
+    313                     "apanhar uma cópia do Limpopó"
+    315                     "usa o Limpopó para aspirar"
+    317                     "faz o Limpopó cuspir para restaurar"
+    319                     "larga o Limpopó"
+END
+
+STRINGTABLE 
+BEGIN
+    321                     "carregar"
+    323                     "larga o ninho e vê o pássaro a chocar"
+    325                     "dá"
+    326                     " ao pássaro"
+    327                     "larga"
+    328                     " no camião"
+    329                     "rebenta com a casa onde está"
+    331                     "usa"
+    335                     "acrescenta"
+END
+
+STRINGTABLE 
+BEGIN
+    337                     "carrega em"
+    339                     "apanha"
+    341                     "passa a trabalhar com"
+    343                     "usa a varinha mágica no"
+    345                     "usa o Limpopó para aspirar"
+    347                     "usa"
+    349                     "larga a Artolas"
+END
+
+STRINGTABLE 
+BEGIN
+    353                     "a sua caixa "
+    355                     "a varinha mágica"
+    356                     "Limpopó"
+    357                     "a pilha de números"
+    358                     "a pilha de texto"
+    359                     "a pilha de caixas"
+    360                     "a pilha de ninhos"
+    361                     "a pilha de camiões"
+    362                     "o caderno principal"
+    363                     "a pilha de robôs"
+    364                     "a pilha de balanças"
+    365                     "a pilha de bombas"
+    366                     "o que ele está a segurar"
+    367                     "Artolas"
+END
+
+STRINGTABLE 
+BEGIN
+    369                     " o que é"
+    370                     "um número"
+    371                     "um bloco de texto"
+    372                     "uma caixa"
+    373                     "um ninho"
+    374                     "um camião"
+    376                     "um robô"
+    377                     "uma balança"
+    378                     "uma bomba"
+    379                     " a última coisa que fez ou encontrou"
+END
+
+STRINGTABLE 
+BEGIN
+    401                     "Adeus!"
+    402                     "Até logo. "
+    403                     "Tchau. "
+    404                     "Muito bem. "
+    405                     "OK. "
+    406                     "Certo. "
+    407                     "Bem, vou-te ensinar tudo o que sei sobre "
+    408                     "Podes-te ajoelhar carregando em qualquer tecla. Para te levantares, carrega na tecla 'Esc' (no canto superior do teclado). "
+    409                     "Vou ficar por aqui para te ajudar. Se te estiver a chatear, carrega na tecla F1 que me vou embora. "
+    410                     "Se eu estiver escondido, carrega em F1 que volto a aparecer. "
+    411                     "Sabes que podes usar a tecla 'Esc' para te levantares? "
+    412                     "Experimenta. "
+    413                     "Quando quiseres, carrega na tecla 'Esc' para voltar para o chão. "
+    414                     "Sabes que as animações páram se carregares em F7? "
+    415                     "Até eu páro de falar! "
+END
+
+STRINGTABLE 
+BEGIN
+    416                     "Se quiseres interrompter o ToonTalk, carrega na tecla 'Pause'. "
+    418                     "Se quiseres que eu te fale de algum objecto, primeiro manda-me embora: carrega em F1. Depois, aponta ou apanha o objecto e volta a carregar em F1. "
+    419                     "Olá"
+    420                     "Tudo bem?"
+    421                     "Bom dia"
+    422                     "Olá"
+    423                     "Bons dias"
+    424                     "Ora viva"
+    425                     "Tudo fixe? "
+END
+
+STRINGTABLE 
+BEGIN
+    433                     "O Marretas teve problemas"
+END
+
+STRINGTABLE 
+BEGIN
+    450                     "o número ficará demasiado grande para o computador"
+    451                     "o número ficará demasiado pequeno para o computador"
+    452                     "o número ficará demasiado pequeno ou demasiado grande para o computador"
+END
+
+STRINGTABLE 
+BEGIN
+    466                     "um controlo remoto para "
+    467                     "qualquer número"
+    468                     "um bloco numérico limpo "
+    469                     "o número "
+    470                     "uma coisa que fará a multiplicação por "
+    471                     "uma coisa que fará a divisão por "
+    472                     " e apenas mantém o aviso "
+    473                     "uma coisa que fará alterar o número se for largado em cima "
+    474                     "uma coisa que fará o 'OU lógico' aos bits do número "
+    475                     "uma coisa que fará o 'E lógico' aos bits do número "
+    476                     "uma coisa que fará o 'OU exclusivo lógico' aos bits do número "
+    477                     "a operação "
+    478                     "Podes usar blocos numéricos limpos nos balões de pensamento para que os robôs aceitem qualquer número. "
+END
+
+STRINGTABLE 
+BEGIN
+    480                     "um número limpo pode ser um número qualquer. "
+    481                     "Podes somar dois números, largando um em cima do outro. "
+    482                     "Podes escrever um número. "
+    484                     "Também podes escrever um número enquanto o estás a agarrar. "
+    486                     "Podes apagar algarismos carregando na tecla de apagar, no teclado. "
+    487                     "Se apagares o último algarismo, ficas com o 0. "
+    488                     "Podes mudar "
+    489                     " em "
+    490                     " carregando a tecla '-'. "
+    491                     "Depois, se largares "
+    492                     " noutro número, subtrais por "
+    493                     "Podes multiplicar por "
+    494                     " carregando na tecla 'x'. "
+    495                     "Depois basta largá-lo em cima do número com que o queres multiplicar "
+END
+
+STRINGTABLE 
+BEGIN
+    496                     "As teclas 'x' e '*' fazem o mesmo. "
+    497                     "Podes dividir por "
+    498                     " carregando na tecla '/'. "
+    499                     "Depois é só largá-lo em cima doutro número. "
+    500                     "O resto da divisão é ignorado. "
+    501                     " Se o segundo número for 0, não se faz a divisão "
+    502                     "Para obter o resto (em vez do dividendo), escrevendo '%' (na tecla 5)"
+    504                     "Para obter o resto da divisão por "
+    505                     " escreve '%' (na tecla 5). "
+    506                     "Depois é só largá-lo em cima doutro número. "
+    507                     "Agora uma coisa complexa. "
+    508                     "Podes tratar um número como grupo de bits. Bits que podem ser 0 ou 1. "
+    509                     "Este número é "
+    510                     "O que podes fazer: "
+    511                     "~ faz o complemento. | faz o OU lógico. & faz o E lógico."
+END
+
+STRINGTABLE 
+BEGIN
+    512                     "Não te preocupes se não souberes o que são. Experimenta. "
+    513                     "Já disse tudo o que sei acerca dos números. "
+    514                     "Se queres que repita tudo o que sei acerca dos números, carrega duas vezes em F1, enquanto apontas para um número. "
+END
+
+STRINGTABLE 
+BEGIN
+    561                     "Podes avançar a página carregando na tecla + ou na barra de espaços. "
+    562                     "Podes voltar atrás, carregando na tecla -. "
+    563                     "Quando o caderno está na primeira página,"
+    564                     "Se o caderno estiver na primeira página,"
+    565                     " carregando na tecla - abre-se na última página. "
+    566                     "Podes mudar para uma página qualquer escrevendo o número dela. "
+    567                     "Podes guardar qualquer coisa numa página em branco. "
+    568                     "Basta largares um objecto numa página em branco, para que ele passe a ser uma enorme pilha de cópias. "
+    569                     "Qualquer coisa que guardes no caderno fica lá, mesmo que desligues o computador. "
+    570                     "Se quiseres apagar alguma coisa de lá, aspira-a com o Limpopó. "
+    571                     "Que tal ires até uma página em branco, para experimentar? "
+    572                     "O Limpopó pode apagar coisas do caderno. "
+    573                     "Podes chamá-lo, carregando na tecla F2. "
+    574                     "Se apagares uma página por engano, o Limpopó cuspir o que aspirou, para refazeres a página. "
+    575                     "Costumo usar a página da esquerda para guardar a descrição da página da direita. "
+END
+
+STRINGTABLE 
+BEGIN
+    576                     "Basta largar lá um texto ou imagem de descrição. "
+    577                     "Mais tarde, podes facilmente encontrar a página que queres, largando em cima do caderno esse texto ou imagem. "
+    578                     " está em branco. Podes largar aqui o que quiseres. "
+    579                     "Um atalho para regressar à página "
+    580                     " é largando "
+    581                     " no caderno. "
+    582                     "Podes ir para uma página com alguma coisa e experimentar. "
+    583                     "Podes ir para uma página com texto largando algum texto no caderno. "
+    584                     "Se largares texto, não precisas de o escrever todo. "
+    585                     "Basta o necessário para encontrar a página. "
+    586                     "Da mesma maneira, podes ir para uma página largando números. "
+    587                     "Se carregares na tecla F4, o caderno principal voa para junto de ti. "
+    588                     "Disse-te tudo o que sei sobre cadernos. "
+    589                     "Se quiseres que repita tudo o que sei sobre cadernos, carrega duas vezes em F1 enquanto apontas para um caderno. "
+    590                     " um caderno"
+    591                     "Ele guarda tudo incluindo outros cadernos"
+END
+
+STRINGTABLE 
+BEGIN
+    592                     "Este caderno está cheio de imagens"
+    593                     " Este caderno está cheio de sensores e de controlos remotos"
+    594                     "está cheio de exemplos de programas"
+    595                     "está guardado num ficheiro"
+    596                     " páginas"
+    597                     "contém controlos remotos para "
+    598                     "Caderno\rlimpo"
+    599                     "Este caderno é da caixa de ferramentas. Qualquer alteração que lhe faças mantém-se mesmo que desligues o computador"
+END
+
+STRINGTABLE 
+BEGIN
+    609                     "Imagens"
+    610                     "Sensores"
+END
+
+STRINGTABLE 
+BEGIN
+    625                     "Rectângulo"
+    626                     "Bola"
+    627                     "Raquete"
+    628                     "Pessoa a\randar"
+    629                     "Pessoa\rtonta"
+    630                     "Pessoa\rtonta"
+    631                     "Pessoa\rtonta"
+    632                     "Pessoa de\rjoelhos"
+    633                     "Pessoa de\rjoelhos"
+    634                     "Pessoa de\rjoelhos"
+    635                     "Caixa de\rferramentas"
+    636                     "Helicóptero"
+    637                     "Helicóptero\ra pousar"
+    638                     "Explosão"
+    639                     "Bomba"
+END
+
+STRINGTABLE 
+BEGIN
+    640                     "Frente\rde casa"
+    641                     "Telhado"
+    642                     "Frente\rde casa"
+    643                     "Telhado"
+    644                     "Frente\rde casa"
+    645                     "Telhado"
+    646                     "Robô"
+    647                     "Ninho"
+    648                     "Pássaro"
+    649                     "Rato"
+    650                     "Aspirador"
+    651                     "Bomba\rde ar"
+    652                     "Varinha\rmágica"
+    653                     "ET"
+    654                     "Foguetão"
+    655                     "Camião"
+END
+
+STRINGTABLE 
+BEGIN
+    656                     "Camião"
+    657                     "Camião"
+    658                     "Balão de\rpensamento"
+    659                     "Balão\rde fala"
+    660                     "Botão"
+    661                     "Bloco"
+    662                     "Caderno"
+    663                     "Moldura"
+    664                     "Braço"
+    665                     "Mão"
+    666                     "Mão"
+    667                     "Interruptor"
+    668                     "Mola"
+    669                     "Flor"
+    670                     "Árvore"
+    671                     "Semáforo"
+END
+
+STRINGTABLE 
+BEGIN
+    672                     "Oval"
+    673                     "Rectângulo\rarredondado"
+    674                     "Linha\ra subir"
+    675                     "Linha\ra descer"
+    676                     "Linha\roval"
+    677                     "Linha\rrectangular\rarredondada"
+    678                     "Linha\rtracejada\ra subir"
+    679                     "Linha\rtracejada\ra descer"
+    680                     "Linha\rrectangular"
+END
+
+STRINGTABLE 
+BEGIN
+    693                     " imagens em cima"
+    694                     " com uma imagem em cima"
+    698                     "por trás"
+    701                     "uma imagem a virar"
+    702                     "o lado inverso de "
+END
+
+STRINGTABLE 
+BEGIN
+    704                     "As imagens limpas são úteis nos balões de pensamento. "
+    705                     "um robô com uma imagem limpa no balão de pensamento aceita qualquer imagem no mesmo buraco dessa caixa. "
+    706                     "Sabes que podes colar duas imagens, largando uma em cima da outra? "
+    709                     "Podes descolar uma imagem de outra usando o aspirador Limpopó. "
+    710                     "Podes chamar o Limpopó com a tecla F2. "
+    711                     "Esta imagem é mesmo "
+    712                     "Podes alternar entre elas "
+    713                     "Algumas imagens podem ser mudadas "
+    714                     "carregando em '+' ou '-' enquanto lhes apontas ou as seguras. "
+    715                     " animações"
+    716                     "esta imagem é uma figura geométrica colorida. "
+    717                     "Algumas imagens são figuras geométricas coloridas. "
+    718                     "Podes mudar a cor carregando em '+' ou '-'. "
+    719                     "A bomba de ar Artolas, pode aumentar, diminuir ou esticar imagens. "
+END
+
+STRINGTABLE 
+BEGIN
+    720                     "Podes chamá-la, carregando em F3. "
+    721                     "Podes atirar isto carregando"
+    722                     "Podes atirar uma imagem carregando "
+    725                     "Podes virar a imagem carregando "
+    727                     " quando estás a agarrar uma imagem. "
+    728                     "Podes desvirar a imagem carregando "
+    729                     " outra vez"
+    730                     " enquanto seguras uma imagem virada. "
+    734                     "Os robôs podem trabalhar por trás das imagens. "
+    735                     "É só largá-los lá por trás e dar-lhes caixas para eles trabalharem. "
+END
+
+STRINGTABLE 
+BEGIN
+    736                     "Os robôs começam a trabalhar quando desvirares a imagem e a largares. "
+    737                     "É assim que eu faço imagens ""inteligentes"" que saltam, explodem, crescem ou fazem qualquer outra coisa que eu queira. "
+    738                     "Podes tirar coisas de trás das imagens com a mão ou com o Limpopó. "
+    739                     "Já disse tudo o que sei acerca das imagens. "
+    740                     "Se quiseres que repita tudo o que te disse sobre imagens, carrega duas vezes em F1 enquanto apontas para uma imagem. "
+    741                     "não podes mudar a balança com os botões do rato"
+END
+
+STRINGTABLE 
+BEGIN
+    786                     "Podes agarrar "
+    787                     "clicando"
+    789                     "Podes largar"
+END
+
+STRINGTABLE 
+BEGIN
+    801                     "o texto já está vazio"
+    802                     "o texto é muito comprido"
+    804                     "Os cadernos limpos são úteis nos balões de pensamento. "
+    805                     "Um robô com um caderno limpo no balão de pensamento aceita qualquer texto no mesmo buraco da sua caixa. "
+    806                     "Podes acrescentar letras a um texto carregando numa letra. "
+    807                     "Também podes acrescentar letras enquanto "
+    808                     " seguras um bloco de texto. "
+    809                     "Podes apagar letras carregando na tecla de apagar. "
+    810                     "Podes passar para a linha seguinte carregando na tecla 'Enter'. "
+    811                     "Podes juntar dois blocos de texto largando um em cima do outro. "
+    812                     "Se lhe largares um número em cima, ele é somado à última letra. "
+    813                     "Por exemplo, se largares "
+    814                     " nisto, obterás '"
+    815                     "'. "
+END
+
+STRINGTABLE 
+BEGIN
+    816                     "Se largares um número num bloco de texto, ele é somado à última letra. "
+    817                     "Por exemplo, largando 2 em ABC dá ABE. "
+    818                     "Já te disse tudo o que sei acerca de blocos de texto. "
+    819                     "Se quiseres que repita tudo o que sei sobre blocos de texto, carrega duas vezes em F1 enquanto apontas para um bloco de texto. "
+    820                     "o número é maior do que o número de letras do bloco de texto"
+END
+
+STRINGTABLE 
+BEGIN
+    833                     "balão de pensamento vazio"
+    834                     "balão de pensamento com "
+END
+
+STRINGTABLE 
+BEGIN
+    851                     "Artolas, a bomba de ar"
+    852                     "Artolas"
+    853                     "A Artolas pode aumentar e diminuir a altura e a largura das coisas. "
+    854                     "Se continuares a carregar "
+    855                     "A Artolas faz"
+END
+
+STRINGTABLE 
+BEGIN
+    868                     "Se quiseres que a Artolas vá "
+    869                     " chama-a carregando em F3. "
+    870                     "Ela vem mais depressa se carregares duas vezes na tecla F3. "
+    871                     "Disse-te tudo o que sei acerca da Artolas. "
+    872                     "Volto a dizer-te tudo o que sei acerca da Artolas se carregares duas vezes na tecla F1 para ela. "
+    873                     "Limpopó, o aspirador"
+    874                     "Limpopó"
+    875                     "O Limpopó pode devolver "
+    876                     "a última coisa que aspirou"
+    877                     "se clicares no"
+    879                     "O Limpopó apaga "
+END
+
+STRINGTABLE 
+BEGIN
+    880                     "o que está debaixo da boca dele"
+    881                     "se clicares"
+    882                     "Se, enquanto o seguras, clicares em "
+    883                     " o Limpopó aspira "
+    885                     "o que está debaixo dele. "
+    890                     "Se quiseres que o Limpopó venha a correr "
+    891                     " carrega na tecla F2. "
+    892                     "Se carregares duas vezes em F2, ele vem mais depressa. "
+    893                     "Disse-te tudo o que sei sobre o Limpopó. "
+    894                     "Às vezes uso-o para levar as coisas de uma casa para outra. "
+    895                     "Se quiseres que te repita tudo sobre o Limpopó, carregar duas vezes em F1. "
+END
+
+STRINGTABLE 
+BEGIN
+    896                     "Podes copiar "
+    897                     "o que está debaixo da ponta da Varinha Mágica"
+    898                     " clicando "
+    899                     "Podes pousar "
+    900                     "o que copiaste "
+    901                     "clicando em"
+    902                     "Clicando outra vez, pousas a Varinha Mágica. "
+    903                     "Se quiseres usar a Varinha Mágica "
+    904                     " chama-a, carregando em F5. "
+    905                     "Ela vem mais depressa se carregares duas vezes em F5. "
+    906                     "Isto é tudo o que te sei dizer sobre a Varinha Mágica. "
+    907                     "Se quiseres que repita tudo o que te disse sobre a Varinha Mágica, carrega duas vezes em F1. "
+END
+
+STRINGTABLE 
+BEGIN
+    913                     "Depois de carregares um camião com um robô e uma caixa para ele trabalhar, ele vai-se embora para construir uma casa nova. "
+    914                     "Se largares um robô ou uma equipa de robôs num camião, eles são colocados no chão da casa nova. "
+    915                     "Se largares uma caixa no camião, ela é colocada no chão da casa nova. "
+    916                     "Se largares a imagem de uma casa no camião, os pedreiros fazem uma casa igual a essa. Podes encontrar imagens de casas no caderno que está na página 2 do caderno principal. "
+    917                     "Se largares o número de uma avenida e/ou de uma rua no camião, a equipa do camião faz a casa nova o mais perto que puder desse lugar. Se não lhes deres nenhum número, eles fazem-na o mais perto possível da casa de onde saiem."
+    918                     "A morada desta casa está no caderno que da página 4 do caderno principal. Uma morada muda se largares um número em cima dela. "
+    919                     "Se largares um robô ou uma equipa de robôs num camião, os pedreiros põem-no no chão da casa nova e dão-lhe a caixa que ia no camião. "
+    920                     "Podes tirar coisas do camião à mão ou com a ajuda do Limpopó. "
+    921                     "Disse-te tudo o que sei sobre camiões. "
+    922                     "Se quiseres que repita tudo o que te disse sobre camiões, carrega duas vezes em F1 enquanto apontas para um camião."
+END
+
+STRINGTABLE 
+BEGIN
+    929                     "c 1992-2005 Ken Kahn. Todos os direitos reservados"
+    931                     "Para usar o Limpopó põe-lhe a boca por cima de alguma coisa. "
+    932                     "Exemplos"
+    933                     "... Já disse o suficiente"
+END
+
+STRINGTABLE 
+BEGIN
+    945                     "uma balança a pender para a esquerda"
+    946                     "uma balança a pender para a direita"
+    947                     "uma balança equilibrada"
+    948                     "uma balança confusa"
+    949                     "As balanças podem ser usadas para comparar coisas. "
+    950                     "Para experimentares, junta três caixas. Põe uma balança no buraco do meio."
+    951                     "larga números nas caixas ao lado da balança e vê como ela reage."
+    952                     "Também dá para comparar textos."
+    953                     "Se uma balança estiver confusa, podes mudar a maneira como ela pende carregando na barra de espaços. "
+END
+
+STRINGTABLE 
+BEGIN
+    961                     "É isto que faço para ensinar um robô."
+    962                     "Começo por lhe dar a caixa com que quero que ele trabalhe."
+    963                     "O robô vai imaginar um mundo só com essa caixa e a Engenhocas (a caixa de ferramentas amigas)."
+    964                     "Depois mostro ao robô o que ele tem de fazer. Por exemplo, mexer na caixa ou carregar um camião. "
+    965                     "Quando já lhe ensinei tudo, carrego na tecla 'Esc' e o robô volta ao mundo. Agora já pode repetir o que lhe ensinei."
+    966                     "Este robô só aceita "
+    967                     "Os robôs só aceitam caixas que coincidam com aquela em que estão a pensar. "
+    968                     "Mas são menos exigentes se usares o Limpopó para lhes limpar coisas do pensamento. "
+    969                     "As coisas em que ele pensa estão sempre dentro de uma caixa. "
+    970                     "Se no pensamento estiver algum buraco vazio, ele fica satisfeito com qualquer coisa que ponhas nesse buraco da caixa. "
+    971                     "Eu costumo testar os robôs, depois de os ensinar. "
+    972                     "Dá-lhe uma caixa de que ele goste e vê-o em acção. "
+    973                     "Se quiseres pará-lo, agarra-o e pousa-o. Para parares todos os robôs, carrega em F8. "
+    974                     "Depois de testar um robô, costumo guardá-lo no caderno. "
+    975                     "Ás vezes quero pôr vários robôs a trabalhar para mim. "
+END
+
+STRINGTABLE 
+BEGIN
+    976                     "Ficava atrapalhado se os tivesse todos, ao mesmo tempo, a andar no chão de um lado para o outro. "
+    977                     "Por isso, largo-os em camiões que os levam para casas novas. "
+    978                     "Os robôs são um bocado tolos. "
+    979                     "Só conseguem pensar numa coisa. "
+    980                     "Só conseguem aprender uma coisa. "
+    981                     "Felizmente, uma equipa deles consegue fazer quase tudo. "
+    982                     "Se eu largar um robô noutro, ele passa para trás dele. "
+    983                     "Se um robô não gostar da caixa que lhe deste, passa-a para o robô seguinte, por trás dele. "
+    984                     "Quem trabalha com a caixa é o primeiro robô da equipa a gostar dela. "
+    985                     "Depois de trabalhar, passa-a para o chefe de equipa, que é o primeiro robô da linha. Se estiver a trabalhar sozinho, volta ele próprio a trabalhar. "
+    986                     "Se fores à página 6 do caderno principal, encontras um caderno cheio de equipas de robôs que eu ensinei. "
+    987                     "Isto é tudo o que te sei dizer sobre robôs. "
+    988                     "Se quiseres que eu repita tudo o que disse sobre robôs, carrega duas vezes em F1 enquanto apontas para um robô. "
+END
+
+STRINGTABLE 
+BEGIN
+    993                     "um robô a fazer aquilo que lhe ensinaram"
+    994                     "um robô por trás de uma imagem. Está à espera que a imagem seja desvirada."
+    995                     "um robô à espera que outro acabe"
+    996                     "Ele foi ensinado a  "
+    997                     "um robô à espera que alguma coisa apareça na "
+    998                     " a caixa dele"
+    999                     "Então ele "
+    1002                    "Podia falar o dia todo dos robôs, mas já disse o suficente. "
+END
+
+STRINGTABLE 
+BEGIN
+    1009                    "Não funcionou porque "
+    1010                    "O robô parou porque "
+    1011                    "Não sei onde, mas um robô chamado"
+END
+
+STRINGTABLE 
+BEGIN
+    1025                    "Helicóptero"
+    1026                    "Pássaro\ra nascer"
+    1027                    "Pássaro\ra voar"
+    1028                    "Motor do\rcamião"
+    1029                    "Magia"
+    1030                    "Salto"
+    1031                    "Elástico"
+    1032                    "Espiral\rinício"
+    1033                    "Espiral\rfim"
+    1034                    "Pancada"
+    1035                    "Porta\ra ranger"
+    1036                    "Aspirador"
+    1037                    "Explosão"
+    1038                    "Bomba\rde Ar"
+    1039                    "Ladrar"
+END
+
+STRINGTABLE 
+BEGIN
+    1040                    "Pula\rpula"
+    1041                    "Pica-pau"
+    1042                    "Passos\rdentro"
+    1043                    "Escrever"
+    1044                    "Trânsito"
+    1045                    "Página\ra virar"
+    1047                    "Zoom"
+    1048                    "Camião"
+    1049                    "Campainha de\rbicicleta"
+    1050                    "Mola"
+    1053                    "Calcular"
+    1054                    "Muitos\rsons idiotas"
+    1055                    "Uát!"
+END
+
+STRINGTABLE 
+BEGIN
+    1056                    "Esvaziar"
+    1057                    "Porta"
+    1061                    "Passos\rrua"
+    1062                    "Flauta"
+    1063                    "Tuuu\rbaixinho"
+    1067                    "Desligar"
+    1068                    "Cuspir"
+    1069                    "Interruptor"
+    1070                    "Teletransportar"
+END
+
+STRINGTABLE 
+BEGIN
+    1072                    "Poing"
+    1083                    "não podes acrescentar imagens à parte de trás de uma imagem"
+    1084                    "por trás de uma imagens só podes pôr robôs e caixas"
+    1085                    "ele não conseguiu encontrar a ferramenta que queria"
+    1086                    "ele tentou largar uma coisa que não estava a segurar"
+    1087                    "houve alguma coisa que ele não conseguiu largar"
+END
+
+STRINGTABLE 
+BEGIN
+    1088                    "um robô sem balão de pensamento"
+    1089                    "um robô que quer "
+    1090                    "Se lhe deres uma caixa dessas ele irá "
+    1091                    "Senão, dá a caixa ao robô atrás dele na equipa. "
+    1099                    "Este número é um controlo remoto para "
+    1100                    "O número é uma cor numerada de 0 a 255. "
+    1101                    "O número controla a imagem que é visualizada. "
+    1102                    "O número é"
+    1103                    "Se mudares o número, "
+END
+
+STRINGTABLE 
+BEGIN
+    1104                    " também muda. "
+    1105                    "Podes mudar os controlos remotos tal como os números normais. "
+    1106                    "Este número é um sensor para "
+    1107                    "Não podes mudá-los como os números normais. "
+    1108                    "Quando quero que ele pare, largo-o num 0. "
+    1109                    "Este filme mostra se "
+    1110                    " está a colidir com alguma coisa. "
+    1111                    "Esta é uma imagem de "
+    1112                    " está a colidir. Fica preto se não existir nenhuma colisão. "
+    1113                    "Desde que "
+    1114                    " está virado, vais ter de desvirar para experimentar isto. "
+END
+
+STRINGTABLE 
+BEGIN
+    1131                    "o que ele copiou agora"
+    1133                    "o que ele está a segurar"
+END
+
+STRINGTABLE 
+BEGIN
+    1147                    "a distância da esquerda"
+    1148                    "a distância de baixo"
+    1149                    "a velocidade horizontal"
+    1150                    "a velocidade vertical"
+    1151                    "a largura"
+END
+
+STRINGTABLE 
+BEGIN
+    1152                    "a altura"
+    1153                    "que imagem ou cor é mostrada"
+    1154                    "o sensor que mostra uma imagem simples de uma colisão ou não-colisão. Podes transformar uma colisão numa não-colisão apontando para o sensor e carregando na barra de espaços."
+    1155                    "que mostra o que está a colidir com esta imagem"
+    1156                    "a resposta à pergunta ""A minha animação parou?"""
+    1157                    "a resposta à pergunta ""Estou a ser agarrado?"""
+    1158                    "a resposta à pergunta ""Estou a abanar porque uma mão está a apontar para mim?"""
+    1159                    "a resposta à pergunta ""Acabei de cair?"""
+    1160                    "o sensor de colisões horizontais"
+    1161                    "o sensor de colisões verticais"
+    1162                    "o aspecto"
+    1163                    "a visibilidade"
+    1164                    "resposta à pergunta ""Qual a imagem que está presa por cima de mim?"""
+    1165                    "a resposta à pergunta ""Qual a imagem onde estou preso em cima, e que imagem presa é aquela , e etc?"""
+END
+
+STRINGTABLE 
+BEGIN
+    1168                    "se o botão esquerdo do rato for clicado"
+    1169                    "se o botão central do rato for clicado"
+    1170                    "se o botão direito do rato for clicado"
+    1171                    "se o botão esquerdo do rato está carregado"
+    1172                    "se o botão central do rato está carregado"
+    1173                    "se o botão direito do rato está carregado"
+    1174                    "a tecla carregada"
+    1175                    "a última tecla carregada"
+    1176                    "se a tecla Shift está carregada"
+    1177                    "se a tecla Ctrl está carregada"
+    1178                    "se a tua mão está escondida"
+    1179                    "a memória para enviar ou obter coisas de outros programas"
+    1180                    "saber em que avenida (sentido norte/sul) está esta casa"
+    1181                    "saber em que rua (sentido este/oeste) está esta casa"
+    1182                    "ligar e desligar os sons"
+    1183                    "o tamanho das letras no meu balão de fala (100 é o normal)"
+END
+
+STRINGTABLE 
+BEGIN
+    1184                    "controlar quanto tempo falo antes de mudar o que está no meu balão de fala (100 é o normal)"
+    1185                    "como estou a falar"
+    1186                    "estás de chapéu, com cabelo comprido ou careca. "
+    1187                    "o tamanho da janela"
+    1188                    "a velocidade a que as coisas acontecem no ToonTalk (100 é o normal)"
+    1189                    "o tamanho da cidade"
+    1190                    "o número de milisegundos que, se possível, cada fase de animação deve demorar"
+    1191                    "se o botão central e o direito do rato têm significados especiais quando estás no chão"
+    1192                    "a que porta série está ligado um controlador"
+    1193                    "o tipo de letra usada nos meus balões de fala"
+    1194                    "um lugar onde podes largar o nome de um ficheiro de imagem ou um URL, para obter um objecto do ToonTalk ou uma imagem"
+    1195                    "um local para largar um nome de um ficheiro de som para ouvi-lo"
+    1197                    "Eu falo, mostro os balões ou faço ambas as coisas"
+    1198                    "a velocidade horizontal do rato"
+    1199                    "a velocidade horizontal do rato"
+END
+
+STRINGTABLE 
+BEGIN
+    1200                    "os milésimos de segundo desde a última fase"
+    1201                    "um número ao calha entre 0 e 1000"
+    1202                    "um lugar para largar texto para a MCI"
+    1203                    "um lugar para largar texto para o ouvires"
+    1204                    "pôr e tirar decoração da parede"
+    1205                    "pôr e tirar decoração da fachada da casa"
+    1206                    "pôr e tirar decoração do telhado"
+    1207                    "que língua o ToonTalk está a usar"
+    1211                    "quanto é que um joystick se move da esquerda para a direita"
+    1212                    "quanto é que um joystick se move para cima ou para baixo"
+    1213                    "quanto é que um joystick se move para a frente ou para trás (geralmente é o controlo de velocidade) ou zero se não usa isto"
+    1214                    "quanto é que um joystick roda à esquerda/direita, ou zero se não usa a rotação"
+    1215                    "quanto é que um joystick roda para cima/baixo, ou zero se não usa a rotação"
+END
+
+STRINGTABLE 
+BEGIN
+    1216                    "quanto é que um joystick rodado para frente/trás, ou zero se não sente a rotação"
+    1217                    "a resposta à pergunta ""Foi o botão número"
+    1218                    "clicado agora?"""
+    1219                    "a resposta à pergunta ""O botão número"
+    1220                    "pressionado?"""
+    1221                    "do joystick número"
+END
+
+STRINGTABLE 
+BEGIN
+    1233                    "Esquerda"
+    1234                    "Baixo"
+    1235                    "Velocidade H"
+    1236                    "Velocidade V"
+    1237                    "Largura"
+    1238                    "Altura"
+    1239                    "Imagem n.º"
+    1240                    "A colidir?"
+    1241                    "Em quem?"
+    1242                    "Terminou?"
+    1243                    "Agarrada?"
+    1244                    "Seleccionada?"
+    1245                    "Largada?"
+    1246                    "Colisão horizontal?"
+    1247                    "Colisão vertical?"
+END
+
+STRINGTABLE 
+BEGIN
+    1248                    "Aparência"
+    1249                    "Visível?"
+    1250                    "Peças"
+    1251                    "Contentores"
+    1254                    "Esquerdo clicado"
+    1255                    "Meio clicado"
+    1256                    "Direito clicado"
+    1257                    "Esquerdo carregado"
+    1258                    "Meio carregado"
+    1259                    "Direito carregado"
+    1260                    "Tecla"
+    1261                    "Última tecla"
+    1262                    "Shift carregado"
+    1263                    "Ctrl carregado"
+END
+
+STRINGTABLE 
+BEGIN
+    1264                    "Mão?"
+    1265                    "Área de transferência"
+    1266                    "Avenida"
+    1267                    "Rua"
+    1268                    "Som?"
+    1269                    "Tamanho das letras"
+    1270                    "Velocidade da fala"
+    1271                    "Fala do ET"
+    1272                    "A tua cabeça"
+    1273                    "Tamanho janela"
+    1274                    "Velocidade ToonTalk"
+    1275                    "Tamanho cidade"
+    1276                    "Duração da fase"
+    1277                    "Botões do rato"
+    1278                    "Porta série"
+    1279                    "ET fonte"
+END
+
+STRINGTABLE 
+BEGIN
+    1280                    "Objecto em"
+    1281                    "Ficheiro de som"
+    1283                    "ET fala"
+    1284                    "Rato X"
+    1285                    "Rato Y"
+    1286                    "Cronómetro"
+    1287                    "Aleatório"
+    1288                    "MCI"
+    1289                    "Falar"
+    1290                    "Quarto"
+    1291                    "Casa"
+    1292                    "Telhado"
+    1293                    "Língua"
+END
+
+STRINGTABLE 
+BEGIN
+    1297                    "Velocidade X"
+    1298                    "Velocidade Y"
+    1299                    "Velocidade Z"
+    1300                    "Eixo X"
+    1301                    "Eixo Y"
+    1302                    "Eixo Z"
+END
+
+STRINGTABLE 
+BEGIN
+    1351                    "um ninho vazio "
+    1352                    "um ninho com "
+    1353                    "e"
+    1354                    "Atenção: um pássaro tentou tirar uma pilha de um ninho vazio. "
+    1355                    "um ninho com um ovo"
+    1356                    "a pilha do ninho não aceita nada"
+    1357                    "o ninho não aceita nada"
+    1358                    "o pássaro está demasiado ocupado para receber alguma coisa"
+    1359                    "o pássaro só aceita coisas rectangulares"
+END
+
+STRINGTABLE 
+BEGIN
+    1361                    "o ninho do pássaro está dentro de um aspirador"
+    1362                    "o ninho do pássaro está dentro de um balão de pensamento"
+    1363                    "Um pássaro quer voar para o ninho dele, mas não consegue encontrá-lo. "
+    1364                    "Um pássaro tentou voltar para o buraco de uma caixa mas ele não estava vazio. "
+    1365                    "a caixa não aceitou o que largaste nela "
+    1366                    "Foi ignorada a tentativa de largar uma caixa dentro de outra, porque está uma caixa dentro de outra caixa, esta dentro de outra, e por aí adiante. "
+    1367                    "só uma caixa vazia é que pode aceitar números ou texto"
+    1368                    "Ena! Não sei como, tentaram pôr uma caixa dentro dela própria. "
+    1369                    "o robô pensou que tinha uma caixa para juntar a outra, mas tinha outra coisa"
+    1370                    "Se largares um número ou texto numa caixa vazia, a caixa expande o texto de maneira a ficar uma letra em cada buraco. "
+    1371                    "Podes usar o Limpopó, o aspirador, para limpar uma caixa. "
+    1372                    "não podes juntar a uma etiqueta da caixa"
+    1373                    "algo de errado com o ToonTalk. está a tentar descobrir o tamanho de uma coisa que está num buraco vazio de uma caixa"
+    1374                    "algo de errado. O ToonTalk estava à procura de um buraco que uma caixa não tem. "
+    1375                    "algo de errado com o ToonTalk, ao tentar tirar de uma caixa o que não está nela "
+END
+
+STRINGTABLE 
+BEGIN
+    1376                    "A etiqueta de uma caixa num caderno não pode ter mais de 255 caracteres. "
+    1377                    "Houve algo de errado com um ficheiro que descreve uma caixa. "
+    1378                    "Houve um problema com o ToonTalk. Tentou tirar do fundo algo que não faz parte dele. "
+    1380                    "Houve um problema com o ToonTalk ao tentar tirar o último bocado de uma coisa que não tinha mais bocados. "
+    1381                    "bombas não aceitam nada"
+    1383                    "O ToonTalk teve problemas a ler o ficheiro de um caderno. Um robô do caderno esqueceu-se do que aprendeu. "
+    1384                    "... Oh! Desculpa mas não consigo descobrir o que este robô faz. "
+    1385                    "não faz nada"
+    1386                    "usa o Limpopó para limpar"
+    1387                    "usa a varinha mágica, enquanto carregas na tecla Ctrl"
+    1388                    " enquanto apontas para"
+    1389                    " depois de moveres para"
+    1390                    " à etiqueta da"
+END
+
+STRINGTABLE 
+BEGIN
+    1398                    "o que estiver na"
+    1399                    "o que estiver no"
+    1400                    "página"
+    1402                    "Um robô não conseguiu encontrar o que ia apanhar. "
+    1403                    "Um robô não conseguiu encontrar o ninho que ia apanhar. "
+    1404                    "Um robô não conseguiu encontrar o lugar onde ia fazer alguma coisa. "
+    1405                    "Atenção: um robô foi ensinado a dar uma coisa a um pássaro. Ele não está onde o robô estava à espera dele. Mesmo assim, vai tentar continuar. "
+    1406                    "Um robô estava a contar com uma caixa e encontrou outra coisa. "
+    1407                    "O ToonTalk está confundido! Não conseguiu encontrar uma coisa. Desculpa. "
+END
+
+STRINGTABLE 
+BEGIN
+    1410                    "Um robô ia usar uma coisa, mas foi aspirada!"
+    1411                    "Um robô ia pôr uma coisa noutra, mas foi aspirada. "
+    1412                    "Um robô ia pôr uma coisa noutra, que já não se encontrava lá. "
+    1413                    "Atenção: um robô estava à espera de encontrar uma coisa num caderno, mas não encontrou. "
+    1414                    "Atenção: um robô estava à espera de encontrar uma caixa ou um ninho cheio, mas não encontrou. "
+    1415                    "Um robô não consegue lembrar-se de mais de 254 buracos. Desculpa. "
+    1416                    "bloco de texto vazio"
+    1417                    "Agora estás no balão de pensamento do robô. "
+    1418                    "Podes ensinar o robô mostrando-lhe o que deve fazer. "
+    1419                    "Para testar o robô, dá-lhe uma caixa igual à do balão de pensamento. "
+    1420                    "um botão do rato enquanto carregas na tecla Shift"
+    1421                    "qualquer botão do rato"
+    1422                    "o botão esquerdo do rato"
+    1423                    "o botão do meio do rato"
+END
+
+STRINGTABLE 
+BEGIN
+    1424                    "o botão direito do rato enquanto carregas na tecla Ctrl"
+    1425                    "qualquer botão do rato enquanto carregas na tecla Ctrl"
+    1426                    "Conseguiste destruir as casas todas, por isso vou construir mais. "
+    1427                    "Algo de estranho se passou com o ToonTalk. Podem ter desaparecido casas. "
+    1428                    "Houve um problema na linha de comandos. Era esperado um número par de elementos, não "
+    1429                    " elementos. A linha de comando foi ignorada. "
+    1430                    "A linha de comando tem -h "
+    1431                    " e só pode ter -h 0 (careca), -h 1 (com cabelo), ou -h 2 (com chapéu). "
+    1432                    " é um número errado de botões do rato. 1, 2, ou 3 estaria correcto. "
+    1433                    "A linha de comandos tem uma opção desconhecida: "
+    1434                    "Não sei o teu nome. Por isso, vou-te chamar"
+    1435                    "Queres continuar, apesar destes problemas todos?"
+    1436                    "O ToonTalk está a ser executado há tanto tempo que teve de reiniciar o relógio interno. "
+    1437                    "Desculpa, fiquei sem memória. Tens de recomeçar. "
+    1438                    "Começa a haver pouca memória. Está-se a reciclar 20% da memória para acelerar as coisas. "
+    1439                    "Começa a haver pouca memória. Está-se a reciclar a última parte da memória para acelerar as coisas. "
+END
+
+STRINGTABLE 
+BEGIN
+    1440                    "Se alguma vez quiseres parar os robôs todos, carrega em F8 para desligar a luz. "
+    1441                    "Carrega outra vez em F8 para os voltar a ligar. "
+    1442                    "Podes fazer a mesma coisa com as imagens animadas e os filmes. "
+    1443                    "Oh, desculpa. "
+    1444                    "Olha, desculpa estar a interromper-te. "
+    1445                    "Oh, atenção. "
+    1446                    "Um robô que está nas costas de uma imagem, chamado"
+    1447                    "Um robô que está no chão, chamado"
+    1448                    "O Marretas não veio porque "
+    1449                    "o camião não saiu para construir uma casa porque "
+    1450                    "a pilha de números não aceita mais nada"
+    1451                    "o número não aceitou uma coisa"
+    1452                    "o número debaixo da caixa é negativo"
+    1453                    "o número debaixo da caixa é maior que o número de buracos"
+    1454                    "só podes largar números em números, em blocos de texto, em imagens ou em cadernos"
+    1455                    "o número de cima está limpo"
+END
+
+STRINGTABLE 
+BEGIN
+    1456                    "não podes dividir por zero"
+    1457                    "que se pode juntar a"
+    1458                    "."
+    1459                    "enquanto carregas na tecla Shift,"
+    1460                    "Se largares uma coisa num número limpo, ela é convertido num número (se for possível). "
+    1461                    "Se escreveres '=' e largares isto noutro número, ele fica"
+    1462                    "Podes usar o aspirador Limpopó para limpar um número. "
+    1463                    "Se carregares em"
+    1464                    "enquanto seguras num número, ele vira-se. "
+    1465                    "Carrega outra vez e ele desvira-se. "
+    1466                    "O sensor tinha problemas a fazer cálculos aritméticos porque "
+    1467                    "O número que causava problemas foi removido. "
+    1468                    "menos"
+    1469                    "um sensor"
+    1470                    "um controlo remoto"
+    1471                    "para"
+END
+
+STRINGTABLE 
+BEGIN
+    1472                    "e foi juntado a "
+    1473                    "sensor está debaixo"
+    1474                    "não podes mudar o valor de um sensor"
+    1475                    "Sem Nome"
+    1476                    "e guardar tudo com esse nome. "
+    1477                    "Careca"
+    1478                    "Cabelo comprido"
+    1479                    "Chapéu"
+    1480                    "Sem atalhos\rpara rato"
+    1481                    "Atalho para\rbotão direito"
+    1482                    "Atalho para\rbotão direito\re do meio"
+    1483                    "Ecrã inteiro"
+    1484                    "está a colidir com o lado de uma coisa. "
+    1485                    "está a colidir com o cimo ou fundo de uma coisa. "
+    1486                    "Se mudares o aspecto desta imagem, então "
+    1487                    "muda da mesma maneira. "
+END
+
+STRINGTABLE 
+BEGIN
+    1488                    "Serve para controlar se"
+    1489                    "é visível, parcialmente visível ou invisível. "
+    1490                    "Com a barra de espaços podes alternar entre os vários modos. "
+    1491                    "Indica se a animação da "
+    1492                    "já terminou. "
+    1493                    "Mostra se a mão está visível. "
+    1494                    "para ligá-lo ou desligá-lo. Carrega na barra de espaços enquanto apontas para ele. "
+    1495                    "Isto mostra se o ToonTalk executa os efeitos sonoros. "
+    1496                    "Isto muda o que o botão do meio e da direita do rato fazem quando estás no chão. "
+    1497                    "Podes fazer com que o botão direito do rato seja um atalho para Shift + clique. "
+    1498                    "e podes fazer com que o botão do meio do rato seja um atalho para Ctrl + clique. "
+    1499                    "Este bloco de texto é"
+    1500                    "Isto é"
+    1501                    "Podes transformar uma colisão numa não-colisão, apontado para o sensor e carregando na barra de espaços. "
+    1502                    "Este caderno está cheio de sons"
+    1503                    "Este caderno está cheio de opções do sistema"
+END
+
+STRINGTABLE 
+BEGIN
+    1504                    "contém"
+    1505                    "O caderno está no aspirador Limpopó. O Limpopó pode cuspi-lo. "
+    1506                    "Atenção: ficheiro"
+    1507                    "não pode ser aberto. "
+    1508                    "Desculpa, mas não podes acrescentar nada a um caderno, quando estás dentro de um balão de pensamento. "
+    1509                    "Como és um utilizador temporário, não podes guardar nada no caderno principal. "
+    1510                    "Desculpa, mas por agora, só podes acrescentar cadernos ao caderno da caixa de ferramentas. "
+    1511                    "a página do caderno não aceitou uma coisa"
+    1512                    "um caderno não aceitou uma coisa"
+    1513                    "Sons"
+    1514                    "Opções"
+    1515                    "Saída"
+    1516                    "Entrada"
+    1517                    "Conta"
+    1518                    "Som"
+    1519                    "Desculpa, mas acho que o ficheiro "
+END
+
+STRINGTABLE 
+BEGIN
+    1520                    "não é o ficheiro de um caderno. "
+    1521                    "Desculpa, mas estás a tentar carregar um caderno criado numa versão do ToonTalk mais recente do que esta!"
+    1522                    "Esta versão não consegue ler"
+    1523                    ".  Talvez devesses arranjar a nova versão. "
+    1524                    "O ToonTalk está baralhado. Desculpa. "
+    1525                    "Atenção: não consegui reconhecer uma coisa num ficheiro. "
+    1526                    "Há algo de errado com o ToonTalk. Ou então o ficheiro que contém uma imagem está danificado. "
+    1527                    "um controlo remoto para a aparência de outro "
+    1528                    "que é invisível"
+    1529                    "que é parcialmente visível"
+    1530                    "é apenas um caderno"
+    1531                    "estão"
+    1532                    "com"
+    1533                    "podes mudar o aspecto de uma imagem limpa largando outra imagem em cima dela. "
+    1534                    "Ou um número ou bloco de texto. "
+    1535                    "O aspirador Limpopó pode limpar uma imagem. "
+END
+
+STRINGTABLE 
+BEGIN
+    1536                    " Aparece um caderno cheio de controlos remotos para a imagem. "
+    1537                    "não podes virar controlos remotos deste tipo"
+    1538                    "Foi ignorado o largar da imagem visto existirem demasiadas imagens com imagens. "
+    1539                    "balanças não podem ser acrescentadas a uma imagem"
+    1540                    "Uma imagem não pode ser acrescentada à parte de trás de uma imagem"
+    1541                    "a imagem não aceita uma coisa"
+    1542                    "É assim que deves utilizar as balanças para comparar texto. "
+    1543                    "primeiro junta três caixas. Coloca algumas palavras no primeiro buraco e no terceiro. "
+    1544                    "e uma balança no buraco do meio. "
+    1545                    "para comparares números utilizando as balanças deves. "
+    1546                    "primeiro junta três caixas. Depois pões os números no primeiro buraco e no terceiro. "
+    1547                    "o controlo remoto para o aspecto de uma coisa não aceita esse elemento"
+    1548                    "a imagem a ser largada está à espera do Marretas"
+    1549                    "a imagem de baixo já está à espera do Marretas"
+    1550                    "a imagem a ser largada é um controlo remoto"
+    1551                    "Desculpa, isto só funcionará da próxima vez que usares o ToonTalk. "
+END
+
+STRINGTABLE 
+BEGIN
+    1552                    "O ToonTalk está confuso e perdeu o rasto do que o programador está a fazer. "
+    1553                    "Acabaste de desligar a luz e paraste todos os robots. Carrega em F8 para voltar a ligá-los. "
+    1554                    "Agora, a tua mão está escondida. Para voltares a vê-la carrega em F9. "
+    1555                    "Só é capaz de abrir as portas série 1 e 2. "
+    1556                    "Problemas a abrir a porta série. "
+    1557                    "Problemas na porta série. "
+    1558                    "Não consegui encontrar um controlador ligado à porta série do computador. "
+    1559                    "Problemas a enviar coisas para a porta série. "
+    1561                    "Um robô parou porque a luz foi desligada. F8 volta a ligar a luz, para ele voltar a trabalhar. "
+    1562                    "um buraco "
+    1563                    "E existem "
+    1564                    "robôs à frente dele"
+    1565                    "E existe um robot à frente dele "
+    1566                    "robôs atrás dele "
+    1567                    "e existe um robô atrás dele "
+END
+
+STRINGTABLE 
+BEGIN
+    1568                    "um robô perdeu as coisas"
+    1569                    "Há algo de errado com o ficheiro que guarda o robô num caderno. O robô está perdido. Desculpa. "
+    1570                    "Houve problemas ao carregar um robô de um caderno. "
+    1571                    "Desculpa, mas estou a ter problemas para descobrir o que estes robôs fazem. "
+    1572                    "Hum, desculpa mas o robô chamado"
+    1573                    "Desculpa, mas não podes treinar robôs para dar caixas a outros robôs. Põe antes o robô e a caixa num camião. "
+    1574                    "Desculpa, mas os robôs não podem ensinar outros robôs. "
+    1575                    "Ah, desculpa mas os robôs são muito arrumados. Eles só aceitam caixas. "
+    1576                    "Felizmente podes pôr coisas nas caixas. "
+    1577                    "O ToonTalk não consegue manter o rasto de tantas coisas no ecrã e perdeu o rasto de algumas. "
+    1578                    "O ToonTalk mostra algumas coisas de que perdeu o rasto. "
+    1579                    "Bolas! O ToonTalk está estragado. Está a tentar destruir algo duas vezes. "
+    1580                    "Há problemas com o ToonTalk. Está a tentar usar alguma coisa depois de a destruir. "
+    1581                    " Há problemas com o ToonTalk. Está a tentar usar alguma coisa que ainda está no chão. "
+    1582                    "O ToonTalk está com problemas. Tentou destruir uma parte de uma coisa. "
+    1583                    "desculpa, tens um ficheiro de dados estragado ou desactualizado. "
+END
+
+STRINGTABLE 
+BEGIN
+    1584                    "O ToonTalk ficou confuso e tentou apanhar um ciclo de animação que não existe. "
+    1585                    "um robô chamado"
+    1589                    "O ToonTalk está confuso e tentou libertar alguma memória cache que não devia. "
+    1590                    "O ToonTalk está confuso porque guardou uma coisa desnecessária. "
+    1591                    "Bolas, o ToonTalk está estragado e quer destruir uma imagem duas vezes. "
+    1592                    "Desculpa, não consigo encontrar o ficheiro "
+    1593                    "Desculpa, mas o ficheiro"
+    1594                    "está estragado. Precisas de reinstalar o ToonTalk. "
+    1595                    "Desculpa, não consigo encontrar o ficheiro RESIND. "
+    1596                    "Desculpa, mas o ficheiro RESIND está estragado. Por favor reinstala o ToonTalk. "
+    1597                    "O ToonTalk está com problemas, porque não há memória cache suficiente para o próximo som. "
+    1598                    "O ToonTalk está baralhado: pensou que uma coisa tinha peças e depois não as conseguiu encontrar. "
+    1599                    "Alguma coisa pode ficar com o tamanho errado e no sítio errado. Desculpa "
+END
+
+STRINGTABLE 
+BEGIN
+    1600                    "Podes converter uma coisa em texto largando-a num bloco de texto limpo. "
+    1601                    "A tecla de apagar elimina linhas vazias. "
+    1604                    "Os sons do ToonTalk podem ser encontrados na página 8 do caderno principal. Na página 4 há sensores para fazeres os teus próprios sons. "
+    1605                    "o bloco de texto limpo não aceitou uma coisa"
+    1606                    "o elemento do cimo está limpo"
+    1607                    "a texto só podes acrescentar mais texto ou números "
+    1608                    "o texto está muito comprido "
+    1609                    "ele"
+    1610                    "Podes tocar o som carregando "
+    1612                    "depois"
+    1614                    "A Artolas está dentro do aspirador Limpopó. O Limpopó pode cuspi-la. "
+    1615                    "algumas coisas não podem ser limpas"
+END
+
+STRINGTABLE 
+BEGIN
+    1616                    "Se quiseres que o Limpopó cuspa o que aspirou, carrega em 'C'. "
+    1617                    "O Limpopó está dentro de outro aspirador. Esse aspirador pode cuspi-lo. "
+    1618                    "A varinha mágica está dentro do aspirador Limpopó. O Limpopó pode cuspi-la. "
+    1620                    "então copia e restaura as coisas limpas como estavam antes. "
+    1621                    "A Engenhocas não aceitou uma coisa"
+    1622                    "o camião já está carregado de robôs"
+    1623                    "o camião já está carregado com uma caixa"
+    1624                    "num camião só podes pôr uma caixa, robôs, uma morada, um caderno, um bloco de texto e uma imagem da casa"
+    1625                    "foi largada uma coisa no camião que não era uma caixa, nem robôs, nem uma morada, nem um caderno, nem um bloco de texto, nem uma imagem da casa"
+    1626                    "a cidade está cheia de casas"
+    1627                    "Este modeo de ecrã não é suportado. Talvez a entrada -v n esteja errada. "
+    1628                    "Houve alguns problemas ao passar para o ecrã inteiro. Desculpa. "
+    1629                    "Atenção, há problemas com o modo de ecrã inteiro. "
+    1630                    "ToonTalk"
+END
+
+STRINGTABLE 
+BEGIN
+    1632                    "O ToonTalk deve ficar muito melhor no ecrã inteiro ou se mudares o Windows para 256 cores. "
+    1635                    "Algo correu mal ao tentar criar um caixa de diálogo para perguntar o teu nome. "
+    1636                    "Podes alterar muitas coisas no ToonTalk. "
+    1637                    "Por exemplo, o teu aspecto ou a velocidade a que falo! "
+    1638                    "Para mudares as coisas, experimenta o caderno de opções, na página 10 do caderno principal. "
+    1639                    "Desculpa, mas o modo de alta resolução do ToonTalk só está disponível na versão de 32 bits. "
+    1640                    "Desculpa, mas esse modo de ecrã "
+    1641                    "não está disponível. Vai ser utilizado o modo padrão. "
+    1642                    "Mete agora o CD-ROM do ToonTalk, para poder continuar. "
+    1643                    " Mete agora o CD-ROM do ToonTalk, para ouvir a narração deste exemplo. "
+    1644                    "o que estiver no cimo"
+    1646                    "Este robô só trabalha uma vez. ele vair parar porque o ensinaste a pôr a caixa num camião. depois do camião se ir embora, ele nunca mais a vai ver."
+    1647                    "a balança não aceita que nada lhe seja largado em cima"
+END
+
+STRINGTABLE 
+BEGIN
+    1648                    "   Este é o resultado de ""colar"" um objecto do ToonTalk. Podes incluir "
+    1649                    "isto em ficheiros, num e-mail ou noutra coisa qualquer. Para descodificares usa qualquer programa"
+    1650                    "que consiga copiar isto para a área de transferência do windows. Por exemplo, podes usar"
+    1651                    "O seguinte é"
+    1652                    "   O que se segue é um código especial que foi feito pelo "
+    1653                    "Versão Portuguesa de demonstração, 1.04"
+    1654                    "8!@%!(%"
+    1655                    "Isto é o fim do código para o objecto do ToonTalk. "
+    1656                    "Está na altura de arranjares uma versão nova do ToonTalk (visita www.ToonTalk.com). "
+    1657                    " para mudar"
+    1658                    "Podes partir uma caixa em 2 bocados, largando-a num número. Um bocado fica com o número de buracos do número, o outro bocado fica com o que sobrar. "
+    1659                    "por exemplo"
+    1660                    "que anteriormente era"
+    1661                    "Um robô pensou que encontrava outro robô no camião, mas não estava lá nenhum. "
+END
+
+STRINGTABLE 
+BEGIN
+    1670                    "o robô no camião"
+    1671                    "a caixa no camião"
+    1672                    "a imagem de uma casa no camião"
+    1673                    "o número da avenida no camião"
+    1674                    "o número da rua no camião"
+    1675                    "uma coisa no camião"
+    1679                    "Este sensor mostra a avenida (norte - sul) onde está esta casa. "
+END
+
+STRINGTABLE 
+BEGIN
+    1680                    "Podes mudá-la largando números sobre ela. "
+    1681                    "Se largares um destes sensores num camião, os trabalhadores vão construir uma casa o mais próximo possível desta avenida. "
+    1682                    "Este sensor mostra a rua (este - oeste) onde está esta casa. "
+    1683                    " Se largares um destes sensores num camião, os trabalhadores vão construir uma casa o mais próximo possível desta rua. "
+    1684                    "Podes descobrir quantos buracos tem uma caixa, largando-a num número limpo. Podes limpar um número com o Limpopó. "
+    1687                    "Os robôs só trabalham com poucas coisas. Este está confuso pois tem coisas a mais. "
+    1688                    "esquerda"
+    1689                    "direita"
+    1690                    "não encontrei a página no caderno "
+    1691                    "Desculpa. Ocorreu um erro com a MCI (Windows Media Control Interface). "
+    1692                    "não consegui encontrar o lugar onde ia largar uma coisa"
+    1693                    "Impossível abrir o ficheiro de registo"
+    1694                    "dentro"
+    1695                    "Atenção"
+END
+
+STRINGTABLE 
+BEGIN
+    1696                    "bytes"
+    1699                    "Alguma coisa foi destruída duas vezes."
+    1700                    "Ficheiro de animações inadequado: "
+    1701                    "Versão inadequada do ficheiro de animações:"
+    1702                    " versão "
+    1703                    "Número de imagens inválido em  "
+    1704                    "Final inesperado no ficheiro de animações: "
+    1705                    "Os ficheiros de animações não suportam o formato: "
+    1706                    "O índice de fundo é muito grande "
+    1710                    "uma acção foi interrompida porque "
+    1711                    "o ToonTalk ficou confuso, ao tentar fazer com que uma coisa pertencesse a duas coisas."
+END
+
+STRINGTABLE 
+BEGIN
+    1712                    "Atenção: houve uma coisa que passou a pertencer a outra, enquanto ainda estava no chão. O problema foi resolvido."
+    1713                    "O ToonTalk está confundido!  Pensava que havia uma coisa que fazia parte de outra, mas afinal não fazia."
+    1714                    " estava em cache e retirada de  "
+    1715                    " que estava em cache, mas sem seguimento."
+    1716                    "Atenção: alguma coisa recebeu um fundo novo, sem chegar a sair do fundo onde estava."
+    1717                    "Desculpa, mas o ToonTalk tem uma peça que não sabe de onde é. "
+    1726                    "Não se devia estar a saltar tantas imagens. "
+END
+
+STRINGTABLE 
+BEGIN
+    1738                    "O ToonTalk está com problemas, à procura de um espaço livre na cache."
+    1739                    "Não conseguiu libertar parte da cache, por isso não inclui na cache a imagem n.º"
+    1740                    "Entrada na cache com um mau candidato: "
+    1741                    " não serve para pôr na cache, porque a animação está a correr"
+    1742                    "Ficheiro estragado: código de estado de resind.dat = "
+    1743                    "Número incorrecto de pincéis no ficheiro resind"
+END
+
+STRINGTABLE 
+BEGIN
+    1745                    "INTEGER"
+    1746                    "EXPANDER"
+    1747                    "VACUUM"
+    1748                    "COPIER"
+    1749                    "THOUGHT_BUBBLE"
+    1750                    "ROBOT"
+    1751                    "NEST"
+    1752                    "BIRD"
+    1753                    "TRUCK"
+    1754                    "PROGRAM_PAD"
+    1755                    "CUBBY"
+    1756                    "TOOLBOX"
+    1757                    "PICTURE"
+    1758                    "BOMB"
+    1759                    "TEXT"
+END
+
+STRINGTABLE 
+BEGIN
+    1760                    "REMOTE_PICTURE"
+    1761                    "LAST_MANIPULABLE"
+    1762                    "PICTURE_INSIDES"
+    1763                    "PROGRAMMER"
+    1764                    "DOOR"
+    1765                    "OPEN_DOOR"
+    1766                    "HOUSE_ABOVE"
+    1767                    "HOUSE"
+    1768                    "HELICOPTER"
+    1769                    "ROBOT_IN_TRAINING"
+    1770                    "PROGRAMMER_ARM"
+    1771                    "MOUSE_WITH_HAMMER"
+    1772                    "TALK_BALLOON"
+    1773                    "MARTIAN"
+    1774                    "BLANK_INTEGER"
+    1775                    "ERROR_INTEGER"
+END
+
+STRINGTABLE 
+BEGIN
+    1776                    "BLANK_CUBBY"
+    1777                    "LABELED_CUBBY"
+    1778                    "BLANK_PICTURE"
+    1779                    "BLANK_TEXT"
+    1780                    "PICTURE_WITH_INSIDES"
+    1781                    "REMOTE_INTEGER"
+    1782                    "GLOBAL_REMOTE_INTEGER"
+    1783                    "PICTURE_SCALE"
+    1784                    "REMOTE_APPEARANCE"
+    1785                    "PICTURE_WITH_INDIRECTION"
+    1786                    "USER_PICTURE"
+    1787                    "WHOLE_FLOOR"
+    1788                    "WHOLE_CITY"
+    1789                    "ROBOT_WITH_TOOL"
+    1790                    "ROBOT_WITH_TRAINING_COUNTER"
+    1791                    "TOOL_BUTTON"
+END
+
+STRINGTABLE 
+BEGIN
+    1792                    "WHOLE_HOUSE"
+    1793                    "VARIABLE_WIDTH_TEXT"
+    1794                    "SOUND"
+    1795                    "REMOTE_TEXT_PICTURE"
+    1796                    "BLANK_SOUND"
+    1797                    "GLOBAL_USER_REMOTE"
+    1798                    "USER_SOUND"
+    1799                    "SPEECH_SOUND"
+    1800                    "MCI_SOUND"
+    1801                    "BUILT_IN_SOUND"
+    1802                    "BLANK_USER_SOUND"
+    1803                    "BLANK_SPEECH_SOUND"
+    1804                    "BLANK_MCI_SOUND"
+    1805                    "BLANK_BUILT_IN_SOUND"
+    1806                    "BLANK_USER_PICTURE"
+    1807                    "GLOBAL_JOYSTICK0_REMOTE_INTEGER"
+END
+
+STRINGTABLE 
+BEGIN
+    1808                    "GLOBAL_JOYSTICK1_REMOTE_INTEGER"
+    1809                    "GLOBAL_JOYSTICK2_REMOTE_INTEGER"
+    1810                    "GLOBAL_JOYSTICK3_REMOTE_INTEGER"
+    1811                    "GLOBAL_JOYSTICK4_REMOTE_INTEGER"
+    1812                    "GLOBAL_JOYSTICK5_REMOTE_INTEGER"
+    1813                    "GLOBAL_JOYSTICK6_REMOTE_INTEGER"
+    1814                    "GLOBAL_JOYSTICK7_REMOTE_INTEGER"
+    1815                    "GLOBAL_JOYSTICK8_REMOTE_INTEGER"
+    1816                    "GLOBAL_JOYSTICK9_REMOTE_INTEGER"
+    1817                    "GLOBAL_JOYSTICK10_REMOTE_INTEGER"
+    1818                    "GLOBAL_JOYSTICK11_REMOTE_INTEGER"
+    1819                    "GLOBAL_JOYSTICK12_REMOTE_INTEGER"
+    1820                    "GLOBAL_JOYSTICK13_REMOTE_INTEGER"
+    1821                    "GLOBAL_JOYSTICK14_REMOTE_INTEGER"
+    1822                    "GLOBAL_JOYSTICK15_REMOTE_INTEGER"
+    1823                    "GLOBAL_JOYSTICK16_REMOTE_INTEGER"
+END
+
+STRINGTABLE 
+BEGIN
+    1824                    "GLOBAL_JOYSTICK17_REMOTE_INTEGER"
+    1825                    "GLOBAL_JOYSTICK18_REMOTE_INTEGER"
+    1826                    "GLOBAL_JOYSTICK19_REMOTE_INTEGER"
+    1827                    "GLOBAL_JOYSTICK20_REMOTE_INTEGER"
+    1828                    "GLOBAL_JOYSTICK21_REMOTE_INTEGER"
+    1829                    "GLOBAL_JOYSTICK22_REMOTE_INTEGER"
+    1830                    "GLOBAL_JOYSTICK23_REMOTE_INTEGER"
+    1831                    "GLOBAL_JOYSTICK24_REMOTE_INTEGER"
+    1832                    "GLOBAL_JOYSTICK25_REMOTE_INTEGER"
+    1833                    "GLOBAL_JOYSTICK26_REMOTE_INTEGER"
+    1834                    "GLOBAL_JOYSTICK27_REMOTE_INTEGER"
+    1835                    "GLOBAL_JOYSTICK28_REMOTE_INTEGER"
+    1836                    "GLOBAL_JOYSTICK29_REMOTE_INTEGER"
+    1837                    "GLOBAL_JOYSTICK30_REMOTE_INTEGER"
+    1838                    "GLOBAL_JOYSTICK31_REMOTE_INTEGER"
+    1839                    "GLOBAL_HYPERBOT_REMOTE_INTEGER"
+END
+
+STRINGTABLE 
+BEGIN
+    1840                    "º"
+    1841                    "º"
+    1842                    "º"
+    1843                    "º"
+    1844                    "º"
+    1845                    "º"
+    1846                    "º"
+    1847                    "º"
+    1848                    "º"
+    1849                    "º"
+END
+
+STRINGTABLE 
+BEGIN
+    2051                    "da imagem"
+    2052                    "muda para o próximo valor. "
+    2053                    "muda para o valor anterior. "
+    2054                    "Se o apanhares e carregares"
+    2055                    "ou carrega apenas na barra de espaços"
+    2056                    "ou"
+    2059                    "o número de baixo está para ser esmagado por outro Marretas"
+    2060                    "não podes virar isto. Mas podes aspirar o objecto e virá-lo"
+    2061                    "não podes virar isto. Mas podes largar-lhe em cima o nome de um ficheiro. "
+    2062                    "Avenida"
+    2063                    "Rua"
+END
+
+STRINGTABLE 
+BEGIN
+    2064                    "O ToonTalk teve problemas para encontrar um ficheiro chamado"
+    2065                    "Tive alguns problemas a ler o ficheiro"
+    2066                    "Isto é para tocar os teus efeitos sonoros e músicas. "
+    2067                    "Isto serve para carregar ficheiros no ToonTalk. "
+    2068                    "Tenho muita pena mas a versão de 16 bits do ToonTalk não consegue trabalhar com imagens maiores do que o ecrã. "
+    2069                    "Desculpa, o ToonTalk teve problemas a ler o ficheiro de som"
+    2070                    "Não te esqueças que se mandares isto para alguém, também tens de mandar o ficheiro"
+    2071                    "Este é o resultado de guardares tudo o que está num quarto. "
+    2072                    "que contém"
+    2073                    "que está a segurar"
+    2074                    "que apenas se lembra"
+    2075                    "acções"
+    2076                    "Larga o nome de um ficheiro WAVE ou MIDI nele, que toca até acabar ou ser aspirado. "
+    2077                    "Passo"
+    2078                    "Passos"
+    2079                    "que tem magia suficiente para"
+END
+
+STRINGTABLE 
+BEGIN
+    2080                    "utilização"
+    2081                    "utilizações"
+    2082                    "Hum! Está alguma coisa mal com o ficheiro do puzzle. Desculpa. "
+    2083                    "Boa. O computador e o relógio estão a funcionar. Muito obrigado. Acho que faço o resto sozinho. "
+    2084                    "Pareço um disco riscado, mas cá vou eu outra vez. "
+    2085                    "Desculpa estar sempre a repetir-me, mas não sei mais o que dizer. "
+    2086                    "Quem me dera saber como ajudar-te. Mas só consigo pensar na última coisa que disse. "
+    2087                    "Nada."
+    2088                    "Então não estás chateado? "
+    2089                    "Espantoso! Eu não sabia que na Terra as crianças com"
+    2090                    "anos eram tão inteligentes. "
+    2091                    "Ena,"
+    2092                    "anos. És mesmo velho! "
+    2093                    "Dentro de um computador"
+    2094                    "Vê se és capaz de construir esse número. "
+    2095                    "Nós precisamos "
+END
+
+STRINGTABLE 
+BEGIN
+    2096                    "que nós precisamos"
+    2097                    "Senta-te na outra sala e apanha"
+    2098                    "Entra pela porta da outra casa e carrega num botão do rato. "
+    2099                    "Podes apanhar qualquer coisa clicando no botão do rato enquanto apontas para ela. "
+    2100                    "Enquanto seguras"
+    2101                    "carrega em 'Esc' para te pores de pé e volta aqui. "
+    2102                    "Desculpa. Não precisamos "
+    2103                    "Está a faltar alguma coisa na caixa. "
+    2104                    "Ou está no lugar errado. "
+    2105                    "Não é isso. "
+    2106                    "Errado. "
+    2107                    "Desculpa, não é isso que precisamos. "
+    2108                    "Há qualquer coisa errada nisso. "
+    2109                    "Tenta outra vez. "
+    2110                    "Vamos fazer outra vez. "
+    2111                    "Basta largar o nome de um ficheiro ou um URL. Depois aspira e cospe o resultado. "
+END
+
+STRINGTABLE 
+BEGIN
+    2112                    "Desculpa, mas não podes mudar o caderno de imagens. É só para sensores e controlos remotos. "
+    2113                    "A ilha Zizle era um lugar bonito antes do desastre. Agora está a afundar-se!"
+    2114                    "O ET estava a voar por ali e salvou toda a gente. "
+    2115                    "Tirou quase todas as casa da ilha, mas teve um problema no motor e despenhou-se. "
+    2116                    "Agora é preciso salvar o ET. Foste escolhido para saltar de pára-quedas e ajudá-lo. "
+    2117                    "Olá. Sou o ET. "
+    2118                    "Tu deves ser"
+    2119                    "Estou contente por te ver outra vez. Lembro-me de onde íamos. "
+    2120                    "Obrigado por voltares. Vamos continar a arranjar a nave. "
+    2121                    "É óptimo voltar a ver-te. Ora bem, onde é que nós íamos? "
+    2122                    "Desculpa, isso é muito largo para se ver de uma vez só. "
+    2123                    "Desculpa, mas isso é tão estreito que não consigo ver as letras. "
+END
+
+STRINGTABLE 
+BEGIN
+    2134                    "Bom trabalho"
+    2135                    "Boa"
+    2136                    "Continua assim"
+    2137                    "Muito bem"
+    2138                    "Bom"
+    2139                    "Parabéns"
+    2140                    "GALPBEN"
+    2141                    "ACL"
+    2142                    "CRP"
+    2143                    "maior que"
+END
+
+STRINGTABLE 
+BEGIN
+    2144                    "mais alto que"
+    2145                    "mais largo que"
+    2146                    "mais pequeno que"
+    2147                    "mais baixo que"
+    2148                    "mais estreito que"
+    2149                    "tamanho normal"
+    2150                    "aspira as coisas"
+    2151                    "cospe as coisas aspiradas"
+    2152                    "limpa as superfícies das coisas"
+    2153                    "copia as coisas "
+    2154                    "copia as coisas como eram antes de serem limpas"
+    2155                    "copia-se a si mesma"
+    2156                    "pode"
+    2157                    "que pode"
+    2158                    "Podes mudar"
+    2159                    "para fazer alguma coisa diferente clicando no botão. "
+END
+
+STRINGTABLE 
+BEGIN
+    2160                    "Também podes mudar"
+    2161                    "para fazeres uma coisa diferente carrega em '+' ou '-'. "
+    2162                    "Podes agarrar o que"
+    2163                    "também podes carregar numa destas letras:"
+    2164                    "Já te disse tudo o que sei sobre botões. "
+    2165                    "Se quiseres que repita tudo o que disse sobre botões, carrega duas vezes em F1 enquanto apontas para um botão. "
+    2166                    "Vou-te ensinar mais sobre"
+    2169                    "fazer coisas"
+    2170                    "Podes dizer à Artolas para fazer as coisas mais pequenas, ou mais altas ou mais gordas, carregando no botão da barriga dela. "
+    2171                    "Podes mudar a Artolas carregando numa destas teclas"
+    2172                    "'G' grande, 'A' alto, 'L' largo, 'P' pequeno, 'B' baixo, 'e' estreito e 'N' normal. "
+    2173                    "o que estiver debaixo da ponta do tubo"
+    2175                    "Podes dizer ao Limpopó para aspirar ou cuspir as coisas, carregando no botão do nariz. "
+END
+
+STRINGTABLE 
+BEGIN
+    2176                    "Podes mudar o Limpopó carregando em: 'A' aspirar, 'C' cuspir, 'L' limpar. "
+    2177                    "Podes dizer à Varinha Mágica para fazer uma cópia dela, ou para copiar outras coisas, carregando no botão dela. "
+    2178                    "Podes mudá-la carregando em: 'C' copiar, 'R' restaurar o original, 'P' a própria varinha. "
+    2182                    "Para eu continuar a falar, carrega em 'PageDown'. "
+    2183                    "Carrega em 'PageUp' para eu repetir o que disse. "
+    2184                    "Foi como estive a dizer. "
+    2185                    "Vou repetir. "
+    2186                    "Vou dizer outra vez. "
+    2187                    "Há algo de errado com o registo do exemplo. A parar a reprodução. "
+    2188                    "O ToonTalk teve problemas a copiar ficheiros temporários para "
+    2189                    ". Talvez não haja espaço suficiente no disco. "
+    2190                    "O ToonTalk vai ser executado a partir do CD-ROM. Pode ficar mais lento. "
+    2191                    "Animações: Greg Savoia, Kim Tempest e Brian Anderson. Vozes: Henrique Manuel, Patrícia Correia e Secundino Correia. Tradução: Patrícia Correia, Manuela Andrade, Secundino Correia, Tiago Correia e Leonel Morgado. "
+END
+
+STRINGTABLE 
+BEGIN
+    2192                    "O resto: Ken Kahn. Um obrigado especial a Markus, David e Mary. "
+    2193                    "PT"
+    2194                    "PTN"
+    2195                    "Janeiro"
+    2196                    "Fevereiro"
+    2197                    "Março"
+    2198                    "Abril"
+    2199                    "Maio"
+    2200                    "Junho"
+    2201                    "Julho"
+    2202                    "Agosto"
+    2203                    "Setembro"
+    2204                    "Outubro"
+    2205                    "Novembro"
+    2206                    "Dezembro"
+    2207                    "Eh pá! Não conheço nenhum mês chamado"
+END
+
+STRINGTABLE 
+BEGIN
+    2208                    "Não conheço nenhuma data como"
+    2209                    "Ora bem. Hoje é"
+    2210                    "Obrigado"
+    2211                    "e tu nasceste a"
+    2212                    "portanto tens"
+    2213                    "anos e"
+    2214                    "dias de idade"
+    2215                    "hoje"
+    2216                    "Ou"
+    2217                    "Parabéns, é o teu aniversário! "
+    2218                    "Espero que tenhas tido um bom dia de anos. "
+    2219                    "Fixe! O teu aniversário está a chegar. Espero que seja bom! "
+    2220                    "Se me queres ajudar vem até aqui. "
+    2221                    "Podes recomeçar, apanhando a bomba e ligando-a com a barra de espaços. "
+    2223                    "Tens de pôr o ninho na caixa. "
+END
+
+STRINGTABLE 
+BEGIN
+    2224                    "Desculpa, mas precisamos dos 7 dias no ninho, não apenas "
+    2225                    "Desculpa, mas precisamos de pelo menos 5 dias no ninho, não apenas "
+    2226                    "Desculpa mas nenhum dos números devia estar a mudar. "
+    2227                    "Todos os números têm de ser maiores que 0. "
+    2228                    "Hmmm, da última vez o número era"
+    2229                    "depois de esperar cerca de 8 segundos.  E agora o número é"
+    2230                    "depois de esperar 14 segundos. "
+    2231                    "Os meus sensores não estão a detectar a construção de uma nova casa. "
+    2232                    "a Varinha Mágica está sem magia"
+    2233                    "no"
+    2234                    "Português"
+    2235                    "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    2236                    "abcdefghijklmnopqrstuvwxyz"
+    2237                    "Olá! Queres brincar agora no ToonTalk?"
+    2238                    "Queres resolver puzzles, ver exemplos ou brincar no ToonTalk?"
+    2239                    "Bem, há muitos exemplos. Escolhe um. "
+END
+
+STRINGTABLE 
+BEGIN
+    2240                    "Vamos lá, mas primeiro temos de instalar o ToonTalk. OK?"
+    2241                    "Quando te foste embora ainda te queria dizer mais qualquer coisa. "
+    2242                    "Era isso que eu estava a tentar dizer dantes. "
+    2243                    "Quando eu tiver mais para te dizer verás ""..."" em baixo. "
+    2244                    "Desculpa estar tão confuso, mas a ordem das coisas nos buracos tem de ser a correcta. "
+    2245                    "maior que "
+    2247                    "na página esquerda do"
+    2248                    "na página direita do"
+    2249                    "qualquer imagem"
+    2250                    "uma imagem de"
+    2251                    "imagens de"
+    2252                    "a imagem de"
+    2253                    "ela"
+END
+
+STRINGTABLE 
+BEGIN
+    2260                    "um filme de"
+    2261                    "filmes de"
+    2262                    "o filme de"
+    2263                    "ele"
+    2270                    "uma imagem vazia de"
+    2271                    "imagens vazias de"
+END
+
+STRINGTABLE 
+BEGIN
+    2272                    "a imagem vazia de"
+    2273                    "ela"
+    2280                    "a"
+    2281                    "coisa nas costas é "
+    2282                    "a"
+    2283                    "à última coisa que ele fez ou encontrou"
+    2284                    "a"
+    2285                    "coisa que ele fez ou encontrou"
+    2286                    "a"
+    2287                    "página do"
+END
+
+STRINGTABLE 
+BEGIN
+    2288                    "o"
+    2289                    "buraco da"
+    2290                    "a"
+    2291                    "coisa que está no cimo "
+    2292                    "o"
+    2293                    "robô quer "
+    2294                    " imagens"
+    2300                    "uma pilha de "
+    2301                    "pilhas de "
+    2302                    "a pilha de "
+    2303                    "ela"
+END
+
+STRINGTABLE 
+BEGIN
+    2400                    "SEE ALL"
+    2401                    "SEE SOME"
+    2402                    "SEE NOTHING"
+    2403                    "SE ALLT"
+    2404                    "SE LITE"
+    2405                    "INTE SE NÅGONTING"
+    2406                    "VER TUDO"
+    2407                    "VER PARTE"
+    2408                    "NÃO VER"
+    2409                    "Alles Sehen"
+    2410                    "Einiges Sehen"
+    2411                    "Nichts Sehen"
+END
+
+STRINGTABLE 
+BEGIN
+    2424                    "SEE ALL"
+    2425                    "SEE SOME"
+    2426                    "SEE NOTHING"
+    2427                    "VER TUDO"
+    2428                    "VER PARTE"
+    2429                    "NÃO VER"
+END
+
+STRINGTABLE 
+BEGIN
+    2550                    "yes"
+    2551                    "no"
+    2552                    "ja"
+    2553                    "nej"
+    2554                    "sim"
+    2555                    "não"
+    2556                    "Ja"
+    2557                    "Nein"
+END
+
+STRINGTABLE 
+BEGIN
+    2566                    "yes"
+    2567                    "no"
+    2568                    "sim"
+    2569                    "não"
+END
+
+STRINGTABLE 
+BEGIN
+    2600                    "Home"
+    2601                    "End"
+    2602                    "Page up"
+    2603                    "Page down"
+    2604                    "Left arrow"
+    2605                    "Right arrow"
+    2606                    "Up arrow"
+    2607                    "Down arrow"
+END
+
+STRINGTABLE 
+BEGIN
+    2608                    "Delete"
+    2609                    "Insert"
+    2610                    "Backspace key"
+    2611                    "Enter"
+    2612                    "Escape"
+    2613                    "Some key"
+    2614                    "Special key"
+    2615                    "Control-a"
+    2616                    "Hem"
+    2617                    "Slut"
+    2618                    "Page up"
+    2619                    "Page down"
+    2620                    "Pil vänster"
+    2621                    "Pil höger"
+    2622                    "Pil upp"
+    2623                    "Pil ner"
+END
+
+STRINGTABLE 
+BEGIN
+    2624                    "Delete"
+    2625                    "Insert"
+    2626                    "Sudd-tangenten"
+    2627                    "Enter"
+    2628                    "Escape"
+    2629                    "Någon tangent"
+    2630                    "Speciell tangent"
+    2631                    "Kontroll-a"
+    2632                    "Home"
+    2633                    "End"
+    2634                    "Page up"
+    2635                    "Page down"
+    2636                    "Seta para a esquerda"
+    2637                    "Seta para a direita "
+    2638                    "Seta para cima"
+    2639                    "Seta para baixo"
+END
+
+STRINGTABLE 
+BEGIN
+    2640                    "Delete"
+    2641                    "Insert"
+    2642                    "Backspace"
+    2643                    "Enter"
+    2644                    "Escape"
+    2645                    "Alguma tecla"
+    2646                    "Tecla especial"
+    2647                    "Control-A"
+    2648                    "Home"
+    2649                    "Ende"
+    2650                    "Seite nach oben"
+    2651                    "Seite nach unten"
+    2652                    "Pfeil links"
+    2653                    "Pfeil rechts"
+    2654                    "Pfeil oben"
+    2655                    "Pfeil unten"
+END
+
+STRINGTABLE 
+BEGIN
+    2656                    "Löschen"
+    2657                    "Einfügen"
+    2658                    "Zurück"
+    2659                    "Eingabe"
+    2660                    "Esc"
+    2661                    "Eine Taste"
+    2662                    "Spezial-Taste"
+    2663                    "Strg-a"
+END
+
+STRINGTABLE 
+BEGIN
+    2728                    "Home"
+    2729                    "End"
+    2730                    "Page up"
+    2731                    "Page down"
+    2732                    "Left arrow"
+    2733                    "Right arrow"
+    2734                    "Up arrow"
+    2735                    "Down arrow"
+END
+
+STRINGTABLE 
+BEGIN
+    2736                    "Delete"
+    2737                    "Insert"
+    2738                    "Backspace key"
+    2739                    "Enter"
+    2740                    "Escape"
+    2741                    "Some key"
+    2742                    "Special key"
+    2743                    "Control-a"
+    2744                    "Home"
+    2745                    "End"
+    2746                    "Page up"
+    2747                    "Page down"
+    2748                    "Seta para a esquerda"
+    2749                    "Seta para a direita "
+    2750                    "Seta para cima"
+    2751                    "Seta para baixo"
+END
+
+STRINGTABLE 
+BEGIN
+    2752                    "Delete"
+    2753                    "Insert"
+    2754                    "Backspace"
+    2755                    "Enter"
+    2756                    "Escape"
+    2757                    "Alguma tecla"
+    2758                    "Tecla especial"
+    2759                    "Control-A"
+END
+
+STRINGTABLE 
+BEGIN
+    3010                    "um número"
+    3011                    "números"
+    3012                    "o número"
+    3013                    "lo"
+    3020                    "Artolas, a bomba de ar"
+    3021                    "Artolas, a bomba de ar"
+    3022                    "Artolas, a bomba de ar"
+    3023                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3030                    "Limpopó, o aspirador"
+    3031                    "Limpopó, o aspirador"
+    3032                    "Limpopó, o aspirador"
+    3033                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3040                    "uma varinha mágica"
+    3041                    "varinhas mágicas"
+    3042                    "a varinha mágica"
+    3043                    "la"
+    3050                    "um balão de pensamento"
+    3051                    "balões de pensamento"
+    3052                    "o balão de pensamento"
+    3053                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3060                    "um robô"
+    3061                    "robôs"
+    3062                    "o robô"
+    3063                    "lo"
+    3070                    "um ninho"
+    3071                    "ninhos"
+END
+
+STRINGTABLE 
+BEGIN
+    3072                    "o ninho"
+    3073                    "lo"
+    3080                    "um pássaro"
+    3081                    "pássaros"
+    3082                    "o pássaro"
+    3083                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3090                    "um camião"
+    3091                    "camiões"
+    3092                    "o camião"
+    3093                    "lo"
+    3100                    "um caderno"
+    3101                    "cadernos"
+    3102                    "o caderno"
+    3103                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3110                    "uma caixa"
+    3111                    "caixas"
+    3112                    "a caixa"
+    3113                    "la"
+END
+
+STRINGTABLE 
+BEGIN
+    3120                    "Engenhocas, a caixa de ferramentas"
+    3121                    "Engenhocas, a caixa de ferramentas"
+    3122                    "Engenhocas, a caixa de ferramentas"
+    3123                    "lo"
+    3130                    "uma imagem"
+    3131                    "imagens"
+    3132                    "a imagem"
+    3133                    "la"
+END
+
+STRINGTABLE 
+BEGIN
+    3140                    "uma bomba"
+    3141                    "bombas"
+    3142                    "a bomba"
+    3143                    "la"
+    3150                    "um bloco de texto"
+    3151                    "blocos de texto"
+END
+
+STRINGTABLE 
+BEGIN
+    3152                    "o bloco de texto"
+    3153                    "lo"
+    3160                    "um controlo remoto"
+    3161                    "controlos remotos"
+    3162                    "o controlo remoto"
+    3163                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3220                    "decoração do telhado"
+END
+
+STRINGTABLE 
+BEGIN
+    3300                    "um bloco numérico limpo"
+    3301                    "blocos numéricos limpos "
+    3302                    "o bloco numérico limpo"
+    3303                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3320                    "uma caixa limpa"
+END
+
+STRINGTABLE 
+BEGIN
+    3330                    "uma caixa"
+    3331                    "caixas"
+    3332                    "a caixa"
+    3333                    "la"
+    3340                    "uma imagem limpa"
+    3341                    "imagens limpas"
+    3342                    "a imagem limpa"
+    3343                    "la"
+END
+
+STRINGTABLE 
+BEGIN
+    3350                    "um bloco de texto limpo"
+    3351                    "blocos de texto limpos"
+    3352                    "o bloco de texto limpo"
+    3353                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3360                    "uma imagem"
+    3361                    "imagens"
+    3362                    "a imagem"
+    3363                    "la"
+    3370                    "um sensor com um número"
+    3371                    "sensores com um número"
+    3372                    "o sensor com um número"
+    3373                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3380                    "um sensor mostra um número"
+    3381                    "sensores mostram um número"
+    3382                    "o sensor mostra um número"
+    3383                    "lo"
+    3390                    "uma balança"
+    3391                    "balanças"
+END
+
+STRINGTABLE 
+BEGIN
+    3392                    "a balança"
+    3393                    "la"
+    3400                    "um controlo remoto de como alguma coisa é vista"
+    3401                    "controlos remotos de como algumas coisas são vistas"
+    3402                    "o controlo remoto de como alguma coisa é vista"
+    3403                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3410                    "uma imagem de uma coisa"
+    3411                    "imagens de coisas"
+    3412                    "a imagem de uma coisa"
+    3413                    "la"
+    3420                    "uma imagem de um ficheiro do utilizador"
+    3421                    "imagens de ficheiros do utilizador"
+    3422                    "a imagem de um ficheiro do utilizador"
+    3423                    "la"
+END
+
+STRINGTABLE 
+BEGIN
+    3470                    "um botão"
+    3471                    "botões"
+END
+
+STRINGTABLE 
+BEGIN
+    3472                    "o botão"
+    3473                    "ele"
+END
+
+STRINGTABLE 
+BEGIN
+    3490                    "um bloco de texto"
+    3491                    "blocos de texto"
+    3492                    "o bloco de texto"
+    3493                    "lo"
+    3500                    "um som"
+    3501                    "sons"
+    3502                    "o som"
+    3503                    "ele"
+END
+
+STRINGTABLE 
+BEGIN
+    3510                    "um controlo remoto"
+    3511                    "controlos remotos"
+    3512                    "o controlo remoto"
+    3513                    "ele"
+END
+
+STRINGTABLE 
+BEGIN
+    3520                    "um robô limpo"
+    3521                    "robôs limpos"
+    3522                    "o robô limpo"
+    3523                    "ele"
+    3530                    "um efeito de resposta dinâmica"
+    3531                    "efeitos de resposta dinâmica"
+    3532                    "o efeito de resposta dinâmica"
+    3533                    "lo"
+END
+
+STRINGTABLE 
+BEGIN
+    3600                    "É melhor escolher sons do caderno de sons. Se escreveres o nome de um som e o mandares para outro país pode não funcionar."
+    3601                    "qualquer som"
+    3602                    "um som limpo"
+    3603                    "Podes activar a bomba que estás a segurar carregando na barra de espaços. "
+    3604                    "Oh-oh! Estava-se a tentar fazer com que uma coisa pertencesse a si própria!"
+    3605                    "Houve um problema ao carregar uma imagem"
+    3606                    "O tamanho da imagem está errado."
+    3607                    "A poupança da cache de distorções é negativa: "
+END
+
+STRINGTABLE 
+BEGIN
+    3627                    "Ficheiro estragado: "
+    3628                    "Houve problemas na inicialização dos pincéis."
+    3629                    "TTObject"
+    3630                    "temp"
+    3631                    "hand"
+END
+
+STRINGTABLE 
+BEGIN
+    3632                    "pickUp"
+    3633                    "TTNothing"
+    3634                    "setHole"
+    3635                    "TTBird"
+    3636                    "setNest"
+    3637                    "copy"
+    3638                    "TTVacuum"
+    3639                    "vacuum"
+    3640                    "suckUp"
+    3641                    "spitOut"
+    3642                    "holeGets"
+    3643                    "gets"
+    3644                    "sideGets"
+    3645                    "false"
+    3646                    "true"
+    3647                    "old_given"
+END
+
+STRINGTABLE 
+BEGIN
+    3648                    "given"
+    3649                    "becomes"
+    3650                    " // Este robô concluiu o trabalho dele, pelo que vai dar a caixa outra vez ao primeiro robô da equipa."
+    3651                    "return this;"
+    3652                    "null"
+    3653                    "keyboard"
+    3654                    " // a bomba explode"
+    3655                    "throw new TTBombExplosion();"
+    3656                    "// Este ficheiro Java foi gerado automaticamente pelo ToonTalk, relativamente a"
+    3657                    "public class"
+    3658                    "public void initialize() {"
+    3659                    "extends TTApplet {"
+    3660                    "box"
+    3661                    "notebook"
+    3662                    "TTNotebook"
+    3663                    "TT.NOTEBOOK"
+END
+
+STRINGTABLE 
+BEGIN
+    3664                    "TTTeam"
+    3665                    "TTRobot"
+    3666                    "team"
+    3667                    "robot"
+    3668                    "Robot"
+    3669                    "next_robot"
+    3670                    "setNextRobot"
+    3671                    "start"
+    3672                    "<title>ToonTalk"
+    3673                    "</title>"
+    3674                    "Robot Team #"
+    3675                    "<hr>"
+    3676                    "<applet code="
+    3677                    "width="
+    3678                    "</applet>"
+    3679                    "<a href="
+END
+
+STRINGTABLE 
+BEGIN
+    3680                    "> Ver o código-fonte Java.</a>"
+    3681                    "class"
+    3682                    "extends TTRobot {"
+    3683                    "wants"
+    3684                    "static final"
+    3685                    "TTBox"
+    3686                    "(TTNotebook n) {"
+    3687                    "n"
+    3688                    "public TTObject gets(TTObject given) throws TTException {"
+    3689                    "return null;"
+    3690                    "if (!"
+    3691                    "matches"
+    3692                    "TT.BLANK_BOX"
+    3693                    "hole"
+    3694                    "TT.BLANK_TEXT"
+    3695                    "TTText"
+END
+
+STRINGTABLE 
+BEGIN
+    3696                    "TTNotebook"
+    3697                    "setPage"
+    3698                    "page"
+    3699                    "TT.MAGIC_WAND"
+    3700                    "TTNest"
+    3701                    "nest"
+    3702                    "item_on_nest"
+    3703                    "putOnNest"
+    3704                    "TTScale"
+    3705                    "TT.BLANK_NUMBER"
+    3706                    "TTNumber"
+    3707                    " // Este robô concluiu o trabalho dele, pelo que vai ver se a caixa continua a corresponder aos pensamentos, para voltar a executar."
+    3708                    "import ap.toontalk.*;"
+    3709                    "erased"
+    3710                    "erase"
+    3711                    " public static void main(String args[]) {"
+END
+
+STRINGTABLE 
+BEGIN
+    3712                    "  new TTFrame().begin(new "
+    3713                    "());"
+    3714                    "setStartingTeam"
+    3715                    "picture"
+    3716                    "language"
+    3717                    "TTPicture"
+    3718                    "operations"
+    3719                    "TT.NOTHING"
+    3720                    "TTRemoteInteger"
+    3721                    "TT.GLOBAL_REMOTE"
+    3722                    "TT.X_REMOTE"
+    3723                    "TT.Y_REMOTE"
+    3724                    "TT.X_SPEED_REMOTE"
+    3725                    "TT.Y_SPEED_REMOTE"
+    3726                    "TT.WIDTH_REMOTE"
+    3727                    "TT.HEIGHT_REMOTE"
+END
+
+STRINGTABLE 
+BEGIN
+    3728                    "TT.PARAMETER_REMOTE"
+    3729                    "TT.HIT_OR_MISS_REMOTE"
+    3730                    "TT.COLLIDEE_REMOTE"
+    3731                    "TT.END_OF_ANIMATION_REMOTE"
+    3732                    "TT.GRASPED_REMOTE"
+    3733                    "TT.SELECTED_REMOTE"
+    3734                    "TT.RELEASED_REMOTE"
+    3735                    "TT.X_HIT_OR_MISS_REMOTE"
+    3736                    "TT.Y_HIT_OR_MISS_REMOTE"
+    3737                    "TT.APPEARANCE_REMOTE"
+    3738                    "TT.VISIBLE_REMOTE"
+    3739                    "TT.CHILDREN_REMOTE"
+    3740                    "TT.ANCESTORS_REMOTE"
+    3743                    "TT.MOUSE_LEFT_BUTTON_REMOTE"
+END
+
+STRINGTABLE 
+BEGIN
+    3744                    "TT.MOUSE_MIDDLE_BUTTON_REMOTE"
+    3745                    "TT.MOUSE_RIGHT_BUTTON_REMOTE"
+    3746                    "TT.MOUSE_LEFT_BUTTON_DOWN_REMOTE"
+    3747                    "TT.MOUSE_MIDDLE_BUTTON_DOWN_REMOTE"
+    3748                    "TT.MOUSE_RIGHT_BUTTON_DOWN_REMOTE"
+    3749                    "TT.KEYBOARD_BUTTON_REMOTE"
+    3750                    "TT.LAST_KEYSTROKE_REMOTE"
+    3751                    "TT.SHIFT_DOWN_REMOTE"
+    3752                    "TT.CONTROL_DOWN_REMOTE"
+    3753                    "TT.HAND_VISIBLE_REMOTE"
+    3754                    "TT.CLIPBOARD_REMOTE"
+    3755                    "TT.AVENUE_REMOTE"
+    3756                    "TT.STREET_REMOTE"
+    3757                    "TT.SOUND_ON_REMOTE"
+    3758                    "TT.LETTER_SIZE_REMOTE"
+    3759                    "TT.READING_SPEED_REMOTE"
+END
+
+STRINGTABLE 
+BEGIN
+    3760                    "TT.MARTIAN_ADVICE_LEVEL_REMOTE"
+    3761                    "TT.PROGRAMMER_HEAD_REMOTE"
+    3762                    "TT.SCREEN_SIZE_REMOTE"
+    3763                    "TT.SYSTEM_SPEED_REMOTE"
+    3764                    "TT.CITY_SIZE_REMOTE"
+    3765                    "TT.SYSTEM_SLEEP_REMOTE"
+    3766                    "TT.MOUSE_BUTTONS_REMOTE"
+    3767                    "TT.LEGO_SERIAL_PORT_REMOTE"
+    3768                    "TT.MARTIAN_FONT_REMOTE"
+    3769                    "TT.FILE_TO_PICTURE_REMOTE"
+    3770                    "TT.FILE_TO_SOUND_REMOTE"
+    3771                    "TT.FILE_TO_MOVIE_REMOTE"
+    3772                    "TT.MARTIAN_SPEAK_REMOTE"
+    3773                    "TT.MOUSE_SPEED_X_REMOTE"
+    3774                    "TT.MOUSE_SPEED_Y_REMOTE"
+    3775                    "TT.CLOCK_REMOTE"
+END
+
+STRINGTABLE 
+BEGIN
+    3776                    "TT.RANDOM_REMOTE"
+    3777                    "TT.NO_IDENTIFIER_GIVEN"
+    3778                    "setPicture"
+    3779                    "displayThis"
+    3780                    "setControlee"
+END
+
+STRINGTABLE 
+BEGIN
+    3800                    "addPicture"
+    3801                    "TTBMPPicture"
+    3802                    "TTGIFPicture"
+    3803                    "addTeam"
+    3804                    "Fazer um ninho para um pássaro sem nenhum."
+    3805                    "answer_count"
+    3806                    "answer_count++"
+    3807                    "answer"
+END
+
+STRINGTABLE 
+BEGIN
+    3808                    "displayed_box"
+    3809                    "TTRemotePicture"
+    3810                    "TTSound"
+    3811                    "use"
+    3812                    "TT.BLANK_SOUND"
+    3813                    "TTIndirectPicture"
+    3814                    "TT.BLANK_PICTURE"
+    3815                    "TTRemoteLooks"
+    3816                    "Acabámos de fazer "
+    3817                    "height="
+    3818                    "<param"
+    3819                    "name="
+    3820                    "pictureWidth"
+    3821                    "pictureHeight"
+    3822                    "<p>Para ver isto, é preciso um navegador que consiga executar código Java.  Os navegadores mais recentes da Microsoft e da Netscape devem servir.</p>"
+    3823                    "value="
+END
+
+STRINGTABLE 
+BEGIN
+    3824                    "setWants"
+    3825                    "// Se lhe for dada uma caixa que corresponda à que tem no balão de pensamento (chamada ""wants""),"
+    3826                    "// então este robô faz isto:"
+    3827                    "archive="
+    3828                    "cabbase"
+    3829                    "runInNewWindow"
+    3830                    "getLocalRemotesNotebook"
+    3831                    "getPicturesNotebook"
+    3832                    "getSensorsNotebook"
+    3833                    "getSoundsNotebook"
+    3834                    "getOptionsNotebook"
+END
+
+STRINGTABLE 
+BEGIN
+    3850                    "TTRectangle"
+    3851                    "TTOval"
+    3852                    "TTRoundedRectangle"
+    3853                    "TTLineUp"
+    3854                    "TTLineDown"
+    3855                    "TTHollowOval"
+END
+
+STRINGTABLE 
+BEGIN
+    3856                    "TTRoundedHollowRectangle"
+    3857                    "TTDottedLineUp"
+    3858                    "TTDottedLineDown"
+    3859                    "TTHollowRectangle"
+    3860                    "TTImageCyclePicture"
+    3863                    "// O código que se segue prepara tudo para mostrar um filme de"
+    3864                    "TT.IMAGE_CYCLES"
+    3865                    "TTImageCycles"
+    3866                    "addImage"
+    3867                    "initialize"
+    3868                    "TTTruck"
+END
+
+STRINGTABLE 
+BEGIN
+    3900                    "given"
+    3901                    "hand"
+    3902                    "copier"
+    3903                    "vacuum"
+END
+
+STRINGTABLE 
+BEGIN
+    3904                    "new TTNumber(1)"
+    3905                    "new TTText(""A"")"
+    3906                    "new TTBox(1)"
+    3907                    "new TTNest()"
+    3908                    "new TTTruck(this)"
+    3909                    "notebook"
+    3910                    "new TTRobot()"
+    3911                    "new TTScale('?')"
+    3912                    "TT.BOMB"
+    3913                    "hand"
+    3914                    "new TTExpander()"
+    3915                    "get"
+    3917                    "TT.REMOTE_PICTURE_NO_APPEARANCE"
+    3918                    ".getState()"
+    3919                    "TTVacuum.SUCK_STATE"
+END
+
+STRINGTABLE 
+BEGIN
+    4000                    "ET"
+    4001                    "falar"
+    4002                    "balões"
+    4003                    "falar e balões"
+    4004                    "Desculpa, mas só posso falar se estiveres a correr a versão de 32 bits do ToonTalk."
+    4005                    "Traduzir de marciano para português pode ser complicado. A minha máquina de tradução faz com que eu, às vezes, fale de maneira esquisita. Espero que me consigas entender. "
+    4006                    "Se estiver alguma coisa na área de transferência do Windows, aparece aqui. Podes usar o Limpopó para aspirar e cuspir o que lá estiver. "
+    4007                    "Se a área de transferência estiver vazia, este o controlo remoto fica preto. Podes largar coisas no controlo remoto, para as passares para a área de transferência. "
+    4008                    "Estou muito contente por te ver!"
+    4009                    "Desculpa, mas a versão de 16 bits do ToonTalk só consegue ler imagens com 256 cores. "
+    4010                    "Podes ligá-la e desligá-la enquanto a seguras, carregando na barra de espaços. "
+    4011                    " Podes ligá-lo e desligá-lo enquanto o seguras, carregando na barra de espaços. "
+    4012                    " Podes ligá-la e desligá-la enquanto a seguras, carregando na barra de espaços. "
+    4013                    " se a agarrares. "
+    4014                    " se o apanhares. "
+    4015                    " se a apanhares. "
+END
+
+STRINGTABLE 
+BEGIN
+    4016                    "o"
+    4017                    "buraco dentro"
+    4018                    "menos que"
+    4019                    "Isto não pode ser um tempo correcto. O tempo não pode incluir um número como "
+    4020                    "Vejo que tens"
+    4021                    "segundos de idade."
+    4022                    "Isto é"
+    4023                    "Não, tens"
+    4024                    "Estou a pensar quantos segundos faltam para teres"
+    4025                    "Podes ir à porta ao lado e tentar descobrir isso?"
+    4026                    "Talvez devesses fazer alguma coisa especial dentro de"
+    4027                    "para celebrar"
+    4028                    "milhões de segundos de idade. "
+    4030                    "Já resolveste todos os puzzles. Queres recomeçar?"
+    4031                    "Boa. Agora vamos esperar que o pássaro traga a mensagem. "
+END
+
+STRINGTABLE 
+BEGIN
+    4032                    "Não vou esperar mais tempo pelo pássaro. Já esperámos demais. "
+    4033                    "Desculpa, mas o ninho devia estar vazio. "
+    4034                    "Desculpa, mas o número devia estar a mudar mais depressa. "
+    4035                    "Desculpa, mas o número devia estar a mudar mais devagar. "
+    4036                    "Desculpa, mas o número devia estar a mudar. "
+    4037                    "O número no robô que está por trás devia ser"
+    4038                    "dias"
+    4039                    "horas"
+    4040                    "dia"
+    4041                    "hora"
+    4042                    "minutos"
+    4043                    "Idade"
+    4044                    "Talvez haja novos puzzles na página do ToonTalk na Internet. Vai ver a www.ToonTalk.com. "
+    4045                    "Precisamos do número que estava no chão. "
+    4046                    "O número já deve ser muito maior. "
+    4047                    "Se carregares na tecla Pause enquanto seguras num robô, numa imagem ou num camião, e depois escolheres ""Voltar mais tarde"", uma cópia do que estás a segurar aparece no Windows como um applet Java, dentro do teu navegador da Internet. "
+END
+
+STRINGTABLE 
+BEGIN
+    4048                    "Joystick "
+    4049                    "ForceFeedbackJoystick "
+    4050                    "um rectângulo"
+    4051                    "uma oval"
+    4052                    "um rectângulo arredondado"
+    4053                    "uma linha a subir"
+    4054                    "uma linha a descer"
+    4055                    "uma linha oval"
+    4056                    "uma linha rectangular arredondada"
+    4057                    "uma linha tracejada a subir"
+    4058                    "uma linha tracejada a descer"
+    4059                    "uma linha rectangular"
+    4060                    "Rato sensível ao toque"
+END
+
+STRINGTABLE 
+BEGIN
+    4100                    "Duração"
+    4101                    "Força"
+    4102                    "Direcção"
+    4109                    "do efeito de resposta dinâmica chamado"
+    4110                    "a duração (em milésimos de segundo)"
+    4111                    "a força (100 é o máximo)"
+END
+
+STRINGTABLE 
+BEGIN
+    4112                    "a direcção é em graus"
+    4120                    "Pássaro\restrangeiro"
+    4121                    "um pássaro que voa para fora do ToonTalk"
+    4122                    "Deves dar ao pássaro uma caixa com 2 buracos. O primeiro buraco deve ter o nome da extensão do ToonTalk. O segundo buraco deve ter um pássaro ao qual será dada uma caixa com um pássaro novo."
+    4123                    "Este pássaro lê e escreve mensagens num ficheiro chamado "
+    4125                    "Um pássaro levou uma coisa para uma extensão do ToonTalk, mas a mensagem não era adequada. "
+    4126                    "As mensagens para ficheiros têm de ser caixas com 3 buracos, nas quais o terceiro buraco tem um pássaro que recebe as respostas. para ler, o primeiro buraco deve conter ""Ler"" e o segundo o número de letras a ler. "
+    4127                    "Para escrever, o primeiro buraco deve conter ""Escrever"" e o segundo um bloco de texto para acrescentar ao ficheiro. "
+END
+
+STRINGTABLE 
+BEGIN
+    4128                    "As mensagens para este pássaro têm de ter 3 buracos. O primeiro buraco deve conter ""Abre"", ""Cria Ficheiro"", ou ""Abre Porta Série"". "
+    4129                    "No segundo buraco tem de estar o nome de um ficheiro. O terceiro buraco tem de ter um pássaro. Este pássaro recebe outro pássaro para ler ou escrever no ficheiro. "
+    4130                    "Consulta a ajuda do ToonTalk para obteres mais informações. "
+    4131                    "Este pássaro leva mensagens para criar ou abrir ficheiros. "
+    4132                    "Teve problemas a abrir um ficheiro chamado "
+    4133                    "Um pássaro levou alguma coisa para um ficheiro do Windows, mas não era uma mensagem adequada. "
+END
+
+STRINGTABLE 
+BEGIN
+    4200                    "Desculpa, mas uma caixa não pode ter tantos buracos. Consulta www.toontalk.com/PT/ttini.htm para aprenderes a mudar isto. "
+END
+
+STRINGTABLE 
+BEGIN
+    5001                    "START_EVENT"
+    5002                    "SELECT_STACK_ITEM"
+    5003                    "NEW_ITEM"
+    5004                    "GRASP_COPIER"
+    5005                    "COPIER_APPLY"
+    5006                    "GRASP_EXPANDER"
+    5007                    "RELEASE_COPIER"
+END
+
+STRINGTABLE 
+BEGIN
+    5008                    "GRASP_ITEM"
+    5009                    "RELEASE_ITEM"
+    5010                    "RELEASE_ITEM_ON"
+    5011                    "RELEASE_ITEM_LEFT_OF"
+    5012                    "RELEASE_ITEM_RIGHT_OF"
+    5013                    "EXPANDER_APPLY"
+    5014                    "GRASP_VACUUM"
+    5015                    "VACUUM_APPLY"
+    5016                    "VACUUM_APPLY_RESTORE"
+    5017                    "RELEASE_VACUUM"
+    5018                    "KEYBOARD_CHARACTER"
+    5019                    "HATCH_BIRD"
+    5020                    "GIVE_BIRD_ITEM"
+    5021                    "DROP_ITEM_IN_TRUCK"
+    5022                    "DESTROY_HOUSE"
+    5023                    "APPLY_GRASPED_ITEM"
+END
+
+STRINGTABLE 
+BEGIN
+    5024                    "LAST_EVENT"
+    5025                    "LABEL_CHARACTER"
+    5026                    "KEYBOARD_CHARACTER_AND_SELECT"
+    5027                    "GRASP_NEST"
+    5028                    "NEW_MAIN_CUBBY"
+    5029                    "COPIER_APPLY_NEST"
+    5030                    "VACUUM_APPLY_NEST"
+    5031                    "APPLY_GRASPED_NEST"
+    5032                    "RELEASE_EXPANDER"
+    5033                    "SERIAL_NUMBER"
+    5034                    "0"
+    5035                    "ele"
+    5036                    "novo"
+    5037                    "primeiro novo"
+    5038                    "mais novo de todos"
+    5039                    "ao último"
+END
+
+STRINGTABLE 
+BEGIN
+    5040                    "o"
+    5041                    "Erro com uma parte do ficheiro da cidade que descreve o que está no chão de uma casa."
+    5042                    " Erro com uma parte do ficheiro da cidade que descreve o que está na parede de uma casa."
+    5043                    "não pode ser guardado porque tem demasiadas coisas."
+    5044                    "Há mais de 1000 coisas no ninho que está a ser guardado. Algumas vão perder-se."
+    5045                    "Não posso guardar tantos ninhos de uma vez. O máximo é de 255 ninhos de cada vez. Desculpa."
+    5046                    "Esta interface de porta série não é suportada pela versão de 32 bits do ToonTalk. "
+END
+
+STRINGTABLE 
+BEGIN
+    5100                    "PTT"
+    5101                    "Ups! Não consigo fazer o próximo puzzle porque preciso das peças de puzzles anteriores.  Se concordares, vou recuar"
+    5102                    "aeiou"
+    5103                    "bcdfgjlmnprstvxz"
+END
+
+STRINGTABLE 
+BEGIN
+    5104                    "puzzles?"
+    5105                    "Talvez precises de reinstalar o ToonTalk. "
+    5106                    "Esta versão do ToonTalk vai deixar de funcionar daqui a"
+    5107                    "dias."
+    5108                    "4!@%!(%A(A!C#B!C!C!C+A!C!C!C<A,CNA!C*D!C!C!C#C!C+C!C'C!C(A!C8D{A#C!C+A!C"
+    5109                    "!C!C<A,CNA!C*D!C!C!C#C!CAC!C#C!C'CTAiAmAeArA!C%A(D!C!C!C+A!C,C!C!C'CLAoA"
+    5110                    "oAkAsA!C'A!C!C<A$C&B!C&B!C!C!C!C!C!C!C!C!C!C!C!C!C&CAC!C#C!C'CTAiAmAeArA"
+    5111                    "!C%A(D!C!C!C+A""C,C!C!C'CLAoAoAkAsA!C!C""C!C!C!C+A""CAC5B D#C!C""C D!C$C#C D"
+    5112                    "!C%C!C!C D!C*C!C""C D!C'C#C D!C8C D!C!C!C!C!C!C!C!C-C&C!C.C#C=B!C=B!C!C!C"
+    5113                    "!C!C!C8B|A#C!C+A!C'A!C!C<A$C&B!C&B!C!C!C!C!C!C""C!C!C!C+A!C!ChB$C!C!C+A!C"
+    5114                    "!C!C!C!C!C!C!C!C&C+C!C'C!C!CYBkB!C!C+A""C-C%C!C.C#C=B!C=B!C!C!C!C!C!ChB$C"
+    5115                    "!C!C+A""C!C""C!C!C!C+A""C!C""C!C!C!C+A""C!ChB$C!C!C+A""CAC6B D#C!C#C D!C$C#C D"
+    5116                    "!C%C!C%C D!C*C!C$C D!C%C!C&C D!C*C!C#C D!C'C#C D!C8C D!C!C!C!C!C!C!C!C.."
+    5117                    " cum rape dago fag nad god sod nig sex sux sexo foda pila pipi caca coco cona fux lez pube pute "
+    5118                    "Olá. Já passou muito tempo desde a última vez que utilizaste o ToonTalk. Importas-te que o ET te sugira algumas coisas que já te podes ter esquecido?"
+END
+
+STRINGTABLE 
+BEGIN
+    5121                    "Queres aprender agora a trabalhar com as opções da linha de comandos?"
+    5123                    "clean"
+    5124                    "clean but on top of dirty"
+    5125                    "clean but at least one follower dirty"
+    5126                    "moved"
+    5127                    "dirty"
+    5128                    "dirty but completely obscured"
+    5130                    "Scaled to "
+    5131                    "milésimos de segundo"
+    5132                    " (rectangular) "
+    5133                    " with size "
+    5134                    " whose speedup is 1/"
+    5135                    " and savings is "
+END
+
+STRINGTABLE 
+BEGIN
+    5136                    "Cached image #"
+    5137                    " at cache #"
+    5138                    "Caching image #"
+    5139                    " using cache #"
+    5140                    " size is "
+    5141                    " for sound #"
+    5142                    "times"
+    5143                    "o Windows Notepad ou WordPad. Verifica se a tua selecção inclui"
+    5144                    "o código em baixo e então escolhe o comando Copiar no menu Editar. "
+    5145                    "Assim aparecerá no controlo remoto para o álbum. "
+    5146                    "Podes encontrar o controlo remoto na página 30 do caderno de sensores. "
+    5147                    "thing with invalid type (Sorry, something went wrong describing something - it might still work fine.)"
+    5148                    "NONE_GIVEN"
+    5149                    "Desculpa, alguma coisa correu mal a reproduzir um exemplo. Por favor comunica este problema a Support@ToonTalk.com."
+    5150                    "Desculpa, mas isto é uma versão de demonstração do ToonTalk, por isso as alterações do teu caderno perder-se-ão quando saíres do ToonTalk."
+    5151                    "Desculpa, mas a versão de demonstração não pode gravar cidades."
+END
+
+STRINGTABLE 
+BEGIN
+    5152                    "Usa o Limpopó para aspirar o que está no álbum. "
+    5153                    "Para aprenderes mais sobre o ToonTalk vê www.toontalk.com."
+    5154                    "StartToonTalkEncoding:"
+    5155                    "Podes-te sentar carregando em qualquer botão. Para te levantares carrega na tecla 'Esc'. "
+END
+
+STRINGTABLE 
+BEGIN
+    5222                    "ToonTalk está a fazer uma Java applet do que estás a segurar.Se tudo correr bem, dentro em breve o teu navegador mostrá-lo-á. "
+    5223                    "Da última vez que utilizaste o ToonTalk não saíste como devia ser. Queres algum conselho sobre isso?"
+    5224                    "A última vez que utilizaste o ToonTalk, este não fechou correctamente. Queres algum conselho? "
+    5225                    "ToonTalk correu muito devagar. Queres algum conselho para correr mais depressa?"
+    5226                    "Existe uma versão do ToonTalk que tem imagens de melhor qualidade. Queres aprender alguma coisa sobre isso?"
+    5227                    "O teu joystick enviou o helicóptero para o canto. Se isto é um erro, tens de calibrar o teu joystick. Queres aprender como é que isso se faz?"
+    5228                    "ToonTalk teve problemas a utilizar as extensões do DirectX para Windows. Queres saber o que podes fazer sobre isto?"
+    5229                    "O Windows está a dizer-me que o rato se mexeu mais do que é possível. Isto acontece quando corres o ToonTalk num Mac que tem Windows. Desculpa. Tenta utilizar antes as setas."
+END
+
+STRINGTABLE 
+BEGIN
+    5232                    "O exemplo não conseguiu completar-se como devia ser. Queres aprender a resolver o problema?"
+    5233                    "Desculpa, mas esta versão beta ou de demonstração é demasiado antiga. Queres saber onde arranjar uma nova? "
+    5234                    "Queres ler algumas pistas?"
+    5235                    "Queres ver algumas pistas de como lidar com os robots nos puzzles?"
+    5236                    "É preciso uma extensão do ToonTalk que não foi instalada. Queres aprender a instalar extensões? "
+    5237                    "O motor Text-to-speech não arrancou correctamente. Queres saber como resolver isto?"
+    5238                    "Desculpa, mas isto é uma versão de demonstração, não pode criar Java applets."
+    5239                    "ToonTalk teve problemas a utilizar as extensões DirectX Media para carregar imagens. Queres ver o que podes fazer para resolver o problema?"
+    5240                    "Ocorreu um erro ao compilar a Java applet. Queres ler como podes resolver isto?"
+    5241                    "O cálculo com números grandes pode ser muito lento, a ponto do ToonTalk congelar durante alguns segundos - ou mesmo minutos. Queres ler mais coisas sobre este assunto?"
+    5242                    "Acho que as viagens no tempo estão a encravar o ToonTalk de vez em quando. Queres saber como podes evitar isto?"
+END
+
+STRINGTABLE 
+BEGIN
+    5250                    "dispdib"
+    5251                    "abnormal"
+    5252                    "tooslow"
+    5253                    "highres"
+    5254                    "joycalib"
+    5255                    "directx"
+    5256                    "badmouse"
+    5257                    "abnormal"
+    5258                    "badinstl"
+    5259                    "baddemo"
+    5260                    "trialovr"
+    5261                    "puzzle1"
+    5262                    "robotpuz"
+    5263                    "extendin"
+END
+
+STRINGTABLE 
+BEGIN
+    5264                    "ttselect"
+    5266                    "dxmedia"
+    5267                    "javaprob"
+    5268                    "slownumb"
+    5269                    "slowtime"
+    5277                    "Desculpa. Alguma coisa correu mal ao tentar executar um navegador, como o Netscape Navigator ou Microsoft Internet Explorer."
+    5278                    " Cidade gravada."
+    5279                    "guardado em"
+END
+
+STRINGTABLE 
+BEGIN
+    5280                    "MAIN_CUBBY"
+    5281                    " "
+    5282                    "A_COPIER"
+    5283                    "A_VACUUM"
+    5284                    "INTEGER_STACK"
+    5285                    "TEXT_STACK"
+    5286                    "CUBBY_STACK"
+    5287                    "NEST_STACK"
+    5288                    "TRUCK_STACK"
+    5289                    "PROGRAM_PADS"
+    5290                    "ROBOT_STACK"
+    5291                    "SCALE_STACK"
+    5292                    "BOMB_STACK"
+    5293                    "ITEM_HELD"
+    5294                    "AN_EXPANDER"
+END
+
+STRINGTABLE 
+BEGIN
+    5300                    "FunctionKeys"
+    5301                    "NumberTyping"
+    5302                    "TextTyping"
+    5303                    "Flipping"
+    5304                    "GraspingNonEstentials"
+    5305                    "ResetOnSolution"
+    5306                    "BringInVacuumWhenRobotFails"
+    5307                    "UserPuzzle"
+    5308                    "RobotsAreLostWhenSolved"
+    5309                    "SavedRobotsNotAdded"
+    5310                    "GoodSolutionsPosted"
+    5311                    "HandEmptyAfterPosting"
+END
+
+STRINGTABLE 
+BEGIN
+    5400                    "helicopt"
+    5401                    "sparrow2"
+    5402                    "pigeon2"
+    5403                    "hot_rod2"
+    5404                    "angels_f"
+    5405                    "b_wop"
+    5406                    "electric"
+    5407                    "spiralin"
+END
+
+STRINGTABLE 
+BEGIN
+    5408                    "out_spir"
+    5409                    "book_dro"
+    5410                    "door_cr4"
+    5411                    "dustbus2"
+    5412                    "exp2"
+    5413                    "hand_pum"
+    5414                    "ouch"
+    5415                    "plop"
+    5416                    "pop"
+    5417                    "ins_step"
+    5418                    "type"
+    5419                    "traf2"
+    5420                    "turning1"
+    5421                    " "
+    5422                    "neat_eff"
+    5423                    "drive"
+END
+
+STRINGTABLE 
+BEGIN
+    5424                    "bellbike"
+    5425                    "boing3"
+    5426                    " "
+    5427                    " "
+    5428                    "calc"
+    5429                    "comedy1"
+    5430                    "comedy2"
+    5431                    "deflatin"
+    5432                    "door1"
+    5433                    " "
+    5434                    " "
+    5435                    " "
+    5436                    "fstep33"
+    5437                    "glass_hi"
+    5438                    "glass_lo"
+    5439                    " "
+END
+
+STRINGTABLE 
+BEGIN
+    5440                    " "
+    5441                    " "
+    5442                    "shutdown"
+    5443                    "spit1"
+    5444                    "switch"
+    5445                    "teleport"
+    5447                    "twingy"
+END
+
+STRINGTABLE 
+BEGIN
+    5501                    "Problem decoding a picture."
+    5502                    "Puzzle reading floor items but has found the wrong token."
+    5503                    "Puzzle part too long."
+END
+
+STRINGTABLE 
+BEGIN
+    5504                    "No equal sign after keyword in puzzle file."
+    5505                    "Can't find a picture to connect remote controls to in a puzzle."
+    5506                    "Force Feedback not available"
+    5507                    "Too much to convert to pass to Windows"
+    5508                    "Something wrong with type string "
+    5509                    " from Windows."
+    5510                    "Something went wrong playing a sound."
+    5511                    "Memory low.  Recycling last "
+    5512                    "% of memory used to speed things up."
+    5513                    "This installation is missing some sounds and pictures needed for making Java applets. Sorry."
+    5514                    "Problems finding the Java media file "
+    5515                    "Problems copying the Java media file "
+    5516                    "Problems finding the name of java file # "
+    5517                    "Too many things to dump!"
+    5518                    "Um robot perdeu o rasto das coisas. Ele não esperava controlar tantas coisas ou mesmo tempo."
+    5519                    "esperava apenas controlar"
+END
+
+STRINGTABLE 
+BEGIN
+    5520                    "Não encontrei um objectivo no puzzle."
+    5521                    "O Puzzle tinha um não-robot depois do objectivo. Secção ignorada."
+    5522                    "Uma não imagem no cimo de uma imagem, foi posta nas costas da imagem."
+    5523                    "TT"
+    5524                    "T16"
+    5525                    "dll"
+    5526                    "[SB]"
+    5527                    "[H]"
+    5528                    "TnTkS001"
+    5529                    "Problem in replay: event counter token missing in log."
+    5530                    "Boolean event token expected."
+    5531                    "dmo"
+END
+
+STRINGTABLE 
+BEGIN
+    5536                    "Desculpa. Alguns sensores não funcionam em Java. O seguinte sensor ficará inactivo em Java: "
+    5539                    "SubtitlesSuffix"
+    5540                    "Unable to open output log file "
+    5542                    ".wav"
+    5544                    "A carregar. Espera por favor."
+    5545                    "JavaFileSuffix"
+    5546                    "Esta instalaçAo do ToonTalk não tem os ficheiros de dados de baixa resolução. Clica em 'Opções' para mudar para 640x480 ou superior ou contacta apoio@cnotinfor.com."
+    5547                    "JavaCompiler"
+    5548                    "jump"
+    5549                    "exe"
+    5550                    "javashow.bat"
+    5551                    "call "
+END
+
+STRINGTABLE 
+BEGIN
+    5552                    " -O -classpath "
+    5553                    "system"
+    5554                    "zip"
+    5555                    "java"
+    5558                    "RunAppletInNewWindow"
+    5559                    ".class "
+    5560                    "archive"
+    5562                    "HTMLExtra"
+    5563                    "cabbase"
+    5564                    "ShellIsPROGMAN"
+    5567                    "Java compiler problem.  Error code = "
+END
+
+STRINGTABLE 
+BEGIN
+    5568                    " running "
+    5569                    "open"
+    5570                    "TextToSpeechMode"
+    5572                    "TextToSpeech"
+    5573                    "Problem starting text to speech engine. Marty will just use talk balloons."
+    5574                    "If you click on 'Set Options' and turn off speech you will not see this message again."
+    5575                    "Can't shut down OLE."
+    5577                    " status = "
+END
+
+STRINGTABLE 
+BEGIN
+    5674                    "bchlavvl"
+    5675                    "-"
+    5676                    " "
+    5678                    "não é um bom ficheiro de registo do ToonTalk."
+    5679                    "Este exemplo só corre em versões mais recentes do ToonTalk. Por favor actualiza o teu sistema. Visita www.toontalk.com."
+END
+
+STRINGTABLE 
+BEGIN
+    5688                    "Houve um problema a ler um ficheiro da Internet."
+    5689                    " Queres que o ToonTalk deixe de procurar ficheiros na Internet?"
+    5690                    "O ToonTalk já não está a utilizar o rato - Carrega em Ctrl-F8 para começar a usá-lo."
+    5691                    "0"
+END
+
+STRINGTABLE 
+BEGIN
+    5720                    "Um robot está a carregar na barra de espaços a uma imagem que não parou. A barra de espaços já não altera uma imagem. Devo mudar os robots para carregarem em '+'?"
+    5721                    "Um robot está a carregar na barra de espaços a um controlo remoto que não parou. A barra de espaços já não o altera. Devo mudar estes robots para carregarem em '+'?"
+    5722                    "Os robots vão ser arranjados a primeira vez que trabalharem. Deves gravar os robots arranjados para evitar que eu te volte a fazer a mesma pergunta."
+    5723                    "Queres ver o ficheiro de registo?"
+    5724                    "Opps, ocorreu um erro interno ao iniciar o ToonTalk. Podem acontecer coisas estranhas."
+    5725                    "Opps, ocorreu um erro interno. Podem acontecer coisas estranhas."
+    5726                    "Erro interno ao fechar o ToonTalk."
+END
+
+STRINGTABLE 
+BEGIN
+    5728                    " Queres que o ToonTalk tente continuar?"
+    5729                    "Opps, ocorreu um erro interno ao carregar uma cidade. Podem acontecer coisas estranhas."
+    5730                    "Opps, ocorreu um erro interno ao carregar uma página de um caderno. Provavelmente está estragada."
+    5731                    "Opps, ocorreu um erro interno ao carregar uma coisa. Deve estar estragada."
+    5732                    "A carregar um ninho que funciona numa rede, mas nesta versão do ToonTalk não é possível trabalhar em rede. Visite www.toontalk.com <http://www.toontalk.com> para actualizar."
+    5743                    "A carregar um ninho de rede que foi criado noutro computador com um endereço da Internet diferente. Os pássaros gravados não vão poder encontrar este ninho."
+END
+
+STRINGTABLE 
+BEGIN
+    5744                    "Um robot aspirou a sua caixa."
+    5745                    "ToonTalk não consegue encontrar um endereço IP neste computador. Os pássaros de longa distância não vão funcionar, a não ser que saias, te ligues a Internet, e tentes de novo."
+    5746                    "ToonTalk está a carregar um passáro forasteiro que utiliza uma extensão ao ToonTalk (DLL)."
+    5747                    "Um robot está para utilizar um passário forasteiro que utiliza uma extensão ao ToonTalk (DLL)."
+    5748                    "Não há problema em carregar"
+    5749                    " "
+    5751                    "ToonTalk foi instalado para executar"
+    5752                    "Queres actualizá-lo para o executar em vez da versão que estás a executar?"
+    5755                    "Uma DLL de origem desconhecida (ou de pouca confiança) pode causar danos. Também podem surgir danos quando se usa um robô proveniente de uma origem de pouca confiança, ainda que este recorra a uma DLL de confiança."
+    5756                    "Este ficheiro de demonstração precisa de usar uma versão do ToonTalk diferente da que está instalada. Esta versão especial está incluida no ficheiro de demonstração. Só se deve continuar quando se confia PLENAMENTE na pessoa que forneceu este ficheiro. Deseja continuar?"
+    5757                    "O ToonTalk não consegue escrever na pasta"
+    5758                    "Podem perder-se alguns sons ou imagens fornecidos pelo utilizador."
+    5759                    "Podes indicar uma pasta diferente, na entrada ""MediaDir"", que está na secção ""Directories"" do ficheiro toontalk.ini."
+END
+
+STRINGTABLE 
+BEGIN
+    5760                    "O ToonTalk vai tentar continuar, mas o mais certo é que não se consiga guardar o teu trabalho."
+    5761                    "O ToonTalk não consegue ler o ficheiro"
+    5762                    "O ToonTalk vai tentar continuar, mas podem faltar algumas coisas (imagens ou sons)."
+    5763                    "O ToonTalk não consegue escrever no ficheiro"
+    5764                    "Talvez a pasta esteja cheia. Se estiver, tens de apagar alguns ficheiros. Mas também pode ser que tenhas de pedir autorização a um administrador para escrever nessa pasta ou nesse ficheiro."
+    5765                    "O código de erro do Windows é"
+    5766                    "e é esta a descrição que o Windows dá:"
+END
+
+STRINGTABLE 
+BEGIN
+    6000                    "Distância\rda\resquerda"
+    6001                    "Distância\rde\rbaixo"
+    6002                    "Velocidade\rhorizontal"
+    6003                    "Velocidade\rvertical"
+    6004                    "Largura"
+    6005                    "Altura"
+    6006                    "Que\rimagem"
+    6007                    "Colidiu?"
+    6008                    "Colidiu\rem quem?"
+    6009                    "Animação\rterminada?"
+    6010                    "Agarrada\rcom a\rmão?"
+    6011                    "Seleccionada?"
+    6012                    "Acabada\rde largar?"
+    6013                    "Colidiu\rhorizontalmente?"
+    6014                    "Colidiu\rVerticalmente?"
+    6015                    "Aparência"
+END
+
+STRINGTABLE 
+BEGIN
+    6016                    "Visível?"
+    6017                    "Peças"
+    6018                    "Contentores"
+    6021                    "Botão\resquerdo\rdo rato\rclicado"
+    6022                    "Botão\rdo meio\rdo rato\rclicado"
+    6023                    "Botão\rdireito\rdo rato\rclicado"
+    6024                    "Botão\resquerdo\rdo rato\rcarregado"
+    6025                    "Botão\rdo meio\rdo rato\rcarregado"
+    6026                    "Botão\rdireito\rdo rato\rcarregado"
+    6027                    "Tecla\rcarregada"
+    6028                    "Última\rtecla\rcarregada"
+    6029                    "Tecla\rshift\rcarregada"
+    6030                    "Tecla\rctrl\rcarregada"
+    6031                    "Mão\rvisível?"
+END
+
+STRINGTABLE 
+BEGIN
+    6032                    "Para e de\routros\rprogramas"
+    6033                    "A minha\ravenida"
+    6034                    "A minha\rrua"
+    6035                    "Som\rligado?"
+    6036                    "Tamanho\rdas letras\rdo ET"
+    6037                    "Velocidade\rda fala\rdo ET"
+    6038                    "Nível\rda fala\rdo ET"
+    6039                    "O aspecto\rda tua\rcabeça"
+    6040                    "Tamanho\rda janela"
+    6041                    "Velocidade\rdo ToonTalk"
+    6042                    "Tamanho\rda cidade"
+    6043                    "Duração\rda fase"
+    6044                    "Uso\rdos botões\rdo rato"
+    6045                    "Porta\rsérie"
+    6046                    "Tipo das\rletras do ET"
+    6047                    "Ficheiro\rcom\robjecto"
+END
+
+STRINGTABLE 
+BEGIN
+    6048                    "Ficheiro\rde som"
+    6050                    "Como fala\ro ET"
+    6051                    "Velocidade\rhorizontal\rdo rato"
+    6052                    "Velocidade\rvertical\rdo rato"
+    6053                    "Milissegundos\rdesde\ra última\rfase"
+    6054                    "Número\rentre\r0 e 1000"
+    6055                    "Media\rControl\rInterface"
+    6056                    "Texto para\rfalar"
+    6057                    "Decoração\rdo quarto"
+    6058                    "Decoração\rda casa"
+    6059                    "Decoração\rdo telhado"
+    6060                    "Língua\rusada"
+END
+
+STRINGTABLE 
+BEGIN
+    6064                    "Joystick\rvelocidade\rX"
+    6065                    "Joystick\rvelocidade\rY"
+    6066                    "Joystick\rvelocidade\rZ"
+    6067                    "Joystick\reixo X"
+    6068                    "Joystick\reixo Y"
+    6069                    "Joystick\reixo Z"
+    6070                    "Botões do\rjoystick\rclicados"
+    6071                    "Botões do\rjoystick\rpressionados"
+END
+
+STRINGTABLE 
+BEGIN
+    6100                    "Isto é para enviar comandos para o Microsoft Windows Media Control Interface (MCI). "
+    6101                    "Experimenta largar o texto que queres mandar para ele. "
+    6102                    "Isto é para falar o texto. "
+    6103                    "Isto só funciona com a versão 32-bit do ToonTalk. "
+    6104                    "Experimenta largar o texto que queres ouvir nele. "
+    6105                    "No cimo dele está"
+    6106                    "a barra de espaços"
+    6107                    "o segundo botão do joystick"
+    6108                    "ou"
+    6110                    "não se pode juntar nada a uma caixa limpa"
+    6111                    "O menor número que podes dar a uma cidade é -255. Isto faz uma cidade 255 por 255 e porque é negativo a cidade ficará cheia de casas aleatoriamente. "
+END
+
+STRINGTABLE 
+BEGIN
+    6112                    "A cidade maior pode ter 255 blocos por 255 blocos. "
+    6113                    "sétimo"
+    6114                    "oitavo"
+    6115                    "nono"
+    6116                    "décimo"
+    6117                    "décimo primeiro"
+    6118                    "décimo segundo"
+    6119                    "décimo terceiro"
+    6120                    "parou porque"
+    6121                    "bombas só funcionam dentro de casas ou nas costas de uma imagem"
+    6122                    "camiões só se vão embora se estiverem dentro de uma casa ou nas costas de uma imagem"
+    6123                    "pássaros só começam a voar dentro de casa ou nas costas de uma imagem"
+    6124                    "robots só começam a trabalhar dentro de casas ou nas costas de uma imagem"
+    6125                    "tem uma caixa que não condiz com a que ele tem no balão de pensamento e não há nenhum robot a que ele possa dá-la. "
+    6126                    "Vais encontrar um pequeno presente no final do caderno que está na página 4 do teu caderno (na opção ""Brincar""). "
+    6127                    "ia pôr uma coisa noutra que foi aspirada"
+END
+
+STRINGTABLE 
+BEGIN
+    6128                    "Desculpa, mas uma Java applet de algo que tenha um pássaro estrangeiro nele é provável que não funcione."
+    6129                    "Um pássaro levou uma coisa para o Windows, mas o Windows não sabe o que fazer com ela. "
+    6132                    "e tem a etiqueta"
+    6133                    "Isto diz-nos que imagens estão presas em cima de"
+    6134                    "Isto diz-nos que imagens"
+    6135                    "está presa em cima"
+    6136                    "com o nome"
+    6137                    "Se me deres alguma coisa, eu falo sobre ela sempre que falar sobre"
+    6138                    "Uma cópia de"
+    6139                    "Tem"
+    6140                    "OK"
+    6141                    "Eu lembro-me disso"
+    6142                    "vai com"
+    6143                    "um trilião"
+END
+
+STRINGTABLE 
+BEGIN
+    6144                    "triliões"
+    6145                    "um bilião"
+    6146                    "biliões"
+    6147                    "um milhão"
+    6148                    "milhões"
+    6149                    "mil"
+    6150                    "mil"
+    6151                    "centena"
+    6152                    "centenas"
+    6153                    "A minha caixa"
+    6154                    "que me faz lembrar"
+    6155                    " "
+    6156                    "algo"
+END
+
+STRINGTABLE 
+BEGIN
+    6252                    "qualquer robot"
+    6253                    "qualquer efeito de força"
+    6254                    "um efeito de força apagado"
+    6255                    "podes sentir esse efeito carregando "
+END
+
+STRINGTABLE 
+BEGIN
+    6256                    " "
+    6257                    "Podes encontrar mais efeitos de força no teu caderno quase no fim do caderno dos sensores."
+    6258                    "A Engenhocas não vem porque está no Limpopó, o Aspirador. Utiliza o Limpopó para a cuspir. "
+    6259                    "voz e legendas"
+    6260                    "Copiade mim"
+    6261                    " "
+    6262                    " "
+    6263                    " "
+END
+
+STRINGTABLE 
+BEGIN
+    6277                    "legendas"
+    6283                    "cem"
+    6284                    "cento"
+    6285                    "duzentos"
+    6286                    "trezentos"
+    6287                    "quatrocentos"
+END
+
+STRINGTABLE 
+BEGIN
+    6288                    "quinhentos"
+    6289                    "seiscentos"
+    6290                    "setecentos"
+    6291                    "oitocentos"
+    6292                    "novecentos"
+    6293                    "Atenção. Coisas estranhas podem acontecer se puseres alguma coisa nas costas de um controlo remoto para a aparência dela."
+    6294                    "Parte inteira"
+    6295                    "Parte fraccionária"
+    6296                    "Numerador"
+    6297                    "Denominador"
+    6298                    "Seno"
+    6299                    "Co-seno"
+    6300                    "Tangente"
+    6301                    "Arco seno"
+    6302                    "Arco co-seno"
+    6303                    "Arco tangente"
+END
+
+STRINGTABLE 
+BEGIN
+    6304                    "adicionar"
+    6305                    "elevar aquilo em que se larga à potência de"
+    6306                    "deixar a parte inteira"
+    6307                    "deixar a parte fraccionária"
+    6308                    "deixar o numerador"
+    6309                    "deixar o denominador"
+    6310                    "extrair o seno"
+    6311                    "extrair o co-seno"
+    6312                    "extrair a tangente"
+    6313                    "extrair o arco seno"
+    6314                    "extrair o arco co-seno"
+    6315                    "extrair o arco tangente"
+    6316                    "subtrair"
+    6317                    "complementar os bits"
+    6318                    "fazer o OU EXCLUSIVO dos bits"
+    6319                    "fazer o E dos bits"
+END
+
+STRINGTABLE 
+BEGIN
+    6320                    "fazer o OU dos bits"
+    6321                    "algo que irá"
+    6322                    " "
+    6323                    "multiplicar por"
+    6324                    "dividir por"
+    6325                    "alterar o número sobre o qual se larga"
+    6326                    "fazer OU sobre os bits do número de baixo"
+    6327                    "fazer E sobre os bits do número de baixo"
+    6328                    "fazer OU EXCLUSIVO sobre os bits do número de baixo"
+    6329                    "Fracção"
+    6330                    "Inteiro e\rfracção própria"
+    6331                    "Dízima finita\rou fracção"
+    6332                    "Dízima finita\rou inteiro e\rfracção própria"
+    6333                    "Números\re funções"
+    6334                    "não foi possível calcular a expressão aritmética"
+    6335                    "Logaritmo natural"
+END
+
+STRINGTABLE 
+BEGIN
+    6336                    "Logaritmo de base 10"
+    6337                    "calcular o logaritmo natural"
+    6338                    "calcular o logaritmo de base 10"
+    6339                    "dois números"
+    6340                    " "
+    6341                    " "
+    6342                    "multiplicar"
+    6343                    " "
+    6344                    "dividir"
+    6345                    " "
+    6346                    "fazer OU sobre os bits de"
+    6347                    " "
+    6348                    "fazer E sobre os bits de"
+    6349                    " "
+    6350                    "fazer OU EXCLUSIVO sobre os bits de"
+    6351                    " "
+END
+
+STRINGTABLE 
+BEGIN
+    6352                    "elevar um número à potência indicada por outro"
+    6353                    "fazer com que um número seja igual a outro"
+END
+
+STRINGTABLE 
+BEGIN
+    6400                    "Foi guardado o ficheiro"
+    6401                    " "
+END
+
+STRINGTABLE 
+BEGIN
+    6416                    "sobre"
+    6417                    "algarismos"
+    6418                    "um número inteiro negativo"
+    6419                    "um número inteiro"
+    6420                    "o número inteiro"
+    6421                    "o número aproximado"
+    6422                    "um número racional negativo"
+    6423                    "um número racional"
+    6424                    "o número racional"
+    6425                    "Não consigo mostrar"
+    6426                    "algarismos."
+    6427                    "O número deve estar bem. O ToonTalk pode mostrá-lo numa base que seja potência de 2."
+    6428                    "Não consigo mostrar este número, porque tem demasiados algarismos."
+    6429                    "Carrega na tecla Esc para interromper."
+    6430                    "objectos."
+    6431                    "bytes a partir do URL."
+END
+
+STRINGTABLE 
+BEGIN
+    6432                    "Já foram carregados"
+    6433                    "Já foram lidos"
+    6434                    "um balão de pensamento recebeu uma coisa que não é uma caixa"
+    6435                    "Aguarda, por favor. O ToonTalk está a configurar as ligações de rede para um pássaro distante."
+    6436                    "fkeys_pt.jpg"
+    6437                    "o cálculo de um número necessita de mais do que 10% da memória disponível no computador.                             "
+    6438                    "O ToonTalk não consegue fazer números imaginários"
+	 6439							 "Desculpa, mas esta versão do ToonTalk é apenas para ver programas a correr. Para criar programas novos é preciso usar a versão completa."
+	 6440							 "Versão_apenas_para_execução"
+
+END
+
+#endif    // Portuguese (Portugal) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

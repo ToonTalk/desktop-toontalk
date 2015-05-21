@@ -1,0 +1,65 @@
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to the Windows clipboard. For example, you can use
+Windows Notepad or WordPad program. Just be sure your selection includes
+the code below and then select the Copy command in the Edit menu. 
+Then it will appear in the ToonTalk remote control for the clipboard. 
+You can find the clipboard remote control on page 30 of the Sensor notebook. 
+Just use Dusty to vacuum it off the clipboard. 
+   The following is a box with 3 holes. The first hole contains a rectangle
+which is partly visible with one picture on top. The first thing on top
+is a pad with the text "resetable  make sound  if hitting" on it. And on
+the back are 2 things. The first thing on the back is a box with 5
+holes. The first hole contains an empty nest. The hole labeled with "Hit
+Who?" contains a remote control for the display of what is colliding
+with this picture. The third hole contains a tottering scale. The fourth
+hole contains a picture of a ball which is partly visible. The fifth
+hole contains a sound "Be Yaw". And the second thing on the back is a
+robot who wants a box with 5 holes. The first hole contains an empty
+nest. The hole labeled with "Hit Who?" contains any picture (for
+example, a paddle which is partly visible). The third hole contains a
+balanced scale. The fourth hole contains any picture (for example, a
+paddle which is partly visible). The fifth hole contains any sound. If
+given a box like that he will pick up what's in the fifth hole inside
+his box. And push the space bar to change what he is holding. And drop
+it on the fifth hole inside his box. Otherwise, he'll give the box to
+the robot behind him in line. The second robot wants a box with 5 holes.
+The first hole contains a box with 3 holes. The hole labeled with ""
+contains a pad with the text "new  picture  and  sound" on it. The hole
+labeled with "New picture" contains any picture (for example, a paddle
+which is partly visible). The hole labeled with "New sound" contains any
+sound. The fourth hole contains any picture (for example, a ball which
+is partly visible). The fifth hole contains any sound. If given a box
+like that he will pick up what's in the first hole inside his box. And
+drop it. And pick up what's in the fourth hole inside his box. And drop
+it. And pick up what's in the second hole inside the first thing he made
+or found. And drop it on the fourth hole inside his box. And pick up
+what's in the fifth hole inside his box. And drop it. And pick up what's
+in the third hole inside the first thing he made or found. And drop it
+on the fifth hole inside his box. And grab a copy of Dusty. And push '1'
+while pointing to Dusty. And use Dusty to vacuum the first thing he made
+or found. And use Dusty to vacuum the second thing he made or found. And
+use Dusty to vacuum the last thing he made or found. And release Dusty.
+The second hole contains a bird. The third hole contains a box with 3
+holes. The hole labeled with "" contains a pad with the text "new 
+picture  and  sound" on it. The hole labeled with "New picture" contains
+a picture of a paddle which is partly visible. The hole labeled with
+"New sound" contains a sound "Spiral Out".
+   What follows is in a special code and was produced by ToonTalk(tm) 
+US Trial Version 1.04. To learn more about ToonTalk see www.toontalk.com.
+3BStartToonTalkEncoding:
+Cv8AAwD4AAAM//4APAKXAY8BAQD4AQAo/zD/IQByZXNldGFibGUNCm1ha2Ugc291bmQNCmlm
+IGhpdHRpbmcAAgAADAoAAAAAmAIBBPQB4AEAAAAAAgAg/wAFAAD4AgAG////MP8PAGNoYW5n
+ZQ1tZXNzYWdlcwACCUhpdCBXaG8/ADL/AAAAACsAAQj5AAAA+AMADP8AAA0CvQC9AAAAAAAA
++AQADP8AADYCYgCDAAAAAAAAOP8GAEJlIFlhdwADBwAF//8g/wAFAAD4BQAG////MP8PAGNo
+YW5nZQ1tZXNzYWdlcwACCUhpdCBXaG8/APgGACH/AAA3AlMAdwEAAAAAAPgHAAz/BwANAr0A
+vQAAAAAAAPgIACH/AAA3AlUAfwEAAAAAADz/CgBTcGlyYWwNT3V0AAMJACB9/4MAAP8ABwAE
+/wARDf8gCQAE/wAX//8F//8g/wAFAAAg/wADAAEADv8YAG5ldw0KcGljdHVyZQ0KYW5kDQpz
+b3VuZAADDE5ldyBwaWN0dXJlAPgJACH/AAA3AlUAfwEAAAAACk5ldyBzb3VuZAA8/woAU3Bp
+cmFsDU91dAADCQAJSGl0IFdobz8A/wD/APgKACH/AAA2AmIAgwAAAAAAADz/BgBCZSBZYXcA
+AwcAIHz/gwAD/wAHAAD/AAgU/wAHAAP/AAgV/wAHFAH/AAkAA/8ABwAE/wAIFv8ABxQC/wAJ
+AAT/AA0D/zERA/8xDhT/AA4V/wAOFv8AEAP/ABf///8H//kCADD/DwBjaGFuZ2UNbWVzc2Fn
+ZXMAAiD/AAMAAQAO/xgAbmV3DQpwaWN0dXJlDQphbmQNCnNvdW5kAAMMTmV3IHBpY3R1cmUA
++AsADP8AADcCVQB/AQAAAAAKTmV3IHNvdW5kADj/CgBTcGlyYWwNT3V0AAMJAA==
+.
+This is the end of the code for the ToonTalk object. 

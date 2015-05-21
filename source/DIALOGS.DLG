@@ -1,0 +1,76 @@
+#include "dialogs.h"
+
+//translation of everything with "..." except for "Helv","BUTTON" and "STATIC"
+
+DLG_CUSTINST DIALOG LOADONCALL FIXED DISCARDABLE 11, 21, 254, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CLIPSIBLINGS | WS_CAPTION | WS_SYSMENU
+CAPTION "ToonTalk Installation"
+FONT 11, "Helv"
+{
+ CONTROL "Standard Install (Default)", IDD_B1, "BUTTON", BS_AUTORADIOBUTTON | WS_TABSTOP, 18, 54, 104, 10
+ CONTROL "Minimal Install", IDD_B2, "BUTTON", BS_AUTORADIOBUTTON | WS_TABSTOP, 18, 66, 110, 10
+ CONTROL "Full Install", IDD_B3, "BUTTON", BS_AUTORADIOBUTTON | WS_TABSTOP, 18, 79, 104, 10
+ CONTROL "", IDD_STATUS1, "STATIC", SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 188, 48, 44, 8
+ CONTROL "", IDD_STATUS2, "STATIC", SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 189, 67, 44, 8
+ CONTROL "", IDD_STATUS3, "STATIC", SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 192, 68, 44, 8
+ CONTROL "", IDD_TEXT7, "STATIC", ES_OEMCONVERT, 14, 19, 157, 8
+ CONTROL "&Install", IDD_CONTINUE, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 13, 141, 69, 14
+ CONTROL "&Exit", IDD_EXIT, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 91, 141, 69, 14
+ CONTROL "&Help", IDD_HELP, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 168, 141, 69, 14
+ CONTROL "Installation Options:", -1, "BUTTON", BS_GROUPBOX | WS_CHILD | WS_VISIBLE, 16, 40, 238, 62
+ CONTROL "Set &Location", IDD_PATH, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_GROUP | WS_TABSTOP, 178, 17, 59, 12
+ CONTROL "Install to:", -1, "BUTTON", BS_GROUPBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 7, 6, 238, 28
+ CONTROL "Installation Drive:", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 14, 104, 59, 8
+ CONTROL "Space Required:", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 13, 114, 57, 8
+ CONTROL "Space Available:", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 13, 122, 57, 8
+ CONTROL "", IDD_TEXT1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 73, 104, 19, 8
+ CONTROL "", IDD_TEXT2, "STATIC", SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 73, 114, 44, 8
+ CONTROL "", IDD_TEXT3, "STATIC", SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 73, 122, 44, 8
+ CONTROL "Windows Drive:", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 129, 104, 57, 8
+ CONTROL "Space Required:", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 129, 114, 57, 8
+ CONTROL "Space Available:", -1, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 129, 122, 57, 8
+ CONTROL "", IDD_TEXT4, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 189, 104, 19, 8
+ CONTROL "", IDD_TEXT5, "STATIC", SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 189, 114, 44, 8
+ CONTROL "", IDD_TEXT6, "STATIC", SS_RIGHT | WS_CHILD | WS_VISIBLE | WS_GROUP, 189, 122, 44, 8
+ CONTROL "16 bit: Windows 3.1, 95,  and NT", IDC_CHECKBOX1, "button", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 136, 52, 104, 11
+ CONTROL "32 bit: Windows 95 and NT 4.0", IDC_CHECKBOX2, "button", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 136, 64, 108, 7
+ CONTROL "English version too", IDC_CHECKBOX3, "button", BS_AUTOCHECKBOX | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 136, 88, 96, 11
+}
+
+
+DLG_HELP DIALOG 4, 6, 277, 182
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "CDROM Installation Help"
+FONT 10, "Helv"
+{
+ CONTROL "These options allows you to control which parts of ToonTalk are copied from your CDROM to your hard disk.", 101, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 10, 8, 180, 25
+ CONTROL "Minimal.", 102, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 8, 76, 59, 8
+ CONTROL "Standard.", 103, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 8, 44, 56, 8
+ CONTROL "Full Install.", 104, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 6, 112, 65, 8
+ CONTROL "Uses very little of your hard disk.  Slower to start ToonTalk.  CDROM always required.", 105, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 17, 84, 169, 19
+ CONTROL "Fills your hard disk more than alternatives but you will not need the CDROM to run anything. This option is necessary if you want to try the 640x480 version of ToonTalk (32 bit version).", 106, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 18, 121, 142, 33
+ CONTROL "Starts fast.  Only the demos require the CDROM.", 107, "STATIC", SS_LEFT | WS_CHILD | WS_VISIBLE | WS_GROUP, 16, 52, 159, 22
+ CONTROL "OK", IDD_CONTINUE, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 120, 164, 40, 14
+ CONTROL "16 bit version.", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 168, 64, 60, 8
+ CONTROL "Runs on all Windows platforms", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 176, 72, 100, 8
+ CONTROL "32 bit version.", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 168, 92, 60, 8
+ CONTROL "Generally better but requires", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 176, 100, 88, 8
+ CONTROL "Windows 95 or NT 4.0", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 176, 108, 96, 8
+ CONTROL "Swedish version too.", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 174, 140, 60, 8
+ CONTROL "Installs Swedish version as well", -1, "static", SS_LEFT | WS_CHILD | WS_VISIBLE, 180, 148, 61, 18
+}
+
+
+//---------------------------------------------------------------------------
+// Give options when done with installation
+//---------------------------------------------------------------------------
+
+IDS_LAUNCH DIALOG 3, 50, 263, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Installation Complete"
+FONT 10, "Helv"
+{
+ CONTROL "Start up ToonTalk now. ", 1001, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 46, 14, 171, 20
+ CONTROL "Go back to Windows now.", 1002, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 82, 75, 100, 24
+ CONTROL "Read the User's Guide now.", 1005, "BUTTON", BS_PUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 74, 45, 116, 21
+}

@@ -1,0 +1,88 @@
+// Copyright (c) 1992,1997. Ken Kahn, Animated Programs, All rights reserved
+
+// strings used in compiling ToonTalk to Java
+
+// The following is part of the ToonTalk to Java translator in Swedish
+
+
+IDS_JAVA_LAST_EVENT_COMMENT,
+" // Den här roboten är färdig och ska ge lådan till den första roboten som gör ett nytt försök."
+IDS_JAVA_LAST_EVENT_COMMENT2,
+" // Den här roboten är färdig och och kommer att se efter om lådan fortfarande stämmer överens med den han har i sina tankar och så försöka igen ."
+//IDS_JAVA_BOMB_SET_OFF_COMMENT,
+//" // bomb sprängd"
+IDS_JAVA_FILE_GENERATED_COMMENT,
+"// Denna Java fil skapades automatiskt av ToonTalk för"
+IDS_JAVA_AND_THEN_CREATE, // used in comments
+"Vi har just gjort "
+IDS_JAVA_ROBOT_MATCH_COMMENT,
+"// Om han får en låda som stämmer överens med den han har i sin tankebubbla (som heter \"wants\"),"
+IDS_JAVA_ROBOT_MATCH_COMMENT2,
+"// kommer den här roboten att göra följande."
+IDS_JAVA_IMAGE_CYCLE_COMMENT,
+"// Följande är en förberedelse för att visa en film med"
+IDS_JAVA_NEST_FOR_BIRD_WITHOUT_ONE,
+ "Göra ett bo till en fågel som saknar bo."
+
+// and the following generated HTML can be translated except the tags in <...>
+IDS_HTML_TITLE_TOONTALK, // detta kommer upp på "title" i den webbsida som skapas med namnet
+"<title>ToonTalk"
+IDS_HTML_ROBOT_TEAM_NUMBER, // detta kommer upp på "title" i den webbsida som skapas med namnet
+"Robotlag #"
+IDS_HTML_HREF_END, // detta kommer upp längst ned i den webbsida som skapas
+// den första delen är en länk till källkoden
+"> Se Java källkod.</a>"
+
+//IDS_JAVA_LAST_EVENT_COMMENT,
+// "// Den här roboten är klar och kommer att ge lådan till första roboten och försöka igen."
+//IDS_JAVA_LAST_EVENT_COMMENT2,
+// "// Den här roboten är klar och kommer att se efter om lådan fortfarande passar hans tankar och försöka igen."
+IDS_JAVA_BOMB_SET_OFF_COMMENT,
+ "// för att antända bomb"
+//IDS_JAVA_FILE_GENERATED_COMMENT,
+// "// Denna Javafil genererades automatiskt av ToonTalk för"
+
+
+// and the following generated HTML can be translated except the tags in <...>
+//IDS_HTML_TITLE_TOONTALK,
+// "<title>ToonTalk"
+//IDS_HTML_ROBOT_TEAM_NUMBER,
+// "Robotlag #"
+//IDS_HTML_HREF_END,
+// "> Se Javakällkoden.</a> Klicka för att uppdatera lådorna."
+
+
+// commented out until I figure out why Java is unhappy
+
+//IDS_JAVA_TEMP,   // bara ett namn för att spara tillfälliga saker
+// "temporär"
+//IDS_JAVA_HAND,   // en förkortning av vad du håller i din hand
+// "hand"
+//IDS_JAVA_VACUUM,   // ett namn på en kopia av Dammis
+// "sugaUpp"
+//IDS_JAVA_GIVEN,   // ett namn på något en robot fått
+// "gåva"
+//IDS_JAVA_OLD_GIVEN,   // ett namn på något en robot fått tidigare
+// "gammalGåva"
+//IDS_JAVA_WANTS,   // ett namn på det en robot vill ha (dvs det som finns i hansTankebubbla)
+// "villHa"
+//IDS_JAVA_BOX,
+// "låda"
+//IDS_JAVA_NOTEBOOK,
+// "anteckningsbok"
+//IDS_JAVA_TEAM,   // ett namn på ett robotlag
+// "lag"
+//IDS_JAVA_ROBOT,
+// "robot"
+//IDS_JAVA_NEXT_ROBOT,   // nästa roboten i kön
+// "nästaRobot"
+//IDS_JAVA_NEST,
+// "fågelbo"
+//IDS_JAVA_ITEM_ON_NEST,   // ett namn på saken högst upp som ligger i ett bo
+// "sakIBo"
+//IDS_JAVA_ROBOT_CLASS,
+// "Robot"
+
+
+
+

@@ -1,0 +1,152 @@
+Moderate:
+
+If a picture has parts and is flipped and its subnotebook is removed, then saving the city triggers errors.
+
+FIXED?? If you save a city with a picture running then you need to activate the picture again -- e.g. by dropping it.
+
+On some machines when running demos where the power has been turned off (F8) the frame rate drops very much.
+
+Dropping a copy of the clipboard remote on the clipboard remote hung the system. (Daniel Biddle)
+
+PageUp should just go back one "thought". (Daniel Biddle)
+
+If a robot has been trained to use a notebook and is now using its "home notebook" instead then when re-trained it gets confused.
+
+FIXED? While giving a demo of adding up numbers arriving by bird, the bird got stuck in the room (and was big).
+
+FIXED? Marty with balloons and speaking sometimes jumps to the next sentence before finishing.
+
+Breaks using MouseKeys (It's a built-in feature of Windows 95, which can be found in the
+>Accessibility Options part of Control Panel.) Reported by Daniel Biddle
+
+If on the first Dusty puzzle, a user hits space before picking him up he switches to R and the kid is likely to be confused for a long time...
+
+FIXED? When Marty has a lot to say in one balloon, then the last word is not shown but is said.
+
+Marty can get pretty repetitive if you leave him around.
+
+on the puzzle where you make the 1000 every second timer go to 1 every
+second, I finished the puzzle the correct way,  brought it back to Marty,
+who told me it was changing too fast, I went back to the house, sat down,
+stood up, and returned to Marty who now accepted it. (Shelly)
+
+FIXED? Marty when speaking without bubbles seems to skip sentences...
+
+Find out what problem Logotron fixed about Jump compiler being left on the tool bar for some customers.
+
+The coordinates of pictures shouldn't change when "scrolling" or because of standing up.
+
+Minor:
+
+If you give the wrong answer on the last puzzle (74) and then blow up the house you don't get a new bomb.
+
+Not clear if handling of how control characters inside of text pads is ideal.
+
+FIXED? Rarely and hard to reproduce but the z-ordering of stuff on the wall of the house during puzzles is sometimes wrong.
+
+Rarely I've seen Marty not quite finish beeming out of a room so the teleport image is left frozen there. Only seen on the P100 laptop.
+
+FIXED? I've seen Marty talking with a blank balloon. (Don't know how to reproduce.)
+
+I'll look into the problem of a robot being trained to move the tool box covering things up - it shouldn't. (Doug Merrill)
+
+>Another experience we had is that Bastian once left and entered Marty's
+>spaceship several times in short order, and the messages "You left
+>before I finished talking" seemed to stack up, i.e., Marty's then said
+>it several times in succession. [From Markus]
+
+Set the default to high resolution automatically for fast machines.
+
+Binary number puzzle could say "1 1 0 1 0 0 ..." so it is said in a less controversial fashion.
+
+Aesthetic:
+
+Birds can be made to fly backwards. (Daniel Biddle)
+In one puzzle, birds fly in from the north even though they are coming from the east. (Daniel Biddle)
+
+Robots when in the clipboard don't display their thought bubbles or the rest of the team. Trucks too.
+
+Sometimes something appears one pixel high and too wide when in truck. E.g. Sentence demo example.
+
+Dropping something into a truck (and other things?) while scrolling causes it to end up at the wrong place.
+
+Robots don't always drop things are the right place. Especially when joining 2 boxes. (Shelly)
+
+##### shows up rarely in puzzles on the wall. (Shelly)
+
+P15.pzl can have bad geometry on the wall.
+
+Improvements:
+
+Internally use events like COMMAND_SIT or COMMAND_ERASE. This could be
+used so that DMOs work accross languages despite different keyboard
+accelerators. (Daniel Biddle's suggestion) 
+More importantly could be a nice interface for speech input.
+
+-b 0 isn't useful -- e.g. it doesn't enable you to use ToonTalk without a mouse.
+
+Daniel Biddle:
+>I notice the current behaviour is generally to treat controls as printable
+>characters, with the exception of ^h, ^m, ^[, etc., which are treated as
+>their single-key counterparts in the traditional way of DOS and Unix (and
+>any other ASCII-based interface). This can be confusing and dangerous:
+>typing Ctrl-J, deleting it, then typing something else tends to crash
+>ToonTalk. [crash fixed but confusion remains?]
+
+Daniel Biddle:
+>Basically, yes. Remember that ToonTalk could be stopped at any moment - by
+>a crash or a power cut - so writable files shouldn't be open for much longer
+>than it takes to write to them. I'd be wary of closing the file after every
+>line though: I've seen ToonTalk generate twenty messages in the first frame,
+>and this could cause some disk thrashing. A timer could be used to close the
+>file if it's not written to within a few deciseconds or seconds.
+
+Support useful characters above 127. E.g. « and » for shifting bit strings. 
+And real symbols for multiplication, division, etc. (Daniel Biddle)
+
+File to Picture should work 2-way. Dropping a picture on it makes a file out of it. Good for output
+with greater resolution than 640x480. Maybe other generalizations like this possible too.
+
+Some sensors save themselves as pictures -- e.g. "File to Picture". This means when you save a city and
+resume you have a different semantics for those objects. Make this more consistent.
+
+Improve the notion of modules (e.g. what Sentence demo does). Problems
+include awkwardness of updates and sometimes many copies of notebook
+are dumped and it gets too large.
+
+When you pause the puzzle game you should be given the option of going back one puzzle.
+
+D and U should work while down when flying the helicopter.
+
+Left handed version (might be real easy if/when I switch to the Intel library).
+
+Can robots flip over pictures and use notebooks for subpictures?
+
+Introduce a magnifying glass (Wen "Wayne" Su).
+
+Pressing the delete key might be a nice short cut for F2, F2, space (to turn him on), space (to turn him off). (from Doug Merrill)
+
+Add and maintain a list of project ideas on www.toontalk.com.
+
+Comment (Miki, v210799)
+The sound when you drop something should be different to the sound when you hit the wall (reach the side of the floor). The sound when you hit the wall serves as a warning, unlike the sound when you drop something on the floor. 
+
+Copy of me does too much extra work. Maybe a special encoding for copy of containing notebook's picture would be much more efficient.
+
+When anything is off it should darken (like F8) and F8 should just darken every object.
+
+Need a file sensor (e.g. as Pierre-Andre Dreyfuss suggested) where you can more easily move things in and out of ToonTalk to files.
+
+ttfile needs a "close" message (even though it is closed when last bird is gone).
+
+Miki:
+Say I want a behaviour to make a picture "see all", irrespective of
+its current visibility setting. The only way I have found to do that
+is get "=0" and bam it on the number. (+ and - are no good because
+they make relative changes rather than absolute ones.) This is not
+intuitive! You should be able to take a text pad and type "=SEE ALL"
+and bam that on the sensor to set it. As a short cut, TT could also
+accept shorter non-ambiguously matching strings (in this case "=SEE
+A")
+
+Control-c while on the ground should put all things on the ground on the clipboard. Think about how 2 kids can combine their cities...

@@ -1,0 +1,11 @@
+// the portion in quotes needs translation
+
+IDS_START = "COMENZAR"; // as a label on button
+IDS_STOP = "PARAR"; // as a label on button
+IDS_NOT_STARTED = "No ha comenzado";
+IDS_STOPPED = "detenido.";
+IDS_RESUMED = "continuado.";
+IDS_RUNNING = "Ejecutando.";
+IDS_WAITING_FOR_PICTURE = Esperando para cargar una imagen.";
+IDS_WAITING_FOR_USER_INPUT = "Esperando por una entrada del usuario";
+IDS_ALL_ROBOTS_FINISHED = "Todos los robots han terminado.";

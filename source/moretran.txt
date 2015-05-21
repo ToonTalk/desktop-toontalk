@@ -1,0 +1,10 @@
+" Ahh, sorry I can't remember what I was going to say..."
+
+IDS_GRASP_EXPANDER,
+ "grab a bike pump"
+IDS_EXPANDER_APPLY,
+ "use Pumpy"
+IDS_MILLISECONDS,
+ "milliseconds"
+IDS_ON,
+ "on"  // as in "use Pumpy on" 

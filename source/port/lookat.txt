@@ -1,0 +1,1284 @@
+Comparing files port.rc and port.nrc
+****** port.rc
+// Copyright (c) 1992,1996. Ken Kahn, Animated Programs, All rights reserved
+
+****** port.nrc
+// Copyright (c) 1992,1997. Ken Kahn, Animated Programs, All rights reserved
+
+******
+
+****** port.rc
+ IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+  "o controle remoto"
+ IDS_REMOTE_PICTURE_TYPE_PLURAL,
+****** port.nrc
+ IDS_REMOTE_PICTURE_TYPE_DEFINITE,
+  "o controle remotol"
+ IDS_REMOTE_PICTURE_TYPE_PLURAL,
+******
+
+****** port.rc
+ IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+  "um controle remoto que controla a aparência de alguma coisa"
+ IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+  "o controle remoto que controla a aparência de alguma coisa"
+ IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+  "controles remotos que controlam as aparências das coisas"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+****** port.nrc
+ IDS_REMOTE_APPEARANCE_TYPE_INDEFINITE,
+  "um controle remoto para a aparência de alguma coisa"
+ IDS_REMOTE_APPEARANCE_TYPE_DEFINITE,
+  "o controle remoto para a aparência de alguma coisa"
+ IDS_REMOTE_APPEARANCE_TYPE_PLURAL,
+  "controles remotos para aparências de coisas"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_INDEFINITE,
+******
+
+****** port.rc
+ IDS_THE_ROBOTS_HAND,
+  "a mão do robô"
+ IDS_YOUR_HAND,
+  "sua mão".
+ IDS_BEGIN_THE_ROBOT_IS,
+****** port.nrc
+ IDS_THE_ROBOTS_HAND,
+  "the robot's" // ---
+ IDS_YOUR_HAND,
+  "sua" // --- In Portuguese, 'your'cannot be translated into a single generic word. Pronouns, like adjectives and articles req
+uire the word they refer in order to be used.
+ IDS_BEGIN_THE_ROBOT_IS,
+******
+
+****** port.rc
+  "décimo-primeiro"
+ IDS_TWELTH,
+  "décimo-segundo"
+****** port.nrc
+  "décimo-primeiro"
+ IDS_TWELFTH,
+  "décimo-segundo"
+******
+
+****** port.rc
+ IDS_IS,
+  " is "  // --- (970119) "is" something, or "is" doing something?
+// IDS_TH,
+****** port.nrc
+ IDS_IS,
+  " is "  // ---
+// IDS_TH,
+******
+
+****** port.rc
+ IDS_NEST_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre ninhos. "
+ IDS_NEST_HELP_GIVEN_HELP2,
+****** port.nrc
+ IDS_NEST_HELP_GIVEN_HELP,
+  "Isso é tudo o que sei sobre ninhos. " // --- I think this sentence does not match very well with the next one. t should be t
+he last one.
+ IDS_NEST_HELP_GIVEN_HELP2,
+******
+
+****** port.rc
+ IDS_BOMB_USED_HOUSE_HELP4,
+  "Você pode se sentar em segurança clicando em " // --- (970119) I never saw the remaining of this sentence in ToonTalk
+ IDS_BOMB_USED_TB_HELP,
+****** port.nrc
+ IDS_BOMB_USED_HOUSE_HELP4,
+  "Você pode se sentar em segurança clicando em " // --- I never saw the remaining of this sentence in ToonTalk
+ IDS_BOMB_USED_TB_HELP,
+******
+
+****** port.rc
+ IDS_CUBBY_BAD_CONTENTS_ABORT, 
+  "he tried to put something in a box that doesn't go" // --- (970119) I did not understand what "a box that doesn't go" means
+ IDS_CUBBY_BLANK_HELP,
+****** port.nrc
+ IDS_CUBBY_BAD_CONTENTS_ABORT, 
+  "he tried to put something in a box that doesn't go" // ---
+ IDS_CUBBY_BLANK_HELP,
+******
+
+****** port.rc
+ IDS_CUBBY_CONTENTS_REMOVED_HELP2,
+  " ou com o Dusty. "
+ IDS_CUBBY_CONTENTS_REMOVED_HELP3,
+****** port.nrc
+ IDS_CUBBY_CONTENTS_REMOVED_HELP2,
+  " a mão ou com o Dusty. "
+ IDS_CUBBY_CONTENTS_REMOVED_HELP3,
+******
+
+****** port.rc
+ IDS_CUBBY_CONCATENATION_HELP,
+  "Você pode combinar duas caixas largando uma sobre o lado da outra. "
+ IDS_CUBBY_SIZE_CHANGED_HELP,
+****** port.nrc
+ IDS_CUBBY_CONCATENATION_HELP,
+  "Você pode combinar duas caixas largando uma bem ao lado da outra. "
+ IDS_CUBBY_SIZE_CHANGED_HELP,
+******
+
+****** port.rc
+ IDS_CUBBY_SIZE_CHANGED_HELP2,
+  "Para conseguir caixas com mais de 9 buracos, combine caixas menores largando uma sobre o lado da outra. "
+ IDS_CUBBY_SIZE_CHANGED_HELP3,
+  "Se você apertar '+', um buraco será adicionado. "
+ IDS_CUBBY_SIZE_CHANGED_HELP4,
+****** port.nrc
+ IDS_CUBBY_SIZE_CHANGED_HELP2,
+  "Se você quiser uma caixa com mais de 9 buracos, combine diversas caixas menores largando uma bem colada ao lado da outra. "
+ IDS_CUBBY_SIZE_CHANGED_HELP3,
+  "Se você apertar '+' um buraco será adicionado. "
+ IDS_CUBBY_SIZE_CHANGED_HELP4,
+******
+
+****** port.rc
+ IDS_CUBBY_SIZE_CHANGED_HELP5,
+  "Você pode usar o teclado para alterar o número de buracos enquanto estiver segurando uma caixa. "
+ IDS_CUBBY_LABELED_HELP,
+****** port.nrc
+ IDS_CUBBY_SIZE_CHANGED_HELP5,
+  "Você pode usar o teclado para alterar o número de buracos enquanto você estiver segurando uma caixa. "
+ IDS_CUBBY_LABELED_HELP,
+******
+
+****** port.rc
+ IDS_BOX_WITH,
+  "uma caixa que tenha "
+ IDS_ONE_HOLE,
+****** port.nrc
+ IDS_BOX_WITH,
+  "uma caixa que tem "
+ IDS_ONE_HOLE,
+******
+
+****** port.rc
+ IDS_WHOSE,
+  " cujo " // --- (970120) I think that the use of too many "whose" makes the sentence hard to read and boring. My suggestion i
+s to simply tell that the robot expects a box whose: 1st hole contains something, the 2nd hole contains other stuff, ... Ie. li
+st the contents of the holes separated by commas ...
+ IDS_AND_WHOSE,
+****** port.nrc
+ IDS_WHOSE,
+  " cujo " 
+ IDS_AND_WHOSE,
+******
+
+****** port.rc
+ IDS_AND_BEGIN_SENTENCE,
+  "E" // --- (970120) In my opinion, the use of too many sentences starting with "E" is very repetitive and boring. Why not joi
+n all the sentences together separating them with a simple ","?
+ IDS_THE_LETTER,
+****** port.nrc
+ IDS_AND_BEGIN_SENTENCE,
+  "E"
+ IDS_THE_LETTER,
+******
+
+****** port.rc
+ IDS_MOVE_TO,
+  "se mover para" 
+ IDS_SELECT_COPIER,
+****** port.nrc
+ IDS_MOVE_TO,
+  "mover para" 
+ IDS_SELECT_COPIER,
+******
+
+****** port.rc
+ IDS_RELEASE_COPIER,
+  "soltar a varinha mágica"
+ IDS_GRASP_ITEM,
+****** port.nrc
+ IDS_RELEASE_COPIER,
+  "solte a varinha mágica"
+ IDS_GRASP_ITEM,
+******
+
+****** port.rc
+ IDS_SELECT_VACUUM,
+  "apanhar uma cópia do Dusty"
+ IDS_APPLY_VACUUM,
+  "usar o Dusty para aspirar"
+ IDS_APPLY_VACUUM_RESTORE,
+  "ligar o Dusty ao contrário para devolver"
+ IDS_RELEASE_VACUUM, 
+  "soltar o Dusty"
+ IDS_SEND_TO,
+  "empurrar" // --- (970119) When is this used?
+ IDS_RELEASE_IN_NEST,
+  "soltar o ninho e esperar o ovo chocar"
+ IDS_GIVE_BIRD,
+  "dar" 
+ IDS_GIVE_BIRD2,
+  " para o pássaro" 
+ IDS_RELEASE_IN_TRUCK,
+  "colocar" 
+ IDS_RELEASE_IN_TRUCK2,
+  " dentro do caminhão"
+ IDS_DESTROY_HOUSE,
+  "tiver estourado a casa em que ele estiver" // --- (970119) when/where is this used?
+ IDS_APPLY_ITEM_HELD,
+  "usar "
+ IDS_LABEL_CHARACTER,
+  "adicionar" // --- (970119) when/where is this used?
+ IDS_CHARACTER_AND_SELECT,
+  "empurrar" // --- (970119) when/where is this used?
+ IDS_GRASP_NEST,
+  "pegar" // ---
+ IDS_NEW_MAIN_CUBBY,
+  "ir trabalhar em" // ---
+ IDS_COPIER_APPLY_NEST,
+ "usar a varinha mágica em "  // ---       
+ IDS_VACUUM_APPLY_NEST,
+ "usar o Dusty para aspirar"   
+ IDS_APPLY_GRASPED_NEST,
+  "usar"
+
+****** port.nrc
+ IDS_SELECT_VACUUM,
+  "apanhar uma cópia do Dusty" // --- I need the subject of this sentence
+ IDS_APPLY_VACUUM,
+  "use Dusty to vacuum" // ---
+ IDS_APPLY_VACUUM_RESTORE,
+  "run Dusty in reverse to restore" // ---
+ IDS_RELEASE_VACUUM, 
+  "release Dusty" // ---
+ IDS_SEND_TO,
+  "push" // ---
+ IDS_RELEASE_IN_NEST,
+  "release the nest and watch a bird hatch" // ---
+ IDS_GIVE_BIRD,
+  "give" // ---
+ IDS_GIVE_BIRD2,
+  " to the bird" // ---
+ IDS_RELEASE_IN_TRUCK,
+  "drop" // ---
+ IDS_RELEASE_IN_TRUCK2,
+  " into the truck" // ---
+ IDS_DESTROY_HOUSE,
+  "have blown up the house he's in" // ---
+ IDS_APPLY_ITEM_HELD,
+  "use" // ---
+ IDS_LABEL_CHARACTER,
+  "add" // ---
+ IDS_CHARACTER_AND_SELECT,
+  "push" // ---
+ IDS_GRASP_NEST,
+  "pick up" // ---
+ IDS_NEW_MAIN_CUBBY,
+  "switch to working on" // ---
+ IDS_COPIER_APPLY_NEST,
+ "use the magic wand on"  // ---       
+ IDS_VACUUM_APPLY_NEST,
+ "use o Dusty para aspirar"   
+ IDS_APPLY_GRASPED_NEST,
+  "use"
+
+******
+
+****** port.rc
+ IDS_BYE3,
+  "Até logo!"
+ IDS_GOOD1,
+****** port.nrc
+ IDS_BYE3,
+  "Até logo!."
+ IDS_GOOD1,
+******
+
+****** port.rc
+ IDS_A_REMOTE_CONTROL_FOR,
+  "um controle remoto que controla "
+ IDS_ANY_NUMBER,
+****** port.nrc
+ IDS_A_REMOTE_CONTROL_FOR,
+  "um controle remoto para "
+ IDS_ANY_NUMBER,
+******
+
+****** port.rc
+ IDS_INTS_MADE_NEGATIVE_HELP,
+  "Você pode mudar o " 
+ IDS_INTO,
+****** port.nrc
+ IDS_INTS_MADE_NEGATIVE_HELP,
+  "Você pode mudar o " // --- This sentence gets a little bit weird when the user is pointing to the number 0. She will have so
+mething like: "You can change 0 to 0 pressing - ..."
+ IDS_INTO,
+******
+
+****** port.rc
+  "o detector que mostra uma simples animação de um objeto colidindo ou não (acertou ou errou). Você pode transformar um acerto
+ em um erro apontando para o detector e apertando a barra de espaço" 
+ IDS_COLLIDE_WHO_HELP,
+****** port.nrc
+  "o detector que mostra uma simples animação de um objeto colidindo ou não (acertou ou errou). Você pode transformar um acerto
+ em um erro apontando para o detector e apertando a barra de espaço" // --- in what case is this used? 
+ IDS_COLLIDE_WHO_HELP,
+******
+
+****** port.rc
+ IDS_X_COLLIDE_HELP,
+  "o detector de colisão ocorrida em um movimento direita/esquerda"
+ IDS_Y_COLLIDE_HELP,
+****** port.nrc
+ IDS_X_COLLIDE_HELP,
+  "o detector de colisão ocorrida em um movimento direita/esquerda" // --- I did not understand this collision stuff
+ IDS_Y_COLLIDE_HELP,
+******
+
+****** port.rc
+ IDS_REMOTE_DESCRIPTION,
+  "Este representa um controle remoto que controla "
+ IDS_REMOTE_COLOR_DESCRIPTION,
+****** port.nrc
+ IDS_REMOTE_DESCRIPTION,
+  "Este número é um controle remoto para "
+ IDS_REMOTE_COLOR_DESCRIPTION,
+******
+
+****** port.rc
+ IDS_REMOTE_NUMBER_DESCRIPTION6,
+  "Este número é um sensor destacável que indica " 
+ IDS_REMOTE_NUMBER_DESCRIPTION7,
+****** port.nrc
+ IDS_REMOTE_NUMBER_DESCRIPTION6,
+  "Este número é um indicador destacável para " 
+ IDS_REMOTE_NUMBER_DESCRIPTION7,
+******
+
+****** port.rc
+ IDS_PICT_CHANGED_KEY_HELP,
+  "This picture is really " // --- (970119) Where/when?
+ IDS_PICT_CHANGED_KEY_HELP2,
+****** port.nrc
+ IDS_PICT_CHANGED_KEY_HELP,
+  "This picture is really " // ---
+ IDS_PICT_CHANGED_KEY_HELP2,
+******
+
+****** port.rc
+ IDS_PICT_TOSSED_HELP,
+  "You can give this a toss by pressing " // --- (970119) What is this for?
+ IDS_PICT_TOSSED_HELP2,
+****** port.nrc
+ IDS_PICT_TOSSED_HELP,
+  "You can give this a toss by pressing " // --- What is this for?
+ IDS_PICT_TOSSED_HELP2,
+******
+
+****** port.rc
+ IDS_ROBOT_DESCRIBE2,
+  "um robô que espera "
+ IDS_ROBOT_DESCRIBE3,
+  ". Ao receber uma caixa como esta, ele irá "
+ IDS_ROBOT_DESCRIBE4,
+****** port.nrc
+ IDS_ROBOT_DESCRIBE2,
+  "um robô que quer "
+ IDS_ROBOT_DESCRIBE3,
+  ". Ao receber uma caixa como esta ele irá "
+ IDS_ROBOT_DESCRIBE4,
+******
+
+****** port.rc
+ IDS_EXPANDER_GREW_ITEM_HELP3,
+  "Pumpy fará com que"
+// IDS_BIGGER,
+****** port.nrc
+ IDS_EXPANDER_GREW_ITEM_HELP3,
+  "Pumpy fará"
+// IDS_BIGGER,
+******
+
+****** port.rc
+ IDS_EXPANDER_CALLED_HELP2,
+  ", basta chamá-lo apertando a tecla F3. "
+ IDS_EXPANDER_CALLED_HELP3,
+****** port.nrc
+ IDS_EXPANDER_CALLED_HELP2,
+  " sua mão, aperte a tecla F3. "
+ IDS_EXPANDER_CALLED_HELP3,
+******
+
+****** port.rc
+ IDS_VACUUM_BLANK_HELP,
+  "O Dusty irá apagar o conteúdo "
+ IDS_VACUUM_BLANK_HELP2, // 10/4
+****** port.nrc
+ IDS_VACUUM_BLANK_HELP,
+  "O Dusty irá apagar "
+ IDS_VACUUM_BLANK_HELP2, // 10/4
+******
+
+****** port.rc
+//  "a text or number pad or an empty box under it"
+  "do que estiver sob seu nariz"
+ IDS_VACUUM_BLANK_HELP3,
+****** port.nrc
+//  "a text or number pad or an empty box under it"
+  "o que estiver sob seu nariz"
+ IDS_VACUUM_BLANK_HELP3,
+******
+
+****** port.rc
+ IDS_VACUUM_CALLED_HELP,
+  "Toda vez que você quiser que o Dusty apareça e venha para "
+ IDS_VACUUM_CALLED_HELP2,
+  ", aperte a tecla F2. "
+ IDS_VACUUM_CALLED_HELP3,
+****** port.nrc
+ IDS_VACUUM_CALLED_HELP,
+  "Toda vez que você quiser que o Dusty apareça e venha para " // --- Here, due to the caracteristics of the language, it is be
+tter to remove the 'your' that the program is automatically including in the result and insert it manually into the specific se
+ntence. That would become something like 'Dusty comes to' + 'your hand', instead of 'Dusty comes to' + 'your' + 'hand'
+ IDS_VACUUM_CALLED_HELP2,
+  " sua mão, aperte a tecla F2. "
+ IDS_VACUUM_CALLED_HELP3,
+******
+
+****** port.rc
+ IDS_VACUUM_HELP_GIVEN_HELP2,
+  "Eu às vezes uso o Dusty para mover objetos entre casas. "
+ IDS_VACUUM_HELP_GIVEN_HELP3,
+****** port.nrc
+ IDS_VACUUM_HELP_GIVEN_HELP2,
+  "Eu às vezes uso ele para mover objetos entre casas. " // --- This sentence is in a strange place. It is showing up after the
+ 'this is all I had to tell you about Dusty'...
+ IDS_VACUUM_HELP_GIVEN_HELP3,
+******
+
+****** port.rc
+ IDS_COPIER_CALLED_HELP,
+  "Se alguma vez você quiser que a varinha mágica flutue diretamente para "
+ IDS_COPIER_CALLED_HELP2,
+  ", basta chamá-la apertando o botão F5. "
+ IDS_COPIER_CALLED_HELP3,
+****** port.nrc
+ IDS_COPIER_CALLED_HELP,
+  "Se alguma vez você quiser que a varinha mágica flutue diretamente para sua " // --- Here we have the same thing that happens
+ with the Dusty help. It is better to eliminate the automatic insertion of the 'your' and include it in the specific phrase.
+ IDS_COPIER_CALLED_HELP2,
+  " mão, basta chamá-la apertando o botão F5. "
+ IDS_COPIER_CALLED_HELP3,
+******
+
+****** port.rc
+ IDS_SCALE_TO_RIGHT,
+  "uma balança inclinada para a direita" // --- (970120) This text is being displayed with na extra ")"
+ IDS_SCALE_BALANCED,
+****** port.nrc
+ IDS_SCALE_TO_RIGHT,
+  "uma balança inclinada para a direita"
+ IDS_SCALE_BALANCED,
+******
+
+****** port.rc
+ IDS_ROBOT_TRAIN2,
+  "Eu começo dando a ele o tipo de caixa com que ele deverá trabalhar. "
+ IDS_ROBOT_TRAIN3,
+****** port.nrc
+ IDS_ROBOT_TRAIN2,
+  "Eu começo dando a ele o tipo de caixa com que eu quero que ele trabalhe. "
+ IDS_ROBOT_TRAIN3,
+******
+
+****** port.rc
+ IDS_ROBOTS_LINE_UP1,
+  "Também é bom saber que os robôs não são muito inteligentes. "
+ IDS_ROBOTS_LINE_UP2,
+****** port.nrc
+ IDS_ROBOTS_LINE_UP1,
+  "Os robôs também são bem bobinhos. "
+ IDS_ROBOTS_LINE_UP2,
+******
+
+****** port.rc
+ IDS_BE_WOP_SOUND,
+  "Be Wop" // --- (970119)
+ IDS_BE_YAW_SOUND,
+****** port.nrc
+ IDS_BE_WOP_SOUND,
+  "Be Wop" // ---
+ IDS_BE_YAW_SOUND,
+******
+
+****** port.rc
+
+
+ IDS_VISIBLE_REMOTE_STATE1,
+        "VER TUDO" // --- (970119) Where/when are these sentences used?
+ IDS_VISIBLE_REMOTE_STATE2,
+        "VER PARTE" // ---
+ IDS_VISIBLE_REMOTE_STATE3,
+        "NÃO VER" // ---
+
+
+IDS_EMPTY_NEST,
+****** port.nrc
+
+IDS_EMPTY_NEST,
+******
+
+****** port.rc
+ "Se você largar um número ou um texto em uma caixa em branco, a caixa irá expandir o texto para ter uma letra por buraco. "
+IDS_VACUUM_TO_BLANK_HELP, 
+ "Você pode usar Dusty, o aspirador, para esvaziar uma caixa. "
+****** port.nrc
+ "Se você largar um número ou um texto em uma caixa em branco, a caixa irá expandir o texto para ter uma letra por buraco. "
+IDS_VACUUM_TO_BLANK_HELP, // --- Syntax error on VACCUM. It should be VACUUM ...
+ "Você pode usar Dusty, o aspirador, para esvaziar uma caixa. "
+******
+
+****** port.rc
+IDS_SPECIAL_MAGIC_WAND_USE,
+ "usar a varinha mágica, segurando a tecla CONTROL apertada, sobre"
+IDS_KEY_WHILE_POINTING, 
+****** port.nrc
+IDS_SPECIAL_MAGIC_WAND_USE,
+ "usar a varinha mágica, segurando a tecla CONTROL apertada, sobre" // ---
+IDS_KEY_WHILE_POINTING, 
+******
+
+****** port.rc
+IDS_TO_LABEL_OF,
+ " à etiqueta da" 
+
+****** port.nrc
+IDS_TO_LABEL_OF,
+ " to the label of" // --- 'of' can be translated to either 'de' or 'da' depending on the gender of the word that follows it. A
+ possible solution for this problem would be to separate the 'of' from the rest of the sentence and have it attached to the nou
+n it is used with. This way we would need all combinations: "the house", "a house", "house", "houses", "of the house", "of a ho
+use", "of the houses". In Portuguese, that would become: "a casa", "uma casa", "casa", "casas", "da casa", "de uma casa", "das 
+casas". This because house is a female word. If it were male, like car, we would have: "o carro", "um carro", "carro", "carros"
+, "do carro", "de um carro", "dos carros".
+
+******
+
+****** port.rc
+IDS_WHATS_ON,
+ "o que estiver na" 
+IDS_WHATS_IN,
+ "o que estiver dentro do"
+IDS_PAGE,
+****** port.nrc
+IDS_WHATS_ON,
+ "o que estiver na"  // Again, it depends on the gender of the word that comes afterwards.
+IDS_WHATS_IN,
+ "o que estiver dentro do" // ---
+IDS_PAGE,
+******
+
+****** port.rc
+IDS_RIGHT_MOUSE_BUTTON_WITH_ONE_BUTTON,
+ "um botão do mouse, enquanto estiver segurando a tecla 'Shift' apertada,"
+IDS_LEFT_BUTTON_WITH_ONE_BUTTON,
+****** port.nrc
+IDS_RIGHT_MOUSE_BUTTON_WITH_ONE_BUTTON,
+ "um botão do mouse enquanto estiver segurando a tecla 'Shift' apertada"
+IDS_LEFT_BUTTON_WITH_ONE_BUTTON,
+******
+
+****** port.rc
+ "Eu não peguei o seu nome. Dessa forma, agora eu vou chamar você de SemNome e salvar tudo o que você fizer sob este este nome.
+ "
+IDS_TROUBLE_WANT_TO_CONTINUE,
+****** port.nrc
+ "Eu não peguei o seu nome. Dessa forma, agora eu vou chamar você de SemNome e salvar tudo o que você fizer sob este este nome.
+ " // --- I substituted NoName by SemNome. Please replace this wherever it is used.
+IDS_TROUBLE_WANT_TO_CONTINUE,
+******
+
+****** port.rc
+IDS_THOUSANDS_COMMA,
+ "." // --- (970119) In Brazil, one thousand is written like 1.000,00 , not 1,000.00
+//IDS_THOUSANDS_COMMA2,
+****** port.nrc
+IDS_THOUSANDS_COMMA,
+ "." // ----- In Brazil, one thousand is written like 1.000,00 , not 1,000.00
+//IDS_THOUSANDS_COMMA2,
+******
+
+****** port.rc
+IDS_FOR,
+ "que controla"
+IDS_AND_COMBINED_WITH,
+****** port.nrc
+IDS_FOR,
+ "de"
+IDS_AND_COMBINED_WITH,
+******
+
+****** port.rc
+ "não pode alterar o valor de um sensor "
+IDS_YES,
+ "sim"
+IDS_NO,
+ "não"
+IDS_BALD,
+****** port.nrc
+ "não pode alterar o valor de um sensor "
+IDS_BALD,
+******
+
+****** port.rc
+IDS_THIS_TEXT_PAD,
+ "Este tijolinho de texto é"
+IDS_THIS_IS,
+ "Este é" 
+IDS_TURN_OFF_COLLISION_WITH_SPACE,
+****** port.nrc
+IDS_THIS_TEXT_PAD,
+ "This text pad is" // --- is something or is doing something?
+IDS_THIS_IS,
+ "This is" // ---
+IDS_TURN_OFF_COLLISION_WITH_SPACE,
+******
+
+****** port.rc
+IDS_OUTLET,
+ "Saída" 
+IDS_INLET,
+ "Entrada" 
+IDS_COUNT,
+ "conta"
+IDS_SOUND,
+****** port.nrc
+IDS_OUTLET,
+ "Outlet" // ---
+IDS_INLET,
+ "Inlet" // ---
+IDS_COUNT,
+ "count" // ---
+IDS_SOUND,
+******
+
+****** port.rc
+IDS_REMOTE_APPEARANCE_CONTROL,
+ "um controle remoto que controla a aparência de uma figura " 
+IDS_WHICH_IS_INVISIBLE,
+****** port.nrc
+IDS_REMOTE_APPEARANCE_CONTROL,
+ "a remote control for another's looks" // ---
+IDS_WHICH_IS_INVISIBLE,
+******
+
+****** port.rc
+IDS_WHICH_IS_PARTLY_VISIBLE,
+ "que está parcialmente visível" //--- (970120) This text is also being shown with an extra ")"
+IDS_JUST_A_NOTEBOOK,
+****** port.nrc
+IDS_WHICH_IS_PARTLY_VISIBLE,
+ "que está parcialmente visível"
+IDS_JUST_A_NOTEBOOK,
+******
+
+****** port.rc
+IDS_ARE,
+ "estão"
+IDS_WITH,
+****** port.nrc
+IDS_ARE,
+ "are" // ---
+IDS_WITH,
+******
+
+****** port.rc
+IDS_CANT_FLIP_REMOTES,
+ "você não pode virar de lado o controle remoto de aparência de uma figura"
+IDS_IGNORED_DROP_TOO_MANY_LEVELS,
+****** port.nrc
+IDS_CANT_FLIP_REMOTES,
+ "you can't flip over a remote control for another's looks" // -----
+IDS_IGNORED_DROP_TOO_MANY_LEVELS,
+******
+
+****** port.rc
+IDS_REMOTE_CANT_ACCEPT_THAT,
+ "controles remotos de aparência não podem aceitar aquele item"
+IDS_PICTURE_WAITING_FOR_MOUSE,
+****** port.nrc
+IDS_REMOTE_CANT_ACCEPT_THAT,
+ "o controle remoto que lida com a parência das coisas não pode aceitar aquele item"
+IDS_PICTURE_WAITING_FOR_MOUSE,
+******
+
+****** port.rc
+IDS_SORRY_WAIT_TIL_NEXT_TIME,
+ "Desculpe, mas as mudanças não serão efetivadas até a próxima vez em que o ToonTalk for reiniciado. "
+
+****** port.nrc
+IDS_SORRY_WAIT_TIL_NEXT_TIME,
+ "Desculpe, mas as mudanças efetuadas não serão efetivadas até a próxima vez em que o ToonTalk for reiniciado. "
+
+******
+
+****** port.rc
+IDS_CONFUSED_ABOUT_PROGRAMMER,
+"O ToonTalk está confuso e não está conseguindo acompanhar o que o programador está fazendo."
+IDS_F8_PRESSED_HELP,
+****** port.nrc
+IDS_CONFUSED_ABOUT_PROGRAMMER,
+"O ToonTalk está confuso e não está conseguiu acompanhar o que o programador está fazendo."
+IDS_F8_PRESSED_HELP,
+******
+
+****** port.rc
+IDS_ROBOT_LOST_TRACK,
+ "um robô perdeu alguns objetos com que estava lidando" 
+IDS_ROBOT_FILE_BAD,
+****** port.nrc
+IDS_ROBOT_LOST_TRACK,
+ "a robot lost track of stuff" // ----
+IDS_ROBOT_FILE_BAD,
+******
+
+****** port.rc
+IDS_WHAT_IS_ON_TOP_OF,
+  "o que estiver por cima de" // --- (970119) Here we have our old problem. The "of" of "on top of" will have different transla
+tions depending on the word that follows it
+//IDS_TOONTALK_PAUSED,
+****** port.nrc
+IDS_WHAT_IS_ON_TOP_OF,
+  "what is on top of" // -----
+//IDS_TOONTALK_PAUSED,
+******
+
+****** port.rc
+IDS_UUENCODING_HEADER,
+  "   Este é o resultado de se \"colar\" um objeto do ToonTalk. Você pode incluí-lo"
+IDS_UUENCODING_HEADER2,
+  "em arquivos, mensagens de e-mail, ou em qualquer outra coisa. Para decodificar, basta usar qualquer programa"
+IDS_UUENCODING_HEADER3,
+  "que permita copiá-lo para a Área de Transferência do Windows. Por exemplo, você pode usar"
+IDS_UUENCODING_HEADER4,
+  "o Bloco de Notas ou o programa Write do Windows. Basta selecionar todo "
+IDS_UUENCODING_HEADER5,
+  "o código abaixo e então apertar o comando Copiar no menu Editar."
+IDS_UUENCODING_HEADER6,
+  "Fazendo isso, o objeto selecionado aparecerá no ToonTalk dentro do controle remoto que cuida da Área de Transferência."
+IDS_UUENCODING_HEADER7,
+****** port.nrc
+IDS_UUENCODING_HEADER,
+  "   Este é o resultado de se \"colar\" um objeto do ToonTalk. Você pode incluir"
+IDS_UUENCODING_HEADER2,
+  "em arquivos, mensagens de e-mail, ou qualquer coisa. Para decodificar, basta usar qualquer programa"
+IDS_UUENCODING_HEADER3,
+  "que possa copiá-lo para a Área de Transferência do Windows. Por exemplo, você pode usar"
+IDS_UUENCODING_HEADER4,
+  "o Bloco de Notas ou o programa Write do Windows. Basta assegurar que a área selecionada inclua"
+IDS_UUENCODING_HEADER5,
+  "o código abaixo e então selecione o comando Copiar no menu Editar."
+IDS_UUENCODING_HEADER6,
+  "Aí então ele aparecerá dentro do controle remoto do ToonTalk que está relacionado com a Área de Transferência."
+IDS_UUENCODING_HEADER7,
+******
+
+****** port.rc
+IDS_UUENCODING_FOOTER,
+  "Este é o final do código do objeto do ToonTalk." 
+IDS_WHAT_FOLLOWS_IS_CODE,
+  "   O que segue é um código especial produzido pelo programa ToonTalk(tm) "
+IDS_FOLLOWING_IS,
+  "O que vem a seguir é "
+IDS_TOONTALK_VERSION_NUMBER,
+  "Beta Version 5A." // --- (970119) I'm not going to translate the version number, nor the start token
+IDS_UUENCODING_START_TOKEN,
+  "4!@%!(%@" // must be an even number of characters -- first digit version number
+//IDS_BETA4_FORMAT_WARNING,
+****** port.nrc
+IDS_UUENCODING_FOOTER,
+  "This is the end of the code for the ToonTalk object." // --- Shall I translate this? What about the HEADERS above? Do they b
+elong to the code structure?
+IDS_WHAT_FOLLOWS_IS_CODE,
+  "   What follows is in a special code and was produced by ToonTalk(tm) "
+IDS_FOLLOWING_IS,
+  "The following is "
+IDS_TOONTALK_VERSION_NUMBER,
+  "Beta Version 5C."
+//IDS_BETA4_FORMAT_WARNING,
+******
+
+****** port.rc
+IDS_BETA_TO_EXPIRE_SOON,
+  "Já é hora de obter uma nova versão do ToonTalk. Estaversão beta deixará de funcionar dia primeiro de março." // --- (970119)
+ Is March 1st still valid?
+IDS_FOR_EXAMPLE,
+****** port.nrc
+IDS_BETA_TO_EXPIRE_SOON,
+  "Já é hora de obter uma nova versão do ToonTalk. Estaversão beta deixará de funcionar dia primeiro de fevereiro." // --- Is F
+ebruary 1st still valid?
+IDS_FOR_EXAMPLE,
+******
+
+****** port.rc
+IDS_WHICH_ORIGINALLY_WAS,
+  "que inicalmente era" 
+
+****** port.nrc
+IDS_WHICH_ORIGINALLY_WAS,
+  "which originally was" // ---
+
+******
+
+****** port.rc
+IDS_IF_YOU_PICK_UP_AND_PRESS,
+ "Se você pegá-lo com a mão e apertar"
+IDS_JUST_THE_SPACE_BUTTON,
+ "ou apenas a barra de espaço"
+//IDS_JUST,
+****** port.nrc
+IDS_IF_YOU_PICK_UP_AND_PRESS,
+ "If you pick it up and press" // ---
+IDS_JUST_THE_SPACE_BUTTON,
+ "just the space button" // ---
+//IDS_JUST,
+******
+
+****** port.rc
+IDS_OR_JUST,
+ "ou apenas"
+
+****** port.nrc
+IDS_OR_JUST,
+ "ou"
+
+******
+
+****** port.rc
+IDS_IN,
+ "in" // --- (970119) Again, "in" will have different translations depending on the word that follow it
+IDS_WARNING,
+****** port.nrc
+IDS_IN,
+ "in" // ----
+IDS_WARNING,
+******
+
+****** port.rc
+IDS_CANT_ADD_TO_SIDE_OF_BLANK_BOX,
+ "nada poderá ser anexado no lado de uma caixa vazia" 
+
+****** port.nrc
+IDS_CANT_ADD_TO_SIDE_OF_BLANK_BOX,
+ "nothing will stick to the side of a blank box" // ----
+
+******
+
+****** port.rc
+
+// names of some of the special keyboard characters:
+IDS_VK_HOME,
+ "Home"
+IDS_VK_END,
+ "End"
+IDS_VK_PRIOR,
+ "Page up"
+IDS_VK_NEXT,
+ "Page down"
+IDS_VK_LEFT,
+ "Seta para a esquerda" // --- (970119) On the keyboards here these keys are not labeled. They simply have an arrow to each dir
+ection on top of them. What should I put?
+IDS_VK_RIGHT,
+ "Seta para a direita "
+IDS_VK_UP,
+ "Seta para cima"
+IDS_VK_DOWN,
+ "Seta para baixo"
+IDS_VK_DELETE,
+ "Delete"
+IDS_VK_INSERT,
+ "Insert"
+           
+IDS_OTHER_SPECIAL_KEY,
+ "Tecla especial"
+IDS_SAMPLE_CONTROL_LETTER,
+ "Control-A"
+IDS_BACKSPACE_KEY,
+ "Backspace"
+IDS_ENTER_KEY,
+ "Enter"
+IDS_ESCAPE_KEY,
+ "Escape"
+IDS_SOME_KEY,
+ "Alguma tecla"
+
+// added since translat.txt sent out
+****** port.nrc
+
+// added since translat.txt sent out
+******
+
+****** port.rc
+IDS_USE,
+  "use" // --- (970119) Who is the subjetc of this verb? Is it in the infinitive?
+IDS_USES,
+****** port.nrc
+IDS_USE,
+  "use" // ----
+IDS_USES,
+******
+
+****** port.rc
+IDS_SOMETHING_IS_MISSING,
+ "Algo está faltando do/da" // --- (970119) Two things here. In Portuguese this sentence would become "Something from" + someth
+ing + "is missing". And the "from" will have different translations depending on the word that follows it
+IDS_SOMETHING_IS_MISSING2,
+****** port.nrc
+IDS_SOMETHING_IS_MISSING,
+ "Algo está faltando do/da" // -----
+IDS_SOMETHING_IS_MISSING2,
+******
+
+****** port.rc
+IDS_EXPANDER_KEY_COMMANDS,
+ "BTWLSNG" // --- (970119) I'm gonna wait for the next version before translating these and the other KEY_COMMANDAS, Ok?
+IDS_WHO_IS_READY_TO,
+****** port.nrc
+IDS_EXPANDER_KEY_COMMANDS,
+ "BTWLSNG" // ---- We will probably need to change these letters
+IDS_WHO_IS_READY_TO,
+******
+
+****** port.rc
+IDS_THAT_IS_READY_TO,
+ "que está pronto para" // --- (970119) The word "ready" will have different translations depending on the object that is ready
+
+IDS_MAKE_THINGS,
+****** port.nrc
+IDS_THAT_IS_READY_TO,
+ "que está pronto"
+IDS_MAKE_THINGS,
+******
+
+****** port.rc
+IDS_BUTTON_HELP_GIVEN_HELP4,
+"if you pick it up." // --- (970119) "it"may have different translations depending on the noun it refers to
+IDS_BUTTON_HELP_GIVEN_HELP5,
+"if you pick him up." // --- (970119) Same as above
+
+****** port.nrc
+IDS_BUTTON_HELP_GIVEN_HELP4,
+"if you pick it up." // ---
+IDS_BUTTON_HELP_GIVEN_HELP5,
+"if you pick him up." // ---
+
+******
+
+****** port.rc
+"'B' para maior, 'T' para mais alto, 'W' para mais largo, 'L' para menor, 'S' para mais curto, 'N' para mais estreito, e 'G' pa
+ra um bom tamanho." // --- (970119) Letters to be changed in the future
+IDS_EXPANDER_SELECTION_HELP,
+"as coisas que estiverem embaixo do seu nariz fiquem"
+IDS_TURN_HIM_ON_HELP,
+"Você também pode ligá-lo ou desligá-lo apertando a barra de espaço enquanto estiver com ele em sua mão." 
+IDS_TURN_IT_ON_HELP,
+"Você também pode ligá-lo ou desligá-lo apertando a barra de espaço enquanto o estiver segurando." // --- (970120) "Turn him on
+/off" will also have different translations the magic wand is female and Dusty is a male word... One possible solution for this
+ problem would be to have all characters converted to the same sex. Other would be to have each situaion defined in separate 
+
+****** port.nrc
+"'B' para maior, 'T' para mais alto, 'W' para mais largo, 'L' para menor, 'S' para mais curto, 'N' para mais estreito, e 'G' pa
+ra um bom tamanho." // --- Letters to be changed
+IDS_EXPANDER_SELECTION_HELP,
+"qualquer coisa que esteja embaixo do seu nariz"
+IDS_TURN_HIM_ON_HELP,
+"Você também pode ligá-lo ou desligá-lo apertando a barra de espaço enquanto estiver com ele em sua mão."
+IDS_TURN_IT_ON_HELP,
+"Você também pode ligá-lo ou desligá-lo apertando a barra de espaço enquanto o estiver segurando."
+
+******
+
+****** port.rc
+IDS_JANUARY,
+"janeiro"
+IDS_FEBRUARY,
+"fevereiro"
+IDS_MARCH,
+"março"
+IDS_APRIL,
+"abril"
+IDS_MAY,
+"maio"
+IDS_JUNE,
+"junho"
+IDS_JULY,
+"julho"
+IDS_AUGUST,
+"agosto"
+IDS_SEPTEMBER,
+"setembro"
+IDS_OCTOBER,
+"outubro"
+IDS_NOVEMBER,
+"novembro"
+IDS_DECEMBER,
+"dezembro"
+IDS_NO_SUCH_MONTH,
+****** port.nrc
+IDS_JANUARY,
+"Janeiro" // --- In Brazil, month names begin with low letters. The only exception occurs when they are in the beginning of a s
+entence
+IDS_FEBRUARY,
+"Fevereiro"
+IDS_MARCH,
+"Março"
+IDS_APRIL,
+"Abril"
+IDS_MAY,
+"Maio"
+IDS_JUNE,
+"Junho"
+IDS_JULY,
+"Julho"
+IDS_AUGUST,
+"Agosto"
+IDS_SEPTEMBER,
+"Setembro"
+IDS_OCTOBER,
+"Outubro"
+IDS_NOVEMBER,
+"Novembro"
+IDS_DECEMBER,
+"Dezembro"
+IDS_NO_SUCH_MONTH,
+******
+
+****** port.rc
+IDS_NEED_ALL_7_DAYS,
+"Desculpe, mas nós precisamos de todos os 7 dias no ninho, não apenas"
+IDS_NEED_NUMBERS_UNDERNEATH, 
+"Desculpe, mas nós precisamos de ao menos 5 números no ninho, não apenas"  // ---
+IDS_NO_CHANGING_NUMBERS,
+"Desculpe, mas nenhum dos números deveria estar mudando. "
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+****** port.nrc
+IDS_NEED_ALL_7_DAYS,
+"Sorry, but we need all 7 days on the nest, not just" // ---
+IDS_NEED_NUMBERS_UNDERNEATH, 
+"Sorry, but we need at least 5 numbers on the nest, not just"  // ---
+IDS_NO_CHANGING_NUMBERS,
+"Sorry but none of the numbers should be changing. "
+IDS_ALL_NUMBERS_MORE_THAN_ZERO,
+******
+
+****** port.rc
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"Meus sensores não estão mostrando nenhuma casa construída pelo pessoal do caminhão. Desculpe. "
+IDS_OUT_OF_MAGIC,
+****** port.nrc
+IDS_DIDNT_BUILD_A_NEW_HOUSE,
+"My sensors aren't showing a new house built by the crew in the truck. Sorry. " // ---
+IDS_OUT_OF_MAGIC,
+******
+
+****** port.rc
+IDS_ON, // added 12/3
+ "no"  // --- (970119) as in "use Pumpy on" --> we have the same gender problem here
+IDS_AS_I_WAS_SAYING, // added 12/5
+****** port.nrc
+IDS_ON, // added 12/3
+ "no"  // --- as in "use Pumpy on" --> we have the same gender problem here
+IDS_AS_I_WAS_SAYING, // added 12/5
+******
+
+****** port.rc
+THE_LEFT_PAGE_OF, // added 12/13
+"a página à esquerda de" // --- (970119) We may find gender problems here. Where is this used?
+THE_RIGHT_PAGE_OF, // added 12/13
+"a página à direita de" // --- (970119) Same as above
+
+****** port.nrc
+THE_LEFT_PAGE_OF, // added 12/13
+"a página à esquerda de" // --- We may find gender problems here. Where is this used?
+THE_RIGHT_PAGE_OF, // added 12/13
+"a página à direita de" // --- Same as above
+
+******
+
+****** port.rc
+ IDS_NUMBER_TYPE_PRONOUN,
+ "para ele" // --- (970119) In order to check if this translation is ok I'll need to know where/when each of these pronouns are
+ used. I assumed something like "give" + pronoun + "something". If this is so, than we have a problem. In Portuguese, instead o
+f "give somebody something", we use "give something to somebody"
+ IDS_EXPANDER_TYPE_PRONOUN,
+****** port.nrc
+ IDS_NUMBER_TYPE_PRONOUN,
+ "para ele" // --- Is this used as in "give something to it"? If so, than the 'to'is already included in the pronoun. This ques
+tion is valid for all the pronouns written bellow
+ IDS_EXPANDER_TYPE_PRONOUN,
+******
+
+****** port.rc
+ IDS_BOOK_TYPE_PRONOUN,
+ "para ele" 
+ IDS_CUBBY_TYPE_PRONOUN,
+ "para ele" 
+ IDS_TOOLBOX_TYPE_PRONOUN,
+ "para ela"
+ IDS_PICT_TYPE_PRONOUN,
+ "para ela"
+ IDS_BOMB_TYPE_PRONOUN,
+ "para ela"
+ IDS_TEXT_TYPE_PRONOUN,
+ "para ele"
+ IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "para ela"
+ IDS_BLANK_NUMBER_TYPE_PRONOUN,
+ "para ele"
+ IDS_LABELED_CUBBY_TYPE_PRONOUN,
+ "para ela"
+ IDS_BLANK_PICTURE_TYPE_PRONOUN,
+ "para ela"
+ IDS_BLANK_TEXT_TYPE_PRONOUN,
+ "para ele"
+ IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+ "para ela"
+ IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+ "it" // --- (970119) I'm gonna wait for your answer before translating the rest of the pronouns
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+****** port.nrc
+ IDS_BOOK_TYPE_PRONOUN,
+ "it" 
+ IDS_CUBBY_TYPE_PRONOUN,
+ "it" 
+ IDS_TOOLBOX_TYPE_PRONOUN,
+ "him"
+ IDS_PICT_TYPE_PRONOUN,
+ "it"
+ IDS_BOMB_TYPE_PRONOUN,
+ "it"
+ IDS_TEXT_TYPE_PRONOUN,
+ "it"
+ IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "it"
+ IDS_BLANK_NUMBER_TYPE_PRONOUN,
+ "it"
+ IDS_LABELED_CUBBY_TYPE_PRONOUN,
+ "it"
+ IDS_BLANK_PICTURE_TYPE_PRONOUN,
+ "it"
+ IDS_BLANK_TEXT_TYPE_PRONOUN,
+ "it"
+ IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+ "it"
+ IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+ "it"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+******
+
+****** port.rc
+IDS_THING_ON_THE_BACK1,
+  "o" // --- (970119) On the back of what? Of the queue, of the picture?
+IDS_THING_ON_THE_BACK2,
+****** port.nrc
+IDS_THING_ON_THE_BACK1,
+  "o" // --- On the back of what? Of the queue, of the picture?
+IDS_THING_ON_THE_BACK2,
+******
+
+****** port.rc
+IDS_PAGE_OF1,
+ "a" // --- (970119) Here we also have a gender problem. We would need a female 'first', 'second', ... in order to address 'pag
+e', that is a female noun. I would recommend something like "page 1 of the notebook", "page 2 ..." in order to avoid this probl
+em. Another solution would be o have all the adjectives and articles written in their female, male, singular and plural formats
+.  
+ // as in "the first page of the notebook"
+****** port.nrc
+IDS_PAGE_OF1,
+ "a" // --- Here we also have a gender problem. We would need a female 'first', 'second', ... in order to address 'page', that 
+is a female noun. I would recommend something like "page 1 of the notebook", "page 2 ..." in order to avoid this problem. Anoth
+er solution would be o have all the adjectives and articles written in their female, male, singular and plural formats.  
+ // as in "the first page of the notebook"
+******
+
+****** port.rc
+IDS_HOLE_OF2,
+ "buraco da" // --- (970119) Another place with the gender problem (every time we use 'of' is the same). A solution for this ca
+se would be to have 'of' always associated with a noun. That would change 'hole of' + 'the box' to 'hole'+ 'of the box'
+IDS_THING_ON_TOP1,
+****** port.nrc
+IDS_HOLE_OF2,
+ "buraco da" // --- Another place with the gender problem (every time we use 'of' is the same). A solution for this case would 
+be to have 'of' always associated with a noun. That would change 'hole of' + 'the box' to 'hole'+ 'of the box'
+IDS_THING_ON_TOP1,
+******
+
+****** port.rc
+ IDS_EXPANDER_APPLY, // added 12/3
+  "use o Pumpy" // --- (970119) Is to use Pumpy or use Pumpy to do something?
+ IDS_EVENT_ARG15,
+****** port.nrc
+ IDS_EXPANDER_APPLY, // added 12/3
+  "use o Pumpy" // --- Is to use Pumpy or use Pumpy to do something?
+ IDS_EVENT_ARG15,
+******
+
+****** port.rc
+ IDS_STACK_OF_DEFINITE, // added 12/21
+  "a pilha de "
+ IDS_STACK_OF_PLURAL, // added 12/21
+  "pilhas de "
+ IDS_STACK_OF_PRONOUN, // added 12/21
+  "it" // --- (970119) Where/when is this used?
+
+****** port.nrc
+ IDS_STACK_OF_DEFINITE, // added 12/21
+  "the stack of "
+ IDS_STACK_OF_PLURAL, // added 12/21
+  "stacks of "
+ IDS_STACK_OF_PRONOUN, // added 12/21
+  "it"
+
+******
+
+****** port.rc
+IDS_PICT_OF_PRONOUN, // added 12/21
+ "it" // --- (970119) Where/when is this used?
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+ "it" // --- (970119) Where/when is this used?
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+ "it" // --- (970119) Where/when is this used?
+ IDS_COPIER_BUTTON, // revised 10/19 -- really the wand button but ok...
+   "um botão da varinha mágica" // revised again 12/16
+
+****** port.nrc
+IDS_PICT_OF_PRONOUN, // added 12/21
+ "it"
+IDS_MOVIE_OF_PRONOUN,  // added 12/21
+ "it"
+IDS_BLANK_PICTURE_OF_PRONOUN, // added 12/21
+ "it"
+ IDS_COPIER_BUTTON, // revised 10/19 -- really the wand button but ok...
+   "a magic wand button" // revised again 12/16
+
+******
+
+****** port.rc
+ IDS_BLANK_PICTURE_OF, // of added 12/20
+  "uma figura em branco de"
+
+****** port.nrc
+ IDS_BLANK_PICTURE_OF, // of added 12/20
+  "uma figura vazia"
+
+
+******
+
+****** port.rc
+
+rcinclude "common.rc"
+
+****** port.nrc
+
+rcinclude "..\new.rc"
+rcinclude "..\common.rc"
+rcinclude "..\sensors.rc"
+
+******
+
+

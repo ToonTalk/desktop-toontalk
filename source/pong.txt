@@ -1,0 +1,1259 @@
+Act 1.
+Första delen.
+
+Sally. Hi Nicky. I think I can build a Ping Pong game in ToonTalk. 
+Wanna help?
+Sally. Hej Nicky. Jag tror jag kan bygga ett bordtennisspel i ToonTalk. Kan inte du hjälpa till?
+
+Nicky. Hi Sally. I dunno. I'm just a beginner -- I haven't done 
+much besides the introductory tour. I don't think I'll be much help.
+ Nicky. Hej Sally. Jag vet inte. Jag är ju bara nybörjare -- jag har nästan inte gjort nåt mer än den första demon. Jag är nog inte mycket till hjälp.
+
+
+Sally. You'll pick it up fast. Come on -- it'll be fun. 
+Sally. Jo, du kommer att fatta snabbt. Kom igen nu -- det blir roligt.
+
+Nicky. Well, all right.
+Nicky. Ja, okej då.
+
+3. Sally. Great! You want to drive?
+3. Sally. Toppen! Vill du köra?
+
+3. Nicky. Huh? I thought we were going play with ToonTalk. 
+Besides I'm just a kid.
+3. Nicky. Va! Jag trodde vi skulle leka med ToonTalk och jag är ju bara en barnunge.
+
+Sally. No. No. I mean you sit in front of the computer and use 
+the keyboard and mouse.
+Sally. Nej, det är inte så jag menar -- du ska sitta vid datorn och använda musen och tangentbordet.
+
+Nicky. Ok. And you'll tell me what to do? 
+Nicky. Okej. Och du säger vad jag ska göra?
+
+Sally. We'll work things out together. Ok let's land and go in a house. 
+Sally. Vi får arbeta ihop. Okej, nu landar vi och går in i huset.
+
+Nicky. Which one?
+Nicky. Vilket av dom?
+
+6. Sally. Doesn't matter -- you choose. [lands and goes in a room] 
+6. Sally. Spelar ingen roll -- du får välja [landar och går in ett rum] 
+
+6. Nicky. How do you sit?
+6. Nicky. Hur sättar man sig ner?
+
+Sally. Just like anyone else -- what do you mean? 
+Sally. Som alla andra -- vad menar du? 
+
+Nicky. I mean in ToonTalk.
+Nicky. Jag menar i ToonTalk.
+
+Sally. Oh -- just push any mouse button. 
+Sally. Jaha! Det är bara att trycka på en musknapp.
+
+Nicky. Ok, now what?
+Nicky. Okej. Och sen då?
+
+9. Sally. Let's see. We'll start with the paddle. Take out a picture of the 
+paddle from the picture notebook.
+9. Sally. Får se nu... Vi börjar med racketen. Ta fram en bild av en racket från anteckningsboken med bilder.
+
+9. Nicky. [gets notebook] In here?
+9. Nicky. [tar fram anteckningsboken] I den här?
+
+Sally. Yeah. Hit space to flip to the next page [he does]. Good. Pick it 
+up.
+Sally. Just det. Tryck ner mellanslag så kommer du till nästa sida [han gör det]. Bra! Plocka upp den.
+
+Nicky. How?
+Nicky. Hur då?
+
+Sally. Set the notebook down. Now point to the picture. See? It wiggles 
+when you are pointing to it. [does] Now you can pick it up by pushing a mouse button. [does it] Great. ... Now shift click to 
+Sally. Släpp ner anteckningsboken. Och så peka på bilden. Ser du -- den vickar fram och tillbaka när du pekar på den [bilden vickar fram och tillbaka]. Va bra... Nu ska du shift-klicka
+
+Nicky. ``Shift'' what?
+Nicky. ``Shift'' vadå?
+
+12. Sally. Shift click. You hold down the shift button and then click a mouse 
+button. We could have started ToonTalk up so the right mouse does this but I keep getting the left and right buttons mixed up. *** [Could change last to] We could use the options notebook to change things *** so the right mouse button does this butI keep getting the left and *** right buttons mixed up.
+12.  Sally. Shift-klicka. Du trycker ner shift-tangenten och sen klickar du en musknapp. Vi hade kunnat ställa in ToonTalk så att man skulle använda den högra musknappen för att shift-klicka, men jag har så svårt att skilja på höger och vänster.
+[There are many ways to update this.  Here's the version I favor, "Shift click. You hold down the shift button and then click a mouse button. We could use the options notebook on page 10 to change things so the right mouse button does this but I keep getting the left and right buttons mixed up."]
+
+
+12. Nicky. I have troubles with left and right too. -- OK [does it] 13. Hey -- it's flipping over! What's going on now? 
+12. Nicky. Ja, jag tycker det är svårt också. -- Okej [shift-klickar] 13. Ojdå! Den vänder sig! Vad är det som händer?
+
+
+Sally. A notebook full of remote controls and sensors for the paddle just 
+flew out. And the grey area on the back is for putting stuff later. -- Flip through the notebook until you find the paddle's up speed. 
+Sally. Upp flög en anteckningsbok full med fjärrkontroller och sensorer för racketen. Och den gråa ytan på baksidan är till för att sätta saker på senare. -- Bläddra framåt i anteckningsboken tills du hittar racketens hastighet.
+
+Nicky. Huh?
+Nicky. Va?
+
+Sally. It's the speed the paddle moves up. 
+If it's minus then it'll move down.
+Here I'll show you. Take out the up speed from the notebook and the remote control for how far the paddle is from the bottom. [does] And flip the paddle back over and set it down. [does] Now point to the up speed and type fifty. [does] See, it's moving up. Now type minus. [does] See now it's moving down. Type backspace until the speed is zero again. [does ] Good. What I'm thinking is that we'll make the paddle's up speed be the same as the mouse's up speed.
+Sally. Det är hastigheten på racketen när den rör sig uppåt och neråt.
+Om det är minus så rör den sig neråt.
+Vänta, jag ska visa dig. Ta ut uppåt-hastigheten från anteckningsbokenoch fjärrkontrollen för hur långt raacketen är från botten. [gör det] Och vänd på racketen och släpp ner den. [gör det] Peka nu på uppåt-hastigheten och tryck femtio på siffertangenterna. [gör det] ser du, den rör sig uppåt. Tryck nu in minus. [gör det] Och nu rör den sig neråt. Tryck på back-tangenten tills hastigheten är noll igen. [gör det ] Bra. Jag hade tänkt att vi skulle göra racketens uppåt/neråt-hastighet bli samma som musens upåt/neråt.hastighet.
+
+
+15. Nicky. Sounds's good. How we going to that? 
+15. Nicky. Låter bra. Hur gör vi det? 
+
+
+15. Sally. Ok. We've got the up speed of the paddle. Now let's look in the 
+sensor notebook on page 4 of our main notebook. 
+15. Sally. Okej. Vi har hastigheten uppåt för racketen. Ta nu och titta i anteckningsboken för sensorer på sidan 4 i den stora anteckningsboken. 
+
+
+Nicky. [Does it] Ok. Should I flip through it for mouse's up speed? 
+Nicky. [gör det it] Okej. ska jag slå upp musens hastighet uppåt? 
+
+Sally. Good. You're catching on fast. [He does it] Now put them together. 
+Sally. Just det. Du fattar snabbt. [Han slår upp den] Ta nu och slå ihop dom. 
+
+
+Nicky. Ok. [drops new on on the old one] 
+Nicky. Okej. [släpper en ny på den gamla]
+
+Sally. No. I meant side by side.
+Sally. Nej. Jag menade sida vid sida.
+
+18. Nicky. [picks it up again and moves it to side] Like this? 
+18. Nicky. [tar upp den igen och för den åt sidan] Så här? 
+
+
+19. Sally. Yeah. [he drops it] Now let's give this cubby to a robot. 
+19. Sally. Just det. [han släpper den] Nu ska vi ge den här lådan till en robot. 
+
+Nicky. Ok. [Does it]
+Nicky. Okej. [Gör så]
+
+Nicky. So we just take this mouse speed and drop it on the paddle speed? 
+Nicky. Så vi tar bara den här musens hastighet och släpper den på racketens hastighet?
+
+Sally. Almost. Once we pick up and use the mouse speed we won't have it 
+anymore for the next time around.
+Sally. Nästan. När vi väl plockat upp musens hastighet som kommer vi inte ha den längre för nästa gång.
+
+Nicky. Well, we could get another one.
+Nicky. Men vi kunde ju skaffa en ny.
+
+Sally. That would work but its easier to use the magic wand. 
+Sally. Det skulle vi, men det är lättare att använda trollstaven.
+
+Nicky. Right! It can copy the mouse's speed. [does] So that's it? 
+Nicky. Ja just det! den kan kopiera musens hastighet. [gör det] Så det är så man gör?
+
+22. Sally. Right. Just press escape. [he does] 
+22. Sally. Precis. Klicka nu på escape-tangenten. [han gör det]
+
+24. Nicky. So now we use the vacuum to suck stuff out of the robot's thought 
+bubble?
+24. Nicky. Så nu använder vi Dammis för att suga bort det som finns i robotens tankebubbla?
+
+Sally. I usually use Dusty now too but because we're using remote controls 
+ToonTalk figured out that's what we wanted to do and has already done it. Sally. Jag brukar också använda Dammis nu men eftersom vi använder fjärrkontroller så räknade ToonTalk ut att det är vad vi ville och har redan gjort det åt oss.
+ 
+Nicky. Should we try it out now?
+Nicky. Kan vi inte prova det nu?
+
+Sally. Yeah, but let's save it first.
+Sally. Jo, men det är bäst vi sparar det först.
+
+Nicky. In the notebook, right?
+Nicky. I anteckningsboken, va?
+
+Sally. Yup. Find a blank page.
+Sally. Jovisst. Leta upp en tom sida.
+
+Nicky. [searches] Ok. Got one. So I'll drop the robot here. 
+[hovering over the odd page]
+Nicky. [letar] Okej. Har hittat en. Då släpper jag roboten här. 
+[låter roboten hänga över sidan]
+
+
+26. Sally. That's ok but I usually put stuff on the right and words describing 
+it on the left.
+26. Sally. Det kan du göra, men jag brukar lägga saker på högersidorna och skriva vad det är för någonting på vänstersidorna.
+
+28. Nicky. That's ok with me. [Drops it on even]. So, I'll pick up an A, 
+rub it out and type "paddle".
+28. Nicky. Ja, det kan ju vara bra. [släpper den på sidan med den jämna siffran]. Så jag tar upp ett "A", suddar det och skriver "Racket".
+
+Sally. Good. Why not add "mover" on the next line? 
+Sally. Bra. Varför inte skriva "Rör sig upp och ner" på nästa rad? 
+
+
+Nicky. Like this? [does]
+Nicky. Så här? [skriver]
+
+28. Sally. Now let's try it out.
+28. Sally. Nu provar vi.
+
+31. Nicky. Ok, but the floor sure is cluttered.
+31. Nicky. Okej, men det är så mycket saker på golvet.  
+
+Sally. I heard when ToonTalk is finished we'll be able to move to 
+an empty part of the floor when we want.
+Sally. Jag har hört att när ToonTalk är riktigt färdigt så kommer vi kunna flytta till ett städat golv direkt. 
+[Better version is "I hope someday we'll be able to move to an empty part of the floor when we want."]
+ 
+Nicky. I guess we could clean up first.
+Nicky. Men vi kan väl städa upp först.
+
+Sally. Good idea.
+Sally. Det låter bra.
+
+33. Nicky. Better. [Takes out robot and moves cubby over it] So I drop 
+this cubby on the robot?
+33. Nicky. Ännu bättre. [Tar ut roboten och för lådan över den] så jag släpper lådan på roboten?
+
+31. Sally. Yeah. [he drops it]
+31. Sally. Just det. [han släpper den]
+
+Nicky. It takes forever to respond to a mouse movement. 
+Nicky. Det går ju jättelångsamt när man rör musen.
+
+Sally. That's because the robot is going slow cuz we're watching. 
+I know! Flip the paddle back over and put the robot on the back. [does] And give the cubby to the robot. No wait! Give it a copy of the cubby instead so we can watch the numbers in the cubby change. 
+Sally. Det är för att roboten går långsamt när vi kan se den. Nu vet jag! Vänd på racketen igen och lägg roboten på baksidan. [gör det] Och ge lådan till roboten. Nej, vänta! Ge den en kopia av lådan i stället så kan vi se hur siffrorna ändras i lådan. 
+
+Nicky. [does] And flip it back over?
+Nicky. [gör det] Och så vända den tillbaka igen?
+
+Sally. Right. [does] It's moving, but it looks hard to control. 
+Sally. Rätt. [gör det] den rör sig men den är svår att kontrollera.
+
+37. Nicky. It is. If I move the mouse a bit it goes sailing off 
+in that direction.
+37. Nicky. Ja, det är den. Om jag rör musen lite grann så sticker den iväg åt det hållet.
+
+34. Sally. I know how we can slow it down. But we have to get back it first. 
+I know. Just type 0 when pointing to its speed and then point to the remote control for its distance from the bottom and type 0 again. [does] 
+34. Sally. Jag vet hur vi kan få den at gå långsammare. Men vi måste få tillbaka den först. Visst ja. Tryck bara en nolla samtidigt som du pekar på dess hastighet och peka sedan på fjärrkontrollen för avståndet från botten och tryck en nolla igen. [gör det]
+
+Nicky. We had it for a second but then it sailed off again. Oh! That's 
+cuz the robot is still working on the back. 
+Nicky. Det funkade en sekund men sen stack den iväg igen. Oj! Det är för att roboten fortfarande jobbar på baksidan av racketen. 
+
+Sally. Right. I know. Press F8 and reset the remote controls to zero again. 
+Sally. Så är det. Jag vet.Tryck F8 och återställ fjärkontrollerna till noll igen. 
+
+Nicky. What does that do?
+Nicky. Vad händer då?
+
+36. Sally. You'll see. Try it. [he does] 
+36. Sally. Du ska få se. Prova. [han gör det] 
+
+Nicky. Oh, it turns off the power. It's a good way to stop things. 
+So now that I got the paddle back should I flip it over? ***
+Nicky. Oj, det stänger av strömmen. Det är ju ett bra sätt att få saker att stanna. Så nu när jag har racketen tillbaka ska jag då vända den igen? ***
+
+
+Sally. Yeah. And take out the cubby. Set it down anywhere. [he does] 
+I think the problem is that the paddle moved too fast. If we divide by something like ten it should slow down a bunch. Let's try it and see if it helps.
+Sally. Ja gör det. Och ta ut lådan. Sätt ner den varsomhels. [han gör det] 
+Jag tror problemet är att racketen rörde sig för fort. Om vi delar med, låt oss säga tio, så borde den sakta ner ganska ordentligt. Vi provar och ser om det hjälper.
+
+Nicky. [creates a 10] Ok. Here's a ten. How do we divide? 
+Nicky. [trycker siffran tio] Okej. Här har vi tio. Hur delar man?
+
+38. Sally. Just type a slash.
+38. Sally. Tryck bara ett snedstreck.
+
+42. Nicky. And now I drop this "divide by ten" on the mouse speed? 
+42. Nicky. Och nu släpper jag den här "dela med tio" på musens hastighet? 
+
+Sally. Yup. [does and drops it] Good. Put the cubby back. And let's 
+save this one before we try it.
+Sally. Precis. [gör så och släpper den] Bra. Lägg tillbaka lådan. Och det är bäst vi sparar den här innan vi provar.
+
+Nicky. [does it] Ok, let's try it out. [drops it] Huh? Now it doesn't 
+work at all.
+Nicky. [gör det] Okej, nu provar vi den. [släpper den] Va? Nu fungerar det inte alls.
+
+Sally. Oh! I know. We stopped all the robots. Press F8 again. [does] 
+Sally. Åh! Nu vet jag. Vi stannade alla robotarna. Tryck F8 igen. [gör det]
+
+45. Nicky. Working pretty good.
+45. Nicky. Det här ser ju bra ut.
+
+41. Sally. Hmm. Let go of the mouse.
+41. Sally. Hmm. Släpp musen.
+
+Nicky. Ok. Why? [does]
+Nicky. Okej. Varför då? [gör det]
+
+Sally. See. It's still moving.
+Sally. Du ser. Den fortsätter att röra sig.
+
+Nicky. So?
+Nicky. Vadå då?
+
+Sally. I think our paddle would work better if it just followed the 
+mouse up and down instead.
+Sally. Jag tror vår racket skulle fungera bättre om den enbart följde musens rörelser upp och ner i stället.
+
+Nicky. How are we gonna make the paddle do that? 
+Nicky. Hur ska vi få racketen att göra det?
+
+44. Sally. The problem is that when the mouse's speed is zero the paddle 
+should stop. Wait! All we have to do is make the speeds be the same! 
+44. Sally. Problemet är att när musens hastighet är noll så borde racketen stanna. Nu har jag det! Allt vi behöver göra är att se till hastigheterna är samma! 
+
+
+49. Nicky. But we are adding them. So what can we do? 
+Change the paddle speed to zero first?
+49. Nicky. Men vi lägger på dom. Vad kan vi göra åt det? 
+Börja med att ändra racketens hastighet till noll?
+
+
+Sally. Hadn't thought of that. It should work fine. What I like doing 
+instead is to use the equal sign. Let's start over from scratch. This is easy now that we know what do to. Clean up and get a picture of a paddle again. [does] And flip it over and get its up speed. [does] And get the mouse's up speed from the sensor notebook. [does and combines them] And give the cubby to a fresh robot. [does] Use the magic wand to copy the mouse speed [he does]. Good and now press the equal key. That was what we didn't do before. And that dividing by ten stuff didn't help at all. So just drop that number on the paddle speed. [does] 
+Sally. Tänkte inte på det. Det borde fungera bra. Fast jag skulle hellre använda tecknet för "lika med". Vi gör om det från början. Det är lätt nu när vi vet vad vi ska göra. Städa upp och ta fram en bild på en racket igen. [gör det] Och vänd på den och ta fram dess hastighet uppåt. Och ta fram musens hastighet uppåt i anteckningsboken för sensorer. [gör så och lägger dom bredvid varandra] Ge nu lådan till en ny robot. [gör det] Ta Trollstaven och kopiera musens hastighet [han gör det]. Bra och tryck nu tangenten för lika-med-tecknet. Det var det vi inte gjorde förut. Och det där med att dela med tio fungerade inte alls. Så släpp bara det där talet på racketens hastighet. [gör så] 
+
+
+Nicky. Oh. I get it. It makes the number underneath equal 
+to the one on top.
+Nicky. Åh. Jag fattar. Det gör att talet under blir lika med det som är ovanför.
+
+Sally. You got it. [he does it] Let's put the robot and cubby on 
+the back of	the paddle. 
+Sally. Du fattar. [han släppet talet] Nu lägger vi roboten och lådan på baksidan av racketen.
+
+Nicky. [does] Now let's try it out. [does] Much easier to control.
+Nicky. [han gör det] Nu får vi prova det. [provar] Mycket lättare att styra.  
+
+Sally. Great. Well that's a good start. Let's save this one 
+in our notebook.
+Sally. Jättefint. Ja, det var väl en bra början. Dt är bäst vi sparar det här i anteckningsboken.
+
+Nicky. [does it] Balls next?
+Nicky. [sparar] Sen får vi väl göra bollar?
+
+Sally. Sure, why not? But let's take a break first, ok?
+Sally., Javisst, varför inte? Men vi tar först en rast, va? 
+
+Nicky. Fine. So how are we going to save the city for when we come back?
+Nicky. Okej. Men hur ska vi spara staden till vi kommer tillbaka?  
+
+Sally. ToonTalk can't do that yet. But we've saved everything important 
+in our notebook and it'll be with us when we restart. Hit pause and then quit ToonTalk like any Windows program.
+Sally. ToonTalk kan inte göra det ännu. Men vi har sparat allt viktigt i vår anteckningsbok. Tryck på Paus-tangenten och avsluta programmet som vilket Windows-program som helst.
+[I have removed the phrase "like any Windows program"]
+
+Nicky. Ok. Will do. [does]
+Nicky. Okej. Ska ske. [han gör så]
+
+---------------
+Act 2.
+Andra delen.
+
+Sally. Ready to make a bouncing ball? Ok, let's go into a room again. 
+Sally. Är du beredd att göra en studsande boll? Okej, vi går in i ett rum igen.
+
+Nicky. Ok. I'll start by flipping over a picture of a ball. 
+[Lands, enters room, and takes out a ball and flips it over.] I'll flip through the ball's notebook for things that can help us. [does] Hey, what's this? A collision detector? 
+Nicky. Okej. Jag börjar med att vända en bild på en boll. 
+[Landar, går in i ett rum och tar ut en boll och vänder den.] Jag ska bläddra genom anteckningsboken för att hitta saker som kan hjälpa oss. [han gör det] Oj, vad är det här? En krockdetektor?
+
+Sally. I think we'll need one of those. Here pick it up and then press F1.
+Sally. Jag tror vi behöver en sån. Här, plocka upp den och tryck sen F1.  
+
+Nicky. [Picks it up] F1?
+Nicky. [Plockar upp den] F1?
+
+
+
+
+
+
+
+
+Sally. It calls for Marty. [does] Hmm. "the detector which shows a 
+simple cartoon of either a collsion or a miss" -- I get it! Let's try this. Flip the ball over and move it around. [does] Now move it over here where the floor's empty. See how the detector changes?
+Sally. Nu behöver vi Marty. [hämtar honom] Hmm. " detektor som visar en enkel animation på antingen en krock eller en miss " -- Nu förstår jag! Så här kan vi prova. Vänd på bollen och rör på den. [han gör detFlytta nu över den hit där golvet är tomt. Ser du hur detektorn ändras?
+
+
+Nicky. First it showed a little cartoon of a collision and now it shows 
+them missing. Why doesn't it just say so in words? 
+Nicky. Först visade den en liten animation på en krock och nu visar den att de saknas. Varför inte säga det med ord?
+
+4. Sally. Dunno. Maybe to make it easy for little kids.
+4. Sally. Ingen aning. Kanske för att göra det lättare för små barn.  
+
+Nicky. Or kids in other countries who don't know English.
+Nicky. eller barn i andra länder som inte kan engelska. 
+[I plan to remove this line.] 
+
+Sally. Anyway, we want the ball to turn around when it hits something. 
+I know! Take out both speeds for the ball and connect them to the collision detector.
+Sally. Hur som helst, vi vill att bollen ska studsa tillbaka när den slår i mot någonting. Nu vet jag! Ta ut båda hastigheterna för bollen och koppla ihop dom med krockdetektorn.
+
+
+Nicky. [Does it] Now what?
+Nicky. [Gör det] Och sen då?
+
+Sally. Ok. Flip the ball back over and drop it on the Toolbox somewhere. 
+Sally. Okej. Vänd tillbaka bollen och släpp den på Verktygslådan nånstans.
+
+Nicky. [Moves to ToolBox] Why?
+Nicky. Flyttar till Verktygslådan] Varför det?
+
+Sally. To get the collision detector to show a collision.
+Sally. För att få krockdetektorn att visa en krock. 
+ 
+
+7. Nicky. [Drops it] Ok. So we train a robot now? [Takes one out] 
+7. Nicky. [Släpper den] Okej. Så nu tränar vi en robot? [Plockar ut en robot] 
+
+
+***
+Sally. Right. But first set the speeds to something other than zero. 
+It's better to work with good examples. [He drops cubby on robot] So let's multiply the speed by minus one.
+Sally. Precis. Men ställ först in hastigheten på något annat än noll. 
+det är bäst att jobba med bra exempel. [Han släpper lådan på roboten] Nu tar vi och multiplicerar hastigheten med minus ett.  
+
+Nicky. Oh, that'll make it minus if it is plus and plus if it is 
+minus. So that will turn the ball around. So how do we multiply by minus one?
+Nicky. Jaha, det får det att bli minus om det är plus och plus om det är minus. Så det är på det viset kommer att studsa tillbaka. Hur multiplicerar man med minus ett?
+
+Sally. Pick up a one. [He does] Type minus and X. [does] 
+Sally. Ta upp en siffra. [Han gör det] Tryck minus och X. [han gör det] 
+
+Nicky. And I drop it on the up speed?
+Nicky. Och jag släpper den på hastigheten uppåt?
+
+Sally. Right [he does].
+Sally. Just det [han gör så].
+
+10. Nicky. I'll do it again for the speed to the right. [He does]
+10. Nicky. Jag gör samma sak för hastigheten åt höger. [Han gör det]  
+
+Sally. Good job. Let's try it out.
+Sally. Bravo. Nu måste vi prova.
+
+Nicky. I know. We'll put the robot and cubby on the back of the ball. 
+[He does]
+Nicky. Nu vet jag. Vi lägger roboten och lådan på bollens baksida. 
+[Han gör det]
+
+Sally. Ok. To test it, let's throw the ball at the tool box.
+Sally. Okej. För att testa den får vi kasta bollen på Verktygslådan.  
+
+Nicky. Shouldn't we save it first?
+Nicky. Borde vi inte spara den först?
+
+Sally. Right. I forgot. [he does so]
+Sally. Jovisst. det glömde jag. [han sparar]
+
+
+
+
+Nicky. So how do I toss the ball?
+Nicky. Men hur ska jag kunna kasta bollen?
+
+***
+Sally. Hold down the control button and
+move the ball towards the tool box and click to release it.
+Sally. Håll ner kontroll-tangenten och rör bollen mot Verktygslådan och släpp den.  
+
+Nicky. Ok. Here goes. [does it]
+Nicky. Okej. Nu kör vi. [gör det]
+
+****
+Sally. Weird. It looks like the ball got stuck. 
+Sally. Vad konstigt. Det ser ut som om bollen fastnade.
+
+****
+15. Nicky. How are we going find out why it's doing that? 
+15. Nicky. Hur ska vi få reda varför det blir så? 
+
+****
+Sally. I know a trick for this kind of problem. We 
+get a copy of the cubby that the robot is working on and look for something wrong. Let's try it. Flip the ball over and copy the cubby. 
+Sally. Jo, jag vet ett knep för sådana här problem. Vi gör en kopia av lådan som roboten arbetar från och ser om vi kan hitta något fel. Vi provar det. Vänd på bollen och kopiera lådan. 
+
+****
+Nicky. [does it]. And now flip it back over and try again? 
+Nicky. [gör så]. Och nu vänder jag tillbaka den och provar igen? 
+
+****
+Sally. Right. [he does it]
+Sally. Ja, just det. [han gör det]
+[following was numbered 38 and above]
+***
+Sally. Look how the speed goes from minus to plus to minus over and over 
+again. It's real fast. And look -- the collision detector is staying on. 
+Sally. Ser du hur hastigheten går från minus till plus till minus hela tiden. Och att det går jättefort. Och titta -- krockdetektorn är på fortfarande.
+***
+
+
+
+
+n38. Nicky. I think the problem is that the ball goes inside the tool box 
+a little bit. If only we could get the ball to back out a bit when that happens.
+n38. Nicky. Jag tror att problemet är att bollen går in i Verktygslådan en liten aning. Om vi bara kunde få ut bollen en bit när det händer.
+
+***
+Sally. You know Marty had more to say about the collision detector. Maybe 
+he can help. Point to a collision detector and press F1 again. [does] What does he mean I can "turn a collision into a miss"? ... Let's try it and see what happens.
+Sally. Men du, Marty hade mer att säga om krockdetektornHan kanske kan hjäpa oss. Peka på en krockdetektor och tryck på F1 igen. [gör det] Vad menar han med att " Du kan ändra en krock till en miss "? Vi provar det och ser vad som händer.
+
+
+***
+nnk39
+Nicky. [sets up a collision] Ok, now we have a collision, so I'll push the 
+space button to change the detector. [does it] Hey look! It went to showing a miss and the ball moved away. Sounds like just what we need.
+nnk39
+Nicky. [skapar en krock] Okej, nu har vi en krock och så ska jag trycka på mellanslag för att ändra den till en miss. [gör det] Oj titta! Nu visar den miss och bollen åkte bort. Det verkar vara det vi behöver.
+
+***
+Sally. Let's train another robot to reverse the speeds like before but also 
+to undo the collision. [does it] Good. Let's try this one. 
+Sally. Du, vi tränar en annan robot att vända på hastighterna som vi gjorde förut och som också ångrar krocken. [gör det] Bra. Nu provar vi den här.
+
+****
+n45. Nicky. But we should save the ball first. Let's save it as BBB. 
+n45. Nicky. Men vi måste spara bollen först. Vi döper den till BSB.
+[Once again we have this problem about multiple demo files.  Could
+you record both "... till BBB" and "... till BSB."?] 
+
+
+Sally. Huh?
+Sally. Va?
+
+
+Nicky. Better Bouncing Ball.
+Nicky. Bättre Studsande Boll.
+[This one is even trickier.  Maybe this should be recorded in English and Swedish.]
+
+
+
+Sally. Funny. But we'll never remember what it means. 
+Sally. Jätteroligt. Vi kommer ju aldrig ihåg vad det betyder. 
+
+
+Nicky. I'll remember.
+Nicky. Jag kommer ihåg.
+
+Sally. Yeah but what if we want to give our notebook so some other kids? 
+Sally. Ja ja, men om vi tänker ge vår anteckningsbok till andra som ska fatta?
+
+35. Nicky. Ok ok. I'll type it out [does]. 
+Now let's try out this ball. [gives slow toss] 
+35. Nicky. Okej, okej. Jag ska skriva ut hela orden [gör det].
+Nu provar vi den här bollen. [kastar iväg den] 
+
+
+****
+Sally. It bounced. But it sure bounced funny.
+Sally. Den studsade. Men den studsade verkligen konstigt.  
+
+15. Nicky. I know. It should have kept going up -- not started going down. 
+Changing from going to the right to going to the left looked right. 
+15. Nicky. Jag vet. Den skulle ha fortsatt uppåt -- inte börjat falla ner. Växlingen från höger till vänster såg riktig ut.
+
+Sally. Oh! We should have multiplied only the right speed by minus one. 
+Sally. Oj! Vi skulle bara ha multiplicerat hastigheten åt höger med minus ett.
+
+Nicky. Ok. I'll redo it [does so].
+And I'll take out the goofy ball from the notebook and replace it with our new one.
+Nicky. Okej, Jag ska göra om det [gör det].
+Och jag tar bort den knäppa bollen från anteckningsboken och lägger in vår nya i stället.  
+
+Sally. Why not keep both? Might be fun to use it for something. 
+Sally. Varför inte behålla bägge två? Kunde vara rolig att ha till nåt.
+
+Nicky. Ok. I'll rename it "Goofy Ball". Hmm. How do I do that? 
+Nicky. Okej. Jag döper om den till "Knäpp Boll"?
+[Again record both names.]
+
+Sally. Vacuum out the old and bring in the new. 
+Sally. Sug bort den gamla och sätt dit den nya.
+
+
+
+18. Nicky. Ha ha. Ok. [does it] And now we'll save the new one. 
+[Does -- spits out the old text to reuse it.] 
+18. Nicky. Ha ha. Okej. [gör det] Och nu sparar vi den nya. 
+[Gör så -- spottar ut den gamla texten för att använda den igen.]
+
+Sally. Let's try it out.
+Sally. Nu kan vi prova.
+
+Nicky. Ok. Holding down control ... [tosses]. It's off.
+Nicky. Okej. Jag håller ner ctrl-tangenten... [kastar iväg]. Så där.  
+
+Sally. Kinda slow. But it is easier to see what it does. Good bounce. 
+Catch it before it goes off the top.
+Sally. Lite långsamt. Men det är lättare att se vad den gör. Bra studs. 
+Fånga den innan den sticker iväg på utsidan.
+
+
+Nicky. Got it. I'll set it down. [drops it] 
+Nicky. Jag har den. Jag sätter ner den. [släpper den]
+
+Sally. Let's set up a corral for it.
+Sally. Vi sätter upp ett staket för den.
+
+21. Nicky. It's a ball not a horse.
+21. Nicky. det är faktiskt en boll och inte en häst.
+
+Sally. Yah Yah. Put the wand here. Dusty here. And Pumpy there. [he does] 
+Sally. Höh, höh. Lägg hit Trollstaven här. Dammis här. Och Pumpas där. [han gör det]
+
+Nicky. And now I'll toss it again. [does] 
+Nicky. Och nu kastar jag iväg den igen. [gör det] 
+
+Sally. Good bounce. Oh boy! We lost it up there. 
+Sally. Vilken studs. Oj, oj oj!! Den försvann där uppe.
+
+Nicky. No problem.
+We got plenty more where that came from in the notebook.
+Nicky. Inga problem.
+Vi har gott om dom i anteckningsboken.  
+
+***
+
+
+
+
+Sally. Hmm. I see! When the ball hits the side of something we should flip 
+the right speed but when it hits the top or bottom we want to flip the up speed.
+Sally. Hmm. Ja, så måste det vara! När bollen slår i sidan på något så skulle vi byta på hastigheten åt höger men när den slår i botten eller överkanten så vill vi byta på hastigheten uppåt.
+
+24. Nicky. Ok, but how do we do that?
+24. Nicky. Ok, men hur gör man det då?
+
+
+Sally. Dunno. Let's look through the ball's notebook. Maybe we'll find 
+something.
+Sally. Vet inte. Vi kollar igenom bollens anteckningsbok. Kanske vi hittar nåt.
+
+Nicky. Will do. [flips it quickly]
+Nicky. Jag gör det. [bläddrar snabbt]
+
+Sally. Woah. Back up!
+Sally. Hallå där. Backa tillbaka!
+
+Nicky. How?
+Nicky. Hur då då?
+
+Sally. Press minus.
+Sally. Tryck på minus.
+
+Nicky. [does] Cool.
+Nicky. [gör det] Häftigt.
+
+Sally. Look at that! A left/right collision detector! 
+Sally. Titta där!! en krockdetektor för vänster/höger!
+
+28. Nicky. I think I get it. We'll train 2 robots -- 
+one for left/right bounces and the other for up/down. 
+28. Nicky. Jag tror jag börjar fatta. Vi tränar två robotar -- 
+en för vänster/högerstudsar och en för upp/nerstudsar.
+
+Nicky. [Builds cubby and gives it to robot.] 
+So I'll multiply this by minus one.
+Nicky. [Bygger lådan och ger den till roboten.] 
+Så multiplicerar jag den här med minus ett.
+
+Sally. Right. Hey. The other robot is the same! 
+Sally. Just det. Oj. Den andra roboten är likadan!
+
+Nicky. What do you mean? This robot is for left/right and the other 
+deals with up/down.
+Nicky. Vad menar du? den här roboten är vänster/höger och den andra jobbar med upp/ner.
+
+
+Sally. Right, so we'll give it the up/down collision detector and 
+up speed.
+Sally. Ja, så vi ger den krockdetektorn för upp/ner och hastighet uppåt.
+
+Nicky. Neat. The only difference is what's in the cubbies -- both robots 
+do the same thing. Can I use the magic wand to copy a robot? 
+Nicky. Tjusigt. Enda skillnaden är det som ligger i lådorna -- båda robotarna gör samma sak. Kan jag använda Trollstaven för att kopiera en robot?
+
+Sally. Should work.
+[types escape and copies the robot and puts both on flipside 
+and gives cubby to one of them].
+Sally. Borde fungera.
+[trycker på escape och kopierar roboten och lägger båda på baksidan och ger lådan till den ena].
+
+32. Nicky. So. I'll make the cubby for the up/down stuff. 
+And give it to the robot that doesn't have a cubby. [does it] I'll save it first -- how about B4?
+32. Nicky. Så där. Jag gör lådan för upp/ner grejset. 
+Och ger den till roboten som inte har nån låda. [gör det] Jag ska spara den först -- vad sägs om B3?
+
+Sally. Before what?
+Sally. Beträ vaddå?
+
+Nicky. Better BBB. Get it -- four Bs.
+Nicky. Bättre BSB. Fattar du -- tre Bn.
+[You did a good job here.  I don't see any alternatives but the visuals won't
+quite match.  Oh well.]
+
+Sally. Uhhh. You pick a name. [Enters "best bouncing ball"]
+Sally. Mmm. Ta ett namn du. [skriver "Bästa Studsande Boll"]
+
+34. Nicky. Now let's try it. [does]
+34. Nicky. Då provar vi. [gör det]
+
+Sally. Looks good!
+Sally. Vad bra det ser ut!
+
+Nicky. I'll add another ball. [does]
+Nicky. Jag gör en boll till. [does]
+
+Sally. Looking good. Hey, let's have it make a sound. 
+Sally. Det ser bra ut också. Du, vi lägger till ett ljud.
+
+Nicky. How?
+Nicky. Hur då?
+
+Sally. Go to page 8. [does] And pick up that notebook. [does] 
+Sally. Bläddra till sidan 8. [gör det] Och plocka upp den där  anteckningsboken.[gör det]
+
+37. Nicky. So how do you make sounds?
+37. Nicky. Nå, hur gör man ljud?
+
+Sally. Just "use" one of these.
+Sally. det är bara att "använda" ett av dom där.
+
+Nicky. Use?
+Nicky. Använda?
+
+Sally. Shift-click while holding it.
+Sally. Shift-klicka medan du håller det.
+
+39. Nicky. Right. [Picks up "plop"] Sounds goofy. Want to use it?
+39. Nicky. Okej. [Plockar upp "plop"] Låter knäppt. Ska vi ta det?  
+
+Sally. Let's train a robot to make the sound we give him when there is a 
+collision. That way we can change the sound without training a new robot. Put that sound together with the collision detector that works in any direction.
+Sally. Vi tränar en robot att göra ljudet när det blir en krock. På så vis kan vi ändra ljud utan att träna en ny robot.
+Lägg det ljudet med krockdetektorn som arbetar med både vänster/höger och upp/ner.
+
+
+40. Nicky. Ok. [does] And what's the robot going to do? 
+[takes one out and sets it down]
+40. Nicky. Sådär. [gör det] Och vad ska roboten göra? 
+[tar en och sätter ner den]
+
+
+
+
+
+
+
+
+
+Sally. Wait. Let's make the detector show a collision first. 
+[he does it and picks up the cubby] Good. So just pick up the plop sound and shift click. 
+Sally. Vänta ett tag. Låt detektorn få visa en krock först. 
+[han gör det och tar upp en låda] Bra. Och nu kan du bara plocka upp "plop" ljudet och shift-klicka.
+
+41. Nicky. [Does it] Ok and now what?
+41. Nicky. [Gör det] Så där och nu då?
+
+
+Sally. That's it -- just hit escape.
+Sally. det är allt -- tryck bara esc -tangenten.
+
+Nicky. That was easy. And now we'll use Dusty to vacuum up the letters 
+so it'll work for any sound we put there. 
+Nicky. Det var lätt. Och nu använder vi Dammis för att suga upp bokstäverna så att det funkar för vilket ljud som helst som vi lägger där. 
+
+Sally. Right. Let's put "pop" there.
+Sally. Precis. Vi lägger "pop" där.
+
+43. Nicky. Oh. Ok. [does] And put this robot and its cubby on the back 
+of the ball?
+43. Nicky. Jaha. Okej. [gör det] Och så lägger jag den här roboten och lådan på baksidan av bollen?
+
+Sally. You got it. And save it.
+Sally. Rätt. Och så sparar jag den.
+
+Nicky. How's "Noisy ball"?
+Nicky. Vad dägs om att döpa den till "Bråkig Boll"?
+
+Sally. Fine [does it].
+Sally. Fint [gör det].
+
+45. Nicky. Let's try it out. [does]
+45. Nicky. Nu vill jag prova. [gör det]
+
+
+Sally. Great! Now let's put it together to make Ping Pong. 
+Sally. Härligt! Nu kan vi sätta ihop det till ett bordtennisspel.
+
+
+
+Nicky. I got soccer practice now. Let's finish it after that. 
+Nicky. Jag har fotbollsträning nu. Vi kan väl göra klart efter den. 
+
+Sally. Fine with me. Everything is saved in our notebook so just quit. 
+Sally. Passar mig bra. Allt är sparat i vår anteckningsbok så det är bara att avsluta.
+
+---------------
+Act 3.
+Tredje delen.
+
+Nicky. Ok. I'm ready to put together our paddle and ball to make a Ping Pong game. What do we do? [lands and goes in]
+Nicky. Okej. Jag är färdig att sätta ihop vår racket och boll för att göra ett bordtennisspel. Vad gör vi? [landar och går in]
+
+Sally. Take out a rectangle to use as the Ping Pong table. 
+Sally. Ta ut en rektangel som vi kan ha som bord. 
+
+Nicky. Ok. [does it] It's not a very good color. 
+Nicky. Okej. [gör det] Det är ingen vidare snygg färg
+
+Sally. Just keep hitting the space bar until we get to a color we like. [does]
+Sally. Tryck bara på mellanslag tills vi får en färg vi tycker om. [does]
+
+Nicky. I like this color. The table is pretty small. Should I pump it up? 
+Nicky. Den här gillar jag. Bordet är ganska litet. Ska jag pumpa upp det? 
+
+Sally. We could. I usually do that last. We can use Pumpy to shrink the 
+ball and paddle for now.
+Sally. Det skulle vi kunna. Fast jag brukar spara det till sist. Vi kan använda
+[Rest of the sentence missing??]
+
+Nicky. I forget how we do that.
+Nicky. Jag har glömt hur man gör det
+
+Sally. I'll show you. Here take out our noisy bouncing ball and 
+pick up Pumpy. [does it]
+Sally. Jag ska visa dig. Gör så här -- ta upp vår bråkiga studsande boll och plocka upp Pumpas.[gör det]
+
+Nicky. And start pumping and then click again to let out air! 
+Nicky. Och börja pumpa och sedan klicka igen för att släppa ut luft!
+
+
+
+
+Sally. You got it [he does it].
+Sally. Just det [han gör det].
+
+Nicky. Can I toss the ball on the table? 
+Nicky. Kan jag kasta bollen på bordet? 
+
+
+Sally. I think so. Try it -- can't hurt. [he does] 
+Sally. Jag tror det. Prova -- det kan inte skada. [han gör det]
+
+Nicky. Woah. It just rolled away.
+Nicky. Åhhh. Den bara rullade bort.
+
+Sally. Whoops. We forget to set up barriers like our corral.
+Sally. Hoppsan. Vi glömde att sätta upp spärrar som ett staket.  
+
+Nicky. How we gonna do that?
+Nicky. Hur ska vi göra det?
+
+Sally. Just drop rectangles at the edges of our table. 
+Sally. Släpp bara rektanglar vid bordets kanter.
+
+
+Nicky. Oh, rectangles for the ball to bounce off of. 
+But won't these rectangles make the game look goofy? 
+Nicky. Jaja, rektanglar som bollen kan studsa mot. 
+Men kommer inte rektanglarna att få spelet att se knäppt ut? 
+
+Sally. Nope. Try it [he does].
+Sally. Nix. Prova [han gör det].
+
+10. Nicky. Oh, it only shows the part on top of the table.
+10. Nicky. Oj, det enda som syns är det som är högst upp på bordet.  
+
+Sally. Right. Let's try our ball again.
+Sally. Just det. Vi provar bollen igen.
+
+11. Nicky. Ok [does]. Looks good!
+11. Nicky. Okej [gör det]. Vad bra det ser ut!
+
+Sally. Let's add our moving paddle.
+Sally. Nu lägger vi till vår racket som vi kan styra.
+
+
+
+
+Nicky. Good idea. [does and starts playing.] 
+Nicky. Bra idé. [gör det och börjar spela.]
+
+Sally. Let me try too.
+Sally. Får jag försöka också.
+
+Nicky. Ok. [passes mouse]
+Nicky. Okej. [lämnar över musen]
+
+Sally. I'll press F9 to hide my hand while I'm playing the game. 
+Sally. Jag ska trycka F9 för att gömma min hand när jag spelar. 
+
+Nicky. Enough, it's my turn.
+Nicky. Ja, nu räcker det. Nu är det min tur.
+
+Sally. Ok. But let's save it first.
+Sally. Okej. Men vi ska nog spara det först.
+
+14. Nicky. [he does] How about "N and S Ping Pong"? 
+14. Nicky. [han gör det] Vad sägs om "N och S bordtennisspel"
+
+Sally. Good. Want to add a score now?
+Sally. Det är väl bra. Ska vi lägga till poängräkning nu?
+
+Nicky. Like you lose a point if the ball misses the paddle? 
+Nicky. Så att man förlorar en poäng om man missar bollen? 
+
+Sally. Sure, that's good. We can also make it more complicated later. 
+Ok. Take out a one and flip it over.
+Sally. Visst, det är bra. Vi kan göra det mera komplicerat senare. 
+Okej. Ta upp en och vänd den.
+
+16. Nicky. [does] I didn't know you could flip numbers over. 
+16. Nicky. [gör det] Jag visste inte att man kunde vända på siffror.
+
+Sally. Sure why not? I think ToonTalk should let you put robots on the 
+back of anything. It doesn't just now. ... I remember there's a remote control for the looks of things. Flip through the notebook for it.
+Sally. Jovisst, varför inte? Jag tycker ToonTalk ska kunna låta alla saker få robotar på baksidan. Än så länge går det inte. ... Kommer du ihåg att det finns en fjärrkontroll för hur saker ska se ut. Bläddra igenom anteckningsboken tills du hittar den.
+[I think "Kommer du ihåg" should be "Jag kommer ihåg"]
+
+
+
+
+
+Nicky. [does] This it?
+Nicky. [hittar den] Är det den här?
+
+Sally. Yup -- take it out.
+Sally. Visst -- ta upp den.
+
+Nicky. How's it work?
+Nicky. Hur funkar den?
+
+Sally. Just like the other remote controls. Here flip it over again and 
+then drop some number on the remote.
+Sally. Precis som alla andra fjärrkontroller. Vänd på den.igen och släpp sen en siffra på fjärrkontrollen.
+
+19. Nicky. [does it] Hey -- they both changed. What happens if I drop 
+something on the original number.
+19. Nicky. [gör det] Hallå där -- dom ändrade sig bägge två. Vad händer om jag släpper något på siffran som var där från början.
+
+Sally. Try it. Can't hurt.
+Sally. Prova. Det kan inte vara farligt.
+
+Nicky. Both change. Ok so how are we gonna use it? 
+Nicky. Båda ändras. Okej, hur ska vi använda det här då?
+
+Sally. Put a box with a number next to the box with the remote. 
+Sally. Sätt en låda med en siffra bredvid lådan med fjärrkontrollen .
+
+Nicky. [Does] And take out a robot?
+Nicky. [Gör det] Och plocka upp en robot?
+
+Sally. Yup. And this robot just takes the number and puts it on the 
+remote.
+Sally. Javisst. Och den här roboten bara tar siffran och lägger den på fjärrkontrollen.
+
+22. Nicky. Ok -- but what good is this?
+22. Nicky. Okej -- men vad är det här bra för?
+
+
+Sally. Let's try it. You'll see. [does]
+Sally. Vi provar. Du kommer at få se. [gör det]
+
+
+
+Nicky. The numbers were added. So?
+Nicky. Vi la till siffrorna. Än sen då?
+
+Sally. Here's the trick I learned. Put a nest in that hole. 
+Sally. Det här är ett knep jag lärt mig. Ta och lägg ett fågelbo i den där lådan.
+
+Nicky. Ok. [does]
+Nicky. Okej. [gör det]
+
+Sally. Now flip the number back over and put the robot and box on the back. 
+Sally. Vänd nu på siffran tillbaka igen och lägg roboten och lådan på baksidan. 
+
+
+25. Nicky. What about the bird?
+25. Nicky. Fågeln då?
+
+
+Sally. Leave it. You'll see. [he does it]
+Sally. Bry dig inte om den. Du kommer att förstå. [han gör så]  
+
+Nicky. Now what?
+Nicky. Och nu då?
+
+Sally. Give the bird a number [he picks up the one with a robot on the 
+back] No! No! Not that one!
+Sally. Ge fågeln en siffra [han tar upp den med roboten på baksidan] Nej! Nej! Inte den!
+
+Nicky. Ok. Ok. Why so excited?
+Nicky. Okej. Okej. Varför blir du så upphetsad?
+
+Sally. Think -- where's the bird's nest? 
+Sally. Tänk efter -- Var är fågelns bo?
+
+28. Nicky. On the back of the number.
+28. Nicky. På baksidan av siffran.
+
+Sally. Right. And what's a bird do when given something? 
+Sally. Just det. Och vad gör en fågel när den får något? 
+
+
+
+
+
+
+
+
+Nicky. Takes it to her nest -- oh -- how's she going to do that if the nest 
+on the back of the number she's holding? I wonder. Let's try it and see.
+Nicky. Tar det till sitt bo -- jaha -- hur ska den kunna göra det om boet är på baksidan av siffran som den håller i? Det undrar jag. Vi provar.
+
+
+Sally. Ok. But let's save our stuff first. 
+Sally. Okej. Men vi sparar det vi gjort först. 
+
+
+30. Nicky. You mean the number?
+30. Nicky. Menar du siffan?
+
+Sally. That's where our robot is.
+Sally. Det är där vår robot är.
+
+
+Nicky. I'll copy the number and put the copy in the notebook so I'm sure 
+where the bird's nest is. [does]
+Nicky. Jag kopierar siffran och lägger kopian i anteckningsboken så jag är säker på var fågelns bo är. [gör det]
+
+Sally. Ok. Good idea to play it safe.
+Sally. Okej. Det är bra att vara på den säkra sidan.
+
+32. Nicky. Here goes [drops number on bird] 
+32. Nicky. Nu kör vi [släpper siffran på en fågel]
+
+Sally. Hey Marty. Pretty smart of you to figure out what we were doing. 
+Sally. Tjena Marty. Klurigt av dig att lista ut vad vi höll på med. 
+
+Nicky. I still don't get how we're going use this.
+Nicky. Jag fattar fortfarande inte vad vi ska med det här till.  
+
+Sally. Give the bird a fresh number. [does]
+Sally. Ge fågeln en ny siffra. [gör det]  
+
+Nicky. Look. She's flying under the number and it changed. 
+Nicky. Titta. den flyger in under siffran och den ändras.
+
+
+
+
+
+
+Sally. Right. So here's my plan.
+Let's put the number on the Ping Pong table. 
+Sally. Precis. Det här är min plan.
+Vi lägger siffran på bordet.
+
+35. Nicky. Can we change it to zero?
+35. Nicky. Kan vi ändra den till en nolla?
+
+Sally. We could but remember we're gonna lose a point when you miss 
+the ball.
+Sally. Det är möjlig men kom ihåg att vi ska förlora en poäng varje gång vi missar bollen.
+
+Nicky. Ok, I'll press 9 -- that's a good starting score. [does]
+Nicky. Okej, jag trycker 9 -- det kan vara en bra poäng att börja med. [gör det]  
+
+Sally. Sure. Now shrink it and drop it on the Ping Pong table. [does] 
+Sally. Visst. Ta nu och krymp ihop det och släpp det på bordet. [gör det] 
+
+Nicky. Is there some way of getting rid of the pad the number's sitting on? 
+Nicky. Finns det något sätt att bli av med kortet som siffran sitter på?
+
+Sally. I think so. Let's look through the notebook of remote controls 
+again.
+Sally. Jag tror det. Låt oss titta igenom anteckningsboken för fjärrkontroller en gång till.
+
+38. Nicky. [flips through it] Visibility. This one might do it. 
+[Takes it out.] How's it work?
+38. Nicky. [bläddrar igenom den] Synlighet. Den här kanske kan fixa det. 
+[Tar ut den.] Hur funkar den?
+
+Sally. Dunno. Press F1 and Marty will explain it. 
+Sally. Ingen aning. Tryck F1 Så får Marty förklara.
+
+Nicky. [Does] Good. I'll try that. [presses space several times] 
+Works fine. [drops it on the pong table]
+Nicky. [Gör det] Bra. Jag ska prova det. [trycker på mellanslag flera gånger] 
+Funkar bra. [släpper den] 
+
+
+
+
+
+
+
+Sally. Now we gotta add another robot to the ball. One that will subtract one from the score and serve the ball. First let's vacuum the ball out of the game.
+Sally. Nu måste vi lägga till ännu en robot på bollen. En som kommer att ta bort ett från poängen och servar bollen. Först tar vi och suger bort bollen från spelet.
+
+40. Nicky. [Does] And spit it out?
+40. Nicky. [Gör det] Och spotta ut den?
+
+
+Sally. Right, and flip it over.
+Sally. Just det , och vända på den.
+
+
+Nicky. [does] Now what?
+Nicky. [gör det] Och nu då?
+
+Sally. Let's see. We'll need this first one -- the left/right position.
+Sally. Får se. i behöver först den här -- den för vänster/högerläge.  
+
+Nicky. [Does it] Got it.
+Nicky. [Gör det] Jag har den.
+
+Sally. Now put a box with a scale next to it. And a box with a zero next 
+to that.
+Sally. Läg en låda med en våg i bredvid den. Och sen en låda med en nolla bredvid den.
+
+43. Nicky. [does it]. Look the scale stopped moving. 
+43. Nicky. [gör det]. Såg du, vågen stannade.
+
+++++
+Sally. Well "53" is "heavier" than zero. But we want to catch the case 
+where it's off the left side. Move the flipped ball over until the distance to the left goes minus.
+Sally. Ja, "53"är "väger mer" än noll. Men vi vill ha det läget när den lämnat den vänstra sidan. Flytta på den bakvända bollen tills avståndet till vänstra sidan blir minus.
+[When I redo this demo the number probably won't be 53.  Better to translate "Well this number is heavier than zero. ..."]
+
+
+Nicky. [does it] The scale tilted the other way. 
+Nicky. [gör det] Vågen vägde över åt andra hållet.
+
+
+
+
+Sally. Right. Now put the bird in a box and connect it to the others 
+[he does]
+Good. And finally here's where you can use your "plop" sound. 
+Sally. Bra. Lägg nu fågeln i en låda och koppla ihop den med dom andra. [han gör det]
+Bra. Och det är äntligen här du kan använda ditt "plop" ljud. 
+
+45. Nicky. Good. I'll get it.
+45. Nicky. Bra. Jag ska hämta det.
+
+
+Sally. You can just type it.
+Sally. Det räcker med att du skriver det.
+
+Nicky. Really? Ok. Can I try it?
+Nicky.Gör det? Okej. Kan jag prova?
+
+Sally. Of course. [he does] So now we're ready to train this robot. He's 
+gonna do a lot.
+Sally. Självklart. [han gör det] Så nu kan vi träna den här roboten. Han har mycket att göra.
+
+Nicky. [gives it to robot] I know one thing he should do. [he picks up 
+"plop" and uses it]
+Nicky. [ger det till en robot] Jag vet i alla fall en sak som han ska göra. [han tar upp "plop"och använder det]
+
+Sally. Good. How about the bird?
+Sally. Bra. Vad ska vi göra med fågeln?
+
+Nicky. Oh! I get it. I'll give her a one.
+Nicky.Oj! Jag hämtar den. Den får en etta. 
+
+Sally. That would be ok if the score goes up when you miss.
+Sally. Det skulle vara bra om man fick en poäng för varje miss.  
+
+Nicky. Oh. Minus one then. [does it]
+Nicky. Ja, ja. Minus ett då. [gör det]
+
+
+Sally. Good. Now we need to serve the ball. 
+Easiest would be to set it's left/right position to something like 900. 
+Sally. Bra. Nu ska vi serva bollen. 
+Det lättaste skulle vara att sätta vänster/högerläget till nåt i stil med 900.
+
+
+
+50. Nicky. Oh, so it'll jump over there. 
+50. Nicky. Ja, så den hoppar över dit.
+
+Sally. We could delay a bit and maybe use diferent numbers each time. 
+Sally. Vi skullle kunna fördröja den lite och kanske använda olika siffror varje gång. 
+
+Nicky. Later. Let's try what we got. [puts robot on back, puts ball back in 
+pong game] Wow. It's working!
+Nicky. Sen. Nu provar vi vad vi har. [lägger en robot på baksidan, och lägger in bollen i spelet] Jippiii. Det funkar!
+
+Sally. Let me try.
+Sally. Får jag försöka.
+
+Nicky. Ok but I'll save it first. [does] 
+Nicky. Visst, men jag tänker spara först. [gör det]
+
+Sally. [Playing] Fun. But a little too easy. I know! Watch this! 
+F8 to stop the robots. [does] F9 to see my hand again. [does] F5 to call the magic wand. [does] Now I'll copy the ball and give it a toss. [does] And now F9 to hide my hand again and F8 to start up the robots. [does] Great. Now we got two balls to hit. 
+Sally. [Spelar] Vad roligt. Fast lite för lätt. Nu vet jag! Kolla! 
+F8 för att stanna robotarna. [gör det] F9 för att få fram min hand igen. [gör det] F5 för at få fram Trollstaven. [gör det] Nu kopierar jag bollen och kastar ut den. [gör det] Och nu F9 för att få bort min hand igen och F8 för att få igång robotarna. [gör dets] Toppen. Nu har vi två bollar att träffa.
+
+53. Nicky. Add another. [she does]
+53. Nicky. Gör en till. [hon gör det]
+
+Sally. Woah. It's too hard now.
+Sally. Oj oj oj. det är för svårt nu.
+
+Nicky. Can't you copy the paddle?
+Nicky.Kan du inte kopiera racketen?
+
+Sally. Sure, why? Ohh -- I see that'll make it easier again. 
+[copies paddle] Pretty good. Let's pump it up to full size and save this. [does]
+Sally. Visst, varför det? Åhh -- det gör ju att det blir lättare igen. 
+[kopierar racketen] Rätt bra, va. Vi pumpar upp den till rätt storlek och sparar den. [gör det]
+
+
+
+55. Nicky. Now what?
+55. Nicky. Och nu då?
+
+
+Sally. I think that's enough for today. Besides it's time for me to 
+go to swim practice. But tomorrow we can add exploding bricks for the ball to hit.
+Sally. Jag tror det räcker för idag. Jag måste förresten gå till min simträning. Men i morron kan vi göra tegelstenar som exploderar när bollen studsar mot dom.
+
+
+Nicky. Right. And I think we can use better pictures. 
+Nicky. Javisst. och jag tycker vi kan ha bättre bilder .
+
+Sally. And the ball can move faster the more it stays in play. 
+Sally. Och vi kunde få bollen att gå fortare ju längre den var i spel. 
+
+
+Nicky. And we can make it a two player game. 
+Nicky. Och vi kan göra spelet för två spelare. 
+
+
+Sally. Til tomorrow then.
+Sally. I morron då.
+
+
+Nicky. See ya.
+Nicky. Vi syns.
+
+
+
+
+
+
+
+

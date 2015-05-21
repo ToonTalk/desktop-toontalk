@@ -1,0 +1,656 @@
+// added 12/26/96
+
+IDS_SOUND_INDEFINITE,
+ "a sound"
+IDS_SOUND_DEFINITE,
+ "the sound"
+IDS_SOUND_PLURAL,
+ "sounds"
+IDS_SOUND_PRONOUN,
+ "it"
+  
+IDS_REMOTE_TEXT_PICTURE_TYPE_INDEFINITE,
+  "a remote control"
+IDS_REMOTE_TEXT_PICTURE_TYPE_DEFINITE,
+  "the remote control"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PLURAL,
+  "remote controls"
+IDS_REMOTE_TEXT_PICTURE_TYPE_PRONOUN,
+ "it"
+
+IDS_TYPING_SOUND_NAMES_OBSOLETE,
+ "It is better to take sounds from the sounds notebook. If you type the name of a sound and you send this to someone in another country it might not work."
+
+IDS_SOUND_HELP, // added 1/14
+"You can make that sound by pressing "
+IDS_SOUND_HELP2,
+ " "
+
+IDS_ANY_SOUND, // add 1/16
+ "any sound"
+IDS_BLANK_SOUND, // add 1/16
+ "an erased built in sound"
+
+IDS_TURN_BOMB_ON_HELP,  // added 1/20
+// removed also on 9/26/97
+"You can also set off a bomb you are holding by pressing the space bar. "
+
+IDS_MARTIAN_SPEAK_HELP, // added 3/26/97
+ "whether I speak, show word balloons, or both"
+IDS_MARTIAN_SPEAK,
+ "speak"
+IDS_MARTIAN_BALLOONS,
+ "word balloons"
+IDS_MARTIAN_SPEAK_AND_BALLOONS,
+ "speak and balloons"
+IDS_MARTIAN_SPEAKS_ONLY_IN_32BITS,
+ "Sorry, but I can speak only if you are running the 32 bit version of ToonTalk."
+
+IDS_MARTIAN_SPEAK_REMOTE_LONG_LABEL,   // added 3/27/97
+ "How\rMarty\rTalks"
+IDS_MARTIAN_SPEAK_REMOTE_SHORT_LABEL,
+  "Marty Talks"
+
+IDS_CLIPBOARD_REMOTE_FULL_HELP1, // added 4/22/97
+ "If something is on the clipboard of Windows, then you'll see it here.  You can use Dusty to vacuum it off and spit it out again. "
+IDS_CLIPBOARD_REMOTE_FULL_HELP2,
+ "If the clipboard is empty, then the remote control will look black.  You can drop something on the remote control to put it on the clipboard. "
+
+IDS_USER_PICTURE_NOT_256_COLORS, // added 5/8/97
+ "Sorry, but the 16 bit version of ToonTalk can only read pictures with 256 colors. "
+
+// added on 6/13-97
+IDS_CIRCLE_PAGE,
+ "Oval" // if width and height are same then is a circle otherwise is an ellipse -- oval is just non-technical name for this
+IDS_ROUNDED_RECTANGLE_PAGE,
+ "Rounded\rRectangle"
+IDS_LINE_TOWARDS_UPPER_RIGHT,
+ "Line\rup"   // as you move to the right
+IDS_LINE_TOWARDS_LOWER_RIGHT,
+ "Line\rdown"
+IDS_HOLLOW_CIRCLE_PAGE,
+ "Hollow\rOval"
+IDS_ROUNDED_HOLLOW_RECTANGLE_PAGE,
+ "Hollow\rRounded\rRectangle"
+IDS_DOTTED_LINE_TOWARDS_UPPER_RIGHT,
+ "Dotted\rline up"
+IDS_DOTTED_LINE_TOWARDS_LOWER_RIGHT,
+ "Dotted\rline down"
+IDS_HOLLOW_RECTANGLE,
+ "Hollow\rRectangle"
+
+IDS_SYNTHETIC_RECTANGLE,
+ "a rectangle"
+IDS_SYNTHETIC_OVAL,
+ "an oval"
+IDS_SYNTHETIC_ROUNDED_RECTANGLE,
+ "a rounded rectangle"
+IDS_SYNTHETIC_LINE_UP,
+ "a line going up"
+IDS_SYNTHETIC_LINE_DOWN,
+ "a line going down"
+IDS_SYNTHETIC_HOLLOW_OVAL,
+ "a hollow oval"
+IDS_SYNTHETIC_ROUNDED_HOLLOW_RECTANGLE,
+ "a rounded hollow rectangle"
+IDS_SYNTHETIC_DOTTED_LINE_UP,
+ "a dotted line going up"
+IDS_SYNTHETIC_DOTTED_LINE_DOWN,
+ "a dotted line going down"
+IDS_SYNTHETIC_HOLLOW_RECTANGLE,
+ "a hollow rectangle"
+
+// the following is now used to generate names for robots rather than the current numbers you see on their chests
+// The names are generated as strings of consonants-vowel repeated as necessary.
+// For English I am skipping "y" and "q" since they are a bit of problem.
+IDS_VOWELS_FOR_ROBOT_NAMES,  // added 6/24 for naming robots
+"aeiou" // y is pretty special
+IDS_CONSONANTS_FOR_ROBOT_NAMES,
+"bcdfghjklmnprstvwxz"  // q is special
+
+IDS_AGE_OF_LABEL,
+"Age of\r"
+
+IDS_BAD_ROBOT_NAMES,  
+  // these are generated names that are NOT used because they are in this list - this list should include names not child appropriate
+  // all names are consonant vowel consonant ... pattern
+" cum kaka kike rape dago fag nad fuc fuk god sod nig jap wog fok kum jew tit wop git sex sux fux lez pube dike puke "
+
+IDS_GENERATE_JAVA_APPLET_HELP,  // added 9/15/97
+ "If you press the Pause button while holding a robot, a picture, or a truck and then select ""Come back later"", then a copy of what you are holding will appear in Windows as a Java applet in your Web browser. "
+IDS_OK_IF_MARTY_SUGGESTS_STUFF_YOU_ONCE_DID,  // added 9/15/97
+ "Hi. It has been a while since you last ran ToonTalk. Is it OK if Marty suggests things you have already done, but might have forgotten about?"
+
+IDS_JOYSTICK_LABEL, // I use the word "joystick" but I've noticed that Microsoft switched from "joystick" to "game controller" since
+// that is more accurate -- this includes game pads, flying yokes, etc.
+ "Joystick "
+IDS_JOYSTICK_BUTTONS_LONG_LABEL,
+ "Joystick\rButtons\rClicked"
+IDS_JOYSTICK_BUTTONS_DOWN_LONG_LABEL,
+ "Joystick\rButtons\rDown"
+
+IDS_JOYSTICK_X_SPEED_SHORT_LABEL,
+ "X Speed"
+IDS_JOYSTICK_Y_SPEED_SHORT_LABEL,
+ "Y Speed"
+IDS_JOYSTICK_Z_SPEED_SHORT_LABEL,
+ "Z Speed"
+IDS_JOYSTICK_X_AXIS_SHORT_LABEL,
+ "X Axis"
+IDS_JOYSTICK_Y_AXIS_SHORT_LABEL,
+ "Y Axis"
+IDS_JOYSTICK_Z_AXIS_SHORT_LABEL,
+ "Z Axis"
+IDS_JOYSTICK_X_SPEED_LONG_LABEL,
+ "Joystick\rX Speed"
+IDS_JOYSTICK_Y_SPEED_LONG_LABEL,
+ "Joystick\rY Speed"
+IDS_JOYSTICK_Z_SPEED_LONG_LABEL,
+ "Joystick\rZ Speed"
+IDS_JOYSTICK_X_AXIS_LONG_LABEL,
+ "Joystick\rX Axis"
+IDS_JOYSTICK_Y_AXIS_LONG_LABEL,
+ "Joystick\rY Axis"
+IDS_JOYSTICK_Z_AXIS_LONG_LABEL,
+ "Joystick\rZ Axis"
+
+IDS_JOYSTICK_SPEED_X_HELP,  // added 9/19/97
+ "the amount a joystick is moved to the left or right"
+IDS_JOYSTICK_SPEED_Y_HELP,
+"the amount a joystick is moved to the top or bottom"
+IDS_JOYSTICK_SPEED_Z_HELP,
+ "the amount a joystick is moved forward or backward (this is often the throttle control) or zero if it doesn't sense this"
+IDS_JOYSTICK_AXIS_ROTATION_X_HELP,
+ "the amount a joystick is rotated left/right, or zero if it doesn't sense rotation"
+IDS_JOYSTICK_AXIS_ROTATION_Y_HELP,
+ "the amount a joystick is rotated up/down, or zero if it doesn't sense rotation"
+IDS_JOYSTICK_AXIS_ROTATION_Z_HELP,
+ "the amount a joystick is rotated forward/backward, or zero if it doesn't sense rotation"
+IDS_JOYSTICK_BUTTONS_HELP_START1, // used for all buttons and joysticks
+ "the answer to the question ""Was button number" // followed by a number
+IDS_JOYSTICK_BUTTONS_HELP_START2,
+ "just clicked?"""
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START1,
+ "the answer to the question ""Is button number" // followed by a number
+IDS_JOYSTICK_BUTTONS_DOWN_HELP_START2,
+ "down?"""
+IDS_OF_JOYSTICK_NUMBER,
+ "of joystick number" // followed by a number
+
+IDS_TEXT_TO_MCI_FULL_HELP,
+ "This is for sending commands to Microsoft Windows Media Control Interface (MCI). "
+IDS_TEXT_TO_MCI_FULL_HELP2,
+ "Just drop the text you want to send to it. "
+IDS_TEXT_TO_SPEECH_FULL_HELP,
+ "This is for speaking the text. "
+IDS_TEXT_TO_SPEECH_FULL_HELP2,
+ "This only works with the 32-bit version of ToonTalk. "
+IDS_TEXT_TO_SPEECH_FULL_HELP3,
+ "Just drop the text you want to hear on it. "
+IDS_TEXT_TO_MCI_HELP,
+ "a place to drop text for Media Control Interface"
+IDS_TEXT_TO_SPEECH_HELP,
+ "a place to drop text to hear it spoken"
+IDS_TEXT_TO_MCI_SHORT_LABEL,
+ "MCI"
+IDS_TEXT_TO_SPEECH_SHORT_LABEL,
+ "Speech"
+IDS_TEXT_TO_MCI_LONG_LABEL,
+ "Media\rControl\rInterface"
+IDS_TEXT_TO_SPEECH_LONG_LABEL,
+ "Text to\rSpeech"
+
+IDS_ON_TOP_OF_IT_IS,
+  // 9/24/97 -- "It" always refers to a remote control and it is followed by a description of what was dropped on it
+ "On top of it is"
+
+IDS_SOUNDS_ON_PAGE8,   // revised on 9/26/97
+// was "Sounds that work can be found on page 8 of your notebook. "
+"ToonTalk's sounds can be found on page 8 of your notebook. There are sensors on page 4 of your notebook for making your own sounds. "
+
+IDS_WANT_TO_LEARN_ABOUT_COMMAND_LINE, // add 9/26/97
+ "Would you like to learn about the command line options now?"
+IDS_THE_SPACE_BAR, // or is "the space button" more kid friendly?
+ "the space bar"
+IDS_OR,
+ "or"
+IDS_SECOND_JOYSTICK_BUTTON,
+  // used with the above as in "You can do that by pressing the space bar or the second joystick button."
+ "the second joystick button"
+
+IDS_DROP_ON_BLANK_NUMBER_TO_OBTAIN_ARITY_HELP, // revised on 9/26/97
+//  "You find out how many holes a box has by dropping it on a blank number pad. You can make a number pad blank by using Dusty the Vacuum. Just remember to use "
+  "You can find out how many holes a box has by dropping it on a blank number pad. You can make a number pad blank by using Dusty the Vacuum. "
+
+IDS_VACUUM_SUCK_HELP, // revised on 9/26/97
+// was "If you click on "
+  "If, while holding him, you click on "
+
+IDS_LOG_REPLAY_ERROR,
+ "Sorry, something went wrong replaying a demo log. Please report this problem to Support@ToonTalk.com."
+
+IDS_ROBOT_ON_PICTURE_STOPPED, // revised on 10/8/97
+// "A robot on the back of a picture name George ...
+"A robot on the back of a picture named"
+IDS_ROBOT_ON_PICTURE_STOPPED2,
+ " " // used after name given above
+IDS_ROBOT_ON_FLOOR_STOPPED,
+// "A robot on the floor stopped because "
+"A robot on the floor named"
+IDS_ROBOT_ON_FLOOR_STOPPED2,
+ " " // used after name given above
+IDS_REMOTE_ROBOT_ABORT,
+//  "A robot somewhere stopped because "
+ "A robot somewhere named"
+IDS_REMOTE_ROBOT_ABORT2,
+  " " // used after name given above
+IDS_STOPPED_BECAUSE_HE, // used only together with the above
+"stopped because"  // he removed on 11/12/97
+IDS_STOPPED_BECAUSE_HE2,
+ " " // after the reason is given
+
+IDS_BOMBS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT, // added 10/10/97
+ "bombs only work inside of houses or on the back of a picture"
+IDS_TRUCKS_START_DRIVING_ONLY_INSIDE_OF_HOUSES_ABORT,
+ "trucks drive away only if they are inside of a house or on the back of a picture"
+IDS_BIRDS_ONLY_START_FLYING_FROM_INSIDE_A_HOUSE_ABORT,
+ "birds only start flying from inside of a house or on the back of a picture"
+IDS_ROBOTS_ONLY_WORK_INSIDE_OF_HOUSES_ABORT,
+ "robots only start working when inside of a house or on the back of a picture"
+
+IDS_ROBOT_HAS_NON_MATCHING_BOX, // revised on 10/15/97
+ // was "Uhm, excuse me but a robot has a box that doesn't match his thought bubble and there is no robot he can give it to. "
+ "Uhm, excuse me but"
+IDS_ROBOT_HAS_NON_MATCHING_BOX2,
+ "has a box that doesn't match his thought bubble and there is no robot he can give it to. "
+
+IDS_ABOUT_TO_GENERATE_JAVA_APPLET,
+ "ToonTalk is about to generate a Java applet of what you are holding in your hand.\rIf all goes well, in a minute your browser should be showing it. "
+
+
+// added 10/27/97
+IDS_ROOM_DECORATION_HELP,
+ "adding and removing decoration to the wall"
+IDS_HOUSE_DECORATION_HELP,
+ "adding and removing decoration to the front of the house"
+IDS_ROOF_DECORATION_HELP,
+ "adding and removing decoration to the roof"
+
+IDS_ROOM_DECORATION_SHORT_LABEL,
+"Room"
+IDS_HOUSE_DECORATION_SHORT_LABEL,
+"House"
+IDS_ROOF_DECORATION_SHORT_LABEL,
+"Roof"
+
+IDS_ROOM_DECORATION_LONG_LABEL,
+ "Wall\rDecoration"
+IDS_HOUSE_DECORATION_LONG_LABEL,
+ "House\rDecoration"
+IDS_ROOF_DECORATION_LONG_LABEL,
+ "Roof\rDecoration"
+
+ // add 11/6/97
+IDS_TROUBLE_SHOOT_DISPDIB_ABNORMAL_EXIT,
+"The last time ToonTalk ran it did not exit properly. Would you like some advice on what to do?"
+IDS_TROUBLE_SHOOT_GENERAL_ABNORMAL_EXIT,
+"The last time ToonTalk ran it did not exit properly. Would you like some advice?"
+IDS_TROUBLE_SHOOT_TOO_SLOW,
+"ToonTalk ran very slowly. Would like some advice about how to get it to run faster?"
+IDS_TROUBLE_SHOOT_VERY_FAST_IN_LOW_RESOLUTION,
+"There is a version of ToonTalk that runs with sharper higher-quality images.  Want to learn more about it?"
+IDS_TROUBLE_SHOOT_JOYSTICK_CALIBRATION,
+//IDS_JOYSTICK_STUCK,  // added 9/23/97
+ "Your joystick sent the helicopter to the edge. If this is a mistake, you'll need to calibrate your joystick. Do you want to learn how to do that?"
+IDS_TROUBLE_SHOOT_DIRECTX,
+ "ToonTalk had some troubles using the DirectX game extensions to Windows. Want to see what you can do about this?"
+IDS_TROUBLE_SHOOT_MOUSE,
+//IDS_MOUSE_MOVEMENT_WRONG, // just goes into the log for now
+"Windows is telling me that the mouse has moved more than is possible. This happens when running ToonTalk on a Mac which is running Windows. Sorry. Try using the arrow keys instead."
+IDS_TROUBLE_SHOOT_BAD_DEMO,
+"The demo couldn't complete as it was supposed to. Do you want to learn how to fix this?"
+IDS_BETA_EXPIRED,  // revised on 11/23/97
+  "Sorry, this beta or trial version is too old. Do you want to learn how to get a new one? "
+
+//IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+// "A robot was going to put something into something but it's been vacuumed. "
+IDS_ROBOT_MISSING_RECIPIENT_ABORT,  // just a shorter version of the above
+"was going to put something into something but it's been vacuumed away"
+IDS_TROUBLES_LAUNCHING_BROWSER,
+"Sorry. Something went wrong trying to launch a web browser like Netscape Navigator or Microsoft Internet Explorer."
+IDS_CITY_SAVED,
+" City saved."
+
+IDS_NO_FILE_NAME_FOR_USER_MEDIA_FILE,  // revised 12/15/97
+// was "ToonTalk is confused and is trying to get a picture and doesn't know the file name. "
+ "ToonTalk had troubles finding a file named"
+
+IDS_FORCE_FEEDBACK_JOYSTICK_LABEL, // added 2/27/98
+"Force\rFeedback\rJoystick "
+IDS_FORCE_FEEDBACK_DURATION_SHORT_LABEL,
+"Duration"
+IDS_FORCE_FEEDBACK_GAIN_SHORT_LABEL,
+"Strength"
+IDS_FORCE_FEEDBACK_DIRECTION_SHORT_LABEL,
+"Direction"
+
+// added 3/2/988
+
+IDS_FORCE_FEEDBACK_DURATION_REMOTE_HELP,
+ "the duration (in thousandths of a second)"
+IDS_FORCE_FEEDBACK_GAIN_REMOTE_HELP,
+ "the strength (100 is full-strength)"
+IDS_FORCE_FEEDBACK_DIRECTION_HELP,
+ "the direction in degrees"
+ // all 3 of the above are followed by
+IDS_FORCE_FEEDBACK_EFFECT_HELP,
+ "of the force feedback effect named"
+
+IDS_CANT_MAKE_JAVA_APPLET_OF_PRIMITIVE_BIRD, // added 3/4/98
+ "Sorry, but a Java applet of something that has foreign birds in it probably won't work."
+
+IDS_PRIMITIVE_BIRD_DIDNT_HANDLE, // added 3/5/98
+ "A bird took something to Windows, but Windows didn't know what to do with it. "
+
+IDS_PRIMITIVE_BIRD_LABEL,
+ "Foreign\rBird"
+
+IDS_A_PRIMITIVE_BIRD,
+ "a bird who flies outside of ToonTalk"
+IDS_DLL_PRIMITIVE_BIRD_HELP,
+  "You should give the bird a box with 2 holes. The first hole should be the name of a ToonTalk extension. The second hole should contain a bird who will be given a box with a new bird."
+
+IDS_BIRD_TAKES_READ_AND_WRITE_MESSAGES,
+  "This bird takes Read and Write messages to a file named "
+//IDS_NO_FILE_FOR_EXTENSION_FILE,
+// "Sorry. I couldn't find a ToonTalk extension file named "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION,
+ "File messages should be boxes with 3 holes whose third hole contains a bird who receives replies. For reading, the first hole should contain ""Read"" and the second the number of letters to read. "
+IDS_READ_WRITE_MESSAGE_DESCRIPTION2,
+ "For writing, the first hole should contain ""Write"" and the second the text pad to add to the file. "
+IDS_READ_MANUAL_FOR_MORE_HELP,
+ "Read ToonTalk help for more information. "
+IDS_CREATE_FILE_HELP,
+ "Messages for this bird should be boxes with 3 holes. The first hole should contain ""Open"", ""Create File"", or ""Open Serial Port"". "
+IDS_CREATE_FILE_HELP2,
+ "In the second hole there should be a file name. The third hole should contain a bird. This bird will receive another bird for reading and writing from the file. "
+IDS_IMPROPER_CREATE_FILE_MESSAGE,
+ "A bird took something to the ToonTalk file extension, but it wasn't a proper message. "
+IDS_BIRD_TAKES_MESSAGE_TO_OPEN_A_FILE,
+ "This bird takes messages to create or open files. "
+IDS_TROUBLE_OPENING_A_FILE,
+ "Had troubles opening the file named "
+IDS_IMPROPER_READ_OR_WRITE_MESSAGE,
+ "A bird took something to a Windows file, but it wasn't a proper message. "
+
+IDS_TROUBLE_SHOOT_EXTENSION_NOT_INSTALLED, // added 3/20
+ "A ToonTalk extension is needed, but it has not been installed. Would you like to learn how to install extensions? "
+IDS_TOO_MANY_HOLES, // added 3/30
+ "Sorry, but a box can't have too many holes. See www.toontalk.com/English/ttini.htm to learn how to change this. "
+
+IDS_TRIAL_VERSION_CANT_SAVE, // added 5/1-98 but only used if "trial" version of ToonTalk
+ "Sorry, but this is a trial version of ToonTalk, so changes to your notebook will be lost when you quit ToonTalk."
+
+IDS_ROBOTS_CANT_GIVE_BOXES_TO_ROBOTS, // added 5/3/98
+ "Sorry, but you can't train robots to give boxes to other robots. Put the robot and box in a truck instead."
+
+IDS_CANT_SAVE_CITY, // added 5/11/98
+  "Sorry, the Trial Version can't save cities."
+
+ // A blank robot is a robot that has been erased by Dusty
+ // only useful inside thought bubbles to express that the corresponding thing should be a robot, but any one will do
+  IDS_BLANK_ROBOT_TYPE_INDEFINITE, // added 5/21/98
+  "a blank robot"
+ IDS_BLANK_ROBOT_TYPE_DEFINITE,
+  "the blank robot"
+ IDS_BLANK_ROBOT_TYPE_PLURAL,
+  "blank robots"
+ IDS_BLANK_ROBOT_TYPE_PRONOUN,
+ "him"
+
+
+ IDS_ENGLISH_LIKE_ADJECTIVES_AND_PRONOUNS, // new on 5/22/98
+ "1" // should be "0" for languages where there is gender agreement between adjectives and nouns and only one form of "it"
+ // only if "1" does the following need to be translated as well
+ IDS_IT,
+ "it"
+ IDS_NEW,
+ "new"
+ IDS_FIRST_NEW,
+ "first new"
+ IDS_NEWEST,
+ "newest"
+ IDS_TO_LAST,
+ "to last"
+ IDS_THE,
+ "the"
+ // end of special no gender section
+
+IDS_BAD_FLOOR_IN_CITY_FILE,
+ "Something is wrong with a part of a city file describing what's on the floor of a house."
+IDS_BAD_ROOM_IN_CITY_FILE,
+ "Something is wrong with a part of a city file describing what's on the wall inside a house."
+
+IDS_TOO_BIG_TO_SAVE, // new on 5/27/98
+ "could not be saved\rbecause it has too much stuff in it."
+
+IDS_NEST_TOO_FULL_TO_SAVE,
+ "There are more than 1000 items on a nest that is being saved. Some items will be lost."
+IDS_SAVING_TOO_MANY_NESTS,
+"Too many nests being saved in notebook. Can't save more than 255 at one time -- sorry."
+IDS_LEGO_SERIAL_PORT_NOT_IN_32BIT,
+"This serial port interface is not supported in the 32-bit version of ToonTalk. "
+
+// And translate "Do you want to see your log file?" as a comment here
+
+IDS_TROUBLE_SHOOT_TTS_SELECT_FAILURE, // added 6/12/98
+ "Text-to-speech engine failed to start properly. Do you want to know what you can do to fix this?"
+
+IDS_TOONTALK_WEB_PAGE, // new on 8/19/98
+ "To learn more about ToonTalk see www.toontalk.com."
+
+IDS_ROBOT_LOST_TRACK_OF_THINGS, // new on 10/16/98
+ "A robot has lost track of things. It didn't expect to have to keep track of this many things."
+IDS_EXPECTED_TO_KEEP_TRACK, // used to generate sentences like
+// A robot B expected to keep track of only 3 things.
+ "expected to keep track of only"
+
+IDS_TRIAL_VERSION_DOES_NOT_GENERATE_JAVA, // added 10/21/98
+ "Sorry, but the trial version does not generate Java applets."
+
+IDS_A_ROBOT_NAMED, // split off from IDS_ROBOT_HAS_NON_MATCHING_BOX on 280199
+ "a robot named" // followed by a robot name
+
+// also on 280199 removed "a robot" from
+// IDS_ROBOT_COULDNT_FIND_ITEM, IDS_ROBOT_COULDNT_FIND_NEST, IDS_ROBOT_COULDNT_FIND_PLACE,
+// IDS_ROBOT_COULDNT_FIND_BIRD, IDS_ROBOT_COULDNT_FIND_PLACE_TO_RELEASE,
+// IDS_ROBOT_EXPECTED_BOX_BUT, IDS_ROBOT_DIDNT_FIND_ROBOT_IN_TRUCK,
+// IDS_ROBOT_COULDNT_USE_IN_VACUUM,IDS_ROBOT_COULDNT_PUT_IN_VACUUM,
+// IDS_ROBOT_THING_NOT_IN_ROOM, IDS_SOMETHING_NOT_IN_NOTEBOOK,
+
+// On 5/4/99 added the following:
+
+
+IDS_CHILDREN_HELP,
+ "the answer to the question ""What pictures are stuck on top of me?"""
+IDS_ANCESTORS_HELP,
+ "the answer to the question ""What picture am I stuck on top of, and what picture is that stuck on, and so on?"""
+IDS_CHILDREN_SHORT_LABEL,
+ "Parts"
+IDS_ANCESTORS_SHORT_LABEL,
+ "Containers"
+IDS_CHILDREN_LONG_LABEL,
+ "Parts"
+IDS_ANCESTORS_LONG_LABEL,
+ "Containers"
+IDS_AND_IT_HAS_THE_LABEL,
+ "and it has the label"
+IDS_ANSWER_CHILDREN_QUESTION,
+ "This tells us what pictures are stuck on top of"
+IDS_ANSWER_ANCESTORS_QUESTION,
+ "This tells us what pictures"
+IDS_ANSWER_ANCESTORS_QUESTION2,
+  "is stuck on top of"
+IDS_LABELED_BY,
+ "labeled by"
+IDS_LABELED_BY2,
+ " "
+IDS_ENCODING_MISSING_IN_PUZZLE,
+ "Couldn't find encoding of goal in puzzle."
+IDS_PUZZLE_CONTAINED_NON_ROBOT_AFTER_GOAL,
+"Puzzle contained a non-robot after the goal. Section ignored."
+IDS_NON_PICTURE_ON_TOP_OF_PICTURE,
+ "Non picture on top of picture added to back instead."
+IDS_GIVE_ME_AND_ILL_TALK_ABOUT_IT,
+ "If you give me something, I'll talk about it whenever I'm talking about" // followed by some ToonTalk object
+IDS_HERES_A_COPY_OF,
+"Here's a copy of" // followed by some ToonTalk object
+IDS_HERES_A_COPY_OF2,
+ " "
+IDS_IT_GOES_WITH,
+"It goes with" // followed by some ToonTalk object
+IDS_IT_GOES_WITH2,
+ " "
+IDS_OK,
+"OK"
+IDS_ILL_REMEMBER_THAT,
+"I'll remember that"
+IDS_GOES_WITH,
+"goes with"
+
+
+IDS_TRILLION_SINGULAR,
+ "one trillion"
+IDS_TRILLION_PLURAL,
+ "trillion"
+IDS_BILLION_SINGULAR,
+ "one billion"
+IDS_BILLION_PLURAL,
+ "billion"
+IDS_MILLION_SINGULAR,
+ "one million"
+IDS_MILLION_PLURAL,
+ "million"
+IDS_THOUSAND_SINGULAR,
+ "thousand"
+IDS_THOUSAND_PLURAL,
+ "thousand"
+IDS_HUNDRED_SINGULAR,
+ "hundred"
+IDS_HUNDRED_PLURAL,
+ "hundred"
+
+IDS_MY_BOX, // new on 290499
+"My Box"
+
+IDS_THAT_REMINDS_ME_OF, // new on 290699
+ // for example, "You are holding a box that reminds me of the text "this is a comment"".
+ "that reminds me of"
+IDS_THAT_REMINDS_ME_OF2, // used after "this is a comment" above.
+ " "
+
+IDS_SOMETHING, // new on 300699
+"something"
+
+IDS_ANY_ROBOT, // new on 090799
+"any robot"
+
+IDS_ANY_FORCE_EFFECT, // new on 160799
+ "any force effect"
+IDS_BLANK_FORCE_EFFECT,
+ "an erased force effect"
+IDS_FORCE_EFFECT_TYPE_INDEFINITE,
+ "a force feedback effect"
+IDS_FORCE_EFFECT_TYPE_DEFINITE,
+ "the force feedback effect"
+IDS_FORCE_EFFECT_TYPE_PLURAL,
+ "force feedback effects"
+IDS_FORCE_EFFECT_TYPE_PRONOUN,
+ "it"
+
+ // new on 200799
+IDS_KEYBOARD_ACCELERATORS,
+  // be sure that no letter occurs twice in the same situation in the following
+  // Each letter corresponds to a keyboard command:
+
+  // D - Down when in helicopter
+  // U - Up when in helicopter
+
+  // H - Helicopter when walking outside
+
+  // U - Standup if your hand is empty
+  // P - Pickup what is under your finger if your hand is empty
+  // F - Pickup and flip what is under your finger if your hand is empty
+
+  // F - Flip when holding picture or pad
+  // D - Drop what you are holding
+ "duhupffd"
+
+// The following indicate what should seperate words in sentences.
+// In Japanese it should be the special keyword "NOTHING" which means no space between phrases or words
+IDS_SPACE_BEFORE_PRONOUNS,
+ // in Portuguese this should be "-"
+ " "
+IDS_SPACE_BEFORE_OR_AFTER_NUMBERS,
+ " "
+IDS_DEFAULT_SPACE_BETWEEN_WORDS,
+ " "
+
+ // the following also need to be updated for Asian languages
+IDS_COMMA,
+ ","
+IDS_END_SENTENCE,
+ ". "
+IDS_END_QUESTION,
+ "? "
+IDS_END_SENTENCE_EXCLAMATION,
+ "! "
+
+IDS_NOT_A_GOOD_DEMO_FILE,
+ "is not a good ToonTalk demo log file."
+IDS_DEMO_FILE_NEED_NEWER_VERSION_OF_TOONTALK,
+ "The demo file will only run in later versions of ToonTalk. Please upgrade your system. Visit www.toontalk.com."
+
+IDS_FORCE_EFFECT_HELP, // added 7/31/99
+"You can feel that effect by pressing "
+IDS_FORCE_EFFECT_HELP2,
+ " "
+IDS_FORCE_EFFECTS_ON_PAGE4,
+"You can find more force effects in the notebook near the end of the sensor notebook."
+
+IDS_UNKNOWN_PROBLEM_READING_A_URL, // new on 9/14/99
+"There was a problem reading a file from the Internet."
+IDS_SHOULD_TOONTALK_STOP_READING_URLS,
+" Do you want ToonTalk to stop trying to find files on the Internet?"
+
+IDS_TOOLBOX_IN_VACUUM_HELP, // new on 170999
+"Tooly won't come since he is in Dusty the Vacuum. Use Dusty to spit him out. "
+
+IDS_MOUSE_RELEASED, // new on 311099
+"ToonTalk no longer using the mouse - Press Control-F8 to start using it again."
+
+IDS_MARTAIN_SPEAK_WITH_SUBTITLES, // new on 101199
+  "speak and subtitles"
+
+IDS_COPY_OF_ME, // new on 121199 
+  "Copy\rof me"
+
+IDS_WANT_TO_SEE_LOG, // new on 221199
+ "Do you want to see your log file?"
+
+IDS_LANGUAGE_SHORT_LABEL,
+ "Language"
+IDS_LANGUAGE_LONG_LABEL,
+ "Language\rUsed"
+IDS_LANGUAGE_HELP,
+ "what language ToonTalk is using"
+
+IDS_SPACE_NO_LONGER_CHANGES_PICTURES, // new on 221199
+ "A robot is typing space to a picture that wasn't stopped. Space no longer changes a picture. Should I change such robots so they type '+' instead?"
+IDS_SPACE_NO_LONGER_CHANGES_REMOTE_CONTROLS,
+ "A robot is typing space to a remote control that wasn't stopped. Space no longer changes it. Should I change such robots so they type '+' instead?"
+IDS_ROBOT_UPDATED_WHEN_RUN,
+ "Robots will be updated the first time they run. You'll need to save the updated robots to avoid being asked again about this in your next session."
+
+
+

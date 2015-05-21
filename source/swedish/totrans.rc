@@ -1,0 +1,146 @@
+IDS_NEED_DIFFERENT_NUMBERS_UNDERNEATH, // new on 071201 (really belongs in puzzle.rc)
+"Sorry, but we need 2, 3, 4, 5, 6, and so on on the nest. "
+
+// new on 100202
+
+IDS_INTEGER_PART,
+"Integer Part"
+IDS_FRACTION_PART,
+"Fraction Part"
+IDS_NUMERATOR,
+"Numerator"
+IDS_DENOMINATOR,
+"Denominator"
+IDS_SINE,
+"Sine"
+IDS_COSINE,
+"Cosine"
+IDS_TANGENT,
+"Tangent"
+IDS_ARCSINE,
+"Arc Sine"
+IDS_ARCCOSINE,
+"Arc Cosine"
+IDS_ARCTANGENT,
+"Arc Tangent"
+IDS_NATURAL_LOG,
+"Natural Log"
+IDS_LOG10,
+"Log Base 10"
+
+IDS_SOMETHING_WHICH_WILL,
+ "something which will"
+IDS_SOMETHING_WHICH_WILL2, // part that comes after "something which will" "multiply by" ...
+ " "
+
+IDS_OPERATION_ADD,
+  "add"
+IDS_OPERATION_SUBTRACT,
+  "subtract"
+IDS_OPERATION_COMPUTE_THE_POWER,
+  "raise what it is dropped on to the power of"
+IDS_OPERATION_INTEGER_PART,
+  "leave the integer part"
+IDS_OPERATION_FRACTION_PART,
+  "leave the fractional part"
+IDS_OPERATION_NUMERATOR,
+  "leave the numerator"
+IDS_OPERATION_DENOMINATOR,
+  "leave the denominator"
+IDS_OPERATION_BITWISE_COMPLEMENT,
+  "complement the bits"
+IDS_OPERATION_SINE,
+  "take the sine"
+IDS_OPERATION_COSINE,
+  "take the cosine"
+IDS_OPERATION_TANGENT,
+  "take the tangent"
+IDS_OPERATION_ARCSINE,
+  "take the arc sine"
+IDS_OPERATION_ARCCOSINE,
+  "take the arc cosine"
+IDS_OPERATION_ARCTANGENT,
+  "take the arc tangent"
+IDS_OPERATION_NATURAL_LOG,
+  "compute the natural log"
+IDS_OPERATION_LOG10,
+   "compute the log in base 10"
+
+IDS_BITWISE_XOR,
+"Bitwise XOR"
+IDS_BITWISE_AND,
+"Bitwise AND"
+IDS_BITWISE_OR,
+"Bitwise OR"
+
+IDS_THEN, // restored on 110202 - only used for phrases like "multiply by 10 then add 3 then divide by 7 ..."
+ "then"
+
+ // following have been renamed and had "something which will" removed
+
+IDS_OPERATION_MULTIPLY_BY,
+ // as in "You are holding something which will multiply by 3."
+ // You can create one of these by typing X while holding a 3.
+ // similarly for the entries up to IDS_SOMETHING_WHICH_WILL_XOR
+  "multiply by"
+IDS_OPERATION_DIVIDE_BY,
+  "divide by"
+IDS_OPERATION_CHANGE_NUMBER,
+  "change the number it is dropped on to"
+IDS_OPERATION_BITWISE_OR,
+  "OR the bits of the number underneath with"
+IDS_OPERATION_BITWISE_AND,
+  "AND the bits of the number underneath with"
+IDS_OPERATION_BITWISE_XOR,
+  "will EXCLUSIVE OR the bits of the number underneath with"
+
+IDS_FRACTION_NUMBER_FORMAT,"Fraction"
+IDS_INTEGER_AND_PROPER_FRACTION_NUMBER_FORMAT,"Integer and\rProper Fraction"
+IDS_EXACT_DECIMAL_OR_FRACTION_NUMBER_FORMAT,"Exact Decimal\ror Fraction"
+IDS_EXACT_DECIMAL_OR_INTEGER_AND_PROPER_FRACTION_NUMBER_FORMAT,"Exact Decimal\ror Integer and\rProper Fraction"
+
+IDS_NUMBERS_AND_FUNCTIONS,
+"Numbers\rand Functions"
+
+IDS_ABORT_UNKNOWN_ARITHMETIC_EXCEPTION,
+"couldn't do the arithmetic"
+
+IDS_TROUBLE_SHOOT_BIG_NUMBERS_SLOW, // new on 270202
+ "Working with big numbers can be so slow that ToonTalk freezes for a few seconds or minutes. Do you want to read more about this?"
+
+IDS_TWO_NUMBERS, // new on 030202
+"two numbers"
+IDS_OPERATION_ADD2, // this comes after "add" "two numbers" if needed to be grammatical
+" "
+IDS_OPERATION_SUBTRACT2, // this comes after "subtract" "two numbers" if needed to be grammatical
+" "
+IDS_OPERATION_MULTIPLY,
+"multiply"
+IDS_OPERATION_MULTIPLY2,
+" "
+IDS_OPERATION_DIVIDE,
+"divide"
+IDS_OPERATION_DIVIDE2,
+" "
+IDS_OPERATION_CHANGE_NUMBER_NO_VALUE,
+"make one number equal to another"
+IDS_OPERATION_BITWISE_OR_NO_VALUE,
+"OR the bits of"
+IDS_OPERATION_BITWISE_OR_NO_VALUE2,
+" "
+IDS_OPERATION_BITWISE_AND_NO_VALUE,
+"AND the bits of"
+IDS_OPERATION_BITWISE_AND_NO_VALUE2,
+" "
+IDS_OPERATION_BITWISE_XOR_NO_VALUE,
+"EXCLUSIVE OR the bits of"
+IDS_OPERATION_BITWISE_XOR_NO_VALUE2,
+" "
+IDS_OPERATION_COMPUTE_THE_POWER_NO_VALUE,
+"raise one number to the power of another"
+
+IDS_CANT_FLIP_REMOTES,
+ //"du kan inte vända upp och ner på en fjärrkontroll för en annans utseende"
+ // flip here is used as in flipping a picture over to see its back
+ // "you can't flip over a remote control for the looks of another picture" -- was this prior to 181002
+ "you can't flip over this kind of remote control"

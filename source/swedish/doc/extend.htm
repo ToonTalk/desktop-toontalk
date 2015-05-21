@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Att använda ToonTalk-tillägg</TITLE>
+<META NAME="Version" CONTENT="8.0.4308">
+<META NAME="Date" CONTENT="7/8/97">
+<META NAME="Template" CONTENT="C:\Program Files\Microsoft Office\Office\HTML.DOT">
+</HEAD>
+<BODY TEXT="#000000" LINK="#0000ff" VLINK="#800080" BGCOLOR="#ffffff">
+
+<B><FONT SIZE=5><P ALIGN="CENTER">Att anv&auml;nda ToonTalk-till&auml;gg</P>
+</B></FONT><I><FONT SIZE=4><P ALIGN="CENTER">Endast f&ouml;r avancerade anv&auml;ndare:</P>
+</I><P>ToonTalk-till&auml;gg &auml;r </FONT><A HREF="BIRD.HTM"><FONT SIZE=4>f&aring;glar</FONT></A><FONT SIZE=4> som kan flyga "utanf&ouml;r" ToonTalk till operativsystemet. Du b&ouml;rjar med bara en "fr&auml;mmande" f&aring;gel. Men den kan skaffa dig f&aring;glar som var och en kan vara kopplad till vilken ToonTalk-extension som helst som finns installerad i ditt system. Du kan hitta den f&aring;geln i slutet av din </FONT><A HREF="sensor.htm"><FONT SIZE=4>anteckningsbok f&ouml;r sensorer</FONT></A><FONT SIZE=4>. Den har ett fr&aring;getecken tryckt p&aring; sin T-shirt. F&ouml;r att "&ouml;ppna" ett till&auml;gg, ska du ge den en l&aring;da med tv&aring; fack: det f&ouml;rsta ska ineh&aring;lla namnet p&aring; till&auml;gget och det andra en annan f&aring;gel som kommer att h&auml;mta en ny f&aring;gel (i en l&aring;da). De meddelanden (l&aring;dor), den nya f&aring;geln ska ha beror p&aring; vilket till&auml;gg den ska flyga till.</P>
+<P>Alla programmerare som kan g&ouml;ra Windows DLL-filer (Dynamic Link Libraries) kan </FONT><A HREF="extend2.htm"><FONT SIZE=4>g&ouml;ra nya till&auml;gg</FONT></A><FONT SIZE=4>. S&aring; sm&aring;ningom kommer kanske programmerare l&auml;gga till nya till&auml;gg f&ouml;r att exempelvis skapa musik, koppla upp till Internet eller g&ouml;ra 3D-grafik. F&ouml;r n&auml;rvarande finns det bara ett </FONT><A HREF="extendin.htm"><FONT SIZE=4>till&auml;gg som kan installeras:</FONT></A></P>
+<B><FONT SIZE=4><P><A NAME="FileExtension"></A>ARKIV till&auml;gget.</B> Detta till&auml;gg g&ouml;r det m&ouml;jligt f&ouml;r dig att &ouml;ppna filer och l&auml;sa och skriva dem. En f&aring;gel som &auml;r kopplad till detta till&auml;gg ska du ge en l&aring;da med 3 fack. Det f&ouml;rsta facket ska inneh&aring;lla ett av de meddelanden som finns i listan h&auml;r nere. Det andra facket ska inneh&aring;lla namnet p&aring; den fil du &auml;r ute efter. Det tredje facket ska inneh&aring;lla en f&aring;gel som ska ta emot en l&aring;da med en annan f&aring;gel i. Det &auml;r denna nya f&aring;gel som kommer att ta med sig meddelanden till filen. </P>
+<OL>
+
+<B><LI>Skapa en ny fil. </B>Om det f&ouml;rsta facket inneh&aring;ller orden "Create file", s&aring; kommer en ny fil att skapas &aring;t dig. Det andra facket ska inneh&aring;lla namnet du vill ge filen. Det f&aring;r inte redan finnas n&aring;gon fil med namnet. Namnet m&aring;ste skrivas enligt reglerna f&ouml;r det aktuella operativsystemet.</FONT> </LI>
+<B><FONT SIZE=4><LI>&Ouml;ppna. </B>Om det f&ouml;rsta facket inneh&aring;ller ordet "Open", s&aring; kommer en ny fil att &ouml;ppnas &aring;t dig. Det andra facket ska inneh&aring;lla namnet p&aring; en fil som redan finns. Filen &ouml;ppnas med hj&auml;lp av den procedur i Windows som heter <I>CreateFile</I>. Det inneb&auml;r att det kan vara namnet p&aring; en fil, en r&ouml;rledning, en mail slot, en kommunikationsport (t ex "LPT1" eller "COM1"), enhet, bildsk&auml;rm med tangentbord eller en mapp som ska &ouml;ppnas.</FONT> </LI>
+<B><FONT SIZE=4><LI>&Ouml;ppna seriell port. </B>Om det f&ouml;rsta facket inneh&aring;ller orden "Open serial port", s&aring; kommer en seriell port att &ouml;ppnas som har de egenskaper som specificeras av namnet som ligger i det andra facket. Om t ex det andra facket inneh&aring;ller "COM1: baud=1200 parity=N data=8 stop=1" d&aring; kommer denseriella porten nummer ett i din dator att &ouml;pnnas med inst&auml;llningen 1200 baud, paritet av, 8 bit och stop 1. Denna procedur bygger p&aring; Windows <I>BuildCommDCB</I> f&ouml;r att beskriva portarna.</FONT> </LI></OL>
+
+<B><FONT SIZE=4><P>Meddelanden till filer. </B>N&auml;r du lyckats skapa en ny fil, ska du ha en f&aring;gel som flyger till den filen. Den ska ha filnamnet tryckt p&aring; sin T-shirt. Du kan ge den ett meddelande med tre fack. Det f&ouml;rsta facket kan ha n&aring;got av de meddelanden som finns i listan h&auml;r nere. Inneh&aring;llet i det andra facket h&auml;nger p&aring; vad som ligger i det f&ouml;rsta. Det tredje facket ska inneh&aring;lla en f&aring;gel som kommer att ta emot ett svar.</P>
+<OL>
+
+<B><LI>L&auml;s</B>. Det f&ouml;rsta facket ska inneh&aring;lla ordet "Read". Det andra facket ska inneh&aring;lla ett tal som anger hur m&aring;nga bokst&auml;ver eller tecken som ska l&auml;sas. F&aring;geln f&aring;r ett textkort med de l&auml;sta bokst&auml;verna. Om slutet av filen blev n&aring;dd, s&aring; kommer antalet bokst&auml;ver att bli mindre .</FONT> </LI>
+<B><FONT SIZE=4><LI>Skriv</B>. Det f&ouml;rsta facket ska inneh&aring;lla ordet "Write". Det andra facket ska inneh&aring;lla ett textkort som ska l&auml;ggas till filen. F&aring;geln f&aring;r ett sifferkort som visar antalet bokst&auml;ver som faktiskt lades till filen.</FONT> </LI>
+<B><FONT SIZE=4><LI>L&auml;s Bytes. </B>Det f&ouml;rsta facket ska inneh&aring;lla orden "Read bytes". Det andra facket ska inneh&aring;lla ett tal som anger hur m&aring;nga bokst&auml;ver eller tecken som ska l&auml;sas. F&aring;geln f&aring;r en l&aring;da med ett fack f&ouml;r varje tecken som l&auml;ses. I varje fack ligger ASCII-talet f&ouml;r det tecknet. Om slutet av filen blev n&aring;dd, s&aring; kommer antalet bokst&auml;ver att bli mindre .</FONT> </LI>
+<B><FONT SIZE=4><LI>Skriv Bytes. </B>Det f&ouml;rsta facket ska inneh&aring;lla orden "Write bytes". Det andra facket ska inneh&aring;lla en l&aring;da med ett fack f&ouml;r varje tecken ska l&auml;ggas till filen. Varje fack ska inneh&aring;lla ett tal som motsvarar ett ASCII-tal mellan 0 och 255. Om ett tal &auml;r f&ouml;r stort eller negativt, s&aring; kommer det att omvandlas. F&aring;geln f&aring;r ett sifferkort som visar antalet bokst&auml;ver som faktiskt lades till filen.</FONT> </LI></OL>
+
+<FONT SIZE=4><P>M&ouml;jligheten att l&auml;sa och skriva bytes &auml;r s&auml;rskilt betydelsefull n&auml;r det g&auml;ller seriella portar och parallelportar.</P>
+</FONT><P>&nbsp;</P>
+<P>&nbsp;</P></BODY>
+</HTML>

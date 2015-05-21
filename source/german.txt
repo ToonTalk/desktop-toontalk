@@ -1,0 +1,4 @@
+A German version of ToonTalk is in progress.  It was not ready for this release.  See
+http://www.toontalk.com/English/langs.htm
+
+for more information and the latest status.

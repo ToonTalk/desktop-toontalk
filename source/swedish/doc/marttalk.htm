@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 4">
+		<title>Att st&auml;lla in hur Marty talar i ToonTalk</title>
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script language="javascript" src="../common.js"></script>
+		<script id="clientEventHandlersJS" language="javascript">
+var notInstalled = "(Har ej installerats.)"; // needs translation
+var nextDialog = "usertype.htm";
+var category = "MartyTalk";
+var voices;
+
+function disableButton(buttonGroup, index) {
+   buttonGroup[index].disabled = true
+}
+		</script>
+		<link rel="stylesheet" type="text/css" href="../dialog.css">
+	</head>
+
+	<body>
+		Vill du &auml;ndra hur Marty talar?
+		<p>
+		<script><!--
+var voicesString = currentParameter("Voices");
+            if (voicesString != null) {
+                voices = voicesString.split(",");      
+            };
+// -->
+		</script>
+		<form name="Buttons" id="Form1">
+		</p>
+		<p><input id="Radio1" type="radio" value="1" name="RadioGroup">&nbsp;Jag vill att Marty talar och anv&auml;nder pratbubblor.
+		<script><!--
+if (voices.length == 0) {
+               document.writeln(notInstalled);
+            }
+// -->
+		</script>
+		</p>
+		<p><input id="Radio2" type="radio" value="2" name="RadioGroup">&nbsp;Jag vill att Marty talar utan att anv&auml;nda pratbubblor.
+		<script><!--
+if (voices.length == 0) {
+                    document.writeln(notInstalled);
+                 }
+// -->
+		</script>
+		</p>
+		<p><input id="Radio6" type="radio" value="6" name="RadioGroup"> &nbsp;Jag vill att Marty talar och anv&auml;nder textremsor l&auml;ngst ner p&aring; sk&auml;rmen.
+		<script><!--
+if (voices.length == 0) {
+                    document.writeln(notInstalled);
+                 }
+// -->
+		</script>
+		</p>
+		<p><input id="Radio3" type="radio" value="3" name="RadioGroup" checked>&nbsp;Jag vill att Marty &auml;r tyst. Varje pratbubbla ska finnas kvar lagom l&auml;nge f&ouml;r att en 10-&aring;ring ska hinna l&auml;sa.</p>
+		<p><input id="Radio4" type="radio" value="4" name="RadioGroup">&nbsp;Jag vill att Marty &auml;r tyst. Varje pratbubbla ska finnas kvar lagom l&auml;nge f&ouml;r att en vuxen ska hinna l&auml;sa.</p>
+		<p><input id="Radio5" type="radio" value="5" name="RadioGroup">&nbsp;Jag vill att Marty &auml;r tyst. Varje pratbubbla ska finnas kvar tills jag trycker p&aring; 'PageDown' n&auml;r jag l&auml;st f&auml;rdig.</p>
+		<p><input id="Radio7" type="radio" value="7" name="RadioGroup"> &nbsp;Jag vill att Marty &auml;r tyst. Men jag vill ha textremsor l&auml;ngst ner p&aring; sk&auml;rmen.</p>
+		<p>Marty kan tala, anv&auml;nda pratbubblor som i serier eller textremsor som p&aring; film. Han kan ha olika kombinationer av detta. N&auml;r han anv&auml;nder pratbubblor kan han l&aring;ta det g&aring; olika l&aring;ng tid mellan pratbubblorna. Kom ih&aring;g att Marty bara kan tala med de r&ouml;ster som finns installerade p&aring; din dator. ToonTalk CD-ROM installerar en r&ouml;st.</p>
+		<p>
+		</form>
+		<script><!--
+if (voices.length == 0) { 
+            for (var i = 0; i < document.Buttons.RadioGroup.length; i++) { // first 3 buttons need voices
+               if (document.Buttons.RadioGroup[i].value == "1" || document.Buttons.RadioGroup[i].value == "2" || document.Buttons.RadioGroup[i].value == "6") {
+                  document.Buttons.RadioGroup[i].disabled = true
+               }
+            }
+         }
+// -->
+		</script>
+		<script src="BNCD.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,980 @@
+// ToonTalk Patch Installation script
+////////////////////////////////////////////////////////////////////////////////
+//
+//  IIIIIII SSSSSS
+//    II    SS                          InstallShield (R)
+//    II    SSSSSS      (c) 1996-1997, InstallShield Software Corporation
+//    II        SS      (c) 1990-1996, InstallShield Corporation
+//  IIIIIII SSSSSS                     All Rights Reserved.
+//
+//
+//  This code is generated as a starting setup template.  You should
+//  modify it to provide all necessary steps for your setup.
+//
+//
+//    File Name:  Setup.rul
+//
+//  Description:  InstallShield script
+//
+//     Comments:  This template script performs a basic setup on a
+//                Windows 95 or Windows NT 4.0 platform. With minor
+//                modifications, this template can be adapted to create
+//                new, customized setups.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+  // Include header file
+#include "sdlang.h"
+#include "sddialog.h"
+
+////////////////////// string defines ////////////////////////////
+
+//#define UNINST_LOGFILE_NAME      "Uninst.isu"
+
+//////////////////// installation declarations ///////////////////
+
+  // ----- DLL prototypes -----
+
+
+     // your DLL prototypes
+     prototype DefaultIniEntry(STRING, STRING, STRING);
+     prototype CreateAndRegister(STRING, STRING, STRING);
+     prototype CreateAndRegisterIfNew(STRING, STRING, STRING);
+
+
+  // ---- script prototypes -----
+
+     // generated
+     prototype ShowDialogs();
+     prototype MoveFileData();
+     prototype HandleMoveDataError( NUMBER );
+     prototype ProcessBeforeDataMove();
+     prototype ProcessAfterDataMove();
+     prototype SetupRegistry();
+     prototype SetupFolders();
+     prototype CleanUpInstall();
+     prototype SetupInstall();
+     prototype SetupScreen();
+     prototype CheckRequirements();
+     prototype DialogShowSdWelcome();
+     prototype DialogShowSdFinishReboot();
+
+     // your prototypes
+     prototype LinkSound(STRING, STRING);
+
+  // ----- global variables ------
+
+     // generated
+     BOOL        bWinNT, bIsShellExplorer, bInstallAborted, bIs32BitSetup;
+     STRING      svDir;
+     STRING      svName, svCompany, svSerial;
+     STRING      svDefGroup;
+     STRING      szAppPath;
+     STRING      svSetupType;
+
+
+     // your global variables
+
+     STRING szTemp, szTemp2, szIgnore;
+
+     STRING szToonTalkIni; // new on 020902
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//   MAIN PROGRAM
+//
+//      The setup begins here by hiding the visible setup
+//      window.  This is done to allow all the titles, images, etc. to
+//      be established before showing the main window.  The following
+//      logic then performs the setup in a series of steps.
+//
+///////////////////////////////////////////////////////////////////////////////
+program
+    Disable( BACKGROUND );
+
+    CheckRequirements();
+
+    SetupInstall();
+
+    SetupScreen();
+
+    if (ShowDialogs()<0) goto end_install;
+
+    if (ProcessBeforeDataMove()<0) goto end_install;
+
+    if (MoveFileData()<0) goto end_install;
+
+    if (ProcessAfterDataMove()<0) goto end_install;
+
+    if (SetupRegistry()<0) goto end_install;
+
+    if (SetupFolders()<0) goto end_install;
+
+  end_install:
+
+    CleanUpInstall();
+
+     // If an unrecoverable error occurred, clean up the partial installation.
+     // Otherwise, exit normally.
+
+    if (bInstallAborted) then
+        abort;
+    endif;
+
+    // just for review patch include speech engine (100901)
+
+// commented out on 131201
+//    szTemp = szAppPath ^ "Playground" ^ "lhttseng.exe"; 
+//    LaunchAppAndWait(szTemp,"",WAIT);
+
+
+endprogram
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  ShowDialogs                                                    //
+//                                                                           //
+//  Purpose:  This function manages the display and navigation               //
+//            the standard dialogs that exist in a setup.                    //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ShowDialogs()
+    NUMBER  nResult;
+ begin
+
+    Dlg_Start:
+        // beginning of dialogs label
+
+    Dlg_SdWelcome:
+        nResult = DialogShowSdWelcome();
+        if (nResult = BACK) goto Dlg_Start;
+
+    return 0;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessBeforeDataMove                                           //
+//                                                                           //
+//  Purpose: This function performs any necessary operations prior to the    //
+//           actual data move operation.                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessBeforeDataMove()
+    STRING svLogFile;
+    NUMBER nResult;
+ begin
+
+  InstallationInfo( @COMPANY_NAME, @PRODUCT_NAME, @PRODUCT_VERSION, @PRODUCT_KEY );
+
+//  svLogFile = UNINST_LOGFILE_NAME;
+  svLogFile = @UNINST_LOGFILE_NAME; // updated 011100
+  // put this in the Playground subdirectory now
+  nResult = DeinstallStart( svDir + "Playground" , svLogFile, @UNINST_KEY, 0 );
+  if (nResult < 0) then
+      MessageBox( @ERROR_UNINSTSETUP, WARNING );
+  endif;
+
+  szAppPath = TARGETDIR; // TODO : if your application .exe is in a subdir of TARGETDIR then add subdir
+//  GetProfString(@ToonTalkIni, "Directories", "MainDir", szAppPath); // replaces the above on 170401 in case ToonTalk installed somewhere else -- already taken care of
+
+  if ((bIs32BitSetup) && (bIsShellExplorer)) then
+      RegDBSetItem( REGDB_APPPATH, szAppPath );
+      RegDBSetItem( REGDB_APPPATH_DEFAULT, szAppPath ^ @PRODUCT_KEY );
+      RegDBSetItem( REGDB_UNINSTALL_NAME, @UNINST_DISPLAY_NAME );
+  endif;
+
+  // TODO : update any items you want to process before moving the data
+  //
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  MoveFileData                                                   //
+//                                                                           //
+//  Purpose:  This function handles the data movement for                    //
+//            the setup.                                                     //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function MoveFileData()
+    NUMBER nResult, nDisk;
+ begin
+
+  nDisk = 1;
+  SetStatusWindow( 0, "" );
+  Disable( DIALOGCACHE );
+  Enable( STATUS );
+  StatusUpdate( ON, 100 );
+  nResult = ComponentMoveData( MEDIA, nDisk, 0 );
+
+  HandleMoveDataError( nResult );
+
+  Disable( STATUS );
+
+  return nResult;
+
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: HandleMoveDataError                                             //
+//                                                                           //
+//  Purpose: This function handles the error (if any) during the move data   //
+//           operation.                                                      //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function HandleMoveDataError( nResult )
+ begin
+
+  switch (nResult)
+  case 0:
+       return 0;
+  default:
+       SprintfBox( SEVERE, @TITLE_CAPTIONBAR, @ERROR_MOVEDATA, nResult );
+       bInstallAborted = TRUE;
+       return nResult;
+  endswitch;
+
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: ProcessAfterDataMove                                            //
+//                                                                           //
+//  Purpose: This function performs any necessary operations needed after    //
+//           all data has been moved.                                        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function ProcessAfterDataMove()
+    STRING szReferenceFile;
+ begin
+
+  // TODO : update self-registered files and other processes that
+  //        should be performed after the data has been moved.
+
+  // DeinstallSetReference specifies a file to be checked before
+  // uninstallation. If the file is in use, uninstallation will not proceed.
+
+  szReferenceFile = svDir ^ @PRODUCT_KEY; // TODO : If your file is in a subdir of svDir add that here
+  DeinstallSetReference( szReferenceFile );
+
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupRegistry                                                   //
+//                                                                           //
+//  Purpose: This function makes the registry entries for this setup.        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupRegistry()
+     INT nvType;
+     STRING szStartTTPath;
+begin
+
+//   if (@JUST_MEDIA = "0") then // commented out conditional on 190600
+// added on 260300
+// user should be given choice of free play, game, and demos
+//     CreateAndRegisterIfNew(".USR", "", "StartTT");
+//     CreateAndRegisterIfNew(".DMO", "", "StartTT");
+//     CreateAndRegisterIfNew(".PZL", "", "StartTT");
+//     CreateAndRegisterIfNew(".CTY", "", "StartTT");
+//     CreateAndRegisterIfNew(".TT", "", "StartTT");
+//   endif;
+
+// following copied from toontalk.rul on 170401
+
+     nvType = REGDB_STRING;
+     szStartTTPath = szAppPath ^ @PRODUCT_KEY;
+
+     RegDBCreateKey("StartTT"); // new on 220500
+     RegDBSetKeyValueEx("StartTT","",nvType,"ToonTalk File",-1); // new on 220500 -- changed to ToonTalk File on 060301
+     RegDBCreateKeyEx("StartTT\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTT\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+     // following is new on 180301 since otherwise Explorer shows them all with the type "ToonTalk File"
+     RegDBCreateKey("StartTTUser");
+     RegDBSetKeyValueEx("StartTTUser","",nvType,"ToonTalk User Profile",-1);
+     RegDBCreateKeyEx("StartTTUser\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTUser\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+     RegDBCreateKey("StartTTDemo");
+     RegDBSetKeyValueEx("StartTTDemo","",nvType,"ToonTalk Demo",-1);
+     RegDBCreateKeyEx("StartTTDemo\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTDemo\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+     RegDBCreateKey("StartTTPuzzle"); 
+     RegDBSetKeyValueEx("StartTTPuzzle","",nvType,"ToonTalk Puzzle",-1); 
+     RegDBCreateKeyEx("StartTTPuzzle\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTPuzzle\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+     RegDBCreateKey("StartTTCity");
+     RegDBSetKeyValueEx("StartTTCity","",nvType,"ToonTalk City",-1);
+     RegDBCreateKeyEx("StartTTCity\\shell\\open\\command","");
+     RegDBSetKeyValueEx("StartTTCity\\shell\\open\\command","",nvType,szStartTTPath + " %1",-1);
+
+     CreateAndRegisterIfNew(".USR", "", "StartTTUser");
+     CreateAndRegisterIfNew(".DMO", "", "StartTTDemo"); // moved these 3 from ToonTalk to StartTT
+     CreateAndRegisterIfNew(".PZL", "", "StartTTPuzzle");
+     CreateAndRegisterIfNew(".CTY", "", "StartTTCity");
+     CreateAndRegisterIfNew(".TT",  "", "StartTT"); // new on 200300
+
+     // following is new on 060301 - needed for Netscape Navigator and maybe some mail readers and others
+     CreateAndRegisterIfNew(".USR", "Content Type", "application/toontalk-user"); 
+     CreateAndRegisterIfNew(".DMO", "Content Type", "application/toontalk-demo"); 
+     CreateAndRegisterIfNew(".PZL", "Content Type", "application/toontalk-puzzle");
+     CreateAndRegisterIfNew(".CTY", "Content Type", "application/toontalk-city"); 
+     CreateAndRegisterIfNew(".TT",  "Content Type", "application/toontalk-object");
+
+     RegDBCreateKeyEx("MIME\\Database\\Content Type\\application/toontalkfile","");
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-user","Extension",nvType,".usr",-1); 
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-demo","Extension",nvType,".dmo",-1);
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-puzzley","Extension",nvType,".pzl",-1);
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-city","Extension",nvType,".cty",-1);
+     RegDBSetKeyValueEx("MIME\\Database\\Content Type\\application/toontalk-object","Extension",nvType,".tt",-1);
+
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Function: SetupFolders
+//
+//  Purpose: This function creates all the folders and shortcuts for the
+//           setup.  This includes program groups and items for Windows 3.1.
+//
+///////////////////////////////////////////////////////////////////////////////
+function SetupFolders()
+ STRING svPath , svVersionNumber;
+ begin
+
+    szToonTalkIni = WINDIR ^ "toontalk.ini"; // new on 020902 should be updated to end up on My Documents\ToonTalk
+
+
+  // TODO : Add all your folder (program group) along with shortcuts (program items)
+  //
+  //
+  //    CreateProgramFolder, AddFolderIcon....
+  //
+  //    Note : for 16-bit setups you should add an uninstaller icon pointing to
+  //           your log file.  Under 32-bit this is automatically done by Windows.
+
+//      WriteProfString(@ToonTalkIni,"User","DefaultUser",@DEFAULT_USER);
+//      WriteProfString(@ToonTalkIni,"User","DefaultUser","pp001030"); // so language tables don't mess this up -- commented out on 170401 since now put cities on desktop
+        WriteProfString(@ToonTalkIni,"User","DefaultUser","  "); // new on 200401
+
+ //     if (@JUST_MEDIA = "0") then
+    WriteProfString(@ToonTalkIni,"Versions","32Bit","1");
+//        WriteProfString(@ToonTalkIni,"Executables","ToonTalk32",@TOONTALK_EXECUTABLE);
+        WriteProfString(@ToonTalkIni,"Executables","ToonTalk32","TT100901"); // so language tables don't mess this up
+        WriteProfString(@ToonTalkIni,"Executables","DemoToonTalk32","TT239");
+        WriteProfString(@ToonTalkIni,"Executables","StringLibraryDll32","NEWTT.dll"); // updated on 170401
+
+        // new on 150400 - was + rather than ^ prior to 060100
+        WriteProfString(@ToonTalkIni,"Directories","ClippingDir",szAppPath ^ "TT_files\\");
+
+        // new on 010600
+//        szTemp = "*\\..\\..\\Java;*\\..\\..\\Playground\\sounds;*\\..\\..\\Downloads;http://www.ioe.ac.uk/playground/media";
+        // re-written on 071002
+        szTemp = szAppPath ^ "Java" + ";" + szAppPath ^ "Playground\\media" + ";" + szAppPath ^ "Playground\\sounds" + ";" szAppPath ^ "Downloads" + ";" 
+        WriteProfString(@ToonTalkIni,"Directories","FileSearchPath",szTemp);
+        WriteProfString(@ToonTalkIni,"Directories","URLCacheDir",szAppPath ^ "Downloads\\"); // restored on 071002
+//        WriteProfString(@ToonTalkIni,"Directories","URLCacheDir","*\\..\\..\\Downloads"); // updated on 170401
+        WriteProfString(@ToonTalkIni,"Directories","UserFiles","");
+
+        WriteProfString(@ToonTalkIni,"Switches","CityFileMax","5"); // new on 150400
+
+        WriteProfString(@ToonTalkIni,"Switches","DustyUsedOncePerClick","1"); // new on 071002
+        WriteProfString(@ToonTalkIni,"Switches","MillisecondsPumpyUsedPerClick","1000"); // new on 071002
+
+     if (@TEXT_TO_SPEECH_VOICE != "") then
+        WriteProfString(@ToonTalkIni, "User", "TextToSpeechMode", @TEXT_TO_SPEECH_VOICE); // new on 170401 
+     endif;
+
+// commented out the following since better to let city's ini file handle this
+//       WriteProfString(@ToonTalkIni,"Directories","BackgroundsDir","*\\..\\..\\Playground\\"); // new on 100901
+//       WriteProfString(@ToonTalkIni,"Directories","MainNotebookLabel","*\\..\\..\\Playground\\icon.tt"); // new on 100901
+//       WriteProfString(@ToonTalkIni,"FileExtensions","MissingPictureFileExtension","gif"); // new on 100901
+
+      DefaultIniEntry("ButtonKeyboardEquivalents","3","<F11>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","4","<space>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","5",".");
+      DefaultIniEntry("ButtonKeyboardEquivalents","6","+");
+      DefaultIniEntry("ButtonKeyboardEquivalents","7","-");
+      DefaultIniEntry("ButtonKeyboardEquivalents","8","<Escape>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","9","<F1>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","10","<F2>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","11","<F3>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","12","<F4>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","13","<F5>");
+      DefaultIniEntry("ButtonKeyboardEquivalents","14","<F6>");
+
+//      endif;
+//      AddFolderIcon("ToonTalk", "ToonTalk",
+//                    TARGETDIR ^ "StartTT.exe -32 1", "", "", 0, "", REPLACE);
+//      if (AskYesNo ( "Do you want to make the 32-bit version the default?" , YES ) = YES) then
+//         WriteProfString("toontalk.ini","Switches","32BitDefault","1");
+//      endif;
+//      if (bIsShellExplorer) then
+//         WriteProfString(@ToonTalkIni,"Versions","32Bit","1");
+//      endif;
+//      WriteProfString("toontalk.ini","InstallationDefaults","Version","2");
+//      if (VerFindFileVersion ( "ddraw.dll" , svPath , svVersionNumber ) = FILE_NOT_FOUND) then
+//         MessageBox ( "You need to install DirectX from www.microsoft.com/directx before you can run the 32-bit version." , INFORMATION );
+//      elseif (! bWinNT &&(VerCompare ( svVersionNumber , "4.05.00.0155" , VERSION )) = LESS_THAN) then
+           // NT DirectX stuff is handled differently
+//         MessageBox ( "If you have troubles running the 32-bit version you should get version 5 of DirectX from www.microsoft.com/directx." , INFORMATION );
+//     endif;
+
+      // following new on 170401
+        szTemp = szAppPath ^ "Users\\" ^ "Playground2001.cty";
+        AddFolderIcon(FOLDER_DESKTOP, "Playground City",
+                      szTemp, "", "", 0, "", REPLACE);
+        szTemp = szAppPath ^ "Users\\" ^ "PlaygroundBook.cty";
+        AddFolderIcon(FOLDER_DESKTOP, "Playground Notebook",
+                      szTemp, "", "", 0, "", REPLACE);
+
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: CleanUpInstall                                                  //
+//                                                                           //
+//  Purpose: This cleans up the setup.  Anything that should                 //
+//           be released or deleted at the end of the setup should           //
+//           be done here.                                                   //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CleanUpInstall()
+ begin
+
+
+  if (bInstallAborted) then
+      return 0;
+  endif;
+
+  DialogShowSdFinishReboot();
+
+  if (BATCH_INSTALL) then // ensure locked files are properly written
+      CommitSharedFiles(0);
+  endif;
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: SetupInstall                                                    //
+//                                                                           //
+//  Purpose: This will setup the installation.  Any general initialization   //
+//           needed for the installation should be performed here.           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupInstall()
+ STRING svResult, svTemp;
+ BOOL bCheckVersions;
+// STRING svTemp2;
+// NUMBER nResult;
+ begin
+
+  Enable( CORECOMPONENTHANDLING );
+
+  bInstallAborted = FALSE;
+
+//  if (bIs32BitSetup) then
+//      svDir = PROGRAMFILES ^ @COMPANY_NAME ^ @PRODUCT_NAME;
+//  else
+//      svDir = PROGRAMFILES ^ @COMPANY_NAME16 ^ @PRODUCT_NAME16; // use shorten names
+//  endif;
+
+//  if (!bIsShellExplorer) then
+//     MessageBox ( "Sorry but the 32-bit version of ToonTalk requires Windows 95 or Windows NT 4.0 or later." , SEVERE );
+//     abort;
+//  endif;
+  if (GetProfString ( @ToonTalkIni , "Directories" , "MainDir" , svDir ) < 0) then
+     MessageBox ( "You must install ToonTalk first. Sorry. See www.toontalk.com." , SEVERE );
+     abort;
+  endif;
+//  GetProfString ( @ToonTalkIni , "Versions" , "Language" , svTemp );
+//  if (StrCompare ( svTemp ,  @LANGUAGE_VERSION ) != 0) then
+//     if (AskYesNo ( @PATCH_DESIGNED_FOR + " " +  @LANGUAGE_VERSION + " " + @PATCH_MIGHT_NOT_WORK, YES) = YES) then
+//        abort;
+//     endif;
+//  endif;
+  bCheckVersions = TRUE;
+//  if (GetProfString ( @ToonTalkIni , "Versions" , @PRODUCT_KIND , svTemp ) < 0) then
+//     if (GetProfString ( @ToonTalkIni , "Versions" , @PRODUCT_KIND2 , svTemp ) < 0) then
+//        if (AskYesNo ( @PATCH_DESIGNED_FOR + " " +  @PRODUCT_KIND_NAME + " " + @PATCH_MIGHT_NOT_WORK, YES) = YES) then
+//           abort;
+//        else
+//           bCheckVersions = FALSE;
+//        endif;
+//     endif;
+//  endif;
+//  if (bCheckVersions && VerCompare ( svTemp + ".0", @PRODUCT_VERSION + ".0", VERSION ) = GREATER_THAN) then
+     // version compare expects 3 .s
+//     if (AskYesNo ( @PATCH_OLD_VERSION, YES) = YES) then
+//        abort;
+//     endif;
+//  endif;
+
+
+//  if (!bIsShellExplorer) then
+//     ComponentSelectItem(MEDIA, "32-bit Program Files", FALSE);
+//  endif;
+
+  TARGETDIR  = svDir;
+
+  SdProductName( @PRODUCT_NAME );
+
+  SdInit();
+
+  Enable( DIALOGCACHE );
+
+  return 0;
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  SetupScreen                                                    //
+//                                                                           //
+//  Purpose:  This function establishes  the screen look.  This includes     //
+//            colors, fonts, and text to be displayed.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function SetupScreen()
+ begin
+
+  Enable( FULLWINDOWMODE );
+  SetTitle( @TITLE_MAIN, 24, WHITE );
+
+  SetTitle( @TITLE_CAPTIONBAR, 0, BACKGROUNDCAPTION ); // Caption bar text.
+
+  Enable( BACKGROUND );
+
+  Delay( 1 );
+ end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function:  CheckRequirements                                              //
+//                                                                           //
+//  Purpose:  This function checks all minimum requirements for the          //
+//            application being installed.  If any fail, then the user       //
+//            is informed and the setup is terminated.                       //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function CheckRequirements()
+    NUMBER  nvDx, nvDy, nvResult;
+    STRING  svResult;
+
+ begin
+
+  bWinNT           = FALSE;
+  bIsShellExplorer = FALSE;
+
+  // Check screen resolution.
+  GetExtents( nvDx, nvDy );
+
+  if (nvDy < 480) then
+      MessageBox( @ERROR_VGARESOLUTION, WARNING );
+      abort;
+  endif;
+
+  // set 'setup' operation mode
+  bIs32BitSetup = TRUE;
+  GetSystemInfo( ISTYPE, nvResult, svResult );
+  if (nvResult = 16) then
+      bIs32BitSetup = FALSE; // running 16-bit setup
+      return 0; // no additional information required
+  endif;
+
+  // --- 32-bit testing after this point ---
+
+  // Determine the target system's operating system.
+  GetSystemInfo( OS, nvResult, svResult );
+
+  if (nvResult =  IS_WINDOWSNT) then
+      // Running Windows NT.
+      bWinNT = TRUE;
+
+      // Check to see if the shell being used is EXPLORER shell.
+      if (GetSystemInfo( OSMAJOR, nvResult, svResult ) = 0) then
+          if (nvResult >= 4) then
+              bIsShellExplorer = TRUE;
+          endif;
+      endif;
+
+  elseif (nvResult = IS_WINDOWS95 ) then
+      bIsShellExplorer = TRUE;
+
+  endif;
+
+ end;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdWelcome                                             //
+//                                                                           //
+//  Purpose: This function handles the standard welcome dialog.              //
+//                                                                           //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdWelcome()
+    NUMBER nResult;
+    STRING szTitle, szMsg;
+ begin
+
+  szTitle = "";
+  szMsg   = "";
+  nResult = SdWelcome( szTitle, szMsg );
+
+  return nResult;
+ end;
+
+function LinkSound(szLinkName, szWaveFileName)
+  begin
+    AddFolderIcon (szAppPath ^ "Playground\\Sounds", szLinkName + ".lnk" , szAppPath ^ "Playground\\Sounds" ^ szWaveFileName + ".wav", "", "", 0, "", REPLACE); 
+    return 0;
+end;
+
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+// Function: DialogShowSdFinishReboot                                        //
+//                                                                           //
+//  Purpose: This function will show the last dialog of the product.         //
+//           It will allow the user to reboot and/or show some readme text.  //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+function DialogShowSdFinishReboot()
+    NUMBER nResult, nDefOptions;
+    STRING szTitle, szMsg1, szMsg2, szOption1, szOption2;
+    NUMBER bOpt1, bOpt2;
+ begin
+
+  WriteProfString(@ToonTalkIni, "Versions", @PRODUCT_KIND, @PRODUCT_VERSION);
+
+// move if this works OK
+//  AddFolderIcon (szAppPath ^ "Playground\\Sounds", "boing.lnk" , szAppPath ^ "Playground\\Sounds" ^ "boing1.wav", "", "", 0, "", REPLACE); 
+//  AddFolderIcon (szAppPath ^ "Playground\\Sounds", "ånga.lnk" , szAppPath ^ "Playground\\Sounds" ^ "steam.wav", "", "", 0, "", REPLACE); 
+// following is new on 290501
+LinkSound("abambi", "abambi"); 
+LinkSound("Brännkammare", "AfterBurn"); 
+LinkSound("Flyglarm", "AirHorn"); 
+LinkSound("Larmsignal1", "Alert1"); 
+LinkSound("Larmsignal2", "Alert2"); 
+LinkSound("ett", "lejon alion"); 
+LinkSound("Basun", "Bassoon"); 
+LinkSound("Fladder", "mus batchirp"); 
+LinkSound("Badvatten", "BathWater"); 
+LinkSound("Beepbeep", "Beepbeep"); 
+LinkSound("BeepBeep2", "BeepBeep2"); 
+LinkSound("Beet5", "Beet5"); 
+LinkSound("Plingklocka", "Bell"); 
+LinkSound("Klockringning", "BellToll"); 
+LinkSound("Cykel1", "Bicycle1"); 
+LinkSound("Cykel2", "Bicycle2"); 
+LinkSound("bionic", "bionic"); 
+LinkSound("Fågelsång", "BirdSong"); 
+LinkSound("Fågelsång2", "BirdSong2"); 
+LinkSound("Boing1", "Boing1"); 
+LinkSound("Boing2", "Boing2"); 
+LinkSound("Bong", "Bong"); 
+LinkSound("Bonkzing", "Bonkzing"); 
+LinkSound("BOP", "BOP"); 
+LinkSound("Bäck", "Brook"); 
+LinkSound("Bubbel", "Bubble"); 
+LinkSound("Kula1", "bullet1"); 
+LinkSound("Kula2", "bullet2"); 
+LinkSound("Kula3", "bullet3"); 
+LinkSound("Rap", "Burp"); 
+LinkSound("Bussklocka", "BusBell"); 
+LinkSound("Buzz", "Buzz"); 
+LinkSound("byoing", "byoing"); 
+LinkSound("Bilstart1", "CarStart1"); 
+LinkSound("Bilstart2", "CarStart2"); 
+LinkSound("Katt1", "Cat1"); 
+LinkSound("Katt2", "Cat2"); 
+LinkSound("Hurra", "Cheer"); 
+LinkSound("Ching", "Ching"); 
+LinkSound("Kyrkklockor", "ChurchBells"); 
+LinkSound("clang1", "clang1"); 
+LinkSound("Applåd", "CLAPPING"); 
+LinkSound("Väggklocka", "Clock"); 
+LinkSound("Klockdong", "clockdong"); 
+LinkSound("Tuppkyckling", "Cockerel"); 
+LinkSound("Dator_klar", "computer_ready"); 
+LinkSound("Kosmisk", "Cosmic"); 
+LinkSound("Ko", "Cow"); 
+LinkSound("Ko_som_muar", "COWMOO"); 
+LinkSound("Krasch", "CRASH"); 
+LinkSound("Syrsor", "crickets"); 
+LinkSound("Crunch", "Crunch"); 
+LinkSound("Crunch2", "Crunch2"); 
+LinkSound("Gök", "CUCKOO"); 
+LinkSound("Gökur", "cuckooclock"); 
+LinkSound("Cymbal", "Cymbal"); 
+LinkSound("Liten_cymbal", "cymbalsmall"); 
+LinkSound("Da-ding", "Da-ding"); 
+LinkSound("DaDaDa", "DaDaDa"); 
+LinkSound("DeLa", "DeLa"); 
+LinkSound("Tärning1", "DiceRoll1"); 
+LinkSound("Tärning2", "DiceRoll2"); 
+LinkSound("Dinosaur", "Dinosaur"); 
+LinkSound("Hundskall", "Dogbark"); 
+LinkSound("Hundskall2", "Dogbark2"); 
+LinkSound("Hundskall3", "Dogbark3"); 
+LinkSound("Hundflämtning", "DogPanting"); 
+LinkSound("Liten_hund", "DogSmall"); 
+LinkSound("Dörrklocka", "Doorbell"); 
+LinkSound("Dropp", "Drip"); 
+LinkSound("Drong", "Drong"); 
+LinkSound("Anka", "Duck"); 
+LinkSound("dweewee", "dweewee"); 
+LinkSound("E", "E"); 
+LinkSound("Eek", "Eek"); 
+LinkSound("Töjning", "elastic"); 
+LinkSound("Elefant", "ELEPHANT"); 
+LinkSound("Elefant2", "Elephant2"); 
+LinkSound("Stärka", "Energize"); 
+LinkSound("Explodera", "Explode"); 
+LinkSound("Explosion2", "explosion2"); 
+LinkSound("Försvinna", "Fade"); 
+LinkSound("Fall1", "Fall1"); 
+LinkSound("Fall2", "Fall2"); 
+LinkSound("Fanfar", "Fanfare"); 
+LinkSound("Bondgård", "farmyard"); 
+LinkSound("Snabb_bil", "FastCar"); 
+LinkSound("Fjädrar", "feathers"); 
+LinkSound("Brandbil", "FireTruck"); 
+LinkSound("Spola", "FLUSH"); 
+LinkSound("MISTLUR1", "FogHorn1"); 
+LinkSound("MISTLUR2", "FogHorn2"); 
+LinkSound("Groda", "frog"); 
+LinkSound("Grodor", "Frogs"); 
+LinkSound("Spöke", "Ghost"); 
+LinkSound("Fnitter", "Giggle"); 
+LinkSound("Fnitter2", "giggle2"); 
+LinkSound("Glaskross", "glassbreak"); 
+LinkSound("Glaskross2", "GlassBreak2"); 
+LinkSound("Get", "goat"); 
+LinkSound("Godzilla", "godzilla"); 
+LinkSound("GongGong", "Gong"); 
+LinkSound("Gås", "Goose"); 
+LinkSound("Grhino", "grhino"); 
+LinkSound("Trafikkaos", "Gridlock"); 
+LinkSound("Morrning", "growl"); 
+LinkSound("Gevär", "GunRepeat"); 
+LinkSound("Hello", "hello"); 
+LinkSound("Träff", "hit"); 
+LinkSound("Hmm", "Hmm"); 
+LinkSound("Biltuta1", "Honk1"); 
+LinkSound("Biltuta2", "Honk2"); 
+LinkSound("Biltuta3", "Hooter"); 
+LinkSound("Tuta", "Horn"); 
+LinkSound("Tuta2", "horn2"); 
+LinkSound("Häst1", "Horse1"); 
+LinkSound("Häst2", "Horse2"); 
+LinkSound("Ylande", "HOWL"); 
+LinkSound("Inkräktare", "invader"); 
+LinkSound("Lastbilstuta", "Klaxon"); 
+LinkSound("Laladong", "Laladong"); 
+LinkSound("Laserpistol1", "LaserGun1"); 
+LinkSound("Laserpistol2", "LaserGun2"); 
+LinkSound("Laserpistol3", "LaserGun3"); 
+LinkSound("Laserpistol4", "LaserGun4"); 
+LinkSound("Laserpistol5", "LaserGun5"); 
+LinkSound("Skratt", "LAUGH"); 
+LinkSound("raketstart", "launch"); 
+LinkSound("LiftOff", "LiftOff"); 
+LinkSound("Lejon", "Lion"); 
+LinkSound("Lejon2", "Lion2"); 
+LinkSound("Dåre", "loon"); 
+LinkSound("Trollspö", "MagicWand"); 
+LinkSound("Skala", "Majscale"); 
+LinkSound("Marsian1", "Martian1"); 
+LinkSound("Marsian2", "Martian2"); 
+LinkSound("Mjau", "Meow"); 
+LinkSound("Modem", "Modem"); 
+LinkSound("Mu", "Moo"); 
+LinkSound("Rör_sig", "Moving"); 
+LinkSound("Musik1", "Music1"); 
+LinkSound("Musik2", "Music2"); 
+LinkSound("inget_ljud", "nosound"); 
+LinkSound("tonenA", "noteA"); 
+LinkSound("tonenB", "noteB"); 
+LinkSound("tonenC", "noteC"); 
+LinkSound("tonenD", "noteD"); 
+LinkSound("tonenG", "noteG"); 
+LinkSound("OneStep", "OneStep"); 
+LinkSound("Oops", "Oops"); 
+LinkSound("Orgel", "Organ"); 
+LinkSound("Uggla", "OWL"); 
+LinkSound("Papegoja", "Parrot"); 
+LinkSound("Papegoja2", "Parrot2"); 
+LinkSound("Vissla", "pennywhistle"); 
+LinkSound("Foton", "Photon"); 
+LinkSound("Fjutt", "Phut"); 
+LinkSound("Gris", "Pig"); 
+LinkSound("Svinstia", "Pigpen"); 
+LinkSound("Pilot", "pilot"); 
+LinkSound("Ping", "Ping"); 
+LinkSound("Flygplan", "Plane"); 
+LinkSound("Flygplan1", "Plane1"); 
+LinkSound("Flygplan2", "Plane2"); 
+LinkSound("Flygplan3", "Plane3"); 
+LinkSound("PLAYEAR", "PLAYEAR"); 
+LinkSound("Plopp", "Plop"); 
+LinkSound("Polissiren", "PoliceSiren"); 
+LinkSound("Flugor", "PondFlies"); 
+LinkSound("Flugor2", "PondFlies2"); 
+LinkSound("Pop1", "Pop1"); 
+LinkSound("Pop2", "Pop2"); 
+LinkSound("Pop3", "Pop3"); 
+LinkSound("Pop4", "Pop4"); 
+LinkSound("Pop5", "Pop5"); 
+LinkSound("Hälla", "Pouring"); 
+LinkSound("Gaspådrag", "PowerUp"); 
+LinkSound("Dunk", "Punch"); 
+LinkSound("Kvack", "Quack"); 
+LinkSound("Racer", "racer"); 
+LinkSound("randh", "Randh"); 
+LinkSound("Buande", "Raspberry"); 
+LinkSound("Strålpistol", "raygun"); 
+LinkSound("Noshörning", "RHINO"); 
+LinkSound("Rikoschett", "RICOCHET"); 
+LinkSound("Rödhake", "Robin"); 
+LinkSound("Tupp", "ROOSTER"); 
+LinkSound("Scooby", "Scooby"); 
+LinkSound("Måsar", "Seagulls"); 
+LinkSound("Vid_havet", "Seaside"); 
+LinkSound("Får", "Sheep"); 
+LinkSound("Fartyg", "Ship1"); 
+LinkSound("Slurp", "sinkdrain"); 
+LinkSound("SMASH", "SMASH"); 
+LinkSound("Smasch", "snore"); 
+LinkSound("Sonar", "sonar"); 
+LinkSound("Rymd", "space"); 
+LinkSound("Rymd4", "Space4"); 
+LinkSound("Splat", "Splat"); 
+LinkSound("Spring1", "Spring1"); 
+LinkSound("Spring2", "Spring2"); 
+LinkSound("Spring3", "Spring3"); 
+LinkSound("Ånga", "Steam"); 
+LinkSound("Kortvågsradio", "SwRadio"); 
+LinkSound("Synth", "Synth"); 
+LinkSound("Flygplanssatart", "takeoff"); 
+LinkSound("Tekopp", "Teacup"); 
+LinkSound("Telefon", "Telephone"); 
+LinkSound("Telefon2", "Telephone2"); 
+LinkSound("thankyou", "thankyou"); 
+LinkSound("Tiger", "tiger"); 
+LinkSound("Tiger2", "Tiger2"); 
+LinkSound("Trafik", "Traffic"); 
+LinkSound("Tåg1", "Train1"); 
+LinkSound("Tåg2", "Train2"); 
+LinkSound("Triangel", "TRIANGLE"); 
+LinkSound("Trumpet", "Trumpet"); 
+LinkSound("TWANG", "TWANG"); 
+LinkSound("Twoing", "Twoing"); 
+LinkSound("urhh", "urhh"); 
+LinkSound("Warble1", "Warble1"); 
+LinkSound("Warble2", "Warble2"); 
+LinkSound("Warp", "Warp"); 
+LinkSound("WarpSpeed", "WarpSpeed"); 
+LinkSound("Tvättbräde", "WashBoard"); 
+LinkSound("Vattenbubblor", "waterbubbles"); 
+LinkSound("Virvla", "Whirling"); 
+LinkSound("Häxa", "witch"); 
+LinkSound("Wobble1", "Wobble1"); 
+LinkSound("Wobble2", "Wobble2"); 
+LinkSound("Wobble3", "Wobble3"); 
+LinkSound("Vargylande", "WOLFHOWL"); 
+LinkSound("Xylofon1", "Xylophone1"); 
+LinkSound("Xylofon2", "Xylophone2"); 
+LinkSound("Yippee", "Yippee"); 
+LinkSound("Yippee1", "Yippee1"); 
+LinkSound("Zap1", "Zap1"); 
+LinkSound("Zap2", "Zap2"); 
+LinkSound("Zap3", "Zap3"); 
+LinkSound("Zip", "Zip"); 
+
+
+
+//", " AddFolderIcon (szAppPath ^ "Playground\\Sounds", "ko.lnk" , szAppPath ^ "Playground\\Sounds" ^ "cow.wav", "", "", 0, "", REPLACE)");; 
+  if (!BATCH_INSTALL) then
+      bOpt1 = FALSE;
+      bOpt2 = FALSE;
+      szMsg1 = "";
+      szMsg2 = "";
+      szOption1 = "";
+      szOption2 = "";
+      nResult = SdFinish( "", @INSTALLATION_COMPLETE, " ", szOption1, szOption2, bOpt1, bOpt2 );
+      return 0;
+  endif;
+
+  nDefOptions = SYS_BOOTMACHINE;
+  szTitle     = "";
+  szMsg1      = "";
+  szMsg2      = "";
+  nResult     = SdFinishReboot( szTitle, szMsg1, nDefOptions, szMsg2, 0 );
+
+  return nResult;
+ end;
+
+
+#include "c:\tt\install.rul"
+
+// --- include script file section ---
+
+#include "sddialog.rul"
+
+/* old versions:
+function CreateAndRegister(szKey, szName, szValue)
+   NUMBER nvType;
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+     endif;
+     // set's value even if old
+     RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     return 0;
+end;
+
+function CreateAndRegisterIfNew(szKey, szName, szValue)
+   STRING svOldValue;
+   NUMBER nvSize;
+   NUMBER nvType;
+   begin
+     nvType = REGDB_STRING;
+     if (RegDBKeyExist(szKey) < 0) then
+        RegDBCreateKeyEx(szKey, "");
+        // set's value only if new
+        RegDBSetKeyValueEx(szKey,szName,nvType,szValue,-1);
+     elseif (szKey[0] == '.') then
+       RegDBGetKeyValueEx (szKey, szName, nvType, svOldValue, nvSize);
+       if (StrCompare(szValue,svOldValue) = 0) then
+          return 0;
+       endif;
+       if (StrCompare("ToonTalk",svOldValue) = 0 || StrCompare("StartTT",svOldValue) = 0) then // added StartTT here on 210501
+          // don't need to ask if it is an old ToonTalk binding
+          CreateAndRegister(szKey, szName, szValue);
+          return 0;
+       endif;
+       if (AskYesNo(@TOONTALK_DOUBLE_CLICK1 + " " + szKey +
+                    " " + @TOONTALK_DOUBLE_CLICK2 + " (" + svOldValue + ") " + @TOONTALK_DOUBLE_CLICK3,
+                    YES) = YES) then
+           CreateAndRegister(szKey, szName, szValue);
+       endif;
+     endif;
+   return 0;
+end;
+*/

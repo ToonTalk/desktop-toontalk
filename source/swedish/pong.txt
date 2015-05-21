@@ -1,0 +1,937 @@
+0
+Hej Nicky. Jag tror jag kan bygga ett bordtennisspel
+i ToonTalk. Kan inte du hjälpa till?
+Hej Sally. Jag vet inte. Jag är ju bara
+nybörjare -- jag har nästan inte gjort nåt
+mer än den första demon. Jag är nog inte
+mycket till hjälp.
+Jo, du kommer att fatta snabbt. Kom igen nu --
+det blir roligt.
+Ja, okej då.
+Toppen! Vill du köra?
+Va! Jag trodde vi skulle leka med ToonTalk och
+jag är ju bara en barnunge.
+Nej, det är inte så jag menar -- du ska sitta
+vid datorn och använda musen och tangentbordet.
+Okej. Och du säger vad jag ska göra?
+Vi får arbeta ihop. Okej, nu landar vi
+och går in i huset.
+
+0
+Vilket av dom?
+Spelar ingen roll -- du får välja.
+
+0
+Hur sättar man sig ner?
+Som alla andra -- vad menar du? 
+Jag menar i ToonTalk.
+Jaha! Det är bara att trycka på en musknapp.
+
+0
+Okej. Och sen då?
+Får se nu... Vi börjar med racketen. Ta fram en
+bild av en racket från anteckningsboken med bilder.
+
+9
+I den här?
+Just det. Tryck ner mellanslag så kommer
+du till nästa sida.
+
+0
+Bra! Plocka upp den.
+Hur då?
+Släpp ner anteckningsboken. Och så peka på
+bilden. Ser du -- den vickar fram och tillbaka
+när du pekar på den. 
+
+0
+Va bra... Nu ska du shift-klicka --
+``Shift'' vadå?
+Shift-klicka. Du trycker ner shift-tangenten och sen
+klickar du en musknapp. Vi hade kunnat ställa in
+ToonTalk så att man skulle använda den
+högra musknappen för att shift-klicka, men jag
+har så svårt att skilja på höger och
+vänster.
+Ja, jag tycker det är svårt också. -- Okej.
+
+0
+Ojdå! Den vänder sig! Vad är det som händer?
+Upp flög en anteckningsbok full med
+fjärrkontroller och sensorer för racketen. Och
+den gråa ytan på baksidan är till för
+att sätta saker på senare. -- Bläddra
+framåt i anteckningsboken tills du hittar
+racketens hastighet.
+Va?
+Det är hastigheten på racketen när den
+rör sig uppåt och neråt.  Om det är
+minus så rör den sig neråt.  Vänta, jag
+ska visa dig. Ta ut uppåt-hastigheten från
+anteckningsbokenoch fjärrkontrollen för hur
+långt raacketen är från botten.  Och
+vänd på racketen och släpp ner den.
+
+0
+Peka nu på uppåt-hastigheten och tryck femtio
+på siffertangenterna.  
+
+0
+Ser du, den rör sig uppåt. Tryck nu in minus.
+
+0
+Och nu rör den sig neråt. Tryck på
+back-tangenten tills hastigheten är noll igen. 
+
+0
+Bra. Jag hade tänkt att vi skulle göra
+racketensuppåt/neråt- hastighet bli samma som
+musens upåt/neråt-hastighet.
+Låter bra. Hur gör vi det? 
+Okej. Vi har hastigheten uppåt för
+racketen. Ta nu och titta i anteckningsboken för
+sensorer på sidan 4 i den stora anteckningsboken.
+
+0
+Okej. ska jag slå upp musens hastighet uppåt? 
+Just det. Du fattar snabbt.
+
+0
+Ta nu och slå ihop dom. 
+Okej.
+
+0
+Nej. Jag menade sida vid sida.
+
+0
+Så här? 
+Just det. 
+
+0
+Nu ska vi ge den här lådan till en robot. 
+Okej.
+
+0
+Så vi tar bara den här musens hastighet och
+släpper den på racketens hastighet?
+Nästan. När vi väl plockat upp musens
+hastighet som kommer vi inte ha den längre för
+nästa gång.
+Men vi kunde ju skaffa en ny.
+Det skulle vi, men det är lättare att
+använda trollstaven.
+Ja just det! den kan kopiera musens hastighet. 
+
+0
+Så det är så man gör?
+Precis. Klicka nu på escape-tangenten.
+
+0
+
+Så nu använder vi Dammis för att suga
+bort det som finns i robotens tankebubbla?
+Jag brukar också använda Dammis nu men
+eftersom vi använder fjärrkontroller så
+räknade ToonTalk ut att det är vad vi ville
+och har redan gjort det åt oss.
+Kan vi inte prova det nu?
+Jo, men det är bäst vi sparar det först.
+I anteckningsboken, va?
+Jovisst. Leta upp en tom sida.
+
+0
+
+Okej. Har hittat en. Då släpper jag
+roboten här.
+Det kan du göra, men jag brukar lägga saker
+på högersidorna och skriva vad det är
+för någonting på vänstersidorna.
+Ja, det kan ju vara bra. 
+
+0
+Så jag tar upp ett "A", suddar det och
+skriver "Racket".
+Bra. Varför inte skriva "Rör sig upp och ner"
+på nästa rad?
+Så här?
+
+0
+Nu provar vi.
+Okej, men det är så mycket saker på golvet.  
+Jag har hört att när ToonTalk är riktigt
+färdigt så kommer vi kunna flytta till ett
+städat golv direkt.
+Men vi kan väl städa upp först.
+Det låter bra.
+
+0
+Ännu bättre. 
+
+0
+Så jag släpper lådan på roboten?
+Just det.
+
+0
+Det går ju jättelångsamt när
+man rör musen.
+Det är för att roboten går långsamt
+när vi kan se den. Nu vet jag! Vänd på
+racketen igen och lägg roboten på baksidan. 
+
+0
+Och ge lådan till roboten. Nej, vänta!
+Ge den en kopia av lådan i stället
+så kan vi se hur siffrorna ändras i lådan.
+
+0
+Och så vända den tillbaka igen?
+Rätt. 
+
+0
+Den rör sig men den är svår att kontrollera.
+Ja, det är den. Om jag rör musen lite grann
+så sticker den iväg åt det hållet.
+Jag vet hur vi kan få den at gå
+långsammare. Men vi måste få tillbaka den
+först. Visst ja. Tryck bara en nolla samtidigt
+som du pekar på dess hastighet och peka sedan
+på fjärrkontrollen för avståndet från
+botten och tryck en nolla igen.
+
+0
+Det funkade en sekund men sen stack den iväg
+igen. Oj! Det är för att roboten fortfarande
+jobbar på baksidan av racketen.
+Så är det. Jag vet. Tryck F8 och
+återställ fjärkontrollerna till noll igen.
+Vad händer då?
+Du ska få se. Prova.
+
+0
+Oj, det stänger av strömmen. Det är ju ett
+bra sätt att få saker att stanna. Så nu
+när jag har racketen tillbaka ska jag då
+vända den igen?
+Ja gör det. Och ta ut lådan. Sätt ner den
+varsomhelst.  
+
+0
+Jag tror problemet är att racketen
+rörde sig för fort. Om vi delar med, låt
+oss säga tio, så borde den sakta ner ganska
+ordentligt. Vi provar och ser om det hjälper.
+
+0
+Okej. Här har vi tio. Hur delar man?
+Tryck bara ett snedstreck.
+Och nu släpper jag den här "dela med tio"
+på musens hastighet?
+Precis.  
+
+0
+Bra. Lägg tillbaka lådan. Och det är
+bäst vi sparar den här innan vi provar.
+
+0
+Okej, nu provar vi den. Va? Nu fungerar
+det inte alls.
+Åh! Nu vet jag. Vi stannade alla robotarna.
+Tryck F8 igen.
+
+0
+Det här ser ju bra ut.
+Hmm. Släpp musen.
+Okej. Varför då?
+
+0
+Du ser. Den fortsätter att röra sig.
+Vadå då?
+Jag tror vår racket skulle fungera bättre om
+den enbart följde musens rörelser upp och ner
+i stället.
+Hur ska vi få racketen att göra det?
+Problemet är att när musens hastighet är
+noll så borde racketen stanna. Nu har jag det!
+Allt vi behöver göra är att se till
+hastigheterna är samma!
+Men vi lägger på dom. Vad kan vi göra åt det? 
+Börja med att ändra racketens hastighet till noll?
+Tänkte inte på det. Det borde fungera
+bra. Fast jag skulle hellre använda tecknet
+för "lika med". Vi gör om det från
+början. Det är lätt nu när vi vet vad vi
+ska göra. Städa upp och ta fram en bild på
+en racket igen. 
+
+0
+Och vänd på den och ta fram
+dess hastighet uppåt. 
+
+0
+Och ta fram musens hastighet uppåt i
+anteckningsboken för sensorer.
+
+0
+Ge nu lådan till en ny robot.
+
+0
+Ta Trollstaven och kopiera musens hastighet.
+
+0
+Bra och tryck nu tangenten för
+lika-med-tecknet. Det var det vi inte gjorde
+förut. Och det där med att dela med tio
+fungerade inte alls. Så släpp bara det där
+talet på racketens hastighet.
+
+0
+Åh. Jag fattar. Det gör att talet under blir
+lika med det som är ovanför.
+Du fattar. 
+
+0
+Nu lägger vi roboten och lådan
+på baksidan av racketen.
+
+0
+Nu får vi prova det.
+
+0
+Mycket lättare att styra.
+Jättefint. Ja, det var väl en bra
+början. Dt är bäst vi sparar
+det här i anteckningsboken.
+
+0
+Sen får vi väl göra bollar?
+Javisst, varför inte? Men vi tar först en
+rast, va?
+Okej. Men hur ska vi spara staden till
+vi kommer tillbaka?
+ToonTalk kan inte göra det ännu. Men vi har
+sparat allt viktigt i vår anteckningsbok. Tryck
+på Paus-tangenten och avsluta programmet.
+Okej. Ska ske.
+
+---------------
+
+Är du beredd att göra en studsande boll?
+Okej, vi går in i ett rum igen.
+
+Okej. Jag börjar med att vända en bild på
+en boll.  Jag ska bläddra genom anteckningsboken
+för att hitta saker som kan hjälpa oss. 
+Oj, vad är det här? En krockdetektor?
+
+
+Jag tror vi behöver en sån. Här, plocka upp
+den och tryck sen F1.
+
+F1?
+
+Nu behöver vi Marty. Hmm. " detektor som visar en
+enkel animation på antingen en krock eller en
+miss " -- Nu förstår jag! Så här kan vi
+prova. Vänd på bollen och rör på
+den. Flytta nu över den hit där golvet är
+tomt. Ser du hur detektorn ändras?
+
+
+Först visade den en liten animation på en
+krock och nu visar den att de saknas. Varför inte
+säga det med ord?
+
+Ingen aning. Kanske för att göra det
+lättare för små barn.
+
+Hur som helst, vi vill att bollen ska studsa
+tillbaka när den slår i mot någonting. Nu
+vet jag! Ta ut båda hastigheterna för bollen
+och koppla ihop dom med krockdetektorn.
+
+
+Och sen då?
+
+Okej. Vänd tillbaka bollen och släpp den på
+Verktygslådan nånstans.
+
+Varför det?
+
+För att få krockdetektorn att visa en krock.
+ 
+
+Okej. Så nu tränar vi en robot?
+
+
+Precis. Men ställ först in hastigheten på
+något annat än noll.  det är bäst att
+jobba med bra exempel.  Nu tar vi och multiplicerar
+hastigheten med minus ett.
+
+Jaha, det får det att bli minus om det är plus
+och plus om det är minus. Så det är på
+det viset kommer att studsa tillbaka. 
+Hur multiplicerar man med minus ett?
+
+Ta upp en siffra. Tryck minus och X.
+
+Och jag släpper den på hastigheten uppåt?
+
+Just det.
+
+Jag gör samma sak för hastigheten åt höger.
+
+Bravo. Nu måste vi prova.
+
+Nu vet jag. 
+Vi lägger roboten och lådan på bollens baksida. 
+
+Okej. För att testa den får vi kasta
+bollen på Verktygslådan.
+
+Borde vi inte spara den först?
+
+Jovisst. det glömde jag.
+
+Men hur ska jag kunna kasta bollen?
+
+Håll ner kontroll-tangenten och rör bollen mot
+Verktygslådan och släpp den.
+
+Okej. Nu kör vi.
+
+Vad konstigt. Det ser ut som om bollen fastnade.
+
+Hur ska vi få reda varför det blir så? 
+
+Jo, jag vet ett knep för sådana här
+problem. Vi gör en kopia av lådan som roboten
+arbetar från och ser om vi kan hitta något fel.
+Vi provar det. Vänd på bollen och kopiera lådan.
+
+Och nu vänder jag tillbaka den och provar igen? 
+
+Ja, just det.
+
+Ser du hur hastigheten går från minus till
+plus till minus hela tiden. Och att det går
+jättefort. Och titta -- krockdetektorn är
+på fortfarande.
+
+Jag tror att problemet är att bollen går in i
+Verktygslådan en liten aning. Om vi bara kunde
+få ut bollen en bit när det händer.
+
+Men du, Marty hade mer att säga om
+krockdetektornHan kanske kan hjäpa oss. Peka
+på en krockdetektor och tryck på F1 igen. Vad
+menar han med att "Du kan ändra en krock till en
+miss"? Vi provar det och ser vad som händer.
+
+Okej, nu har vi en krock och så ska jag trycka
+på mellanslag för att ändra den till en
+miss. Oj titta! Nu visar den miss och bollen åkte
+bort. Det verkar vara det vi behöver.
+
+Du, vi tränar en annan robot att vända på
+hastighterna som vi gjorde förut och som också
+ångrar krocken. Bra. Nu provar vi den här.
+
+Men vi måste spara bollen först. Vi döper den till BSB.
+
+Va?
+
+Bättre Studsande Boll.
+
+Jätteroligt. Vi kommer ju aldrig ihåg vad det betyder. 
+
+Jag kommer ihåg.
+
+Ja ja, men om vi tänker ge vår anteckningsbok
+till andra som ska fatta?
+
+Nicky. Okej, okej. Jag ska skriva ut hela orden.
+Nu provar vi den här bollen.
+
+
+Den studsade. Men den studsade verkligen konstigt.  
+
+Jag vet. Den skulle ha fortsatt uppåt -- inte
+börjat falla ner. Växlingen från höger
+till vänster såg riktig ut.
+
+Oj! Vi skulle bara ha multiplicerat hastigheten
+åt höger med minus ett.
+
+Okej, Jag ska göra om det.  Och jag tar bort den
+knäppa bollen från anteckningsboken och
+lägger in vår nya i stället.
+
+Varför inte behålla bägge två?
+Kunde vara rolig att ha till nåt.
+
+Okej. Jag döper om den till "Knäpp Boll"?
+
+Sug bort den gamla och sätt dit den nya.
+
+Ha ha. Okej. Och nu sparar vi den nya. 
+
+Nu kan vi prova.
+
+Okej. Jag håller ner ctrl-tangenten... Så där.  
+
+Lite långsamt. Men det är lättare att se
+vad den gör. Bra studs.  Fånga den innan den
+sticker iväg på utsidan.
+
+Jag har den. Jag sätter ner den.
+
+Vi sätter upp ett staket för den.
+
+Det är faktiskt en boll och inte en häst.
+
+Höh, höh. Lägg hit Trollstaven här.
+Dammis här. Och Pumpas där.
+
+Och nu kastar jag iväg den igen.
+
+Vilken studs. Oj, oj oj!! Den försvann där uppe.
+
+Inga problem.
+Vi har gott om dom i anteckningsboken.  
+
+Hmm. Ja, så måste det vara! När bollen
+slår i sidan på något så skulle vi byta
+på hastigheten åt höger men när den
+slår i botten eller överkanten så vill vi
+byta på hastigheten uppåt.
+
+Okej, men hur gör man det då?
+
+Vet inte. Vi kollar igenom bollens anteckningsbok.
+Kanske vi hittar nåt.
+
+Jag gör det.
+
+Hallå där. Backa tillbaka!
+
+Hur då då?
+
+Tryck på minus.
+
+Häftigt.
+
+Titta där!! en krockdetektor för vänster/höger!
+
+Jag tror jag börjar fatta. Vi tränar två
+robotar -- en för vänster/högerstudsar och
+en för upp/nerstudsar.
+
+Så multiplicerar jag den här med minus ett.
+
+Just det. Oj. Den andra roboten är likadan!
+
+Vad menar du? den här roboten är
+vänster/höger och den andra jobbar
+med upp/ner.
+
+Ja, så vi ger den krockdetektorn för upp/ner
+och hastighet uppåt.
+
+Tjusigt. Enda skillnaden är det som ligger i
+lådorna -- båda robotarna gör samma
+sak. Kan jag använda Trollstaven för att
+kopiera en robot?
+
+Borde fungera.
+
+Så där. Jag gör lådan för upp/ner
+grejset.  Och ger den till roboten som inte har
+nån låda. Jag ska spara den först --
+vad sägs om B3?
+
+Beträ vaddå?
+
+Bättre BSB. Fattar du -- tre Bn.
+
+
+Mmm. Ta ett namn du.
+
+Då provar vi.
+
+Vad bra det ser ut!
+
+Jag gör en boll till.
+
+Det ser bra ut också. Du, vi lägger till ett ljud.
+
+Hur då?
+
+Bläddra till sidan 8. Och plocka upp
+den där anteckningsboken.
+
+Nå, hur gör man ljud?
+
+Det är bara att "använda" ett av dom där.
+
+Använda?
+
+Shift-klicka medan du håller det.
+
+Okej. Låter knäppt. Ska vi ta det?  
+
+Vi tränar en robot att göra ljudet när det
+blir en krock. På så vis kan vi ändra ljud
+utan att träna en ny robot.  Lägg det ljudet
+med krockdetektorn som arbetar med både
+vänster/höger och upp/ner.
+
+
+Sådär. Och vad ska roboten göra? 
+
+Vänta ett tag. Låt detektorn få visa en
+krock först.  Bra. Och nu kan du bara plocka upp
+"plop" ljudet och shift-klicka.
+
+Så där och nu då?
+
+Det är allt -- tryck bara esc -tangenten.
+
+Det var lätt. Och nu använder vi Dammis för
+att suga upp bokstäverna så att det funkar
+för vilket ljud som helst som vi lägger där.
+
+Precis. Vi lägger "pop" där.
+
+Jaha. Okej. Och så lägger jag den här
+roboten och lådan på baksidan av bollen?
+
+Rätt. Och så sparar jag den.
+
+Vad dägs om att döpa den till "Bråkig Boll"?
+
+Fint.
+
+Nu vill jag prova.
+
+Härligt! Nu kan vi sätta ihop det till ett bordtennisspel.
+
+Jag har fotbollsträning nu. Vi kan väl göra klart efter den. 
+
+Passar mig bra. Allt är sparat i vår anteckningsbok så det är bara att avsluta.
+
+---------------
+Act 3.
+Tredje delen.
+
+Okej. Jag är färdig att sätta ihop vår
+racket och boll för att göra
+ett bordtennisspel. Vad gör vi?
+
+Ta ut en rektangel som vi kan ha som bord. 
+
+Okej. Det är ingen vidare snygg färg
+
+Tryck bara på mellanslag tills vi får en färg vi tycker om.
+
+Den här gillar jag. Bordet är ganska litet.
+Ska jag pumpa upp det?
+
+Det skulle vi kunna. Fast jag brukar spara det till sist.
+Vi kan använda Pumpas.
+
+Jag har glömt hur man gör det.
+
+Jag ska visa dig. Gör så här -- ta upp
+vår bråkiga studsande boll och plocka upp Pumpas.
+
+Och börja pumpa och sedan klicka igen för att
+släppa ut luft!
+
+Just det.
+
+Kan jag kasta bollen på bordet? 
+
+Jag tror det. Prova -- det kan inte skada.
+
+Åhhh. Den bara rullade bort.
+
+Hoppsan. Vi glömde att sätta upp spärrar
+som ett staket.
+
+Hur ska vi göra det?
+
+Släpp bara rektanglar vid bordets kanter.
+
+Jaja, rektanglar som bollen kan studsa mot.
+Men kommer inte rektanglarna att få spelet
+att se knäppt ut?
+
+Nix. Prova.
+
+Oj, det enda som syns är det som är högst
+upp på bordet.
+
+Just det. Vi provar bollen igen.
+
+Okej. Vad bra det ser ut!
+
+Nu lägger vi till vår racket som vi kan styra.
+
+Bra idé.
+
+Får jag försöka också.
+
+Okej.
+
+Jag ska trycka F9 för att gömma min hand när jag spelar. 
+
+Ja, nu räcker det. Nu är det min tur.
+
+Okej. Men vi ska nog spara det först.
+
+Vad sägs om "N och S bordtennisspel"
+
+Det är väl bra.
+Ska vi lägga till poängräkning nu?
+
+Så att man förlorar en poäng om
+man missar bollen?
+
+Visst, det är bra. Vi kan göra det mera
+komplicerat senare.  Okej. Ta upp en och vänd den.
+
+Jag visste inte att man kunde vända på siffror.
+
+Jovisst, varför inte? Jag tycker ToonTalk ska
+kunna låta alla saker få robotar på
+baksidan. Än så länge går det
+inte. ... Kommer du ihåg att det finns en
+fjärrkontroll för hur saker ska se
+ut. Bläddra igenom anteckningsboken tills du
+hittar den.
+
+Är det den här?
+
+Visst -- ta upp den.
+
+Hur funkar den?
+
+Precis som alla andra fjärrkontroller.
+Vänd på den igen och släpp sen
+en siffra på fjärrkontrollen.
+
+Hallå där -- dom ändrade sig bägge två.
+Vad händer om jag släpper något på
+siffran som var där från början.
+
+Prova. Det kan inte vara farligt.
+
+Båda ändras. Okej, hur ska vi använda
+det här då?
+
+Sätt en låda med en siffra
+bredvid lådan med fjärrkontrollen.
+
+Och plocka upp en robot?
+
+Javisst. Och den här roboten bara tar siffran och
+lägger den på fjärrkontrollen.
+
+Okej -- men vad är det här bra för?
+
+Vi provar. Du kommer at få se.
+
+Vi la till siffrorna. Än sen då?
+
+Det här är ett knep jag lärt mig.
+Ta och lägg ett fågelbo i den där lådan.
+
+Okej.
+
+Vänd nu på siffran tillbaka igen och lägg
+roboten och lådan på baksidan.
+
+
+Fågeln då?
+
+
+Bry dig inte om den. Du kommer att förstå.
+
+Och nu då?
+
+Ge fågeln en siffra. Nej! Nej! Inte den!
+
+Okej. Okej. Varför blir du så upphetsad?
+
+Tänk efter -- Var är fågelns bo?
+
+På baksidan av siffran.
+
+Just det. 
+Och vad gör en fågel när den får något? 
+
+Tar det till sitt bo -- jaha -- hur ska den kunna
+göra det om boet är på baksidan av siffran
+som den håller i? Det undrar jag. Vi provar.
+
+Okej. Men vi sparar det vi gjort först. 
+
+Menar du siffan?
+
+Det är där vår robot är.
+
+Jag kopierar siffran och lägger kopian i
+anteckningsboken så jag är säker på
+var fågelns bo är.
+
+Okej. Det är bra att vara på den säkra sidan.
+
+Nu kör vi.
+
+Tjena Marty. 
+Klurigt av dig att lista ut vad vi höll på med. 
+
+Jag fattar fortfarande inte vad vi ska med det här till.  
+
+Ge fågeln en ny siffra.
+
+Titta. den flyger in under siffran och den ändras.
+
+Precis. Det här är min plan.
+Vi lägger siffran på bordet.
+
+Kan vi ändra den till en nolla?
+
+Det är möjlig men kom ihåg att
+vi ska förlora en poäng varje gång
+vi missar bollen.
+
+Okej, jag trycker 9 -- det kan vara
+en bra poäng att börja med.
+
+Visst. Ta nu och krymp ihop det och släpp det på bordet.
+
+Finns det något sätt att bli av med kortet som
+siffran sitter på?
+
+Jag tror det. Låt oss titta igenom
+anteckningsboken för fjärrkontroller
+en gång till.
+
+Synlighet. Den här kanske kan fixa det. 
+Hur funkar den?
+
+Ingen aning. Tryck F1 Så får Marty förklara.
+
+Bra. Jag ska prova det. Funkar bra.
+
+Nu måste vi lägga till ännu en robot på
+bollen. En som kommer att ta bort ett från
+poängen och servar bollen. Först tar vi och
+suger bort bollen från spelet.
+
+Och spotta ut den?
+
+Just det, och vända på den.
+
+Och nu då?
+
+Får se. i behöver först den här --
+den för vänster/högerläge.
+
+Jag har den.
+
+Läg en låda med en våg i bredvid den.
+Och sen en låda med en nolla bredvid den.
+
+Såg du, vågen stannade.
+
+Ja, det är "väger mer" än noll. Men vi vill
+ha det läget när den lämnat den vänstra
+sidan. Flytta på den bakvända bollen tills
+avståndet till vänstra sidan blir minus.
+
+
+Vågen vägde över åt andra hållet.
+
+Bra. Lägg nu fågeln i en låda och koppla
+ihop den med dom andra.  Bra. Och det är
+äntligen här du kan använda ditt "plop" ljud.
+
+Bra. Jag ska hämta det.
+
+Så nu kan vi träna den här roboten.
+Han har mycket att göra.
+
+Jag vet i alla fall en sak som han ska göra.
+
+Bra. Vad ska vi göra med fågeln?
+
+Oj! Jag hämtar den. Den får en etta. 
+
+Det skulle vara bra om man fick
+en poäng för varje miss.
+
+Ja, ja. Minus ett då.
+
+Bra. Nu ska vi serva bollen. 
+Det lättaste skulle vara att sätta
+vänster/högerläget till
+nåt i stil med 900.
+
+Ja, så den hoppar över dit.
+
+Vi skullle kunna fördröja den lite och kanske
+använda olika siffror varje gång.
+
+Sen. Nu provar vi vad vi har. Jippiii. Det funkar!
+
+Får jag försöka.
+
+Visst, men jag tänker spara först.
+
+
+Vad roligt. Fast lite för lätt. Nu vet jag!
+Kolla!  F8 för att stanna robotarna.
+F9 för att få fram min hand igen.
+F5 för at få fram Trollstaven. Nu
+kopierar jag bollen och kastar ut den.
+Och nu F9 för att få bort min hand igen och F8
+för att få igång robotarna.
+Toppen. Nu har vi två bollar att träffa.
+
+Gör en till. 
+
+Oj oj oj. det är för svårt nu.
+
+Kan du inte kopiera racketen?
+
+Visst, varför det? Åhh -- det gör ju att
+det blir lättare igen.  Rätt bra, va. Vi
+pumpar upp den till rätt storlek och sparar den.
+
+Och nu då?
+
+Jag tror det räcker för idag. Jag måste
+förresten gå till min simträning. Men i
+morron kan vi göra tegelstenar som exploderar
+när bollen studsar mot dom.
+
+Javisst. och jag tycker vi kan ha bättre bilder .
+
+Och vi kunde få bollen att gå fortare ju längre den var i spel. 
+
+Och vi kan göra spelet för två spelare. 
+
+I morron då.
+
+Vi syns.
+
+
+
+
+
+
+
+

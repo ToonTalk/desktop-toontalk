@@ -1,0 +1,44 @@
+   Detta är resultatet av "inklistring" av ett ToonTalk objekt. Du kan lägga in
+detta i filer eller email. För att använda det behövs ett program
+som kan kopiera det till Windows klippbord. Du kan, till exempel, använda
+Windows NotePad eller Write. Var bara säker på att din markering omfattar
+koden nedan och välj sedan Kopiera i Redigera-menyn. 
+Då kommer det att synas i ToonTalks fjärrkontroll för klippbordet. 
+Du kan hitta fjärrkontrollen för Urklipp på sidan 30 i anteckningsboken för Sensorer. 
+Använd bara Dammis till att dammsuga det från klippbordet. 
+   Det är en bild på en boll som delvis är synlig med 8 bilder ovanpå. Det
+första som är högs upp är en låda med 2 fack. Det facket med etiketten
+"Right Collide?" innehålleren fjärrkontroll förkrockdetektor för rörelse
+i sidled. Det facket med etiketten "Right Speed1" innehålleren
+fjärrkontroll förhastigheten åt höger. Och det andra som är högs upp är
+ett tomt sifferkort som ursprungligen var en fjärrkontroll föravståndet
+från den vänstra sidan. Och det tredje som är högs upp är ett tomt
+sifferkort. Och det fjärde som är högs upp är Cykelpumpen Pumpas som kan
+göra saker större. Och det femte som är högs upp är ingenting. Och det
+sjätte som är högs upp är ingenting. Och det sjunde som är högs upp är
+ingenting. Och det åttonde som är högs upp är Dammsugaren Dammis som kan
+suga bort saker. Ochpå baksidan är 9 saker. Det första som finns på
+baksidan är thing with invalid type. Och det andra som finns på baksidan
+är thing with invalid type. Och det tredje som finns på baksidan är
+thing with invalid type. Och det fjärde som finns på baksidan är thing
+with invalid type. Och det femte som finns på baksidan är thing with
+invalid type. Och det sjätte som finns på baksidan är thing with invalid
+type. Och det sjunde som finns på baksidan är thing with invalid type.
+Och det åttonde som finns på baksidan är thing with invalid type.
+ Det som följer är en specialkod som producerades av ToonTalk(TM) 
+Svensk Version 1.04. För att få reda på mera om ToonTalk, gå till www.toontalk.com.
+1CStartToonTalkEncoding:
++AAADAAANgJtAJ4ACAAgAAIAD1JpZ2h0IENvbGxpZGU/ADK1FAAAKwABDfkAAA1SaWdodCBT
+cGVlZDEAJAAAAAArAAL5AAAFIAACAA9SaWdodCBDb2xsaWRlPwD4AQAMAAA1A5YAiwAAAAAA
+DVJpZ2h0IFNwZWVkMQAkAQAAACsBAv8gGf8AAAH/AAEE/wACAAD/AAcU/wAZDf8tGQ3/eAkA
+Af8AEQAA/yAX////IAACAAxVcCBDb2xsaWRlPwAytRQAACsAAQ75AAAJVXAgU3BlZWQAJAAA
+AAArAAP5AAAFIAACAA9SaWdodCBDb2xsaWRlPwD4AgAMAAA1A5YAiwAAAAAADVJpZ2h0IFNw
+ZWVkMQAkAQAAACsBAv8gGv8AAAH/AAEE/wACAAD/AAcU/wAZDf8tGQ3/eAkAAf8AEQAA/yAX
+////IAACAAlDb2xsaWRlPwAytRQAACsAAQf5AAAA/wUgAAIACUNvbGxpZGU/APgDAAwAADUD
+lgCLAAAAAAAAPAQAUGxvcBAAIBv/AAAA/wAHAAH/ABYN/wAJAAH/ABf///8gAAUABlJpZ2h0
+ACRpAwAAKwAA+QAAAPgEAAwEAA0CuwC7AAAAAAAAAAAAAAArAAAHAP//ADgEAFBsb3AQAAUg
+AAUABlJpZ2h0ACR+////KwEA/wD4BQAMBQANArsAuwAAAAAAAAAAAAAAKwAABwD//wA4BABQ
+bG9wEAAgHP8AAAL/AAcABP8AFg3/AAkABP8AAQT/AAIAAP8ABxT/ABkN/y0TAAP/AAEE/wAC
+AQD/AAcV/wAZDf85EQ3/MBEN/zARDf89CQAA/wAX////AAA=
+.
+Detta är slutet på koden för ToonTalk objektet. 

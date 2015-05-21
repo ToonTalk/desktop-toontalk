@@ -1,0 +1,5 @@
+Leyendo desde Internet o el CD-ROM"
+
+"Cargando. Por favor espere."
+
+"Por favor espere..."

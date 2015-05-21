@@ -1,0 +1,388 @@
+Comparing files number.new.cpp and NUMBER.CPP
+***** number.new.cpp
+#endif
+//#include "martian.h"
+#if !defined(__TT_WINMAIN_H)   
+***** NUMBER.CPP
+#endif
+#if !defined(__TT_WINMAIN_H)   
+*****
+
+***** number.new.cpp
+
+typedef Sprite *SpritePointer;
+***** NUMBER.CPP
+
+#define TT_SHRINKING_AND_GROWING 1 // new on 031104 to make this a compile time switch so can generate a version without it
+// move this elsewhere later?
+
+typedef Sprite *SpritePointer;
+*****
+
+***** number.new.cpp
+
+const double fraction_of_width_between_digits = .8; // made a const on 291004 -- used for shrinking and growing digits to incre
+ent horizontal position
+
+wide_string operation_to_wide_string(NumberOperation operation);
+***** NUMBER.CPP
+
+wide_string operation_to_wide_string(NumberOperation operation);
+*****
+
+***** number.new.cpp
+        base(base),
+        part1_shrinkage(0.0),
+        // following should also be initialized with 0.0
+        part2_shrinkage(tt_number_shrinkage), // overridden when shrinking_decimal_notation and not used otherwise
+        insertion_point(min_long) { // new on 090604 -- is here since used in displaying any number
+***** NUMBER.CPP
+        base(base),
+        number_shrinkage(tt_number_shrinkage), // overridden when shrinking_decimal_notation and not used otherwise
+        insertion_point(min_long) { // new on 090604 -- is here since used in displaying any number
+*****
+
+***** number.new.cpp
+
+double compute_shrinkage(double distance, int iterations) {
+        if (distance <= 1.0 || iterations < 2) {
+                return(0.0); // don't shrink
+        };
+        double shrinkage = (distance-1.0)/distance; // subtract 1.0 since start with a full size digit
+        double error = pow(shrinkage,iterations); // not an infinite sequence so don't count the part truncated at the end
+        if (error < .5) { // if it is that large must be very narrow or something
+                distance /= 1.0-error;
+                return((distance-1.0)/distance);
+        } else {
+                return(shrinkage);
+        };      
+};
+
+void Number::display(SelectionFeedback selection_feedback, boolean followers_too, TTRegion *region) {
+***** NUMBER.CPP
+
+void Number::display(SelectionFeedback selection_feedback, boolean followers_too, TTRegion *region) {
+*****
+
+***** number.new.cpp
+        if (debug_counter == tt_debug_target) {
+                log("Displaying debug target.");
+        };
+***** NUMBER.CPP
+        if (debug_counter == tt_debug_target) {
+                log(_T("Displaying debug target."));
+        };
+*****
+
+***** number.new.cpp
+                city_coordinate adjusted_text_height = adjusted_height;
+                city_coordinate edge_size = compute_edge_size(adjusted_width,adjusted_height); // is the same horizontally and 
+ertically
+                //              if (show_all()) { // new on 040102 - conditional commented out on 180102
+                        adjusted_text_width -= 2*edge_size;
+***** NUMBER.CPP
+                city_coordinate adjusted_text_height = adjusted_height;
+                city_coordinate edge_size = compute_edge_size(adjusted_width,adjusted_height);
+//              if (show_all()) { // new on 040102 - conditional commented out on 180102
+                        adjusted_text_width -= 2*edge_size;
+*****
+
+***** number.new.cpp
+                        boolean need_to_change_size = FALSE;
+                        int ignore_longest_line; // moved here on 251004 so can be shared by multiple callers
+                        long ignore_new_text_height; // new on 270202 so that height isn't changed by this
+                        if (change_size_to_fit_extent_flag || insertion_point >= 0) { // copied here from text::display_text on
+***** NUMBER.CPP
+                        boolean need_to_change_size = FALSE;
+                        if (change_size_to_fit_extent_flag || insertion_point >= 0) { // copied here from text::display_text on
+*****
+
+***** number.new.cpp
+ so that size change will happen when animation is over
+//                                      if (!tt_shrink_and_grow_numbers) {
+                                                set_change_font_size_to_fit_extent(TRUE);
+//                                      };
+                                } else if (character_width > 0 && character_height > 0) { // conditional is to avoid work when 
+***** NUMBER.CPP
+ so that size change will happen when animation is over
+                                        set_change_font_size_to_fit_extent(TRUE);
+                                } else if (character_width > 0 && character_height > 0) { // conditional is to avoid work when 
+*****
+
+***** number.new.cpp
+ealing with numbers too long to see the digits
+#if TT_DEBUG_ON
+***** NUMBER.CPP
+ealing with numbers too long to see the digits
+                                        int ignore_longest_line;
+                                        long ignore_new_text_height; // new on 270202 so that height isn't changed by this
+#if TT_DEBUG_ON
+*****
+
+***** number.new.cpp
+                                        if (tt_debug_mode == 110302) {
+                                                tt_error_file() << "Before get_extent_size " << non_shrinking_equivalent(wide_t
+xt,text_length) << " length with character width " 
+                                                                                         << character_width << "X" << character
+height
+                                                                                         << " and adjusted_text_width is " << a
+justed_text_width << endl;
+                                        };
+***** NUMBER.CPP
+                                        if (tt_debug_mode == 110302) {
+                                                tt_error_file() << "Before get_extent_size " << non_shrinking_equivalent(text_l
+ngth) << " length with character width " 
+                                                                                << character_width << "X" << character_height
+                                                                                << " and adjusted_text_width is " << adjusted_t
+xt_width << endl;
+                                        };
+*****
+
+***** number.new.cpp
+#endif
+                                        tt_screen->get_extent_size(wide_text,non_shrinking_equivalent(wide_text,text_length),1,
+
+                                                                                                                // decimal_plac
+***** NUMBER.CPP
+#endif
+                                        tt_screen->get_extent_size(wide_text,non_shrinking_equivalent(text_length),1, 
+                                                                                                                // decimal_plac
+*****
+
+***** number.new.cpp
+ter_height of " << character_height << " and " << text_length 
+                                                                                         << " characters computed a new width o
+ " << adjusted_text_width << " and height of " << ignore_new_text_height 
+                                                                                         << " on frame " << tt_frame_number << 
+ndl;
+                                        };
+***** NUMBER.CPP
+ter_height of " << character_height << " and " << text_length 
+                                                                                << " characters computed a new width of " << ad
+usted_text_width << " and height of " << ignore_new_text_height 
+                                                                                << " on frame " << tt_frame_number << endl;
+                                        };
+*****
+
+***** number.new.cpp
+#endif
+                        if (change_font_size_to_fit_extent_flag || 
+                                 region != NULL || 
+                                 decimal_places > 0 || // && !tt_shrink_and_grow_numbers) || // (!tt_shrink_and_grow_numbers ||
+need_to_change_size)
+                                 // above updated 110104 so only happens after size change if shrinking decimals (and tt_shrink
+and_grow_numbers)
+                                 animation_in_progress()) { 
+                                // region check added on 210102 since with remote looks and the like same thing can be displaye
+***** NUMBER.CPP
+#endif
+                        if (change_font_size_to_fit_extent_flag || region != NULL || decimal_places > 0 || animation_in_progres
+()) { 
+                                // region check added on 210102 since with remote looks and the like same thing can be displaye
+*****
+
+Resync Failed.  Files are too different.
+***** number.new.cpp
+ood font size
+                                int separator_index = find_separator_location(wide_text,wide_text_length,L"./");
+                                int text_length_of_longest_line; // new on 301004
+                                boolean multiple_lines = (tt_shrink_and_grow_numbers && separator_index > 0 && wide_text[separa
+or_index] == '/');
+                                // if !tt_shrink_and_grow_numbers then don't display multiple lines
+                                city_coordinate available_text_height;
+                                if (multiple_lines) { // new on 301004 to support multi-line fractions
+                                        text_length_of_longest_line = max(separator_index,(text_length-(separator_index+1)));
+                                        // if multiple lines then only half the height is available
+                                        available_text_height = adjusted_text_height/2;
+                                } else {
+                                        text_length_of_longest_line = non_shrinking_equivalent(wide_text,text_length);
+                                        available_text_height = adjusted_text_height;
+                                };
+                                city_coordinate correct_character_width, correct_character_height;
+                                tt_screen->correct_font_size(wide_text,text_length_of_longest_line,1,
+                                                                                                          adjusted_text_width,a
+ailable_text_height,TRUE,TRUE,FALSE,
+                                                                                                          correct_character_wid
+h,correct_character_height);
+                                if (tt_shrink_and_grow_numbers && (multiple_lines || correct_character_height > correct_charact
+r_width*3)) {
+                                        // new on 261004 that only do this if font gets too narrow
+                                        // new on 251004
+                                        adjusted_character_height = correct_character_height;
+                                        adjusted_character_width = (9*adjusted_character_height)/20; // 3/5 (good font aspect r
+tio) x 3/4 (screen unit aspect ratio)
+                                        //tt_screen->get_extent_size(wide_text,non_shrinking_equivalent(wide_text,text_length),
+, 
+                                        //                                                                      // decimal_plac
+s only non-zero if displaying shrinking decimal
+                                        //                                                                      character_width
+character_height,
+                                        //                                                                      ignore_longest_
+ine,adjusted_text_width,ignore_new_text_height,
+                                        //                                                                      TRUE,TRUE,FALSE
+;
+//                                      adjusted_text_width = adjusted_character_width*text_length;
+                                        // why is there text_length and wide_text_length? -- asked 301004
+                                        if (adjusted_character_width*text_length_of_longest_line > adjusted_width) { // needed_
+idth is greater than available_width
+                                                // won't fit so time to shrink and grow
+                                                // first find out how big a digit really is
+                                                city_coordinate digit_width, digit_height;
+                                                tt_screen->get_extent_size(L"0",1,1, 
+                                                                                                                        adjuste
+_character_width,adjusted_character_height,
+                                                                                                                        ignore_
+ongest_line,digit_width,digit_height,
+                                                                                                                        TRUE,TR
+E,FALSE);
+//                                              adjusted_character_height = (city_coordinate) (adjusted_character_height *((dou
+le) adjusted_character_height/digit_height); 
+                                                // so its extent matches the desired size
+                                                double first_half = ((double) adjusted_width-2*edge_size)/(2*digit_width);     
+
+                                                // -2*edge_size to give a little space at the ends
+                                                if (first_half < 1.5 && text_length_of_longest_line > 4) { // too little room (
+nly enough for 1.5 full size characters in shrinking part)
+                                                        double font_shrinkage = first_half/1.5;
+                                                        adjusted_character_width = (city_coordinate) (adjusted_character_width*
+ont_shrinkage);
+                                                        adjusted_character_height = (city_coordinate) (adjusted_character_heigh
+*font_shrinkage);
+                                                        first_half = 1.5;                                                      
+
+                                                };
+                                                if (separator_index < 0 || multiple_lines) { // there is no separator or just d
+aling with numerator or denominator (the bigger one)
+                                                        part1_shrinkage = compute_shrinkage(first_half,text_length_of_longest_l
+ne/2);
+                                                //} else if (multiple_lines) {
+                                                //      // new on 301004 to support multi-line fractions -- since width will be
+halved digit_width isn't doubled
+                                                //      first_half = ((double) adjusted_width-3*edge_size)/digit_width; 
+                                                //      part1_shrinkage = (first_half-1.0)/first_half; // just algebra
+                                                //      part2_shrinkage = 0.0; // not used
+                                                } else {
+                                                        int part1_text_length = separator_index;
+//                                                      city_coordinate adjusted_text_width_of_part = adjusted_character_width*
+art_text_length;
+                                                        double fraction_before_separator = (double) part1_text_length/(wide_tex
+_length-1);
+                                                        if (fraction_before_separator > .5 && part1_shrinkage > 0.0 && part1_sh
+inkage < 1.0) {
+                                                                // only gets half
+                                                                fraction_before_separator = .5;
+                                                        };
+//                                                      double adjusted_width_of_part = adjusted_width*fraction_before_separato
+;
+//                                                      double first_half = (part_text_length*adjusted_width_of_part)/(2*adjust
+d_text_width_of_part);
+                                                        double first_half_part1 = first_half*fraction_before_separator;
+                                                        // now for other half
+                                                        int part2_text_length = non_shrinking_equivalent(wide_text+part1_text_l
+ngth+1,wide_text_length-(part1_text_length+1));
+                                                        double fraction_after_separator = 1.0-(fraction_before_separator+1.0/wi
+e_text_length);
+                                                        // was (double) part2_text_length/(wide_text_length-1); but above is be
+***** NUMBER.CPP
+ood font size
+                                tt_screen->correct_font_size(wide_text,non_shrinking_equivalent(text_length),1,
+                                                                                                          adjusted_text_width,a
+justed_text_height,TRUE,TRUE,FALSE,
+                                                                                                          adjusted_character_wi
+th,adjusted_character_height);
+//                              adjusted_character_height = adjusted_text_height; // don't care what the vertical extent is - l
+ave the height alone - new on 270202
+//tt_error_file() << "With width of " << adjusted_text_width << " and height of " << adjusted_text_height << " computed charact
+r_width of " << adjusted_character_width << " and character_height of " << adjusted_character_height << endl;
+#if TT_DEBUG_ON
+            if (debug_counter == tt_debug_target) {
+               log("changing font size to fit extent of debug target.");
+            };
+                                if (tt_debug_mode == 110302) {
+                                        tt_error_file() << "After correct_font_size adjusted character width and height " 
+                                                                        << adjusted_character_width << "X" << adjusted_characte
+_height
+                                                                        << " and adjusted_text_width is " << adjusted_text_widt
+ <<  " on frame " << tt_frame_number << endl;
+                                };
+#endif
+                                if (region == NULL) { // experiment on 101202 ) { // removed && region == NULL on 281002
+                                        // first test was change_font_size_to_fit_extent_flag prior to 081102 but don't remembe
+ new font size if am say displaying the remote looks
+               // animation check added on 250102 and region check since could be "seen" through remote looks and then shouldn'
+ save font sizes
+                                        // no point caching it if displayed within a region
+                                        set_character_width(max(1,adjusted_character_width)); // for very long bignums width ca
+ become zero - needs a minimum
+                                        set_character_height(max(1,adjusted_character_height));
+                                        if (!animation_in_progress()) { // conditions 
+                                                set_change_font_size_to_fit_extent(FALSE);
+                                        };
+                                };
+                        };
+#if TT_DEBUG_ON
+                        add_to_log_if_interesting_error();
+#endif
+                        if (edge_size > 0) { // need to compute width that would produce adjusted_text_width after subtracting 
+dge size
+                                if (old_adjusted_text_width != adjusted_text_width) {
+//                                      adjusted_text_width = (adjusted_text_width*edge_size_proportion)/(edge_size_proportion-
+);
+                                        adjusted_text_width += 2*edge_size; // new version on 160102
+                                };
+                                if (old_adjusted_text_height != adjusted_text_height) { 
+                                        adjusted_text_height += 2*edge_size; // new version on 170102
+                                };
+                        };
+                        if (need_to_change_size && old_adjusted_text_width != adjusted_text_width) {  
+                                //if (leader == NULL && !held() &&  // experiment 121202 -- removing this helps keep numbers th
+t are changing number of digits on the floor stationary
+                                //       llx >= tt_screen->min_x() && llx+adjusted_text_width <= tt_screen->max_x() && // new o
+ 260202 - package this up as fully_on_screen
+                                //       lly >= tt_screen->min_y() && llx+adjusted_text_height <= tt_screen->max_y()) {
+                                //      move_by((old_adjusted_text_width-adjusted_text_width)/2,0); // old_adjusted_text_width 
+as width prior to 250202 -- for very long numbers matters
+                                //};
+                                Sprite::set_size(adjusted_text_width,height,NEW_TEXT_EXTENT); // don't want to trigger changes 
+y text::set_size...
+                                set_clean_status(DIRTY); // new on 310104 since can be DIRTY_BUT_OBSCURED and grow (but can't t
+is be handled elsewhere more generally?)
+                                // not clear why the following works better than set_size
+//                              width = adjusted_text_width;
+                                tt_screen->invalidate_cache(); // new on 170102 since dirty region is confused by this size cha
+ge while displaying
+                                set_change_font_size_to_fit_extent(TRUE); // moved here on 270202 so it happens next time aroun
+
+                        };
+                        city_coordinate start_x = adjusted_llx+edge_size;
+#if TT_ALPHA_FEATURE
+                        if (tt_right_to_left_text) { // new on 081203 for Hebrew
+                                tt_main_window->set_text_align(TA_LEFT); // restore the default for displaying numbers - in par
+icular important for shrinking decimals and things like /7 (which otherwise are displayed as 7/)
+//                              start_x += adjusted_text_width;
+                        };
+                        UnwindProtect <boolean> set(tt_right_to_left_text,FALSE); // so numbers aren't affected
+#endif
+#if TT_DEBUG_ON
+                        add_to_log_if_interesting_error();
+#endif
+                        if (adjusted_character_width >= 3*one_x_pixel) { // conditional new on 060202 -- made it 3 pixels on 13
+202 -- changed to >= on 110302
+                                if (decimal_places > 0) {
+#if TT_ALPHA
+                                        city_coordinate height_or_region_height;
+                                        if (region == NULL) {
+                                                height_or_region_height = height;
+                                        } else {
+                                                height_or_region_height = region->height();
+                                        };
+#endif
+#if TT_DEBUG_ON
+                                        DWORD start_time;
+                                        if (tt_debug_mode == 100804) {
+                                                start_time = timeGetTime();
+                                        };
+#endif
+                                        display_shrinking_decimal(wide_text,wide_text_length,start_x,adjusted_lly+adjusted_heig
+*****
+

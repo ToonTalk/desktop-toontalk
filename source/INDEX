@@ -1,0 +1,105 @@
+This is an index of the files in the Preprint directory.  Any files
+not mentioned here may be removed.  Please include
+
+filename     author	date of inclusion (dd/mm/yy)
+
+and any comments such as 'can be removed after 4/4/93'.
+
+aronson.thesis.ps.Z (10/26/94)
+%T Pramatic Intrusion
+%A Jane Aronson
+
+as.dvi (10/2/93)
+%T Linear set theory with infinitary conjunction
+%A Masaru Shirahata
+
+ffinalphilrev.dvi (5/26/93)
+%T Executions, Motivations and Accomplishments
+%A Israel, Perry and Tutiya
+
+ijcai_91.dvi  (09/6/93)
+% Actions and Movements
+% Israel, Perry and Tutiya 
+
+learning.ps (29/6/93)
+%T Identification in the Limit of Categorial Grammars
+%A Makoto Kanazawa
+
+lingphil.ps (22/10/93)
+%T Weak vs. strong readings of donkey sentences and monotonicity inference in a dynamic setting
+%A Makoto Kanazawa
+
+miller.ps.gz (4/13/95)
+miller-bib.ps.gz  (4/13/95)
+%T French Clitic Movement Without Clitics or Movement
+%A Philip H. Miller 
+%A Ivan A. Sag
+% miller-bib file is just the bibliography
+% 
+
+mixed.dvi (22/10/93)
+%T Completeness and Decidability of the Mixed Style of Inference with Composition 
+%A Makoto Kanazawa
+
+ndil.dvi (5/21/95)
+%Natural Deduction in the Intuitionistic Linear Logic 
+%Grigori Mints
+
+newgender.tex (3/28/95)
+%T Storytellers and gatekeepers in economics
+%A Livia Polanyi
+%A Diana Strassman
+%E Victoria Bergvall
+%E Janet Bing
+%E Alice Freed
+%B Language and gender
+%E Janet Bing
+%E Alice Freed
+%I Longmans
+%D To appear
+
+snset.dvi (10/2/93)
+%T Strong normalization for intuitionistic set theory without equality
+%A Masaru Shirahata
+
+tabor.thesis.ps.Z (9/15/94)
+%T Syntactic Innovation:  a Connectionist Model (230 pp.)
+%A Whitney Tabor
+
+tabor.thesis.2up.ps.Z (9/21/94)
+%T Syntactic Innovation:  a Connectionist Model (120 pp.)
+%A Whitney Tabor
+
+tt_jvlc.ps.Z (11/24/95)
+%T ToonTalk -- An Animated Programming Environment for Children
+%A Ken Kahn
+% compressed PostScript version (with color figures -- prints ok black & white)
+% If the figures cause your printer to timeout try adding the following to the
+% top of the file:
+serverdict begin 0 exitserver
+statusdict begin 0 setjobtimeout end
+
+tt_jvlc.doc (11/24/95)
+%T ToonTalk -- An Animated Programming Environment for Children
+% zip-ed Microsoft Word version
+%A Ken Kahn
+%(see below as well)
+
+tt_meta4.ps.Z (4/21/95)
+%T Metaphor Design -- Case Study of an Animated Programming Environment
+%A Ken Kahn
+% compressed PostScript version (with color figures -- prints ok black & white)
+% If the figures cause your printer to timeout try adding the following to the
+% top of the file:
+serverdict begin 0 exitserver
+statusdict begin 0 setjobtimeout end
+
+tt_meta4.zip (4/21/95)
+%T Metaphor Design -- Case Study of an Animated Programming Environment
+% zip-ed Microsoft Word version
+%A Ken Kahn
+
+weak-crossover.ps (9/6/94)
+%Linear Order, Syntactic Rank, and Empty Categories: On Weak Crossover
+%Joan Brsnan
+

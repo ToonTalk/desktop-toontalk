@@ -1,0 +1,423 @@
+Hi.  Integrating your translation went well.  Great job.
+
+Did you get my message yesterday the Portuguese version of ToonTalk attached?
+
+I'll start working on the Start ToonTalk executable tomorrow.
+
+I am attaching the new zipped version of (port.rc) what was called
+english.rc.
+
+Here's a few odds and ends.
+
+// the \o in the mode\o is wrong.  Should I remove it?
+
+IDS_ABANDON_FULL_SCREEN,
+ "O ToonTalk teve problemas da última vez que foi utilizado. Talvez isso tenha ocorrido por causa do \"mode\o de tela cheia\". Este modo de operação faz com que as animações fiquem melhores, mas às vezes não funciona em alguns computadores."
+
+// Did the "and" in the following just slip through?  What should it be?
+
+IDS_TOONTALK_CREDITS,
+"Animação por Greg Savoia, Kim Tempest, and Brian Anderson. Tradução por Leo Burd. Todo o resto por Ken Kahn. "
+IDS_TOONTALK_CREDITS2,
+"Agradecimentos especiais para Markus, David, and Mary."
+
+Here's the answers to your questions:
+
+IDS_REMOTE_INTEGER_TYPE_INDEFINITE,
+ "a remote-controlled number" // ----
+In ToonTalk there are remote controls and sensors.  Some of them
+display pictures, some text, and some numbers.  For example, the
+remote control for the "width" of something is one of these.  I
+think the English isn't too good here either and will change it
+to "a sensor showing a number".
+
+IDS_THE_ROBOTS, // as in "you can drop what is in the robot's hand by ..."
+  "the robot's"
+
+IDS_BEGIN_THE_ROBOT_IS, // as in "The robot is holding a box."
+
+IDS_BEGIN_YOU_ARE,  // as in "You are holding a box."
+
+IDS_IS, // as in "Under the wand is a number." and "Inside a computer 6 is 110 in binary."
+
+ IDS_BIRD_HELP_GIVEN_NESTS,
+  "Eu falarei mais sobre ninhos se você pressionar F1 duas vezes enquanto estiver apontando para um ninho. "  //  --- When pointing to a nest or to a bird?
+// Thanks for pointing this out.  It should be nest in both cases.
+
+IDS_ON_TOP, // as in "You are pointing to a nest with a number on top."
+
+ IDS_BIRD_RECUR_ABORT, // as in "Didn't work because the bird was given something containing her nest."
+
+ IDS_BOMB_USED_HOUSE_HELP4,
+  "Você pode se sentar em segurança clicando em " // --- I never saw the remaining of this sentence in ToonTalk
+// Thanks.  Will be fixed later today.
+
+ IDS_CUBBY_BAD_CONTENTS_ABORT,
+ // as in "A robot stopped because he tried to put something in a box that doesn't go"
+
+IDS_HOLE_LABELED_WITH,
+ "buraco etiquetado com " // -----When is this used?
+If you point to a box and start typing you can add labels to boxes.
+
+ IDS_THE_LETTER, // as in "If given a box like that he will add the 'A' to the label of the first hole of the box he's working on."
+
+ IDS_RELEASE_ITEM_ON, // as in "And drop it on the first hole of the box he's working on."
+ IDS_RELEASE_ITEM_ON2,
+
+ IDS_RELEASE_ITEM_RIGHT_OF, // as in "And drop it just right of the box he's working on."
+ IDS_RELEASE_ITEM_RIGHT_OF2,
+
+All of the phrases from IDS_MOVE_TO to IDS_APPLY_GRASPED_NEST
+are used to describe what the robot will do if given a box.
+E.g.
+
+ IDS_MOVE_TO, // as in "If given a box like that he will move to the stack of text."
+ IDS_SELECT_VACUUM, // as in "He will grab a copy of Dusty."
+
+ IDS_WHAT_IM_HOLDING, // as in "He will drop what he's holding."
+ IDS_EVENT_ARG1, // as in "He will drop it on the box he's working on."
+
+ IDS_WHICH_IS,  // as in "He will give it to the bird which is the second thing he made or found."
+
+ IDS_THING_ON_TOP,
+  "thing on top is " // as in "The second thing on top is a number."
+ IDS_THING_ON_THE_BACK,
+  "thing on the back is " // as in "The third thing on the back is a robot."
+
+IDS_COLLIDE_HELP, 
+  "o detector que mostra uma simples animação de um objeto colidindo ou não (acertou ou errou). Você pode transformar um acerto em um erro apontando para o detector e apertando a barra de espaço" // --- in what case is this used? 
+// This section describes the items found in the notebook which
+// flies out when you flip over a picture or number.
+
+  "o detector de colisão ocorrida em um movimento direita/esquerda" // --- I did not understand this collision stuff
+The Ping Pong demo (Act 2) shows how to use collision detectors to make
+a bouncing ball.
+
+ IDS_VISIBLE_HELP, // as in "This sensor controls the visibility of the picture."
+
+ IDS_BOOK_LEFT_PAGE_ADDED_HELP4,
+ // as in "This page of the notebook is blank so you can drop something there."
+  " is blank so you can drop something there. "
+
+ IDS_PLATE_PAGE,
+  "Botão" // --- What is this for?
+ IDS_PAD_PAGE,
+  "Placa de Texto"  // --- When is this used? What for?
+// This section (start with IDS_RECTANGLE_PAGE) 
+// is used to describe the pictures found in
+// notebook on page 2 of the main notebook.
+
+ IDS_MOUSE_X_SHORT_LABEL, //----
+  "Mouse para direita"
+// This section labels the contents of the sensor
+// notebook found on page 4 of the main notebook.
+// Each sensor is in a box with one of these labels.
+
+ IDS_MOUSE_X_LONG_LABEL,
+// This section contains the short text objects
+// that describe the sensors in the notebook
+// of page 4 of the main notebook.  These
+// appear on the odd pages
+
+ IDS_PICT_DESCRIPTION1, // As in "You are hold a picture with 3 pictures on top."
+  " pictures on top"
+
+ IDS_PICT_CHANGED_KEY_HELP2,
+ // as in " You can switch between them by pressing the +, -, or space button when selected or held."
+  "You can switch between them "
+ IDS_PICT_CHANGED_KEY_HELP3,
+ // as in "Some pictures can be changed by pressing the +, -, or space button when selected or held. "
+  "Some pictures can be changed "
+
+ IDS_PICT_TOSSED_HELP,
+  "You can give this a toss by pressing " // --- What is this for?
+ IDS_PICT_TOSSED_HELP2,
+  "You can toss a picture by pressing " // ---
+// By pressing a mouse button and holding down the control button
+// instead of dropping something it'll move in the same direction
+// and speed as your hand.
+
+ IDS_COPIER_RELEASED_HELP,
+  // as in "You can set the box down by clicking on any mouse button."
+  "You can set "
+ IDS_COPIER_RELEASED_HELP2,
+  // as in "You can set what you copy down by clicking on any mouse button."
+  "what you copy"
+
+ IDS_ROBOT_WAITING_FOR_PICTURE,
+  // was "it is on"
+  "s robot waiting for the picture he is on the back of to be flipped over" // --- What is that 's' in the beginning?
+ IDS_ROBOT_WAITING_FOR_ROBOT,
+  "s robot waiting for another robot to finish first" // ---
+// It should have read "a robot ... in both cases" -- thanks for catching this.
+
+// the following are text item descriptions of
+// the sounds available to the user found in
+// the notebook on page 8 of the main notebook.
+// Some names are just approximations of how
+// they sound (like "Be Wop") while others are
+// descriptions of natural sound sources
+ IDS_BE_WOP_SOUND,
+  "Be Wop" // ---
+
+// the remote control for the visibility of a picture
+// can display one of the following states:
+
+ IDS_VISIBLE_REMOTE_STATE1,
+        "SEE ALL"
+ IDS_VISIBLE_REMOTE_STATE2,
+        "SEE SOME"
+ IDS_VISIBLE_REMOTE_STATE3,
+        "SEE NOTHING"
+
+Thanks for catching the following
+IDS_DROP_ON_NUMBER_TO_BREAK_HELP,
+ "You can break a box into two pieces by dropping it on a number. One piece will have the number of holes of the number and the other what is left over."
+// "into" was missing and this and some subsequent ones used the word
+// cubby instead of box.
+
+IDS_DO_NOTHING,
+  // as "If given a box like that he will do nothing."
+ "do nothing"
+
+IDS_VACUUM_TO_BLANK,
+ "use Dusty to erase"  // used to say blank but erase is better
+// as in "He will use Dusty to erase the box he's working on."
+
+IDS_SPECIAL_MAGIC_WAND_USE,
+ //  as in "He will use the magic wand, while holding the control button down, on the box."
+ "use the magic wand, while holding the control button down, on"
+
+IDS_TO_LABEL_OF,
+  // As in "He will add 'c' to the label of the box."
+ " to the label of"
+IDS_NEW,
+  // as in "He will drop it on the new box."
+ "new"
+IDS_FIRST_NEW,
+  // as in "He will drop it on the first new box."
+"first new"
+IDS_NEWEST,
+  // as in "He will drop it on the newest box."
+ "newest "
+IDS_TO_LAST
+  // as in "He will drop it on the second to last box."
+ "to last"
+
+IDS_WHATS_ON,
+ // as in "The robot picks up what's on the third page of the notebook."
+ "what's on"
+IDS_WHATS_IN,
+ // as in "The robot picks up what's in the second hole of the box."
+ "what's in"
+
+IDS_OF
+// as in "He dropped it on page of the notebook"
+// and "You are holding a picture of a ball."
+// and "You are pointing to the button of Dusty."
+ "of"
+
+And here's some new phrases added recently:
+
+IDS_MILLISECONDS,  // added 12/3
+ "milliseconds"      
+IDS_ON, // added 12/3
+ "on"  // as in "use Pumpy on"
+IDS_AS_I_WAS_SAYING, // added 12/5
+ "When you left last time there was more I wanted to tell you. "
+IDS_WHAT_DOTS_MEAN,
+  "When I have more to say you'll see \"...\" at the bottom."
+IDS_THATS_WHAT_I_WANTED_SAY, // added 12/5
+ "That was what I was trying to say earlier. "
+
+IDS_ORDER_OF_THINGS_MATTER, // added 12/12
+"Sorry to be fussy, but the order of things in the holes has to be just right. "
+
+IDS_BIGGER_THAN, // added 12/13
+"bigger than"
+IDS_VACUUM_BUTTON_SPRITE,  // new on 12/13
+"a button on a vacuum" 
+
+
+THE_LEFT_PAGE_OF, // added 12/13
+"the left page of"
+THE_RIGHT_PAGE_OF, // added 12/13
+"the right page of"
+
+ IDS_NUMBER_TYPE_PRONOUN,
+ "it"
+ IDS_EXPANDER_TYPE_PRONOUN,
+ "him"
+  IDS_VACUUM_TYPE_PRONOUN,
+ "him"
+ IDS_COPIER_TYPE_PRONOUN,
+ "it"
+ IDS_THOUGHT_BUBBLE_TYPE_PRONOUN,
+ "it"
+ IDS_ROBOT_TYPE_PRONOUN,
+ "him"
+ IDS_NEST_TYPE_PRONOUN,
+ "it"
+ IDS_BIRD_TYPE_PRONOUN,
+ "her"
+ IDS_TRUCK_TYPE_PRONOUN,
+ "it"
+ IDS_BOOK_TYPE_PRONOUN,
+ "it"
+ IDS_CUBBY_TYPE_PRONOUN,
+ "it"
+ IDS_TOOLBOX_TYPE_PRONOUN,
+ "him"
+ IDS_PICT_TYPE_PRONOUN,
+ "it"
+ IDS_BOMB_TYPE_PRONOUN,
+ "it"
+ IDS_TEXT_TYPE_PRONOUN,
+ "it"
+ IDS_REMOTE_PICTURE_TYPE_PRONOUN,
+ "it"
+ IDS_BLANK_NUMBER_TYPE_PRONOUN,
+ "it"
+ IDS_LABELED_CUBBY_TYPE_PRONOUN,
+ "it"
+ IDS_BLANK_PICTURE_TYPE_PRONOUN,
+ "it"
+ IDS_BLANK_TEXT_TYPE_PRONOUN,
+ "it"
+ IDS_PICT_WITH_INSIDES_TYPE_PRONOUN,
+ "it"
+ IDS_REMOTE_INTEGER_TYPE_PRONOUN,
+ "it"
+ IDS_GLOBAL_REMOTE_INTEGER_TYPE_PRONOUN,
+ "it"
+ IDS_SCALE_PICTURE_TYPE_PRONOUN,
+ "it"
+ IDS_REMOTE_APPEARANCE_TYPE_PRONOUN,
+ "it"
+ IDS_PICTURE_WITH_INDIRECTION_TYPE_PRONOUN,
+ "it"
+ IDS_USER_PICTURE_TYPE_PRONOUN,
+ "it"
+ IDS_BUTTON_TYPE_PRONOUN,
+ "it"
+
+
+IDS_PICT_OF_DEFINITE, // added 12/13
+ "the picture of"
+IDS_MOVIE_OF_DEFINITE,
+ "the movie of"
+IDS_PICT_OF_PLURAL,
+ "pictures of"
+IDS_MOVIE_OF_PLURAL,
+ "movies of"
+
+
+// the following had the second half before but the way
+// in which it became a definite ordinal expression was too language-specific
+
+IDS_THING_ON_THE_BACK1,
+  "the"
+IDS_THING_ON_THE_BACK2,
+  "thing on the back is " // as in "The third thing on the back is a robot."
+IDS_TO_LAST_THING1,  // new on 12/13
+ "the"
+// these combine to make "the second to last thing he made or found"
+IDS_TO_LAST_THING2,
+ "to last thing he made or found"
+IDS_MADE_OR_FOUND1, // new on 12/13
+ "the"
+IDS_MADE_OR_FOUND2, // these combine to form "the third thing he made or found"
+ "thing he made or found"
+IDS_PAGE_OF1,
+ "the"
+ // as in "the first page of the notebook"
+IDS_PAGE_OF2,
+ "page of"
+ // as in "the fourth hole of the box"
+IDS_HOLE_OF1,
+ "the"
+IDS_HOLE_OF2,
+ "hole of"
+IDS_THING_ON_TOP1,
+ "the"
+IDS_THING_ON_TOP2,
+ "thing on top is " // as in "The second thing on top is a number."
+IDS_ROBOT_DESCRIBE5_1,
+ "the"
+IDS_ROBOT_DESCRIBE5_2, // as in "The second robot wants a box."
+ "robot wants " 
+IDS_PICTURES,
+ " pictures"
+ IDS_GRASP_EXPANDER, // added 12/3
+  "grab a bike pump"
+ IDS_EXPANDER_APPLY, // added 12/3
+  "use Pumpy"
+ IDS_EVENT_ARG15,
+  "Pumpy" // added 12/3
+
+
+// Also
+//" Ahh, sorry I can't remember what I was going to say..."
+
+
+IDS_ALPHABET_UPPER_CASE,
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+IDS_ALPHABET_LOWER_CASE,
+"abcdefghijklmnopqrstuvwxyz"
+
+Removed:
+IDS_TH
+IDS_THE_LETTER
+IDS_THE
+IDS_AND_THE
+IDS_BEGIN_THE
+IDS_GENERIC_TOOL_HELP
+IDS_GENERIC_TOOL_HELP2
+IDS_OUT_OF
+IDS_ROBOT_WHO_WHEN_GIVEN
+IDS_WILL_THEN
+
+Changed:
+IDS_KEY_WHILE_POINTING,
+ " key while pointing to"
+IDS_KEY_AFTER_MOVING,
+ " key after moving to"
+IDS_KEY_WHILE_HOLDING,
+ " key to change"
+
+to ("key " removed)
+
+IDS_KEY_WHILE_POINTING, // as in "He'll push 'b' while holding the number."
+ " while pointing to"
+IDS_KEY_AFTER_MOVING, // as in "He'll push 'b' after moving to the number."
+ " after moving to"
+IDS_KEY_WHILE_HOLDING, // as in "He'll push 'b' to change what he is holding."
+ " to change" 
+
+IDS_VACCUM_TO_BLANK_HELP,
+ "You can use Dusty, the vacuum, to make a blank box. " // was "... box blank"
+ IDS_VACUUM_BLANK_HELP,
+  "Dusty will erase " // was will blank
+  // as in  "Dusty will erase the number if you click on any mouse button."
+ IDS_VACUUM_BLANK_HELP2, // 10/4
+//  "a text or number pad or an empty box under it"
+  "something under his nose" 
+ IDS_VACUUM_BLANK_HELP3,
+  "if you click on" // was "blank if you click on"
+
+IDS_VACUUM_TO_BLANK_NUMBER,
+ "You can use Dusty, the vacuum, to make a blank number." // was "number blank"
+
+IDS_VACUUM_PICTURE_BLANK,
+ "Dusty, the vacuum, can make a blank picture. " // was picture blank
+
+IDS_VACUUM_STATE2,
+ "erase things from the surface to make things blank"  
+ // was "suck things off the surface to make things blank"  
+
+IDS_VACUUM_CHANGED_STATE_VIA_KEYBOARD_HELP,
+"You can change Dusty by pressing 'S' for sucking, 'E' for erasing, and 'R' for reverse (spitting out)."  // was 'B" for blanking
+
+Thanks again for a great job.  If you still have questions let me know.
+
+ -ken

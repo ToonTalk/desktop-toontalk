@@ -1,0 +1,46 @@
+#include "toontalk.h"
+
+STRINGTABLE { 
+#include "strings.h"
+#include "static.rc"
+}
+
+tt_icon ICON toontalk.ico
+
+1 VERSIONINFO 
+FILEVERSION 1,52,3188,00
+PRODUCTVERSION 3,00,0,0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0xaL
+FILEOS 0x4L
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+{
+ BLOCK "StringFileInfo"
+ {
+  BLOCK "040904e4"
+  {
+   VALUE "Comments", "This implements ToonTalk 3.188. Copyright \251 Ken Kahn 1992-2007. All rights reserved.\0"
+   VALUE "CompanyName", "Animated Programs\0"
+   VALUE "FileDescription", "ToonTalk\0"
+   VALUE "FileVersion", "52.3188.0\0"
+   VALUE "InternalName", "ToonTalk\0"
+   VALUE "LegalCopyright", "Copyright \251 Ken Kahn 1992-2007\0"
+   VALUE "LegalTrademarks", "ToonTalk is a registered trademark of Animated Programs\0"
+   VALUE "OriginalFilename", "TT3188.exe\0"
+   VALUE "ProductName", "ToonTalk 3\0"
+   VALUE "ProductVersion", "52.3188.0\0"
+  }
+
+ }
+
+ BLOCK "VarFileInfo"
+ {
+  VALUE "Translation", 0x409, 1802
+ }
+
+}
+
+
+
+

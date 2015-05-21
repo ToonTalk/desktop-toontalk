@@ -1,0 +1,303 @@
+Subject: Re: Other HTML translations
+Date: Tue, 5 Nov 1996 10:04:50 +0100 (MET)
+From: lennart.mogren@mailbox.swipnet.se (Lennart Mogren)
+To: Ken Kahn <KenKahn@ToonTalk.com>
+
+Hi,
+Her we go again! As attachment and below also.
+
+>Hi.  For some mysterious reason, this came thru unreadable.  Word couldn't
+>read it, etc.
+>Want to try again?
+>
+>By the way, the message with about 30 HTML attachments went fine except
+>for some
+>substitutions for the Swedish letters.  Fixed them at this end.
+>
+> -ken
+
+Utkast till ToonTalk text för Elelunds katalog.
+
+ToonTalk är en helt ny slags progamvara - en lekfull animerad värld för
+barn där de kan köra och konstruera egna datorprogram.
+
+Att programmera datorer innebär att man skapar, får självförtroende och för
+med sig en erövring av en ny tankevärld, som ger långsiktigt goda resultat.
+Man kan göra en häpnadsväckande mängd program på olka områden - spel,
+musik, matematik, animation, simulering, naturvetenskap, robotteknik,
+utbildning mm. Själva tankeprocessen för att bygga program utvecklar
+förmågan att analysera och ge något en tydlig form. Elever får en djupare
+förstståelse för det aktuella ämnet, eftersom de behöver använda det
+inlärda stoffet på ett meningsfullt sätt när de bygger sina program.
+Dessutom är själva programmeringen ett värdefullt ämne att behärska i sig.
+
+Men programmering kan vara svårt - svårt att lära sig och svårt att
+genomföra. Programmerare behöver i allmänhet lära sig någon form av
+programmeringsspråk som är fullt av abstrakta begrepp som variabler,
+procedurer, flödeskontroll, datastrukturer, modulering och upprepning.
+Vissa elever kan lära sig språk som Logo eller Basic, i synnerhet om de får
+hjälp av en duktig och engagerad lärare, men de flesta tycker det är
+frustrerande och tråkigt. Att förstå de tankestrukturer som ligger bakom
+datorprogrammering är inte bara svårt för eleverna utan också för deras
+lärare.
+
+Med ToonTalk är det annorlunda. Det är inte bara lätt att lära sig - det är
+roligt också! Till sin uppläggning påminner det mycket om dataspel med
+tilltalande grafik, animationer, en virtuell värld att utforska och
+animerade figurer som man styr och får hjälp av. Utan att ge avkall på de
+fantastiska variationsmöjligheterna i programmering ger ToonTalk eleverna
+en möjlighet att slippa svåra abstraktioner och i stället arbeta på ett
+konkret sätt. I ToonTalk gör man program genom att lära upp robotar.
+Kommunikation mellan programelement sker med hjälp av brevduvor som tar det
+dom får till sina bon. Aritmetiska operationer utförs av en liten mus med
+en stor hammare. Lokala variabler har ersatts av block med lådor som kan
+fyllas på och tömmas. Eleven/programmeraren går också in i den virtuella
+världen och styr en animerad liten människa. Det går att få en överblick
+genom att stiga in i en helikopter och flyga över den stad som byggts, för
+att sedan landa, stiga ur och gå in i hus och uppleva eller själv skapa
+program. En verktygslåda som är fylld med siffror, bokstäver, lådor,
+lastbilar, vågar, bomber och många andra saker följer alltid med i den
+lilla animerade människans släptåg.
+
+ToonTalk är en värld där elever i olika åldrar kan konstruera program på
+olika nivåer av svårighet och komplexitet. En yngre elev kommer kanske lära
+en robot att räkna eller ständigt dubblera ett tal medan en äldre elev
+skapar ett program som alstrar primtal, bygger ett bordtennisspel eller en
+slumptalsgenerator. Fastän ToonTalk har skapats med tanke på yngre elever
+är det baserat på en modell för avancerad programmering och har använts på
+hög nivå inom universitetsutbildningen för att lära ut samverkande
+algoritmer.
+
+ToonTalk har konstruerats av Ken Kahn, som nått sin doktorsgrad i
+datorprogrammering vid MIT (Massachusetts Institute of Technology) och han
+har också varit verksam som gästföreläsare och forskare i Sverige. I mitten
+av 70-talet arbetade han med Seymour Papert och hans LOGO-team som
+utvecklade programvaror för att lära barn programmera. Patent- coh
+Registreringsverket i USA (The U.S. Patent Office) har nyligen givit honom
+patentet på den teknologi som ligger bakom ToonTalk. Med ToonTalk följer en
+animerad figur som ger hjälp och uppmuntran till eleven. Detta har
+översatts till svenska liksom handledning och exempelsamlingar för både
+elever och lärare.
+
+Finns för Windows 3.1 och Windows 95.
+
+"ToonTalk is a video game for making video games."
+
+     -- David Kahn, age 10.
+
+"It's an animated world that lets kids make, run, debug, and trade
+programs."
+
+     -- Ken Kahn, David's dad and inventor of ToonTalk
+
+----------------------------------------------------------------------------
+
+You start off flying a helicopter. After you land you can walk into houses
+and use animated tools and characters to add to your town or build games.
+
+                                   [Image]
+
+     In ToonTalk, you fly your helicopter into a city you've designed.
+
+I think you really should check out the animated tools and characters .
+
+Back to ToonTalk home page.
+"ToonTalk är ett dataspel att göra dataspel med."
+
+--David Kahn, 10 år.
+
+"Det är en animerad värld där ungar kan tillverka, köra, korrigera och byta
+program med varandra."
+
+-- Ken Kahn, Davids pappa och uppfinnare av ToonTalk.
+
+Du börjar med att flyga en helikopter. När du landat kan du gå in i hus och
+använda animerade verktyg och figurer för att bygga nya hus i din stad
+eller göra dataspel.
+
+Bild
+
+I ToonTalk flyger du en helikopter ner i en stad som du byggt.
+
+Jag tycker du ska prova själv att använda de animerade verktygen och figurerna.
+
+Here's you'll find a discussion of how ToonTalk is being tested in schools.
+A general description of ToonTalk and of the cognitive skills learned are
+elsewhere.
+
+Beta testing of ToonTalk began in January 1995 at the Encinal School in
+Menlo Park, California. A class of fourth graders taught by Ruth Colton was
+given a half hour demo and then in pairs used ToonTalk. Each session was 30
+to 40 minutes and about 6 children used ToonTalk each week. Notes were taken
+as they used the system and the system maintained a replay log of their
+actions. When the children were confused or asked questions, they were
+helped. Whenever appropriate, they were instructed to find the answer from
+ToonTalk's help system personified by Marty the Martian. In September 1995,
+this was repeated with Mrs. Colton's next fourth grade class.
+
+The purpose of this testing was not to conduct a carefully controlled
+scientific experiment. (Though if anyone is interested in doing so please
+contact me.) The good news from working with about 50 students is that they
+found ToonTalk very appealing and had few problems mastering the basic
+operations of a sophisticated concurrent programming language. They
+understood how to train robots, give birds messages, etc.. About 10% were
+confused about training robots (the essence of ToonTalk programming) even
+after two 30 minute sessions. These positive results are more impressive
+when one considers that during this period ToonTalk was evolving and
+contained many system bugs that the children encountered. Also many small
+problems surfaced. For example, ToonTalk used the left mouse button for
+picking up and dropping things and the right button for using something in
+your hand. Many children repeated got left and right mixed up. ToonTalk now
+by default does not distinguish between different mouse buttons and instead
+the shift button needs to be held while clicking a mouse button to use what
+is in your hand. There were literally hundreds of such changes as a result
+of observing the children using ToonTalk.
+
+To be honest, neither the children in Mrs. Colton's class nor the dozen or
+so beta testers in homes have constructed more than small simple programs.
+It seems that children have no troubles understanding the basic building
+blocks of ToonTalk programming but lack the design skills or programming
+techniques to construct larger programs. Good teachers can help here. To
+address this problem, ToonTalk now includes about ten examples ranging from
+simple to silly to serious computer science to building a Ping Pong game.
+These examples are presented as narrated demos. Another experiment underway
+is to present examples as illustrated instructions much like those that
+children use to build Erector(r) and Lego(r) models. An interactive tutorial
+with a narrative structure is planned. We are hopeful that we will soon
+begin to see larger and more sophisticated programs from the children.
+
+We would love to have more beta testers both inside schools and out. Two
+teachers at the Råbyskolan school near Stockholm, Sweden have started to use
+ToonTalk in classes. Keio University in Tokyo Japan has been testing
+ToonTalk for quite a while with university students as has the Tawain
+National University.
+
+Back to ToonTalk home page.
+
+Här komer du få en utläggning om hur ToonTalk testas i skolor. En allmän
+beskrivning av ToonTalk och de tankeförmågor programmet utvecklar finns på
+annan plats.
+
+Den första testen av ToonTalkinleddes i januari 1995 på Encinal School i
+Menlo Park, California. En grupp fjärdeklassare fick en halvtimmes
+demonstration av sin lärare Ruth Colton. Därefter fick de sitta med
+ToonTalk i par. Varje sittning varade i 30 till 40 minuter och cirka sex
+barn använde ToonTalk varje vecka. Anteckningar gjordes av hur de använde
+programmet och systemet spelade in loggar av allt de gjorde. Loggarna kunde
+senare spelas upp. När barnen fastnade eller ställde frågor fick de hjälp.
+När det passade blev de ombedda att ta hjälp av de inbyggda
+hjälpfunktionerna som visades av marsmänniskan Marty. I september 1995
+upprepades detta med Ruth Coltons nästa fjärdeklass.
+
+Syftet med försöken var inta att genomföra ett noga kontrollerat
+vetenskapligt experiment. Skulle någon vara intresserad av att göra det så
+ta gärna kontakt med Ken Kahn. Det positiva med att arbeta med cirka 50
+barn var att de tyckte mycket om ToonTalk och hade föga problem med att
+behärska de grundläggande operationerna i ett avancerat programspråk.
+De förstod hur de skulle programmera robotar, skicka meddelanden med fåglar
+och så vidare. Bara ungefär 10% av dem hade svårt att begripa hur de skulle
+programmera robotar (grunden för ToonTalk-programmering) till och med efter
+två 30 minuters sittningar. Dessa positiva reslultat är desto mer
+anmärkningsvärda när man betänker att ToonTalk vid denna tid var under
+utveckling och innehöll många systembuggar som barnen fick stå ut med.
+En hel del småproblem dök också upp. Ett exempel var att ToonTalk använde
+den vänstra musknappen för att plocka upp och släppa ned saker med och den
+högra för att påverka något man höll i. Flera barn kunde inte hålla isär
+vänster och höger. Följden är att ToonTalk nu inte gör någon skillnad
+mellan höger och vänster musknapp. I ställer används Shift-tangenten
+samtidigt med musknapparna för att påverka det som man håller i handen.
+Det blev sammantaget bokstavligen hundratals sådana förändringar som
+resultat av att observera hur barnen använde ToonTalk.
+
+I ärlighetens namn ska sägas att varken Ruth Coltons klasser eller de cirka
+dussinet betatestare som använt ToonTalk hemma har byggt annat än mycket
+enkla program.
+Det förefaller som om barnen har inga problem att förstå de grundläggande
+byggstenarna i ToonTalk men däremot brister i förmågan att tänka ut eller i
+huvudet föreställa sig större och mera komplicerade program.
+Det är här goda lärare kommer in i bilden. För att underlätta innehåller
+ToonTalk nu en rad exempel på program att göra - alltifrån enkla och lite
+galna till seriösa, programmeringstekniskt avancerade som att konstruera
+ett Ping Pong spel.
+Exemplen är gjorda som kommenterade demonstrationer. Ett annat sätt att att
+göra demonstrationer under utveckling är att göra illustrerade
+handledningar i stil med dem som används för att bygga med Lego(r). En
+interaktiv handledning planeras. Vi hoppas att vi snart kommer att få se
+större och mer sofistikerade program som barnen har gjort.
+
+Vi skulle varmt välkomna flera betatestare, både inom och utanför skolan.
+Två lärare vid  Råbyskolan (1-5) i närheten av Stockholm, Sverige, har
+börjat använda ToonTalk i sina klasser. Verksamheten kommer att bedrivas
+tillsammans med sex studenter från Lärahögskolan i Stockholm under ht 96.
+Betatestning har också inletts vid  Keio University i Tokyo, Japan och vid
+Taiwan National University.
+
+ToonTalk is a completely new kind of software--both a state-of-the-art
+programming language and a video game. Children create programs by
+performing actions in an animated world.
+
+Computer programming can be a creative, empowering, and rewarding activity.
+Programs can be constructed for an incredible variety of purposes--games,
+music, math, animation, simulation, science, language, robotics, education.
+The process of building programs entails a rich set of problem-solving
+skills involving analysis and design. And computer programming is a worthy
+subject to learn on its own merits.
+
+But programming can be hard--hard to learn and hard to do. Programmers
+usually have to learn a formal textual programming language full of
+difficult abstract concepts like variables, procedures, flow of control,
+data structures, modularity, and recursion. Some children do learn languages
+like Logo or Basic, especially when taught by a gifted and dedicated
+teacher, but most find it frustrating and boring.
+
+ToonTalk is different. It is not only easy to learn, but fun too. It borrows
+heavily from video games--appealing graphics and animation, a virtual world
+to explore, animated characters to interact with and get help from.
+
+But ToonTalk isn't just a video game for teaching programming--the very act
+of building, running, and debugging programs is like playing an adventure
+game. In ToonTalk, it is not only fun to play with the resulting creation,
+it is fun to build it.
+
+ToonTalk är ett helt  nytt slags mjukvara -- både ett fullständigt
+programspråk och ett dataspel. Barn skapar program genom att hantera en
+animerad värld.
+
+Dataprogrammering kan vara en aktivitet som är skapande, givande och något
+som stärker självkänslan. Program kan konstrueras för en mängd olika syften
+--spel, musik, matte, animering, simulering, naturvetenskap, robotlära,
+utbildning mm. Själva processen att bygga program för med sig träning i att
+lösa olika problem, att analysera och att tänka ut hur det slutligen ska se
+ut. Och dataprogrammering i sig är värdefullt att bli kunnig i.
+
+Men programmering kan vara svårt båda att lära sig och att utföra.
+Programmerare brukar behöva lära sig ett formellt textbaserat programspråk
+fyllt av komplicerade termer som variabler, procedurer, flödeskontroll,
+datastrukturer, modulär programmering och periodicitet. En del barn lär sig
+faktiskt programmeringsspråk som Logo eller Basic i synnerhet när det lärs
+ut av en begåvad och engagerad lärare, men de flesta tycker att det är
+svårt och frustrerande.
+
+Med ToonTalk är det annorlunda. Det är inte bara lätt att lära sig - det är
+roligt också! Till sin uppläggning påminner det mycket om dataspel med
+tilltalande grafik, animationer, en virtuell värld att utforska och
+animerade figurer som man styr och får hjälp av.
+
+Men ToonTalk är inte bara ett dataspel för att lära ut programmering. Att
+just bygga, köra och "avlusa" program är som att spela ett äventyrsspel.
+Med ToonTalk är det inte bara roligt att spela med det program man byggt,
+det är lika roligt att bygga det.
+
+    --------------------------------------------------------------------
+
+               Attachment 2  Name: Misc_transl.doc
+                             Type: application/mac-binhex40
+
+    --------------------------------------------------------------------
+
+Lennart Mogren
+Bokstigen 9
+197 32 Bro
+Sweden
+Tel  #46-8 582 464 13
+Fax #46-8 582 469 03

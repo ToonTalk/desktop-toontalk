@@ -1,0 +1,120 @@
+bird.htm
+// now includes pictures
+She takes <A HREF="number.htm">number</A>
+and <A HREF="text.htm">text</A> pads, <A HREF="picture.htm" >pictures</A>,
+and <A HREF="box.htm">boxes</A> - nothing else.
+// and inserted after
+<I><B>FOR ADVANCED USERS:</B></I>
+
+box.htm	
+// added the following at the end
+<B>Advanced tip.</B> You can also use blank boxes to &quot;explode&quot;
+a text pad. If you drop a text pad like &quot;cat&quot; on a blank
+box the box will turn into one with 3 holes. The first hole will
+contain just the letter &quot;c&quot;, the second hole &quot;a&quot;,
+and the third hole &quot;t&quot;. 
+
+command.htm	
+// added at the end:
+<LI>-tts_uses_ds &lt;0,1&gt; 1 means the text-to-speech engine uses DirectSound.  It enables simultaneous speech and sound effects.  The default, however, is 0 since on many systems it introduces sentence long delays and a background hiss.  This is only for the 32-bit version.  Try it and see how it works on your system.</LI></UL>
+
+doc.htm	
+// added at the beginning
+</B><P>When you click on the ToonTalk icon <IMG SRC="../startico.gif" WIDTH=32 HEIGHT=32>, you are given 3 choices:</FONT> </P>
+<OL>
+
+<I><LI>Play puzzle game.</I> This is a fun way to learn how things work in ToonTalk and how to build neat things. </LI>
+<I><LI>See demos.</I> You can just sit back and watch a narrated introductory tour, or watch as 2 kids try to build a Ping Pong game, or watch lots of other demos. </LI>
+<I><LI>Free play.</I> You'll start off flying your helicopter over the ToonTalk island. Marty will help you as soon as you enter a house. </LI></OL>
+
+<P>If you want to know more about any of the following, just click on the underlined words. </P>
+
+// and changed
+<LI><A HREF="faq.htm">Frequently asked questions</A>. </LI>
+// and started a new faq.htm file
+
+dusty.htm
+// changed the last sentence to read:
+For advanced users there are also <A HREF="keyboard.htm#Dusty" >special keyboard commands</A>
+you can use while holding him. 
+
+java.htm
+// many changes see new one on the web
+
+// the following are new and probably should be translated:
+javademo.htm
+joycalib.htm
+joysense.htm
+joystick.htm
+
+keyboard.htm
+// some changes -- see new version
+
+listserv.htm	
+// is new and probably should be translated (by the way what is the status of the Swedish email list?)
+
+make_dmo.htm	
+// is new but is only of interest to sophisticated users or teachers -- maybe the English version is OK?
+make_pzl.htm
+// added at the beginning
+You can make your own puzzles to give to others.  Recommended
+only for advanced users.
+
+marty.htm	
+// added at the end:
+You can get Marty to come or go by pressing the F1 button.  If
+you are holding or pointing to something when Marty teleports
+in then he'll tell you lots of things about what your are holding
+or pointing to.  With CDROM version of ToonTalk, Marty can speak
+words rather than just show the words in talk balloons.
+
+mci.htm	
+// major re-write!
+
+notebook.htm	
+// added the title at the top:
+<FONT SIZE=4><P ALIGN="CENTER">Notebooks are good for storing stuff</P>
+
+number.htm
+// added the following and moved some sections around
+ADVANCED USERS ONLY: 
+
+options.htm
+// added the following just before "The customization controllers ..."
+<BR>
+<P>
+<I><B>ADVANCED USERS ONLY:</B></I>
+
+remote.htm
+// revised the entry for page 22:
+<LI><A NAME="RemoteLooks"></A><B>Page 22.</B> This one shows what the picture currently looks like. You (or a robot you've trained) can drop a different picture (or a number or text pad) here and the picture will be covered by the new picture. Great for making objects explode or numbers that change as the score changes or thousands of other neat uses. You can also <A HREF="tips.htm#PicturesOnPictures">add many pictures to a picture</A> this way if change their size or position so they don't completely cover the original picture. </LI>
+
+sensor.htm
+// added new descriptions 40, 42, and 44
+
+sound.htm
+// major changes
+
+text.htm
+// added following before discussion of blank pads
+ADVANCED USERS ONLY: 
+
+tips.htm
+// added 2 new tips
+
+tooly.htm	
+// added following title on top
+<B><FONT SIZE=4><P ALIGN="CENTER">Tooly the Toolbox</P>
+
+truck.htm
+// revised last "advanced tip" and added a new one
+
+ttini.htm
+// some new entries added
+
+wand.htm
+// changed to make clear which parts are for "advanced users"
+
+whomeet.htm
+// changed the letter size and layout so it looks nicer
+

@@ -1,0 +1,108 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Como Criar Exemplos</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Como Criar Exemplos</b></font></p>
+
+<p><strong><font face="Comic Sans MS" size="3"><i>Recomendado apenas para
+utilizadores mais avançados.</i></font></strong></p>
+
+<p><font face="Comic Sans MS">Para criares um exemplo, acrescenta o <i>&lt;nome_ficheiro&gt;</i>
+na <a
+href="command.htm#OutputLog">linha de </a><a
+href="command.htm#OutputLog">comando</a> antes de começares o ToonTalk. Isto
+irá criar um ficheiro nome_ficheiro.DMO na subdirectoria &quot;Demos&quot; do ToonTalk. A
+subdirectoria na qual o ficheiro será gravado depende da resolução gráfica
+do ToonTalk. O ficheiro &quot;dmo&quot; grava tudo o que tu fizeres (todos os
+movimentos do rato, toques no teclado, etc.). Faz duplo clique no ficheiro para
+iniciares o exemplo. Em alternativa acrescenta -I &lt;nome_ficheiro&gt; à linha
+de comando, para iniciares o exemplo. Verifica primeiro a subdirectoria
+&quot;demos&quot;, para veres os nomes dos exemplos já existentes, para não
+gravares por cima.</font></p>
+
+<p><font face="Comic Sans MS">Se estás a criar um exemplo num computador rápido e
+achas que ele também vai ser utilizado em computadores mais lentos,
+recomendamos-te que acrescentes <a
+href="command.htm#FrameDurationMinimum">-y 50</a> na linha de comando enquanto
+estiveres a gravar, para o teu computador ficar mais lento</font></p>
+
+<p><font face="Comic Sans MS"><b>Acrescentar legendas aos teus exemplos</b>.
+Quando o ToonTalk inicia um exemplo com o nome X, ele procura um ficheiro com o
+nome X.ptt (&quot;ptt&quot; é a extensão normal para legendas, em português). Podes arranjar outra extensão para o teu computador, através de
+uma entrada de &quot;SubtitlesSuffix&quot; na
+secção &quot;FileExtensions&quot; no ficheiro toontalk.ini, na
+directoria do Windows. Um ficheiro de legendas é feito
+de entradas separadas por uma linha em branco. Cada entrada tem o tempo, medido
+em milisegundos, desde o princípio do exemplo, seguido do texto do subtítulo.
+Recomendamos que as linhas que tenham mais de 60 caracteres sejam partidas. A
+subdirectoria &quot;demos&quot; do ToonTalk tem muitos exemplos de ficheiros de
+legendas. Uma maneira de obteres o tempo em
+milisegundos é carregando na tecla F9 enquanto o exemplo está a correr. Assim, o tempo ficará guardado no teu <i>&lt;nome_utilizador&gt;</i>.log
+na subdirectoria &quot;users&quot;.</font></p>
+
+<p><font face="Comic Sans MS"><b>Acrescentar narração aos teus exemplos</b>.
+Quando o ToonTalk inicia um exemplo com o nome X, ele procura um ficheiro com o
+nome X.ptn (&quot;ptn&quot; é a extensão normal para ficheiros de narração,
+em português). Podes arranjar outra extensão para o teu computador,
+através de uma entrada de &quot;SubtitlesSuffix&quot;
+na secção &quot;FileExtensions&quot; no ficheiro
+toontalk.ini, na directoria do Windows. Para criares um ficheiro de
+narração, deves gravar partes da narração (256 é o número máximo) e dar-lhe os nomes &quot;s01.wav&quot;, &quot;s02.wav&quot;, e por aí fora.
+Estes ficheiros devem ficar na directoria principal do toontalk. Enquanto o exemplo
+está ser reproduzido, deves
+carregar em F11 para começares o segmento de narração seguinte. Se preferires
+gravar e sincronizar as narrações pré-gravadas, acrescenta -d 451 à linha de
+comando, bem como -&lt;nome_ficheiro&gt;. Carrega novamente em F11, quando
+quiseres acrescentar o segmento de narração seguinte. Quando o ToonTalk
+termina, escreve um novo &quot;ptn&quot; na subdirectoria demos.</font></p>
+
+<p><font face="Comic Sans MS"><b>Coordenar as legendas com a narração</b>. Se
+quiseres criar a narração e as legendas, recomendamos-te que cries primeiro
+a narração e corras o teu exemplo com &quot;-d 3210&quot;. Isto vai imprimir os
+tempos de início de cada segmento no teu &lt;nome_utilizador&gt;.log na
+subdirectoria &quot;users&quot;. Podes depois usar
+esses tempos no teu ficheiro de legendas.</font></p>
+
+<p><font face="Comic Sans MS"><b>Dicas:</b></font> 
+
+<ul>
+  <li><font face="Comic Sans MS">Um ficheiro exemplo funciona para a mesma
+    resolução com que foi gravada. Vê as subdirectorias de &quot;Demos&quot;. </font></li>
+  <li><font face="Comic Sans MS">Um exemplo gravado com a voz ligada pode não funcionar correctamente quando
+    a voz
+    é desligada. </font></li>
+  <li><font face="Comic Sans MS">Se fizeres algum erro enquanto estás a gravar
+    o exemplo, não precisas de voltar a fazer tudo de novo. Podes correr tt32 -I
+    f_quase_bom -o f_nova_versão e consegues controlar quando o exemplo antigo começar
+    a funcionar mal. </font></li>
+  <li><font face="Comic Sans MS">Evita usar os aceleradores do teclado para as
+    ferramentas (por exemplo, 'A' para o Limpopó aspirar coisas). Estes
+    aceleradores são diferentes de linguagem para linguagem, pelo que se os
+    utilizares, os teus exemplos poderão não funcionar em versões diferentes do
+    ToonTalk.&nbsp; </font></li>
+  <li><font face="Comic Sans MS">Se criares um exemplo para um utilizador chamado
+    Pat, quando o exemplo é iniciado, ele pode mudar o perfil do utilizador para
+    Pat. Para evitar que isto aconteça, usa -t na linha de comando, para
+    indicar que é um utilizador &quot;temporário&quot;. Assim, o perfil do
+    utilizador não será guardado.</font></li>
+</ul>
+
+<p align="center"><font face="Comic Sans MS"><small><a href="toontalk.htm">principal</a></small><small>
+| <a
+href="http://www.cnotinfor.pt/toontalk/search.htm">procura</a></small><small> | <a href="buy.htm">compra</a></small><small>
+| <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">notícias</a></small><small> | <a href="infodesk.htm">informação</a></small><small> | <a href="faq.htm">perguntas</a></small><small>
+| <a href="support.htm">apoio</a></small><small> | <a href="free.htm">downloads</a> | <a
+href="press.htm">imprensa</a></small><small> | <a href="address.htm">contacto</a></small></font></p>
+
+</body>
+</html>

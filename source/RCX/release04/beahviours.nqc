@@ -1,0 +1,237 @@
+/*  Version 0 September 3, 2003
+
+This source code serves as an example and a template for TTRCX downloadable
+    programs. The initial and final sections of this code should not be changed.
+    
+The program structure is the following:
+    - Allocation of reserved variables (3 counters and 8 task flags). Do not
+      change this section.
+    - Sensor setup (the RCX requires the specification of the type of the sensors
+      plugged in any specific construction; see the documentation below)
+    - Event setup: we use an event driven approach to program the RCX.
+      Events can be 'static' (i.e., all their settings are know at compile time)
+      or 'parametric' (i.e., we use variables to modify event-related values,
+      such as a threshold, at runtime. See the documentation below).
+    - User task definition: each task monitors one or more events and defines the
+      code to be executed when the event(s) is/are fired. These tasks correspond
+      to the TT behaviours that you can add/remove to/from the picture representing
+      the construction.
+    - UpdateEvents and Main task definition: these should not be changed.
+
+    
+
+Behaviours definition temaplate for TTRCX
+
+### setup the sensors ####
+
+Set the type and mode of the sensors
+    using the function SetSensor(sensor, configuration)	
+    "configuration" is a constant containing both type and mode information.
+
+    Sensor Configuration:   Type:                         Mode:
+     SENSOR_TOUCH            SENSOR_TYPE_TOUCH            SENSOR_MODE_BOOL
+     SENSOR_LIGHT	           SENSOR_TYPE_LIGHT	          SENSOR_MODE_PERCENT
+     SENSOR_ROTATION	       SENSOR_TYPE_ROTATION	        SENSOR_MODE_ROTATION
+     SENSOR_CELSIUS	         SENSOR_TYPE_TEMPERATURE	    SENSOR_MODE_CELSIUS
+     SENSOR_FAHRENHEIT	     SENSOR_TYPE_TEMPERATURE	    SENSOR_MODE_FAHRENHEIT
+     SENSOR_PULSE	           SENSOR_TYPE_TOUCH	          SENSOR_MODE_PULSE
+     SENSOR_EDGE	           SENSOR_TYPE_TOUCH	          SENSOR_MODE_EDGE
+
+E.g. SetSensor (SENSOR_1, SENSOR_TOUCH);
+     SetSensor (SENSOR_2, SENSOR_LIGHT);
+     SetSensor (SENSOR_3, SENSOR_ROTATION);
+
+### setup the events ###
+
+Set events using the function SetEvent(event, source, type)
+    "event" is a constant from 0 to 15
+    "sources" are: sensors, timers, counters, or the message buffer
+    "type" is one of the types shown below
+
+  Event Type                Condition	Event                           Source
+   EVENT_TYPE_PRESSED	       value becomes on	                         sensors only
+   EVENT_TYPE_RELEASED	     value becomes off	                       sensors only
+   EVENT_TYPE_PULSE	         value goes from off to on to off	         sensors only
+   EVENT_TYPE_EDGE	         value goes from on to off or vice versa	 sensors only
+   EVENT_TYPE_FASTCHANGE	   value changes rapidly	                   sensors only
+   EVENT_TYPE_LOW	           value becomes low	                       any
+   EVENT_TYPE_NORMAL	       value becomes normal	                     any
+   EVENT_TYPE_HIGH	         value becomes high	                       any
+   EVENT_TYPE_CLICK	         value from low to high back to low	       any
+   EVENT_TYPE_DOUBLECLICK	   two clicks within a certain time	         any
+   EVENT_TYPE_MESSAGE	       new message received	                     Message() only
+
+E.g.
+ a)
+    [SetSensor (SENSOR_1, SENSOR_TOUCH);]
+    SetEvent(0, SENSOR_1, EVENT_TYPE_PRESSED);
+    
+ b)
+    [SetSensor (SENSOR_2, SENSOR_LIGHT);]
+    SetEvent(1, SENSOR_2, EVENT_TYPE_HIGH);
+    SetLowerLimit(1, 50);
+    SetUpperLimit(1, 80);
+    SetHysteresis(1, 5);
+    
+ c) when Counter(0) > 4
+      SetEvent(2, Counter(0), EVENT_TYPE_HIGH);
+      SetLowerLimit(2, -32768);
+      SetUpperLimit(2, 4);
+    
+ d) when Timer(0) =  10 (i.e. 1 second)
+      SetEvent(3, Timer(0), EVENT_TYPE_NORMAL);
+      SetLowerLimit(3, 10);
+      SetUpperLimit(3, 10);
+
+
+*/
+
+
+#pragma reserve 0 2   // RCX counters use var 0 .. 2
+
+int Task1_Active,     // var  3
+    Task2_Active,     // var  4
+    Task3_Active,     // var  5
+    Task4_Active,     // var  6
+    Task5_Active,     // var  7
+    Task6_Active,     // var  8
+    Task7_Active,     // var  9
+    Task8_Active;     // var 10
+
+// Don't change the code above this line!
+
+
+// Here define the sensors used in your construction
+void setup_sensors()
+{
+  SetSensor (SENSOR_1, SENSOR_TOUCH);
+}
+
+// Here define all the events that do not depend on a user parameter
+#define LeftPressed 0  // event 0
+void setup_static_events()
+{
+   SetEvent (LeftPressed, SENSOR_1, EVENT_TYPE_PRESSED);
+}
+
+// Here define all events that depend on a user parameter
+#define TooMany 1   // event 1
+int HitsLimit;       // var 11
+void set_parametric_events()
+{
+   // the event TooMany is triggered when counter_0 > HitsLimit
+   SetEvent (TooMany, Counter (0), EVENT_TYPE_HIGH);
+   SetLowerLimit(TooMany, -32768);
+   SetUpperLimit(TooMany, HitsLimit);
+   
+   // reset counter_0
+   ClearCounter (0);
+}
+
+
+// Here define the tasks of your program
+
+// Task Touch plays a sound when the touch sensor is pressed,
+// and increments counter_0
+task Touch ()        // task 1
+{
+  Task1_Active = 1;
+  SetPriority(2);
+
+  while (true)
+  {
+    monitor (EVENT_MASK (LeftPressed))
+    {
+      while(true) Wait(32767);
+    }
+    catch (EVENT_MASK (LeftPressed))
+    {
+      IncCounter (0);
+      acquire(ACQUIRE_SOUND)
+      {
+        PlaySound (SOUND_CLICK);
+      }
+    }
+  }
+} // end Touch
+
+
+// Task Log allocates space for the datalog elements, resets timer_0 and
+// records the timer value when the touch sensor is pressed
+task Log ()        // task 2
+{
+  Task2_Active = 1;
+  CreateDatalog (100);
+  ClearTimer (0);
+
+  while (true)
+  {
+    monitor (EVENT_MASK (LeftPressed))
+    {
+      while(true) Wait(32767);
+    }
+    catch (EVENT_MASK (LeftPressed))
+    {
+      AddToDatalog (Timer (0));
+    }
+  }
+} // end Touch
+
+
+// Task TooMuch plays a different sound when counter_0 > HitsLimit
+// and resets counter_0 to start over again
+task TooMuch ()           // task 3
+{
+  Task3_Active = 1;
+  SetPriority(1);
+  SetUserDisplay(Counter(0), 0);
+
+  while (true)
+  {
+    monitor (EVENT_MASK (TooMany))
+    {
+      while(true) Wait(32767);
+    }
+    catch (EVENT_MASK (TooMany))
+    {
+      ClearCounter (0);
+      acquire(ACQUIRE_SOUND)
+      {
+        PlaySound (SOUND_FAST_UP);
+      }
+    }
+  }
+} // end TooMuch
+
+
+// Function start_tasks() synchronizes the TT interface with the task activation
+// status via the Task<X>_Active variables (numbered form 3 to 10 here,
+// from 4 to 11 in TT
+void start_tasks ()
+{
+   // fill this template adding a line for each task you want to be activated
+   // at program start-up - at max 8 tasks can be defined.
+   if (Task1_Active == 1) start Touch;
+   if (Task2_Active == 1) start Log;
+   if (Task3_Active == 1) start TooMuch;
+}
+
+
+// DO NOT CHANGE THE CODE BELOW THIS LINE!
+
+
+// Task UpdateEvents should be started directly from TT after the proper
+// variable (HitsLimit, var11 here, var12 from TT perspective) has been set
+task UpdateEvents ()     // task 4 in this example
+{
+   set_parametric_events();
+}
+
+
+task main ()              // task 0
+{
+   setup_sensors();
+   setup_static_events();
+   start_tasks();
+}  // end main
+

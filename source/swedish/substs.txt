@@ -1,0 +1,8 @@
+(tags-query-replace "Â" "å")
+(tags-query-replace "”" "ä")
+(tags-query-replace "Ÿ" "Ä")
+(tags-query-replace "–" "ö")
+(tags-query-replace "÷" "Ö") ; capital O with dots
+
+;; can't find a instance of the following:
+Å \\ captial a with circle

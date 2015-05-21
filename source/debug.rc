@@ -1,0 +1,84 @@
+// Copyright (c) 1992-2000. Ken Kahn, Animated Programs, All rights reserved
+
+// strings that are only used when TT_DEBUG_ON is on
+
+IDS_ANIMATING_TO_VARIABLE_GOAL,
+ "Animating to variable goal at "
+IDS_ANIMATING_TO_GOAL,
+ "Animating to goal " 
+//IDS_NOW_KEEPING,
+// "Now keeping every "
+//IDS_FRAME_SINCE_AVERAGE_DURATION,
+// " frame since average duration is "
+IDS_INDEX_WAS,
+ "Index was "
+IDS_ORIGINAL_CYCLE_VALUE_WAS,
+ " and original cycle value was " 
+IDS_CURRENT_DURATION_IS,
+ " current duration is " 
+IDS_SKIPPED_INDEX,
+ "Skipped index from "
+
+ IDS_AND_USED_INSTEAD,
+ " and used instead "
+IDS_FRAME_EQUAL,
+ " (frame="
+IDS_AND_HAS_BECOME,
+ " and has become " 
+IDS_CYCLE_DURATION_IS,
+ "Cycle duration is " 
+IDS_AND_CYCLE_VALUE_IS,
+ " and cycle value is "
+IDS_SCALING_AND_DRAWING,
+ "Scaling and drawing "
+IDS_BYTES_LONG_IMAGE,
+ " bytes long image #"
+//IDS_MAXIMUM_MEMORY_FOR_CACHING,
+// "Maximum memory used for caching is "
+//IDS_WHILE_FREE_MEMORY_IS,
+// " while free memory is " 
+//IDS_MEMORY_USED_IN_CACHE,
+// "Memory used in cache " 
+//IDS_TOTAL_CACHE_SAVINGS,
+// "Total savings due to stuff currently in the cache is "
+ IDS_MS_TO_DISPLAY_FOLLOWERS,
+ " ms to display the followers of "
+IDS_AND_WAS_CACHED,
+ " and was cached."
+IDS_MS_TO_DISPLAY,
+ " ms to display -- " 
+
+ IDS_MS_TO_STRETCH,
+ " ms to stretch and "
+IDS_MS_TO_BLIT_RESULT,
+ " ms to blit the result"
+IDS_ORIGINAL_SIZE_IS,
+ "The original size is "
+IDS_NEW_SIZE_IS,
+ " and the new size is "
+IDS_MS_SAVED_BY_STRETCH_CACHE,
+ " ms saved by putting stretching image in cache "
+IDS_BYTES_FOR_RESULT,
+ " bytes for result -- index "
+IDS_MS_CREATED_CACHED_SURFACE,
+ " ms to create cached surface "
+IDS_PARENTHETICALLY_COMPRESSED,
+ "(compressed)"
+IDS_CACHING_SOUND,
+ "Caching sound #"
+IDS_USING_CACHE_NUMBER,
+ " using cache #"
+IDS_SIZE_IS,
+ " size is "
+IDS_PRIORITY_WAS,
+ "'s priority was "
+IDS_AND_NOW_IS,
+ " and is now "
+IDS_OK_TO_CACHE,
+ " ok to cache:"
+IDS_INVALIDATION_COST,
+ " Invalidation cost = "
+IDS_CLEAN_RUN_AVERAGE,
+ "; clean run average = "
+IDS_DISPLAY_COST,
+ "; display cost = "

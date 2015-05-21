@@ -1,0 +1,796 @@
+<html>
+
+<head>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<meta NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+<title>Por detrás dos
+Puzzles</title>
+<meta NAME="Template" CONTENT="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+</head>
+
+<body LINK="#0000ff" VLINK="#800080" bgcolor="#FFFFFF">
+<font FACE="Comic Sans MS">
+
+<b><font FACE="Comic Sans MS" SIZE="4">
+
+<p ALIGN="CENTER"></font><font FACE="Comic Sans MS" size="6">Por detrás dos
+Puzzles</font><font FACE="Comic Sans MS" SIZE="4"></p>
+</font></b><p>O que se aprende enquanto se jogam os puzzles? Vamos espreitar por
+detrás de cada puzzle e perceber o que se aprende ou pode aprender sobre
+computação, enquanto nos divertimos.</p>
+
+<p align="center"><strong><big>Nível</big><big> 1 - Números (principalmente
+potências de</big><big> 2)</big></strong></p>
+<b>
+
+<p>Puzzle 1 &#150; o ET precisa de uma caixa que tenha dentro um 1 e um 2.</b>  Este puzzle
+introduz as caixas do ToonTalk que servem para guardar coisas. Os engenheiros informáticos
+chamam-lhes <i>estruturas de dados</i>. As caixas relacionam-se com
+conceitos como <i>arrays, vectores</i> e <i>tuplos</i>. Os
+números são um exemplo do que os cientistas denominam de <i>tipos de dados
+atómicos</i>. Para resolver este puzzle, precisas de tentar perceber como podes
+pôr coisas numa caixa (isto é, como <i>inicializar os elementos de um vector</i>).</p>
+<b>
+
+<p>Puzzle 2 &#150; o ET precisa de um 4.</b>  Este puzzle introduz o Marretas (o
+rato) que faz aritmética e outras operações básicas. Ao resolver este
+puzzle, vais descobrir como expressar a soma de dois números.</p>
+<b>
+
+<p>Puzzle 3 &#150; o ET precisa de uma caixa com 8, 16 e 32.</b>  Introduz-se
+uma maneira de combinar caixas para fazer caixas maiores. Também ilustra a
+forma de expressar a adição de um número que está numa caixa. Na
+terminologia da ciência dos computadores, aprende-se a <i>concatenar vectores</i>
+e a <i>operar num elemento de uma estrutura de dados</i>.</p>
+<b>
+
+<p>Puzzle 4 &#150; o ET precisa de um número que seja maior que 1000.</b>  Este
+puzzle apresenta a varinha mágica do ToonTalk que é utilizada para copiar
+objectos do ToonTalk. Como todas as ferramentas do ToonTalk, a varinha mágica
+pode ser usada como parte de um programa e como ferramenta de um ambiente de
+programação. Este puzzle é interessante a nível da matemática, uma vez que
+se baseia na repetição da duplicação de números que crescem de 1 a 1024, em
+apenas 10 passos. É intencionalmente um pouco enfadonho, para permitir uma
+motivação para mais tarde realizar de forma automática tarefas como esta .</p>
+<b>
+
+<p>Puzzle 5 &#150; o ET precisa de um zero.</b>  Este puzzle introduz o
+Limpopó, o aspirador. O Limpopó é uma ferramenta para aspirar coisas. O zero
+está por baixo de muitas coisas que só o Limpopó consegue remover.</p>
+<p><b>Puzzle 6 &#150; o ET precisa de &#150;1.</b> Para resolver este puzzle,
+o jogador precisa de adivinhar (ou receber palpites do ET) que o botão que
+está no nariz do Limpopó pode mudar, clicando nele. Este uso de botões que
+mudam o comportamento das ferramentas é muito utilizado no ToonTalk. Um
+jogador atento vai reparar que o Limpopó serve para aspirar coisas e
+para, mais tarde, as cuspir. Isto corresponde (muito de perto) às operações <i>cortar
+e colar</i> de muitos interfaces baseados no windows.</p>
+<b>
+
+<p>Puzzle 7 &#150; o ET precisa de um bloco de números vazio.</b>  Este puzzle
+introduz os blocos de números vazios que serão utilizados noutros puzzles. Um
+bloco de números vazio é uma forma de expressar <i>o tipo de estrutura de
+dados</i>. Neste caso, indica os dados cujo <i>tipo é número</i>.
+</p>
+<p><b>Puzzle 8 &#150; o ET precisa de uma caixa com dois zeros.</b> Ao treinares
+o robot neste puzzle, estás a construir o teu primeiro programa. O programa
+construído é equivalente ao programa&nbsp; textual que se segue:
+</p>
+</font><font FACE="Terminal">
+
+<p></font><font face="Times New Roman">while (sizeOf(box) = 1 and box[0] = 1) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box := concat(box, copy(box));</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font><font FACE="Terminal"></p>
+</font><font FACE="Comic Sans MS">
+
+<p>A razão pela qual até crianças pequenas conseguem construir este programa
+sem ajuda é que o puzzle restringe o mundo, de tal forma que a informação
+necessária para que um jogador encontre a solução não é muita. Aqui a
+memória do robot está limitada: ele apenas se lembra de dois passos e já tem uma varinha mágica. </p>
+<b>
+
+<p>Puzzle 9 &#150; o ET precisa de um número maior do que um bilião.</b>  A
+solução para este puzzle baseia-se na experiência da resolução dos puzzles
+4, 7 e 8. Para resolver este puzzle, precisas de treinar um robot para fazer o
+que fizeste manualmente no puzzle 4. No puzzle 4, tiveste de repetir uma
+sequência de acções 10 vezes. Aqui vais simplesmente treinar o robot para
+fazer uma sequência e ele repetirá isso 30 vezes. Para que o robot trabalhe
+repetidamente, precisas de aprender a pôr o robot menos confuso acerca do tipo
+de caixa com que ele trabalha. O programa textual equivalente ao robot treinado
+neste puzzle é:</p>
+</font>
+
+<p><font face="Times New Roman">repeat 30</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">if (sizeOf(box) = 1 and isNumber(box[0])) then </font></p>
+</blockquote>
+
+<blockquote>
+  <blockquote>
+    <p><font face="Times New Roman">Box[0] := box[0] + copy(box[0]);</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endif;</font><font FACE="Terminal"></p>
+</blockquote>
+</font><font FACE="Comic Sans MS">
+
+<p><strong>Puzzle 10 - </strong>
+<b>
+
+o ET precisa de </b><strong>uma caixa dentro de outra caixa.</strong> Para
+resolver este puzzle, precisas de colocar uma caixa dentro de outra caixa. Se
+colocares uma das caixas no buraco errado, o ET informa-te que o elemento tem de
+estar no local correcto.</p>
+</font><p><font FACE="Comic Sans MS"><strong>Puzzle 11 - </strong>
+<b>
+
+o ET precisa de uma caixa com três </b><strong>zeros. </strong> Tal como no
+puzzle 2, precisas de juntar 2 caixas. Aqui irás descobrir que não podes
+juntar caixas quando elas fazem parte de outra caixa. Vais descobrir também que
+as caixas podem ser removidas, juntas e colocadas no sítio onde estavam. Uma
+solução corresponde ao seguinte fragmento de código:</font></p>
+
+<p><font face="Times New Roman">temp1 := box[0];</font></p>
+
+<p><font face="Times New Roman">temp2 := box[1];</font></p>
+
+<p><font face="Times New Roman">temp1 := concat(temp1,temp2);</font></p>
+
+<p><font face="Times New Roman">box[1] := temp1;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 12 - </strong>
+<b>
+
+o ET precisa de </b><strong>uma caixa com seis zeros.</strong>
+ Este puzzle é parecido com o puzzle 11. A operação de juntar caixas é
+repetida 3 vezes. Isto é para te preparar para o puzzle seguinte, no qual um
+robot é treinado para juntar caixas repetidamente.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 13 - </strong>
+<b>
+
+o ET precisa de de uma caixa com dez </b><strong>zeros.</strong> Ao resolver
+este puzzle, treinas o robot para reutilizar uma caixa.
+Isto introduz uma <i>técnica de programação muito usada quando se cria uma
+estrutura de dados de forma incremental</i>. O robot treinado corresponde ao
+seguinte programa textual:</font></p>
+
+<p><font face="Times New Roman">repeat 4</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">if (sizeOf(box) = 2 and sizeOf(box[0]) = 1 and box[0][0] =
+  0) then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">temp1 := copy(box[0]);</font></p>
+    <p><font face="Times New Roman">temp1 := concat(temp1,box[1]);</font></p>
+    <p><font face="Times New Roman">box[1] := temp;</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endif;</font></p>
+</blockquote>
+
+<p><font face="Comic Sans MS">Neste puzzle, o robot&nbsp; consegue lembrar-se
+até 20 passos, mas o puzzle pode ser resolvido apenas com 4.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 14 - </strong> 
+<b>
+
+o ET precisa de uma caixa com </b><strong>1, 2, 4,
+8, 16 e 32.</strong>  Resolver este puzzle requer reutilizar repetidamente uma caixa cujos números são o dobro do número anterior.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 15 - </strong> 
+<b>
+
+o ET precisa de </b><strong>uma caixa com 1, 2, 4,
+8, 16 e por aí fora até 1.073.741.824.</strong>  A resolução deste puzzle
+baseia-se nos puzzles 9, 13 e 14. É um bom exemplo de como é preciso, muitas
+vezes, combinar diferentes técnicas de programação para alcançar determinado
+objectivo. Aqui está o equivalente programa textual:</font></p>
+
+<p><font face="Times New Roman">repeat 30</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">if (sizeOf(box) = 2 and sizeOf(box[0]) = 1 and
+  isNumber(box[0][0])) then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">box[0][0] := box[0][0] + copy(box[0][0]);</font></p>
+    <p><font face="Times New Roman">temp1 := copy(box[0]);</font></p>
+    <p><font face="Times New Roman">temp2 := box[1];</font></p>
+    <p><font face="Times New Roman">temp2 := concat(temp2,temp1);</font></p>
+    <p><font face="Times New Roman">box[1] := temp2;</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endif;</font></p>
+</blockquote>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 16 - </strong>
+<b>
+
+o ET precisa do dia em que nasceste</b><strong>.</strong>
+ As potências de 2 são a <i>base dos inteiros positivos</i>. Por outras
+palavras, qualquer número pode ser expresso como sendo a soma de números que
+são potência de 2 e nenhum número (nessa soma) aparece mais do que uma vez.
+Acrescente-se a falta da varinha mágica neste puzzle.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 17 - </strong> 
+<b>
+
+o ET precisa do ano em que nasceste</b><strong> em binário.</strong>  Precisas
+de fazer exactamente o mesmo que no puzzle 16 (até de uma forma mais fácil). O
+truque está em reparares que onde precisas de um 1, tens de procurar um número
+que tenha um 1 nessa posição.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzles 18, 19 e 20</strong> - Foram
+intencionalmente deixados em branco.</font></p>
+
+<p align="center"><strong><font face="Comic Sans MS"><big>Nível </big><big>2 - Letra</big><big>s
+e Palavras</big></font></strong></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 21 - </strong>
+<b>
+
+o ET precisa de uma caixa com </b><strong>A, B e C.</strong> Este puzzle
+introduz os blocos de texto (<i>um novo tipo de dados</i>). Ao resolver este
+puzzle, vais descobrir como a adição opera com letras.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 22 - </strong>
+<b>
+
+o ET precisa de uma caixa com </b><strong>A, B, C, D, E e F.</strong> Este puzzle
+é semelhante ao puzzle 14, só que a mesma técnica é agora aplicada a letras
+e não a números.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 23 - </strong> 
+<b>
+
+o ET precisa de uma caixa com </b><strong>A, B, C e por aí fora até Z.</strong> 
+Este puzzle baseia-se nos puzzles 15 e 22. Tal como no puzzle 15, precisas de
+treinar um robot para fazer um passo, de tal forma que ao acabar um tarefa está
+pronto para o passo seguinte. O programa textual equivalente é:</font></p>
+
+<p><font face="Times New Roman">repeat 20 </font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">if (sizeOf(box) = 3 and box[0] = 1 and sizeOf(box[1]) = 1
+  and isText(box[1][0])) then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">temp1 := copy(box[1]);</font></p>
+    <p><font face="Times New Roman">box[1][0] := box[1][0] + copy(box[0]);</font></p>
+    <p><font face="Times New Roman">temp2 := box[2];</font></p>
+    <p><font face="Times New Roman">temp2 := concat(temp2,temp1);</font></p>
+    <p><font face="Times New Roman">box[2] := temp2;</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endif;</font></p>
+</blockquote>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 24 - </strong> 
+<b>
+
+o ET precisa de uma caixa com </b><strong>a, b, c e por aí fora até z.</strong> 
+Este puzzle é trivial, uma vez que o robot treinado no puzzle anterior pode
+criar a caixa que é precisa aqui. Tudo o que o robot precisa é que lhe dês
+uma caixa diferente para ele começar. Um robot é o que os cientistas dos
+computadores chamam <i>procedimento</i>. E este <i>procedimento</i> tem <i>um
+parâmetro </i>- a caixa que é dada ao robot. Um aspecto muito importante de um
+procedimento é que ele pode ser reutilizado, fornecendo-lhe <i>parâmetros</i> diferentes.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 25 - </strong> 
+<b>
+
+o ET precisa de uma caixa com o alfabeto</b><strong> que é de tal modo pequeno
+que se consegue ver todo de uma só vez.</strong> Este puzzle introduz uma nova
+ferramenta: a Artolas - a bomba de bicicleta. A Artolas muda o tamanho das
+coisas. Isto é útil para no modo 'Brincar', lidar com o tamanho real do ecrã. É também uma forma fácil e directa para alterar o tamanho das
+imagens.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 26 - </strong> 
+<b>
+
+o ET precisa de </b><strong>uma caixa com um ponto final, um ponto de
+interrogação e uma vírgula.</strong>  Este puzzle mostra que os blocos de
+texto não estão limitados às letras do alfabeto, incluindo também
+pontuação. As letras, a pontuação e os símbolos especiais (como $) são
+chamados <i>caracteres</i> na maior parte das linguagens de programação. Este
+puzzle ilustra também que o tamanho dos objectos no ToonTalk não influencia o
+seu comportamento (ou <i>semântica</i>).</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 27 - <b>o ET precisa de uma caixa
+com a pontuação</b> que deverá ser grande o suficiente para o seu conteúdo
+ser visível.</strong> Este puzzle introduz o conceito de <i>tecla de atalho</i>
+-
+neste caso, é uma forma&nbsp; de criar um som que chama pela Artolas para ela
+vir logo para a tua mão. As <i>teclas de atalho </i>são comuns em muitos tipos
+diferentes de interfaces com o utilizador.&nbsp;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 28 - <b>o ET precisa da palavra </b>&quot;iniciar&quot;.</strong>
+ Este puzzle introduz as chamadas <i>strings</i> - isto é, <i>sequências de
+caracteres</i>. Para resolver este puzzle, precisas de descobrir que as letras e
+as <i> strings</i> podem ser concatenadas para formarem <i> strings</i> maiores.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzles 29 e 30</strong> - Estes puzzles
+foram deixados em branco intencionalmente.</font></p>
+
+<p align="center"><strong><font face="Comic Sans MS"><big>Nível</big><big> 3 -
+Matemática do</big><big> Tempo</big></font></strong></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 31 - <b>o ET precisa de uma caixa
+com o teu aniversário</b>.</strong>
+ Para resolver este puzzle, precisas de descobrir que o teclado pode ser usado
+para alterar os valores das strings e dos números. Este é um tipo de <i>manipulação
+directa de dados</i>.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 32 - <b>o ET quer saber o número
+de minutos de um dia</b>.</strong>  Este puzzle ilustra que a adição repetida
+corresponde à multiplicação. O programa textual é:</font></p>
+
+<p><font face="Times New Roman">repeat 24</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">if (sizeOf(box) = 2 and isNumber(box[0]) and
+  isNumber(box[1])) then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">box[1] := box[1] + copy(box[0]);</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endif;</font></p>
+</blockquote>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 33 - <b>o ET quer saber o número
+de segundos numa hora</b>.</strong>  O robot do puzzle 32 é reutilizado aqui. A
+única diferença está no número de vezes que as instruções deverão ser
+repetidas.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 34 - <b>o ET precisa de uma caixa </b>que
+apresente um conjunto de balanças que mostre que dois números são iguais. </strong>
+Este puzzle introduz as balanças, que são uma maneira de expressar <i>comparações
+numéricas</i>. Introduz também o uso de números negativos para a
+subtracção.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 35 - <b>o ET precisa de outra caixa
+com uma balança que mostre que dois números são iguais</b>.</strong>  Este
+puzzle é diferente do anterior, porque agora é um robot que vai fazer o
+trabalho. O que é importante notares aqui é que o robot pára, quando a
+balança deixa de estar desiquilibrada para a esquerda. Como o
+robot tem a varinha mágica com magia ilimitada, ele só pára quando a caixa
+deixar de ser igual à que ele tem no seu balão de pensamento. O programa
+textual equivalente&nbsp; é:</font></p>
+
+<p><font face="Times New Roman">while (sizeof(box) = 4 and box[1] = '&gt;' and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3])) then</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box[2] := box[2] + copy(box[3]);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS">A expressão &quot;</font><font FACE="Terminal">box[1] =
+'&gt;'</font><font FACE="Comic Sans MS">&quot; não é muito usual. Neste caso,
+é equivalente à expressão mais comum &quot;</font><font FACE="Terminal">box[0] &gt; box[2]</font><font
+FACE="Comic Sans MS">&quot;, uma vez que a balança apresenta sempre a relação
+entre os dados vizinhos.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 36 - o ET precisa de uma caixa com 24 zeros.</strong>
+ Este puzzle combina os puzzles 13 e 35. Mostra como se pode utilizar o <i>while
+loop</i>
+como uma expressão <i>for</i>. Esta é uma técnica
+importante para repetir alguma coisa determinado número de vezes, sem se saber
+quantas vezes é preciso repeti-la antes do programa começar.</font></p>
+
+<p><font face="Comic Sans MS">Os engenheiros informáticos analisam os programas para encontrarem <i>invariantes</i>. Estas são relações que
+permanecem depois de cada ciclo. Aqui o que é invariante é o facto do primeiro
+buraco da caixa ser um número cujo tamanho (isto é, o número de buracos) é o
+da caixa no sexto buraco. O programa textual equivalente ao robot é:</font></p>
+
+<p><font face="Times New Roman">while (sizeof(box) = 6 and box[1] = '&lt;' and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3])) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">temp1 := copy(box[4]);</font></p>
+  <p><font face="Times New Roman">temp2 := box[5];</font></p>
+  <p><font face="Times New Roman">temp2 := concat(temp2,temp1);</font></p>
+  <p><font face="Times New Roman">box[5] := temp2;</font></p>
+  <p><font face="Times New Roman">box[0] := box[0] + copy(box[3]);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS">ou:</font></p>
+
+<p><font face="Times New Roman">if (sizeof(box) = 6 and box[1] = '&lt;' and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3])) then</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">for (; box[0] &lt; box[2]; box[0] := box[0] +
+  copy(box[3])) do</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">temp1 := copy(box[4]);</font></p>
+    <p><font face="Times New Roman">temp2 := box[5];</font></p>
+    <p><font face="Times New Roman">temp2 := concat(temp2,temp1);</font></p>
+    <p><font face="Times New Roman">box[5] := temp2;</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endfor;</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endif;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 37 - o ET quer saber quantas horas
+há num ano.</strong>  Este é parecido com o puzzle 32, com a excepção de que
+aqui estás a treinar um robot com um uso mais generalizado. E isto porque o
+robot efectua o produto dos 2 primeiros números e mantém isso no sexto buraco.
+A diferença neste programa é o número do sexto
+buraco que é o produto dos números do primeiro e do quarto buracos. O robot
+pára quando os números do segundo e do quarto buracos forem iguais. O programa
+textual equivalente é:</font></p>
+
+<p><font face="Times New Roman">while (sizeof(box) = 6 and box[1] &gt; box[3] and
+isNumber(box[0]) and isNumber(box[1]) and isNumber(box[3]) and isNumber(box[4]) and
+isNumber(box[5])) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box[5] := box[5] + copy(box[0]);</font></p>
+  <p><font face="Times New Roman">box[3] := box[3] + copy(box[4]);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 38 - o ET quer saber quantos
+segundos há num dia.</strong> Para resolver este programa, usa o robot treinado
+no puzzle anterior para multiplicar 60 por 24 (que dá 1440). O jogador utiliza
+outra vez o robot para multiplicar 60 por 1440. Isto pode ser feito pondo o 60
+no primeiro ou no segundo buraco e o 1440 no outro. O robot fará o produto
+correctamente, mas será muito mais rápido se o 1440 estiver no primeiro
+buraco. Isto acontece porque o robot multiplica através da adição repetitiva
+do primeiro número. O montante de trabalho que o robot deve fazer é
+proporcional ao número do segundo buraco. Na terminologia da ciência
+computacional, dizemos que <i>a complexidade do programa é linear com o segundo
+argumento</i>.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 39 - o ET quer saber quantos
+segundos existem num ano.</strong> Tal como o puzzle anterior, este usa
+repetidamente o robot treinado no puzzle 37 para fazer 365x24x60x60.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 40</strong> - Este puzzle foi
+intencionalmente deixado em branco..</font></p>
+
+<p align="center"><strong><font FACE="Comic Sans MS"><big>Nível </big><big>4 -
+Calcular o Tempo</big></font></strong></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 41 - o ET precisa dos dias da
+semana.</strong> Este puzzle introduz os pássaros e os seus ninhos. Para um engenheiro informático, um pássaro e o seu ninho são um <i>canal de
+comunicação</i>. Um pássaro é <i>o direito ou a capacidade de enviar
+mensagens para um canal</i> e o seu ninho é <i>o direito de receber mensagens nesse canal</i>. Este exemplo ilustra também que as mensagens no ToonTalk
+estão organizadas numa fila do tipo primeiro a entrar, primeiro a sair (<i>first
+in first out</i>).</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 42 - o ET precisa de uma caixa com
+um ninho que tenha os números inteiros a começar do 2</strong>. O robot
+treinado para resolver este puzzle é o que os cientistas dos computadores
+chamam de <i>gerador</i>. Aqui o robot gera um <i>conjunto de inteiros</i>. Este gerador é <i>um gerador infinito</i>, pois não pára. O
+programa textual equivalente é:</font></p>
+
+<p><font face="Times New Roman">while (sizeOf(box) = 3 and isNumber(box[0]) and
+isNumber(box[1]) and isSendCapability(box[2])) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">transmit(box[2],copy(box[0])); <em>// transmit a copy of
+  box[0] on the channel of box[2]</em></font></p>
+  <p><font face="Times New Roman">box[0] := box[0]+copy(box[1]);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 43 - o ET precisa da soma dos
+números que estão no ninho.</strong> Aqui vais treinar o robot para ser um <i>consumidor</i>.
+Muitos <i>programas orientados a streams</i> envolvem <i>consumidores</i> e <i>geradores</i>.
+Este puzzle ilustra a forma de <i>receber mensagens</i>. A programação textual
+é:</font></p>
+
+<p><font face="Times New Roman">while (sizeOf(box) = 2 and isNumber(peek(box[0])) and
+isNumber(box[1])) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman"><em>// we &quot;peek&quot; at the communication channel in
+  box[0] to see if a number is there</em></font></p>
+  <p><font face="Times New Roman">box[1] := box[1] + receive(box[0]); </font></p>
+  <p><em><font face="Times New Roman">// &quot;receive&quot; removes the top element in the
+  queue and returns it</font></em></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 44 - o ET precisa de uma caixa com
+3 números que não estão a mudar.</strong> Introduzem-se os sensores. Um
+sensor é actualizado em cada ciclo, por isso mostra o valor mais recente
+daquilo que está a controlar. O que este sensor está a controlar é suposto
+ser um mistério até ao puzzle 48. Este puzzle ensina uma técnica de
+programação do ToonTalk: &quot;congelar um sensor&quot;, colocando-o a zero.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 45 - o ET precisa de uma caixa com
+um ninho cheio de números que não mudem.</strong> Este puzzle combina os
+puzzles 42 e 44 para produzir uma <i>stream de valores para os sensores</i>. O
+equivalente em programação é:</font></p>
+
+<p><font face="Times New Roman">while (sizeOf(box) = 3 and isNumber(box[0]) and
+isSendCapability(box[1]) and box[2] = 0) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">temp1 := copy(box[2]);</font></p>
+  <p><font face="Times New Roman">temp1 := temp1 + copy(box[0]);</font></p>
+  <p><font face="Times New Roman">transmit(box[1],temp1);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 46 - o ET quer saber a soma dos
+números do ninho.</strong> O robot treinado no puzzle 43 funciona perfeitamente
+com esta stream de números.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 47 - o ET quer o número que
+resulta da espera durante 8 segundos.</strong>  Aqui utilizas o robot do puzzle
+43 <i>em paralelo</i> com o robot do puzzle 45, ou por outras palavras, usas os
+dois robots ao mesmo tempo.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 48 - o ET quer o número que
+resulta da espera durante 14 segundos.</strong> Para resolver este puzzle,
+precisas de <i>lançar um novo processo</i>, pegando no camião com um robot e
+uma caixa. Este é o método preferível para correr programas em paralelo -
+fazendo isso apenas com uma casa, é mais difícil de controlar e fica confuso
+mais depressa. Aqui vais aprender que o sensor mede o número de milisegundos
+desde o último ciclo do ToonTalk. A soma dos números mede quanto tempo
+passou. Se, no puzzle 47, saíres da casa por precisamente 8 segundos, o número
+que obténs é 8.000. Aqui se saíres por exactamente 14 segundos, o número
+deverá ser 14.000. A razão pela qual tens de sair da casa é que os pássaros,
+quando estão a ser observados, trabalham mais devagar (para que tu possas ver
+melhor o que fazem). Os pássaros lentos interferem aqui com a medida correcta
+do tempo.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 49 - o ET quer que destruas a casa.</strong> 
+Para resolveres este puzzle, precisas de descobrir como podes <i>terminar um
+processo</i>.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 50 - o ET quer os resultados de
+esperar 10 segundos.</strong>  Desta vez, precisas de treinar um só robot para
+fazer o que os robots dos puzzles 47 e 48 conseguiram. Os programadores fazem,
+muitas vezes, programas especiais que fazem o mesmo que a combinação de dois
+programas normais. Eles fazem isto porque o computador precisa de menos passos
+para correr o programa especial. Aqui os processos do gerador e do consumidor
+podem ser combinados num processo muito mais simples e rápido. A programação
+equivalente é:</font></p>
+
+<p><font face="Times New Roman">while (sizeOf(box) = 2 and isNumber(box[1]) and
+isNumber(box[2])) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box[1] := box[1] + copy(box[0]);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 51 - o Et precisa da caixa 3
+segundos depois do contador ter sido iniciado.</strong> Este puzzle combina os
+puzzles 35 e 50 para medir o tempo, até uma comparação deixar de ser
+verdadeira. A razão pela qual a caixa tem 6 buracos em vez de 4 será explicada
+mais tarde. Aqui está a forma textual:</font></p>
+
+<p><font face="Times New Roman">while (sizeOf(box) = 6 and isNumber(box[0]) and
+isNumber(box[1]) and isNumber(box[3])and box[1] &lt; box[3]) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box[3] := box[3] + milliseconds_since_last_cycle();</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 52 - o Et precisa de -10.</strong>
+Este puzzle ilustra o uso repetido de -1 para <i>decrementar um contador</i>. É
+equivalente somar um número negativo ou subtrair um número positivo. A
+programação equivalente é:</font></p>
+
+<p><font face="Times New Roman">while (sizeOf(box) = 3 and isNumber(box[0]) and
+isNumber(box[1])) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box[0] := box[0] + copy(box[1]);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 53 - o Et quer a palavra secreta.</strong>
+ Este puzzle introduz equipas de robots. Quando uma caixa é dada a um robot e
+não é igual à que ele tem no seu balão de pensamento, este robot deixa a
+caixa para o robot seguinte da equipa (se houver). Em linguagens de
+programação procedimentais, isto corresponde à instrução
+se-então-senão. Em linguagens de programação orientadas a objectos,
+uma equipa corresponde <i>ao comportamento de um objecto</i>, e os robots
+correspondem a <i>métodos</i>. Em linguagens de programação lógicas, uma
+equipa corresponde a <i>um predicado</i> e cada robot a <i>uma cláusula</i>. A
+equipa construída neste puzzle é equivalente ao seguinte procedimento:</font></p>
+
+<p><font face="Times New Roman">procedure team(Box box)</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">if (sizeOf(box) = 3 and box[0] = 0 and box[1] = -1 and
+  box[2] = 'a') then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">run_secret_procedure(box);</font></p>
+  </blockquote>
+  <blockquote>
+    <p><font face="Times New Roman">team(box);</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">else if (sizeOf(box) = 3 and isNumber(box[0]) and
+  isNumber(box[1])) then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">box[0] := box[0] + copy(box[1]);</font></p>
+    <p><font face="Times New Roman">team(box);</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endif;</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endprocedure;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 54 - o ET quer um despertador.</strong>
+ Aqui o robot treinado para o puzzle 51 é utilizado ao mesmo tempo que o que
+vais treinar neste puzzle. Este robot vai ser treinado para criar uma mensagem e
+enviá-la uns segundos mais tarde. A programação equivalente é:</font></p>
+
+<p><font face="Times New Roman">procedure team(Box box)</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">if&nbsp; (sizeOf(box) = 6 and isNumber(box[0]) and
+  isNumber(box[1]) and isNumber(box[3])and box[1] &lt; box[3]) then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">box[3] := box[3] + milliseconds_since_last_cycle();</font></p>
+    <p><font face="Times New Roman">team(box);</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">else if&nbsp; (sizeOf(box) = 6 and isNumber(box[0]) and
+  isNumber(box[1]) and isNumber(box[3]) and isSendCapability(box[4]) and isText(box[5]))
+  then</font></p>
+  <blockquote>
+    <p><font face="Times New Roman">transmit(box[4],box[5]);</font></p>
+    <p><font face="Times New Roman">team(box);</font></p>
+  </blockquote>
+  <p><font face="Times New Roman">endif;</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endprocedure;</font></p>
+
+<p><font FACE="Comic Sans MS">Se não aspirares a balança do balão de pensamento
+do novo robot, não estarás a trabalhar no caso raro de caixa[1] =
+caixa[3]. A probabilidade de isto acontecer é 1 na duração média do
+ciclo (que vai de 10 a 100, dependendo da velocidade do computador)</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzles 55, 56, 57, 58, 59 e 60</strong> -
+Estes puzzles foram intencionalmente deixados em branco.</font></p>
+
+<p align="center"><strong><font face="Comic Sans MS"><big><big>Nível </big></big><big><big>5 -
+Construir um relógio</big></big></font></strong></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 61 - o Et quer um número que
+continue a aumentar.</strong> A solução para este puzzle é a mesma que para o
+puzzle 50. Mas aqui o número que irá mudar tem uma propriedade especial: as
+suas mudanças influenciam também o outro número. Isto é o que os engenheiros informáticos
+chamam de <i>partilha de estados</i>. A partilha de estados é
+conhecida por causar problemas em programas concorrentes. No ToonTalk, os
+controlos remotos trabalham apenas numa casa, para que esses problemas sejam
+evitados.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 62 - o ET quer um número que
+aumente 1.000 em cada segundo.</strong>  Para resolver este puzzle, é preciso
+pôr o robot e a sua caixa nas costas do número. Muitos sistemas de
+desenvolvimento de software proporcionam objectos para o interface com o
+utilizador que possuem programas associados. No ToonTalk, podes pôr os robots
+nas costas das imagens para lhes dares um comportamento que programares. A
+razão pela qual a solução deste puzzle mantém as horas correctamente
+(enquanto que a solução anterior não o fazia) é que o robot, no puzzle
+anterior, fazia as coisas mais devagar, para que tu o pudesses observar.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 63 - o ET quer um número que
+aumente 1 em cada segundo.</strong>  A solução para este puzzle baseia-se nas
+técnicas de programação usadas no nível 4. Uma das <i>invariantes</i> deste
+robot é que o número do terceiro buraco deve ser menos 1 que&nbsp; 1.000 vezes o número
+do quarto buraco. Outra <i>invariante</i> é que o quarto número será 1/1000
+do valor do primeiro número. A forma textual deste robot é:</font></p>
+
+<p><font face="Times New Roman">while (sizeof(box) = 6 and box[0] &gt; box[2] and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3]) and isNumber(box[4])&nbsp; and
+isNumber(box[5])) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box[2] := box[2] + copy(box[5]);</font></p>
+  <p><font face="Times New Roman">box[3] := box[3] + copy(box[4]);</font></p>
+  <p><font face="Times New Roman">update_display(box[3]); <em>// update the display to show
+  the new value of box[3]</em></font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 64 - o ET quer um número que
+aumente 1 em cada minuto.</strong>&nbsp; Este puzzle volta a usar o robot do
+puzzle anterior. Os números foram modificados, para que o robot assegure que o
+quarto número é 1/60 do primeiro número.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 65 - o ET precisa de uma caixa com
+relógios com horas, minutos e segundos.</strong>  Construir o relógio das
+horas é o mesmo que construir o relógio dos minutos no puzzle anterior.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 66 - o ET quer que o relógio dos
+segundos volte a 0 quando chegar a 60.</strong>  Depois do robot começar, o
+primeiro número será o resto da divisão do que lá estava por 60. O cálculo
+do resto de uma divisão é realizado por uma subtracção repetida. Vale a pena
+notar que este processo está a decorrer <i>em paralelo</i> com o processo
+construído anteriormente (que fazia com o número fosse 1/1000 do relógio de
+milisegundos). Este robot é equivalente a:</font></p>
+
+<p><font face="Times New Roman">while (sizeOf(box) = 4 and box[0] &gt; box[2] and
+isNumber(box[0]) and isNumber(box[2]) and isNumber(box[3]) do</font></p>
+
+<blockquote>
+  <p><font face="Times New Roman">box[0] := box[0] + copy(box[3]);</font></p>
+</blockquote>
+
+<p><font face="Times New Roman">endwhile;</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 67 - o ET quer que o relógio dos
+minutos volte a 0 quando chegar a 60.</strong> Para solucionares este puzzle,
+tens de perceber que precisas do mesmo robot do puzzle anterior e que podes usar
+a varinha mágica para o copiar.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 68 - o ET quer que o relógio das
+horas volte a 0 quando chegar a 24.</strong> A solução para este puzzle é
+igual à do anterior. Adicionalmente precisas de mudar os números, para que o
+robot se comporte correctamente. Isto permite testar a tua compreensão dos dois
+puzzles anteriores.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 69 - o ET quer que o relógio
+digital mostre as horas certas.</strong> Para resolver este puzzle, apenas
+precisas de <i>inicializar</i> os valores dos vários contadores (horas, minutos
+e segundos) com a hora certa.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 70 - o ET quer um relógio digital
+mais bonito.</strong>  O software mais moderno precisa não só de fazer
+cálculos correctamente, mas também deve mostrar informação aos utilizadores
+de uma forma apelativa e efectiva. Aqui, precisas de fazer com que o relógio
+pareça mais atractivo.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 71 - o ET quer uma caixa que mostre
+as horas a que nasceste.</strong> Isto é preciso para o puzzle seguinte.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 72 - o ET quer saber quantos
+segundos faltam para que tu tenhas um número arredondado de milhões de
+segundos de idade.</strong>  Deves largar o número que mostra a tua idade em
+segundos em cima do zero, para congelar esse número. Se tentares subtrair
+com o contador, o número continua a aumentar, mesmo quando é negativo.
+Deixares que isso aconteça irá afectar a resposta nalguns segundos.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 73 - o ET quer saber quantos
+minutos faltam para que tu tenhas um número arredondado de milhões de segundos
+de idade.</strong> Este puzzle ilustra como o ToonTalk, tal como a maior parte
+das linguagens de programação, pode fazer a divisão de <i>forma primitiva</i>.
+Uma vez que o computador da nave se estragou, não pudeste multiplicar ou
+dividir números directamente e tiveste que programar essas operações só com
+a adição e subtracção.</font></p>
+
+<p><font FACE="Comic Sans MS"><strong>Puzzle 74 - o ET quer saber quantos dias
+faltam para que tu tenhas um número arredondado de milhões de segundos de
+idade.</strong> Aqui, precisas de escrever a operação divisão, em vez de
+usares uma já definida.</font></p>
+
+<p>&nbsp;</p>
+
+<p><font FACE="Comic Sans MS">Se chegaste ao fim dos puzzles, já deves ter
+aprendido o suficiente para construíres uma grande variedade de programas no
+'Brincar'. Podes aprender mais, observando os Exemplos ('Demos'). <a href="contribp.htm">Partilha
+o que fizeste</a> com outros.</font></p>
+
+<p align="center"><font face="Comic Sans MS"><small><a href="toontalk.htm">principal</a></small><small>
+| <a
+href="http://www.cnotinfor.pt/toontalk/search.htm">procura</a></small><small> | <a href="buy.htm">compra</a></small><small>
+| <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">notícias</a></small><small> | <a href="infodesk.htm">informação</a></small><small> | <a href="faq.htm">perguntas</a></small><small>
+| <a href="support.htm">apoio</a></small><small> | <a href="free.htm">downloads</a> | <a
+href="press.htm">imprensa</a></small><small> | <a href="address.htm">contactos</a></small></font></p>
+
+<p><font FACE="Terminal">&nbsp;&nbsp; </font></p>
+</body>
+</html>

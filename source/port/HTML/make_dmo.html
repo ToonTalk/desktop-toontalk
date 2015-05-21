@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>ToonTalk - Como criar seus próprios demos</title>
+<link rel="stylesheet" type="text/css" href="../toontalk.css">
+</head>
+
+<body link="#0000ff" vlink="#800080" bgcolor="#ffffff">
+
+<div align="center">
+<a name="topo"></a>
+<table width=468 cellspacing=0 cellpadding=0 border=0><tr><td>
+
+<p>
+<table width=460 cellspacing=0 cellpadding=0 border=0><tr><td>
+<div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a>
+<hr size=1>
+    </td></tr>
+</table>
+
+<h2>Como criar seus próprios demos</h2>
+
+<p><b><i>Usuários avançados:</i></b>
+
+<p>Para criar um demo, apenas adicione-o &lt;nome do arquivo&gt; à linha de comando antes de iniciar o Toon Talk. Isto criará uma arquivo chamado nome do arquivo.DMO ou no subdiretório "LowRes" ou "HighRes" do subdiretório "demos" do Toon Talk. 
+Em qual dos subdiretórios o arquivo estará dependerá da resolução gráfica do Toon Talk. O Arquivo "dmo" grava tudo o que você faz (cada movimento do mouse, teclado, clique etc.). Um duplo clique no arquivo iniciará o demo. Por favor, verifique o subdiretório "demos" primeiro para descobrir os nomes dos demos já existentes, assim você não os apagará.
+
+<p>Se você estiver criando um demo em um computador rápido e supõe que o demo será rodado em máquinas mais lentas, recomenda-se que você adicione - y 50, ou algo assim, quando estiver gravando, para tornar sua máquina mais lenta.
+
+<p><b>Adicionando subtítulos a seus demos.</b>  Quando o Toon Talk começa a rodar um demo chamado X, ele procura por um arquivo chamado X.ust. ("ust" é o nome da  extensão "default"  para subtítulos em Inglês (americano). Você pode alterar o "default" para seu computador, fornecendo uma entrada "SubtitlesSuffix" na seção "Filextensions" do arquivo toontalk.ini no seu diretório Windows.
+Um arquivo de subtítulo é feito de entradas separadas por uma linha em branco. Cada entrada tem o tempo em milissegundos desde o início do demo, seguido pelo texto do subtítulo. É recomendável que quaisquer linhas de texto maiores que 60 caracteres  sejam separadas. O subdiretório "demos" da sua instalação do Toon Talk tem muitos arquivos de subtítulos de amostra. 
+Uma forma de obter a contagem de milissegundos é pressionar F9 enquanto o demo está voltando. Isso gravará o tempo em seu arquivo &lt;nome do usuário&gt;.log em seu subdiretório "usuários".
+
+<p><b>Adicionando narração aos seus demos.</b> Quando o Toon Talk começa a rodar um demo, chamado X ele procura por um arquivo chamado X.spk. ("spk"é o nome "default" da extensão de arquivos de narração para Inglês (americano). Você pode alterar o  "default"  fornecendo uma entrada "SubtitlesSuffix" na seção "FileExtensions" do arquivo toontalk.ini no seu diretório do Windows. Para criar um arquivo de narração você deve gravar segmentos de narração (256 é o número máximo) e nomeá-los "s01.wav", "s02.wav" e assim por diante. Estes arquivos devem ser colocados no diretório principal do Windows. Quando reiniciar seu demo, você deve pressionar F11 para iniciar  o próximo segmento de narração. Se você preferir gravar e sincronizar, ao invés, a narração pré-gravada, então adicione -d 451 à linha de comando bem como -o &lt;nome do arquivo&gt; e pressionar novamente F11 quando desejar adicionar o próximo segmento de narração. Quando sair do Toon Talk, ele escreverá um novo "spk" no subdiretório de demos.
+
+<p><b>Coordenando os subtítulos e a narração.</b> Se você deseja criar tanto  narração quanto os subtítulos, recomenda-se que você crie primeiro a narração e então rode seu demo com "- d3210", o qual imprimirá os tempos iniciais de cada segmento no seu &lt;nome do usuário&gt;.log no subdiretório "Usuários". Você pode então utilizar esses tempos em seu arquivo de subtítulos. 
+
+<p><b>Dicas:</b>
+
+<ul>
+  <li>Uma arquivo demo funciona com a mesma resolução em que foi gravado.  Com alguma sorte, você pode gravar um demo de alta resolução e copiá-lo para o subdiretóro de baixa resolução e ele funcionará. Vide os subdiretórios de "Demos".
+  <li>Um demo gravado com fala não pode ser repetido corretamente quando a fala é desligada.
+  <li>A fala é desligada quando se repete um demo com narração a menos que você o <a href="command.html#TextToSpeechUsesDirectSound">rode com um dispositivo texto-fala utilizando DirectSound.</a> 
+  <li>Se você cometer um erro enquanto estiver gravando um demo, você não precisa refazer todo o processo. Você pode rodar o tt32- I PartlyGood-o NewVersion e então assumir o controle logo antes que o demo antigo apresente problemas.
+  <li>Evite utilizar atalhos de teclado para ferramentas (por exemplo, "e "para fazer Asper apagar coisas.) Esses atalhos diferem de língua para língua, portanto, se você utilizá-los, seus demos provavelmente não funcionarão numa versão de língua diferente do Toon Talk.
+  <li>Se você criar um demo para um usuário chamado Pat, então quando o demo estiver rodando ela poderá alterar o perfil de usuário para Pat.  Para evitar isso, utilize -+ 1 bna linha de comando para indicar que este é um usuário "temporário" e que o perfil do usuário não deve ser mantido.
+</ul>
+
+<p>
+<hr size=1><div align=center>
+<a class="menu" href="toontalk.html" OnMouseOver="window.status=' In&iacute;cio'; return true">início</a><span class=bola> &#0149;</span>
+<a class="menu" href="search.html" OnMouseOver="window.status=' Busca'; return true">busca</a><span class=bola> &#0149;</span>
+<a class="menu" href="buy.html" OnMouseOver="window.status=' Compra'; return true">compra</a><span class=bola> &#0149;</span>
+<a class="menu" href="doc.html" OnMouseOver="window.status=' Manual'; return true">manual</a><span class=bola> &#0149;</span>
+<a class="menu" href="whatsnew.html" OnMouseOver="window.status=' Novidades'; return true">novidades</a><span class=bola> &#0149;</span>
+<a class="menu" href="faq.html" OnMouseOver="window.status=' D&uacute;vidas'; return true">dúvidas</a><span class=bola> &#0149;</span>
+<a class="menu" href="support.html" OnMouseOver="window.status=' Suporte'; return true">suporte</a><span class=bola> &#0149;</span>
+<a class="menu" href="free.html" OnMouseOver="window.status=' Download'; return true">download</a><span class=bola> &#0149;</span>
+<a class="menu" href="press.html" OnMouseOver="window.status=' Imprensa'; return true">imprensa</a><span class=bola> &#0149;</span>
+<a class="menu" href="address.html" OnMouseOver="window.status=' Contato'; return true">contato</a></div></td>
+
+</tr></table>
+</div>
+</body></html>
+
+<!--  FuturArte Editora Ltda.                                     Divertire  -->

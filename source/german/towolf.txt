@@ -1,0 +1,89 @@
+Hi.
+
+This is in response to //? in german.rc.  Items addressed in recent
+email about the Portuguese translation not repeated here.
+
+ IDS_BOMB_USED_HOUSE_HELP3,
+  "Du und Deine Werkzeuge werden es richten und Staubi wird den Rest aufsaugen."//? nicht
+  //"You and your tools will make it out OK, and Staubi will suck up everything else. "
+
+Did you have a question about this?
+
+ IDS_RELEASE_ITEM,
+  "drop"
+// as in "He will drop the box on the floor."
+ IDS_RELEASE_ITEM2,
+  " on the floor"
+
+// I believe these 13 identifiers are not used anymore...
+ IDS_REMOTE_IDENTIFIER1,
+
+ IDS_COLLIDE_WHO_HELP,
+  "die Anzeige von dem mit dem es zusammenstoesst"//??
+  //"the indicator of who it is colliding with"
+// currently it shows a picture of who it is colliding with --
+// this may change since it doesn't permit you to communicate with
+// whoever you are colliding with...
+
+ IDS_FLIPPING_MOVIE,
+  // this is used when Marty is describing a picture while it is being flipped over
+  "a flipping picture"
+
+ IDS_PICT_TOSSED_HELP,
+  // as in "You can give this a toss by pressing control while releasing the mouse button."
+  // the word "this" should always refer to a picture of something.
+  "You can give this a toss by pressing "
+
+ IDS_PICT_PROGRAM_ADDED_HELP,
+  "Roboter koennen im Hintergrund von Bildern arbeiten. "//?
+  //"Robots can work on the back of pictures. "
+Have a question?
+
+ IDS_PARAMETER_SHORT_LABEL,
+  // # as in short for "number"
+  "Picture #"
+
+ IDS_COLLIDE_WHO_SHORT_LABEL,
+  "Auf wen oder was getroffen?"//?
+  //"Hit Who?"
+// These short labels are very brief text strings on the box holding
+//the sensor in the notebook.  Over 12 letters is very hard to read.
+
+ IDS_ROBOT_LESS_FUSSY1,
+//  "You can make him less fussy by using Dusty on his thought bubble. "
+  "You can make him less fussy by using Dusty to remove things from his thought bubble. " // clearer version 12/23
+// "his" refers to a robot
+// thanks for catching this one.
+
+ IDS_ROBOT_WAITING_FOR_PICTURE,
+  "a robot on the back of a picture. He is waiting for the picture to be flipped back over"
+  // as in "You are pointing to a robot on the back of a picture.  
+  //  He is waiting for the picture to be flipped back over."
+// was "a robot waiting for the picture he is on the back of to be flipped over"
+
+ IDS_ROBOT_WAITING_FOR_ITEM,
+  "a robot waiting for something to appear in"
+ // as in "You are holding a robot waiting for something to appear in the
+ // third hold of his box."
+ IDS_HIS_BOX,
+  " his box" 
+
+IDS_BIRD_RETURNED_TO_OCCUPIED_CUBBY,
+// "A bird tried to return to her cubby hole but it's not empty."
+ "A bird tried to return to a box hole but it's not empty." // revisied 12/23
+
+IDS_CONVERT_TO_NUMBER_HELP,
+ "If you drop something on a blank number, it will be converted to a number if possible."
+// For example, if you drop the text "123" it will be converted to the
+// number 123.
+
+IDS_WHILE_HOLDING_A_NUMBER,
+// as in "If you hold shift while clicking a mouse button while
+// holding a number, it will flip over."  -- where "it" refers to the number.
+ "while holding a number, it will flip over."
+
+IDS_WHETHER_SOUND_ON,
+  // "This" refers to the remote control being pointed to.  
+ "This shows whether ToonTalk sound effects will be made. "
+
+
