@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToonTalk Web - Proof of Concept</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+
+        #app {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #header {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        #status {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        #game-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            z-index: 100;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #info {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        canvas {
+            display: block;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="header">
+            <h1>🎨 ToonTalk Web - Proof of Concept</h1>
+            <div id="status">Initializing...</div>
+        </div>
+
+        <div id="game-container">
+            <div id="loading">
+                <div class="spinner"></div>
+                <div>Loading ToonTalk...</div>
+            </div>
+        </div>
+
+        <div id="info">
+            <strong>Proof of Concept Demo</strong><br>
+            This demonstrates the hybrid architecture: WebAssembly core + PixiJS renderer<br>
+            <span id="fps">FPS: --</span> |
+            <span id="renderer-info">Renderer: --</span>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
