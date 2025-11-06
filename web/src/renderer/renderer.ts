@@ -12,14 +12,8 @@ export class ToonTalkRenderer {
     private demoSprite?: PIXI.Graphics;
 
     constructor() {
-        // Create PixiJS application
-        this.app = new PIXI.Application();
-        this.stage = new PIXI.Container();
-    }
-
-    async initialize(): Promise<void> {
-        // Initialize the application
-        await this.app.init({
+        // Create PixiJS application with options (v7 uses constructor, not init())
+        this.app = new PIXI.Application({
             width: 800,
             height: 600,
             backgroundColor: 0x87CEEB, // Sky blue, similar to ToonTalk background
@@ -27,7 +21,10 @@ export class ToonTalkRenderer {
             autoDensity: true,
             antialias: true,
         });
+        this.stage = new PIXI.Container();
+    }
 
+    async initialize(): Promise<void> {
         // Set up stage
         this.app.stage.addChild(this.stage);
 
@@ -36,7 +33,7 @@ export class ToonTalkRenderer {
     }
 
     getView(): HTMLCanvasElement {
-        return this.app.canvas;
+        return this.app.view as HTMLCanvasElement;
     }
 
     getRendererInfo(): string {
