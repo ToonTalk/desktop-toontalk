@@ -33,10 +33,10 @@ mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 
 echo "Running CMake..."
-emcmake cmake ..
+python $EMSDK/upstream/emscripten/emcmake.py cmake ..
 
 echo "Building WASM module..."
-emmake make
+python $EMSDK/upstream/emscripten/emmake.py make
 
 echo ""
 echo "Build complete! Output files:"
