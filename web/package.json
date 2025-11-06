@@ -1,0 +1,30 @@
+{
+  "name": "toontalk-web",
+  "version": "0.1.0",
+  "description": "ToonTalk Web Version - Educational visual programming environment",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "build:wasm": "cd core && ./build.sh",
+    "clean": "rm -rf dist node_modules core/build"
+  },
+  "dependencies": {
+    "pixi.js": "^7.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  },
+  "author": "Ken Kahn",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "education",
+    "visual-programming",
+    "toontalk",
+    "webassembly",
+    "game"
+  ]
+}

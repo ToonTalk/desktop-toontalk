@@ -1,0 +1,121 @@
+/**
+ * sprite.cpp - Basic sprite class for ToonTalk Web
+ *
+ * This is a simplified version ported from ../source/sprite.cpp
+ * Eventually this will be expanded to match the full ToonTalk sprite system
+ */
+
+#include <emscripten/bind.h>
+#include <string>
+#include <cmath>
+
+namespace toontalk {
+
+/**
+ * Basic Sprite class
+ * Represents a 2D object with position, size, and behavior
+ */
+class Sprite {
+public:
+    Sprite(float x, float y, float width, float height)
+        : x_(x), y_(y), width_(width), height_(height),
+          rotation_(0.0f), visible_(true) {}
+
+    // Position
+    float getX() const { return x_; }
+    float getY() const { return y_; }
+    void setX(float x) { x_ = x; }
+    void setY(float y) { y_ = y; }
+    void setPosition(float x, float y) {
+        x_ = x;
+        y_ = y;
+    }
+
+    // Size
+    float getWidth() const { return width_; }
+    float getHeight() const { return height_; }
+    void setWidth(float w) { width_ = w; }
+    void setHeight(float h) { height_ = h; }
+
+    // Rotation (in radians)
+    float getRotation() const { return rotation_; }
+    void setRotation(float r) { rotation_ = r; }
+    void rotate(float dr) { rotation_ += dr; }
+
+    // Visibility
+    bool isVisible() const { return visible_; }
+    void setVisible(bool v) { visible_ = v; }
+
+    // Update method (called each frame)
+    virtual void update(float deltaTime) {
+        // Override in subclasses
+    }
+
+    // Hit test
+    bool containsPoint(float px, float py) const {
+        return px >= x_ && px <= x_ + width_ &&
+               py >= y_ && py <= y_ + height_;
+    }
+
+protected:
+    float x_, y_;           // Position
+    float width_, height_;  // Size
+    float rotation_;        // Rotation in radians
+    bool visible_;          // Visibility flag
+};
+
+/**
+ * Bird class - Example ToonTalk entity
+ * In the full version, this will be ported from ../source/bird.cpp
+ */
+class Bird : public Sprite {
+public:
+    Bird(float x, float y)
+        : Sprite(x, y, 60.0f, 60.0f), vx_(0.0f), vy_(0.0f) {}
+
+    void setVelocity(float vx, float vy) {
+        vx_ = vx;
+        vy_ = vy;
+    }
+
+    void update(float deltaTime) override {
+        // Simple physics
+        x_ += vx_ * deltaTime;
+        y_ += vy_ * deltaTime;
+
+        // Simple animation - flap wings
+        rotation_ = std::sin(x_ / 10.0f) * 0.1f;
+    }
+
+private:
+    float vx_, vy_;  // Velocity
+};
+
+} // namespace toontalk
+
+// Emscripten bindings - exposes C++ classes to JavaScript
+using namespace emscripten;
+using namespace toontalk;
+
+EMSCRIPTEN_BINDINGS(toontalk_core) {
+    class_<Sprite>("Sprite")
+        .constructor<float, float, float, float>()
+        .function("getX", &Sprite::getX)
+        .function("getY", &Sprite::getY)
+        .function("setX", &Sprite::setX)
+        .function("setY", &Sprite::setY)
+        .function("setPosition", &Sprite::setPosition)
+        .function("getWidth", &Sprite::getWidth)
+        .function("getHeight", &Sprite::getHeight)
+        .function("getRotation", &Sprite::getRotation)
+        .function("setRotation", &Sprite::setRotation)
+        .function("rotate", &Sprite::rotate)
+        .function("isVisible", &Sprite::isVisible)
+        .function("setVisible", &Sprite::setVisible)
+        .function("update", &Sprite::update)
+        .function("containsPoint", &Sprite::containsPoint);
+
+    class_<Bird, base<Sprite>>("Bird")
+        .constructor<float, float>()
+        .function("setVelocity", &Bird::setVelocity);
+}
