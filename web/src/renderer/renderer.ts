@@ -29,7 +29,7 @@ export class ToonTalkRenderer {
         this.app.stage.addChild(this.stage);
 
         console.log('PixiJS renderer initialized');
-        console.log('Renderer type:', this.app.renderer.type === PIXI.RendererType.WEBGL ? 'WebGL' : 'Canvas');
+        console.log('Renderer:', this.app.renderer.constructor.name);
     }
 
     getView(): HTMLCanvasElement {
@@ -37,8 +37,9 @@ export class ToonTalkRenderer {
     }
 
     getRendererInfo(): string {
-        const type = this.app.renderer.type === PIXI.RendererType.WEBGL ? 'WebGL' : 'Canvas 2D';
-        return `${type} (PixiJS ${PIXI.VERSION})`;
+        // In PixiJS v7, just use the constructor name
+        const rendererName = this.app.renderer.constructor.name;
+        return `${rendererName} (PixiJS ${PIXI.VERSION})`;
     }
 
     /**
