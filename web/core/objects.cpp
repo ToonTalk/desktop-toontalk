@@ -5,47 +5,13 @@
  * These classes inherit from Sprite (defined in sprite.cpp)
  */
 
+#include "sprite.h"
 #include <emscripten/bind.h>
 #include <string>
 #include <sstream>
 #include <iomanip>
 
 namespace toontalk {
-
-// Forward declare Sprite from sprite.cpp
-// We don't need the full definition, just know it exists
-class Sprite {
-public:
-    Sprite(float x, float y, float width, float height);
-    virtual ~Sprite() {}
-
-    float getX() const;
-    float getY() const;
-    void setX(float x);
-    void setY(float y);
-    void setPosition(float x, float y);
-
-    float getWidth() const;
-    float getHeight() const;
-    void setWidth(float w);
-    void setHeight(float h);
-
-    float getRotation() const;
-    void setRotation(float r);
-    void rotate(float dr);
-
-    bool isVisible() const;
-    void setVisible(bool v);
-
-    virtual void update(float deltaTime);
-    bool containsPoint(float px, float py) const;
-
-protected:
-    float x_, y_;
-    float width_, height_;
-    float rotation_;
-    bool visible_;
-};
 
 /**
  * Number class - Represents a numerical value
