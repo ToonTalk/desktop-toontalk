@@ -195,16 +195,40 @@ export class WasmSpriteView {
         this.graphics.drawRect(-55, 45 - fillHeight, 110, fillHeight);
         this.graphics.endFill();
 
-        // Capacity text
-        const text = new PIXI.Text(`${box.getCount()} / ${box.getCapacity()}`, {
-            fontSize: 16,
+        // Label at top
+        const label = new PIXI.Text('Box', {
+            fontSize: 12,
             fill: 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
-            strokeThickness: 3
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = -35;
+        this.graphics.addChild(label);
+
+        // Capacity text at center - make it clearer this is item count
+        const text = new PIXI.Text(`${box.getCount()} items`, {
+            fontSize: 14,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
         });
         text.anchor.set(0.5);
+        text.y = -5;
         this.graphics.addChild(text);
+
+        // Capacity at bottom
+        const capacityText = new PIXI.Text(`(max ${box.getCapacity()})`, {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        capacityText.anchor.set(0.5);
+        capacityText.y = 15;
+        this.graphics.addChild(capacityText);
 
         this.textDisplay = text;
     }
@@ -412,7 +436,7 @@ export class WasmSpriteView {
             this.textDisplay.text = txt.getText() || "(empty)";
         } else if (type === 'box' && this.textDisplay) {
             const box = this.wasmSprite as ToonTalkBox;
-            this.textDisplay.text = `${box.getCount()} / ${box.getCapacity()}`;
+            this.textDisplay.text = `${box.getCount()} items`;
 
             // Also update the fill level visual
             this.drawBox(); // Redraw to show new fill level

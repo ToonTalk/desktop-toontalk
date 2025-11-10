@@ -101,10 +101,14 @@ class ToonTalkWeb {
         const num2 = wasmCore.createNumber(centerX + 150, centerY, 3.14);
         this.renderer.addWasmSprite(new WasmSpriteView(num2, this.renderer.getStage(), this.renderer));
 
-        // Row 3 (Bottom): Text and Box
-        const text1 = wasmCore.createText(centerX - 150, centerY + 120, "Hello!");
+        // Row 3 (Bottom-Left): Two Text objects for concatenation testing
+        const text1 = wasmCore.createText(centerX - 200, centerY + 120, "Hello");
         this.renderer.addWasmSprite(new WasmSpriteView(text1, this.renderer.getStage(), this.renderer));
 
+        const text2 = wasmCore.createText(centerX - 50, centerY + 120, " World!");
+        this.renderer.addWasmSprite(new WasmSpriteView(text2, this.renderer.getStage(), this.renderer));
+
+        // Row 3 (Bottom-Right): Box for storage
         const box1 = wasmCore.createBox(centerX + 150, centerY + 120, 10);
         box1.addItem();
         box1.addItem();
@@ -118,7 +122,7 @@ class ToonTalkWeb {
         this.renderer.addWasmSprite(new WasmSpriteView(sprite1, this.renderer.getStage(), this.renderer));
 
         console.log('✨ WASM scene created!');
-        console.log('   Objects: 2 Birds, 2 Numbers, 1 Text, 1 Box, 1 Sprite');
+        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Sprite');
         console.log('   💡 Drag objects to move them');
         console.log('   💡 Drop Number on Number to add');
         console.log('   💡 Drop Text on Text to concatenate');
