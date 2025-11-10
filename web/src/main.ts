@@ -1,5 +1,6 @@
 import { ToonTalkRenderer } from './renderer/renderer';
 import { InputManager } from './input/input';
+import { getWasmCore } from './core/wasm-core';
 
 /**
  * ToonTalk Web - Main Entry Point
@@ -8,7 +9,7 @@ import { InputManager } from './input/input';
  * 1. PixiJS rendering initialization
  * 2. Basic sprite display
  * 3. Mouse interaction
- * 4. Future: WASM module integration
+ * 4. WASM module integration (C++ core)
  */
 
 class ToonTalkWeb {
@@ -43,8 +44,11 @@ class ToonTalkWeb {
             this.inputManager.initialize(this.renderer.getView());
             this.updateStatus('Input system ready');
 
-            // TODO: Load WASM module
-            // await this.loadWasmCore();
+            // Load WASM module
+            this.updateStatus('Loading WASM core...');
+            const wasmCore = getWasmCore();
+            await wasmCore.initialize();
+            this.updateStatus('WASM core loaded');
 
             // Create demo content
             this.createDemoScene();
