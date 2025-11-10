@@ -14,6 +14,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     // Classes
     Sprite: typeof Sprite;
     Bird: typeof Bird;
+    Number: typeof ToonTalkNumber;
+    Text: typeof ToonTalkText;
+    Box: typeof ToonTalkBox;
 }
 
 /**
@@ -52,6 +55,50 @@ export declare class Sprite {
 export declare class Bird extends Sprite {
     constructor(x: number, y: number);
     setVelocity(vx: number, vy: number): void;
+}
+
+/**
+ * Number class (matches objects.cpp)
+ */
+export declare class ToonTalkNumber extends Sprite {
+    constructor(x: number, y: number, value?: number);
+    getValue(): number;
+    setValue(v: number): void;
+    add(amount: number): void;
+    subtract(amount: number): void;
+    multiply(amount: number): void;
+    divide(amount: number): void;
+    toString(): string;
+    delete(): void;
+}
+
+/**
+ * Text class (matches objects.cpp)
+ */
+export declare class ToonTalkText extends Sprite {
+    constructor(x: number, y: number, text?: string);
+    getText(): string;
+    setText(text: string): void;
+    append(str: string): void;
+    clear(): void;
+    length(): number;
+    delete(): void;
+}
+
+/**
+ * Box class (matches objects.cpp)
+ */
+export declare class ToonTalkBox extends Sprite {
+    constructor(x: number, y: number, capacity?: number);
+    getCapacity(): number;
+    getCount(): number;
+    isEmpty(): boolean;
+    isFull(): boolean;
+    addItem(): boolean;
+    removeItem(): boolean;
+    clear(): void;
+    getFullness(): number;
+    delete(): void;
 }
 
 /**

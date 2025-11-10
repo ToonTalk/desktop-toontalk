@@ -129,6 +129,32 @@ export class WasmCore {
         console.log('[WASM Test] Bird velocity set');
         bird.delete(); // Important: clean up
 
+        // Test 6: Create a Number
+        const num = new this.module.Number(100, 100, 42);
+        console.log('[WASM Test] Created Number with value:', num.getValue());
+        num.add(13);
+        console.log('[WASM Test] After add(13):', num.getValue(), '- String:', num.toString());
+        num.multiply(2);
+        console.log('[WASM Test] After multiply(2):', num.getValue());
+        num.delete();
+
+        // Test 7: Create Text
+        const text = new this.module.Text(200, 100, "Hello");
+        console.log('[WASM Test] Created Text:', text.getText());
+        text.append(" World!");
+        console.log('[WASM Test] After append:", text.getText(), "- Length:', text.length());
+        text.delete();
+
+        // Test 8: Create Box
+        const box = new this.module.Box(300, 100, 5);
+        console.log('[WASM Test] Created Box - Capacity:', box.getCapacity());
+        box.addItem();
+        box.addItem();
+        box.addItem();
+        console.log('[WASM Test] Added 3 items - Count:', box.getCount(), '- Fullness:', box.getFullness());
+        console.log('[WASM Test] isEmpty:', box.isEmpty(), '- isFull:', box.isFull());
+        box.delete();
+
         console.log('[WASM Tests] ✅ All tests passed!');
     }
 
@@ -150,6 +176,36 @@ export class WasmCore {
             throw new Error('WASM module not loaded');
         }
         return new this.module.Bird(x, y);
+    }
+
+    /**
+     * Create a Number instance from WASM
+     */
+    createNumber(x: number, y: number, value: number = 0) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Number(x, y, value);
+    }
+
+    /**
+     * Create a Text instance from WASM
+     */
+    createText(x: number, y: number, text: string = "") {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Text(x, y, text);
+    }
+
+    /**
+     * Create a Box instance from WASM
+     */
+    createBox(x: number, y: number, capacity: number = 10) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Box(x, y, capacity);
     }
 
     /**

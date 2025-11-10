@@ -29,6 +29,7 @@ endif()
 set(CORE_SOURCES
     sprite.cpp
     core.cpp
+    objects.cpp
 )
 
 # Create WASM library
