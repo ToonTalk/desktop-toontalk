@@ -141,6 +141,29 @@ export class ToonTalkRenderer {
         console.log('Demo sprite created at center of screen');
     }
 
+    /**
+     * Get all WASM sprite views
+     */
+    getAllWasmSprites(): WasmSpriteView[] {
+        return this.wasmSprites;
+    }
+
+    /**
+     * Find the topmost sprite at a given position (excluding the one being dragged)
+     */
+    findSpriteAt(x: number, y: number, exclude?: WasmSpriteView): WasmSpriteView | null {
+        // Check sprites in reverse order (top to bottom)
+        for (let i = this.wasmSprites.length - 1; i >= 0; i--) {
+            const sprite = this.wasmSprites[i];
+            if (sprite === exclude) continue;
+
+            if (sprite.containsPoint(x, y)) {
+                return sprite;
+            }
+        }
+        return null;
+    }
+
     update(deltaTime: number): void {
         // Update demo sprite (if present)
         if (this.demoSprite) {

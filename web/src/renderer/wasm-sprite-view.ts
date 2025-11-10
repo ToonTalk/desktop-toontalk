@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js';
 import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox } from '../types/wasm';
+import type { ToonTalkRenderer } from './renderer';
 
 /**
  * WasmSpriteView - Bridges WASM Sprite objects with PixiJS rendering
@@ -12,16 +13,19 @@ export class WasmSpriteView {
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
+    private renderer: ToonTalkRenderer;
 
     // Drag state
     private isDragging: boolean = false;
     private dragOffset: { x: number; y: number } = { x: 0, y: 0 };
     private originalScale: { x: number; y: number } = { x: 1, y: 1 };
     private isHovered: boolean = false;
+    private dropTarget: WasmSpriteView | null = null;
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox, stage: PIXI.Container) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
+        this.renderer = renderer;
 
         // Draw the sprite (we'll enhance this later with actual textures)
         this.drawSprite();
@@ -303,6 +307,23 @@ export class WasmSpriteView {
 
         // Update WASM sprite position
         this.wasmSprite.setPosition(newX, newY);
+
+        // Check for drop targets
+        const targetUnderMouse = this.renderer.findSpriteAt(newX, newY, this);
+
+        // Clear old drop target highlight
+        if (this.dropTarget && this.dropTarget !== targetUnderMouse) {
+            this.clearDropTargetHighlight(this.dropTarget);
+            this.dropTarget = null;
+        }
+
+        // Highlight new drop target
+        if (targetUnderMouse && targetUnderMouse.canAcceptDrop(this)) {
+            this.dropTarget = targetUnderMouse;
+            this.highlightDropTarget(this.dropTarget);
+        } else {
+            this.dropTarget = null;
+        }
     }
 
     /**
@@ -310,6 +331,16 @@ export class WasmSpriteView {
      */
     private stopDrag(): void {
         if (!this.isDragging) return;
+
+        // Handle drop interaction if there's a valid target
+        if (this.dropTarget) {
+            this.dropTarget.handleDrop(this);
+            this.clearDropTargetHighlight(this.dropTarget);
+            this.dropTarget = null;
+
+            // Note: if handleDrop removes this sprite, we'll be destroyed
+            if (this.destroyed) return;
+        }
 
         this.isDragging = false;
 
@@ -323,6 +354,24 @@ export class WasmSpriteView {
 
         console.log('[WasmSpriteView] Stopped dragging at',
             this.wasmSprite.getX(), this.wasmSprite.getY());
+    }
+
+    /**
+     * Highlight a drop target
+     */
+    private highlightDropTarget(target: WasmSpriteView): void {
+        const targetGraphics = target.getGraphics();
+        targetGraphics.tint = 0x00FF00; // Green tint
+        targetGraphics.alpha = 0.7;
+    }
+
+    /**
+     * Clear drop target highlight
+     */
+    private clearDropTargetHighlight(target: WasmSpriteView): void {
+        const targetGraphics = target.getGraphics();
+        targetGraphics.tint = 0xFFFFFF; // Reset tint
+        targetGraphics.alpha = 1.0;
     }
 
     /**
@@ -382,6 +431,85 @@ export class WasmSpriteView {
      */
     getGraphics(): PIXI.Graphics {
         return this.graphics;
+    }
+
+    /**
+     * Check if a point is inside this sprite
+     */
+    containsPoint(x: number, y: number): boolean {
+        return this.wasmSprite.containsPoint(x, y);
+    }
+
+    /**
+     * Check if this sprite can accept being dropped on by another sprite
+     */
+    canAcceptDrop(other: WasmSpriteView): boolean {
+        const myType = this.getObjectType();
+        const otherType = other.getObjectType();
+
+        // Number can accept Number (addition)
+        if (myType === 'number' && otherType === 'number') return true;
+
+        // Text can accept Text (concatenation)
+        if (myType === 'text' && otherType === 'text') return true;
+
+        // Box can accept any object (storage)
+        if (myType === 'box') return true;
+
+        return false;
+    }
+
+    /**
+     * Handle an object being dropped onto this sprite
+     */
+    handleDrop(droppedSprite: WasmSpriteView): void {
+        const myType = this.getObjectType();
+        const droppedType = droppedSprite.getObjectType();
+
+        console.log(`[Drop] ${droppedType} onto ${myType}`);
+
+        // Number + Number = Addition
+        if (myType === 'number' && droppedType === 'number') {
+            const myNum = this.wasmSprite as ToonTalkNumber;
+            const droppedNum = droppedSprite.wasmSprite as ToonTalkNumber;
+
+            const result = myNum.getValue() + droppedNum.getValue();
+            myNum.setValue(result);
+
+            console.log(`✨ ${droppedNum.getValue()} + ${myNum.getValue() - droppedNum.getValue()} = ${result}`);
+
+            // Remove the dropped number
+            this.renderer.removeWasmSprite(droppedSprite);
+        }
+
+        // Text + Text = Concatenation
+        else if (myType === 'text' && droppedType === 'text') {
+            const myText = this.wasmSprite as ToonTalkText;
+            const droppedText = droppedSprite.wasmSprite as ToonTalkText;
+
+            const result = myText.getText() + droppedText.getText();
+            myText.setText(result);
+
+            console.log(`✨ Concatenated: "${result}"`);
+
+            // Remove the dropped text
+            this.renderer.removeWasmSprite(droppedSprite);
+        }
+
+        // Box accepts anything
+        else if (myType === 'box') {
+            const box = this.wasmSprite as ToonTalkBox;
+
+            if (!box.isFull()) {
+                box.addItem();
+                console.log(`✨ Added item to box (${box.getCount()} / ${box.getCapacity()})`);
+
+                // Remove the dropped object
+                this.renderer.removeWasmSprite(droppedSprite);
+            } else {
+                console.log('❌ Box is full!');
+            }
+        }
     }
 
     /**
