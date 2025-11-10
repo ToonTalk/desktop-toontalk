@@ -21,6 +21,7 @@ export class WasmSpriteView {
     private originalScale: { x: number; y: number } = { x: 1, y: 1 };
     private isHovered: boolean = false;
     private dropTarget: WasmSpriteView | null = null;
+    private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
     constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
@@ -344,7 +345,12 @@ export class WasmSpriteView {
         // Highlight new drop target
         if (targetUnderMouse && targetUnderMouse.canAcceptDrop(this)) {
             this.dropTarget = targetUnderMouse;
-            this.highlightDropTarget(this.dropTarget);
+
+            // Determine if we're on the left or right half of the target
+            const targetX = targetUnderMouse.getWasmSprite().getX();
+            this.dropOnLeftHalf = (newX < targetX);
+
+            this.highlightDropTarget(this.dropTarget, this.dropOnLeftHalf);
         } else {
             this.dropTarget = null;
         }
@@ -358,7 +364,7 @@ export class WasmSpriteView {
 
         // Handle drop interaction if there's a valid target
         if (this.dropTarget) {
-            this.dropTarget.handleDrop(this);
+            this.dropTarget.handleDrop(this, this.dropOnLeftHalf);
             this.clearDropTargetHighlight(this.dropTarget);
             this.dropTarget = null;
 
@@ -383,9 +389,11 @@ export class WasmSpriteView {
     /**
      * Highlight a drop target
      */
-    private highlightDropTarget(target: WasmSpriteView): void {
+    private highlightDropTarget(target: WasmSpriteView, isLeftHalf: boolean): void {
         const targetGraphics = target.getGraphics();
-        targetGraphics.tint = 0x00FF00; // Green tint
+        // Different tint for left vs right half
+        // Left half: Green (0x00FF00), Right half: Cyan (0x00FFFF)
+        targetGraphics.tint = isLeftHalf ? 0x00FF00 : 0x00FFFF;
         targetGraphics.alpha = 0.7;
     }
 
@@ -485,36 +493,61 @@ export class WasmSpriteView {
 
     /**
      * Handle an object being dropped onto this sprite
+     * @param droppedSprite The sprite being dropped
+     * @param droppedOnLeftHalf True if dropped on left half, false if right half
+     *
+     * ToonTalk pattern:
+     * - Drop A on LEFT half of B → result is AB (A comes first)
+     * - Drop A on RIGHT half of B → result is BA (B comes first)
      */
-    handleDrop(droppedSprite: WasmSpriteView): void {
+    handleDrop(droppedSprite: WasmSpriteView, droppedOnLeftHalf: boolean): void {
         const myType = this.getObjectType();
         const droppedType = droppedSprite.getObjectType();
 
-        console.log(`[Drop] ${droppedType} onto ${myType}`);
+        const side = droppedOnLeftHalf ? 'left' : 'right';
+        console.log(`[Drop] ${droppedType} onto ${side} half of ${myType}`);
 
         // Number + Number = Addition
         if (myType === 'number' && droppedType === 'number') {
             const myNum = this.wasmSprite as ToonTalkNumber;
             const droppedNum = droppedSprite.wasmSprite as ToonTalkNumber;
 
-            const result = myNum.getValue() + droppedNum.getValue();
+            const myValue = myNum.getValue();
+            const droppedValue = droppedNum.getValue();
+            const result = myValue + droppedValue;
+
             myNum.setValue(result);
 
-            console.log(`✨ ${droppedNum.getValue()} + ${myNum.getValue() - droppedNum.getValue()} = ${result}`);
+            if (droppedOnLeftHalf) {
+                console.log(`✨ ${droppedValue} + ${myValue} = ${result} (dropped on left)`);
+            } else {
+                console.log(`✨ ${myValue} + ${droppedValue} = ${result} (dropped on right)`);
+            }
 
             // Remove the dropped number
             this.renderer.removeWasmSprite(droppedSprite);
         }
 
-        // Text + Text = Concatenation
+        // Text + Text = Concatenation (ORDER MATTERS!)
         else if (myType === 'text' && droppedType === 'text') {
             const myText = this.wasmSprite as ToonTalkText;
             const droppedText = droppedSprite.wasmSprite as ToonTalkText;
 
-            const result = myText.getText() + droppedText.getText();
-            myText.setText(result);
+            const myString = myText.getText();
+            const droppedString = droppedText.getText();
+            let result: string;
 
-            console.log(`✨ Concatenated: "${result}"`);
+            if (droppedOnLeftHalf) {
+                // Dropped on LEFT: dropped comes first
+                result = droppedString + myString;
+                console.log(`✨ "${droppedString}" + "${myString}" = "${result}" (dropped on left)`);
+            } else {
+                // Dropped on RIGHT: target comes first
+                result = myString + droppedString;
+                console.log(`✨ "${myString}" + "${droppedString}" = "${result}" (dropped on right)`);
+            }
+
+            myText.setText(result);
 
             // Remove the dropped text
             this.renderer.removeWasmSprite(droppedSprite);
@@ -526,7 +559,7 @@ export class WasmSpriteView {
 
             if (!box.isFull()) {
                 box.addItem();
-                console.log(`✨ Added item to box (${box.getCount()} / ${box.getCapacity()})`);
+                console.log(`✨ Added item to box (${box.getCount()} items)`);
 
                 // Remove the dropped object
                 this.renderer.removeWasmSprite(droppedSprite);
