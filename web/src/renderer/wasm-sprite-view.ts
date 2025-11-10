@@ -333,10 +333,10 @@ export class WasmSpriteView {
         // Update WASM sprite position
         this.wasmSprite.setPosition(newX, newY);
 
-        // Check for drop targets using MOUSE position (not sprite center!)
-        const mouseX = event.global.x;
-        const mouseY = event.global.y;
-        const targetUnderMouse = this.renderer.findSpriteAt(mouseX, mouseY, this);
+        // Check for drop targets
+        // NOTE: Using sprite center position, matching original ToonTalk behavior
+        // Original: Text::on_right_side checks if dropped sprite center > target center
+        const targetUnderMouse = this.renderer.findSpriteAt(newX, newY, this);
 
         // Clear old drop target highlight
         if (this.dropTarget && this.dropTarget !== targetUnderMouse) {
@@ -348,9 +348,10 @@ export class WasmSpriteView {
         if (targetUnderMouse && targetUnderMouse.canAcceptDrop(this)) {
             this.dropTarget = targetUnderMouse;
 
-            // Determine if MOUSE is on the left or right half of the target
+            // Determine if dropped sprite CENTER is left/right of target CENTER
+            // This matches original ToonTalk: item->current_llx()+item->current_width()/2 > llx+width/2
             const targetX = targetUnderMouse.getWasmSprite().getX();
-            this.dropOnLeftHalf = (mouseX < targetX);
+            this.dropOnLeftHalf = (newX < targetX);
 
             this.highlightDropTarget(this.dropTarget, this.dropOnLeftHalf);
         } else {
