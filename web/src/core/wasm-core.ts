@@ -9,13 +9,54 @@ export class WasmCore {
     private module?: ToonTalkCoreModule;
     private loaded: boolean = false;
 
+    /**
+     * Load a script dynamically
+     */
+    private loadScript(src: string): Promise<void> {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.onload = () => resolve();
+            script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+            document.head.appendChild(script);
+        });
+    }
+
     async initialize(): Promise<void> {
         console.log('[WASM] Loading ToonTalk core module...');
 
         try {
-            // Import the WASM module
-            // @ts-ignore - Vite will handle this import
-            const createModule = (await import('../../core/build/toontalk-core.js')).default as CreateToonTalkCore;
+            // Load the WASM module from public directory
+            await this.loadScript('/core/build/toontalk-core.js');
+
+            // Wait a bit for the script to be parsed
+            await new Promise(resolve => setTimeout(resolve, 100));
+
+            // Get the module factory - try different export names
+            let createModule: CreateToonTalkCore | undefined;
+
+            // Try different possible export names
+            const windowObj = window as any;
+            if (typeof windowObj.createToonTalkCore === 'function') {
+                createModule = windowObj.createToonTalkCore;
+                console.log('[WASM] Found createToonTalkCore on window');
+            } else if (typeof windowObj.Module === 'function') {
+                createModule = windowObj.Module;
+                console.log('[WASM] Found Module on window');
+            } else {
+                console.error('[WASM] Window keys:', Object.keys(windowObj).filter(k =>
+                    k.toLowerCase().includes('module') ||
+                    k.toLowerCase().includes('toon') ||
+                    k.toLowerCase().includes('create')
+                ));
+                throw new Error('WASM module factory not found. Check console for available exports.');
+            }
+
+            if (!createModule) {
+                throw new Error('Could not find WASM module factory function');
+            }
+
+            console.log('[WASM] Initializing module...');
 
             // Initialize the module
             this.module = await createModule({
