@@ -1,5 +1,35 @@
 # ToonTalk WASM Porting Strategy
 
+## UX Improvements Over Original
+
+### Drop Detection: Mouse Position vs Sprite Centers
+
+**Original Desktop ToonTalk** (`source/text.cpp:991-993`):
+```cpp
+boolean Text::on_right_side(Sprite *item) {
+    return(item->current_llx()+item->current_width()/2 > llx+width/2);
+};
+```
+- Uses **sprite centers** to determine left/right
+- If dropped sprite's CENTER < target's CENTER → left half
+- If dropped sprite's CENTER > target's CENTER → right half
+- **Problem**: Unintuitive - where you grab the object matters
+
+**ToonTalk Web** (our improvement):
+```typescript
+const mouseX = event.global.x;
+const targetX = target.getX();
+this.dropOnLeftHalf = (mouseX < targetX);
+```
+- Uses **mouse cursor position** to determine left/right
+- If CURSOR < target center → left half
+- If CURSOR > target center → right half
+- **Benefit**: More intuitive - where you point determines the result
+
+**Why This Matters**: In the original, dropping "Hello" with your mouse on World's left side could still result in a RIGHT drop if Hello's center landed right of World's center. Now, it always works as expected based on where your cursor is.
+
+---
+
 ## Analysis of Original Code
 
 ### Platform Dependencies Found:
