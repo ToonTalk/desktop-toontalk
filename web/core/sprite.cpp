@@ -5,64 +5,53 @@
  * Eventually this will be expanded to match the full ToonTalk sprite system
  */
 
+#include "sprite.h"
 #include <emscripten/bind.h>
 #include <string>
 #include <cmath>
 
 namespace toontalk {
 
-/**
- * Basic Sprite class
- * Represents a 2D object with position, size, and behavior
- */
-class Sprite {
-public:
-    Sprite(float x, float y, float width, float height)
-        : x_(x), y_(y), width_(width), height_(height),
-          rotation_(0.0f), visible_(true) {}
+// Sprite implementation
+Sprite::Sprite(float x, float y, float width, float height)
+    : x_(x), y_(y), width_(width), height_(height),
+      rotation_(0.0f), visible_(true) {}
 
-    // Position
-    float getX() const { return x_; }
-    float getY() const { return y_; }
-    void setX(float x) { x_ = x; }
-    void setY(float y) { y_ = y; }
-    void setPosition(float x, float y) {
-        x_ = x;
-        y_ = y;
-    }
+// Position
+float Sprite::getX() const { return x_; }
+float Sprite::getY() const { return y_; }
+void Sprite::setX(float x) { x_ = x; }
+void Sprite::setY(float y) { y_ = y; }
+void Sprite::setPosition(float x, float y) {
+    x_ = x;
+    y_ = y;
+}
 
-    // Size
-    float getWidth() const { return width_; }
-    float getHeight() const { return height_; }
-    void setWidth(float w) { width_ = w; }
-    void setHeight(float h) { height_ = h; }
+// Size
+float Sprite::getWidth() const { return width_; }
+float Sprite::getHeight() const { return height_; }
+void Sprite::setWidth(float w) { width_ = w; }
+void Sprite::setHeight(float h) { height_ = h; }
 
-    // Rotation (in radians)
-    float getRotation() const { return rotation_; }
-    void setRotation(float r) { rotation_ = r; }
-    void rotate(float dr) { rotation_ += dr; }
+// Rotation
+float Sprite::getRotation() const { return rotation_; }
+void Sprite::setRotation(float r) { rotation_ = r; }
+void Sprite::rotate(float dr) { rotation_ += dr; }
 
-    // Visibility
-    bool isVisible() const { return visible_; }
-    void setVisible(bool v) { visible_ = v; }
+// Visibility
+bool Sprite::isVisible() const { return visible_; }
+void Sprite::setVisible(bool v) { visible_ = v; }
 
-    // Update method (called each frame)
-    virtual void update(float deltaTime) {
-        // Override in subclasses
-    }
+// Update method (called each frame)
+void Sprite::update(float deltaTime) {
+    // Override in subclasses
+}
 
-    // Hit test
-    bool containsPoint(float px, float py) const {
-        return px >= x_ && px <= x_ + width_ &&
-               py >= y_ && py <= y_ + height_;
-    }
-
-protected:
-    float x_, y_;           // Position
-    float width_, height_;  // Size
-    float rotation_;        // Rotation in radians
-    bool visible_;          // Visibility flag
-};
+// Hit test
+bool Sprite::containsPoint(float px, float py) const {
+    return px >= x_ && px <= x_ + width_ &&
+           py >= y_ && py <= y_ + height_;
+}
 
 /**
  * Bird class - Example ToonTalk entity

@@ -1,15 +1,15 @@
 /**
- * number.cpp - Number class for ToonTalk Web
+ * objects.cpp - Number, Text, and Box classes for ToonTalk Web
  *
- * Simplified port from ../source/number.cpp
- * Represents a numerical value that can be displayed and manipulated
+ * Simplified port from ../source/number.cpp, ../source/text.cpp, etc.
+ * These classes inherit from Sprite (defined in sprite.cpp)
  */
 
+#include "sprite.h"
 #include <emscripten/bind.h>
 #include <string>
 #include <sstream>
 #include <iomanip>
-#include "sprite.cpp" // Include sprite definitions
 
 namespace toontalk {
 
@@ -135,7 +135,7 @@ private:
 
 } // namespace toontalk
 
-// Emscripten bindings
+// Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
 using namespace emscripten;
 using namespace toontalk;
 
