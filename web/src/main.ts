@@ -74,7 +74,7 @@ class ToonTalkWeb {
     }
 
     private createDemoScene(): void {
-        console.log('Creating WASM-powered scene...');
+        console.log('Creating WASM-powered scene with multiple object types...');
 
         const wasmCore = getWasmCore();
         if (!wasmCore.isLoaded()) {
@@ -82,27 +82,44 @@ class ToonTalkWeb {
             return;
         }
 
-        // Create a WASM Bird in the center
         const centerX = 400;
         const centerY = 300;
-        const bird1 = wasmCore.createBird(centerX, centerY);
-        bird1.setVelocity(0, -0.2); // Slow upward drift (negative Y = up)
-        const birdView1 = new WasmSpriteView(bird1, this.renderer.getStage());
-        this.renderer.addWasmSprite(birdView1);
 
-        // Create another WASM Bird to the left
-        const bird2 = wasmCore.createBird(centerX - 150, centerY);
-        bird2.setVelocity(0.15, 0.1); // Slow diagonal movement (right and down)
-        const birdView2 = new WasmSpriteView(bird2, this.renderer.getStage());
-        this.renderer.addWasmSprite(birdView2);
+        // Row 1 (Top): Birds
+        const bird1 = wasmCore.createBird(centerX - 150, centerY - 120);
+        bird1.setVelocity(0.1, -0.1);
+        this.renderer.addWasmSprite(new WasmSpriteView(bird1, this.renderer.getStage()));
 
-        // Create a WASM Sprite (not a bird) to the right
-        const sprite1 = wasmCore.createSprite(centerX + 150, centerY, 50, 50);
-        const spriteView1 = new WasmSpriteView(sprite1, this.renderer.getStage());
-        this.renderer.addWasmSprite(spriteView1);
+        const bird2 = wasmCore.createBird(centerX + 150, centerY - 120);
+        bird2.setVelocity(-0.1, -0.05);
+        this.renderer.addWasmSprite(new WasmSpriteView(bird2, this.renderer.getStage()));
 
-        console.log('✨ WASM scene created with 2 Birds and 1 Sprite!');
-        console.log('   Click on them to rotate!');
+        // Row 2 (Middle): Numbers
+        const num1 = wasmCore.createNumber(centerX - 150, centerY, 42);
+        this.renderer.addWasmSprite(new WasmSpriteView(num1, this.renderer.getStage()));
+
+        const num2 = wasmCore.createNumber(centerX + 150, centerY, 3.14);
+        this.renderer.addWasmSprite(new WasmSpriteView(num2, this.renderer.getStage()));
+
+        // Row 3 (Bottom): Text and Box
+        const text1 = wasmCore.createText(centerX - 150, centerY + 120, "Hello!");
+        this.renderer.addWasmSprite(new WasmSpriteView(text1, this.renderer.getStage()));
+
+        const box1 = wasmCore.createBox(centerX + 150, centerY + 120, 10);
+        box1.addItem();
+        box1.addItem();
+        box1.addItem();
+        box1.addItem();
+        box1.addItem();  // 5 items in the box
+        this.renderer.addWasmSprite(new WasmSpriteView(box1, this.renderer.getStage()));
+
+        // Center: A generic sprite
+        const sprite1 = wasmCore.createSprite(centerX, centerY, 50, 50);
+        this.renderer.addWasmSprite(new WasmSpriteView(sprite1, this.renderer.getStage()));
+
+        console.log('✨ WASM scene created!');
+        console.log('   Objects: 2 Birds, 2 Numbers, 1 Text, 1 Box, 1 Sprite');
+        console.log('   Click any object to rotate!');
         console.log('   Hover to scale up!');
     }
 
