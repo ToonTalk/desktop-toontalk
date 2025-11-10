@@ -13,6 +13,12 @@ export class WasmSpriteView {
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
 
+    // Drag state
+    private isDragging: boolean = false;
+    private dragOffset: { x: number; y: number } = { x: 0, y: 0 };
+    private originalScale: { x: number; y: number } = { x: 1, y: 1 };
+    private isHovered: boolean = false;
+
     constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox, stage: PIXI.Container) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
@@ -224,20 +230,99 @@ export class WasmSpriteView {
      * Set up mouse interactions
      */
     private setupInteractions(): void {
+        // Hover effects
         this.graphics.on('pointerover', () => {
-            this.graphics.scale.set(1.2);
+            if (!this.isDragging) {
+                this.isHovered = true;
+                this.graphics.scale.set(1.1);
+            }
         });
 
         this.graphics.on('pointerout', () => {
-            this.graphics.scale.set(1);
+            if (!this.isDragging) {
+                this.isHovered = false;
+                this.graphics.scale.set(1);
+            }
         });
 
-        this.graphics.on('pointerdown', () => {
-            // Rotate the WASM sprite
-            const currentRotation = this.wasmSprite.getRotation();
-            this.wasmSprite.setRotation(currentRotation + Math.PI / 4);
-            console.log('[WasmSpriteView] Clicked! New rotation:', this.wasmSprite.getRotation());
+        // Start drag
+        this.graphics.on('pointerdown', (event: PIXI.FederatedPointerEvent) => {
+            this.startDrag(event);
         });
+    }
+
+    /**
+     * Start dragging the sprite
+     */
+    private startDrag(event: PIXI.FederatedPointerEvent): void {
+        this.isDragging = true;
+        this.originalScale = { x: this.graphics.scale.x, y: this.graphics.scale.y };
+
+        // Calculate drag offset (where on the sprite did we click?)
+        const spritePos = this.graphics.position;
+        this.dragOffset.x = spritePos.x - event.global.x;
+        this.dragOffset.y = spritePos.y - event.global.y;
+
+        // Visual feedback - lift the sprite
+        this.graphics.scale.set(1.15);
+        this.graphics.alpha = 0.8;
+
+        // Move to front (higher z-index)
+        if (this.graphics.parent) {
+            this.graphics.parent.setChildIndex(this.graphics, this.graphics.parent.children.length - 1);
+        }
+
+        // Set up global move and up handlers
+        const onPointerMove = (e: PIXI.FederatedPointerEvent) => {
+            this.onDrag(e);
+        };
+
+        const onPointerUp = () => {
+            this.stopDrag();
+            this.graphics.off('globalpointermove', onPointerMove);
+            this.graphics.off('pointerup', onPointerUp);
+            this.graphics.off('pointerupoutside', onPointerUp);
+        };
+
+        this.graphics.on('globalpointermove', onPointerMove);
+        this.graphics.on('pointerup', onPointerUp);
+        this.graphics.on('pointerupoutside', onPointerUp);
+
+        console.log('[WasmSpriteView] Started dragging');
+    }
+
+    /**
+     * Handle dragging movement
+     */
+    private onDrag(event: PIXI.FederatedPointerEvent): void {
+        if (!this.isDragging) return;
+
+        // Update position based on mouse position + offset
+        const newX = event.global.x + this.dragOffset.x;
+        const newY = event.global.y + this.dragOffset.y;
+
+        // Update WASM sprite position
+        this.wasmSprite.setPosition(newX, newY);
+    }
+
+    /**
+     * Stop dragging the sprite
+     */
+    private stopDrag(): void {
+        if (!this.isDragging) return;
+
+        this.isDragging = false;
+
+        // Reset visual feedback
+        if (this.isHovered) {
+            this.graphics.scale.set(1.1);
+        } else {
+            this.graphics.scale.set(1);
+        }
+        this.graphics.alpha = 1.0;
+
+        console.log('[WasmSpriteView] Stopped dragging at',
+            this.wasmSprite.getX(), this.wasmSprite.getY());
     }
 
     /**
@@ -247,12 +332,20 @@ export class WasmSpriteView {
     update(deltaTime: number): void {
         if (this.destroyed) return;
 
-        // Update WASM sprite logic
-        this.wasmSprite.update(deltaTime);
+        // Update WASM sprite logic (only if not dragging, to avoid interference)
+        if (!this.isDragging) {
+            this.wasmSprite.update(deltaTime);
+        }
 
-        // Sync position from WASM to PixiJS
-        this.graphics.x = this.wasmSprite.getX();
-        this.graphics.y = this.wasmSprite.getY();
+        // Sync position from WASM to PixiJS (but not while dragging!)
+        if (!this.isDragging) {
+            this.graphics.x = this.wasmSprite.getX();
+            this.graphics.y = this.wasmSprite.getY();
+        } else {
+            // While dragging, keep PixiJS and WASM in sync
+            this.graphics.x = this.wasmSprite.getX();
+            this.graphics.y = this.wasmSprite.getY();
+        }
 
         // Sync rotation
         this.graphics.rotation = this.wasmSprite.getRotation();
