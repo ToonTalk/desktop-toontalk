@@ -1,17 +1,51 @@
 /**
- * number.cpp - Number class for ToonTalk Web
+ * objects.cpp - Number, Text, and Box classes for ToonTalk Web
  *
- * Simplified port from ../source/number.cpp
- * Represents a numerical value that can be displayed and manipulated
+ * Simplified port from ../source/number.cpp, ../source/text.cpp, etc.
+ * These classes inherit from Sprite (defined in sprite.cpp)
  */
 
 #include <emscripten/bind.h>
 #include <string>
 #include <sstream>
 #include <iomanip>
-#include "sprite.cpp" // Include sprite definitions
 
 namespace toontalk {
+
+// Forward declare Sprite from sprite.cpp
+// We don't need the full definition, just know it exists
+class Sprite {
+public:
+    Sprite(float x, float y, float width, float height);
+    virtual ~Sprite() {}
+
+    float getX() const;
+    float getY() const;
+    void setX(float x);
+    void setY(float y);
+    void setPosition(float x, float y);
+
+    float getWidth() const;
+    float getHeight() const;
+    void setWidth(float w);
+    void setHeight(float h);
+
+    float getRotation() const;
+    void setRotation(float r);
+    void rotate(float dr);
+
+    bool isVisible() const;
+    void setVisible(bool v);
+
+    virtual void update(float deltaTime);
+    bool containsPoint(float px, float py) const;
+
+protected:
+    float x_, y_;
+    float width_, height_;
+    float rotation_;
+    bool visible_;
+};
 
 /**
  * Number class - Represents a numerical value
@@ -135,7 +169,7 @@ private:
 
 } // namespace toontalk
 
-// Emscripten bindings
+// Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
 using namespace emscripten;
 using namespace toontalk;
 
