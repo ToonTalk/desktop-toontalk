@@ -86,13 +86,13 @@ class ToonTalkWeb {
         const centerX = 400;
         const centerY = 300;
         const bird1 = wasmCore.createBird(centerX, centerY);
-        bird1.setVelocity(0, 0.5); // Slow upward drift
+        bird1.setVelocity(0, -0.2); // Slow upward drift (negative Y = up)
         const birdView1 = new WasmSpriteView(bird1, this.renderer.getStage());
         this.renderer.addWasmSprite(birdView1);
 
         // Create another WASM Bird to the left
         const bird2 = wasmCore.createBird(centerX - 150, centerY);
-        bird2.setVelocity(0.3, -0.2); // Diagonal movement
+        bird2.setVelocity(0.15, 0.1); // Slow diagonal movement (right and down)
         const birdView2 = new WasmSpriteView(bird2, this.renderer.getStage());
         this.renderer.addWasmSprite(birdView2);
 
