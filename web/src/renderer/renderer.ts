@@ -1,4 +1,5 @@
 import * as PIXI from 'pixi.js';
+import { WasmSpriteView } from './wasm-sprite-view';
 
 /**
  * ToonTalkRenderer - Wrapper around PixiJS
@@ -10,6 +11,7 @@ export class ToonTalkRenderer {
     private app: PIXI.Application;
     private stage: PIXI.Container;
     private demoSprite?: PIXI.Graphics;
+    private wasmSprites: WasmSpriteView[] = [];
 
     constructor() {
         // Create PixiJS application with options (v7 uses constructor, not init())
@@ -40,6 +42,42 @@ export class ToonTalkRenderer {
         // In PixiJS v7, just use the constructor name
         const rendererName = this.app.renderer.constructor.name;
         return `${rendererName} (PixiJS ${PIXI.VERSION})`;
+    }
+
+    /**
+     * Get the stage (for adding WASM sprites)
+     */
+    getStage(): PIXI.Container {
+        return this.stage;
+    }
+
+    /**
+     * Add a WASM sprite view to be managed and rendered
+     */
+    addWasmSprite(spriteView: WasmSpriteView): void {
+        this.wasmSprites.push(spriteView);
+        console.log(`[Renderer] Added WASM sprite (total: ${this.wasmSprites.length})`);
+    }
+
+    /**
+     * Remove a WASM sprite view
+     */
+    removeWasmSprite(spriteView: WasmSpriteView): void {
+        const index = this.wasmSprites.indexOf(spriteView);
+        if (index !== -1) {
+            this.wasmSprites.splice(index, 1);
+            spriteView.destroy();
+            console.log(`[Renderer] Removed WASM sprite (total: ${this.wasmSprites.length})`);
+        }
+    }
+
+    /**
+     * Clear all WASM sprites
+     */
+    clearWasmSprites(): void {
+        this.wasmSprites.forEach(sprite => sprite.destroy());
+        this.wasmSprites = [];
+        console.log('[Renderer] Cleared all WASM sprites');
     }
 
     /**
@@ -104,12 +142,17 @@ export class ToonTalkRenderer {
     }
 
     update(deltaTime: number): void {
-        // Update animations
+        // Update demo sprite (if present)
         if (this.demoSprite) {
             // Simple floating animation
             const time = Date.now() / 1000;
             this.demoSprite.y = (this.app.screen.height / 2) + Math.sin(time * 2) * 20;
             this.demoSprite.rotation += 0.001 * deltaTime;
+        }
+
+        // Update all WASM sprites
+        for (const wasmSprite of this.wasmSprites) {
+            wasmSprite.update(deltaTime);
         }
     }
 

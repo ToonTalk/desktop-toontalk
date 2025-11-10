@@ -1,6 +1,7 @@
 import { ToonTalkRenderer } from './renderer/renderer';
 import { InputManager } from './input/input';
 import { getWasmCore } from './core/wasm-core';
+import { WasmSpriteView } from './renderer/wasm-sprite-view';
 
 /**
  * ToonTalk Web - Main Entry Point
@@ -73,11 +74,36 @@ class ToonTalkWeb {
     }
 
     private createDemoScene(): void {
-        // Create a simple demo scene
-        // This will be replaced with actual ToonTalk objects from WASM
-        this.renderer.createDemoSprite();
+        console.log('Creating WASM-powered scene...');
 
-        console.log('Demo scene created');
+        const wasmCore = getWasmCore();
+        if (!wasmCore.isLoaded()) {
+            console.error('Cannot create scene - WASM core not loaded');
+            return;
+        }
+
+        // Create a WASM Bird in the center
+        const centerX = 400;
+        const centerY = 300;
+        const bird1 = wasmCore.createBird(centerX, centerY);
+        bird1.setVelocity(0, 0.5); // Slow upward drift
+        const birdView1 = new WasmSpriteView(bird1, this.renderer.getStage());
+        this.renderer.addWasmSprite(birdView1);
+
+        // Create another WASM Bird to the left
+        const bird2 = wasmCore.createBird(centerX - 150, centerY);
+        bird2.setVelocity(0.3, -0.2); // Diagonal movement
+        const birdView2 = new WasmSpriteView(bird2, this.renderer.getStage());
+        this.renderer.addWasmSprite(birdView2);
+
+        // Create a WASM Sprite (not a bird) to the right
+        const sprite1 = wasmCore.createSprite(centerX + 150, centerY, 50, 50);
+        const spriteView1 = new WasmSpriteView(sprite1, this.renderer.getStage());
+        this.renderer.addWasmSprite(spriteView1);
+
+        console.log('✨ WASM scene created with 2 Birds and 1 Sprite!');
+        console.log('   Click on them to rotate!');
+        console.log('   Hover to scale up!');
     }
 
     private startGameLoop(): void {
