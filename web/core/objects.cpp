@@ -1243,6 +1243,228 @@ private:
     float erase_progress_;  // Animation progress (0-1)
 };
 
+// ===== Cubby Class =====
+// Multi-hole container with labels (like a structured box)
+class Cubby : public Sprite {
+public:
+    Cubby(float x, float y, int numHoles = 4)
+        : Sprite(x, y, 80.0f + (numHoles * 15.0f), 80.0f),
+          num_holes_(numHoles),
+          filled_count_(0) {
+        // Initialize holes as empty
+        for (int i = 0; i < num_holes_ && i < MAX_HOLES; i++) {
+            hole_filled_[i] = false;
+            hole_labels_[i] = '\0';
+        }
+    }
+
+    int getNumHoles() const { return num_holes_; }
+
+    int getFilledCount() const { return filled_count_; }
+
+    bool isHoleFilled(int index) const {
+        if (index >= 0 && index < num_holes_) {
+            return hole_filled_[index];
+        }
+        return false;
+    }
+
+    void setHoleFilled(int index, bool filled) {
+        if (index >= 0 && index < num_holes_) {
+            bool was_filled = hole_filled_[index];
+            hole_filled_[index] = filled;
+
+            // Update count
+            if (filled && !was_filled) {
+                filled_count_++;
+            } else if (!filled && was_filled) {
+                filled_count_--;
+            }
+        }
+    }
+
+    char getHoleLabel(int index) const {
+        if (index >= 0 && index < num_holes_) {
+            return hole_labels_[index];
+        }
+        return '\0';
+    }
+
+    void setHoleLabel(int index, char label) {
+        if (index >= 0 && index < num_holes_) {
+            hole_labels_[index] = label;
+        }
+    }
+
+    bool isFull() const {
+        return filled_count_ >= num_holes_;
+    }
+
+    bool isEmpty() const {
+        return filled_count_ == 0;
+    }
+
+    void clear() {
+        for (int i = 0; i < num_holes_; i++) {
+            hole_filled_[i] = false;
+            hole_labels_[i] = '\0';
+        }
+        filled_count_ = 0;
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    static const int MAX_HOLES = 10;
+    int num_holes_;
+    int filled_count_;
+    bool hole_filled_[MAX_HOLES];
+    char hole_labels_[MAX_HOLES];
+};
+
+// ===== Button Class =====
+// UI control element with keyboard binding
+class Button : public Sprite {
+public:
+    enum ButtonState {
+        NORMAL = 0,
+        HOVERED = 1,
+        PRESSED = 2,
+        DISABLED = 3
+    };
+
+    Button(float x, float y, char key = '\0')
+        : Sprite(x, y, 60.0f, 40.0f),
+          state_(NORMAL),
+          key_binding_(key),
+          press_count_(0),
+          enabled_(true) {}
+
+    ButtonState getState() const { return state_; }
+    int getStateInt() const { return static_cast<int>(state_); }
+
+    void setState(ButtonState state) { state_ = state; }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<ButtonState>(state);
+        }
+    }
+
+    char getKeyBinding() const { return key_binding_; }
+    void setKeyBinding(char key) { key_binding_ = key; }
+
+    int getPressCount() const { return press_count_; }
+    void setPressCount(int count) { press_count_ = count; }
+
+    bool isEnabled() const { return enabled_; }
+    void setEnabled(bool enabled) {
+        enabled_ = enabled;
+        if (!enabled) {
+            state_ = DISABLED;
+        } else if (state_ == DISABLED) {
+            state_ = NORMAL;
+        }
+    }
+
+    void press() {
+        if (enabled_ && state_ != PRESSED) {
+            state_ = PRESSED;
+            press_count_++;
+        }
+    }
+
+    void release() {
+        if (state_ == PRESSED) {
+            state_ = NORMAL;
+        }
+    }
+
+    void hover() {
+        if (enabled_ && state_ == NORMAL) {
+            state_ = HOVERED;
+        }
+    }
+
+    void unhover() {
+        if (state_ == HOVERED) {
+            state_ = NORMAL;
+        }
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    ButtonState state_;
+    char key_binding_;
+    int press_count_;
+    bool enabled_;
+};
+
+// ===== Stack Class =====
+// Formal stack data structure (LIFO)
+class Stack : public Sprite {
+public:
+    Stack(float x, float y, int capacity = 10)
+        : Sprite(x, y, 70.0f, 90.0f),
+          capacity_(capacity),
+          count_(0) {}
+
+    int getCapacity() const { return capacity_; }
+
+    int getCount() const { return count_; }
+
+    bool isFull() const { return count_ >= capacity_; }
+
+    bool isEmpty() const { return count_ == 0; }
+
+    float getFullness() const {
+        return capacity_ > 0 ? static_cast<float>(count_) / capacity_ : 0.0f;
+    }
+
+    bool push() {
+        if (count_ < capacity_) {
+            count_++;
+            return true;
+        }
+        return false;
+    }
+
+    bool pop() {
+        if (count_ > 0) {
+            count_--;
+            return true;
+        }
+        return false;
+    }
+
+    int peek() const {
+        return count_;  // Return top index
+    }
+
+    void clear() {
+        count_ = 0;
+    }
+
+    void setCapacity(int cap) {
+        capacity_ = cap;
+        if (count_ > capacity_) {
+            count_ = capacity_;
+        }
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    int capacity_;
+    int count_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -1584,4 +1806,54 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("READY", Eraser::READY)
         .value("ERASING", Eraser::ERASING)
         .value("DONE", Eraser::DONE);
+
+    // Cubby class
+    class_<Cubby, base<Sprite>>("Cubby")
+        .constructor<float, float, int>()
+        .function("getNumHoles", &Cubby::getNumHoles)
+        .function("getFilledCount", &Cubby::getFilledCount)
+        .function("isHoleFilled", &Cubby::isHoleFilled)
+        .function("setHoleFilled", &Cubby::setHoleFilled)
+        .function("getHoleLabel", &Cubby::getHoleLabel)
+        .function("setHoleLabel", &Cubby::setHoleLabel)
+        .function("isFull", &Cubby::isFull)
+        .function("isEmpty", &Cubby::isEmpty)
+        .function("clear", &Cubby::clear);
+
+    // Button class
+    class_<Button, base<Sprite>>("Button")
+        .constructor<float, float, char>()
+        .function("getStateInt", &Button::getStateInt)
+        .function("setStateInt", &Button::setStateInt)
+        .function("getKeyBinding", &Button::getKeyBinding)
+        .function("setKeyBinding", &Button::setKeyBinding)
+        .function("getPressCount", &Button::getPressCount)
+        .function("setPressCount", &Button::setPressCount)
+        .function("isEnabled", &Button::isEnabled)
+        .function("setEnabled", &Button::setEnabled)
+        .function("press", &Button::press)
+        .function("release", &Button::release)
+        .function("hover", &Button::hover)
+        .function("unhover", &Button::unhover);
+
+    // Button state enum values
+    enum_<Button::ButtonState>("ButtonState")
+        .value("NORMAL", Button::NORMAL)
+        .value("HOVERED", Button::HOVERED)
+        .value("PRESSED", Button::PRESSED)
+        .value("DISABLED", Button::DISABLED);
+
+    // Stack class
+    class_<Stack, base<Sprite>>("Stack")
+        .constructor<float, float, int>()
+        .function("getCapacity", &Stack::getCapacity)
+        .function("getCount", &Stack::getCount)
+        .function("isFull", &Stack::isFull)
+        .function("isEmpty", &Stack::isEmpty)
+        .function("getFullness", &Stack::getFullness)
+        .function("push", &Stack::push)
+        .function("pop", &Stack::pop)
+        .function("peek", &Stack::peek)
+        .function("clear", &Stack::clear)
+        .function("setCapacity", &Stack::setCapacity);
 }

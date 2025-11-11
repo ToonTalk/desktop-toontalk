@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -70,6 +70,9 @@ export class WasmSpriteView {
         if ('getScaleFactor' in this.wasmSprite && 'expand' in this.wasmSprite) return 'expander';
         if ('getCopyCount' in this.wasmSprite && 'makeCopy' in this.wasmSprite) return 'copier';
         if ('getErasedCount' in this.wasmSprite && 'getEraseProgress' in this.wasmSprite) return 'eraser';
+        if ('getNumHoles' in this.wasmSprite && 'getFilledCount' in this.wasmSprite && 'setHoleFilled' in this.wasmSprite) return 'cubby';
+        if ('getKeyBinding' in this.wasmSprite && 'press' in this.wasmSprite && 'getPressCount' in this.wasmSprite) return 'button';
+        if ('push' in this.wasmSprite && 'pop' in this.wasmSprite && 'peek' in this.wasmSprite && 'getCapacity' in this.wasmSprite) return 'stack';
         return 'sprite';
     }
 
@@ -148,6 +151,15 @@ export class WasmSpriteView {
                 break;
             case 'eraser':
                 this.drawEraser();
+                break;
+            case 'cubby':
+                this.drawCubby();
+                break;
+            case 'button':
+                this.drawButton();
+                break;
+            case 'stack':
+                this.drawStack();
                 break;
             default:
                 this.drawGenericSprite();
@@ -1225,6 +1237,291 @@ export class WasmSpriteView {
         stateText.anchor.set(0.5);
         stateText.y = 45;
         this.graphics.addChild(stateText);
+    }
+
+    private drawCubby(): void {
+        const cubby = this.wasmSprite as ToonTalkCubby;
+        const numHoles = cubby.getNumHoles();
+        const filledCount = cubby.getFilledCount();
+
+        // Cubby body (multi-compartment container - purple/violet)
+        const width = 80 + (numHoles * 15);
+        this.graphics.beginFill(0x9370DB);
+        this.graphics.drawRoundedRect(-width / 2, -40, width, 80, 8);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x663399);
+        this.graphics.drawRoundedRect(-width / 2, -40, width, 80, 8);
+
+        // Label at top
+        const label = new PIXI.Text('Cubby', {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = -30;
+        this.graphics.addChild(label);
+
+        // Draw compartments (holes) with labels
+        const holeSpacing = (width - 20) / (numHoles + 1);
+        for (let i = 0; i < numHoles; i++) {
+            const holeX = -width / 2 + 10 + (i + 1) * holeSpacing;
+            const holeY = 5;
+            const isFilled = cubby.isHoleFilled(i);
+
+            // Compartment background
+            this.graphics.beginFill(isFilled ? 0xFFD700 : 0x4B0082, isFilled ? 1 : 0.6);
+            this.graphics.drawRoundedRect(holeX - 12, holeY - 15, 24, 30, 4);
+            this.graphics.endFill();
+
+            // Compartment border
+            this.graphics.lineStyle(2, isFilled ? 0xFFD700 : 0x663399);
+            this.graphics.drawRoundedRect(holeX - 12, holeY - 15, 24, 30, 4);
+
+            // Label (if exists)
+            const labelChar = cubby.getHoleLabel(i);
+            if (labelChar && labelChar !== '\0') {
+                const labelText = new PIXI.Text(labelChar, {
+                    fontSize: 10,
+                    fill: isFilled ? 0x000000 : 0xFFFFFF,
+                    fontWeight: 'bold'
+                });
+                labelText.anchor.set(0.5);
+                labelText.x = holeX;
+                labelText.y = holeY;
+                this.graphics.addChild(labelText);
+            }
+        }
+
+        // Status text
+        const statusText = new PIXI.Text(`${filledCount} / ${numHoles} filled`, {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        statusText.anchor.set(0.5);
+        statusText.y = 30;
+        this.graphics.addChild(statusText);
+    }
+
+    private drawButton(): void {
+        const button = this.wasmSprite as ToonTalkButton;
+        const state = button.getStateInt();
+        const keyBinding = button.getKeyBinding();
+        const pressCount = button.getPressCount();
+        const isEnabled = button.isEnabled();
+
+        // Button states: NORMAL=0, HOVERED=1, PRESSED=2, DISABLED=3
+        const stateColors = [
+            0x4169E1, // NORMAL - royal blue
+            0x1E90FF, // HOVERED - dodger blue (brighter)
+            0x0000CD, // PRESSED - medium blue (darker)
+            0x696969  // DISABLED - dim gray
+        ];
+
+        const buttonColor = stateColors[state] || 0x4169E1;
+
+        // Button shape (rounded rectangle with depth effect)
+        const yOffset = state === 2 ? 3 : 0; // Pressed = pushed down
+
+        // Shadow (if not pressed)
+        if (state !== 2) {
+            this.graphics.beginFill(0x000000, 0.3);
+            this.graphics.drawRoundedRect(-35, -17 + 3, 70, 34, 8);
+            this.graphics.endFill();
+        }
+
+        // Button body
+        this.graphics.beginFill(buttonColor);
+        this.graphics.drawRoundedRect(-35, -17 + yOffset, 70, 34, 8);
+        this.graphics.endFill();
+
+        // Border (glow if hovered)
+        this.graphics.lineStyle(state === 1 ? 4 : 2, state === 1 ? 0xFFFFFF : 0x000000, state === 1 ? 0.8 : 1);
+        this.graphics.drawRoundedRect(-35, -17 + yOffset, 70, 34, 8);
+
+        // Highlight (top of button for 3D effect)
+        if (state !== 2) {
+            this.graphics.lineStyle(2, 0xFFFFFF, 0.5);
+            this.graphics.moveTo(-30, -12 + yOffset);
+            this.graphics.lineTo(30, -12 + yOffset);
+        }
+
+        // Key binding display
+        if (keyBinding && keyBinding !== '\0') {
+            const keyText = new PIXI.Text(keyBinding, {
+                fontSize: 18,
+                fill: isEnabled ? 0xFFFFFF : 0x888888,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 3
+            });
+            keyText.anchor.set(0.5);
+            keyText.y = yOffset;
+            this.graphics.addChild(keyText);
+        } else {
+            const icon = new PIXI.Text('●', {
+                fontSize: 20,
+                fill: isEnabled ? 0xFFFFFF : 0x888888
+            });
+            icon.anchor.set(0.5);
+            icon.y = yOffset;
+            this.graphics.addChild(icon);
+        }
+
+        // Label
+        const label = new PIXI.Text('Button', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 30;
+        this.graphics.addChild(label);
+
+        // Press count (if pressed)
+        if (pressCount > 0) {
+            const countText = new PIXI.Text(`×${pressCount}`, {
+                fontSize: 8,
+                fill: 0x00FF00,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2
+            });
+            countText.anchor.set(0.5);
+            countText.y = -28;
+            this.graphics.addChild(countText);
+        }
+
+        // State indicator
+        const stateNames = ['NORMAL', 'HOVER', 'PRESS', 'DISABLED'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: state === 2 ? 0xFFFF00 : (state === 3 ? 0xFF0000 : 0xCCCCCC),
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = 40;
+        this.graphics.addChild(stateText);
+    }
+
+    private drawStack(): void {
+        const stack = this.wasmSprite as ToonTalkStack;
+        const capacity = stack.getCapacity();
+        const count = stack.getCount();
+        const fullness = stack.getFullness();
+
+        // Stack container (vertical structure - orange/brown)
+        this.graphics.beginFill(0xD2691E);
+        this.graphics.drawRoundedRect(-40, -60, 80, 120, 5);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x8B4513);
+        this.graphics.drawRoundedRect(-40, -60, 80, 120, 5);
+
+        // Label at top
+        const label = new PIXI.Text('Stack', {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = -48;
+        this.graphics.addChild(label);
+
+        // Draw stack items (from bottom to top)
+        const itemHeight = 8;
+        const maxVisibleItems = 10;
+        const visibleItems = Math.min(count, maxVisibleItems);
+
+        for (let i = 0; i < visibleItems; i++) {
+            const itemY = 50 - (i * itemHeight);
+            const itemColor = i === visibleItems - 1 ? 0xFFD700 : 0xFF8C00; // Top item is gold
+
+            this.graphics.beginFill(itemColor);
+            this.graphics.drawRect(-35, itemY - itemHeight, 70, itemHeight - 1);
+            this.graphics.endFill();
+
+            // Item border
+            this.graphics.lineStyle(1, 0x654321);
+            this.graphics.drawRect(-35, itemY - itemHeight, 70, itemHeight - 1);
+        }
+
+        // If more items than visible, show indicator
+        if (count > maxVisibleItems) {
+            const moreText = new PIXI.Text(`+${count - maxVisibleItems}`, {
+                fontSize: 8,
+                fill: 0xFFFF00,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2
+            });
+            moreText.anchor.set(0.5);
+            moreText.y = 50 - (maxVisibleItems * itemHeight) - 8;
+            this.graphics.addChild(moreText);
+        }
+
+        // Fullness bar
+        const barHeight = 100 * fullness;
+        this.graphics.beginFill(0x90EE90, 0.4);
+        this.graphics.drawRect(-38, 58 - barHeight, 6, barHeight);
+        this.graphics.endFill();
+
+        // Count display
+        const countText = new PIXI.Text(`${count}`, {
+            fontSize: 18,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 3
+        });
+        countText.anchor.set(0.5);
+        countText.y = -15;
+        this.graphics.addChild(countText);
+
+        // Capacity text
+        const capacityText = new PIXI.Text(`/ ${capacity}`, {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        capacityText.anchor.set(0.5);
+        capacityText.y = 5;
+        this.graphics.addChild(capacityText);
+
+        // LIFO indicator
+        const lifoText = new PIXI.Text('LIFO', {
+            fontSize: 8,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        lifoText.anchor.set(0.5);
+        lifoText.y = 45;
+        this.graphics.addChild(lifoText);
+
+        // Arrow pointing up (showing push direction)
+        if (count < capacity) {
+            this.graphics.lineStyle(2, 0x00FF00);
+            const arrowY = 50 - (visibleItems * itemHeight) - 15;
+            this.graphics.moveTo(-8, arrowY + 5);
+            this.graphics.lineTo(0, arrowY - 5);
+            this.graphics.lineTo(8, arrowY + 5);
+        }
     }
 
     /**

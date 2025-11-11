@@ -35,6 +35,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Expander: typeof ToonTalkExpander;
     Copier: typeof ToonTalkCopier;
     Eraser: typeof ToonTalkEraser;
+    Cubby: typeof ToonTalkCubby;
+    Button: typeof ToonTalkButton;
+    Stack: typeof ToonTalkStack;
 
     // Enums
     WandMode: typeof WandMode;
@@ -51,6 +54,7 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     ExpanderState: typeof ExpanderState;
     CopierState: typeof CopierState;
     EraserState: typeof EraserState;
+    ButtonState: typeof ButtonState;
 }
 
 /**
@@ -565,6 +569,71 @@ export enum EraserState {
     READY = 0,
     ERASING = 1,
     DONE = 2
+}
+
+/**
+ * Cubby class (matches objects.cpp) - Multi-hole container with labels
+ */
+export declare class ToonTalkCubby extends Sprite {
+    constructor(x: number, y: number, numHoles?: number);
+    getNumHoles(): number;
+    getFilledCount(): number;
+    isHoleFilled(index: number): boolean;
+    setHoleFilled(index: number, filled: boolean): void;
+    getHoleLabel(index: number): string;
+    setHoleLabel(index: number, label: string): void;
+    isFull(): boolean;
+    isEmpty(): boolean;
+    clear(): void;
+    delete(): void;
+}
+
+/**
+ * Button class (matches objects.cpp) - UI control with keyboard binding
+ */
+export declare class ToonTalkButton extends Sprite {
+    constructor(x: number, y: number, keyBinding?: string);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getKeyBinding(): string;
+    setKeyBinding(key: string): void;
+    getPressCount(): number;
+    setPressCount(count: number): void;
+    isEnabled(): boolean;
+    setEnabled(enabled: boolean): void;
+    press(): void;
+    release(): void;
+    hover(): void;
+    unhover(): void;
+    delete(): void;
+}
+
+/**
+ * Button state enum (matches objects.cpp)
+ */
+export enum ButtonState {
+    NORMAL = 0,
+    HOVERED = 1,
+    PRESSED = 2,
+    DISABLED = 3
+}
+
+/**
+ * Stack class (matches objects.cpp) - LIFO data structure
+ */
+export declare class ToonTalkStack extends Sprite {
+    constructor(x: number, y: number, capacity?: number);
+    getCapacity(): number;
+    getCount(): number;
+    isFull(): boolean;
+    isEmpty(): boolean;
+    getFullness(): number;
+    push(): boolean;
+    pop(): boolean;
+    peek(): number;
+    clear(): void;
+    setCapacity(capacity: number): void;
+    delete(): void;
 }
 
 /**

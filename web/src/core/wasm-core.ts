@@ -399,6 +399,71 @@ export class WasmCore {
             console.log('[WASM Test] ⏭️  Skipping Eraser (not in WASM binary yet - rebuild required)');
         }
 
+        // Test 27: Create Cubby (if available in WASM)
+        if (this.module.Cubby) {
+            const cubby = new this.module.Cubby(2200, 100, 5);
+            console.log('[WASM Test] Created Cubby at:', cubby.getX(), cubby.getY());
+            console.log('[WASM Test] Number of holes:', cubby.getNumHoles());
+            console.log('[WASM Test] Filled count:', cubby.getFilledCount());
+            cubby.setHoleLabel(0, 'A');
+            cubby.setHoleLabel(1, 'B');
+            cubby.setHoleLabel(2, 'C');
+            console.log('[WASM Test] Set labels A, B, C');
+            cubby.setHoleFilled(0, true);
+            cubby.setHoleFilled(2, true);
+            console.log('[WASM Test] Filled holes 0 and 2 - Count:', cubby.getFilledCount());
+            console.log('[WASM Test] Hole 0 filled:', cubby.isHoleFilled(0), '- Label:', cubby.getHoleLabel(0));
+            console.log('[WASM Test] Hole 1 filled:', cubby.isHoleFilled(1), '- Label:', cubby.getHoleLabel(1));
+            console.log('[WASM Test] isFull:', cubby.isFull(), '- isEmpty:', cubby.isEmpty());
+            cubby.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Cubby (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 28: Create Button (if available in WASM)
+        if (this.module.Button) {
+            const button = new this.module.Button(2300, 100, 'S');
+            console.log('[WASM Test] Created Button at:', button.getX(), button.getY());
+            console.log('[WASM Test] Button state:', button.getStateInt(), '(NORMAL=0)');
+            console.log('[WASM Test] Key binding:', button.getKeyBinding());
+            console.log('[WASM Test] Press count:', button.getPressCount());
+            console.log('[WASM Test] Enabled:', button.isEnabled());
+            button.hover();
+            console.log('[WASM Test] After hover() - State:', button.getStateInt(), '(HOVERED=1)');
+            button.press();
+            console.log('[WASM Test] After press() - State:', button.getStateInt(), '(PRESSED=2) - Count:', button.getPressCount());
+            button.release();
+            console.log('[WASM Test] After release() - State:', button.getStateInt(), '(NORMAL=0)');
+            button.setEnabled(false);
+            console.log('[WASM Test] After setEnabled(false) - State:', button.getStateInt(), '(DISABLED=3)');
+            button.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Button (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 29: Create Stack (if available in WASM)
+        if (this.module.Stack) {
+            const stack = new this.module.Stack(2400, 100, 5);
+            console.log('[WASM Test] Created Stack at:', stack.getX(), stack.getY());
+            console.log('[WASM Test] Capacity:', stack.getCapacity());
+            console.log('[WASM Test] Count:', stack.getCount());
+            console.log('[WASM Test] isEmpty:', stack.isEmpty(), '- isFull:', stack.isFull());
+            stack.push();
+            stack.push();
+            stack.push();
+            console.log('[WASM Test] After 3 push() - Count:', stack.getCount(), '- Fullness:', stack.getFullness());
+            console.log('[WASM Test] Peek (top index):', stack.peek());
+            stack.pop();
+            console.log('[WASM Test] After pop() - Count:', stack.getCount());
+            stack.setCapacity(10);
+            console.log('[WASM Test] After setCapacity(10) - Capacity:', stack.getCapacity());
+            stack.clear();
+            console.log('[WASM Test] After clear() - Count:', stack.getCount(), '- isEmpty:', stack.isEmpty());
+            stack.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Stack (not in WASM binary yet - rebuild required)');
+        }
+
         console.log('[WASM Tests] ✅ All available tests passed!');
     }
 
@@ -648,6 +713,45 @@ export class WasmCore {
             throw new Error('Eraser class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
         }
         return new this.module.Eraser(x, y);
+    }
+
+    /**
+     * Create a Cubby instance from WASM
+     */
+    createCubby(x: number, y: number, numHoles: number = 4) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Cubby) {
+            throw new Error('Cubby class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Cubby(x, y, numHoles);
+    }
+
+    /**
+     * Create a Button instance from WASM
+     */
+    createButton(x: number, y: number, key: string = '') {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Button) {
+            throw new Error('Button class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Button(x, y, key);
+    }
+
+    /**
+     * Create a Stack instance from WASM
+     */
+    createStack(x: number, y: number, capacity: number = 10) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Stack) {
+            throw new Error('Stack class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Stack(x, y, capacity);
     }
 
     /**
