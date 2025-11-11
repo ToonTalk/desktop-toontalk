@@ -326,15 +326,19 @@ export class WasmSpriteView {
     private onDrag(event: PIXI.FederatedPointerEvent): void {
         if (!this.isDragging) return;
 
-        // Update position based on mouse position + offset
+        // Calculate new sprite position based on mouse + offset
         const newX = event.global.x + this.dragOffset.x;
         const newY = event.global.y + this.dragOffset.y;
 
         // Update WASM sprite position
         this.wasmSprite.setPosition(newX, newY);
 
-        // Check for drop targets
-        const targetUnderMouse = this.renderer.findSpriteAt(newX, newY, this);
+        // UX IMPROVEMENT: Use MOUSE position for collision detection
+        // Original ToonTalk uses sprite centers (see source/text.cpp:991-993)
+        // but using mouse position is more intuitive for web users
+        const mouseX = event.global.x;
+        const mouseY = event.global.y;
+        const targetUnderMouse = this.renderer.findSpriteAt(mouseX, mouseY, this);
 
         // Clear old drop target highlight
         if (this.dropTarget && this.dropTarget !== targetUnderMouse) {
@@ -346,9 +350,10 @@ export class WasmSpriteView {
         if (targetUnderMouse && targetUnderMouse.canAcceptDrop(this)) {
             this.dropTarget = targetUnderMouse;
 
-            // Determine if we're on the left or right half of the target
+            // UX IMPROVEMENT: Check if MOUSE (not sprite center) is left/right of target center
+            // More intuitive: where you point determines the result, not where sprite center lands
             const targetX = targetUnderMouse.getWasmSprite().getX();
-            this.dropOnLeftHalf = (newX < targetX);
+            this.dropOnLeftHalf = (mouseX < targetX);
 
             this.highlightDropTarget(this.dropTarget, this.dropOnLeftHalf);
         } else {
