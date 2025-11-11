@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -49,7 +49,7 @@ export class WasmSpriteView {
      */
     private getObjectType(): string {
         if ('setVelocity' in this.wasmSprite) return 'bird';
-        if ('getValue' in this.wasmSprite && !('getTypeInt' in this.wasmSprite)) return 'number';
+        if ('getValue' in this.wasmSprite && !('getTypeInt' in this.wasmSprite) && !('getOperand1' in this.wasmSprite)) return 'number';
         if ('getText' in this.wasmSprite) return 'text';
         if ('getNumHoles' in this.wasmSprite) return 'nest';
         if ('getCapacity' in this.wasmSprite) return 'box';
@@ -61,6 +61,9 @@ export class WasmSpriteView {
         if ('hasImage' in this.wasmSprite) return 'picture';
         if ('getTypeInt' in this.wasmSprite && 'getValue' in this.wasmSprite) return 'sensor';
         if ('getNumPages' in this.wasmSprite) return 'notebook';
+        if ('getFuseTime' in this.wasmSprite) return 'bomb';
+        if ('hasCubby' in this.wasmSprite) return 'thoughtbubble';
+        if ('getOperand1' in this.wasmSprite && 'doOperation' in this.wasmSprite) return 'mouse';
         return 'sprite';
     }
 
@@ -112,6 +115,15 @@ export class WasmSpriteView {
                 break;
             case 'notebook':
                 this.drawNotebook();
+                break;
+            case 'bomb':
+                this.drawBomb();
+                break;
+            case 'thoughtbubble':
+                this.drawThoughtBubble();
+                break;
+            case 'mouse':
+                this.drawMouse();
                 break;
             default:
                 this.drawGenericSprite();
@@ -914,6 +926,281 @@ export class WasmSpriteView {
         contentText.anchor.set(0.5);
         contentText.y = -40;
         this.graphics.addChild(contentText);
+    }
+
+    private drawBomb(): void {
+        const bomb = this.wasmSprite as ToonTalkBomb;
+        const state = bomb.getStateInt();
+        const timer = bomb.getTimer();
+        const fuseTime = bomb.getFuseTime();
+
+        // Bomb body (black/dark gray sphere)
+        this.graphics.beginFill(state === 2 ? 0xFF4500 : 0x2F2F2F); // Orange-red when exploding
+        this.graphics.drawCircle(0, 0, 25);
+        this.graphics.endFill();
+
+        // Border changes based on state
+        const stateColors = [
+            0x505050, // INACTIVE - gray
+            0xFF0000, // ARMED - red
+            0xFF8C00, // EXPLODING - orange
+            0x808080  // EXPLODED - gray
+        ];
+        this.graphics.lineStyle(3, stateColors[state] || 0x505050);
+        this.graphics.drawCircle(0, 0, 25);
+
+        // Fuse (curvy line to top)
+        if (state !== 3) { // Not exploded
+            this.graphics.lineStyle(2, 0x8B4513);
+            this.graphics.moveTo(0, -25);
+            this.graphics.bezierCurveTo(-5, -35, 5, -35, 0, -40);
+        }
+
+        // Spark at fuse end (if armed or exploding)
+        if (state === 1 || state === 2) {
+            const sparkSize = state === 2 ? 8 : 4;
+            this.graphics.beginFill(state === 2 ? 0xFFFF00 : 0xFFD700);
+            this.graphics.drawStar(0, -40, 4, sparkSize, sparkSize * 0.5);
+            this.graphics.endFill();
+        }
+
+        // Explosion effect (if exploding)
+        if (state === 2) {
+            for (let i = 0; i < 8; i++) {
+                const angle = (i / 8) * Math.PI * 2;
+                const distance = 35;
+                const x = Math.cos(angle) * distance;
+                const y = Math.sin(angle) * distance;
+                this.graphics.beginFill(0xFF4500, 0.7);
+                this.graphics.drawStar(x, y, 4, 8, 4);
+                this.graphics.endFill();
+            }
+        }
+
+        // Label
+        const label = new PIXI.Text('Bomb', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // State text
+        const stateNames = ['INACTIVE', 'ARMED', 'EXPLODING!', 'EXPLODED'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -28;
+        this.graphics.addChild(stateText);
+
+        // Timer display (if armed)
+        if (state === 1) {
+            const remaining = Math.max(0, fuseTime - timer);
+            const timerText = new PIXI.Text(`${remaining.toFixed(1)}s`, {
+                fontSize: 12,
+                fill: remaining < 1 ? 0xFF0000 : 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2
+            });
+            timerText.anchor.set(0.5);
+            timerText.y = 0;
+            this.graphics.addChild(timerText);
+        }
+
+        // Explosion icon
+        if (state === 2 || state === 3) {
+            const icon = new PIXI.Text('💥', {
+                fontSize: 24
+            });
+            icon.anchor.set(0.5);
+            icon.y = 0;
+            this.graphics.addChild(icon);
+        }
+    }
+
+    private drawThoughtBubble(): void {
+        const bubble = this.wasmSprite as ToonTalkThoughtBubble;
+        const hasCubby = bubble.hasCubby();
+        const cubbyId = bubble.getCubbyId();
+
+        // Main thought bubble (white cloud)
+        this.graphics.beginFill(0xFFFFFF, 0.9);
+        this.graphics.drawEllipse(0, -10, 50, 40);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(2, 0x888888);
+        this.graphics.drawEllipse(0, -10, 50, 40);
+
+        // Small thought bubbles (descending)
+        this.graphics.beginFill(0xFFFFFF, 0.9);
+        this.graphics.drawCircle(-25, 20, 10);
+        this.graphics.drawCircle(-35, 30, 6);
+        this.graphics.endFill();
+
+        this.graphics.lineStyle(2, 0x888888);
+        this.graphics.drawCircle(-25, 20, 10);
+        this.graphics.drawCircle(-35, 30, 6);
+
+        // Content indicator
+        if (hasCubby) {
+            // Show robot program icon
+            const icon = new PIXI.Text('🤖', {
+                fontSize: 24
+            });
+            icon.anchor.set(0.5);
+            icon.position.set(0, -15);
+            this.graphics.addChild(icon);
+
+            // Cubby ID
+            const idText = new PIXI.Text(`#${cubbyId}`, {
+                fontSize: 10,
+                fill: 0x0000FF,
+                fontWeight: 'bold',
+                stroke: 0xFFFFFF,
+                strokeThickness: 2
+            });
+            idText.anchor.set(0.5);
+            idText.y = 5;
+            this.graphics.addChild(idText);
+        } else {
+            // Empty thought
+            const emptyText = new PIXI.Text('...', {
+                fontSize: 20,
+                fill: 0x888888
+            });
+            emptyText.anchor.set(0.5);
+            emptyText.y = -15;
+            this.graphics.addChild(emptyText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Thought', {
+            fontSize: 10,
+            fill: 0x000000,
+            fontWeight: 'bold',
+            stroke: 0xFFFFFF,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 45;
+        this.graphics.addChild(label);
+    }
+
+    private drawMouse(): void {
+        const mouse = this.wasmSprite as ToonTalkMouse;
+        const state = mouse.getStateInt();
+        const operation = mouse.getOperationInt();
+        const result = mouse.getResult();
+
+        // Mouse body (gray, rounded)
+        this.graphics.beginFill(0x808080);
+        this.graphics.drawEllipse(0, 0, 30, 25);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(2, 0x505050);
+        this.graphics.drawEllipse(0, 0, 30, 25);
+
+        // Ears
+        this.graphics.beginFill(0x909090);
+        this.graphics.drawCircle(-20, -15, 12);
+        this.graphics.drawCircle(20, -15, 12);
+        this.graphics.endFill();
+
+        // Eyes
+        const eyeColor = state === 1 ? 0xFFFF00 : (state === 2 ? 0xFF0000 : 0x000000);
+        this.graphics.beginFill(eyeColor);
+        this.graphics.drawCircle(-10, -5, 4);
+        this.graphics.drawCircle(10, -5, 4);
+        this.graphics.endFill();
+
+        // Nose
+        this.graphics.beginFill(0xFF69B4);
+        this.graphics.drawCircle(0, 5, 3);
+        this.graphics.endFill();
+
+        // Tail (curvy)
+        this.graphics.lineStyle(2, 0x505050);
+        this.graphics.moveTo(28, 0);
+        this.graphics.bezierCurveTo(40, -10, 45, 10, 50, 0);
+
+        // Hammer (if working or smashing)
+        if (state === 1 || state === 2) {
+            const hammerY = state === 2 ? 15 : -5; // Raised when smashing
+            // Handle
+            this.graphics.beginFill(0x8B4513);
+            this.graphics.drawRect(-5, hammerY, 3, 20);
+            this.graphics.endFill();
+
+            // Head
+            this.graphics.beginFill(0x696969);
+            this.graphics.drawRect(-10, hammerY, 13, 8);
+            this.graphics.endFill();
+        }
+
+        // Label
+        const label = new PIXI.Text('Mouse', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 35;
+        this.graphics.addChild(label);
+
+        // Operation symbol
+        const opSymbols = ['+', '-', '×', '÷', ''];
+        if (operation < 4) {
+            const opText = new PIXI.Text(opSymbols[operation], {
+                fontSize: 16,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2
+            });
+            opText.anchor.set(0.5);
+            opText.y = -25;
+            this.graphics.addChild(opText);
+        }
+
+        // Result (if smashing)
+        if (state === 2 && result !== 0) {
+            const resultText = new PIXI.Text(`=${result.toFixed(1)}`, {
+                fontSize: 10,
+                fill: 0x00FF00,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2
+            });
+            resultText.anchor.set(0.5);
+            resultText.y = 25;
+            this.graphics.addChild(resultText);
+        }
+
+        // State indicator
+        const stateNames = ['IDLE', 'WORKING', 'SMASHING'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: state === 0 ? 0xCCCCCC : (state === 1 ? 0xFFFF00 : 0xFF0000),
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = 45;
+        this.graphics.addChild(stateText);
     }
 
     private drawGenericSprite(): void {

@@ -621,6 +621,213 @@ private:
     std::vector<bool> page_has_content_;
 };
 
+/**
+ * Bomb class - Explosive tool for destroying/transforming objects
+ * Based on ../source/bomb.h - simplified version
+ */
+class Bomb : public Sprite {
+public:
+    enum BombState {
+        INACTIVE = 0,
+        ARMED = 1,
+        EXPLODING = 2,
+        EXPLODED = 3
+    };
+
+    Bomb(float x, float y)
+        : Sprite(x, y, 50.0f, 70.0f), state_(INACTIVE), fuse_time_(3.0f), timer_(0.0f) {}
+
+    // Get/set bomb state
+    BombState getState() const { return state_; }
+    void setState(BombState state) { state_ = state; }
+
+    // Get state as integer (for JS binding)
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= INACTIVE && state <= EXPLODED) {
+            state_ = static_cast<BombState>(state);
+        }
+    }
+
+    // Fuse management
+    float getFuseTime() const { return fuse_time_; }
+    void setFuseTime(float time) { fuse_time_ = time; }
+
+    float getTimer() const { return timer_; }
+    void setTimer(float time) { timer_ = time; }
+
+    // Actions
+    void arm() {
+        state_ = ARMED;
+        timer_ = 0.0f;
+    }
+
+    void explode() {
+        state_ = EXPLODING;
+    }
+
+    void reset() {
+        state_ = INACTIVE;
+        timer_ = 0.0f;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+
+        // Count down when armed
+        if (state_ == ARMED) {
+            timer_ += deltaTime / 1000.0f; // deltaTime is in ms
+            if (timer_ >= fuse_time_) {
+                state_ = EXPLODING;
+            }
+        }
+    }
+
+private:
+    BombState state_;
+    float fuse_time_;  // Seconds until explosion
+    float timer_;      // Current countdown timer
+};
+
+/**
+ * Thought_Bubble class - Container for Robot's program
+ * Based on ../source/thought.h - simplified version
+ */
+class Thought_Bubble : public Sprite {
+public:
+    Thought_Bubble(float x, float y)
+        : Sprite(x, y, 100.0f, 80.0f), has_cubby_(false), cubby_id_(-1) {}
+
+    // Cubby management (simplified - just track if it has one)
+    bool hasCubby() const { return has_cubby_; }
+    void setHasCubby(bool has_cubby) { has_cubby_ = has_cubby; }
+
+    // Cubby ID (reference to what the robot should do)
+    int getCubbyId() const { return cubby_id_; }
+    void setCubbyId(int id) {
+        cubby_id_ = id;
+        has_cubby_ = (id >= 0);
+    }
+
+    void clearCubby() {
+        has_cubby_ = false;
+        cubby_id_ = -1;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Thought bubbles are static displays
+    }
+
+private:
+    bool has_cubby_;
+    int cubby_id_;  // Simplified reference to program
+};
+
+/**
+ * Mouse class - Animated operator that performs math operations
+ * Based on ../source/mouse.h - simplified version
+ */
+class Mouse : public Sprite {
+public:
+    enum MouseState {
+        IDLE = 0,
+        WORKING = 1,
+        SMASHING = 2
+    };
+
+    enum Operation {
+        ADD = 0,
+        SUBTRACT = 1,
+        MULTIPLY = 2,
+        DIVIDE = 3,
+        NONE = 4
+    };
+
+    Mouse(float x, float y)
+        : Sprite(x, y, 60.0f, 60.0f), state_(IDLE), operation_(NONE),
+          operand1_(0.0), operand2_(0.0), result_(0.0) {}
+
+    // Get/set mouse state
+    MouseState getState() const { return state_; }
+    void setState(MouseState state) { state_ = state; }
+
+    // Get state as integer (for JS binding)
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= IDLE && state <= SMASHING) {
+            state_ = static_cast<MouseState>(state);
+        }
+    }
+
+    // Get/set operation
+    Operation getOperation() const { return operation_; }
+    void setOperation(Operation op) { operation_ = op; }
+
+    // Get operation as integer (for JS binding)
+    int getOperationInt() const { return static_cast<int>(operation_); }
+    void setOperationInt(int op) {
+        if (op >= ADD && op <= NONE) {
+            operation_ = static_cast<Operation>(op);
+        }
+    }
+
+    // Operands and result
+    double getOperand1() const { return operand1_; }
+    void setOperand1(double value) { operand1_ = value; }
+
+    double getOperand2() const { return operand2_; }
+    void setOperand2(double value) { operand2_ = value; }
+
+    double getResult() const { return result_; }
+
+    // Perform operation
+    void doOperation() {
+        state_ = WORKING;
+
+        switch (operation_) {
+            case ADD:
+                result_ = operand1_ + operand2_;
+                break;
+            case SUBTRACT:
+                result_ = operand1_ - operand2_;
+                break;
+            case MULTIPLY:
+                result_ = operand1_ * operand2_;
+                break;
+            case DIVIDE:
+                result_ = (operand2_ != 0.0) ? (operand1_ / operand2_) : 0.0;
+                break;
+            case NONE:
+                result_ = 0.0;
+                break;
+        }
+
+        // After operation, go to smashing state
+        state_ = SMASHING;
+    }
+
+    void finishOperation() {
+        state_ = IDLE;
+        operation_ = NONE;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Mouse animates during work/smashing
+    }
+
+private:
+    MouseState state_;
+    Operation operation_;
+    double operand1_;
+    double operand2_;
+    double result_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -772,4 +979,59 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("pageHasContent", &Notebook::pageHasContent)
         .function("setPageContent", &Notebook::setPageContent)
         .function("countPagesWithContent", &Notebook::countPagesWithContent);
+
+    class_<Bomb, base<Sprite>>("Bomb")
+        .constructor<float, float>()
+        .function("getStateInt", &Bomb::getStateInt)
+        .function("setStateInt", &Bomb::setStateInt)
+        .function("getFuseTime", &Bomb::getFuseTime)
+        .function("setFuseTime", &Bomb::setFuseTime)
+        .function("getTimer", &Bomb::getTimer)
+        .function("setTimer", &Bomb::setTimer)
+        .function("arm", &Bomb::arm)
+        .function("explode", &Bomb::explode)
+        .function("reset", &Bomb::reset);
+
+    // Bomb state enum values
+    enum_<Bomb::BombState>("BombState")
+        .value("INACTIVE", Bomb::INACTIVE)
+        .value("ARMED", Bomb::ARMED)
+        .value("EXPLODING", Bomb::EXPLODING)
+        .value("EXPLODED", Bomb::EXPLODED);
+
+    class_<Thought_Bubble, base<Sprite>>("Thought_Bubble")
+        .constructor<float, float>()
+        .function("hasCubby", &Thought_Bubble::hasCubby)
+        .function("setHasCubby", &Thought_Bubble::setHasCubby)
+        .function("getCubbyId", &Thought_Bubble::getCubbyId)
+        .function("setCubbyId", &Thought_Bubble::setCubbyId)
+        .function("clearCubby", &Thought_Bubble::clearCubby);
+
+    class_<Mouse, base<Sprite>>("Mouse")
+        .constructor<float, float>()
+        .function("getStateInt", &Mouse::getStateInt)
+        .function("setStateInt", &Mouse::setStateInt)
+        .function("getOperationInt", &Mouse::getOperationInt)
+        .function("setOperationInt", &Mouse::setOperationInt)
+        .function("getOperand1", &Mouse::getOperand1)
+        .function("setOperand1", &Mouse::setOperand1)
+        .function("getOperand2", &Mouse::getOperand2)
+        .function("setOperand2", &Mouse::setOperand2)
+        .function("getResult", &Mouse::getResult)
+        .function("doOperation", &Mouse::doOperation)
+        .function("finishOperation", &Mouse::finishOperation);
+
+    // Mouse state enum values
+    enum_<Mouse::MouseState>("MouseState")
+        .value("IDLE", Mouse::IDLE)
+        .value("WORKING", Mouse::WORKING)
+        .value("SMASHING", Mouse::SMASHING);
+
+    // Mouse operation enum values
+    enum_<Mouse::Operation>("MouseOperation")
+        .value("ADD", Mouse::ADD)
+        .value("SUBTRACT", Mouse::SUBTRACT)
+        .value("MULTIPLY", Mouse::MULTIPLY)
+        .value("DIVIDE", Mouse::DIVIDE)
+        .value("NONE", Mouse::NONE);
 }
