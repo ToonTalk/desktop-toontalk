@@ -53,6 +53,11 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Sequencer: typeof ToonTalkSequencer;
     Trigger: typeof ToonTalkTrigger;
     Scheduler: typeof ToonTalkScheduler;
+    CollisionManager: typeof CollisionManager;
+    AnimationController: typeof AnimationController;
+    SceneManager: typeof SceneManager;
+    EntityManager: typeof EntityManager;
+    InputManager: typeof InputManager;
 
     // Enums
     WandMode: typeof WandMode;
@@ -91,6 +96,11 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     TriggerState: typeof TriggerState;
     SchedulerMode: typeof SchedulerMode;
     SchedulerState: typeof SchedulerState;
+    EasingType: typeof EasingType;
+    LayerType: typeof LayerType;
+    GestureType: typeof GestureType;
+    VectorInt: any;  // Emscripten vector binding
+    VectorString: any;  // Emscripten vector binding
 }
 
 /**
@@ -1183,6 +1193,127 @@ export enum SchedulerState {
     WAITING = 1,
     READY = 2,
     EXECUTING = 3
+}
+
+/**
+ * CollisionManager - Spatial partitioning and collision detection
+ */
+export declare class CollisionManager {
+    constructor(worldWidth: number, worldHeight: number, maxDepth?: number);
+    addObject(x: number, y: number, width: number, height: number): number;
+    updateObject(id: number, x: number, y: number, width: number, height: number): void;
+    removeObject(id: number): void;
+    checkCollision(id1: number, id2: number): boolean;
+    queryPoint(x: number, y: number): number[];
+    queryRegion(x: number, y: number, width: number, height: number): number[];
+    rayCast(startX: number, startY: number, dirX: number, dirY: number, maxDist: number): number;
+    clear(): void;
+    getObjectCount(): number;
+    delete(): void;
+}
+
+/**
+ * AnimationController - Tweening and easing system
+ */
+export declare class AnimationController {
+    constructor();
+    animate(startValue: number, endValue: number, duration: number, easing?: EasingType): number;
+    update(deltaTime: number): void;
+    getValue(id: number): number;
+    isActive(id: number): boolean;
+    stop(id: number): void;
+    clear(): void;
+    getActiveCount(): number;
+    delete(): void;
+}
+
+export enum EasingType {
+    LINEAR = 0,
+    EASE_IN_QUAD = 1,
+    EASE_OUT_QUAD = 2,
+    EASE_IN_OUT_QUAD = 3,
+    EASE_IN_CUBIC = 4,
+    EASE_OUT_CUBIC = 5,
+    EASE_IN_OUT_CUBIC = 6,
+    EASE_IN_ELASTIC = 7,
+    EASE_OUT_ELASTIC = 8,
+    EASE_IN_BOUNCE = 9,
+    EASE_OUT_BOUNCE = 10
+}
+
+/**
+ * SceneManager - Layer and camera management
+ */
+export declare class SceneManager {
+    constructor(viewportWidth: number, viewportHeight: number);
+    setCameraPosition(x: number, y: number): void;
+    getCameraX(): number;
+    getCameraY(): number;
+    setCameraZoom(zoom: number): void;
+    getCameraZoom(): number;
+    moveCamera(dx: number, dy: number): void;
+    isVisible(worldX: number, worldY: number, width: number, height: number): boolean;
+    setViewportSize(width: number, height: number): void;
+    getViewportWidth(): number;
+    getViewportHeight(): number;
+    delete(): void;
+}
+
+export enum LayerType {
+    BACKGROUND = 0,
+    GAME = 1,
+    UI = 2,
+    OVERLAY = 3
+}
+
+/**
+ * EntityManager - Simple entity component system
+ */
+export declare class EntityManager {
+    constructor();
+    createEntity(type: string): number;
+    destroyEntity(id: number): void;
+    hasEntity(id: number): boolean;
+    getEntityType(id: number): string;
+    setActive(id: number, active: boolean): void;
+    isActive(id: number): boolean;
+    setComponent(id: number, key: string, value: number): void;
+    getComponent(id: number, key: string): number;
+    hasComponent(id: number, key: string): boolean;
+    getEntitiesByType(type: string): number[];
+    getEntityCount(): number;
+    clear(): void;
+    delete(): void;
+}
+
+/**
+ * InputManager - Abstract input handling and gesture recognition
+ */
+export declare class InputManager {
+    constructor();
+    update(deltaTime: number): void;
+    onPointerDown(x: number, y: number): void;
+    onPointerUp(x: number, y: number): void;
+    getLastGesture(): GestureType;
+    clearGesture(): void;
+    recordCommand(command: string): void;
+    getCommands(): string[];
+    clearCommands(): void;
+    hasCommands(): boolean;
+    getCommandCount(): number;
+    delete(): void;
+}
+
+export enum GestureType {
+    NONE = 0,
+    TAP = 1,
+    DOUBLE_TAP = 2,
+    SWIPE_LEFT = 3,
+    SWIPE_RIGHT = 4,
+    SWIPE_UP = 5,
+    SWIPE_DOWN = 6,
+    PINCH_IN = 7,
+    PINCH_OUT = 8
 }
 
 /**
