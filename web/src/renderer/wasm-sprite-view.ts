@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -67,6 +67,9 @@ export class WasmSpriteView {
         if ('getSuckedCount' in this.wasmSprite) return 'vacuum';
         if ('hasBalloon' in this.wasmSprite && 'teleportIn' in this.wasmSprite) return 'martian';
         if ('getSelectedStack' in this.wasmSprite && 'getStackCount' in this.wasmSprite) return 'toolbox';
+        if ('getScaleFactor' in this.wasmSprite && 'expand' in this.wasmSprite) return 'expander';
+        if ('getCopyCount' in this.wasmSprite && 'makeCopy' in this.wasmSprite) return 'copier';
+        if ('getErasedCount' in this.wasmSprite && 'getEraseProgress' in this.wasmSprite) return 'eraser';
         return 'sprite';
     }
 
@@ -136,6 +139,15 @@ export class WasmSpriteView {
                 break;
             case 'toolbox':
                 this.drawToolbox();
+                break;
+            case 'expander':
+                this.drawExpander();
+                break;
+            case 'copier':
+                this.drawCopier();
+                break;
+            case 'eraser':
+                this.drawEraser();
                 break;
             default:
                 this.drawGenericSprite();
@@ -1518,6 +1530,268 @@ export class WasmSpriteView {
         });
         stateText.anchor.set(0.5);
         stateText.y = -height / 2 - 10;
+        this.graphics.addChild(stateText);
+    }
+
+    private drawExpander(): void {
+        const expander = this.wasmSprite as ToonTalkExpander;
+        const state = expander.getStateInt();
+        const scale = expander.getScaleFactor();
+        const targetScale = expander.getTargetScale();
+
+        // Bike pump body (cylindrical with handle)
+        const bodyColor = state < 3 ? 0xFF6347 : 0x4682B4; // Red for expand, blue for shrink
+
+        // Pump cylinder
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-15, -30, 30, 60, 5);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(2, 0x000000);
+        this.graphics.drawRoundedRect(-15, -30, 30, 60, 5);
+
+        // Handle (moves based on scale)
+        const handleY = -40 - (scale * 10);
+        this.graphics.lineStyle(4, 0x8B4513);
+        this.graphics.moveTo(-20, handleY);
+        this.graphics.lineTo(20, handleY);
+
+        // Piston rod
+        this.graphics.lineStyle(3, 0x696969);
+        this.graphics.moveTo(0, handleY);
+        this.graphics.lineTo(0, -30);
+
+        // Direction arrows
+        if (state < 3) { // Expanding
+            // Up arrows
+            for (let i = 0; i < 3; i++) {
+                const arrowY = -10 + i * 15;
+                this.graphics.lineStyle(2, 0xFFFF00);
+                this.graphics.moveTo(-10, arrowY);
+                this.graphics.lineTo(0, arrowY - 10);
+                this.graphics.lineTo(10, arrowY);
+            }
+        } else if (state < 6) { // Shrinking
+            // Down arrows
+            for (let i = 0; i < 3; i++) {
+                const arrowY = -10 + i * 15;
+                this.graphics.lineStyle(2, 0x00FFFF);
+                this.graphics.moveTo(-10, arrowY - 10);
+                this.graphics.lineTo(0, arrowY);
+                this.graphics.lineTo(10, arrowY - 10);
+            }
+        }
+
+        // Scale display
+        const scaleText = new PIXI.Text(`×${scale.toFixed(2)}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 3
+        });
+        scaleText.anchor.set(0.5);
+        scaleText.y = 0;
+        this.graphics.addChild(scaleText);
+
+        // Label
+        const label = new PIXI.Text('Expander', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 45;
+        this.graphics.addChild(label);
+
+        // State text
+        const stateNames = ['BIGGER', 'TALLER', 'WIDER', 'SMALLER', 'SHORTER', 'NARROWER', 'GOOD'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: state < 3 ? 0xFF6347 : 0x4682B4,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -45;
+        this.graphics.addChild(stateText);
+    }
+
+    private drawCopier(): void {
+        const copier = this.wasmSprite as ToonTalkCopier;
+        const state = copier.getStateInt();
+        const copyCount = copier.getCopyCount();
+        const hasAttached = copier.hasAttached();
+
+        // Magic wand star tip
+        this.graphics.beginFill(0xFFD700); // Gold star
+        this.drawStar(0, -25, 5, 12, 6);
+        this.graphics.endFill();
+
+        // Sparkles around star when active
+        if (hasAttached) {
+            for (let i = 0; i < 4; i++) {
+                const angle = (i / 4) * Math.PI * 2;
+                const distance = 20;
+                const x = Math.cos(angle) * distance;
+                const y = -25 + Math.sin(angle) * distance;
+                this.graphics.beginFill(0xFFFFFF, 0.7);
+                this.drawStar(x, y, 4, 5, 2.5);
+                this.graphics.endFill();
+            }
+        }
+
+        // Wand handle
+        this.graphics.beginFill(0x8B4513); // Brown
+        this.graphics.drawRect(-3, -20, 6, 40);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(2, 0x000000);
+        this.graphics.drawRect(-3, -20, 6, 40);
+
+        // Copy icon
+        if (hasAttached) {
+            const icon = new PIXI.Text('📋', {
+                fontSize: 20
+            });
+            icon.anchor.set(0.5);
+            icon.y = 5;
+            this.graphics.addChild(icon);
+        }
+
+        // Copy counter
+        if (copyCount > 0) {
+            const counterText = new PIXI.Text(`${copyCount}`, {
+                fontSize: 14,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 3,
+                backgroundColor: 0xFF6347,
+                padding: 2
+            });
+            counterText.anchor.set(0.5);
+            counterText.x = 20;
+            counterText.y = -25;
+            this.graphics.addChild(counterText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Copier', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // State text
+        const stateNames = ['NORMAL', 'ORIGINAL', 'SELF'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: 0xFFD700,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -40;
+        this.graphics.addChild(stateText);
+    }
+
+    private drawEraser(): void {
+        const eraser = this.wasmSprite as ToonTalkEraser;
+        const state = eraser.getStateInt();
+        const erasedCount = eraser.getErasedCount();
+        const progress = eraser.getEraseProgress();
+
+        // Eraser body (pink eraser shape)
+        this.graphics.beginFill(state === 1 ? 0xFF69B4 : 0xFFC0CB); // Brighter when erasing
+        this.graphics.drawRoundedRect(-20, -25, 40, 50, 8);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(2, 0x000000);
+        this.graphics.drawRoundedRect(-20, -25, 40, 50, 8);
+
+        // Eraser stripes (texture)
+        this.graphics.lineStyle(1, 0xFFB6C1);
+        for (let i = 0; i < 3; i++) {
+            const y = -15 + i * 12;
+            this.graphics.moveTo(-15, y);
+            this.graphics.lineTo(15, y);
+        }
+
+        // Erasing effect (particles)
+        if (state === 1) {
+            for (let i = 0; i < 8; i++) {
+                const angle = (i / 8) * Math.PI * 2 + Date.now() / 200;
+                const distance = 25 + progress * 10;
+                const x = Math.cos(angle) * distance;
+                const y = Math.sin(angle) * distance;
+                const alpha = 1 - progress;
+                this.graphics.beginFill(0xFFFFFF, alpha);
+                this.graphics.drawCircle(x, y, 3);
+                this.graphics.endFill();
+            }
+        }
+
+        // Progress bar (when erasing)
+        if (state === 1) {
+            this.graphics.lineStyle(0);
+            this.graphics.beginFill(0xFF0000, 0.3);
+            this.graphics.drawRect(-20, -30, 40, 4);
+            this.graphics.endFill();
+            this.graphics.beginFill(0x00FF00);
+            this.graphics.drawRect(-20, -30, 40 * progress, 4);
+            this.graphics.endFill();
+        }
+
+        // Erased count
+        if (erasedCount > 0) {
+            const counterText = new PIXI.Text(`${erasedCount}`, {
+                fontSize: 16,
+                fill: 0xFF0000,
+                fontWeight: 'bold',
+                stroke: 0xFFFFFF,
+                strokeThickness: 3
+            });
+            counterText.anchor.set(0.5);
+            counterText.y = 0;
+            this.graphics.addChild(counterText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Eraser', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 35;
+        this.graphics.addChild(label);
+
+        // State text
+        const stateNames = ['READY', 'ERASING', 'DONE'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: state === 1 ? 0xFF0000 : 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -38;
         this.graphics.addChild(stateText);
     }
 

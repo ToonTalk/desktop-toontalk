@@ -338,6 +338,67 @@ export class WasmCore {
             console.log('[WASM Test] ⏭️  Skipping Toolbox (not in WASM binary yet - rebuild required)');
         }
 
+        // Test 24: Create Expander (if available in WASM)
+        if (this.module.Expander) {
+            const expander = new this.module.Expander(1900, 100);
+            console.log('[WASM Test] Created Expander at:', expander.getX(), expander.getY());
+            console.log('[WASM Test] Expander state:', expander.getStateInt(), '(BIGGER=0)');
+            console.log('[WASM Test] Scale factor:', expander.getScaleFactor());
+            expander.expand();
+            expander.expand();
+            console.log('[WASM Test] After 2 expand():', expander.getTargetScale());
+            expander.setStateInt(3); // SMALLER
+            console.log('[WASM Test] Changed to SMALLER:', expander.getStateInt());
+            expander.shrink();
+            console.log('[WASM Test] After shrink():', expander.getTargetScale());
+            expander.setGoodSize();
+            console.log('[WASM Test] After setGoodSize() - State:', expander.getStateInt(), '(GOOD_SIZE=6) - Scale:', expander.getTargetScale());
+            expander.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Expander (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 25: Create Copier (if available in WASM)
+        if (this.module.Copier) {
+            const copier = new this.module.Copier(2000, 100);
+            console.log('[WASM Test] Created Copier at:', copier.getX(), copier.getY());
+            console.log('[WASM Test] Copier state:', copier.getStateInt(), '(NORMAL=0)');
+            console.log('[WASM Test] Copy count:', copier.getCopyCount());
+            console.log('[WASM Test] Max copies:', copier.getMaxCopies(), '(-1=infinite)');
+            copier.setHasAttached(true);
+            console.log('[WASM Test] After setHasAttached(true):', copier.hasAttached());
+            copier.makeCopy();
+            copier.makeCopy();
+            copier.makeCopy();
+            console.log('[WASM Test] After 3 makeCopy():', copier.getCopyCount());
+            copier.setMaxCopies(5);
+            console.log('[WASM Test] Set max copies to 5:', copier.getMaxCopies());
+            copier.reset();
+            console.log('[WASM Test] After reset() - Count:', copier.getCopyCount(), '- HasAttached:', copier.hasAttached());
+            copier.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Copier (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 26: Create Eraser (if available in WASM)
+        if (this.module.Eraser) {
+            const eraser = new this.module.Eraser(2100, 100);
+            console.log('[WASM Test] Created Eraser at:', eraser.getX(), eraser.getY());
+            console.log('[WASM Test] Eraser state:', eraser.getStateInt(), '(READY=0)');
+            console.log('[WASM Test] Erased count:', eraser.getErasedCount());
+            console.log('[WASM Test] Erase progress:', eraser.getEraseProgress());
+            eraser.startErasing();
+            console.log('[WASM Test] After startErasing() - State:', eraser.getStateInt(), '(ERASING=1) - Progress:', eraser.getEraseProgress());
+            eraser.erase();
+            console.log('[WASM Test] After erase() - State:', eraser.getStateInt(), '(DONE=2) - Count:', eraser.getErasedCount());
+            console.log('[WASM Test] Progress:', eraser.getEraseProgress());
+            eraser.reset();
+            console.log('[WASM Test] After reset() - State:', eraser.getStateInt(), '(READY=0) - Progress:', eraser.getEraseProgress());
+            eraser.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Eraser (not in WASM binary yet - rebuild required)');
+        }
+
         console.log('[WASM Tests] ✅ All available tests passed!');
     }
 
@@ -548,6 +609,45 @@ export class WasmCore {
             throw new Error('Toolbox class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
         }
         return new this.module.Toolbox(x, y);
+    }
+
+    /**
+     * Create an Expander instance from WASM
+     */
+    createExpander(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Expander) {
+            throw new Error('Expander class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Expander(x, y);
+    }
+
+    /**
+     * Create a Copier instance from WASM
+     */
+    createCopier(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Copier) {
+            throw new Error('Copier class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Copier(x, y);
+    }
+
+    /**
+     * Create an Eraser instance from WASM
+     */
+    createEraser(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Eraser) {
+            throw new Error('Eraser class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Eraser(x, y);
     }
 
     /**
