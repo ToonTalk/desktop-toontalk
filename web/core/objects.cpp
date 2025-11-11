@@ -828,6 +828,226 @@ private:
     double result_;
 };
 
+// ===== Vacuum Class =====
+// Simplified vacuum that can suck up, blank, and restore items
+class Vacuum : public Sprite {
+public:
+    enum VacuumState {
+        SUCK = 0,      // Ready to suck up items
+        SPIT = 1,      // Ready to restore items
+        BLANK = 2      // Ready to blank items
+    };
+
+    Vacuum(float x, float y)
+        : Sprite(x, y, 60.0f, 80.0f), state_(SUCK), sucked_count_(0) {}
+
+    VacuumState getState() const { return state_; }
+    int getStateInt() const { return static_cast<int>(state_); }
+
+    void setState(VacuumState state) { state_ = state; }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 2) {
+            state_ = static_cast<VacuumState>(state);
+        }
+    }
+
+    int getSuckedCount() const { return sucked_count_; }
+    void setSuckedCount(int count) { sucked_count_ = count; }
+
+    void suckUp() {
+        if (state_ == SUCK) {
+            sucked_count_++;
+        }
+    }
+
+    void restore() {
+        if (state_ == SPIT && sucked_count_ > 0) {
+            sucked_count_--;
+        }
+    }
+
+    void makeBlank() {
+        if (state_ == BLANK) {
+            // Blank operation
+        }
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Vacuum animations could go here
+    }
+
+private:
+    VacuumState state_;
+    int sucked_count_;  // Number of items sucked up
+};
+
+// ===== Martian Class =====
+// Simplified help character (Marty) with talk balloon
+class Martian : public Sprite {
+public:
+    enum MartianState {
+        IDLE = 0,           // Waiting
+        TELEPORTING_IN = 1,  // Arriving
+        TELEPORTING_OUT = 2, // Leaving
+        TALKING = 3          // Speaking to user
+    };
+
+    Martian(float x, float y)
+        : Sprite(x, y, 70.0f, 90.0f),
+          state_(IDLE),
+          has_balloon_(false),
+          message_id_(0),
+          on_floor_(false) {}
+
+    MartianState getState() const { return state_; }
+    int getStateInt() const { return static_cast<int>(state_); }
+
+    void setState(MartianState state) { state_ = state; }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<MartianState>(state);
+        }
+    }
+
+    bool hasBalloon() const { return has_balloon_; }
+    void setHasBalloon(bool has) { has_balloon_ = has; }
+
+    int getMessageId() const { return message_id_; }
+    void setMessageId(int id) { message_id_ = id; }
+
+    bool isOnFloor() const { return on_floor_; }
+    void setOnFloor(bool on) { on_floor_ = on; }
+
+    void teleportIn() {
+        state_ = TELEPORTING_IN;
+    }
+
+    void teleportOut() {
+        state_ = TELEPORTING_OUT;
+    }
+
+    void say(int messageId) {
+        state_ = TALKING;
+        has_balloon_ = true;
+        message_id_ = messageId;
+    }
+
+    void stopTalking() {
+        state_ = IDLE;
+        has_balloon_ = false;
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Martian animations could go here
+    }
+
+private:
+    MartianState state_;
+    bool has_balloon_;  // Has talk balloon visible
+    int message_id_;    // Current message ID
+    bool on_floor_;     // Is standing on floor
+};
+
+// ===== Toolbox Class =====
+// Simplified toolbox containing stacks of objects
+class Toolbox : public Sprite {
+public:
+    enum ToolboxState {
+        CLOSED = 0,
+        OPENING = 1,
+        OPEN = 2,
+        CLOSING = 3
+    };
+
+    enum ToolboxStack {
+        NUMBERS = 0,
+        TEXTS = 1,
+        CUBBIES = 2,
+        NESTS = 3,
+        SCALES = 4,
+        ROBOTS = 5,
+        TRUCKS = 6,
+        BOMBS = 7,
+        STACK_COUNT = 8
+    };
+
+    Toolbox(float x, float y)
+        : Sprite(x, y, 200.0f, 150.0f),
+          state_(CLOSED),
+          selected_stack_(NUMBERS) {
+        // Initialize stack counts
+        for (int i = 0; i < STACK_COUNT; i++) {
+            stack_counts_[i] = 10;  // Each stack starts with 10 items
+        }
+    }
+
+    ToolboxState getState() const { return state_; }
+    int getStateInt() const { return static_cast<int>(state_); }
+
+    void setState(ToolboxState state) { state_ = state; }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<ToolboxState>(state);
+        }
+    }
+
+    int getSelectedStack() const { return static_cast<int>(selected_stack_); }
+    void setSelectedStack(int stack) {
+        if (stack >= 0 && stack < STACK_COUNT) {
+            selected_stack_ = static_cast<ToolboxStack>(stack);
+        }
+    }
+
+    int getStackCount(int stack) const {
+        if (stack >= 0 && stack < STACK_COUNT) {
+            return stack_counts_[stack];
+        }
+        return 0;
+    }
+
+    void setStackCount(int stack, int count) {
+        if (stack >= 0 && stack < STACK_COUNT) {
+            stack_counts_[stack] = count;
+        }
+    }
+
+    void open() {
+        if (state_ == CLOSED) {
+            state_ = OPENING;
+        }
+    }
+
+    void close() {
+        if (state_ == OPEN) {
+            state_ = CLOSING;
+        }
+    }
+
+    void finishOpening() {
+        if (state_ == OPENING) {
+            state_ = OPEN;
+        }
+    }
+
+    void finishClosing() {
+        if (state_ == CLOSING) {
+            state_ = CLOSED;
+        }
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Auto-complete opening/closing animations
+    }
+
+private:
+    ToolboxState state_;
+    ToolboxStack selected_stack_;
+    int stack_counts_[STACK_COUNT];  // Count of items in each stack
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -1034,4 +1254,77 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("MULTIPLY", Mouse::MULTIPLY)
         .value("DIVIDE", Mouse::DIVIDE)
         .value("NONE", Mouse::NONE);
+
+    // Vacuum class
+    class_<Vacuum, base<Sprite>>("Vacuum")
+        .constructor<float, float>()
+        .function("getStateInt", &Vacuum::getStateInt)
+        .function("setStateInt", &Vacuum::setStateInt)
+        .function("getSuckedCount", &Vacuum::getSuckedCount)
+        .function("setSuckedCount", &Vacuum::setSuckedCount)
+        .function("suckUp", &Vacuum::suckUp)
+        .function("restore", &Vacuum::restore)
+        .function("makeBlank", &Vacuum::makeBlank);
+
+    // Vacuum state enum values
+    enum_<Vacuum::VacuumState>("VacuumState")
+        .value("SUCK", Vacuum::SUCK)
+        .value("SPIT", Vacuum::SPIT)
+        .value("BLANK", Vacuum::BLANK);
+
+    // Martian class
+    class_<Martian, base<Sprite>>("Martian")
+        .constructor<float, float>()
+        .function("getStateInt", &Martian::getStateInt)
+        .function("setStateInt", &Martian::setStateInt)
+        .function("hasBalloon", &Martian::hasBalloon)
+        .function("setHasBalloon", &Martian::setHasBalloon)
+        .function("getMessageId", &Martian::getMessageId)
+        .function("setMessageId", &Martian::setMessageId)
+        .function("isOnFloor", &Martian::isOnFloor)
+        .function("setOnFloor", &Martian::setOnFloor)
+        .function("teleportIn", &Martian::teleportIn)
+        .function("teleportOut", &Martian::teleportOut)
+        .function("say", &Martian::say)
+        .function("stopTalking", &Martian::stopTalking);
+
+    // Martian state enum values
+    enum_<Martian::MartianState>("MartianState")
+        .value("IDLE", Martian::IDLE)
+        .value("TELEPORTING_IN", Martian::TELEPORTING_IN)
+        .value("TELEPORTING_OUT", Martian::TELEPORTING_OUT)
+        .value("TALKING", Martian::TALKING);
+
+    // Toolbox class
+    class_<Toolbox, base<Sprite>>("Toolbox")
+        .constructor<float, float>()
+        .function("getStateInt", &Toolbox::getStateInt)
+        .function("setStateInt", &Toolbox::setStateInt)
+        .function("getSelectedStack", &Toolbox::getSelectedStack)
+        .function("setSelectedStack", &Toolbox::setSelectedStack)
+        .function("getStackCount", &Toolbox::getStackCount)
+        .function("setStackCount", &Toolbox::setStackCount)
+        .function("open", &Toolbox::open)
+        .function("close", &Toolbox::close)
+        .function("finishOpening", &Toolbox::finishOpening)
+        .function("finishClosing", &Toolbox::finishClosing);
+
+    // Toolbox state enum values
+    enum_<Toolbox::ToolboxState>("ToolboxState")
+        .value("CLOSED", Toolbox::CLOSED)
+        .value("OPENING", Toolbox::OPENING)
+        .value("OPEN", Toolbox::OPEN)
+        .value("CLOSING", Toolbox::CLOSING);
+
+    // Toolbox stack enum values
+    enum_<Toolbox::ToolboxStack>("ToolboxStack")
+        .value("NUMBERS", Toolbox::NUMBERS)
+        .value("TEXTS", Toolbox::TEXTS)
+        .value("CUBBIES", Toolbox::CUBBIES)
+        .value("NESTS", Toolbox::NESTS)
+        .value("SCALES", Toolbox::SCALES)
+        .value("ROBOTS", Toolbox::ROBOTS)
+        .value("TRUCKS", Toolbox::TRUCKS)
+        .value("BOMBS", Toolbox::BOMBS)
+        .value("STACK_COUNT", Toolbox::STACK_COUNT);
 }
