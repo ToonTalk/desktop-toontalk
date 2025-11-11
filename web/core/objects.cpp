@@ -3193,6 +3193,544 @@ private:
     int max_executions_;
 };
 
+/**
+ * CollisionManager - Spatial partitioning and collision detection
+ */
+class CollisionManager {
+public:
+    struct AABB {
+        float x, y, width, height;
+
+        bool intersects(const AABB& other) const {
+            return !(x + width < other.x || other.x + other.width < x ||
+                     y + height < other.y || other.y + other.height < y);
+        }
+
+        bool contains(float px, float py) const {
+            return px >= x && px <= x + width && py >= y && py <= y + height;
+        }
+    };
+
+    CollisionManager(float worldWidth, float worldHeight, int maxDepth = 5)
+        : world_width_(worldWidth), world_height_(worldHeight),
+          max_depth_(maxDepth), object_count_(0) {}
+
+    // Add object with bounding box (returns object ID)
+    int addObject(float x, float y, float width, float height) {
+        int id = object_count_++;
+        AABB box = {x, y, width, height};
+        objects_[id] = box;
+        return id;
+    }
+
+    // Update object position
+    void updateObject(int id, float x, float y, float width, float height) {
+        AABB box = {x, y, width, height};
+        objects_[id] = box;
+    }
+
+    // Remove object
+    void removeObject(int id) {
+        objects_.erase(id);
+    }
+
+    // Check collision between two objects
+    bool checkCollision(int id1, int id2) const {
+        auto it1 = objects_.find(id1);
+        auto it2 = objects_.find(id2);
+        if (it1 == objects_.end() || it2 == objects_.end()) {
+            return false;
+        }
+        return it1->second.intersects(it2->second);
+    }
+
+    // Find all objects intersecting with a point
+    std::vector<int> queryPoint(float x, float y) const {
+        std::vector<int> result;
+        for (const auto& pair : objects_) {
+            if (pair.second.contains(x, y)) {
+                result.push_back(pair.first);
+            }
+        }
+        return result;
+    }
+
+    // Find all objects intersecting with a region
+    std::vector<int> queryRegion(float x, float y, float width, float height) const {
+        std::vector<int> result;
+        AABB query = {x, y, width, height};
+        for (const auto& pair : objects_) {
+            if (pair.second.intersects(query)) {
+                result.push_back(pair.first);
+            }
+        }
+        return result;
+    }
+
+    // Ray cast - find first object hit by ray
+    int rayCast(float startX, float startY, float dirX, float dirY, float maxDist) const {
+        float minDist = maxDist;
+        int hitId = -1;
+
+        for (const auto& pair : objects_) {
+            const AABB& box = pair.second;
+            float t = rayBoxIntersection(startX, startY, dirX, dirY, box);
+            if (t >= 0.0f && t < minDist) {
+                minDist = t;
+                hitId = pair.first;
+            }
+        }
+        return hitId;
+    }
+
+    void clear() {
+        objects_.clear();
+        object_count_ = 0;
+    }
+
+    int getObjectCount() const { return objects_.size(); }
+
+private:
+    float rayBoxIntersection(float ox, float oy, float dx, float dy, const AABB& box) const {
+        float tmin = -std::numeric_limits<float>::infinity();
+        float tmax = std::numeric_limits<float>::infinity();
+
+        if (std::abs(dx) > 1e-6f) {
+            float tx1 = (box.x - ox) / dx;
+            float tx2 = (box.x + box.width - ox) / dx;
+            tmin = std::max(tmin, std::min(tx1, tx2));
+            tmax = std::min(tmax, std::max(tx1, tx2));
+        }
+
+        if (std::abs(dy) > 1e-6f) {
+            float ty1 = (box.y - oy) / dy;
+            float ty2 = (box.y + box.height - oy) / dy;
+            tmin = std::max(tmin, std::min(ty1, ty2));
+            tmax = std::min(tmax, std::max(ty1, ty2));
+        }
+
+        return (tmax >= tmin && tmin >= 0.0f) ? tmin : -1.0f;
+    }
+
+    std::map<int, AABB> objects_;
+    float world_width_;
+    float world_height_;
+    int max_depth_;
+    int object_count_;
+};
+
+/**
+ * AnimationController - Tweening and easing system
+ */
+class AnimationController {
+public:
+    enum EasingType {
+        LINEAR = 0,
+        EASE_IN_QUAD,
+        EASE_OUT_QUAD,
+        EASE_IN_OUT_QUAD,
+        EASE_IN_CUBIC,
+        EASE_OUT_CUBIC,
+        EASE_IN_OUT_CUBIC,
+        EASE_IN_ELASTIC,
+        EASE_OUT_ELASTIC,
+        EASE_IN_BOUNCE,
+        EASE_OUT_BOUNCE
+    };
+
+    AnimationController() : current_time_(0.0f) {}
+
+    // Start a new animation (returns animation ID)
+    int animate(float startValue, float endValue, float duration, EasingType easing = LINEAR) {
+        int id = animations_.size();
+        Animation anim = {startValue, endValue, duration, easing, 0.0f, true};
+        animations_[id] = anim;
+        return id;
+    }
+
+    // Update animations
+    void update(float deltaTime) {
+        current_time_ += deltaTime;
+
+        std::vector<int> toRemove;
+        for (auto& pair : animations_) {
+            Animation& anim = pair.second;
+            if (anim.active) {
+                anim.elapsed += deltaTime;
+                if (anim.elapsed >= anim.duration) {
+                    toRemove.push_back(pair.first);
+                }
+            }
+        }
+
+        for (int id : toRemove) {
+            animations_.erase(id);
+        }
+    }
+
+    // Get current value of animation
+    float getValue(int id) const {
+        auto it = animations_.find(id);
+        if (it == animations_.end() || !it->second.active) {
+            return 0.0f;
+        }
+
+        const Animation& anim = it->second;
+        float t = anim.elapsed / anim.duration;
+        if (t >= 1.0f) t = 1.0f;
+
+        float easedT = applyEasing(t, anim.easing);
+        return anim.startValue + (anim.endValue - anim.startValue) * easedT;
+    }
+
+    // Check if animation is still running
+    bool isActive(int id) const {
+        auto it = animations_.find(id);
+        return it != animations_.end() && it->second.active;
+    }
+
+    // Stop an animation
+    void stop(int id) {
+        animations_.erase(id);
+    }
+
+    void clear() {
+        animations_.clear();
+    }
+
+    int getActiveCount() const { return animations_.size(); }
+
+private:
+    struct Animation {
+        float startValue;
+        float endValue;
+        float duration;
+        EasingType easing;
+        float elapsed;
+        bool active;
+    };
+
+    float applyEasing(float t, EasingType easing) const {
+        switch (easing) {
+            case LINEAR:
+                return t;
+            case EASE_IN_QUAD:
+                return t * t;
+            case EASE_OUT_QUAD:
+                return t * (2.0f - t);
+            case EASE_IN_OUT_QUAD:
+                return t < 0.5f ? 2.0f * t * t : -1.0f + (4.0f - 2.0f * t) * t;
+            case EASE_IN_CUBIC:
+                return t * t * t;
+            case EASE_OUT_CUBIC:
+                return (--t) * t * t + 1.0f;
+            case EASE_IN_OUT_CUBIC:
+                return t < 0.5f ? 4.0f * t * t * t : (t - 1.0f) * (2.0f * t - 2.0f) * (2.0f * t - 2.0f) + 1.0f;
+            case EASE_OUT_ELASTIC: {
+                const float c4 = (2.0f * 3.14159265f) / 3.0f;
+                return t == 0.0f ? 0.0f : t == 1.0f ? 1.0f :
+                       std::pow(2.0f, -10.0f * t) * std::sin((t * 10.0f - 0.75f) * c4) + 1.0f;
+            }
+            case EASE_OUT_BOUNCE: {
+                const float n1 = 7.5625f;
+                const float d1 = 2.75f;
+                if (t < 1.0f / d1) {
+                    return n1 * t * t;
+                } else if (t < 2.0f / d1) {
+                    return n1 * (t -= 1.5f / d1) * t + 0.75f;
+                } else if (t < 2.5f / d1) {
+                    return n1 * (t -= 2.25f / d1) * t + 0.9375f;
+                } else {
+                    return n1 * (t -= 2.625f / d1) * t + 0.984375f;
+                }
+            }
+            default:
+                return t;
+        }
+    }
+
+    std::map<int, Animation> animations_;
+    float current_time_;
+};
+
+/**
+ * SceneManager - Layer and camera management
+ */
+class SceneManager {
+public:
+    enum LayerType {
+        BACKGROUND = 0,
+        GAME = 1,
+        UI = 2,
+        OVERLAY = 3
+    };
+
+    SceneManager(float viewportWidth, float viewportHeight)
+        : viewport_width_(viewportWidth), viewport_height_(viewportHeight),
+          camera_x_(0.0f), camera_y_(0.0f), camera_zoom_(1.0f) {}
+
+    // Camera controls
+    void setCameraPosition(float x, float y) {
+        camera_x_ = x;
+        camera_y_ = y;
+    }
+
+    float getCameraX() const { return camera_x_; }
+    float getCameraY() const { return camera_y_; }
+
+    void setCameraZoom(float zoom) {
+        camera_zoom_ = (zoom > 0.0f) ? zoom : 1.0f;
+    }
+
+    float getCameraZoom() const { return camera_zoom_; }
+
+    void moveCamera(float dx, float dy) {
+        camera_x_ += dx;
+        camera_y_ += dy;
+    }
+
+    // Transform world coordinates to screen coordinates
+    void worldToScreen(float worldX, float worldY, float& screenX, float& screenY) const {
+        screenX = (worldX - camera_x_) * camera_zoom_ + viewport_width_ * 0.5f;
+        screenY = (worldY - camera_y_) * camera_zoom_ + viewport_height_ * 0.5f;
+    }
+
+    // Transform screen coordinates to world coordinates
+    void screenToWorld(float screenX, float screenY, float& worldX, float& worldY) const {
+        worldX = (screenX - viewport_width_ * 0.5f) / camera_zoom_ + camera_x_;
+        worldY = (screenY - viewport_height_ * 0.5f) / camera_zoom_ + camera_y_;
+    }
+
+    // Check if a world-space object is visible
+    bool isVisible(float worldX, float worldY, float width, float height) const {
+        float halfW = (viewport_width_ / camera_zoom_) * 0.5f;
+        float halfH = (viewport_height_ / camera_zoom_) * 0.5f;
+
+        return !(worldX + width < camera_x_ - halfW ||
+                 worldX > camera_x_ + halfW ||
+                 worldY + height < camera_y_ - halfH ||
+                 worldY > camera_y_ + halfH);
+    }
+
+    // Viewport management
+    void setViewportSize(float width, float height) {
+        viewport_width_ = width;
+        viewport_height_ = height;
+    }
+
+    float getViewportWidth() const { return viewport_width_; }
+    float getViewportHeight() const { return viewport_height_; }
+
+    // Get visible bounds in world space
+    void getVisibleBounds(float& minX, float& minY, float& maxX, float& maxY) const {
+        float halfW = (viewport_width_ / camera_zoom_) * 0.5f;
+        float halfH = (viewport_height_ / camera_zoom_) * 0.5f;
+        minX = camera_x_ - halfW;
+        minY = camera_y_ - halfH;
+        maxX = camera_x_ + halfW;
+        maxY = camera_y_ + halfH;
+    }
+
+private:
+    float viewport_width_;
+    float viewport_height_;
+    float camera_x_;
+    float camera_y_;
+    float camera_zoom_;
+};
+
+/**
+ * EntityManager - Simple entity component system
+ */
+class EntityManager {
+public:
+    EntityManager() : next_entity_id_(0) {}
+
+    // Create a new entity (returns entity ID)
+    int createEntity(const std::string& type) {
+        int id = next_entity_id_++;
+        entities_[id] = type;
+        active_[id] = true;
+        return id;
+    }
+
+    // Destroy an entity
+    void destroyEntity(int id) {
+        entities_.erase(id);
+        active_.erase(id);
+        components_.erase(id);
+    }
+
+    // Check if entity exists
+    bool hasEntity(int id) const {
+        return entities_.find(id) != entities_.end();
+    }
+
+    // Get entity type
+    std::string getEntityType(int id) const {
+        auto it = entities_.find(id);
+        return (it != entities_.end()) ? it->second : "";
+    }
+
+    // Active state
+    void setActive(int id, bool active) {
+        active_[id] = active;
+    }
+
+    bool isActive(int id) const {
+        auto it = active_.find(id);
+        return (it != active_.end()) ? it->second : false;
+    }
+
+    // Component storage (simple key-value per entity)
+    void setComponent(int id, const std::string& key, float value) {
+        components_[id][key] = value;
+    }
+
+    float getComponent(int id, const std::string& key) const {
+        auto entityIt = components_.find(id);
+        if (entityIt == components_.end()) return 0.0f;
+
+        auto compIt = entityIt->second.find(key);
+        return (compIt != entityIt->second.end()) ? compIt->second : 0.0f;
+    }
+
+    bool hasComponent(int id, const std::string& key) const {
+        auto entityIt = components_.find(id);
+        if (entityIt == components_.end()) return false;
+        return entityIt->second.find(key) != entityIt->second.end();
+    }
+
+    // Query entities by type
+    std::vector<int> getEntitiesByType(const std::string& type) const {
+        std::vector<int> result;
+        for (const auto& pair : entities_) {
+            if (pair.second == type && isActive(pair.first)) {
+                result.push_back(pair.first);
+            }
+        }
+        return result;
+    }
+
+    int getEntityCount() const { return entities_.size(); }
+
+    void clear() {
+        entities_.clear();
+        active_.clear();
+        components_.clear();
+        next_entity_id_ = 0;
+    }
+
+private:
+    std::map<int, std::string> entities_;
+    std::map<int, bool> active_;
+    std::map<int, std::map<std::string, float>> components_;
+    int next_entity_id_;
+};
+
+/**
+ * InputManager - Abstract input handling and gesture recognition
+ */
+class InputManager {
+public:
+    enum GestureType {
+        NONE = 0,
+        TAP,
+        DOUBLE_TAP,
+        SWIPE_LEFT,
+        SWIPE_RIGHT,
+        SWIPE_UP,
+        SWIPE_DOWN,
+        PINCH_IN,
+        PINCH_OUT
+    };
+
+    InputManager() : last_tap_time_(0.0f), tap_count_(0),
+                     gesture_start_x_(0.0f), gesture_start_y_(0.0f),
+                     is_tracking_(false), current_time_(0.0f) {}
+
+    void update(float deltaTime) {
+        current_time_ += deltaTime;
+
+        // Reset tap count if too much time has passed
+        if (current_time_ - last_tap_time_ > 0.5f) {
+            tap_count_ = 0;
+        }
+    }
+
+    // Record input events
+    void onPointerDown(float x, float y) {
+        gesture_start_x_ = x;
+        gesture_start_y_ = y;
+        is_tracking_ = true;
+
+        // Track taps
+        if (current_time_ - last_tap_time_ < 0.5f) {
+            tap_count_++;
+        } else {
+            tap_count_ = 1;
+        }
+        last_tap_time_ = current_time_;
+    }
+
+    void onPointerUp(float x, float y) {
+        if (!is_tracking_) return;
+
+        float dx = x - gesture_start_x_;
+        float dy = y - gesture_start_y_;
+        float dist = std::sqrt(dx * dx + dy * dy);
+
+        // Detect gesture
+        if (dist < 10.0f) {
+            // Tap or double tap
+            last_gesture_ = (tap_count_ >= 2) ? DOUBLE_TAP : TAP;
+        } else if (std::abs(dx) > std::abs(dy)) {
+            // Horizontal swipe
+            last_gesture_ = (dx > 0) ? SWIPE_RIGHT : SWIPE_LEFT;
+        } else {
+            // Vertical swipe
+            last_gesture_ = (dy > 0) ? SWIPE_DOWN : SWIPE_UP;
+        }
+
+        is_tracking_ = false;
+    }
+
+    GestureType getLastGesture() const { return last_gesture_; }
+
+    void clearGesture() { last_gesture_ = NONE; }
+
+    // Command buffer for input recording
+    void recordCommand(const std::string& command) {
+        command_buffer_.push_back(command);
+    }
+
+    std::vector<std::string> getCommands() const {
+        return command_buffer_;
+    }
+
+    void clearCommands() {
+        command_buffer_.clear();
+    }
+
+    bool hasCommands() const {
+        return !command_buffer_.empty();
+    }
+
+    int getCommandCount() const {
+        return command_buffer_.size();
+    }
+
+private:
+    float last_tap_time_;
+    int tap_count_;
+    float gesture_start_x_;
+    float gesture_start_y_;
+    bool is_tracking_;
+    float current_time_;
+    GestureType last_gesture_;
+    std::vector<std::string> command_buffer_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -4064,4 +4602,111 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("WAITING", Scheduler::WAITING)
         .value("READY", Scheduler::READY)
         .value("EXECUTING", Scheduler::EXECUTING);
+
+    // CollisionManager class
+    class_<CollisionManager>("CollisionManager")
+        .constructor<float, float, int>()
+        .function("addObject", &CollisionManager::addObject)
+        .function("updateObject", &CollisionManager::updateObject)
+        .function("removeObject", &CollisionManager::removeObject)
+        .function("checkCollision", &CollisionManager::checkCollision)
+        .function("queryPoint", &CollisionManager::queryPoint)
+        .function("queryRegion", &CollisionManager::queryRegion)
+        .function("rayCast", &CollisionManager::rayCast)
+        .function("clear", &CollisionManager::clear)
+        .function("getObjectCount", &CollisionManager::getObjectCount);
+
+    // Register std::vector<int> for CollisionManager return types
+    register_vector<int>("VectorInt");
+
+    // AnimationController class
+    class_<AnimationController>("AnimationController")
+        .constructor<>()
+        .function("animate", &AnimationController::animate)
+        .function("update", &AnimationController::update)
+        .function("getValue", &AnimationController::getValue)
+        .function("isActive", &AnimationController::isActive)
+        .function("stop", &AnimationController::stop)
+        .function("clear", &AnimationController::clear)
+        .function("getActiveCount", &AnimationController::getActiveCount);
+
+    // AnimationController easing enum values
+    enum_<AnimationController::EasingType>("EasingType")
+        .value("LINEAR", AnimationController::LINEAR)
+        .value("EASE_IN_QUAD", AnimationController::EASE_IN_QUAD)
+        .value("EASE_OUT_QUAD", AnimationController::EASE_OUT_QUAD)
+        .value("EASE_IN_OUT_QUAD", AnimationController::EASE_IN_OUT_QUAD)
+        .value("EASE_IN_CUBIC", AnimationController::EASE_IN_CUBIC)
+        .value("EASE_OUT_CUBIC", AnimationController::EASE_OUT_CUBIC)
+        .value("EASE_IN_OUT_CUBIC", AnimationController::EASE_IN_OUT_CUBIC)
+        .value("EASE_IN_ELASTIC", AnimationController::EASE_IN_ELASTIC)
+        .value("EASE_OUT_ELASTIC", AnimationController::EASE_OUT_ELASTIC)
+        .value("EASE_IN_BOUNCE", AnimationController::EASE_IN_BOUNCE)
+        .value("EASE_OUT_BOUNCE", AnimationController::EASE_OUT_BOUNCE);
+
+    // SceneManager class
+    class_<SceneManager>("SceneManager")
+        .constructor<float, float>()
+        .function("setCameraPosition", &SceneManager::setCameraPosition)
+        .function("getCameraX", &SceneManager::getCameraX)
+        .function("getCameraY", &SceneManager::getCameraY)
+        .function("setCameraZoom", &SceneManager::setCameraZoom)
+        .function("getCameraZoom", &SceneManager::getCameraZoom)
+        .function("moveCamera", &SceneManager::moveCamera)
+        .function("isVisible", &SceneManager::isVisible)
+        .function("setViewportSize", &SceneManager::setViewportSize)
+        .function("getViewportWidth", &SceneManager::getViewportWidth)
+        .function("getViewportHeight", &SceneManager::getViewportHeight);
+
+    // SceneManager layer enum values
+    enum_<SceneManager::LayerType>("LayerType")
+        .value("BACKGROUND", SceneManager::BACKGROUND)
+        .value("GAME", SceneManager::GAME)
+        .value("UI", SceneManager::UI)
+        .value("OVERLAY", SceneManager::OVERLAY);
+
+    // EntityManager class
+    class_<EntityManager>("EntityManager")
+        .constructor<>()
+        .function("createEntity", &EntityManager::createEntity)
+        .function("destroyEntity", &EntityManager::destroyEntity)
+        .function("hasEntity", &EntityManager::hasEntity)
+        .function("getEntityType", &EntityManager::getEntityType)
+        .function("setActive", &EntityManager::setActive)
+        .function("isActive", &EntityManager::isActive)
+        .function("setComponent", &EntityManager::setComponent)
+        .function("getComponent", &EntityManager::getComponent)
+        .function("hasComponent", &EntityManager::hasComponent)
+        .function("getEntitiesByType", &EntityManager::getEntitiesByType)
+        .function("getEntityCount", &EntityManager::getEntityCount)
+        .function("clear", &EntityManager::clear);
+
+    // InputManager class
+    class_<InputManager>("InputManager")
+        .constructor<>()
+        .function("update", &InputManager::update)
+        .function("onPointerDown", &InputManager::onPointerDown)
+        .function("onPointerUp", &InputManager::onPointerUp)
+        .function("getLastGesture", &InputManager::getLastGesture)
+        .function("clearGesture", &InputManager::clearGesture)
+        .function("recordCommand", &InputManager::recordCommand)
+        .function("getCommands", &InputManager::getCommands)
+        .function("clearCommands", &InputManager::clearCommands)
+        .function("hasCommands", &InputManager::hasCommands)
+        .function("getCommandCount", &InputManager::getCommandCount);
+
+    // Register std::vector<std::string> for InputManager
+    register_vector<std::string>("VectorString");
+
+    // InputManager gesture enum values
+    enum_<InputManager::GestureType>("GestureType")
+        .value("NONE", InputManager::NONE)
+        .value("TAP", InputManager::TAP)
+        .value("DOUBLE_TAP", InputManager::DOUBLE_TAP)
+        .value("SWIPE_LEFT", InputManager::SWIPE_LEFT)
+        .value("SWIPE_RIGHT", InputManager::SWIPE_RIGHT)
+        .value("SWIPE_UP", InputManager::SWIPE_UP)
+        .value("SWIPE_DOWN", InputManager::SWIPE_DOWN)
+        .value("PINCH_IN", InputManager::PINCH_IN)
+        .value("PINCH_OUT", InputManager::PINCH_OUT);
 }
