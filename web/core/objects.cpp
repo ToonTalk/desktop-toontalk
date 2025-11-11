@@ -1465,6 +1465,262 @@ private:
     int count_;
 };
 
+/**
+ * Flipper - Tool for flipping and rotating objects
+ * Can flip horizontally, vertically, or rotate in either direction
+ */
+class Flipper : public Sprite {
+public:
+    enum FlipperMode {
+        HORIZONTAL = 0,
+        VERTICAL = 1,
+        ROTATE_CW = 2,
+        ROTATE_CCW = 3
+    };
+
+    Flipper(float x, float y)
+        : Sprite(x, y, 70.0f, 50.0f),
+          mode_(HORIZONTAL),
+          flip_count_(0),
+          rotation_angle_(0.0f),
+          has_attached_(false) {}
+
+    // Mode management
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) {
+        if (mode >= 0 && mode <= 3) {
+            mode_ = static_cast<FlipperMode>(mode);
+        }
+    }
+
+    void nextMode() {
+        mode_ = static_cast<FlipperMode>((static_cast<int>(mode_) + 1) % 4);
+    }
+
+    // Flip operations
+    void doFlip() {
+        flip_count_++;
+        if (mode_ == ROTATE_CW) {
+            rotation_angle_ += 90.0f;
+        } else if (mode_ == ROTATE_CCW) {
+            rotation_angle_ -= 90.0f;
+        }
+        // Normalize angle to 0-360
+        while (rotation_angle_ >= 360.0f) rotation_angle_ -= 360.0f;
+        while (rotation_angle_ < 0.0f) rotation_angle_ += 360.0f;
+    }
+
+    void reset() {
+        rotation_angle_ = 0.0f;
+        flip_count_ = 0;
+    }
+
+    // Getters
+    int getFlipCount() const { return flip_count_; }
+    void setFlipCount(int count) { flip_count_ = count; }
+
+    float getRotationAngle() const { return rotation_angle_; }
+    void setRotationAngle(float angle) { rotation_angle_ = angle; }
+
+    bool hasAttached() const { return has_attached_; }
+    void setAttached(bool attached) { has_attached_ = attached; }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    FlipperMode mode_;
+    int flip_count_;
+    float rotation_angle_;
+    bool has_attached_;
+};
+
+/**
+ * Meter - Visual gauge/indicator for monitoring values
+ * Shows current value relative to min/max with warning/critical thresholds
+ */
+class Meter : public Sprite {
+public:
+    enum MeterState {
+        NORMAL = 0,
+        WARNING = 1,
+        CRITICAL = 2,
+        MAXED = 3
+    };
+
+    Meter(float x, float y, float minValue = 0.0f, float maxValue = 100.0f)
+        : Sprite(x, y, 60.0f, 80.0f),
+          state_(NORMAL),
+          current_value_(0.0f),
+          min_value_(minValue),
+          max_value_(maxValue),
+          warning_threshold_(70.0f),
+          critical_threshold_(90.0f) {
+        updateState();
+    }
+
+    // State management
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<MeterState>(state);
+        }
+    }
+
+    // Value management
+    float getValue() const { return current_value_; }
+    void setValue(float value) {
+        current_value_ = value;
+        if (current_value_ < min_value_) current_value_ = min_value_;
+        if (current_value_ > max_value_) current_value_ = max_value_;
+        updateState();
+    }
+
+    float getMinValue() const { return min_value_; }
+    void setMinValue(float value) { min_value_ = value; }
+
+    float getMaxValue() const { return max_value_; }
+    void setMaxValue(float value) { max_value_ = value; }
+
+    float getWarningThreshold() const { return warning_threshold_; }
+    void setWarningThreshold(float value) { warning_threshold_ = value; }
+
+    float getCriticalThreshold() const { return critical_threshold_; }
+    void setCriticalThreshold(float value) { critical_threshold_ = value; }
+
+    // Computed properties
+    float getPercentage() const {
+        if (max_value_ <= min_value_) return 0.0f;
+        return ((current_value_ - min_value_) / (max_value_ - min_value_)) * 100.0f;
+    }
+
+    bool isWarning() const { return state_ == WARNING; }
+    bool isCritical() const { return state_ == CRITICAL; }
+    bool isMaxed() const { return state_ == MAXED; }
+
+    void increment(float amount = 1.0f) {
+        setValue(current_value_ + amount);
+    }
+
+    void decrement(float amount = 1.0f) {
+        setValue(current_value_ - amount);
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    void updateState() {
+        float percentage = getPercentage();
+        if (percentage >= 100.0f) {
+            state_ = MAXED;
+        } else if (percentage >= critical_threshold_) {
+            state_ = CRITICAL;
+        } else if (percentage >= warning_threshold_) {
+            state_ = WARNING;
+        } else {
+            state_ = NORMAL;
+        }
+    }
+
+    MeterState state_;
+    float current_value_;
+    float min_value_;
+    float max_value_;
+    float warning_threshold_;
+    float critical_threshold_;
+};
+
+/**
+ * Beeper - Sound/alert tool for triggering audio feedback
+ * Can beep once or continuously with configurable frequency
+ */
+class Beeper : public Sprite {
+public:
+    enum BeeperState {
+        SILENT = 0,
+        BEEPING = 1,
+        CONTINUOUS = 2
+    };
+
+    Beeper(float x, float y)
+        : Sprite(x, y, 50.0f, 50.0f),
+          state_(SILENT),
+          beep_count_(0),
+          frequency_(440.0f),  // A4 note in Hz
+          duration_(0.2f),
+          timer_(0.0f) {}
+
+    // State management
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 2) {
+            state_ = static_cast<BeeperState>(state);
+        }
+    }
+
+    // Beep operations
+    void beep() {
+        if (state_ == SILENT || state_ == BEEPING) {
+            state_ = BEEPING;
+            beep_count_++;
+            timer_ = duration_;
+        }
+    }
+
+    void startContinuous() {
+        state_ = CONTINUOUS;
+    }
+
+    void stop() {
+        state_ = SILENT;
+        timer_ = 0.0f;
+    }
+
+    // Properties
+    int getBeepCount() const { return beep_count_; }
+    void setBeepCount(int count) { beep_count_ = count; }
+
+    float getFrequency() const { return frequency_; }
+    void setFrequency(float freq) {
+        if (freq > 0.0f) frequency_ = freq;
+    }
+
+    float getDuration() const { return duration_; }
+    void setDuration(float dur) {
+        if (dur > 0.0f) duration_ = dur;
+    }
+
+    float getTimer() const { return timer_; }
+
+    bool isBeeping() const { return state_ != SILENT; }
+
+    void reset() {
+        beep_count_ = 0;
+        stop();
+    }
+
+    void update(float deltaTime) override {
+        if (state_ == BEEPING) {
+            timer_ -= deltaTime;
+            if (timer_ <= 0.0f) {
+                state_ = SILENT;
+                timer_ = 0.0f;
+            }
+        }
+        Sprite::update(deltaTime);
+    }
+
+private:
+    BeeperState state_;
+    int beep_count_;
+    float frequency_;
+    float duration_;
+    float timer_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -1856,4 +2112,79 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("peek", &Stack::peek)
         .function("clear", &Stack::clear)
         .function("setCapacity", &Stack::setCapacity);
+
+    // Flipper class
+    class_<Flipper, base<Sprite>>("Flipper")
+        .constructor<float, float>()
+        .function("getModeInt", &Flipper::getModeInt)
+        .function("setModeInt", &Flipper::setModeInt)
+        .function("nextMode", &Flipper::nextMode)
+        .function("doFlip", &Flipper::doFlip)
+        .function("reset", &Flipper::reset)
+        .function("getFlipCount", &Flipper::getFlipCount)
+        .function("setFlipCount", &Flipper::setFlipCount)
+        .function("getRotationAngle", &Flipper::getRotationAngle)
+        .function("setRotationAngle", &Flipper::setRotationAngle)
+        .function("hasAttached", &Flipper::hasAttached)
+        .function("setAttached", &Flipper::setAttached);
+
+    // Flipper mode enum values
+    enum_<Flipper::FlipperMode>("FlipperMode")
+        .value("HORIZONTAL", Flipper::HORIZONTAL)
+        .value("VERTICAL", Flipper::VERTICAL)
+        .value("ROTATE_CW", Flipper::ROTATE_CW)
+        .value("ROTATE_CCW", Flipper::ROTATE_CCW);
+
+    // Meter class
+    class_<Meter, base<Sprite>>("Meter")
+        .constructor<float, float, float, float>()
+        .function("getStateInt", &Meter::getStateInt)
+        .function("setStateInt", &Meter::setStateInt)
+        .function("getValue", &Meter::getValue)
+        .function("setValue", &Meter::setValue)
+        .function("getMinValue", &Meter::getMinValue)
+        .function("setMinValue", &Meter::setMinValue)
+        .function("getMaxValue", &Meter::getMaxValue)
+        .function("setMaxValue", &Meter::setMaxValue)
+        .function("getWarningThreshold", &Meter::getWarningThreshold)
+        .function("setWarningThreshold", &Meter::setWarningThreshold)
+        .function("getCriticalThreshold", &Meter::getCriticalThreshold)
+        .function("setCriticalThreshold", &Meter::setCriticalThreshold)
+        .function("getPercentage", &Meter::getPercentage)
+        .function("isWarning", &Meter::isWarning)
+        .function("isCritical", &Meter::isCritical)
+        .function("isMaxed", &Meter::isMaxed)
+        .function("increment", &Meter::increment)
+        .function("decrement", &Meter::decrement);
+
+    // Meter state enum values
+    enum_<Meter::MeterState>("MeterState")
+        .value("NORMAL", Meter::NORMAL)
+        .value("WARNING", Meter::WARNING)
+        .value("CRITICAL", Meter::CRITICAL)
+        .value("MAXED", Meter::MAXED);
+
+    // Beeper class
+    class_<Beeper, base<Sprite>>("Beeper")
+        .constructor<float, float>()
+        .function("getStateInt", &Beeper::getStateInt)
+        .function("setStateInt", &Beeper::setStateInt)
+        .function("beep", &Beeper::beep)
+        .function("startContinuous", &Beeper::startContinuous)
+        .function("stop", &Beeper::stop)
+        .function("getBeepCount", &Beeper::getBeepCount)
+        .function("setBeepCount", &Beeper::setBeepCount)
+        .function("getFrequency", &Beeper::getFrequency)
+        .function("setFrequency", &Beeper::setFrequency)
+        .function("getDuration", &Beeper::getDuration)
+        .function("setDuration", &Beeper::setDuration)
+        .function("getTimer", &Beeper::getTimer)
+        .function("isBeeping", &Beeper::isBeeping)
+        .function("reset", &Beeper::reset);
+
+    // Beeper state enum values
+    enum_<Beeper::BeeperState>("BeeperState")
+        .value("SILENT", Beeper::SILENT)
+        .value("BEEPING", Beeper::BEEPING)
+        .value("CONTINUOUS", Beeper::CONTINUOUS);
 }

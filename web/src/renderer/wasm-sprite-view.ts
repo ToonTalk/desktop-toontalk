@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -73,6 +73,9 @@ export class WasmSpriteView {
         if ('getNumHoles' in this.wasmSprite && 'getFilledCount' in this.wasmSprite && 'setHoleFilled' in this.wasmSprite) return 'cubby';
         if ('getKeyBinding' in this.wasmSprite && 'press' in this.wasmSprite && 'getPressCount' in this.wasmSprite) return 'button';
         if ('push' in this.wasmSprite && 'pop' in this.wasmSprite && 'peek' in this.wasmSprite && 'getCapacity' in this.wasmSprite) return 'stack';
+        if ('doFlip' in this.wasmSprite && 'getRotationAngle' in this.wasmSprite && 'nextMode' in this.wasmSprite) return 'flipper';
+        if ('getPercentage' in this.wasmSprite && 'isWarning' in this.wasmSprite && 'isCritical' in this.wasmSprite) return 'meter';
+        if ('beep' in this.wasmSprite && 'getFrequency' in this.wasmSprite && 'startContinuous' in this.wasmSprite) return 'beeper';
         return 'sprite';
     }
 
@@ -160,6 +163,15 @@ export class WasmSpriteView {
                 break;
             case 'stack':
                 this.drawStack();
+                break;
+            case 'flipper':
+                this.drawFlipper();
+                break;
+            case 'meter':
+                this.drawMeter();
+                break;
+            case 'beeper':
+                this.drawBeeper();
                 break;
             default:
                 this.drawGenericSprite();
@@ -1522,6 +1534,320 @@ export class WasmSpriteView {
             this.graphics.lineTo(0, arrowY - 5);
             this.graphics.lineTo(8, arrowY + 5);
         }
+    }
+
+    private drawFlipper(): void {
+        const flipper = this.wasmSprite as ToonTalkFlipper;
+        const mode = flipper.getModeInt();
+        const angle = flipper.getRotationAngle();
+        const flipCount = flipper.getFlipCount();
+        const hasAttached = flipper.hasAttached();
+
+        // Flipper body (paddle/spatula shape - cyan/turquoise)
+        this.graphics.beginFill(0x40E0D0);
+        this.graphics.drawRoundedRect(-35, -20, 70, 40, 8);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(2, 0x20B2AA);
+        this.graphics.drawRoundedRect(-35, -20, 70, 40, 8);
+
+        // Mode indicator icons
+        const modeIcons = ['↔️', '↕️', '↻', '↺']; // HORIZONTAL, VERTICAL, ROTATE_CW, ROTATE_CCW
+        const modeNames = ['H-FLIP', 'V-FLIP', 'CW', 'CCW'];
+
+        // Central icon
+        const icon = new PIXI.Text(modeIcons[mode] || '?', {
+            fontSize: 24
+        });
+        icon.anchor.set(0.5);
+        icon.y = -2;
+        this.graphics.addChild(icon);
+
+        // Rotation angle display (if in rotate mode)
+        if (mode === 2 || mode === 3) {
+            const angleText = new PIXI.Text(`${angle.toFixed(0)}°`, {
+                fontSize: 12,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2
+            });
+            angleText.anchor.set(0.5);
+            angleText.y = 12;
+            this.graphics.addChild(angleText);
+        }
+
+        // Flip count badge
+        if (flipCount > 0) {
+            const countText = new PIXI.Text(`×${flipCount}`, {
+                fontSize: 10,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2,
+                backgroundColor: 0xFF6347,
+                padding: 2
+            });
+            countText.anchor.set(0.5);
+            countText.x = 25;
+            countText.y = -15;
+            this.graphics.addChild(countText);
+        }
+
+        // Attached indicator
+        if (hasAttached) {
+            const attachedIcon = new PIXI.Text('📎', {
+                fontSize: 16
+            });
+            attachedIcon.anchor.set(0.5);
+            attachedIcon.x = -25;
+            attachedIcon.y = -15;
+            this.graphics.addChild(attachedIcon);
+        }
+
+        // Label
+        const label = new PIXI.Text('Flipper', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 35;
+        this.graphics.addChild(label);
+
+        // Mode text
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 8,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -30;
+        this.graphics.addChild(modeText);
+    }
+
+    private drawMeter(): void {
+        const meter = this.wasmSprite as ToonTalkMeter;
+        const state = meter.getStateInt();
+        const value = meter.getValue();
+        const percentage = meter.getPercentage();
+
+        // Meter body (gauge container - dark gray)
+        this.graphics.beginFill(0x2F4F4F);
+        this.graphics.drawRoundedRect(-30, -60, 60, 120, 5);
+        this.graphics.endFill();
+
+        // Border (changes color based on state)
+        const stateColors = [
+            0x00FF00, // NORMAL - green
+            0xFFFF00, // WARNING - yellow
+            0xFF8C00, // CRITICAL - orange
+            0xFF0000  // MAXED - red
+        ];
+        this.graphics.lineStyle(3, stateColors[state] || 0x00FF00);
+        this.graphics.drawRoundedRect(-30, -60, 60, 120, 5);
+
+        // Background gauge bar
+        this.graphics.beginFill(0x1C1C1C);
+        this.graphics.drawRect(-25, -50, 50, 90);
+        this.graphics.endFill();
+
+        // Fill bar (color changes with state)
+        const fillHeight = 90 * (percentage / 100);
+        this.graphics.beginFill(stateColors[state] || 0x00FF00);
+        this.graphics.drawRect(-25, 40 - fillHeight, 50, fillHeight);
+        this.graphics.endFill();
+
+        // Tick marks
+        for (let i = 0; i <= 10; i++) {
+            const tickY = 40 - (i * 9);
+            const tickWidth = i % 5 === 0 ? 8 : 4;
+            this.graphics.lineStyle(1, 0x808080);
+            this.graphics.moveTo(-25 - tickWidth, tickY);
+            this.graphics.lineTo(-25, tickY);
+            this.graphics.moveTo(25, tickY);
+            this.graphics.lineTo(25 + tickWidth, tickY);
+        }
+
+        // Percentage display
+        const percentText = new PIXI.Text(`${percentage.toFixed(0)}%`, {
+            fontSize: 16,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 3
+        });
+        percentText.anchor.set(0.5);
+        percentText.y = -10;
+        this.graphics.addChild(percentText);
+
+        // Value display
+        const valueText = new PIXI.Text(`${value.toFixed(1)}`, {
+            fontSize: 10,
+            fill: 0xCCCCCC,
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        valueText.anchor.set(0.5);
+        valueText.y = 5;
+        this.graphics.addChild(valueText);
+
+        // Label
+        const label = new PIXI.Text('Meter', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 50;
+        this.graphics.addChild(label);
+
+        // State indicator
+        const stateNames = ['NORMAL', 'WARN', 'CRIT', 'MAX'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -55;
+        this.graphics.addChild(stateText);
+
+        // Warning/Critical/Maxed icons
+        if (state === 1) { // WARNING
+            const warnIcon = new PIXI.Text('⚠️', {
+                fontSize: 12
+            });
+            warnIcon.anchor.set(0.5);
+            warnIcon.x = 20;
+            warnIcon.y = -30;
+            this.graphics.addChild(warnIcon);
+        } else if (state === 2) { // CRITICAL
+            const critIcon = new PIXI.Text('❗', {
+                fontSize: 14
+            });
+            critIcon.anchor.set(0.5);
+            critIcon.x = 20;
+            critIcon.y = -30;
+            this.graphics.addChild(critIcon);
+        } else if (state === 3) { // MAXED
+            const maxIcon = new PIXI.Text('🔴', {
+                fontSize: 12
+            });
+            maxIcon.anchor.set(0.5);
+            maxIcon.x = 20;
+            maxIcon.y = -30;
+            this.graphics.addChild(maxIcon);
+        }
+    }
+
+    private drawBeeper(): void {
+        const beeper = this.wasmSprite as ToonTalkBeeper;
+        const state = beeper.getStateInt();
+        const beepCount = beeper.getBeepCount();
+        const frequency = beeper.getFrequency();
+        const isBeeping = beeper.isBeeping();
+
+        // Beeper body (speaker/bell shape - orange)
+        const bodyColor = state === 0 ? 0xFFA500 : (state === 1 ? 0xFF8C00 : 0xFF6347);
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawCircle(0, 0, 25);
+        this.graphics.endFill();
+
+        // Border (glows when beeping)
+        this.graphics.lineStyle(state !== 0 ? 4 : 2, state !== 0 ? 0xFFFF00 : 0xCC8400, state !== 0 ? 0.8 : 1);
+        this.graphics.drawCircle(0, 0, 25);
+
+        // Speaker cone (concentric circles)
+        for (let i = 1; i <= 3; i++) {
+            const radius = i * 6;
+            this.graphics.beginFill(0xFFD700, 0.3);
+            this.graphics.drawCircle(0, 0, radius);
+            this.graphics.endFill();
+        }
+
+        // Sound waves (if beeping or continuous)
+        if (isBeeping) {
+            for (let i = 0; i < 3; i++) {
+                const distance = 30 + i * 10;
+                const alpha = 0.6 - i * 0.2;
+                this.graphics.lineStyle(2, 0xFFFF00, alpha);
+                // Draw arc (right side)
+                this.graphics.arc(0, 0, distance, -Math.PI / 4, Math.PI / 4);
+                // Draw arc (left side)
+                this.graphics.arc(0, 0, distance, (3 * Math.PI) / 4, (5 * Math.PI) / 4);
+            }
+        }
+
+        // Bell icon in center
+        const icon = new PIXI.Text(state === 2 ? '🔊' : '🔔', {
+            fontSize: 20
+        });
+        icon.anchor.set(0.5);
+        icon.y = -2;
+        this.graphics.addChild(icon);
+
+        // Beep count
+        if (beepCount > 0) {
+            const countText = new PIXI.Text(`${beepCount}`, {
+                fontSize: 12,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2,
+                backgroundColor: 0xFF0000,
+                padding: 2
+            });
+            countText.anchor.set(0.5);
+            countText.x = 18;
+            countText.y = -18;
+            this.graphics.addChild(countText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Beeper', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // Frequency display
+        const freqText = new PIXI.Text(`${frequency.toFixed(0)}Hz`, {
+            fontSize: 8,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        freqText.anchor.set(0.5);
+        freqText.y = -32;
+        this.graphics.addChild(freqText);
+
+        // State indicator
+        const stateNames = ['SILENT', 'BEEP', 'CONT'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: state === 0 ? 0xCCCCCC : 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = 50;
+        this.graphics.addChild(stateText);
     }
 
     /**
