@@ -50,6 +50,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Logger: typeof ToonTalkLogger;
     Filter: typeof ToonTalkFilter;
     Accumulator: typeof ToonTalkAccumulator;
+    Sequencer: typeof ToonTalkSequencer;
+    Trigger: typeof ToonTalkTrigger;
+    Scheduler: typeof ToonTalkScheduler;
 
     // Enums
     WandMode: typeof WandMode;
@@ -82,6 +85,12 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     FilterState: typeof FilterState;
     AccumulatorMode: typeof AccumulatorMode;
     AccumulatorState: typeof AccumulatorState;
+    SequencerMode: typeof SequencerMode;
+    SequencerState: typeof SequencerState;
+    TriggerMode: typeof TriggerMode;
+    TriggerState: typeof TriggerState;
+    SchedulerMode: typeof SchedulerMode;
+    SchedulerState: typeof SchedulerState;
 }
 
 /**
@@ -1043,6 +1052,137 @@ export enum AccumulatorState {
     IDLE = 0,
     ACCUMULATING = 1,
     PAUSED = 2
+}
+
+/**
+ * Sequencer - Sequences operations in configurable order
+ */
+export declare class ToonTalkSequencer extends Sprite {
+    constructor(x: number, y: number, numSteps?: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    start(): void;
+    pause(): void;
+    resume(): void;
+    stop(): void;
+    reset(): void;
+    nextStep(): void;
+    previousStep(): void;
+    jumpToStep(step: number): void;
+    getCurrentStep(): number;
+    getNumSteps(): number;
+    setNumSteps(steps: number): void;
+    getLoopCount(): number;
+    getExecutionCount(): number;
+    getAutoAdvance(): boolean;
+    setAutoAdvance(enabled: boolean): void;
+    getProgress(): number;
+    isRunning(): boolean;
+    isCompleted(): boolean;
+    delete(): void;
+}
+
+export enum SequencerMode {
+    LINEAR = 0,
+    LOOP = 1,
+    PINGPONG = 2,
+    RANDOM = 3
+}
+
+export enum SequencerState {
+    IDLE = 0,
+    RUNNING = 1,
+    PAUSED = 2,
+    COMPLETED = 3
+}
+
+/**
+ * Trigger - Event-based trigger with configurable conditions
+ */
+export declare class ToonTalkTrigger extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    arm(): void;
+    disarm(): void;
+    reset(): void;
+    unlatch(): void;
+    checkTrigger(value: number): boolean;
+    getThreshold(): number;
+    setThreshold(value: number): void;
+    getCurrentValue(): number;
+    getTriggerCount(): number;
+    getDebounceThreshold(): number;
+    setDebounceThreshold(threshold: number): void;
+    latch(): void;
+    isArmed(): boolean;
+    isTriggered(): boolean;
+    isLatched(): boolean;
+    delete(): void;
+}
+
+export enum TriggerMode {
+    EDGE_RISING = 0,
+    EDGE_FALLING = 1,
+    EDGE_BOTH = 2,
+    LEVEL_HIGH = 3,
+    LEVEL_LOW = 4
+}
+
+export enum TriggerState {
+    IDLE = 0,
+    ARMED = 1,
+    TRIGGERED = 2,
+    LATCHED = 3
+}
+
+/**
+ * Scheduler - Time-based task scheduler
+ */
+export declare class ToonTalkScheduler extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    start(): void;
+    stop(): void;
+    pause(): void;
+    resume(): void;
+    update(deltaTime: number): void;
+    execute(): void;
+    finishExecution(): void;
+    getDelay(): number;
+    setDelay(delay: number): void;
+    getInterval(): number;
+    setInterval(interval: number): void;
+    getElapsedTime(): number;
+    getLastExecutionTime(): number;
+    getExecutionCount(): number;
+    getMaxExecutions(): number;
+    setMaxExecutions(max: number): void;
+    getProgress(): number;
+    isWaiting(): boolean;
+    isReady(): boolean;
+    isExecuting(): boolean;
+    delete(): void;
+}
+
+export enum SchedulerMode {
+    ONCE = 0,
+    INTERVAL = 1,
+    CRON = 2
+}
+
+export enum SchedulerState {
+    IDLE = 0,
+    WAITING = 1,
+    READY = 2,
+    EXECUTING = 3
 }
 
 /**

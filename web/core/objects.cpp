@@ -2735,6 +2735,464 @@ private:
     float decay_rate_;
 };
 
+/**
+ * Sequencer - Tool for sequencing operations in order
+ * Manages step-by-step execution with configurable flow control
+ */
+class Sequencer : public Sprite {
+public:
+    enum SequencerMode {
+        LINEAR = 0,      // Execute steps in order
+        LOOP = 1,        // Loop back to start after end
+        PINGPONG = 2,    // Reverse direction at ends
+        RANDOM = 3       // Random step selection
+    };
+
+    enum SequencerState {
+        IDLE = 0,
+        RUNNING = 1,
+        PAUSED = 2,
+        COMPLETED = 3
+    };
+
+    Sequencer(float x, float y, int num_steps = 10)
+        : Sprite(x, y, 70.0f, 60.0f),
+          mode_(LINEAR),
+          state_(IDLE),
+          current_step_(0),
+          num_steps_(num_steps),
+          direction_(1),
+          loop_count_(0),
+          execution_count_(0),
+          auto_advance_(false) {}
+
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) { mode_ = static_cast<SequencerMode>(mode); }
+
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) { state_ = static_cast<SequencerState>(state); }
+
+    void start() {
+        if (state_ != RUNNING) {
+            state_ = RUNNING;
+            current_step_ = 0;
+            execution_count_ = 0;
+        }
+    }
+
+    void pause() {
+        if (state_ == RUNNING) {
+            state_ = PAUSED;
+        }
+    }
+
+    void resume() {
+        if (state_ == PAUSED) {
+            state_ = RUNNING;
+        }
+    }
+
+    void stop() {
+        state_ = IDLE;
+        current_step_ = 0;
+    }
+
+    void reset() {
+        stop();
+        loop_count_ = 0;
+        execution_count_ = 0;
+    }
+
+    void nextStep() {
+        if (state_ != RUNNING) return;
+
+        execution_count_++;
+
+        switch (mode_) {
+            case LINEAR:
+                current_step_++;
+                if (current_step_ >= num_steps_) {
+                    state_ = COMPLETED;
+                }
+                break;
+            case LOOP:
+                current_step_ = (current_step_ + 1) % num_steps_;
+                if (current_step_ == 0) {
+                    loop_count_++;
+                }
+                break;
+            case PINGPONG:
+                current_step_ += direction_;
+                if (current_step_ >= num_steps_ - 1) {
+                    direction_ = -1;
+                    loop_count_++;
+                } else if (current_step_ <= 0) {
+                    direction_ = 1;
+                }
+                break;
+            case RANDOM:
+                // Simple pseudo-random step selection
+                current_step_ = (current_step_ * 1103515245 + 12345) % num_steps_;
+                break;
+        }
+    }
+
+    void previousStep() {
+        if (state_ != RUNNING || current_step_ <= 0) return;
+        current_step_--;
+        execution_count_++;
+    }
+
+    void jumpToStep(int step) {
+        if (step >= 0 && step < num_steps_) {
+            current_step_ = step;
+        }
+    }
+
+    int getCurrentStep() const { return current_step_; }
+    int getNumSteps() const { return num_steps_; }
+    void setNumSteps(int steps) {
+        if (steps > 0) {
+            num_steps_ = steps;
+            if (current_step_ >= num_steps_) {
+                current_step_ = num_steps_ - 1;
+            }
+        }
+    }
+
+    int getLoopCount() const { return loop_count_; }
+    int getExecutionCount() const { return execution_count_; }
+
+    bool getAutoAdvance() const { return auto_advance_; }
+    void setAutoAdvance(bool enabled) { auto_advance_ = enabled; }
+
+    float getProgress() const {
+        if (num_steps_ <= 0) return 0.0f;
+        return static_cast<float>(current_step_) / static_cast<float>(num_steps_ - 1);
+    }
+
+    bool isRunning() const { return state_ == RUNNING; }
+    bool isCompleted() const { return state_ == COMPLETED; }
+
+private:
+    SequencerMode mode_;
+    SequencerState state_;
+    int current_step_;
+    int num_steps_;
+    int direction_;
+    int loop_count_;
+    int execution_count_;
+    bool auto_advance_;
+};
+
+/**
+ * Trigger - Event-based trigger with configurable conditions
+ * Fires when conditions are met, with debouncing and latching
+ */
+class Trigger : public Sprite {
+public:
+    enum TriggerMode {
+        EDGE_RISING = 0,   // Trigger on value going from low to high
+        EDGE_FALLING = 1,  // Trigger on value going from high to low
+        EDGE_BOTH = 2,     // Trigger on any edge
+        LEVEL_HIGH = 3,    // Trigger while value is high
+        LEVEL_LOW = 4      // Trigger while value is low
+    };
+
+    enum TriggerState {
+        IDLE = 0,
+        ARMED = 1,
+        TRIGGERED = 2,
+        LATCHED = 3
+    };
+
+    Trigger(float x, float y)
+        : Sprite(x, y, 60.0f, 60.0f),
+          mode_(EDGE_RISING),
+          state_(IDLE),
+          threshold_(0.5f),
+          current_value_(0.0f),
+          previous_value_(0.0f),
+          trigger_count_(0),
+          debounce_count_(0),
+          debounce_threshold_(0),
+          is_latched_(false) {}
+
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) { mode_ = static_cast<TriggerMode>(mode); }
+
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) { state_ = static_cast<TriggerState>(state); }
+
+    void arm() {
+        if (state_ == IDLE) {
+            state_ = ARMED;
+        }
+    }
+
+    void disarm() {
+        state_ = IDLE;
+    }
+
+    void reset() {
+        state_ = IDLE;
+        is_latched_ = false;
+        trigger_count_ = 0;
+        debounce_count_ = 0;
+    }
+
+    void unlatch() {
+        if (state_ == LATCHED) {
+            is_latched_ = false;
+            state_ = ARMED;
+        }
+    }
+
+    bool checkTrigger(float value) {
+        if (state_ == LATCHED) {
+            return false;
+        }
+
+        previous_value_ = current_value_;
+        current_value_ = value;
+
+        if (state_ != ARMED) {
+            return false;
+        }
+
+        bool should_trigger = false;
+        bool is_high = current_value_ >= threshold_;
+        bool was_high = previous_value_ >= threshold_;
+
+        switch (mode_) {
+            case EDGE_RISING:
+                should_trigger = !was_high && is_high;
+                break;
+            case EDGE_FALLING:
+                should_trigger = was_high && !is_high;
+                break;
+            case EDGE_BOTH:
+                should_trigger = (was_high != is_high);
+                break;
+            case LEVEL_HIGH:
+                should_trigger = is_high;
+                break;
+            case LEVEL_LOW:
+                should_trigger = !is_high;
+                break;
+        }
+
+        // Debouncing
+        if (should_trigger) {
+            debounce_count_++;
+            if (debounce_count_ >= debounce_threshold_) {
+                state_ = TRIGGERED;
+                trigger_count_++;
+                debounce_count_ = 0;
+                return true;
+            }
+        } else {
+            debounce_count_ = 0;
+        }
+
+        return false;
+    }
+
+    float getThreshold() const { return threshold_; }
+    void setThreshold(float value) { threshold_ = value; }
+
+    float getCurrentValue() const { return current_value_; }
+    int getTriggerCount() const { return trigger_count_; }
+
+    int getDebounceThreshold() const { return debounce_threshold_; }
+    void setDebounceThreshold(int threshold) { debounce_threshold_ = threshold; }
+
+    void latch() {
+        if (state_ == TRIGGERED) {
+            state_ = LATCHED;
+            is_latched_ = true;
+        }
+    }
+
+    bool isArmed() const { return state_ == ARMED; }
+    bool isTriggered() const { return state_ == TRIGGERED; }
+    bool isLatched() const { return state_ == LATCHED; }
+
+private:
+    TriggerMode mode_;
+    TriggerState state_;
+    float threshold_;
+    float current_value_;
+    float previous_value_;
+    int trigger_count_;
+    int debounce_count_;
+    int debounce_threshold_;
+    bool is_latched_;
+};
+
+/**
+ * Scheduler - Time-based task scheduler
+ * Schedules and manages tasks with delays and intervals
+ */
+class Scheduler : public Sprite {
+public:
+    enum SchedulerMode {
+        ONCE = 0,        // Execute once after delay
+        INTERVAL = 1,    // Execute repeatedly at interval
+        CRON = 2         // Execute at specific times (simplified)
+    };
+
+    enum SchedulerState {
+        IDLE = 0,
+        WAITING = 1,
+        READY = 2,
+        EXECUTING = 3
+    };
+
+    Scheduler(float x, float y)
+        : Sprite(x, y, 70.0f, 60.0f),
+          mode_(ONCE),
+          state_(IDLE),
+          delay_(1.0f),
+          interval_(1.0f),
+          elapsed_time_(0.0f),
+          last_execution_time_(0.0f),
+          execution_count_(0),
+          max_executions_(-1) {}
+
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) { mode_ = static_cast<SchedulerMode>(mode); }
+
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) { state_ = static_cast<SchedulerState>(state); }
+
+    void start() {
+        if (state_ == IDLE) {
+            state_ = WAITING;
+            elapsed_time_ = 0.0f;
+            execution_count_ = 0;
+        }
+    }
+
+    void stop() {
+        state_ = IDLE;
+        elapsed_time_ = 0.0f;
+    }
+
+    void pause() {
+        if (state_ == WAITING) {
+            state_ = IDLE;
+        }
+    }
+
+    void resume() {
+        if (state_ == IDLE && elapsed_time_ > 0.0f) {
+            state_ = WAITING;
+        }
+    }
+
+    void update(float delta_time) {
+        if (state_ != WAITING) return;
+
+        elapsed_time_ += delta_time;
+
+        bool should_execute = false;
+
+        switch (mode_) {
+            case ONCE:
+                if (elapsed_time_ >= delay_) {
+                    should_execute = true;
+                }
+                break;
+            case INTERVAL:
+                if (elapsed_time_ >= delay_ + (execution_count_ * interval_)) {
+                    should_execute = true;
+                }
+                break;
+            case CRON:
+                // Simplified cron-like behavior (uses interval as period)
+                if (elapsed_time_ >= delay_ &&
+                    (elapsed_time_ - delay_) >= (execution_count_ * interval_)) {
+                    should_execute = true;
+                }
+                break;
+        }
+
+        if (should_execute) {
+            state_ = READY;
+            last_execution_time_ = elapsed_time_;
+            execution_count_++;
+
+            // Check if we've reached max executions
+            if (max_executions_ > 0 && execution_count_ >= max_executions_) {
+                state_ = IDLE;
+            } else if (mode_ == ONCE) {
+                state_ = IDLE;
+            } else {
+                // Continue waiting for next execution
+                state_ = WAITING;
+            }
+        }
+    }
+
+    void execute() {
+        if (state_ == READY) {
+            state_ = EXECUTING;
+        }
+    }
+
+    void finishExecution() {
+        if (state_ == EXECUTING) {
+            if (mode_ == ONCE ||
+                (max_executions_ > 0 && execution_count_ >= max_executions_)) {
+                state_ = IDLE;
+            } else {
+                state_ = WAITING;
+            }
+        }
+    }
+
+    float getDelay() const { return delay_; }
+    void setDelay(float delay) { delay_ = (delay < 0.0f) ? 0.0f : delay; }
+
+    float getInterval() const { return interval_; }
+    void setInterval(float interval) {
+        interval_ = (interval < 0.0f) ? 0.0f : interval;
+    }
+
+    float getElapsedTime() const { return elapsed_time_; }
+    float getLastExecutionTime() const { return last_execution_time_; }
+    int getExecutionCount() const { return execution_count_; }
+
+    int getMaxExecutions() const { return max_executions_; }
+    void setMaxExecutions(int max) { max_executions_ = max; }
+
+    float getProgress() const {
+        if (mode_ == ONCE) {
+            return (delay_ <= 0.0f) ? 1.0f : (elapsed_time_ / delay_);
+        } else if (mode_ == INTERVAL || mode_ == CRON) {
+            float target_time = delay_ + (execution_count_ * interval_);
+            float since_last = elapsed_time_ - last_execution_time_;
+            return (interval_ <= 0.0f) ? 1.0f : (since_last / interval_);
+        }
+        return 0.0f;
+    }
+
+    bool isWaiting() const { return state_ == WAITING; }
+    bool isReady() const { return state_ == READY; }
+    bool isExecuting() const { return state_ == EXECUTING; }
+
+private:
+    SchedulerMode mode_;
+    SchedulerState state_;
+    float delay_;
+    float interval_;
+    float elapsed_time_;
+    float last_execution_time_;
+    int execution_count_;
+    int max_executions_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -3487,4 +3945,123 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("IDLE", Accumulator::IDLE)
         .value("ACCUMULATING", Accumulator::ACCUMULATING)
         .value("PAUSED", Accumulator::PAUSED);
+
+    // Sequencer class
+    class_<Sequencer, base<Sprite>>("Sequencer")
+        .constructor<float, float, int>()
+        .function("getModeInt", &Sequencer::getModeInt)
+        .function("setModeInt", &Sequencer::setModeInt)
+        .function("getStateInt", &Sequencer::getStateInt)
+        .function("setStateInt", &Sequencer::setStateInt)
+        .function("start", &Sequencer::start)
+        .function("pause", &Sequencer::pause)
+        .function("resume", &Sequencer::resume)
+        .function("stop", &Sequencer::stop)
+        .function("reset", &Sequencer::reset)
+        .function("nextStep", &Sequencer::nextStep)
+        .function("previousStep", &Sequencer::previousStep)
+        .function("jumpToStep", &Sequencer::jumpToStep)
+        .function("getCurrentStep", &Sequencer::getCurrentStep)
+        .function("getNumSteps", &Sequencer::getNumSteps)
+        .function("setNumSteps", &Sequencer::setNumSteps)
+        .function("getLoopCount", &Sequencer::getLoopCount)
+        .function("getExecutionCount", &Sequencer::getExecutionCount)
+        .function("getAutoAdvance", &Sequencer::getAutoAdvance)
+        .function("setAutoAdvance", &Sequencer::setAutoAdvance)
+        .function("getProgress", &Sequencer::getProgress)
+        .function("isRunning", &Sequencer::isRunning)
+        .function("isCompleted", &Sequencer::isCompleted);
+
+    // Sequencer mode enum values
+    enum_<Sequencer::SequencerMode>("SequencerMode")
+        .value("LINEAR", Sequencer::LINEAR)
+        .value("LOOP", Sequencer::LOOP)
+        .value("PINGPONG", Sequencer::PINGPONG)
+        .value("RANDOM", Sequencer::RANDOM);
+
+    // Sequencer state enum values
+    enum_<Sequencer::SequencerState>("SequencerState")
+        .value("IDLE", Sequencer::IDLE)
+        .value("RUNNING", Sequencer::RUNNING)
+        .value("PAUSED", Sequencer::PAUSED)
+        .value("COMPLETED", Sequencer::COMPLETED);
+
+    // Trigger class
+    class_<Trigger, base<Sprite>>("Trigger")
+        .constructor<float, float>()
+        .function("getModeInt", &Trigger::getModeInt)
+        .function("setModeInt", &Trigger::setModeInt)
+        .function("getStateInt", &Trigger::getStateInt)
+        .function("setStateInt", &Trigger::setStateInt)
+        .function("arm", &Trigger::arm)
+        .function("disarm", &Trigger::disarm)
+        .function("reset", &Trigger::reset)
+        .function("unlatch", &Trigger::unlatch)
+        .function("checkTrigger", &Trigger::checkTrigger)
+        .function("getThreshold", &Trigger::getThreshold)
+        .function("setThreshold", &Trigger::setThreshold)
+        .function("getCurrentValue", &Trigger::getCurrentValue)
+        .function("getTriggerCount", &Trigger::getTriggerCount)
+        .function("getDebounceThreshold", &Trigger::getDebounceThreshold)
+        .function("setDebounceThreshold", &Trigger::setDebounceThreshold)
+        .function("latch", &Trigger::latch)
+        .function("isArmed", &Trigger::isArmed)
+        .function("isTriggered", &Trigger::isTriggered)
+        .function("isLatched", &Trigger::isLatched);
+
+    // Trigger mode enum values
+    enum_<Trigger::TriggerMode>("TriggerMode")
+        .value("EDGE_RISING", Trigger::EDGE_RISING)
+        .value("EDGE_FALLING", Trigger::EDGE_FALLING)
+        .value("EDGE_BOTH", Trigger::EDGE_BOTH)
+        .value("LEVEL_HIGH", Trigger::LEVEL_HIGH)
+        .value("LEVEL_LOW", Trigger::LEVEL_LOW);
+
+    // Trigger state enum values
+    enum_<Trigger::TriggerState>("TriggerState")
+        .value("IDLE", Trigger::IDLE)
+        .value("ARMED", Trigger::ARMED)
+        .value("TRIGGERED", Trigger::TRIGGERED)
+        .value("LATCHED", Trigger::LATCHED);
+
+    // Scheduler class
+    class_<Scheduler, base<Sprite>>("Scheduler")
+        .constructor<float, float>()
+        .function("getModeInt", &Scheduler::getModeInt)
+        .function("setModeInt", &Scheduler::setModeInt)
+        .function("getStateInt", &Scheduler::getStateInt)
+        .function("setStateInt", &Scheduler::setStateInt)
+        .function("start", &Scheduler::start)
+        .function("stop", &Scheduler::stop)
+        .function("pause", &Scheduler::pause)
+        .function("resume", &Scheduler::resume)
+        .function("update", &Scheduler::update)
+        .function("execute", &Scheduler::execute)
+        .function("finishExecution", &Scheduler::finishExecution)
+        .function("getDelay", &Scheduler::getDelay)
+        .function("setDelay", &Scheduler::setDelay)
+        .function("getInterval", &Scheduler::getInterval)
+        .function("setInterval", &Scheduler::setInterval)
+        .function("getElapsedTime", &Scheduler::getElapsedTime)
+        .function("getLastExecutionTime", &Scheduler::getLastExecutionTime)
+        .function("getExecutionCount", &Scheduler::getExecutionCount)
+        .function("getMaxExecutions", &Scheduler::getMaxExecutions)
+        .function("setMaxExecutions", &Scheduler::setMaxExecutions)
+        .function("getProgress", &Scheduler::getProgress)
+        .function("isWaiting", &Scheduler::isWaiting)
+        .function("isReady", &Scheduler::isReady)
+        .function("isExecuting", &Scheduler::isExecuting);
+
+    // Scheduler mode enum values
+    enum_<Scheduler::SchedulerMode>("SchedulerMode")
+        .value("ONCE", Scheduler::ONCE)
+        .value("INTERVAL", Scheduler::INTERVAL)
+        .value("CRON", Scheduler::CRON);
+
+    // Scheduler state enum values
+    enum_<Scheduler::SchedulerState>("SchedulerState")
+        .value("IDLE", Scheduler::IDLE)
+        .value("WAITING", Scheduler::WAITING)
+        .value("READY", Scheduler::READY)
+        .value("EXECUTING", Scheduler::EXECUTING);
 }

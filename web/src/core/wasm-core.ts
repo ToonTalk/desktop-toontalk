@@ -764,6 +764,99 @@ export class WasmCore {
             console.log('[WASM Test] ⏭️  Skipping Accumulator (not in WASM binary yet - rebuild required)');
         }
 
+        // Test 42: Create Sequencer (if available in WASM)
+        console.log('[WASM Test] --- Test 42: Sequencer ---');
+        if (this.module.Sequencer) {
+            const sequencer = new this.module.Sequencer(5000, 100, 5);
+            console.log('[WASM Test] Created Sequencer at:', sequencer.getX(), sequencer.getY());
+            console.log('[WASM Test] NumSteps:', sequencer.getNumSteps(), '- CurrentStep:', sequencer.getCurrentStep());
+            sequencer.start();
+            console.log('[WASM Test] After start() - State:', sequencer.getStateInt(), '(RUNNING=1)');
+            sequencer.nextStep();
+            sequencer.nextStep();
+            console.log('[WASM Test] After 2 nextStep() - CurrentStep:', sequencer.getCurrentStep(),
+                       '- Progress:', sequencer.getProgress());
+            sequencer.setModeInt(1); // LOOP
+            sequencer.jumpToStep(4);
+            console.log('[WASM Test] After jumpToStep(4) in LOOP mode - CurrentStep:', sequencer.getCurrentStep());
+            sequencer.nextStep(); // Should wrap to 0
+            console.log('[WASM Test] After nextStep() at end - CurrentStep:', sequencer.getCurrentStep(),
+                       '- LoopCount:', sequencer.getLoopCount());
+            sequencer.pause();
+            console.log('[WASM Test] After pause() - State:', sequencer.getStateInt(), '(PAUSED=2)');
+            sequencer.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Sequencer (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 43: Create Trigger (if available in WASM)
+        console.log('[WASM Test] --- Test 43: Trigger ---');
+        if (this.module.Trigger) {
+            const trigger = new this.module.Trigger(5200, 100);
+            console.log('[WASM Test] Created Trigger at:', trigger.getX(), trigger.getY());
+            console.log('[WASM Test] Initial state:', trigger.getStateInt(), '(IDLE=0)');
+            trigger.setThreshold(0.5);
+            trigger.arm();
+            console.log('[WASM Test] After arm() - State:', trigger.getStateInt(), '(ARMED=1)');
+
+            let triggered = trigger.checkTrigger(0.3);
+            console.log('[WASM Test] checkTrigger(0.3) - Triggered:', triggered, '- Value:', trigger.getCurrentValue());
+
+            triggered = trigger.checkTrigger(0.7); // Should trigger (rising edge)
+            console.log('[WASM Test] checkTrigger(0.7) - Triggered:', triggered, '- State:', trigger.getStateInt(),
+                       '(TRIGGERED=2)');
+            console.log('[WASM Test] TriggerCount:', trigger.getTriggerCount());
+
+            trigger.latch();
+            console.log('[WASM Test] After latch() - State:', trigger.getStateInt(), '(LATCHED=3)');
+            triggered = trigger.checkTrigger(0.9); // Should not trigger when latched
+            console.log('[WASM Test] checkTrigger(0.9) while latched - Triggered:', triggered);
+
+            trigger.unlatch();
+            trigger.arm();
+            console.log('[WASM Test] After unlatch() and arm() - State:', trigger.getStateInt());
+            trigger.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Trigger (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 44: Create Scheduler (if available in WASM)
+        console.log('[WASM Test] --- Test 44: Scheduler ---');
+        if (this.module.Scheduler) {
+            const scheduler = new this.module.Scheduler(5400, 100);
+            console.log('[WASM Test] Created Scheduler at:', scheduler.getX(), scheduler.getY());
+            console.log('[WASM Test] Initial state:', scheduler.getStateInt(), '(IDLE=0)');
+            scheduler.setDelay(2.0);
+            scheduler.setInterval(1.0);
+            console.log('[WASM Test] After setDelay(2.0) and setInterval(1.0) - Delay:', scheduler.getDelay(),
+                       'Interval:', scheduler.getInterval());
+
+            scheduler.start();
+            console.log('[WASM Test] After start() - State:', scheduler.getStateInt(), '(WAITING=1)');
+
+            // Simulate some time passing
+            scheduler.update(1.0);
+            console.log('[WASM Test] After update(1.0) - ElapsedTime:', scheduler.getElapsedTime(),
+                       '- State:', scheduler.getStateInt());
+
+            scheduler.update(1.5); // Total 2.5s, should be ready
+            console.log('[WASM Test] After update(1.5) total 2.5s - State:', scheduler.getStateInt(),
+                       '(READY=2)', '- ExecutionCount:', scheduler.getExecutionCount());
+
+            scheduler.setModeInt(1); // INTERVAL mode
+            scheduler.setMaxExecutions(3);
+            scheduler.start();
+            scheduler.update(2.1);
+            console.log('[WASM Test] INTERVAL mode after update(2.1) - ExecutionCount:', scheduler.getExecutionCount());
+            scheduler.update(1.0);
+            scheduler.update(1.0);
+            console.log('[WASM Test] After more updates - ExecutionCount:', scheduler.getExecutionCount(),
+                       '- State:', scheduler.getStateInt());
+            scheduler.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Scheduler (not in WASM binary yet - rebuild required)');
+        }
+
         console.log('[WASM Tests] ✅ All available tests passed!');
     }
 
@@ -1208,6 +1301,45 @@ export class WasmCore {
             throw new Error('Accumulator class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
         }
         return new this.module.Accumulator(x, y);
+    }
+
+    /**
+     * Create a Sequencer instance from WASM
+     */
+    createSequencer(x: number, y: number, numSteps: number = 10) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Sequencer) {
+            throw new Error('Sequencer class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Sequencer(x, y, numSteps);
+    }
+
+    /**
+     * Create a Trigger instance from WASM
+     */
+    createTrigger(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Trigger) {
+            throw new Error('Trigger class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Trigger(x, y);
+    }
+
+    /**
+     * Create a Scheduler instance from WASM
+     */
+    createScheduler(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Scheduler) {
+            throw new Error('Scheduler class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Scheduler(x, y);
     }
 
     /**
