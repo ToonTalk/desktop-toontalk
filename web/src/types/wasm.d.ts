@@ -18,6 +18,11 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Text: typeof ToonTalkText;
     Box: typeof ToonTalkBox;
     Nest: typeof ToonTalkNest;
+    Scale: typeof ToonTalkScale;
+    Wand: typeof ToonTalkWand;
+
+    // Enums
+    WandMode: typeof WandMode;
 }
 
 /**
@@ -116,6 +121,41 @@ export declare class ToonTalkNest extends Sprite {
     isFull(): boolean;
     isEmpty(): boolean;
     delete(): void;
+}
+
+/**
+ * Scale class (matches objects.cpp) - Copy tool
+ */
+export declare class ToonTalkScale extends Sprite {
+    constructor(x: number, y: number);
+    isActive(): boolean;
+    setActive(active: boolean): void;
+    delete(): void;
+}
+
+/**
+ * Wand class (matches objects.cpp) - Magic wand for creating objects
+ */
+export declare class ToonTalkWand extends Sprite {
+    constructor(x: number, y: number, mode?: WandMode);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    isActive(): boolean;
+    setActive(active: boolean): void;
+    nextMode(): void;
+    previousMode(): void;
+    delete(): void;
+}
+
+/**
+ * Wand mode enum (matches objects.cpp)
+ */
+export enum WandMode {
+    CREATE_NUMBER = 0,
+    CREATE_TEXT = 1,
+    CREATE_BOX = 2,
+    CREATE_NEST = 3,
+    CREATE_BIRD = 4
 }
 
 /**
