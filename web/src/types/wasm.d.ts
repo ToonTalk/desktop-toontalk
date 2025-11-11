@@ -44,6 +44,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Connector: typeof ToonTalkConnector;
     Timer: typeof ToonTalkTimer;
     Counter: typeof ToonTalkCounter;
+    Sampler: typeof ToonTalkSampler;
+    Comparator: typeof ToonTalkComparator;
+    Randomizer: typeof ToonTalkRandomizer;
 
     // Enums
     WandMode: typeof WandMode;
@@ -67,6 +70,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     ConnectorState: typeof ConnectorState;
     TimerState: typeof TimerState;
     CounterState: typeof CounterState;
+    SamplerState: typeof SamplerState;
+    ComparisonResult: typeof ComparisonResult;
+    RandomizerMode: typeof RandomizerMode;
 }
 
 /**
@@ -814,6 +820,89 @@ export enum CounterState {
     AT_MIN = 1,
     AT_MAX = 2,
     OVERFLOW = 3
+}
+
+export declare class ToonTalkSampler extends Sprite {
+    constructor(x: number, y: number, capacity?: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    startSampling(): void;
+    pauseSampling(): void;
+    resumeSampling(): void;
+    stopSampling(): void;
+    clear(): void;
+    recordSample(value: number): void;
+    getSampleCount(): number;
+    getCapacity(): number;
+    setCapacity(capacity: number): void;
+    getSampleRate(): number;
+    setSampleRate(rate: number): void;
+    getCurrentValue(): number;
+    getMinValue(): number;
+    getMaxValue(): number;
+    isSampling(): boolean;
+    isFull(): boolean;
+    getFullness(): number;
+    delete(): void;
+}
+
+export enum SamplerState {
+    IDLE = 0,
+    SAMPLING = 1,
+    PAUSED = 2,
+    FULL = 3
+}
+
+export declare class ToonTalkComparator extends Sprite {
+    constructor(x: number, y: number);
+    getValueA(): number;
+    setValueA(value: number): void;
+    getValueB(): number;
+    setValueB(value: number): void;
+    setValues(a: number, b: number): void;
+    getResultInt(): number;
+    isEqual(): boolean;
+    isLessThan(): boolean;
+    isGreaterThan(): boolean;
+    isNotEqual(): boolean;
+    getTolerance(): number;
+    setTolerance(tolerance: number): void;
+    getDifference(): number;
+    getComparisonCount(): number;
+    reset(): void;
+    delete(): void;
+}
+
+export enum ComparisonResult {
+    EQUAL = 0,
+    LESS_THAN = 1,
+    GREATER_THAN = 2,
+    NOT_EQUAL = 3
+}
+
+export declare class ToonTalkRandomizer extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    generate(): void;
+    getCurrentValue(): number;
+    getMinValue(): number;
+    setMinValue(value: number): void;
+    getMaxValue(): number;
+    setMaxValue(value: number): void;
+    getGenerationCount(): number;
+    setGenerationCount(count: number): void;
+    getSeed(): number;
+    setSeed(seed: number): void;
+    reset(): void;
+    delete(): void;
+}
+
+export enum RandomizerMode {
+    UNIFORM = 0,
+    INTEGER = 1,
+    BOOLEAN = 2,
+    DICE = 3
 }
 
 /**

@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper, ToonTalkConnector, ToonTalkTimer, ToonTalkCounter } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper, ToonTalkConnector, ToonTalkTimer, ToonTalkCounter, ToonTalkSampler, ToonTalkComparator, ToonTalkRandomizer } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -79,6 +79,9 @@ export class WasmSpriteView {
         if ('connect' in this.wasmSprite && 'getSourceId' in this.wasmSprite && 'getTargetId' in this.wasmSprite) return 'connector';
         if ('start' in this.wasmSprite && 'pause' in this.wasmSprite && 'getProgress' in this.wasmSprite && 'getDuration' in this.wasmSprite) return 'timer';
         if ('increment' in this.wasmSprite && 'decrement' in this.wasmSprite && 'getStep' in this.wasmSprite) return 'counter';
+        if ('recordSample' in this.wasmSprite && 'getSampleRate' in this.wasmSprite && 'isSampling' in this.wasmSprite) return 'sampler';
+        if ('getValueA' in this.wasmSprite && 'getValueB' in this.wasmSprite && 'isEqual' in this.wasmSprite) return 'comparator';
+        if ('generate' in this.wasmSprite && 'getSeed' in this.wasmSprite && 'getGenerationCount' in this.wasmSprite) return 'randomizer';
         return 'sprite';
     }
 
@@ -184,6 +187,15 @@ export class WasmSpriteView {
                 break;
             case 'counter':
                 this.drawCounter();
+                break;
+            case 'sampler':
+                this.drawSampler();
+                break;
+            case 'comparator':
+                this.drawComparator();
+                break;
+            case 'randomizer':
+                this.drawRandomizer();
                 break;
             default:
                 this.drawGenericSprite();
@@ -2188,6 +2200,290 @@ export class WasmSpriteView {
             maxIcon.x = 28;
             maxIcon.y = -25;
             this.graphics.addChild(maxIcon);
+        }
+    }
+
+    private drawSampler(): void {
+        const sampler = this.wasmSprite as ToonTalkSampler;
+        const state = sampler.getStateInt();
+        const sampleCount = sampler.getSampleCount();
+        const fullness = sampler.getFullness();
+        const isSampling = sampler.isSampling();
+
+        // Sampler body (oscilloscope/recorder shape - teal/aqua)
+        const bodyColor = state === 1 ? 0x00CED1 : 0x5F9EA0;
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-35, -35, 70, 70, 5);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x2F4F4F);
+        this.graphics.drawRoundedRect(-35, -35, 70, 70, 5);
+
+        // Waveform display (simulated)
+        if (sampleCount > 0) {
+            this.graphics.lineStyle(2, 0x00FF00);
+            const waveWidth = 60;
+            const waveHeight = 20;
+            const samples = Math.min(sampleCount, 20);
+            for (let i = 0; i < samples; i++) {
+                const x = -30 + (i / samples) * waveWidth;
+                const y = Math.sin((i / samples) * Math.PI * 4) * waveHeight;
+                if (i === 0) {
+                    this.graphics.moveTo(x, y);
+                } else {
+                    this.graphics.lineTo(x, y);
+                }
+            }
+        }
+
+        // Sampling indicator (pulsing dot when sampling)
+        if (isSampling) {
+            this.graphics.beginFill(0xFF0000);
+            this.graphics.drawCircle(25, -25, 4);
+            this.graphics.endFill();
+        }
+
+        // Progress bar (fullness)
+        this.graphics.beginFill(0x404040, 0.5);
+        this.graphics.drawRect(-30, 20, 60, 8);
+        this.graphics.endFill();
+        this.graphics.beginFill(0x00FF00);
+        this.graphics.drawRect(-30, 20, 60 * fullness, 8);
+        this.graphics.endFill();
+
+        // Sample count
+        const countText = new PIXI.Text(`${sampleCount}`, {
+            fontSize: 14,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        countText.anchor.set(0.5);
+        countText.y = -10;
+        this.graphics.addChild(countText);
+
+        // Label
+        const label = new PIXI.Text('Sampler', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 45;
+        this.graphics.addChild(label);
+
+        // State indicator
+        const stateNames = ['IDLE', 'SAMP', 'PAUSE', 'FULL'];
+        const stateColors = [0x808080, 0x00FF00, 0xFFFF00, 0xFF0000];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -30;
+        this.graphics.addChild(stateText);
+    }
+
+    private drawComparator(): void {
+        const comparator = this.wasmSprite as ToonTalkComparator;
+        const result = comparator.getResultInt();
+        const valueA = comparator.getValueA();
+        const valueB = comparator.getValueB();
+        const isEqual = comparator.isEqual();
+
+        // Comparator body (balance/scales shape - purple)
+        this.graphics.beginFill(0x9370DB);
+        this.graphics.drawRoundedRect(-40, -30, 80, 60, 5);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x663399);
+        this.graphics.drawRoundedRect(-40, -30, 80, 60, 5);
+
+        // Value A (left side)
+        const valueAText = new PIXI.Text(`${valueA.toFixed(1)}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        valueAText.anchor.set(0.5);
+        valueAText.x = -20;
+        valueAText.y = -10;
+        this.graphics.addChild(valueAText);
+
+        // Value B (right side)
+        const valueBText = new PIXI.Text(`${valueB.toFixed(1)}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        valueBText.anchor.set(0.5);
+        valueBText.x = 20;
+        valueBText.y = -10;
+        this.graphics.addChild(valueBText);
+
+        // Comparison symbol in center
+        const symbols = ['=', '<', '>', '≠'];
+        const symbolColors = [0x00FF00, 0xFF6347, 0xFF6347, 0xFFFF00];
+        const symbolText = new PIXI.Text(symbols[result] || '?', {
+            fontSize: 20,
+            fill: symbolColors[result] || 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 3
+        });
+        symbolText.anchor.set(0.5);
+        symbolText.y = 10;
+        this.graphics.addChild(symbolText);
+
+        // Scale visualization (tilt based on comparison)
+        const tiltAngle = result === 1 ? -0.2 : (result === 2 ? 0.2 : 0);
+        this.graphics.lineStyle(3, 0xFFD700);
+        this.graphics.moveTo(-25, -20);
+        this.graphics.lineTo(25, -20 + tiltAngle * 50);
+
+        // Label
+        const label = new PIXI.Text('Comparator', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // Result indicator
+        const resultNames = ['EQUAL', '<', '>', 'NOT='];
+        const resultText = new PIXI.Text(resultNames[result] || '?', {
+            fontSize: 8,
+            fill: symbolColors[result] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        resultText.anchor.set(0.5);
+        resultText.y = -25;
+        this.graphics.addChild(resultText);
+    }
+
+    private drawRandomizer(): void {
+        const randomizer = this.wasmSprite as ToonTalkRandomizer;
+        const mode = randomizer.getModeInt();
+        const currentValue = randomizer.getCurrentValue();
+        const generationCount = randomizer.getGenerationCount();
+
+        // Randomizer body (dice/random shape - orange/gold)
+        const bodyColor = generationCount > 0 ? 0xFFA500 : 0xFFD700;
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 8);
+        this.graphics.endFill();
+
+        // Border (sparkly effect)
+        this.graphics.lineStyle(3, 0xFF8C00);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 8);
+
+        // Mode-based icon
+        const modeIcons = ['🎲', '🔢', '🔘', '⚅'];
+        const icon = new PIXI.Text(modeIcons[mode] || '?', {
+            fontSize: 24
+        });
+        icon.anchor.set(0.5);
+        icon.y = -8;
+        this.graphics.addChild(icon);
+
+        // Current value display
+        let displayValue = '';
+        switch (mode) {
+            case 0: // UNIFORM
+                displayValue = currentValue.toFixed(2);
+                break;
+            case 1: // INTEGER
+            case 3: // DICE
+                displayValue = Math.floor(currentValue).toString();
+                break;
+            case 2: // BOOLEAN
+                displayValue = currentValue === 0 ? 'F' : 'T';
+                break;
+        }
+
+        const valueText = new PIXI.Text(displayValue, {
+            fontSize: 14,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2,
+            fontFamily: 'monospace'
+        });
+        valueText.anchor.set(0.5);
+        valueText.y = 12;
+        this.graphics.addChild(valueText);
+
+        // Sparkles (if generating)
+        if (generationCount > 0) {
+            for (let i = 0; i < 4; i++) {
+                const angle = (i / 4) * Math.PI * 2 + (Date.now() / 500);
+                const distance = 25;
+                const x = Math.cos(angle) * distance;
+                const y = Math.sin(angle) * distance;
+                this.graphics.beginFill(0xFFFFFF, 0.7);
+                this.graphics.drawCircle(x, y, 2);
+                this.graphics.endFill();
+            }
+        }
+
+        // Label
+        const label = new PIXI.Text('Random', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // Mode indicator
+        const modeNames = ['UNIFORM', 'INT', 'BOOL', 'DICE'];
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 8,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -25;
+        this.graphics.addChild(modeText);
+
+        // Generation count
+        if (generationCount > 0) {
+            const countText = new PIXI.Text(`×${generationCount}`, {
+                fontSize: 8,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 1,
+                backgroundColor: 0xFF6347,
+                padding: 2
+            });
+            countText.anchor.set(0.5);
+            countText.x = 22;
+            countText.y = -22;
+            this.graphics.addChild(countText);
         }
     }
 

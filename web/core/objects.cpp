@@ -2043,6 +2043,317 @@ private:
     bool has_max_limit_;
 };
 
+/**
+ * Sampler - Tool for sampling/recording values at intervals
+ * Records data points over time with configurable sample rate
+ */
+class Sampler : public Sprite {
+public:
+    enum SamplerState {
+        IDLE = 0,
+        SAMPLING = 1,
+        PAUSED = 2,
+        FULL = 3
+    };
+
+    Sampler(float x, float y, int capacity = 100)
+        : Sprite(x, y, 70.0f, 60.0f),
+          state_(IDLE),
+          sample_count_(0),
+          capacity_(capacity),
+          sample_rate_(1.0f),
+          last_sample_time_(0.0f),
+          current_value_(0.0f),
+          min_value_(0.0f),
+          max_value_(0.0f) {}
+
+    // State management
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<SamplerState>(state);
+        }
+    }
+
+    // Sampling controls
+    void startSampling() {
+        if (state_ != FULL) {
+            state_ = SAMPLING;
+            last_sample_time_ = 0.0f;
+        }
+    }
+
+    void pauseSampling() {
+        if (state_ == SAMPLING) {
+            state_ = PAUSED;
+        }
+    }
+
+    void resumeSampling() {
+        if (state_ == PAUSED && state_ != FULL) {
+            state_ = SAMPLING;
+        }
+    }
+
+    void stopSampling() {
+        state_ = IDLE;
+    }
+
+    void clear() {
+        sample_count_ = 0;
+        min_value_ = 0.0f;
+        max_value_ = 0.0f;
+        state_ = IDLE;
+    }
+
+    void recordSample(float value) {
+        if (sample_count_ < capacity_) {
+            current_value_ = value;
+            if (sample_count_ == 0) {
+                min_value_ = max_value_ = value;
+            } else {
+                if (value < min_value_) min_value_ = value;
+                if (value > max_value_) max_value_ = value;
+            }
+            sample_count_++;
+            if (sample_count_ >= capacity_) {
+                state_ = FULL;
+            }
+        }
+    }
+
+    // Properties
+    int getSampleCount() const { return sample_count_; }
+    int getCapacity() const { return capacity_; }
+    void setCapacity(int capacity) { capacity_ = capacity; }
+
+    float getSampleRate() const { return sample_rate_; }
+    void setSampleRate(float rate) {
+        if (rate > 0.0f) sample_rate_ = rate;
+    }
+
+    float getCurrentValue() const { return current_value_; }
+    float getMinValue() const { return min_value_; }
+    float getMaxValue() const { return max_value_; }
+
+    bool isSampling() const { return state_ == SAMPLING; }
+    bool isFull() const { return state_ == FULL; }
+
+    float getFullness() const {
+        if (capacity_ <= 0) return 0.0f;
+        return static_cast<float>(sample_count_) / static_cast<float>(capacity_);
+    }
+
+    void update(float deltaTime) override {
+        if (state_ == SAMPLING) {
+            last_sample_time_ += deltaTime;
+            if (last_sample_time_ >= (1.0f / sample_rate_)) {
+                // Time to take a sample (in real implementation, would sample from attached object)
+                last_sample_time_ = 0.0f;
+            }
+        }
+        Sprite::update(deltaTime);
+    }
+
+private:
+    SamplerState state_;
+    int sample_count_;
+    int capacity_;
+    float sample_rate_;
+    float last_sample_time_;
+    float current_value_;
+    float min_value_;
+    float max_value_;
+};
+
+/**
+ * Comparator - Tool for comparing two values
+ * Outputs comparison results with configurable tolerance
+ */
+class Comparator : public Sprite {
+public:
+    enum ComparisonResult {
+        EQUAL = 0,
+        LESS_THAN = 1,
+        GREATER_THAN = 2,
+        NOT_EQUAL = 3
+    };
+
+    Comparator(float x, float y)
+        : Sprite(x, y, 80.0f, 60.0f),
+          value_a_(0.0f),
+          value_b_(0.0f),
+          result_(EQUAL),
+          tolerance_(0.001f),
+          comparison_count_(0) {
+        updateComparison();
+    }
+
+    // Value management
+    float getValueA() const { return value_a_; }
+    void setValueA(float value) {
+        value_a_ = value;
+        updateComparison();
+        comparison_count_++;
+    }
+
+    float getValueB() const { return value_b_; }
+    void setValueB(float value) {
+        value_b_ = value;
+        updateComparison();
+        comparison_count_++;
+    }
+
+    void setValues(float a, float b) {
+        value_a_ = a;
+        value_b_ = b;
+        updateComparison();
+        comparison_count_++;
+    }
+
+    // Result
+    int getResultInt() const { return static_cast<int>(result_); }
+
+    bool isEqual() const { return result_ == EQUAL; }
+    bool isLessThan() const { return result_ == LESS_THAN; }
+    bool isGreaterThan() const { return result_ == GREATER_THAN; }
+    bool isNotEqual() const { return result_ == NOT_EQUAL; }
+
+    // Properties
+    float getTolerance() const { return tolerance_; }
+    void setTolerance(float tolerance) {
+        if (tolerance >= 0.0f) {
+            tolerance_ = tolerance;
+            updateComparison();
+        }
+    }
+
+    float getDifference() const { return value_a_ - value_b_; }
+    int getComparisonCount() const { return comparison_count_; }
+
+    void reset() {
+        value_a_ = 0.0f;
+        value_b_ = 0.0f;
+        comparison_count_ = 0;
+        updateComparison();
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    void updateComparison() {
+        float diff = value_a_ - value_b_;
+        if (std::abs(diff) <= tolerance_) {
+            result_ = EQUAL;
+        } else if (diff < 0.0f) {
+            result_ = LESS_THAN;
+        } else {
+            result_ = GREATER_THAN;
+        }
+
+        if (std::abs(diff) > tolerance_) {
+            result_ = NOT_EQUAL;
+        } else {
+            result_ = EQUAL;
+        }
+    }
+
+    float value_a_;
+    float value_b_;
+    ComparisonResult result_;
+    float tolerance_;
+    int comparison_count_;
+};
+
+/**
+ * Randomizer - Random value generator
+ * Generates random numbers with configurable range and distribution
+ */
+class Randomizer : public Sprite {
+public:
+    enum RandomizerMode {
+        UNIFORM = 0,
+        INTEGER = 1,
+        BOOLEAN = 2,
+        DICE = 3
+    };
+
+    Randomizer(float x, float y)
+        : Sprite(x, y, 60.0f, 60.0f),
+          mode_(UNIFORM),
+          min_value_(0.0f),
+          max_value_(1.0f),
+          current_value_(0.0f),
+          generation_count_(0),
+          seed_(12345) {}
+
+    // Mode management
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) {
+        if (mode >= 0 && mode <= 3) {
+            mode_ = static_cast<RandomizerMode>(mode);
+        }
+    }
+
+    // Generation
+    void generate() {
+        generation_count_++;
+
+        // Simple linear congruential generator for deterministic randomness
+        seed_ = (seed_ * 1103515245 + 12345) & 0x7fffffff;
+        float random_0_1 = static_cast<float>(seed_) / static_cast<float>(0x7fffffff);
+
+        switch (mode_) {
+            case UNIFORM:
+                current_value_ = min_value_ + random_0_1 * (max_value_ - min_value_);
+                break;
+            case INTEGER:
+                current_value_ = min_value_ + std::floor(random_0_1 * (max_value_ - min_value_ + 1));
+                break;
+            case BOOLEAN:
+                current_value_ = random_0_1 < 0.5f ? 0.0f : 1.0f;
+                break;
+            case DICE:
+                current_value_ = 1.0f + std::floor(random_0_1 * 6.0f);
+                break;
+        }
+    }
+
+    // Properties
+    float getCurrentValue() const { return current_value_; }
+
+    float getMinValue() const { return min_value_; }
+    void setMinValue(float value) { min_value_ = value; }
+
+    float getMaxValue() const { return max_value_; }
+    void setMaxValue(float value) { max_value_ = value; }
+
+    int getGenerationCount() const { return generation_count_; }
+    void setGenerationCount(int count) { generation_count_ = count; }
+
+    int getSeed() const { return seed_; }
+    void setSeed(int seed) { seed_ = seed; }
+
+    void reset() {
+        current_value_ = 0.0f;
+        generation_count_ = 0;
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    RandomizerMode mode_;
+    float min_value_;
+    float max_value_;
+    float current_value_;
+    int generation_count_;
+    int seed_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -2596,4 +2907,84 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("AT_MIN", Counter::AT_MIN)
         .value("AT_MAX", Counter::AT_MAX)
         .value("OVERFLOW", Counter::OVERFLOW);
+
+    // Sampler class
+    class_<Sampler, base<Sprite>>("Sampler")
+        .constructor<float, float, int>()
+        .function("getStateInt", &Sampler::getStateInt)
+        .function("setStateInt", &Sampler::setStateInt)
+        .function("startSampling", &Sampler::startSampling)
+        .function("pauseSampling", &Sampler::pauseSampling)
+        .function("resumeSampling", &Sampler::resumeSampling)
+        .function("stopSampling", &Sampler::stopSampling)
+        .function("clear", &Sampler::clear)
+        .function("recordSample", &Sampler::recordSample)
+        .function("getSampleCount", &Sampler::getSampleCount)
+        .function("getCapacity", &Sampler::getCapacity)
+        .function("setCapacity", &Sampler::setCapacity)
+        .function("getSampleRate", &Sampler::getSampleRate)
+        .function("setSampleRate", &Sampler::setSampleRate)
+        .function("getCurrentValue", &Sampler::getCurrentValue)
+        .function("getMinValue", &Sampler::getMinValue)
+        .function("getMaxValue", &Sampler::getMaxValue)
+        .function("isSampling", &Sampler::isSampling)
+        .function("isFull", &Sampler::isFull)
+        .function("getFullness", &Sampler::getFullness);
+
+    // Sampler state enum values
+    enum_<Sampler::SamplerState>("SamplerState")
+        .value("IDLE", Sampler::IDLE)
+        .value("SAMPLING", Sampler::SAMPLING)
+        .value("PAUSED", Sampler::PAUSED)
+        .value("FULL", Sampler::FULL);
+
+    // Comparator class
+    class_<Comparator, base<Sprite>>("Comparator")
+        .constructor<float, float>()
+        .function("getValueA", &Comparator::getValueA)
+        .function("setValueA", &Comparator::setValueA)
+        .function("getValueB", &Comparator::getValueB)
+        .function("setValueB", &Comparator::setValueB)
+        .function("setValues", &Comparator::setValues)
+        .function("getResultInt", &Comparator::getResultInt)
+        .function("isEqual", &Comparator::isEqual)
+        .function("isLessThan", &Comparator::isLessThan)
+        .function("isGreaterThan", &Comparator::isGreaterThan)
+        .function("isNotEqual", &Comparator::isNotEqual)
+        .function("getTolerance", &Comparator::getTolerance)
+        .function("setTolerance", &Comparator::setTolerance)
+        .function("getDifference", &Comparator::getDifference)
+        .function("getComparisonCount", &Comparator::getComparisonCount)
+        .function("reset", &Comparator::reset);
+
+    // Comparison result enum values
+    enum_<Comparator::ComparisonResult>("ComparisonResult")
+        .value("EQUAL", Comparator::EQUAL)
+        .value("LESS_THAN", Comparator::LESS_THAN)
+        .value("GREATER_THAN", Comparator::GREATER_THAN)
+        .value("NOT_EQUAL", Comparator::NOT_EQUAL);
+
+    // Randomizer class
+    class_<Randomizer, base<Sprite>>("Randomizer")
+        .constructor<float, float>()
+        .function("getModeInt", &Randomizer::getModeInt)
+        .function("setModeInt", &Randomizer::setModeInt)
+        .function("generate", &Randomizer::generate)
+        .function("getCurrentValue", &Randomizer::getCurrentValue)
+        .function("getMinValue", &Randomizer::getMinValue)
+        .function("setMinValue", &Randomizer::setMinValue)
+        .function("getMaxValue", &Randomizer::getMaxValue)
+        .function("setMaxValue", &Randomizer::setMaxValue)
+        .function("getGenerationCount", &Randomizer::getGenerationCount)
+        .function("setGenerationCount", &Randomizer::setGenerationCount)
+        .function("getSeed", &Randomizer::getSeed)
+        .function("setSeed", &Randomizer::setSeed)
+        .function("reset", &Randomizer::reset);
+
+    // Randomizer mode enum values
+    enum_<Randomizer::RandomizerMode>("RandomizerMode")
+        .value("UNIFORM", Randomizer::UNIFORM)
+        .value("INTEGER", Randomizer::INTEGER)
+        .value("BOOLEAN", Randomizer::BOOLEAN)
+        .value("DICE", Randomizer::DICE);
 }
