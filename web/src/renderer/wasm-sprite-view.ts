@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -49,15 +49,18 @@ export class WasmSpriteView {
      */
     private getObjectType(): string {
         if ('setVelocity' in this.wasmSprite) return 'bird';
-        if ('getValue' in this.wasmSprite) return 'number';
+        if ('getValue' in this.wasmSprite && !('getTypeInt' in this.wasmSprite)) return 'number';
         if ('getText' in this.wasmSprite) return 'text';
         if ('getNumHoles' in this.wasmSprite) return 'nest';
         if ('getCapacity' in this.wasmSprite) return 'box';
         if ('getModeInt' in this.wasmSprite && 'nextMode' in this.wasmSprite) return 'wand';
-        if ('isActive' in this.wasmSprite && !('getModeInt' in this.wasmSprite)) return 'scale';
+        if ('isActive' in this.wasmSprite && !('getModeInt' in this.wasmSprite) && !('getTypeInt' in this.wasmSprite)) return 'scale';
         if ('getInstructionCount' in this.wasmSprite) return 'robot';
         if ('getNumRooms' in this.wasmSprite) return 'house';
         if ('hasCargo' in this.wasmSprite) return 'truck';
+        if ('hasImage' in this.wasmSprite) return 'picture';
+        if ('getTypeInt' in this.wasmSprite && 'getValue' in this.wasmSprite) return 'sensor';
+        if ('getNumPages' in this.wasmSprite) return 'notebook';
         return 'sprite';
     }
 
@@ -100,6 +103,15 @@ export class WasmSpriteView {
                 break;
             case 'truck':
                 this.drawTruck();
+                break;
+            case 'picture':
+                this.drawPicture();
+                break;
+            case 'sensor':
+                this.drawSensor();
+                break;
+            case 'notebook':
+                this.drawNotebook();
                 break;
             default:
                 this.drawGenericSprite();
@@ -688,6 +700,220 @@ export class WasmSpriteView {
         stateText.anchor.set(0.5);
         stateText.y = -30;
         this.graphics.addChild(stateText);
+    }
+
+    private drawPicture(): void {
+        const picture = this.wasmSprite as ToonTalkPicture;
+        const hasImage = picture.hasImage();
+        const width = picture.getPictureWidth();
+        const height = picture.getPictureHeight();
+
+        // Picture frame (golden/wood color)
+        this.graphics.beginFill(0xDAA520);
+        this.graphics.drawRect(-width/2 - 5, -height/2 - 5, width + 10, height + 10);
+        this.graphics.endFill();
+
+        // Picture canvas area
+        if (hasImage) {
+            // Show gradient for image placeholder
+            this.graphics.beginFill(0x87CEEB);
+            this.graphics.drawRect(-width/2, -height/2, width, height);
+            this.graphics.endFill();
+
+            // Image ID display
+            const imageText = new PIXI.Text(`IMG #${picture.getImageId()}`, {
+                fontSize: 14,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2
+            });
+            imageText.anchor.set(0.5);
+            imageText.y = 0;
+            this.graphics.addChild(imageText);
+
+            // Picture icon
+            const iconText = new PIXI.Text('🖼️', {
+                fontSize: 24
+            });
+            iconText.anchor.set(0.5);
+            iconText.y = -20;
+            this.graphics.addChild(iconText);
+        } else {
+            // Empty canvas - white
+            this.graphics.beginFill(0xF5F5F5);
+            this.graphics.drawRect(-width/2, -height/2, width, height);
+            this.graphics.endFill();
+
+            // X pattern for empty
+            this.graphics.lineStyle(2, 0xCCCCCC);
+            this.graphics.moveTo(-width/2, -height/2);
+            this.graphics.lineTo(width/2, height/2);
+            this.graphics.moveTo(width/2, -height/2);
+            this.graphics.lineTo(-width/2, height/2);
+
+            const emptyText = new PIXI.Text('Empty', {
+                fontSize: 12,
+                fill: 0x888888
+            });
+            emptyText.anchor.set(0.5);
+            this.graphics.addChild(emptyText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Picture', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = height/2 + 15;
+        this.graphics.addChild(label);
+    }
+
+    private drawSensor(): void {
+        const sensor = this.wasmSprite as ToonTalkSensor;
+        const type = sensor.getTypeInt();
+        const isActive = sensor.isActive();
+        const value = sensor.getValue();
+
+        // Sensor body (dark gray circuit board)
+        this.graphics.beginFill(0x2F4F4F);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+        this.graphics.endFill();
+
+        // Border glows when active
+        this.graphics.lineStyle(3, isActive ? 0x00FF00 : 0x696969);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+
+        // Sensor icon based on type
+        const typeIcons = ['🖱️', '⌨️', '⏰', '💥']; // MOUSE, KEYBOARD, TIME, COLLISION
+        const typeNames = ['Mouse', 'Keyboard', 'Time', 'Collision'];
+        const icon = new PIXI.Text(typeIcons[type] || '❓', {
+            fontSize: 24
+        });
+        icon.anchor.set(0.5);
+        icon.y = -8;
+        this.graphics.addChild(icon);
+
+        // LED indicator
+        this.graphics.beginFill(isActive ? 0x00FF00 : 0x444444);
+        this.graphics.drawCircle(15, -20, 4);
+        this.graphics.endFill();
+
+        // Label
+        const label = new PIXI.Text('Sensor', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 22;
+        this.graphics.addChild(label);
+
+        // Type label
+        const typeLabel = new PIXI.Text(typeNames[type] || '?', {
+            fontSize: 8,
+            fill: isActive ? 0x00FF00 : 0xCCCCCC,
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        typeLabel.anchor.set(0.5);
+        typeLabel.y = 12;
+        this.graphics.addChild(typeLabel);
+
+        // Value display (if active)
+        if (isActive && value !== 0) {
+            const valueText = new PIXI.Text(`${value.toFixed(1)}`, {
+                fontSize: 8,
+                fill: 0x00FF00,
+                stroke: 0x000000,
+                strokeThickness: 1
+            });
+            valueText.anchor.set(0.5);
+            valueText.y = -22;
+            this.graphics.addChild(valueText);
+        }
+    }
+
+    private drawNotebook(): void {
+        const notebook = this.wasmSprite as ToonTalkNotebook;
+        const numPages = notebook.getNumPages();
+        const currentPage = notebook.getCurrentPage();
+        const pagesWithContent = notebook.countPagesWithContent();
+
+        // Notebook cover (brown leather)
+        this.graphics.beginFill(0x8B4513);
+        this.graphics.drawRoundedRect(-60, -50, 120, 100, 5);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x654321);
+        this.graphics.drawRoundedRect(-60, -50, 120, 100, 5);
+
+        // Spine decoration
+        this.graphics.lineStyle(2, 0x654321);
+        this.graphics.moveTo(-55, -45);
+        this.graphics.lineTo(-55, 45);
+
+        // Pages (white edge)
+        this.graphics.beginFill(0xFFFFF0);
+        this.graphics.drawRect(50, -45, 8, 90);
+        this.graphics.endFill();
+
+        // Page lines
+        this.graphics.lineStyle(1, 0xE0E0E0);
+        for (let i = 0; i < 5; i++) {
+            const y = -30 + i * 15;
+            this.graphics.moveTo(50, y);
+            this.graphics.lineTo(58, y);
+        }
+
+        // Notebook icon
+        const icon = new PIXI.Text('📓', {
+            fontSize: 32
+        });
+        icon.anchor.set(0.5);
+        icon.position.set(-8, -10);
+        this.graphics.addChild(icon);
+
+        // Label
+        const label = new PIXI.Text('Notebook', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 35;
+        this.graphics.addChild(label);
+
+        // Page counter
+        const pageText = new PIXI.Text(`Page ${currentPage + 1}/${numPages}`, {
+            fontSize: 8,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        pageText.anchor.set(0.5);
+        pageText.y = 22;
+        this.graphics.addChild(pageText);
+
+        // Content indicator
+        const contentText = new PIXI.Text(`${pagesWithContent} with content`, {
+            fontSize: 7,
+            fill: 0xFFD700,
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        contentText.anchor.set(0.5);
+        contentText.y = -40;
+        this.graphics.addChild(contentText);
     }
 
     private drawGenericSprite(): void {

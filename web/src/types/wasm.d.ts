@@ -23,11 +23,15 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Robot: typeof ToonTalkRobot;
     House: typeof ToonTalkHouse;
     Truck: typeof ToonTalkTruck;
+    Picture: typeof ToonTalkPicture;
+    Sensor: typeof ToonTalkSensor;
+    Notebook: typeof ToonTalkNotebook;
 
     // Enums
     WandMode: typeof WandMode;
     RobotState: typeof RobotState;
     TruckState: typeof TruckState;
+    SensorType: typeof SensorType;
 }
 
 /**
@@ -228,6 +232,61 @@ export enum TruckState {
     EMPTY = 0,
     LOADED = 1,
     DELIVERING = 2
+}
+
+/**
+ * Picture class (matches objects.cpp) - Image display
+ */
+export declare class ToonTalkPicture extends Sprite {
+    constructor(x: number, y: number, width?: number, height?: number);
+    getPictureWidth(): number;
+    getPictureHeight(): number;
+    setPictureSize(width: number, height: number): void;
+    hasImage(): boolean;
+    setHasImage(hasImage: boolean): void;
+    getImageId(): number;
+    setImageId(id: number): void;
+    delete(): void;
+}
+
+/**
+ * Sensor class (matches objects.cpp) - Input and sensor functionality
+ */
+export declare class ToonTalkSensor extends Sprite {
+    constructor(x: number, y: number, type?: SensorType);
+    getTypeInt(): number;
+    setTypeInt(type: number): void;
+    isActive(): boolean;
+    setActive(active: boolean): void;
+    getValue(): number;
+    setValue(value: number): void;
+    delete(): void;
+}
+
+/**
+ * Sensor type enum (matches objects.cpp)
+ */
+export enum SensorType {
+    MOUSE = 0,
+    KEYBOARD = 1,
+    TIME = 2,
+    COLLISION = 3
+}
+
+/**
+ * Notebook class (matches objects.cpp) - Notes and documentation
+ */
+export declare class ToonTalkNotebook extends Sprite {
+    constructor(x: number, y: number, numPages?: number);
+    getNumPages(): number;
+    getCurrentPage(): number;
+    setCurrentPage(page: number): void;
+    nextPage(): void;
+    previousPage(): void;
+    pageHasContent(page: number): boolean;
+    setPageContent(page: number, hasContent: boolean): void;
+    countPagesWithContent(): number;
+    delete(): void;
 }
 
 /**

@@ -157,19 +157,39 @@ class ToonTalkWeb {
         truck1.setCargo(true); // Loaded truck
         this.renderer.addWasmSprite(new WasmSpriteView(truck1, this.renderer.getStage(), this.renderer));
 
+        // Row 6: Media & Sensors
+        const picture1 = wasmCore.createPicture(centerX - 250, centerY + 500, 120, 100);
+        picture1.setImageId(101); // Has an image
+        this.renderer.addWasmSprite(new WasmSpriteView(picture1, this.renderer.getStage(), this.renderer));
+
+        const sensor1 = wasmCore.createSensor(centerX - 80, centerY + 500, 0); // MOUSE sensor
+        sensor1.setActive(true);
+        sensor1.setValue(42.5);
+        this.renderer.addWasmSprite(new WasmSpriteView(sensor1, this.renderer.getStage(), this.renderer));
+
+        const sensor2 = wasmCore.createSensor(centerX + 30, centerY + 500, 2); // TIME sensor
+        this.renderer.addWasmSprite(new WasmSpriteView(sensor2, this.renderer.getStage(), this.renderer));
+
+        const notebook1 = wasmCore.createNotebook(centerX + 180, centerY + 500, 5);
+        notebook1.setPageContent(0, true);
+        notebook1.setPageContent(2, true);
+        notebook1.setPageContent(3, true); // 3 pages with content
+        notebook1.setCurrentPage(2);
+        this.renderer.addWasmSprite(new WasmSpriteView(notebook1, this.renderer.getStage(), this.renderer));
+
         console.log('✨ WASM scene created!');
         console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest');
         console.log('   Tools: 1 Scale, 2 Wands');
         console.log('   Advanced: 2 Robots, 1 House, 1 Truck');
-        console.log('   Total: 14 interactive objects!');
+        console.log('   Media: 1 Picture, 2 Sensors, 1 Notebook');
+        console.log('   Total: 18 interactive objects!');
         console.log('');
         console.log('   💡 Drag objects to move them');
         console.log('   💡 Drop Number on Number to add');
         console.log('   💡 Drop Text on Text to concatenate');
         console.log('   💡 Drop anything on Box or Nest to store');
-        console.log('   💡 Robots can be programmed (future)');
-        console.log('   💡 House provides workspace (future)');
-        console.log('   💡 Truck delivers objects (future)');
+        console.log('   💡 Sensors detect input (Mouse, Keyboard, Time, Collision)');
+        console.log('   💡 Picture displays images, Notebook stores notes');
     }
 
     private startGameLoop(): void {

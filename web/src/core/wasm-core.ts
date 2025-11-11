@@ -220,6 +220,35 @@ export class WasmCore {
         console.log('[WASM Test] After completeDelivery():', truck.getStateInt(), '(EMPTY=0)');
         truck.delete();
 
+        // Test 15: Create Picture
+        const picture = new this.module.Picture(1000, 100, 150, 120);
+        console.log('[WASM Test] Created Picture - Size:', picture.getPictureWidth(), 'x', picture.getPictureHeight());
+        console.log('[WASM Test] Has image:', picture.hasImage());
+        picture.setImageId(42);
+        console.log('[WASM Test] After setImageId(42):', picture.getImageId(), '- Has image:', picture.hasImage());
+        picture.delete();
+
+        // Test 16: Create Sensor
+        const sensor = new this.module.Sensor(1100, 100, this.module.SensorType.MOUSE);
+        console.log('[WASM Test] Created Sensor - Type:', sensor.getTypeInt(), '(MOUSE=0)');
+        console.log('[WASM Test] Active:', sensor.isActive(), '- Value:', sensor.getValue());
+        sensor.setActive(true);
+        sensor.setValue(3.14);
+        console.log('[WASM Test] After activation - Active:', sensor.isActive(), '- Value:', sensor.getValue());
+        sensor.delete();
+
+        // Test 17: Create Notebook
+        const notebook = new this.module.Notebook(1200, 100, 5);
+        console.log('[WASM Test] Created Notebook - Pages:', notebook.getNumPages());
+        console.log('[WASM Test] Current page:', notebook.getCurrentPage());
+        notebook.setPageContent(0, true);
+        notebook.setPageContent(2, true);
+        notebook.setPageContent(4, true);
+        console.log('[WASM Test] Pages with content:', notebook.countPagesWithContent());
+        notebook.nextPage();
+        console.log('[WASM Test] After nextPage():', notebook.getCurrentPage());
+        notebook.delete();
+
         console.log('[WASM Tests] ✅ All tests passed!');
     }
 
@@ -331,6 +360,36 @@ export class WasmCore {
             throw new Error('WASM module not loaded');
         }
         return new this.module.Truck(x, y);
+    }
+
+    /**
+     * Create a Picture instance from WASM
+     */
+    createPicture(x: number, y: number, width: number = 120, height: number = 100) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Picture(x, y, width, height);
+    }
+
+    /**
+     * Create a Sensor instance from WASM
+     */
+    createSensor(x: number, y: number, type?: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Sensor(x, y, type);
+    }
+
+    /**
+     * Create a Notebook instance from WASM
+     */
+    createNotebook(x: number, y: number, numPages: number = 5) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Notebook(x, y, numPages);
     }
 
     /**

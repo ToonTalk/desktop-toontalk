@@ -463,6 +463,164 @@ private:
     bool has_cargo_;
 };
 
+/**
+ * Picture class - Display images and graphics
+ * Based on ../source/picture.cpp - simplified version
+ */
+class Picture : public Sprite {
+public:
+    Picture(float x, float y, size_t width = 120, size_t height = 100)
+        : Sprite(x, y, static_cast<float>(width), static_cast<float>(height)),
+          pic_width_(width), pic_height_(height), has_image_(false) {}
+
+    // Image dimensions
+    size_t getPictureWidth() const { return pic_width_; }
+    size_t getPictureHeight() const { return pic_height_; }
+
+    void setPictureSize(size_t width, size_t height) {
+        pic_width_ = width;
+        pic_height_ = height;
+        setWidth(static_cast<float>(width));
+        setHeight(static_cast<float>(height));
+    }
+
+    // Image state
+    bool hasImage() const { return has_image_; }
+    void setHasImage(bool has_image) { has_image_ = has_image; }
+
+    // Get image ID (simplified - just an integer reference)
+    int getImageId() const { return image_id_; }
+    void setImageId(int id) {
+        image_id_ = id;
+        has_image_ = (id >= 0);
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Pictures are static displays
+    }
+
+private:
+    size_t pic_width_;
+    size_t pic_height_;
+    bool has_image_;
+    int image_id_ = -1;
+};
+
+/**
+ * Sensor class - Input and sensor functionality
+ * Based on ../source/sensor.cpp - simplified version
+ */
+class Sensor : public Sprite {
+public:
+    enum SensorType {
+        MOUSE = 0,
+        KEYBOARD = 1,
+        TIME = 2,
+        COLLISION = 3
+    };
+
+    Sensor(float x, float y, SensorType type = MOUSE)
+        : Sprite(x, y, 60.0f, 60.0f), type_(type), active_(false), value_(0.0) {}
+
+    // Get/set sensor type
+    SensorType getType() const { return type_; }
+    void setType(SensorType type) { type_ = type; }
+
+    // Get type as integer (for JS binding)
+    int getTypeInt() const { return static_cast<int>(type_); }
+    void setTypeInt(int type) {
+        if (type >= MOUSE && type <= COLLISION) {
+            type_ = static_cast<SensorType>(type);
+        }
+    }
+
+    // Active state
+    bool isActive() const { return active_; }
+    void setActive(bool active) { active_ = active; }
+
+    // Sensor value (generic numeric value)
+    double getValue() const { return value_; }
+    void setValue(double value) { value_ = value; }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Sensors read their input source
+    }
+
+private:
+    SensorType type_;
+    bool active_;
+    double value_;
+};
+
+/**
+ * Notebook class - For notes and documentation
+ * Based on ../source/notebook.cpp - simplified version
+ */
+class Notebook : public Sprite {
+public:
+    Notebook(float x, float y, size_t num_pages = 5)
+        : Sprite(x, y, 120.0f, 100.0f), num_pages_(num_pages), current_page_(0) {
+        // Initialize page content (simplified - just track if pages have content)
+        page_has_content_.resize(num_pages, false);
+    }
+
+    // Page management
+    size_t getNumPages() const { return num_pages_; }
+    size_t getCurrentPage() const { return current_page_; }
+
+    void setCurrentPage(size_t page) {
+        if (page < num_pages_) {
+            current_page_ = page;
+        }
+    }
+
+    void nextPage() {
+        if (current_page_ < num_pages_ - 1) {
+            current_page_++;
+        }
+    }
+
+    void previousPage() {
+        if (current_page_ > 0) {
+            current_page_--;
+        }
+    }
+
+    // Page content (simplified - just a flag)
+    bool pageHasContent(size_t page) const {
+        return page < page_has_content_.size() && page_has_content_[page];
+    }
+
+    void setPageContent(size_t page, bool has_content) {
+        if (page < page_has_content_.size()) {
+            page_has_content_[page] = has_content;
+        }
+    }
+
+    size_t countPagesWithContent() const {
+        size_t count = 0;
+        for (bool has_content : page_has_content_) {
+            if (has_content) count++;
+        }
+        return count;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Notebooks are static
+    }
+
+private:
+    size_t num_pages_;
+    size_t current_page_;
+    std::vector<bool> page_has_content_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -577,4 +735,41 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("EMPTY", Truck::EMPTY)
         .value("LOADED", Truck::LOADED)
         .value("DELIVERING", Truck::DELIVERING);
+
+    class_<Picture, base<Sprite>>("Picture")
+        .constructor<float, float, size_t, size_t>()
+        .function("getPictureWidth", &Picture::getPictureWidth)
+        .function("getPictureHeight", &Picture::getPictureHeight)
+        .function("setPictureSize", &Picture::setPictureSize)
+        .function("hasImage", &Picture::hasImage)
+        .function("setHasImage", &Picture::setHasImage)
+        .function("getImageId", &Picture::getImageId)
+        .function("setImageId", &Picture::setImageId);
+
+    class_<Sensor, base<Sprite>>("Sensor")
+        .constructor<float, float, Sensor::SensorType>()
+        .function("getTypeInt", &Sensor::getTypeInt)
+        .function("setTypeInt", &Sensor::setTypeInt)
+        .function("isActive", &Sensor::isActive)
+        .function("setActive", &Sensor::setActive)
+        .function("getValue", &Sensor::getValue)
+        .function("setValue", &Sensor::setValue);
+
+    // Sensor type enum values
+    enum_<Sensor::SensorType>("SensorType")
+        .value("MOUSE", Sensor::MOUSE)
+        .value("KEYBOARD", Sensor::KEYBOARD)
+        .value("TIME", Sensor::TIME)
+        .value("COLLISION", Sensor::COLLISION);
+
+    class_<Notebook, base<Sprite>>("Notebook")
+        .constructor<float, float, size_t>()
+        .function("getNumPages", &Notebook::getNumPages)
+        .function("getCurrentPage", &Notebook::getCurrentPage)
+        .function("setCurrentPage", &Notebook::setCurrentPage)
+        .function("nextPage", &Notebook::nextPage)
+        .function("previousPage", &Notebook::previousPage)
+        .function("pageHasContent", &Notebook::pageHasContent)
+        .function("setPageContent", &Notebook::setPageContent)
+        .function("countPagesWithContent", &Notebook::countPagesWithContent);
 }
