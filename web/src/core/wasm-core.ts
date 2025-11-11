@@ -182,6 +182,73 @@ export class WasmCore {
         console.log('[WASM Test] After previousMode():', wand.getModeInt(), '(CREATE_TEXT=1)');
         wand.delete();
 
+        // Test 12: Create Robot
+        const robot = new this.module.Robot(700, 100);
+        console.log('[WASM Test] Created Robot at:', robot.getX(), robot.getY());
+        console.log('[WASM Test] Robot state:', robot.getStateInt(), '(IDLE=0)');
+        console.log('[WASM Test] Instructions:', robot.getInstructionCount());
+        robot.addInstruction();
+        robot.addInstruction();
+        robot.addInstruction();
+        console.log('[WASM Test] After adding 3 instructions:', robot.getInstructionCount());
+        robot.start();
+        console.log('[WASM Test] After start():', robot.getStateInt(), '(RUNNING=1)');
+        robot.pause();
+        console.log('[WASM Test] After pause():', robot.getStateInt(), '(PAUSED=2)');
+        robot.delete();
+
+        // Test 13: Create House
+        const house = new this.module.House(800, 100, 3);
+        console.log('[WASM Test] Created House - Rooms:', house.getNumRooms());
+        console.log('[WASM Test] Current room:', house.getCurrentRoom());
+        house.setRoomOccupied(0, true);
+        house.setRoomOccupied(2, true);
+        console.log('[WASM Test] Occupied rooms:', house.countOccupiedRooms());
+        console.log('[WASM Test] isEmpty:', house.isEmpty(), '- isFull:', house.isFull());
+        house.delete();
+
+        // Test 14: Create Truck
+        const truck = new this.module.Truck(900, 100);
+        console.log('[WASM Test] Created Truck at:', truck.getX(), truck.getY());
+        console.log('[WASM Test] Truck state:', truck.getStateInt(), '(EMPTY=0)');
+        console.log('[WASM Test] Has cargo:', truck.hasCargo());
+        truck.setCargo(true);
+        console.log('[WASM Test] After loading cargo - state:', truck.getStateInt(), '(LOADED=1)');
+        truck.startDelivery();
+        console.log('[WASM Test] After startDelivery():', truck.getStateInt(), '(DELIVERING=2)');
+        truck.completeDelivery();
+        console.log('[WASM Test] After completeDelivery():', truck.getStateInt(), '(EMPTY=0)');
+        truck.delete();
+
+        // Test 15: Create Picture
+        const picture = new this.module.Picture(1000, 100, 150, 120);
+        console.log('[WASM Test] Created Picture - Size:', picture.getPictureWidth(), 'x', picture.getPictureHeight());
+        console.log('[WASM Test] Has image:', picture.hasImage());
+        picture.setImageId(42);
+        console.log('[WASM Test] After setImageId(42):', picture.getImageId(), '- Has image:', picture.hasImage());
+        picture.delete();
+
+        // Test 16: Create Sensor
+        const sensor = new this.module.Sensor(1100, 100, this.module.SensorType.MOUSE);
+        console.log('[WASM Test] Created Sensor - Type:', sensor.getTypeInt(), '(MOUSE=0)');
+        console.log('[WASM Test] Active:', sensor.isActive(), '- Value:', sensor.getValue());
+        sensor.setActive(true);
+        sensor.setValue(3.14);
+        console.log('[WASM Test] After activation - Active:', sensor.isActive(), '- Value:', sensor.getValue());
+        sensor.delete();
+
+        // Test 17: Create Notebook
+        const notebook = new this.module.Notebook(1200, 100, 5);
+        console.log('[WASM Test] Created Notebook - Pages:', notebook.getNumPages());
+        console.log('[WASM Test] Current page:', notebook.getCurrentPage());
+        notebook.setPageContent(0, true);
+        notebook.setPageContent(2, true);
+        notebook.setPageContent(4, true);
+        console.log('[WASM Test] Pages with content:', notebook.countPagesWithContent());
+        notebook.nextPage();
+        console.log('[WASM Test] After nextPage():', notebook.getCurrentPage());
+        notebook.delete();
+
         console.log('[WASM Tests] ✅ All tests passed!');
     }
 
@@ -263,6 +330,66 @@ export class WasmCore {
             throw new Error('WASM module not loaded');
         }
         return new this.module.Wand(x, y, mode);
+    }
+
+    /**
+     * Create a Robot instance from WASM
+     */
+    createRobot(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Robot(x, y);
+    }
+
+    /**
+     * Create a House instance from WASM
+     */
+    createHouse(x: number, y: number, numRooms: number = 1) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.House(x, y, numRooms);
+    }
+
+    /**
+     * Create a Truck instance from WASM
+     */
+    createTruck(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Truck(x, y);
+    }
+
+    /**
+     * Create a Picture instance from WASM
+     */
+    createPicture(x: number, y: number, width: number = 120, height: number = 100) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Picture(x, y, width, height);
+    }
+
+    /**
+     * Create a Sensor instance from WASM
+     */
+    createSensor(x: number, y: number, type?: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Sensor(x, y, type);
+    }
+
+    /**
+     * Create a Notebook instance from WASM
+     */
+    createNotebook(x: number, y: number, numPages: number = 5) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Notebook(x, y, numPages);
     }
 
     /**

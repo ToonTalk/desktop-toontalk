@@ -299,6 +299,328 @@ private:
     bool active_;
 };
 
+/**
+ * Robot class - Programmable agent that can perform actions
+ * Based on ../source/robot.cpp - simplified version
+ */
+class Robot : public Sprite {
+public:
+    enum RobotState {
+        IDLE = 0,
+        RUNNING = 1,
+        PAUSED = 2,
+        TRAINING = 3
+    };
+
+    Robot(float x, float y)
+        : Sprite(x, y, 70.0f, 90.0f), state_(IDLE), instruction_count_(0) {}
+
+    // Get/set robot state
+    RobotState getState() const { return state_; }
+    void setState(RobotState state) { state_ = state; }
+
+    // Get state as integer (for JS binding)
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= IDLE && state <= TRAINING) {
+            state_ = static_cast<RobotState>(state);
+        }
+    }
+
+    // Instruction management (simplified - just count for now)
+    size_t getInstructionCount() const { return instruction_count_; }
+    void setInstructionCount(size_t count) { instruction_count_ = count; }
+    void addInstruction() { instruction_count_++; }
+    void clearInstructions() { instruction_count_ = 0; }
+
+    // Start/stop/pause
+    void start() { state_ = RUNNING; }
+    void stop() { state_ = IDLE; }
+    void pause() { state_ = PAUSED; }
+    void train() { state_ = TRAINING; }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Robots execute their program when running
+        // (actual execution logic would go here)
+    }
+
+private:
+    RobotState state_;
+    size_t instruction_count_;
+};
+
+/**
+ * House class - Workspace container where robots operate
+ * Based on ../source/house.cpp - simplified version
+ */
+class House : public Sprite {
+public:
+    House(float x, float y, size_t num_rooms = 1)
+        : Sprite(x, y, 150.0f, 120.0f), num_rooms_(num_rooms), current_room_(0) {
+        // Initialize rooms
+        room_occupied_.resize(num_rooms, false);
+    }
+
+    // Room management
+    size_t getNumRooms() const { return num_rooms_; }
+    size_t getCurrentRoom() const { return current_room_; }
+    void setCurrentRoom(size_t room) {
+        if (room < num_rooms_) {
+            current_room_ = room;
+        }
+    }
+
+    // Room occupancy
+    bool isRoomOccupied(size_t room) const {
+        return room < room_occupied_.size() && room_occupied_[room];
+    }
+
+    void setRoomOccupied(size_t room, bool occupied) {
+        if (room < room_occupied_.size()) {
+            room_occupied_[room] = occupied;
+        }
+    }
+
+    // Count occupied rooms
+    size_t countOccupiedRooms() const {
+        size_t count = 0;
+        for (bool occupied : room_occupied_) {
+            if (occupied) count++;
+        }
+        return count;
+    }
+
+    bool isFull() const { return countOccupiedRooms() >= num_rooms_; }
+    bool isEmpty() const { return countOccupiedRooms() == 0; }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Houses are static workspaces
+    }
+
+private:
+    size_t num_rooms_;
+    size_t current_room_;
+    std::vector<bool> room_occupied_;
+};
+
+/**
+ * Truck class - Delivery/transport vehicle
+ * Based on ../source/truck.cpp - simplified version
+ */
+class Truck : public Sprite {
+public:
+    enum TruckState {
+        EMPTY = 0,
+        LOADED = 1,
+        DELIVERING = 2
+    };
+
+    Truck(float x, float y)
+        : Sprite(x, y, 100.0f, 60.0f), state_(EMPTY), has_cargo_(false) {}
+
+    // Get/set truck state
+    TruckState getState() const { return state_; }
+    void setState(TruckState state) { state_ = state; }
+
+    // Get state as integer (for JS binding)
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= EMPTY && state <= DELIVERING) {
+            state_ = static_cast<TruckState>(state);
+        }
+    }
+
+    // Cargo management (simplified - just a flag for now)
+    bool hasCargo() const { return has_cargo_; }
+    void setCargo(bool has_cargo) {
+        has_cargo_ = has_cargo;
+        state_ = has_cargo ? LOADED : EMPTY;
+    }
+
+    void startDelivery() {
+        if (has_cargo_) {
+            state_ = DELIVERING;
+        }
+    }
+
+    void completeDelivery() {
+        has_cargo_ = false;
+        state_ = EMPTY;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Trucks can move during delivery
+    }
+
+private:
+    TruckState state_;
+    bool has_cargo_;
+};
+
+/**
+ * Picture class - Display images and graphics
+ * Based on ../source/picture.cpp - simplified version
+ */
+class Picture : public Sprite {
+public:
+    Picture(float x, float y, size_t width = 120, size_t height = 100)
+        : Sprite(x, y, static_cast<float>(width), static_cast<float>(height)),
+          pic_width_(width), pic_height_(height), has_image_(false) {}
+
+    // Image dimensions
+    size_t getPictureWidth() const { return pic_width_; }
+    size_t getPictureHeight() const { return pic_height_; }
+
+    void setPictureSize(size_t width, size_t height) {
+        pic_width_ = width;
+        pic_height_ = height;
+        setWidth(static_cast<float>(width));
+        setHeight(static_cast<float>(height));
+    }
+
+    // Image state
+    bool hasImage() const { return has_image_; }
+    void setHasImage(bool has_image) { has_image_ = has_image; }
+
+    // Get image ID (simplified - just an integer reference)
+    int getImageId() const { return image_id_; }
+    void setImageId(int id) {
+        image_id_ = id;
+        has_image_ = (id >= 0);
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Pictures are static displays
+    }
+
+private:
+    size_t pic_width_;
+    size_t pic_height_;
+    bool has_image_;
+    int image_id_ = -1;
+};
+
+/**
+ * Sensor class - Input and sensor functionality
+ * Based on ../source/sensor.cpp - simplified version
+ */
+class Sensor : public Sprite {
+public:
+    enum SensorType {
+        MOUSE = 0,
+        KEYBOARD = 1,
+        TIME = 2,
+        COLLISION = 3
+    };
+
+    Sensor(float x, float y, SensorType type = MOUSE)
+        : Sprite(x, y, 60.0f, 60.0f), type_(type), active_(false), value_(0.0) {}
+
+    // Get/set sensor type
+    SensorType getType() const { return type_; }
+    void setType(SensorType type) { type_ = type; }
+
+    // Get type as integer (for JS binding)
+    int getTypeInt() const { return static_cast<int>(type_); }
+    void setTypeInt(int type) {
+        if (type >= MOUSE && type <= COLLISION) {
+            type_ = static_cast<SensorType>(type);
+        }
+    }
+
+    // Active state
+    bool isActive() const { return active_; }
+    void setActive(bool active) { active_ = active; }
+
+    // Sensor value (generic numeric value)
+    double getValue() const { return value_; }
+    void setValue(double value) { value_ = value; }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Sensors read their input source
+    }
+
+private:
+    SensorType type_;
+    bool active_;
+    double value_;
+};
+
+/**
+ * Notebook class - For notes and documentation
+ * Based on ../source/notebook.cpp - simplified version
+ */
+class Notebook : public Sprite {
+public:
+    Notebook(float x, float y, size_t num_pages = 5)
+        : Sprite(x, y, 120.0f, 100.0f), num_pages_(num_pages), current_page_(0) {
+        // Initialize page content (simplified - just track if pages have content)
+        page_has_content_.resize(num_pages, false);
+    }
+
+    // Page management
+    size_t getNumPages() const { return num_pages_; }
+    size_t getCurrentPage() const { return current_page_; }
+
+    void setCurrentPage(size_t page) {
+        if (page < num_pages_) {
+            current_page_ = page;
+        }
+    }
+
+    void nextPage() {
+        if (current_page_ < num_pages_ - 1) {
+            current_page_++;
+        }
+    }
+
+    void previousPage() {
+        if (current_page_ > 0) {
+            current_page_--;
+        }
+    }
+
+    // Page content (simplified - just a flag)
+    bool pageHasContent(size_t page) const {
+        return page < page_has_content_.size() && page_has_content_[page];
+    }
+
+    void setPageContent(size_t page, bool has_content) {
+        if (page < page_has_content_.size()) {
+            page_has_content_[page] = has_content;
+        }
+    }
+
+    size_t countPagesWithContent() const {
+        size_t count = 0;
+        for (bool has_content : page_has_content_) {
+            if (has_content) count++;
+        }
+        return count;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Notebooks are static
+    }
+
+private:
+    size_t num_pages_;
+    size_t current_page_;
+    std::vector<bool> page_has_content_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -367,4 +689,87 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("CREATE_BOX", Wand::CREATE_BOX)
         .value("CREATE_NEST", Wand::CREATE_NEST)
         .value("CREATE_BIRD", Wand::CREATE_BIRD);
+
+    class_<Robot, base<Sprite>>("Robot")
+        .constructor<float, float>()
+        .function("getStateInt", &Robot::getStateInt)
+        .function("setStateInt", &Robot::setStateInt)
+        .function("getInstructionCount", &Robot::getInstructionCount)
+        .function("setInstructionCount", &Robot::setInstructionCount)
+        .function("addInstruction", &Robot::addInstruction)
+        .function("clearInstructions", &Robot::clearInstructions)
+        .function("start", &Robot::start)
+        .function("stop", &Robot::stop)
+        .function("pause", &Robot::pause)
+        .function("train", &Robot::train);
+
+    // Robot state enum values
+    enum_<Robot::RobotState>("RobotState")
+        .value("IDLE", Robot::IDLE)
+        .value("RUNNING", Robot::RUNNING)
+        .value("PAUSED", Robot::PAUSED)
+        .value("TRAINING", Robot::TRAINING);
+
+    class_<House, base<Sprite>>("House")
+        .constructor<float, float, size_t>()
+        .function("getNumRooms", &House::getNumRooms)
+        .function("getCurrentRoom", &House::getCurrentRoom)
+        .function("setCurrentRoom", &House::setCurrentRoom)
+        .function("isRoomOccupied", &House::isRoomOccupied)
+        .function("setRoomOccupied", &House::setRoomOccupied)
+        .function("countOccupiedRooms", &House::countOccupiedRooms)
+        .function("isFull", &House::isFull)
+        .function("isEmpty", &House::isEmpty);
+
+    class_<Truck, base<Sprite>>("Truck")
+        .constructor<float, float>()
+        .function("getStateInt", &Truck::getStateInt)
+        .function("setStateInt", &Truck::setStateInt)
+        .function("hasCargo", &Truck::hasCargo)
+        .function("setCargo", &Truck::setCargo)
+        .function("startDelivery", &Truck::startDelivery)
+        .function("completeDelivery", &Truck::completeDelivery);
+
+    // Truck state enum values
+    enum_<Truck::TruckState>("TruckState")
+        .value("EMPTY", Truck::EMPTY)
+        .value("LOADED", Truck::LOADED)
+        .value("DELIVERING", Truck::DELIVERING);
+
+    class_<Picture, base<Sprite>>("Picture")
+        .constructor<float, float, size_t, size_t>()
+        .function("getPictureWidth", &Picture::getPictureWidth)
+        .function("getPictureHeight", &Picture::getPictureHeight)
+        .function("setPictureSize", &Picture::setPictureSize)
+        .function("hasImage", &Picture::hasImage)
+        .function("setHasImage", &Picture::setHasImage)
+        .function("getImageId", &Picture::getImageId)
+        .function("setImageId", &Picture::setImageId);
+
+    class_<Sensor, base<Sprite>>("Sensor")
+        .constructor<float, float, Sensor::SensorType>()
+        .function("getTypeInt", &Sensor::getTypeInt)
+        .function("setTypeInt", &Sensor::setTypeInt)
+        .function("isActive", &Sensor::isActive)
+        .function("setActive", &Sensor::setActive)
+        .function("getValue", &Sensor::getValue)
+        .function("setValue", &Sensor::setValue);
+
+    // Sensor type enum values
+    enum_<Sensor::SensorType>("SensorType")
+        .value("MOUSE", Sensor::MOUSE)
+        .value("KEYBOARD", Sensor::KEYBOARD)
+        .value("TIME", Sensor::TIME)
+        .value("COLLISION", Sensor::COLLISION);
+
+    class_<Notebook, base<Sprite>>("Notebook")
+        .constructor<float, float, size_t>()
+        .function("getNumPages", &Notebook::getNumPages)
+        .function("getCurrentPage", &Notebook::getCurrentPage)
+        .function("setCurrentPage", &Notebook::setCurrentPage)
+        .function("nextPage", &Notebook::nextPage)
+        .function("previousPage", &Notebook::previousPage)
+        .function("pageHasContent", &Notebook::pageHasContent)
+        .function("setPageContent", &Notebook::setPageContent)
+        .function("countPagesWithContent", &Notebook::countPagesWithContent);
 }

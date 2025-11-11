@@ -20,9 +20,18 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Nest: typeof ToonTalkNest;
     Scale: typeof ToonTalkScale;
     Wand: typeof ToonTalkWand;
+    Robot: typeof ToonTalkRobot;
+    House: typeof ToonTalkHouse;
+    Truck: typeof ToonTalkTruck;
+    Picture: typeof ToonTalkPicture;
+    Sensor: typeof ToonTalkSensor;
+    Notebook: typeof ToonTalkNotebook;
 
     // Enums
     WandMode: typeof WandMode;
+    RobotState: typeof RobotState;
+    TruckState: typeof TruckState;
+    SensorType: typeof SensorType;
 }
 
 /**
@@ -156,6 +165,128 @@ export enum WandMode {
     CREATE_BOX = 2,
     CREATE_NEST = 3,
     CREATE_BIRD = 4
+}
+
+/**
+ * Robot class (matches objects.cpp) - Programmable agent
+ */
+export declare class ToonTalkRobot extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getInstructionCount(): number;
+    setInstructionCount(count: number): void;
+    addInstruction(): void;
+    clearInstructions(): void;
+    start(): void;
+    stop(): void;
+    pause(): void;
+    train(): void;
+    delete(): void;
+}
+
+/**
+ * Robot state enum (matches objects.cpp)
+ */
+export enum RobotState {
+    IDLE = 0,
+    RUNNING = 1,
+    PAUSED = 2,
+    TRAINING = 3
+}
+
+/**
+ * House class (matches objects.cpp) - Workspace container
+ */
+export declare class ToonTalkHouse extends Sprite {
+    constructor(x: number, y: number, numRooms?: number);
+    getNumRooms(): number;
+    getCurrentRoom(): number;
+    setCurrentRoom(room: number): void;
+    isRoomOccupied(room: number): boolean;
+    setRoomOccupied(room: number, occupied: boolean): void;
+    countOccupiedRooms(): number;
+    isFull(): boolean;
+    isEmpty(): boolean;
+    delete(): void;
+}
+
+/**
+ * Truck class (matches objects.cpp) - Delivery/transport vehicle
+ */
+export declare class ToonTalkTruck extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    hasCargo(): boolean;
+    setCargo(hasCargo: boolean): void;
+    startDelivery(): void;
+    completeDelivery(): void;
+    delete(): void;
+}
+
+/**
+ * Truck state enum (matches objects.cpp)
+ */
+export enum TruckState {
+    EMPTY = 0,
+    LOADED = 1,
+    DELIVERING = 2
+}
+
+/**
+ * Picture class (matches objects.cpp) - Image display
+ */
+export declare class ToonTalkPicture extends Sprite {
+    constructor(x: number, y: number, width?: number, height?: number);
+    getPictureWidth(): number;
+    getPictureHeight(): number;
+    setPictureSize(width: number, height: number): void;
+    hasImage(): boolean;
+    setHasImage(hasImage: boolean): void;
+    getImageId(): number;
+    setImageId(id: number): void;
+    delete(): void;
+}
+
+/**
+ * Sensor class (matches objects.cpp) - Input and sensor functionality
+ */
+export declare class ToonTalkSensor extends Sprite {
+    constructor(x: number, y: number, type?: SensorType);
+    getTypeInt(): number;
+    setTypeInt(type: number): void;
+    isActive(): boolean;
+    setActive(active: boolean): void;
+    getValue(): number;
+    setValue(value: number): void;
+    delete(): void;
+}
+
+/**
+ * Sensor type enum (matches objects.cpp)
+ */
+export enum SensorType {
+    MOUSE = 0,
+    KEYBOARD = 1,
+    TIME = 2,
+    COLLISION = 3
+}
+
+/**
+ * Notebook class (matches objects.cpp) - Notes and documentation
+ */
+export declare class ToonTalkNotebook extends Sprite {
+    constructor(x: number, y: number, numPages?: number);
+    getNumPages(): number;
+    getCurrentPage(): number;
+    setCurrentPage(page: number): void;
+    nextPage(): void;
+    previousPage(): void;
+    pageHasContent(page: number): boolean;
+    setPageContent(page: number, hasContent: boolean): void;
+    countPagesWithContent(): number;
+    delete(): void;
 }
 
 /**

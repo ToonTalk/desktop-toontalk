@@ -133,14 +133,63 @@ class ToonTalkWeb {
         const wand2 = wasmCore.createWand(centerX + 100, centerY + 220, 4); // Mode 4 = CREATE_BIRD
         this.renderer.addWasmSprite(new WasmSpriteView(wand2, this.renderer.getStage(), this.renderer));
 
+        // Row 5: Advanced - Robot, House, Truck
+        const robot1 = wasmCore.createRobot(centerX - 250, centerY + 350);
+        robot1.addInstruction();
+        robot1.addInstruction();
+        robot1.addInstruction();
+        robot1.addInstruction();
+        robot1.addInstruction(); // 5 instructions
+        this.renderer.addWasmSprite(new WasmSpriteView(robot1, this.renderer.getStage(), this.renderer));
+
+        const robot2 = wasmCore.createRobot(centerX - 100, centerY + 350);
+        robot2.start(); // Running state
+        robot2.addInstruction();
+        robot2.addInstruction();
+        this.renderer.addWasmSprite(new WasmSpriteView(robot2, this.renderer.getStage(), this.renderer));
+
+        const house1 = wasmCore.createHouse(centerX + 100, centerY + 350, 3);
+        house1.setRoomOccupied(0, true);
+        house1.setRoomOccupied(1, true); // 2 of 3 rooms occupied
+        this.renderer.addWasmSprite(new WasmSpriteView(house1, this.renderer.getStage(), this.renderer));
+
+        const truck1 = wasmCore.createTruck(centerX + 300, centerY + 350);
+        truck1.setCargo(true); // Loaded truck
+        this.renderer.addWasmSprite(new WasmSpriteView(truck1, this.renderer.getStage(), this.renderer));
+
+        // Row 6: Media & Sensors
+        const picture1 = wasmCore.createPicture(centerX - 250, centerY + 500, 120, 100);
+        picture1.setImageId(101); // Has an image
+        this.renderer.addWasmSprite(new WasmSpriteView(picture1, this.renderer.getStage(), this.renderer));
+
+        const sensor1 = wasmCore.createSensor(centerX - 80, centerY + 500, 0); // MOUSE sensor
+        sensor1.setActive(true);
+        sensor1.setValue(42.5);
+        this.renderer.addWasmSprite(new WasmSpriteView(sensor1, this.renderer.getStage(), this.renderer));
+
+        const sensor2 = wasmCore.createSensor(centerX + 30, centerY + 500, 2); // TIME sensor
+        this.renderer.addWasmSprite(new WasmSpriteView(sensor2, this.renderer.getStage(), this.renderer));
+
+        const notebook1 = wasmCore.createNotebook(centerX + 180, centerY + 500, 5);
+        notebook1.setPageContent(0, true);
+        notebook1.setPageContent(2, true);
+        notebook1.setPageContent(3, true); // 3 pages with content
+        notebook1.setCurrentPage(2);
+        this.renderer.addWasmSprite(new WasmSpriteView(notebook1, this.renderer.getStage(), this.renderer));
+
         console.log('✨ WASM scene created!');
-        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest, 1 Scale, 2 Wands');
+        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest');
+        console.log('   Tools: 1 Scale, 2 Wands');
+        console.log('   Advanced: 2 Robots, 1 House, 1 Truck');
+        console.log('   Media: 1 Picture, 2 Sensors, 1 Notebook');
+        console.log('   Total: 18 interactive objects!');
+        console.log('');
         console.log('   💡 Drag objects to move them');
         console.log('   💡 Drop Number on Number to add');
         console.log('   💡 Drop Text on Text to concatenate');
         console.log('   💡 Drop anything on Box or Nest to store');
-        console.log('   💡 Use Scale to copy objects (future)');
-        console.log('   💡 Use Wand to create objects (future)');
+        console.log('   💡 Sensors detect input (Mouse, Keyboard, Time, Collision)');
+        console.log('   💡 Picture displays images, Notebook stores notes');
     }
 
     private startGameLoop(): void {
