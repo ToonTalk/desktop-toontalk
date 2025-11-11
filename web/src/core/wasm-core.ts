@@ -284,6 +284,48 @@ export class WasmCore {
         console.log('[WASM Test] After finishOperation() - State:', mouse.getStateInt(), '(IDLE=0)');
         mouse.delete();
 
+        // Test 21: Create Vacuum
+        const vacuum = new this.module.Vacuum(1600, 100);
+        console.log('[WASM Test] Created Vacuum at:', vacuum.getX(), vacuum.getY());
+        console.log('[WASM Test] Vacuum state:', vacuum.getStateInt(), '(SUCK=0)');
+        console.log('[WASM Test] Sucked count:', vacuum.getSuckedCount());
+        vacuum.suckUp();
+        vacuum.suckUp();
+        vacuum.suckUp();
+        console.log('[WASM Test] After 3 suckUp():', vacuum.getSuckedCount());
+        vacuum.setStateInt(1); // SPIT
+        console.log('[WASM Test] Changed to SPIT state:', vacuum.getStateInt());
+        vacuum.restore();
+        console.log('[WASM Test] After restore():', vacuum.getSuckedCount());
+        vacuum.delete();
+
+        // Test 21: Create Martian
+        const martian = new this.module.Martian(1700, 100);
+        console.log('[WASM Test] Created Martian at:', martian.getX(), martian.getY());
+        console.log('[WASM Test] Martian state:', martian.getStateInt(), '(IDLE=0)');
+        console.log('[WASM Test] Has balloon:', martian.hasBalloon());
+        martian.say(101); // Say message ID 101
+        console.log('[WASM Test] After say(101) - State:', martian.getStateInt(), '(TALKING=3) - MessageID:', martian.getMessageId());
+        console.log('[WASM Test] Has balloon:', martian.hasBalloon());
+        martian.teleportOut();
+        console.log('[WASM Test] After teleportOut() - State:', martian.getStateInt(), '(TELEPORTING_OUT=2)');
+        martian.delete();
+
+        // Test 23: Create Toolbox
+        const toolbox = new this.module.Toolbox(1800, 100);
+        console.log('[WASM Test] Created Toolbox at:', toolbox.getX(), toolbox.getY());
+        console.log('[WASM Test] Toolbox state:', toolbox.getStateInt(), '(CLOSED=0)');
+        console.log('[WASM Test] Selected stack:', toolbox.getSelectedStack(), '(NUMBERS=0)');
+        console.log('[WASM Test] Numbers stack count:', toolbox.getStackCount(0));
+        toolbox.open();
+        console.log('[WASM Test] After open() - State:', toolbox.getStateInt(), '(OPENING=1)');
+        toolbox.finishOpening();
+        console.log('[WASM Test] After finishOpening() - State:', toolbox.getStateInt(), '(OPEN=2)');
+        toolbox.setSelectedStack(5); // ROBOTS
+        console.log('[WASM Test] Selected ROBOTS stack:', toolbox.getSelectedStack());
+        console.log('[WASM Test] Robots stack count:', toolbox.getStackCount(5));
+        toolbox.delete();
+
         console.log('[WASM Tests] ✅ All tests passed!');
     }
 
@@ -455,6 +497,36 @@ export class WasmCore {
             throw new Error('WASM module not loaded');
         }
         return new this.module.Mouse(x, y);
+    }
+
+    /**
+     * Create a Vacuum instance from WASM
+     */
+    createVacuum(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Vacuum(x, y);
+    }
+
+    /**
+     * Create a Martian instance from WASM
+     */
+    createMartian(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Martian(x, y);
+    }
+
+    /**
+     * Create a Toolbox instance from WASM
+     */
+    createToolbox(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Toolbox(x, y);
     }
 
     /**

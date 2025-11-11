@@ -29,6 +29,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Bomb: typeof ToonTalkBomb;
     Thought_Bubble: typeof ToonTalkThoughtBubble;
     Mouse: typeof ToonTalkMouse;
+    Vacuum: typeof ToonTalkVacuum;
+    Martian: typeof ToonTalkMartian;
+    Toolbox: typeof ToonTalkToolbox;
 
     // Enums
     WandMode: typeof WandMode;
@@ -38,6 +41,10 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     BombState: typeof BombState;
     MouseState: typeof MouseState;
     MouseOperation: typeof MouseOperation;
+    VacuumState: typeof VacuumState;
+    MartianState: typeof MartianState;
+    ToolboxState: typeof ToolboxState;
+    ToolboxStack: typeof ToolboxStack;
 }
 
 /**
@@ -372,6 +379,103 @@ export enum MouseOperation {
     MULTIPLY = 2,
     DIVIDE = 3,
     NONE = 4
+}
+
+/**
+ * Vacuum class (matches objects.cpp) - Tool that sucks up, blanks, and restores items
+ */
+export declare class ToonTalkVacuum extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getSuckedCount(): number;
+    setSuckedCount(count: number): void;
+    suckUp(): void;
+    restore(): void;
+    makeBlank(): void;
+    delete(): void;
+}
+
+/**
+ * Vacuum state enum (matches objects.cpp)
+ */
+export enum VacuumState {
+    SUCK = 0,
+    SPIT = 1,
+    BLANK = 2
+}
+
+/**
+ * Martian class (matches objects.cpp) - Help character with talk balloon
+ */
+export declare class ToonTalkMartian extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    hasBalloon(): boolean;
+    setHasBalloon(has: boolean): void;
+    getMessageId(): number;
+    setMessageId(id: number): void;
+    isOnFloor(): boolean;
+    setOnFloor(on: boolean): void;
+    teleportIn(): void;
+    teleportOut(): void;
+    say(messageId: number): void;
+    stopTalking(): void;
+    delete(): void;
+}
+
+/**
+ * Martian state enum (matches objects.cpp)
+ */
+export enum MartianState {
+    IDLE = 0,
+    TELEPORTING_IN = 1,
+    TELEPORTING_OUT = 2,
+    TALKING = 3
+}
+
+/**
+ * Toolbox class (matches objects.cpp) - Container with stacks of objects
+ */
+export declare class ToonTalkToolbox extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getSelectedStack(): number;
+    setSelectedStack(stack: number): void;
+    getStackCount(stack: number): number;
+    setStackCount(stack: number, count: number): void;
+    open(): void;
+    close(): void;
+    finishOpening(): void;
+    finishClosing(): void;
+    delete(): void;
+}
+
+/**
+ * Toolbox state enum (matches objects.cpp)
+ */
+export enum ToolboxState {
+    CLOSED = 0,
+    OPENING = 1,
+    OPEN = 2,
+    CLOSING = 3
+}
+
+/**
+ * Toolbox stack enum (matches objects.cpp)
+ */
+export enum ToolboxStack {
+    NUMBERS = 0,
+    TEXTS = 1,
+    CUBBIES = 2,
+    NESTS = 3,
+    SCALES = 4,
+    ROBOTS = 5,
+    TRUCKS = 6,
+    BOMBS = 7,
+    STACK_COUNT = 8
 }
 
 /**
