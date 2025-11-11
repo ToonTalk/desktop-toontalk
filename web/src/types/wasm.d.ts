@@ -32,6 +32,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Vacuum: typeof ToonTalkVacuum;
     Martian: typeof ToonTalkMartian;
     Toolbox: typeof ToonTalkToolbox;
+    Expander: typeof ToonTalkExpander;
+    Copier: typeof ToonTalkCopier;
+    Eraser: typeof ToonTalkEraser;
 
     // Enums
     WandMode: typeof WandMode;
@@ -45,6 +48,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     MartianState: typeof MartianState;
     ToolboxState: typeof ToolboxState;
     ToolboxStack: typeof ToolboxStack;
+    ExpanderState: typeof ExpanderState;
+    CopierState: typeof CopierState;
+    EraserState: typeof EraserState;
 }
 
 /**
@@ -476,6 +482,89 @@ export enum ToolboxStack {
     TRUCKS = 6,
     BOMBS = 7,
     STACK_COUNT = 8
+}
+
+/**
+ * Expander class (matches objects.cpp) - Tool for resizing objects
+ */
+export declare class ToonTalkExpander extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getScaleFactor(): number;
+    setScaleFactor(scale: number): void;
+    getTargetScale(): number;
+    setTargetScale(scale: number): void;
+    expand(): void;
+    shrink(): void;
+    setGoodSize(): void;
+    delete(): void;
+}
+
+/**
+ * Expander state enum (matches objects.cpp)
+ */
+export enum ExpanderState {
+    BIGGER = 0,
+    TALLER = 1,
+    WIDER = 2,
+    SMALLER = 3,
+    SHORTER = 4,
+    NARROWER = 5,
+    GOOD_SIZE = 6
+}
+
+/**
+ * Copier class (matches objects.cpp) - Magic wand for copying objects
+ */
+export declare class ToonTalkCopier extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getCopyCount(): number;
+    setCopyCount(count: number): void;
+    getMaxCopies(): number;
+    setMaxCopies(max: number): void;
+    hasAttached(): boolean;
+    setHasAttached(has: boolean): void;
+    makeCopy(): void;
+    reset(): void;
+    delete(): void;
+}
+
+/**
+ * Copier state enum (matches objects.cpp)
+ */
+export enum CopierState {
+    NORMAL = 0,
+    ORIGINAL = 1,
+    SELF = 2
+}
+
+/**
+ * Eraser class (matches objects.cpp) - Tool for deleting objects
+ */
+export declare class ToonTalkEraser extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getErasedCount(): number;
+    setErasedCount(count: number): void;
+    getEraseProgress(): number;
+    setEraseProgress(progress: number): void;
+    startErasing(): void;
+    erase(): void;
+    reset(): void;
+    delete(): void;
+}
+
+/**
+ * Eraser state enum (matches objects.cpp)
+ */
+export enum EraserState {
+    READY = 0,
+    ERASING = 1,
+    DONE = 2
 }
 
 /**

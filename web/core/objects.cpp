@@ -1048,6 +1048,201 @@ private:
     int stack_counts_[STACK_COUNT];  // Count of items in each stack
 };
 
+// ===== Expander Class =====
+// Simplified expander/bike pump for resizing objects
+class Expander : public Sprite {
+public:
+    enum ExpanderState {
+        BIGGER = 0,      // Grow in all dimensions
+        TALLER = 1,      // Grow height only
+        WIDER = 2,       // Grow width only
+        SMALLER = 3,     // Shrink in all dimensions
+        SHORTER = 4,     // Shrink height only
+        NARROWER = 5,    // Shrink width only
+        GOOD_SIZE = 6    // Perfect size
+    };
+
+    Expander(float x, float y)
+        : Sprite(x, y, 60.0f, 80.0f),
+          state_(BIGGER),
+          scale_factor_(1.0f),
+          target_scale_(1.0f) {}
+
+    ExpanderState getState() const { return state_; }
+    int getStateInt() const { return static_cast<int>(state_); }
+
+    void setState(ExpanderState state) { state_ = state; }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 6) {
+            state_ = static_cast<ExpanderState>(state);
+        }
+    }
+
+    float getScaleFactor() const { return scale_factor_; }
+    void setScaleFactor(float scale) { scale_factor_ = scale; }
+
+    float getTargetScale() const { return target_scale_; }
+    void setTargetScale(float scale) { target_scale_ = scale; }
+
+    void expand() {
+        if (state_ == BIGGER || state_ == TALLER || state_ == WIDER) {
+            target_scale_ += 0.2f;
+        }
+    }
+
+    void shrink() {
+        if (state_ == SMALLER || state_ == SHORTER || state_ == NARROWER) {
+            target_scale_ -= 0.2f;
+            if (target_scale_ < 0.2f) target_scale_ = 0.2f;
+        }
+    }
+
+    void setGoodSize() {
+        state_ = GOOD_SIZE;
+        target_scale_ = 1.0f;
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Smoothly interpolate to target scale
+        if (scale_factor_ != target_scale_) {
+            float diff = target_scale_ - scale_factor_;
+            scale_factor_ += diff * 0.1f;
+        }
+    }
+
+private:
+    ExpanderState state_;
+    float scale_factor_;   // Current scale
+    float target_scale_;   // Target scale
+};
+
+// ===== Copier Class =====
+// Simplified magic wand for copying objects
+class Copier : public Sprite {
+public:
+    enum CopierState {
+        NORMAL = 0,    // Normal copy mode
+        ORIGINAL = 1,  // Keep original
+        SELF = 2       // Copy self
+    };
+
+    Copier(float x, float y)
+        : Sprite(x, y, 60.0f, 70.0f),
+          state_(NORMAL),
+          copy_count_(0),
+          max_copies_(-1),  // -1 = infinite
+          has_attached_(false) {}
+
+    CopierState getState() const { return state_; }
+    int getStateInt() const { return static_cast<int>(state_); }
+
+    void setState(CopierState state) { state_ = state; }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 2) {
+            state_ = static_cast<CopierState>(state);
+        }
+    }
+
+    int getCopyCount() const { return copy_count_; }
+    void setCopyCount(int count) { copy_count_ = count; }
+
+    int getMaxCopies() const { return max_copies_; }
+    void setMaxCopies(int max) { max_copies_ = max; }
+
+    bool hasAttached() const { return has_attached_; }
+    void setHasAttached(bool has) { has_attached_ = has; }
+
+    void makeCopy() {
+        if (max_copies_ < 0 || copy_count_ < max_copies_) {
+            copy_count_++;
+        }
+    }
+
+    void reset() {
+        copy_count_ = 0;
+        has_attached_ = false;
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Copier animations could go here
+    }
+
+private:
+    CopierState state_;
+    int copy_count_;       // Number of copies made
+    int max_copies_;       // Maximum copies (-1 = infinite)
+    bool has_attached_;    // Has attached object to copy
+};
+
+// ===== Eraser Class =====
+// Simplified eraser for deleting objects
+class Eraser : public Sprite {
+public:
+    enum EraserState {
+        READY = 0,      // Ready to erase
+        ERASING = 1,    // Currently erasing
+        DONE = 2        // Erasing complete
+    };
+
+    Eraser(float x, float y)
+        : Sprite(x, y, 50.0f, 60.0f),
+          state_(READY),
+          erased_count_(0),
+          erase_progress_(0.0f) {}
+
+    EraserState getState() const { return state_; }
+    int getStateInt() const { return static_cast<int>(state_); }
+
+    void setState(EraserState state) { state_ = state; }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 2) {
+            state_ = static_cast<EraserState>(state);
+        }
+    }
+
+    int getErasedCount() const { return erased_count_; }
+    void setErasedCount(int count) { erased_count_ = count; }
+
+    float getEraseProgress() const { return erase_progress_; }
+    void setEraseProgress(float progress) { erase_progress_ = progress; }
+
+    void startErasing() {
+        state_ = ERASING;
+        erase_progress_ = 0.0f;
+    }
+
+    void erase() {
+        if (state_ == READY || state_ == ERASING) {
+            erased_count_++;
+            state_ = DONE;
+            erase_progress_ = 1.0f;
+        }
+    }
+
+    void reset() {
+        state_ = READY;
+        erase_progress_ = 0.0f;
+    }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Update erase animation progress
+        if (state_ == ERASING && erase_progress_ < 1.0f) {
+            erase_progress_ += deltaTime / 500.0f;  // 500ms to erase
+            if (erase_progress_ >= 1.0f) {
+                state_ = DONE;
+            }
+        }
+    }
+
+private:
+    EraserState state_;
+    int erased_count_;      // Count of erased objects
+    float erase_progress_;  // Animation progress (0-1)
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -1327,4 +1522,66 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("TRUCKS", Toolbox::TRUCKS)
         .value("BOMBS", Toolbox::BOMBS)
         .value("STACK_COUNT", Toolbox::STACK_COUNT);
+
+    // Expander class
+    class_<Expander, base<Sprite>>("Expander")
+        .constructor<float, float>()
+        .function("getStateInt", &Expander::getStateInt)
+        .function("setStateInt", &Expander::setStateInt)
+        .function("getScaleFactor", &Expander::getScaleFactor)
+        .function("setScaleFactor", &Expander::setScaleFactor)
+        .function("getTargetScale", &Expander::getTargetScale)
+        .function("setTargetScale", &Expander::setTargetScale)
+        .function("expand", &Expander::expand)
+        .function("shrink", &Expander::shrink)
+        .function("setGoodSize", &Expander::setGoodSize);
+
+    // Expander state enum values
+    enum_<Expander::ExpanderState>("ExpanderState")
+        .value("BIGGER", Expander::BIGGER)
+        .value("TALLER", Expander::TALLER)
+        .value("WIDER", Expander::WIDER)
+        .value("SMALLER", Expander::SMALLER)
+        .value("SHORTER", Expander::SHORTER)
+        .value("NARROWER", Expander::NARROWER)
+        .value("GOOD_SIZE", Expander::GOOD_SIZE);
+
+    // Copier class
+    class_<Copier, base<Sprite>>("Copier")
+        .constructor<float, float>()
+        .function("getStateInt", &Copier::getStateInt)
+        .function("setStateInt", &Copier::setStateInt)
+        .function("getCopyCount", &Copier::getCopyCount)
+        .function("setCopyCount", &Copier::setCopyCount)
+        .function("getMaxCopies", &Copier::getMaxCopies)
+        .function("setMaxCopies", &Copier::setMaxCopies)
+        .function("hasAttached", &Copier::hasAttached)
+        .function("setHasAttached", &Copier::setHasAttached)
+        .function("makeCopy", &Copier::makeCopy)
+        .function("reset", &Copier::reset);
+
+    // Copier state enum values
+    enum_<Copier::CopierState>("CopierState")
+        .value("NORMAL", Copier::NORMAL)
+        .value("ORIGINAL", Copier::ORIGINAL)
+        .value("SELF", Copier::SELF);
+
+    // Eraser class
+    class_<Eraser, base<Sprite>>("Eraser")
+        .constructor<float, float>()
+        .function("getStateInt", &Eraser::getStateInt)
+        .function("setStateInt", &Eraser::setStateInt)
+        .function("getErasedCount", &Eraser::getErasedCount)
+        .function("setErasedCount", &Eraser::setErasedCount)
+        .function("getEraseProgress", &Eraser::getEraseProgress)
+        .function("setEraseProgress", &Eraser::setEraseProgress)
+        .function("startErasing", &Eraser::startErasing)
+        .function("erase", &Eraser::erase)
+        .function("reset", &Eraser::reset);
+
+    // Eraser state enum values
+    enum_<Eraser::EraserState>("EraserState")
+        .value("READY", Eraser::READY)
+        .value("ERASING", Eraser::ERASING)
+        .value("DONE", Eraser::DONE);
 }
