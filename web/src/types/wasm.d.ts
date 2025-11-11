@@ -44,6 +44,15 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Connector: typeof ToonTalkConnector;
     Timer: typeof ToonTalkTimer;
     Counter: typeof ToonTalkCounter;
+    Sampler: typeof ToonTalkSampler;
+    Comparator: typeof ToonTalkComparator;
+    Randomizer: typeof ToonTalkRandomizer;
+    Logger: typeof ToonTalkLogger;
+    Filter: typeof ToonTalkFilter;
+    Accumulator: typeof ToonTalkAccumulator;
+    Sequencer: typeof ToonTalkSequencer;
+    Trigger: typeof ToonTalkTrigger;
+    Scheduler: typeof ToonTalkScheduler;
 
     // Enums
     WandMode: typeof WandMode;
@@ -67,6 +76,21 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     ConnectorState: typeof ConnectorState;
     TimerState: typeof TimerState;
     CounterState: typeof CounterState;
+    SamplerState: typeof SamplerState;
+    ComparisonResult: typeof ComparisonResult;
+    RandomizerMode: typeof RandomizerMode;
+    LoggerState: typeof LoggerState;
+    LogLevel: typeof LogLevel;
+    FilterMode: typeof FilterMode;
+    FilterState: typeof FilterState;
+    AccumulatorMode: typeof AccumulatorMode;
+    AccumulatorState: typeof AccumulatorState;
+    SequencerMode: typeof SequencerMode;
+    SequencerState: typeof SequencerState;
+    TriggerMode: typeof TriggerMode;
+    TriggerState: typeof TriggerState;
+    SchedulerMode: typeof SchedulerMode;
+    SchedulerState: typeof SchedulerState;
 }
 
 /**
@@ -814,6 +838,351 @@ export enum CounterState {
     AT_MIN = 1,
     AT_MAX = 2,
     OVERFLOW = 3
+}
+
+export declare class ToonTalkSampler extends Sprite {
+    constructor(x: number, y: number, capacity?: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    startSampling(): void;
+    pauseSampling(): void;
+    resumeSampling(): void;
+    stopSampling(): void;
+    clear(): void;
+    recordSample(value: number): void;
+    getSampleCount(): number;
+    getCapacity(): number;
+    setCapacity(capacity: number): void;
+    getSampleRate(): number;
+    setSampleRate(rate: number): void;
+    getCurrentValue(): number;
+    getMinValue(): number;
+    getMaxValue(): number;
+    isSampling(): boolean;
+    isFull(): boolean;
+    getFullness(): number;
+    delete(): void;
+}
+
+export enum SamplerState {
+    IDLE = 0,
+    SAMPLING = 1,
+    PAUSED = 2,
+    FULL = 3
+}
+
+export declare class ToonTalkComparator extends Sprite {
+    constructor(x: number, y: number);
+    getValueA(): number;
+    setValueA(value: number): void;
+    getValueB(): number;
+    setValueB(value: number): void;
+    setValues(a: number, b: number): void;
+    getResultInt(): number;
+    isEqual(): boolean;
+    isLessThan(): boolean;
+    isGreaterThan(): boolean;
+    isNotEqual(): boolean;
+    getTolerance(): number;
+    setTolerance(tolerance: number): void;
+    getDifference(): number;
+    getComparisonCount(): number;
+    reset(): void;
+    delete(): void;
+}
+
+export enum ComparisonResult {
+    EQUAL = 0,
+    LESS_THAN = 1,
+    GREATER_THAN = 2,
+    NOT_EQUAL = 3
+}
+
+export declare class ToonTalkRandomizer extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    generate(): void;
+    getCurrentValue(): number;
+    getMinValue(): number;
+    setMinValue(value: number): void;
+    getMaxValue(): number;
+    setMaxValue(value: number): void;
+    getGenerationCount(): number;
+    setGenerationCount(count: number): void;
+    getSeed(): number;
+    setSeed(seed: number): void;
+    reset(): void;
+    delete(): void;
+}
+
+export enum RandomizerMode {
+    UNIFORM = 0,
+    INTEGER = 1,
+    BOOLEAN = 2,
+    DICE = 3
+}
+
+/**
+ * Logger - Records timestamped log entries with severity levels
+ */
+export declare class ToonTalkLogger extends Sprite {
+    constructor(x: number, y: number, maxEntries?: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    startLogging(): void;
+    pauseLogging(): void;
+    resumeLogging(): void;
+    stopLogging(): void;
+    clear(): void;
+    logEntry(level: number): void;
+    getEntryCount(): number;
+    getMaxEntries(): number;
+    setMaxEntries(max: number): void;
+    getMinLevelInt(): number;
+    setMinLevelInt(level: number): void;
+    getCurrentLevelInt(): number;
+    getDebugCount(): number;
+    getInfoCount(): number;
+    getWarningCount(): number;
+    getErrorCount(): number;
+    isLogging(): boolean;
+    isFull(): boolean;
+    getFullness(): number;
+    delete(): void;
+}
+
+export enum LoggerState {
+    IDLE = 0,
+    LOGGING = 1,
+    PAUSED = 2,
+    FULL = 3
+}
+
+export enum LogLevel {
+    DEBUG = 0,
+    INFO = 1,
+    WARNING = 2,
+    ERROR = 3
+}
+
+/**
+ * Filter - Filters and transforms values based on configurable rules
+ */
+export declare class ToonTalkFilter extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    activate(): void;
+    deactivate(): void;
+    bypass(): void;
+    processValue(value: number): boolean;
+    getInputValue(): number;
+    getOutputValue(): number;
+    getMinThreshold(): number;
+    setMinThreshold(value: number): void;
+    getMaxThreshold(): number;
+    setMaxThreshold(value: number): void;
+    setThresholds(min: number, max: number): void;
+    getTransformScale(): number;
+    setTransformScale(scale: number): void;
+    getTransformOffset(): number;
+    setTransformOffset(offset: number): void;
+    setTransform(scale: number, offset: number): void;
+    getPassedCount(): number;
+    getBlockedCount(): number;
+    reset(): void;
+    isActive(): boolean;
+    isBypassed(): boolean;
+    delete(): void;
+}
+
+export enum FilterMode {
+    PASS_ALL = 0,
+    PASS_RANGE = 1,
+    BLOCK_RANGE = 2,
+    TRANSFORM = 3
+}
+
+export enum FilterState {
+    IDLE = 0,
+    ACTIVE = 1,
+    BYPASSED = 2
+}
+
+/**
+ * Accumulator - Accumulates and aggregates values with running statistics
+ */
+export declare class ToonTalkAccumulator extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    start(): void;
+    pause(): void;
+    resume(): void;
+    stop(): void;
+    accumulate(value: number): void;
+    clear(): void;
+    reset(): void;
+    getCurrentValue(): number;
+    getSum(): number;
+    getCount(): number;
+    getMinValue(): number;
+    getMaxValue(): number;
+    getAverage(): number;
+    getDecayRate(): number;
+    setDecayRate(rate: number): void;
+    isAccumulating(): boolean;
+    delete(): void;
+}
+
+export enum AccumulatorMode {
+    SUM = 0,
+    AVERAGE = 1,
+    MIN = 2,
+    MAX = 3,
+    COUNT = 4
+}
+
+export enum AccumulatorState {
+    IDLE = 0,
+    ACCUMULATING = 1,
+    PAUSED = 2
+}
+
+/**
+ * Sequencer - Sequences operations in configurable order
+ */
+export declare class ToonTalkSequencer extends Sprite {
+    constructor(x: number, y: number, numSteps?: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    start(): void;
+    pause(): void;
+    resume(): void;
+    stop(): void;
+    reset(): void;
+    nextStep(): void;
+    previousStep(): void;
+    jumpToStep(step: number): void;
+    getCurrentStep(): number;
+    getNumSteps(): number;
+    setNumSteps(steps: number): void;
+    getLoopCount(): number;
+    getExecutionCount(): number;
+    getAutoAdvance(): boolean;
+    setAutoAdvance(enabled: boolean): void;
+    getProgress(): number;
+    isRunning(): boolean;
+    isCompleted(): boolean;
+    delete(): void;
+}
+
+export enum SequencerMode {
+    LINEAR = 0,
+    LOOP = 1,
+    PINGPONG = 2,
+    RANDOM = 3
+}
+
+export enum SequencerState {
+    IDLE = 0,
+    RUNNING = 1,
+    PAUSED = 2,
+    COMPLETED = 3
+}
+
+/**
+ * Trigger - Event-based trigger with configurable conditions
+ */
+export declare class ToonTalkTrigger extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    arm(): void;
+    disarm(): void;
+    reset(): void;
+    unlatch(): void;
+    checkTrigger(value: number): boolean;
+    getThreshold(): number;
+    setThreshold(value: number): void;
+    getCurrentValue(): number;
+    getTriggerCount(): number;
+    getDebounceThreshold(): number;
+    setDebounceThreshold(threshold: number): void;
+    latch(): void;
+    isArmed(): boolean;
+    isTriggered(): boolean;
+    isLatched(): boolean;
+    delete(): void;
+}
+
+export enum TriggerMode {
+    EDGE_RISING = 0,
+    EDGE_FALLING = 1,
+    EDGE_BOTH = 2,
+    LEVEL_HIGH = 3,
+    LEVEL_LOW = 4
+}
+
+export enum TriggerState {
+    IDLE = 0,
+    ARMED = 1,
+    TRIGGERED = 2,
+    LATCHED = 3
+}
+
+/**
+ * Scheduler - Time-based task scheduler
+ */
+export declare class ToonTalkScheduler extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    start(): void;
+    stop(): void;
+    pause(): void;
+    resume(): void;
+    update(deltaTime: number): void;
+    execute(): void;
+    finishExecution(): void;
+    getDelay(): number;
+    setDelay(delay: number): void;
+    getInterval(): number;
+    setInterval(interval: number): void;
+    getElapsedTime(): number;
+    getLastExecutionTime(): number;
+    getExecutionCount(): number;
+    getMaxExecutions(): number;
+    setMaxExecutions(max: number): void;
+    getProgress(): number;
+    isWaiting(): boolean;
+    isReady(): boolean;
+    isExecuting(): boolean;
+    delete(): void;
+}
+
+export enum SchedulerMode {
+    ONCE = 0,
+    INTERVAL = 1,
+    CRON = 2
+}
+
+export enum SchedulerState {
+    IDLE = 0,
+    WAITING = 1,
+    READY = 2,
+    EXECUTING = 3
 }
 
 /**

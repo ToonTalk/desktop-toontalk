@@ -604,6 +604,259 @@ export class WasmCore {
             console.log('[WASM Test] ⏭️  Skipping Counter (not in WASM binary yet - rebuild required)');
         }
 
+        // Test 36: Create Sampler (if available in WASM)
+        if (this.module.Sampler) {
+            const sampler = new this.module.Sampler(3800, 100, 50);
+            console.log('[WASM Test] Created Sampler at:', sampler.getX(), sampler.getY());
+            console.log('[WASM Test] Capacity:', sampler.getCapacity(), '- State:', sampler.getStateInt(), '(IDLE=0)');
+            console.log('[WASM Test] SampleRate:', sampler.getSampleRate(), 'Hz');
+            sampler.startSampling();
+            console.log('[WASM Test] After startSampling() - State:', sampler.getStateInt(), '(SAMPLING=1)', '- isSampling:', sampler.isSampling());
+            sampler.recordSample(10.5);
+            sampler.recordSample(20.3);
+            sampler.recordSample(15.7);
+            console.log('[WASM Test] After 3 recordSample() - Count:', sampler.getSampleCount());
+            console.log('[WASM Test] MinValue:', sampler.getMinValue(), '- MaxValue:', sampler.getMaxValue());
+            console.log('[WASM Test] Fullness:', sampler.getFullness());
+            sampler.pauseSampling();
+            console.log('[WASM Test] After pauseSampling() - State:', sampler.getStateInt(), '(PAUSED=2)');
+            sampler.clear();
+            console.log('[WASM Test] After clear() - Count:', sampler.getSampleCount(), '- State:', sampler.getStateInt());
+            sampler.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Sampler (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 37: Create Comparator (if available in WASM)
+        if (this.module.Comparator) {
+            const comparator = new this.module.Comparator(4000, 100);
+            console.log('[WASM Test] Created Comparator at:', comparator.getX(), comparator.getY());
+            console.log('[WASM Test] ValueA:', comparator.getValueA(), '- ValueB:', comparator.getValueB());
+            console.log('[WASM Test] Result:', comparator.getResultInt(), '(EQUAL=0)', '- isEqual:', comparator.isEqual());
+            comparator.setValueA(10.0);
+            comparator.setValueB(5.0);
+            console.log('[WASM Test] After setValues(10, 5) - Result:', comparator.getResultInt(), '(GREATER_THAN=2)');
+            console.log('[WASM Test] isGreaterThan:', comparator.isGreaterThan(), '- Difference:', comparator.getDifference());
+            comparator.setValueA(3.0);
+            console.log('[WASM Test] After setValueA(3) - Result:', comparator.getResultInt(), '(LESS_THAN=1)', '- isLessThan:', comparator.isLessThan());
+            console.log('[WASM Test] ComparisonCount:', comparator.getComparisonCount());
+            comparator.setTolerance(0.5);
+            comparator.setValues(5.2, 5.3);
+            console.log('[WASM Test] After setTolerance(0.5) and setValues(5.2, 5.3) - isEqual:', comparator.isEqual());
+            comparator.reset();
+            console.log('[WASM Test] After reset() - ValueA:', comparator.getValueA(), '- Count:', comparator.getComparisonCount());
+            comparator.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Comparator (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 38: Create Randomizer (if available in WASM)
+        if (this.module.Randomizer) {
+            const randomizer = new this.module.Randomizer(4200, 100);
+            console.log('[WASM Test] Created Randomizer at:', randomizer.getX(), randomizer.getY());
+            console.log('[WASM Test] Mode:', randomizer.getModeInt(), '(UNIFORM=0)');
+            console.log('[WASM Test] Range:', randomizer.getMinValue(), '-', randomizer.getMaxValue());
+            randomizer.generate();
+            console.log('[WASM Test] After generate() - Value:', randomizer.getCurrentValue());
+            console.log('[WASM Test] GenerationCount:', randomizer.getGenerationCount());
+            randomizer.generate();
+            randomizer.generate();
+            console.log('[WASM Test] After 2 more generate() - Count:', randomizer.getGenerationCount());
+            randomizer.setModeInt(1); // INTEGER
+            randomizer.setMinValue(1);
+            randomizer.setMaxValue(10);
+            randomizer.generate();
+            console.log('[WASM Test] INTEGER mode (1-10) - Value:', randomizer.getCurrentValue());
+            randomizer.setModeInt(2); // BOOLEAN
+            randomizer.generate();
+            console.log('[WASM Test] BOOLEAN mode - Value:', randomizer.getCurrentValue(), '(0 or 1)');
+            randomizer.setModeInt(3); // DICE
+            randomizer.generate();
+            console.log('[WASM Test] DICE mode - Value:', randomizer.getCurrentValue(), '(1-6)');
+            randomizer.reset();
+            console.log('[WASM Test] After reset() - Count:', randomizer.getGenerationCount());
+            randomizer.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Randomizer (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 39: Create Logger (if available in WASM)
+        console.log('[WASM Test] --- Test 39: Logger ---');
+        if (this.module.Logger) {
+            const logger = new this.module.Logger(4400, 100, 50);
+            console.log('[WASM Test] Created Logger at:', logger.getX(), logger.getY());
+            console.log('[WASM Test] MaxEntries:', logger.getMaxEntries(), '- State:', logger.getStateInt(), '(IDLE=0)');
+            logger.startLogging();
+            logger.logEntry(0); // DEBUG
+            logger.logEntry(1); // INFO
+            logger.logEntry(1); // INFO
+            logger.logEntry(2); // WARNING
+            logger.logEntry(3); // ERROR
+            console.log('[WASM Test] After 5 logEntry() calls - EntryCount:', logger.getEntryCount());
+            console.log('[WASM Test] Counts - DEBUG:', logger.getDebugCount(), 'INFO:', logger.getInfoCount(),
+                       'WARNING:', logger.getWarningCount(), 'ERROR:', logger.getErrorCount());
+            console.log('[WASM Test] Fullness:', logger.getFullness(), '- isLogging:', logger.isLogging());
+            logger.pauseLogging();
+            console.log('[WASM Test] After pauseLogging() - State:', logger.getStateInt(), '(PAUSED=2)');
+            logger.clear();
+            console.log('[WASM Test] After clear() - EntryCount:', logger.getEntryCount());
+            logger.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Logger (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 40: Create Filter (if available in WASM)
+        console.log('[WASM Test] --- Test 40: Filter ---');
+        if (this.module.Filter) {
+            const filter = new this.module.Filter(4600, 100);
+            console.log('[WASM Test] Created Filter at:', filter.getX(), filter.getY());
+            console.log('[WASM Test] Initial state:', filter.getStateInt(), '(IDLE=0)');
+            filter.activate();
+            filter.setModeInt(1); // PASS_RANGE
+            filter.setThresholds(10.0, 50.0);
+            console.log('[WASM Test] After setThresholds(10, 50) - Min:', filter.getMinThreshold(),
+                       'Max:', filter.getMaxThreshold());
+            const pass1 = filter.processValue(25.0);
+            console.log('[WASM Test] processValue(25.0) - Passes:', pass1, '- Output:', filter.getOutputValue());
+            const pass2 = filter.processValue(100.0);
+            console.log('[WASM Test] processValue(100.0) - Passes:', pass2, '- PassedCount:',
+                       filter.getPassedCount(), 'BlockedCount:', filter.getBlockedCount());
+            filter.setModeInt(3); // TRANSFORM
+            filter.setTransform(2.0, 5.0);
+            filter.processValue(10.0);
+            console.log('[WASM Test] TRANSFORM mode with scale=2, offset=5 - Input:', filter.getInputValue(),
+                       'Output:', filter.getOutputValue(), '(expected 25)');
+            filter.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Filter (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 41: Create Accumulator (if available in WASM)
+        console.log('[WASM Test] --- Test 41: Accumulator ---');
+        if (this.module.Accumulator) {
+            const accumulator = new this.module.Accumulator(4800, 100);
+            console.log('[WASM Test] Created Accumulator at:', accumulator.getX(), accumulator.getY());
+            console.log('[WASM Test] Initial state:', accumulator.getStateInt(), '(IDLE=0)');
+            accumulator.start();
+            accumulator.setModeInt(0); // SUM
+            accumulator.accumulate(10.0);
+            accumulator.accumulate(20.0);
+            accumulator.accumulate(30.0);
+            console.log('[WASM Test] After accumulate(10, 20, 30) in SUM mode - Value:',
+                       accumulator.getCurrentValue(), '(expected 60)');
+            console.log('[WASM Test] Count:', accumulator.getCount(), '- Sum:', accumulator.getSum());
+            console.log('[WASM Test] Min:', accumulator.getMinValue(), '- Max:', accumulator.getMaxValue(),
+                       '- Average:', accumulator.getAverage());
+            accumulator.setModeInt(1); // AVERAGE
+            console.log('[WASM Test] Switched to AVERAGE mode - Value:', accumulator.getCurrentValue(),
+                       '(expected 20)');
+            accumulator.setModeInt(2); // MIN
+            console.log('[WASM Test] Switched to MIN mode - Value:', accumulator.getCurrentValue(),
+                       '(expected 10)');
+            accumulator.setModeInt(3); // MAX
+            console.log('[WASM Test] Switched to MAX mode - Value:', accumulator.getCurrentValue(),
+                       '(expected 30)');
+            accumulator.reset();
+            console.log('[WASM Test] After reset() - Count:', accumulator.getCount(),
+                       '- State:', accumulator.getStateInt());
+            accumulator.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Accumulator (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 42: Create Sequencer (if available in WASM)
+        console.log('[WASM Test] --- Test 42: Sequencer ---');
+        if (this.module.Sequencer) {
+            const sequencer = new this.module.Sequencer(5000, 100, 5);
+            console.log('[WASM Test] Created Sequencer at:', sequencer.getX(), sequencer.getY());
+            console.log('[WASM Test] NumSteps:', sequencer.getNumSteps(), '- CurrentStep:', sequencer.getCurrentStep());
+            sequencer.start();
+            console.log('[WASM Test] After start() - State:', sequencer.getStateInt(), '(RUNNING=1)');
+            sequencer.nextStep();
+            sequencer.nextStep();
+            console.log('[WASM Test] After 2 nextStep() - CurrentStep:', sequencer.getCurrentStep(),
+                       '- Progress:', sequencer.getProgress());
+            sequencer.setModeInt(1); // LOOP
+            sequencer.jumpToStep(4);
+            console.log('[WASM Test] After jumpToStep(4) in LOOP mode - CurrentStep:', sequencer.getCurrentStep());
+            sequencer.nextStep(); // Should wrap to 0
+            console.log('[WASM Test] After nextStep() at end - CurrentStep:', sequencer.getCurrentStep(),
+                       '- LoopCount:', sequencer.getLoopCount());
+            sequencer.pause();
+            console.log('[WASM Test] After pause() - State:', sequencer.getStateInt(), '(PAUSED=2)');
+            sequencer.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Sequencer (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 43: Create Trigger (if available in WASM)
+        console.log('[WASM Test] --- Test 43: Trigger ---');
+        if (this.module.Trigger) {
+            const trigger = new this.module.Trigger(5200, 100);
+            console.log('[WASM Test] Created Trigger at:', trigger.getX(), trigger.getY());
+            console.log('[WASM Test] Initial state:', trigger.getStateInt(), '(IDLE=0)');
+            trigger.setThreshold(0.5);
+            trigger.arm();
+            console.log('[WASM Test] After arm() - State:', trigger.getStateInt(), '(ARMED=1)');
+
+            let triggered = trigger.checkTrigger(0.3);
+            console.log('[WASM Test] checkTrigger(0.3) - Triggered:', triggered, '- Value:', trigger.getCurrentValue());
+
+            triggered = trigger.checkTrigger(0.7); // Should trigger (rising edge)
+            console.log('[WASM Test] checkTrigger(0.7) - Triggered:', triggered, '- State:', trigger.getStateInt(),
+                       '(TRIGGERED=2)');
+            console.log('[WASM Test] TriggerCount:', trigger.getTriggerCount());
+
+            trigger.latch();
+            console.log('[WASM Test] After latch() - State:', trigger.getStateInt(), '(LATCHED=3)');
+            triggered = trigger.checkTrigger(0.9); // Should not trigger when latched
+            console.log('[WASM Test] checkTrigger(0.9) while latched - Triggered:', triggered);
+
+            trigger.unlatch();
+            trigger.arm();
+            console.log('[WASM Test] After unlatch() and arm() - State:', trigger.getStateInt());
+            trigger.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Trigger (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 44: Create Scheduler (if available in WASM)
+        console.log('[WASM Test] --- Test 44: Scheduler ---');
+        if (this.module.Scheduler) {
+            const scheduler = new this.module.Scheduler(5400, 100);
+            console.log('[WASM Test] Created Scheduler at:', scheduler.getX(), scheduler.getY());
+            console.log('[WASM Test] Initial state:', scheduler.getStateInt(), '(IDLE=0)');
+            scheduler.setDelay(2.0);
+            scheduler.setInterval(1.0);
+            console.log('[WASM Test] After setDelay(2.0) and setInterval(1.0) - Delay:', scheduler.getDelay(),
+                       'Interval:', scheduler.getInterval());
+
+            scheduler.start();
+            console.log('[WASM Test] After start() - State:', scheduler.getStateInt(), '(WAITING=1)');
+
+            // Simulate some time passing
+            scheduler.update(1.0);
+            console.log('[WASM Test] After update(1.0) - ElapsedTime:', scheduler.getElapsedTime(),
+                       '- State:', scheduler.getStateInt());
+
+            scheduler.update(1.5); // Total 2.5s, should be ready
+            console.log('[WASM Test] After update(1.5) total 2.5s - State:', scheduler.getStateInt(),
+                       '(READY=2)', '- ExecutionCount:', scheduler.getExecutionCount());
+
+            scheduler.setModeInt(1); // INTERVAL mode
+            scheduler.setMaxExecutions(3);
+            scheduler.start();
+            scheduler.update(2.1);
+            console.log('[WASM Test] INTERVAL mode after update(2.1) - ExecutionCount:', scheduler.getExecutionCount());
+            scheduler.update(1.0);
+            scheduler.update(1.0);
+            console.log('[WASM Test] After more updates - ExecutionCount:', scheduler.getExecutionCount(),
+                       '- State:', scheduler.getStateInt());
+            scheduler.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Scheduler (not in WASM binary yet - rebuild required)');
+        }
+
         console.log('[WASM Tests] ✅ All available tests passed!');
     }
 
@@ -970,6 +1223,123 @@ export class WasmCore {
             throw new Error('Counter class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
         }
         return new this.module.Counter(x, y, initialValue);
+    }
+
+    /**
+     * Create a Sampler instance from WASM
+     */
+    createSampler(x: number, y: number, capacity: number = 100) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Sampler) {
+            throw new Error('Sampler class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Sampler(x, y, capacity);
+    }
+
+    /**
+     * Create a Comparator instance from WASM
+     */
+    createComparator(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Comparator) {
+            throw new Error('Comparator class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Comparator(x, y);
+    }
+
+    /**
+     * Create a Randomizer instance from WASM
+     */
+    createRandomizer(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Randomizer) {
+            throw new Error('Randomizer class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Randomizer(x, y);
+    }
+
+    /**
+     * Create a Logger instance from WASM
+     */
+    createLogger(x: number, y: number, maxEntries: number = 100) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Logger) {
+            throw new Error('Logger class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Logger(x, y, maxEntries);
+    }
+
+    /**
+     * Create a Filter instance from WASM
+     */
+    createFilter(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Filter) {
+            throw new Error('Filter class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Filter(x, y);
+    }
+
+    /**
+     * Create an Accumulator instance from WASM
+     */
+    createAccumulator(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Accumulator) {
+            throw new Error('Accumulator class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Accumulator(x, y);
+    }
+
+    /**
+     * Create a Sequencer instance from WASM
+     */
+    createSequencer(x: number, y: number, numSteps: number = 10) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Sequencer) {
+            throw new Error('Sequencer class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Sequencer(x, y, numSteps);
+    }
+
+    /**
+     * Create a Trigger instance from WASM
+     */
+    createTrigger(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Trigger) {
+            throw new Error('Trigger class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Trigger(x, y);
+    }
+
+    /**
+     * Create a Scheduler instance from WASM
+     */
+    createScheduler(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Scheduler) {
+            throw new Error('Scheduler class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Scheduler(x, y);
     }
 
     /**

@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper, ToonTalkConnector, ToonTalkTimer, ToonTalkCounter } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper, ToonTalkConnector, ToonTalkTimer, ToonTalkCounter, ToonTalkSampler, ToonTalkComparator, ToonTalkRandomizer, ToonTalkLogger, ToonTalkFilter, ToonTalkAccumulator, ToonTalkSequencer, ToonTalkTrigger, ToonTalkScheduler } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer | ToonTalkLogger | ToonTalkFilter | ToonTalkAccumulator | ToonTalkSequencer | ToonTalkTrigger | ToonTalkScheduler;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer | ToonTalkLogger | ToonTalkFilter | ToonTalkAccumulator | ToonTalkSequencer | ToonTalkTrigger | ToonTalkScheduler, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -79,6 +79,15 @@ export class WasmSpriteView {
         if ('connect' in this.wasmSprite && 'getSourceId' in this.wasmSprite && 'getTargetId' in this.wasmSprite) return 'connector';
         if ('start' in this.wasmSprite && 'pause' in this.wasmSprite && 'getProgress' in this.wasmSprite && 'getDuration' in this.wasmSprite) return 'timer';
         if ('increment' in this.wasmSprite && 'decrement' in this.wasmSprite && 'getStep' in this.wasmSprite) return 'counter';
+        if ('recordSample' in this.wasmSprite && 'getSampleRate' in this.wasmSprite && 'isSampling' in this.wasmSprite) return 'sampler';
+        if ('getValueA' in this.wasmSprite && 'getValueB' in this.wasmSprite && 'isEqual' in this.wasmSprite) return 'comparator';
+        if ('generate' in this.wasmSprite && 'getSeed' in this.wasmSprite && 'getGenerationCount' in this.wasmSprite) return 'randomizer';
+        if ('logEntry' in this.wasmSprite && 'getDebugCount' in this.wasmSprite && 'getWarningCount' in this.wasmSprite) return 'logger';
+        if ('processValue' in this.wasmSprite && 'getMinThreshold' in this.wasmSprite && 'getPassedCount' in this.wasmSprite) return 'filter';
+        if ('accumulate' in this.wasmSprite && 'getSum' in this.wasmSprite && 'getAverage' in this.wasmSprite) return 'accumulator';
+        if ('nextStep' in this.wasmSprite && 'getCurrentStep' in this.wasmSprite && 'getLoopCount' in this.wasmSprite) return 'sequencer';
+        if ('checkTrigger' in this.wasmSprite && 'arm' in this.wasmSprite && 'isLatched' in this.wasmSprite) return 'trigger';
+        if ('update' in this.wasmSprite && 'getDelay' in this.wasmSprite && 'getElapsedTime' in this.wasmSprite) return 'scheduler';
         return 'sprite';
     }
 
@@ -184,6 +193,33 @@ export class WasmSpriteView {
                 break;
             case 'counter':
                 this.drawCounter();
+                break;
+            case 'sampler':
+                this.drawSampler();
+                break;
+            case 'comparator':
+                this.drawComparator();
+                break;
+            case 'randomizer':
+                this.drawRandomizer();
+                break;
+            case 'logger':
+                this.drawLogger();
+                break;
+            case 'filter':
+                this.drawFilter();
+                break;
+            case 'accumulator':
+                this.drawAccumulator();
+                break;
+            case 'sequencer':
+                this.drawSequencer();
+                break;
+            case 'trigger':
+                this.drawTrigger();
+                break;
+            case 'scheduler':
+                this.drawScheduler();
                 break;
             default:
                 this.drawGenericSprite();
@@ -2188,6 +2224,1017 @@ export class WasmSpriteView {
             maxIcon.x = 28;
             maxIcon.y = -25;
             this.graphics.addChild(maxIcon);
+        }
+    }
+
+    private drawSampler(): void {
+        const sampler = this.wasmSprite as ToonTalkSampler;
+        const state = sampler.getStateInt();
+        const sampleCount = sampler.getSampleCount();
+        const fullness = sampler.getFullness();
+        const isSampling = sampler.isSampling();
+
+        // Sampler body (oscilloscope/recorder shape - teal/aqua)
+        const bodyColor = state === 1 ? 0x00CED1 : 0x5F9EA0;
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-35, -35, 70, 70, 5);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x2F4F4F);
+        this.graphics.drawRoundedRect(-35, -35, 70, 70, 5);
+
+        // Waveform display (simulated)
+        if (sampleCount > 0) {
+            this.graphics.lineStyle(2, 0x00FF00);
+            const waveWidth = 60;
+            const waveHeight = 20;
+            const samples = Math.min(sampleCount, 20);
+            for (let i = 0; i < samples; i++) {
+                const x = -30 + (i / samples) * waveWidth;
+                const y = Math.sin((i / samples) * Math.PI * 4) * waveHeight;
+                if (i === 0) {
+                    this.graphics.moveTo(x, y);
+                } else {
+                    this.graphics.lineTo(x, y);
+                }
+            }
+        }
+
+        // Sampling indicator (pulsing dot when sampling)
+        if (isSampling) {
+            this.graphics.beginFill(0xFF0000);
+            this.graphics.drawCircle(25, -25, 4);
+            this.graphics.endFill();
+        }
+
+        // Progress bar (fullness)
+        this.graphics.beginFill(0x404040, 0.5);
+        this.graphics.drawRect(-30, 20, 60, 8);
+        this.graphics.endFill();
+        this.graphics.beginFill(0x00FF00);
+        this.graphics.drawRect(-30, 20, 60 * fullness, 8);
+        this.graphics.endFill();
+
+        // Sample count
+        const countText = new PIXI.Text(`${sampleCount}`, {
+            fontSize: 14,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        countText.anchor.set(0.5);
+        countText.y = -10;
+        this.graphics.addChild(countText);
+
+        // Label
+        const label = new PIXI.Text('Sampler', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 45;
+        this.graphics.addChild(label);
+
+        // State indicator
+        const stateNames = ['IDLE', 'SAMP', 'PAUSE', 'FULL'];
+        const stateColors = [0x808080, 0x00FF00, 0xFFFF00, 0xFF0000];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -30;
+        this.graphics.addChild(stateText);
+    }
+
+    private drawComparator(): void {
+        const comparator = this.wasmSprite as ToonTalkComparator;
+        const result = comparator.getResultInt();
+        const valueA = comparator.getValueA();
+        const valueB = comparator.getValueB();
+        const isEqual = comparator.isEqual();
+
+        // Comparator body (balance/scales shape - purple)
+        this.graphics.beginFill(0x9370DB);
+        this.graphics.drawRoundedRect(-40, -30, 80, 60, 5);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x663399);
+        this.graphics.drawRoundedRect(-40, -30, 80, 60, 5);
+
+        // Value A (left side)
+        const valueAText = new PIXI.Text(`${valueA.toFixed(1)}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        valueAText.anchor.set(0.5);
+        valueAText.x = -20;
+        valueAText.y = -10;
+        this.graphics.addChild(valueAText);
+
+        // Value B (right side)
+        const valueBText = new PIXI.Text(`${valueB.toFixed(1)}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        valueBText.anchor.set(0.5);
+        valueBText.x = 20;
+        valueBText.y = -10;
+        this.graphics.addChild(valueBText);
+
+        // Comparison symbol in center
+        const symbols = ['=', '<', '>', '≠'];
+        const symbolColors = [0x00FF00, 0xFF6347, 0xFF6347, 0xFFFF00];
+        const symbolText = new PIXI.Text(symbols[result] || '?', {
+            fontSize: 20,
+            fill: symbolColors[result] || 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 3
+        });
+        symbolText.anchor.set(0.5);
+        symbolText.y = 10;
+        this.graphics.addChild(symbolText);
+
+        // Scale visualization (tilt based on comparison)
+        const tiltAngle = result === 1 ? -0.2 : (result === 2 ? 0.2 : 0);
+        this.graphics.lineStyle(3, 0xFFD700);
+        this.graphics.moveTo(-25, -20);
+        this.graphics.lineTo(25, -20 + tiltAngle * 50);
+
+        // Label
+        const label = new PIXI.Text('Comparator', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // Result indicator
+        const resultNames = ['EQUAL', '<', '>', 'NOT='];
+        const resultText = new PIXI.Text(resultNames[result] || '?', {
+            fontSize: 8,
+            fill: symbolColors[result] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        resultText.anchor.set(0.5);
+        resultText.y = -25;
+        this.graphics.addChild(resultText);
+    }
+
+    private drawRandomizer(): void {
+        const randomizer = this.wasmSprite as ToonTalkRandomizer;
+        const mode = randomizer.getModeInt();
+        const currentValue = randomizer.getCurrentValue();
+        const generationCount = randomizer.getGenerationCount();
+
+        // Randomizer body (dice/random shape - orange/gold)
+        const bodyColor = generationCount > 0 ? 0xFFA500 : 0xFFD700;
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 8);
+        this.graphics.endFill();
+
+        // Border (sparkly effect)
+        this.graphics.lineStyle(3, 0xFF8C00);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 8);
+
+        // Mode-based icon
+        const modeIcons = ['🎲', '🔢', '🔘', '⚅'];
+        const icon = new PIXI.Text(modeIcons[mode] || '?', {
+            fontSize: 24
+        });
+        icon.anchor.set(0.5);
+        icon.y = -8;
+        this.graphics.addChild(icon);
+
+        // Current value display
+        let displayValue = '';
+        switch (mode) {
+            case 0: // UNIFORM
+                displayValue = currentValue.toFixed(2);
+                break;
+            case 1: // INTEGER
+            case 3: // DICE
+                displayValue = Math.floor(currentValue).toString();
+                break;
+            case 2: // BOOLEAN
+                displayValue = currentValue === 0 ? 'F' : 'T';
+                break;
+        }
+
+        const valueText = new PIXI.Text(displayValue, {
+            fontSize: 14,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2,
+            fontFamily: 'monospace'
+        });
+        valueText.anchor.set(0.5);
+        valueText.y = 12;
+        this.graphics.addChild(valueText);
+
+        // Sparkles (if generating)
+        if (generationCount > 0) {
+            for (let i = 0; i < 4; i++) {
+                const angle = (i / 4) * Math.PI * 2 + (Date.now() / 500);
+                const distance = 25;
+                const x = Math.cos(angle) * distance;
+                const y = Math.sin(angle) * distance;
+                this.graphics.beginFill(0xFFFFFF, 0.7);
+                this.graphics.drawCircle(x, y, 2);
+                this.graphics.endFill();
+            }
+        }
+
+        // Label
+        const label = new PIXI.Text('Random', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // Mode indicator
+        const modeNames = ['UNIFORM', 'INT', 'BOOL', 'DICE'];
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 8,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -25;
+        this.graphics.addChild(modeText);
+
+        // Generation count
+        if (generationCount > 0) {
+            const countText = new PIXI.Text(`×${generationCount}`, {
+                fontSize: 8,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 1,
+                backgroundColor: 0xFF6347,
+                padding: 2
+            });
+            countText.anchor.set(0.5);
+            countText.x = 22;
+            countText.y = -22;
+            this.graphics.addChild(countText);
+        }
+    }
+
+    private drawLogger(): void {
+        const logger = this.wasmSprite as ToonTalkLogger;
+        const state = logger.getStateInt();
+        const entryCount = logger.getEntryCount();
+        const maxEntries = logger.getMaxEntries();
+        const fullness = logger.getFullness();
+        const debugCount = logger.getDebugCount();
+        const infoCount = logger.getInfoCount();
+        const warningCount = logger.getWarningCount();
+        const errorCount = logger.getErrorCount();
+        const isLogging = logger.isLogging();
+
+        // Logger body (console/terminal shape - dark gray/black)
+        const bodyColor = state === 1 ? 0x2F4F4F : 0x1C1C1C; // Darker when logging
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-40, -35, 80, 70, 5);
+        this.graphics.endFill();
+
+        // Border with logging indicator
+        const borderColor = state === 1 ? 0x00FF00 : (state === 2 ? 0xFFFF00 : 0x808080);
+        this.graphics.lineStyle(3, borderColor);
+        this.graphics.drawRoundedRect(-40, -35, 80, 70, 5);
+
+        // Screen/display area
+        this.graphics.beginFill(0x000000, 0.8);
+        this.graphics.drawRoundedRect(-35, -30, 70, 45, 3);
+        this.graphics.endFill();
+
+        // Log entries visualization (color-coded bars)
+        if (entryCount > 0) {
+            const barHeight = 2;
+            const maxBars = 10;
+            const visibleCount = Math.min(entryCount, maxBars);
+
+            // Draw recent log entries as colored lines
+            for (let i = 0; i < visibleCount; i++) {
+                const y = -25 + (i * 4);
+                // Color based on most recent log levels (simplified visualization)
+                let color = 0x00FF00; // Default green for DEBUG/INFO
+                if (errorCount > 0 && i < Math.floor(visibleCount * errorCount / entryCount)) {
+                    color = 0xFF0000; // Red for ERROR
+                } else if (warningCount > 0 && i < Math.floor(visibleCount * (warningCount + errorCount) / entryCount)) {
+                    color = 0xFFFF00; // Yellow for WARNING
+                }
+
+                this.graphics.lineStyle(barHeight, color, 0.7);
+                this.graphics.moveTo(-32, y);
+                this.graphics.lineTo(32, y);
+            }
+        }
+
+        // Entry count display
+        const countText = new PIXI.Text(`${entryCount}/${maxEntries}`, {
+            fontSize: 10,
+            fill: 0x00FF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2,
+            fontFamily: 'monospace'
+        });
+        countText.anchor.set(0.5);
+        countText.y = 5;
+        this.graphics.addChild(countText);
+
+        // Log level counts (compact display)
+        const statsText = new PIXI.Text(`E:${errorCount} W:${warningCount}`, {
+            fontSize: 8,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 1,
+            fontFamily: 'monospace'
+        });
+        statsText.anchor.set(0.5);
+        statsText.y = 18;
+        this.graphics.addChild(statsText);
+
+        // Recording indicator (pulsing dot when logging)
+        if (isLogging) {
+            const pulse = Math.sin(Date.now() / 200) * 0.5 + 0.5;
+            this.graphics.beginFill(0xFF0000, 0.5 + pulse * 0.5);
+            this.graphics.drawCircle(32, -27, 4);
+            this.graphics.endFill();
+        }
+
+        // Fullness progress bar
+        this.graphics.beginFill(0x404040, 0.5);
+        this.graphics.drawRect(-35, 25, 70, 6);
+        this.graphics.endFill();
+        if (fullness > 0) {
+            const fillColor = fullness >= 1.0 ? 0xFF0000 : (fullness >= 0.75 ? 0xFFFF00 : 0x00FF00);
+            this.graphics.beginFill(fillColor);
+            this.graphics.drawRect(-35, 25, 70 * fullness, 6);
+            this.graphics.endFill();
+        }
+
+        // Label
+        const label = new PIXI.Text('Logger', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 42;
+        this.graphics.addChild(label);
+    }
+
+    private drawFilter(): void {
+        const filter = this.wasmSprite as ToonTalkFilter;
+        const mode = filter.getModeInt();
+        const state = filter.getStateInt();
+        const passedCount = filter.getPassedCount();
+        const blockedCount = filter.getBlockedCount();
+        const inputValue = filter.getInputValue();
+        const outputValue = filter.getOutputValue();
+        const isActive = filter.isActive();
+        const isBypassed = filter.isBypassed();
+
+        // Filter body (funnel/filter shape - cyan/blue)
+        const bodyColor = isBypassed ? 0x808080 : (isActive ? 0x00CED1 : 0x4682B4);
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+        this.graphics.endFill();
+
+        // Border with state indicator
+        const borderColor = isBypassed ? 0xFFFF00 : (isActive ? 0x00FF00 : 0x696969);
+        this.graphics.lineStyle(3, borderColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+
+        // Funnel shape visualization
+        this.graphics.lineStyle(0);
+        this.graphics.beginFill(0x1E90FF, 0.5);
+        // Top wide part (input)
+        this.graphics.drawRect(-25, -20, 50, 8);
+        // Middle narrowing
+        const funnelPath = [
+            -20, -12,
+            -10, 0,
+            -5, 12,
+            5, 12,
+            10, 0,
+            20, -12
+        ];
+        this.graphics.drawPolygon(funnelPath);
+        // Bottom narrow part (output)
+        this.graphics.drawRect(-5, 12, 10, 8);
+        this.graphics.endFill();
+
+        // Mode indicator
+        const modeNames = ['ALL', 'PASS', 'BLOCK', 'XFORM'];
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 10,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -3;
+        this.graphics.addChild(modeText);
+
+        // Pass/Block counts
+        const statsText = new PIXI.Text(`✓${passedCount} ✗${blockedCount}`, {
+            fontSize: 8,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 1,
+            fontFamily: 'monospace'
+        });
+        statsText.anchor.set(0.5);
+        statsText.y = 22;
+        this.graphics.addChild(statsText);
+
+        // Input/Output indicators (if processing)
+        if (passedCount > 0 || blockedCount > 0) {
+            // Input arrow (top)
+            this.graphics.lineStyle(2, 0x00FF00);
+            this.graphics.moveTo(0, -25);
+            this.graphics.lineTo(-5, -20);
+            this.graphics.moveTo(0, -25);
+            this.graphics.lineTo(5, -20);
+
+            // Output arrow (bottom) - color based on last result
+            const outputColor = passedCount > blockedCount ? 0x00FF00 : 0xFF0000;
+            this.graphics.lineStyle(2, outputColor);
+            this.graphics.moveTo(0, 20);
+            this.graphics.lineTo(-5, 15);
+            this.graphics.moveTo(0, 20);
+            this.graphics.lineTo(5, 15);
+        }
+
+        // Label
+        const label = new PIXI.Text('Filter', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // State badge (top-left)
+        const stateNames = ['IDLE', 'ACTIVE', 'BYPASS'];
+        const stateBadge = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1,
+            backgroundColor: borderColor,
+            padding: 2
+        });
+        stateBadge.anchor.set(0, 0);
+        stateBadge.x = -33;
+        stateBadge.y = -28;
+        this.graphics.addChild(stateBadge);
+    }
+
+    private drawAccumulator(): void {
+        const accumulator = this.wasmSprite as ToonTalkAccumulator;
+        const mode = accumulator.getModeInt();
+        const state = accumulator.getStateInt();
+        const count = accumulator.getCount();
+        const currentValue = accumulator.getCurrentValue();
+        const sum = accumulator.getSum();
+        const minValue = accumulator.getMinValue();
+        const maxValue = accumulator.getMaxValue();
+        const average = accumulator.getAverage();
+        const isAccumulating = accumulator.isAccumulating();
+
+        // Accumulator body (container/bucket shape - green)
+        const bodyColor = isAccumulating ? 0x32CD32 : 0x228B22;
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+        this.graphics.endFill();
+
+        // Border with accumulating indicator
+        const borderColor = isAccumulating ? 0x00FF00 : 0x006400;
+        this.graphics.lineStyle(3, borderColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+
+        // Container visualization (bucket/accumulator shape)
+        this.graphics.lineStyle(0);
+        this.graphics.beginFill(0x90EE90, 0.3);
+        // Trapezoid shape (wider at top)
+        const bucketPath = [
+            -25, -15,
+            25, -15,
+            20, 15,
+            -20, 15
+        ];
+        this.graphics.drawPolygon(bucketPath);
+        this.graphics.endFill();
+
+        // Fill level indicator (based on count)
+        if (count > 0) {
+            const fillHeight = Math.min(count / 10, 1.0) * 28; // Max 28 pixels height
+            this.graphics.beginFill(0x00FF00, 0.6);
+            const fillBottom = 15;
+            const fillTop = fillBottom - fillHeight;
+            const topWidth = 25 - (fillTop + 15) * 0.17; // Proportional width
+            const bottomWidth = 20;
+            const fillPath = [
+                -bottomWidth, fillBottom,
+                bottomWidth, fillBottom,
+                topWidth, fillTop,
+                -topWidth, fillTop
+            ];
+            this.graphics.drawPolygon(fillPath);
+            this.graphics.endFill();
+        }
+
+        // Mode indicator
+        const modeNames = ['SUM', 'AVG', 'MIN', 'MAX', 'CNT'];
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 10,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -20;
+        this.graphics.addChild(modeText);
+
+        // Current value display
+        const valueText = new PIXI.Text(currentValue.toFixed(1), {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2,
+            fontFamily: 'monospace'
+        });
+        valueText.anchor.set(0.5);
+        valueText.y = 0;
+        this.graphics.addChild(valueText);
+
+        // Count display
+        const countText = new PIXI.Text(`n=${count}`, {
+            fontSize: 8,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 1,
+            fontFamily: 'monospace'
+        });
+        countText.anchor.set(0.5);
+        countText.y = 18;
+        this.graphics.addChild(countText);
+
+        // Accumulation indicator (pulsing plus signs when accumulating)
+        if (isAccumulating) {
+            const pulse = Math.sin(Date.now() / 300) * 0.3 + 0.7;
+            for (let i = 0; i < 3; i++) {
+                const angle = (i / 3) * Math.PI * 2 + (Date.now() / 1000);
+                const radius = 22;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius - 5;
+
+                const plusText = new PIXI.Text('+', {
+                    fontSize: 12,
+                    fill: 0xFFFF00,
+                    fontWeight: 'bold',
+                    stroke: 0x000000,
+                    strokeThickness: 2,
+                    alpha: pulse
+                });
+                plusText.anchor.set(0.5);
+                plusText.x = x;
+                plusText.y = y;
+                this.graphics.addChild(plusText);
+            }
+        }
+
+        // Label
+        const label = new PIXI.Text('Accum', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // State badge
+        const stateNames = ['IDLE', 'ACCUM', 'PAUSE'];
+        const stateBadge = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1,
+            backgroundColor: borderColor,
+            padding: 2
+        });
+        stateBadge.anchor.set(0, 0);
+        stateBadge.x = -33;
+        stateBadge.y = -28;
+        this.graphics.addChild(stateBadge);
+    }
+
+    private drawSequencer(): void {
+        const sequencer = this.wasmSprite as ToonTalkSequencer;
+        const mode = sequencer.getModeInt();
+        const state = sequencer.getStateInt();
+        const currentStep = sequencer.getCurrentStep();
+        const numSteps = sequencer.getNumSteps();
+        const progress = sequencer.getProgress();
+        const isRunning = sequencer.isRunning();
+        const loopCount = sequencer.getLoopCount();
+
+        // Sequencer body (step counter shape - blue/purple)
+        const bodyColor = isRunning ? 0x4169E1 : 0x6A5ACD;
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+        this.graphics.endFill();
+
+        // Border with running indicator
+        const borderColor = isRunning ? 0x00FF00 : (state === 2 ? 0xFFFF00 : 0x483D8B);
+        this.graphics.lineStyle(3, borderColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+
+        // Step visualization (dots/circles representing steps)
+        const dotRadius = 3;
+        const dotsPerRow = Math.min(5, numSteps);
+        const rows = Math.ceil(numSteps / dotsPerRow);
+        const startX = -30;
+        const startY = -20;
+        const spacing = 12;
+
+        for (let i = 0; i < numSteps; i++) {
+            const row = Math.floor(i / dotsPerRow);
+            const col = i % dotsPerRow;
+            const x = startX + col * spacing;
+            const y = startY + row * 10;
+
+            // Current step is highlighted
+            if (i === currentStep) {
+                this.graphics.beginFill(0xFFFF00);
+                this.graphics.drawCircle(x, y, dotRadius + 2);
+                this.graphics.endFill();
+            } else if (i < currentStep) {
+                // Completed steps
+                this.graphics.beginFill(0x00FF00, 0.7);
+                this.graphics.drawCircle(x, y, dotRadius);
+                this.graphics.endFill();
+            } else {
+                // Upcoming steps
+                this.graphics.beginFill(0x808080, 0.5);
+                this.graphics.drawCircle(x, y, dotRadius);
+                this.graphics.endFill();
+            }
+        }
+
+        // Current step display
+        const stepText = new PIXI.Text(`${currentStep + 1}/${numSteps}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2,
+            fontFamily: 'monospace'
+        });
+        stepText.anchor.set(0.5);
+        stepText.y = 10;
+        this.graphics.addChild(stepText);
+
+        // Mode indicator
+        const modeNames = ['LIN', 'LOOP', 'PING', 'RAND'];
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 8,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -25;
+        this.graphics.addChild(modeText);
+
+        // Label
+        const label = new PIXI.Text('Sequ', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // State badge
+        const stateNames = ['IDLE', 'RUN', 'PAUSE', 'DONE'];
+        const stateBadge = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1,
+            backgroundColor: borderColor,
+            padding: 2
+        });
+        stateBadge.anchor.set(0, 0);
+        stateBadge.x = -33;
+        stateBadge.y = -28;
+        this.graphics.addChild(stateBadge);
+
+        // Loop count indicator
+        if (loopCount > 0) {
+            const loopText = new PIXI.Text(`↻${loopCount}`, {
+                fontSize: 7,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 1,
+                backgroundColor: 0x9370DB,
+                padding: 2
+            });
+            loopText.anchor.set(1, 0);
+            loopText.x = 33;
+            loopText.y = -28;
+            this.graphics.addChild(loopText);
+        }
+    }
+
+    private drawTrigger(): void {
+        const trigger = this.wasmSprite as ToonTalkTrigger;
+        const mode = trigger.getModeInt();
+        const state = trigger.getStateInt();
+        const threshold = trigger.getThreshold();
+        const currentValue = trigger.getCurrentValue();
+        const triggerCount = trigger.getTriggerCount();
+        const isArmed = trigger.isArmed();
+        const isTriggered = trigger.isTriggered();
+        const isLatched = trigger.isLatched();
+
+        // Trigger body (lightning bolt shape - yellow/red)
+        const bodyColor = isLatched ? 0xFF4500 : (isTriggered ? 0xFFD700 : (isArmed ? 0xFFA500 : 0x808080));
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+        this.graphics.endFill();
+
+        // Border with state indicator
+        const borderColor = isLatched ? 0xFF0000 : (isTriggered ? 0xFFFF00 : (isArmed ? 0x00FF00 : 0x696969));
+        this.graphics.lineStyle(3, borderColor);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+
+        // Lightning bolt icon
+        if (isTriggered || isLatched) {
+            this.graphics.lineStyle(0);
+            this.graphics.beginFill(0xFFFF00);
+            const boltPath = [
+                0, -18,
+                -8, -5,
+                -3, -5,
+                -10, 10,
+                2, -2,
+                -3, -2,
+                8, -18
+            ];
+            this.graphics.drawPolygon(boltPath);
+            this.graphics.endFill();
+        }
+
+        // Threshold indicator
+        const thresholdBar = new PIXI.Graphics();
+        thresholdBar.beginFill(0x404040, 0.5);
+        thresholdBar.drawRect(-20, 5, 40, 8);
+        thresholdBar.endFill();
+
+        // Current value relative to threshold
+        const valuePosition = Math.min(Math.max(currentValue / (threshold * 2), 0), 1);
+        thresholdBar.beginFill(currentValue >= threshold ? 0x00FF00 : 0xFF6347);
+        thresholdBar.drawRect(-20, 5, 40 * valuePosition, 8);
+        thresholdBar.endFill();
+
+        // Threshold mark
+        const thresholdMark = threshold / (threshold * 2);
+        thresholdBar.lineStyle(2, 0xFFFFFF);
+        thresholdBar.moveTo(-20 + 40 * thresholdMark, 5);
+        thresholdBar.lineTo(-20 + 40 * thresholdMark, 13);
+        this.graphics.addChild(thresholdBar);
+
+        // Mode indicator
+        const modeNames = ['↑', '↓', '↕', 'H', 'L'];
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 14,
+            fill: 0x000000,
+            fontWeight: 'bold'
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -10;
+        this.graphics.addChild(modeText);
+
+        // Trigger count
+        if (triggerCount > 0) {
+            const countText = new PIXI.Text(`×${triggerCount}`, {
+                fontSize: 8,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 1,
+                backgroundColor: 0xFF6347,
+                padding: 2
+            });
+            countText.anchor.set(1, 0);
+            countText.x = 28;
+            countText.y = -28;
+            this.graphics.addChild(countText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Trigger', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // State badge
+        const stateNames = ['IDLE', 'ARMED', 'TRIG', 'LOCK'];
+        const stateBadge = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1,
+            backgroundColor: borderColor,
+            padding: 2
+        });
+        stateBadge.anchor.set(0, 0);
+        stateBadge.x = -28;
+        stateBadge.y = -28;
+        this.graphics.addChild(stateBadge);
+    }
+
+    private drawScheduler(): void {
+        const scheduler = this.wasmSprite as ToonTalkScheduler;
+        const mode = scheduler.getModeInt();
+        const state = scheduler.getStateInt();
+        const delay = scheduler.getDelay();
+        const interval = scheduler.getInterval();
+        const elapsedTime = scheduler.getElapsedTime();
+        const executionCount = scheduler.getExecutionCount();
+        const progress = scheduler.getProgress();
+        const isWaiting = scheduler.isWaiting();
+        const isReady = scheduler.isReady();
+
+        // Scheduler body (clock/timer shape - green/teal)
+        const bodyColor = isWaiting ? 0x20B2AA : (isReady ? 0x00FF00 : 0x2E8B57);
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+        this.graphics.endFill();
+
+        // Border with state indicator
+        const borderColor = isReady ? 0xFFFF00 : (isWaiting ? 0x00FF00 : 0x006400);
+        this.graphics.lineStyle(3, borderColor);
+        this.graphics.drawRoundedRect(-35, -30, 70, 60, 5);
+
+        // Clock face
+        this.graphics.lineStyle(2, 0x000000);
+        this.graphics.beginFill(0xFFFFFF, 0.8);
+        this.graphics.drawCircle(0, -5, 18);
+        this.graphics.endFill();
+
+        // Clock hand (shows progress)
+        const handAngle = -Math.PI / 2 + (progress * Math.PI * 2);
+        this.graphics.lineStyle(3, 0xFF0000);
+        this.graphics.moveTo(0, -5);
+        this.graphics.lineTo(Math.cos(handAngle) * 15, -5 + Math.sin(handAngle) * 15);
+
+        // Center dot
+        this.graphics.lineStyle(0);
+        this.graphics.beginFill(0x000000);
+        this.graphics.drawCircle(0, -5, 2);
+        this.graphics.endFill();
+
+        // Elapsed time display
+        const timeText = new PIXI.Text(`${elapsedTime.toFixed(1)}s`, {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2,
+            fontFamily: 'monospace'
+        });
+        timeText.anchor.set(0.5);
+        timeText.y = 15;
+        this.graphics.addChild(timeText);
+
+        // Mode indicator
+        const modeNames = ['ONCE', 'INTV', 'CRON'];
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 8,
+            fill: 0xFFFF00,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = -27;
+        this.graphics.addChild(modeText);
+
+        // Execution count
+        if (executionCount > 0) {
+            const countText = new PIXI.Text(`×${executionCount}`, {
+                fontSize: 8,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 1,
+                backgroundColor: 0x9370DB,
+                padding: 2
+            });
+            countText.anchor.set(1, 0);
+            countText.x = 33;
+            countText.y = -28;
+            this.graphics.addChild(countText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Sched', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 40;
+        this.graphics.addChild(label);
+
+        // State badge
+        const stateNames = ['IDLE', 'WAIT', 'READY', 'EXEC'];
+        const stateBadge = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 7,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 1,
+            backgroundColor: borderColor,
+            padding: 2
+        });
+        stateBadge.anchor.set(0, 0);
+        stateBadge.x = -33;
+        stateBadge.y = -28;
+        this.graphics.addChild(stateBadge);
+
+        // Ready indicator (pulsing when ready)
+        if (isReady) {
+            const pulse = Math.sin(Date.now() / 200) * 0.5 + 0.5;
+            this.graphics.beginFill(0xFF0000, 0.5 + pulse * 0.5);
+            this.graphics.drawCircle(28, -23, 4);
+            this.graphics.endFill();
         }
     }
 
