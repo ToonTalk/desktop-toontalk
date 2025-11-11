@@ -20,9 +20,14 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Nest: typeof ToonTalkNest;
     Scale: typeof ToonTalkScale;
     Wand: typeof ToonTalkWand;
+    Robot: typeof ToonTalkRobot;
+    House: typeof ToonTalkHouse;
+    Truck: typeof ToonTalkTruck;
 
     // Enums
     WandMode: typeof WandMode;
+    RobotState: typeof RobotState;
+    TruckState: typeof TruckState;
 }
 
 /**
@@ -156,6 +161,73 @@ export enum WandMode {
     CREATE_BOX = 2,
     CREATE_NEST = 3,
     CREATE_BIRD = 4
+}
+
+/**
+ * Robot class (matches objects.cpp) - Programmable agent
+ */
+export declare class ToonTalkRobot extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getInstructionCount(): number;
+    setInstructionCount(count: number): void;
+    addInstruction(): void;
+    clearInstructions(): void;
+    start(): void;
+    stop(): void;
+    pause(): void;
+    train(): void;
+    delete(): void;
+}
+
+/**
+ * Robot state enum (matches objects.cpp)
+ */
+export enum RobotState {
+    IDLE = 0,
+    RUNNING = 1,
+    PAUSED = 2,
+    TRAINING = 3
+}
+
+/**
+ * House class (matches objects.cpp) - Workspace container
+ */
+export declare class ToonTalkHouse extends Sprite {
+    constructor(x: number, y: number, numRooms?: number);
+    getNumRooms(): number;
+    getCurrentRoom(): number;
+    setCurrentRoom(room: number): void;
+    isRoomOccupied(room: number): boolean;
+    setRoomOccupied(room: number, occupied: boolean): void;
+    countOccupiedRooms(): number;
+    isFull(): boolean;
+    isEmpty(): boolean;
+    delete(): void;
+}
+
+/**
+ * Truck class (matches objects.cpp) - Delivery/transport vehicle
+ */
+export declare class ToonTalkTruck extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    hasCargo(): boolean;
+    setCargo(hasCargo: boolean): void;
+    startDelivery(): void;
+    completeDelivery(): void;
+    delete(): void;
+}
+
+/**
+ * Truck state enum (matches objects.cpp)
+ */
+export enum TruckState {
+    EMPTY = 0,
+    LOADED = 1,
+    DELIVERING = 2
 }
 
 /**

@@ -133,14 +133,43 @@ class ToonTalkWeb {
         const wand2 = wasmCore.createWand(centerX + 100, centerY + 220, 4); // Mode 4 = CREATE_BIRD
         this.renderer.addWasmSprite(new WasmSpriteView(wand2, this.renderer.getStage(), this.renderer));
 
+        // Row 5: Advanced - Robot, House, Truck
+        const robot1 = wasmCore.createRobot(centerX - 250, centerY + 350);
+        robot1.addInstruction();
+        robot1.addInstruction();
+        robot1.addInstruction();
+        robot1.addInstruction();
+        robot1.addInstruction(); // 5 instructions
+        this.renderer.addWasmSprite(new WasmSpriteView(robot1, this.renderer.getStage(), this.renderer));
+
+        const robot2 = wasmCore.createRobot(centerX - 100, centerY + 350);
+        robot2.start(); // Running state
+        robot2.addInstruction();
+        robot2.addInstruction();
+        this.renderer.addWasmSprite(new WasmSpriteView(robot2, this.renderer.getStage(), this.renderer));
+
+        const house1 = wasmCore.createHouse(centerX + 100, centerY + 350, 3);
+        house1.setRoomOccupied(0, true);
+        house1.setRoomOccupied(1, true); // 2 of 3 rooms occupied
+        this.renderer.addWasmSprite(new WasmSpriteView(house1, this.renderer.getStage(), this.renderer));
+
+        const truck1 = wasmCore.createTruck(centerX + 300, centerY + 350);
+        truck1.setCargo(true); // Loaded truck
+        this.renderer.addWasmSprite(new WasmSpriteView(truck1, this.renderer.getStage(), this.renderer));
+
         console.log('✨ WASM scene created!');
-        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest, 1 Scale, 2 Wands');
+        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest');
+        console.log('   Tools: 1 Scale, 2 Wands');
+        console.log('   Advanced: 2 Robots, 1 House, 1 Truck');
+        console.log('   Total: 14 interactive objects!');
+        console.log('');
         console.log('   💡 Drag objects to move them');
         console.log('   💡 Drop Number on Number to add');
         console.log('   💡 Drop Text on Text to concatenate');
         console.log('   💡 Drop anything on Box or Nest to store');
-        console.log('   💡 Use Scale to copy objects (future)');
-        console.log('   💡 Use Wand to create objects (future)');
+        console.log('   💡 Robots can be programmed (future)');
+        console.log('   💡 House provides workspace (future)');
+        console.log('   💡 Truck delivers objects (future)');
     }
 
     private startGameLoop(): void {

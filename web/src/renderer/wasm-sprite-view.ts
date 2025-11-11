@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -53,8 +53,11 @@ export class WasmSpriteView {
         if ('getText' in this.wasmSprite) return 'text';
         if ('getNumHoles' in this.wasmSprite) return 'nest';
         if ('getCapacity' in this.wasmSprite) return 'box';
-        if ('getModeInt' in this.wasmSprite) return 'wand';
+        if ('getModeInt' in this.wasmSprite && 'nextMode' in this.wasmSprite) return 'wand';
         if ('isActive' in this.wasmSprite && !('getModeInt' in this.wasmSprite)) return 'scale';
+        if ('getInstructionCount' in this.wasmSprite) return 'robot';
+        if ('getNumRooms' in this.wasmSprite) return 'house';
+        if ('hasCargo' in this.wasmSprite) return 'truck';
         return 'sprite';
     }
 
@@ -88,6 +91,15 @@ export class WasmSpriteView {
                 break;
             case 'wand':
                 this.drawWand();
+                break;
+            case 'robot':
+                this.drawRobot();
+                break;
+            case 'house':
+                this.drawHouse();
+                break;
+            case 'truck':
+                this.drawTruck();
                 break;
             default:
                 this.drawGenericSprite();
@@ -438,6 +450,244 @@ export class WasmSpriteView {
         modeText.anchor.set(0.5);
         modeText.y = 15;
         this.graphics.addChild(modeText);
+    }
+
+    private drawRobot(): void {
+        const robot = this.wasmSprite as ToonTalkRobot;
+        const state = robot.getStateInt();
+        const instructions = robot.getInstructionCount();
+
+        // Robot body (metallic gray)
+        this.graphics.beginFill(0x708090);
+        this.graphics.drawRoundedRect(-35, -45, 70, 90, 5);
+        this.graphics.endFill();
+
+        // Border color changes with state
+        const stateColors = [
+            0xCCCCCC, // IDLE - gray
+            0x00FF00, // RUNNING - green
+            0xFFFF00, // PAUSED - yellow
+            0xFF00FF  // TRAINING - magenta
+        ];
+        this.graphics.lineStyle(3, stateColors[state] || 0xCCCCCC);
+        this.graphics.drawRoundedRect(-35, -45, 70, 90, 5);
+
+        // Robot head (rounded top)
+        this.graphics.beginFill(0x909090);
+        this.graphics.drawCircle(0, -35, 20);
+        this.graphics.endFill();
+
+        // Eyes (two small circles)
+        this.graphics.beginFill(state === 1 ? 0x00FF00 : 0x4169E1); // Green when running
+        this.graphics.drawCircle(-8, -38, 5);
+        this.graphics.drawCircle(8, -38, 5);
+        this.graphics.endFill();
+
+        // Antenna
+        this.graphics.lineStyle(2, 0xFFD700);
+        this.graphics.moveTo(0, -55);
+        this.graphics.lineTo(0, -65);
+        this.graphics.beginFill(0xFFD700);
+        this.graphics.drawCircle(0, -65, 3);
+        this.graphics.endFill();
+
+        // Label
+        const label = new PIXI.Text('Robot', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 30;
+        this.graphics.addChild(label);
+
+        // State text
+        const stateNames = ['IDLE', 'RUNNING', 'PAUSED', 'TRAINING'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -20;
+        this.graphics.addChild(stateText);
+
+        // Instruction count
+        const instText = new PIXI.Text(`${instructions} inst`, {
+            fontSize: 8,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        instText.anchor.set(0.5);
+        instText.y = 15;
+        this.graphics.addChild(instText);
+    }
+
+    private drawHouse(): void {
+        const house = this.wasmSprite as ToonTalkHouse;
+        const numRooms = house.getNumRooms();
+        const occupiedRooms = house.countOccupiedRooms();
+
+        // House body (brown)
+        this.graphics.beginFill(0xD2691E);
+        this.graphics.drawRect(-75, -40, 150, 80);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x8B4513);
+        this.graphics.drawRect(-75, -40, 150, 80);
+
+        // Roof (triangle - red)
+        this.graphics.beginFill(0xDC143C);
+        this.graphics.moveTo(-80, -40);
+        this.graphics.lineTo(0, -70);
+        this.graphics.lineTo(80, -40);
+        this.graphics.lineTo(-80, -40);
+        this.graphics.endFill();
+
+        // Roof border
+        this.graphics.lineStyle(2, 0x8B0000);
+        this.graphics.moveTo(-80, -40);
+        this.graphics.lineTo(0, -70);
+        this.graphics.lineTo(80, -40);
+
+        // Windows (rooms)
+        const windowSpacing = 140 / (numRooms + 1);
+        for (let i = 0; i < numRooms; i++) {
+            const windowX = -70 + (i + 1) * windowSpacing;
+            const isOccupied = house.isRoomOccupied(i);
+
+            // Window
+            this.graphics.beginFill(isOccupied ? 0xFFFF00 : 0x87CEEB);
+            this.graphics.drawRect(windowX - 10, -20, 20, 25);
+            this.graphics.endFill();
+
+            // Window pane
+            this.graphics.lineStyle(2, 0x654321);
+            this.graphics.drawRect(windowX - 10, -20, 20, 25);
+            this.graphics.moveTo(windowX, -20);
+            this.graphics.lineTo(windowX, 5);
+            this.graphics.moveTo(windowX - 10, -7.5);
+            this.graphics.lineTo(windowX + 10, -7.5);
+        }
+
+        // Door
+        this.graphics.beginFill(0x654321);
+        this.graphics.drawRect(-12, 10, 24, 30);
+        this.graphics.endFill();
+
+        // Doorknob
+        this.graphics.beginFill(0xFFD700);
+        this.graphics.drawCircle(8, 25, 2);
+        this.graphics.endFill();
+
+        // Label
+        const label = new PIXI.Text('House', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 50;
+        this.graphics.addChild(label);
+
+        // Room status
+        const statusText = new PIXI.Text(`${occupiedRooms}/${numRooms} rooms`, {
+            fontSize: 8,
+            fill: 0xFFFFFF,
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        statusText.anchor.set(0.5);
+        statusText.y = -55;
+        this.graphics.addChild(statusText);
+    }
+
+    private drawTruck(): void {
+        const truck = this.wasmSprite as ToonTalkTruck;
+        const state = truck.getStateInt();
+        const hasCargo = truck.hasCargo();
+
+        // Truck bed (cargo area - red)
+        this.graphics.beginFill(hasCargo ? 0xFF4500 : 0xDC143C);
+        this.graphics.drawRect(-40, -20, 50, 35);
+        this.graphics.endFill();
+
+        // Cargo area border
+        this.graphics.lineStyle(2, 0x8B0000);
+        this.graphics.drawRect(-40, -20, 50, 35);
+
+        // Truck cab (front - darker red)
+        this.graphics.beginFill(0xB22222);
+        this.graphics.drawRect(10, -15, 30, 30);
+        this.graphics.endFill();
+
+        // Cab border
+        this.graphics.lineStyle(2, 0x8B0000);
+        this.graphics.drawRect(10, -15, 30, 30);
+
+        // Windshield
+        this.graphics.beginFill(0x87CEEB);
+        this.graphics.drawRect(15, -10, 20, 12);
+        this.graphics.endFill();
+
+        // Wheels (black circles)
+        this.graphics.beginFill(0x000000);
+        this.graphics.drawCircle(-25, 20, 8);
+        this.graphics.drawCircle(15, 20, 8);
+        this.graphics.endFill();
+
+        // Wheel rims
+        this.graphics.lineStyle(2, 0x808080);
+        this.graphics.drawCircle(-25, 20, 5);
+        this.graphics.drawCircle(15, 20, 5);
+
+        // Cargo indicator if loaded
+        if (hasCargo) {
+            this.graphics.beginFill(0xFFD700);
+            this.graphics.drawRect(-35, -15, 40, 25);
+            this.graphics.endFill();
+
+            const cargoLabel = new PIXI.Text('📦', {
+                fontSize: 16
+            });
+            cargoLabel.anchor.set(0.5);
+            cargoLabel.position.set(-15, -2);
+            this.graphics.addChild(cargoLabel);
+        }
+
+        // Label
+        const label = new PIXI.Text('Truck', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 35;
+        this.graphics.addChild(label);
+
+        // State indicator
+        const stateNames = ['EMPTY', 'LOADED', 'DELIVERING'];
+        const stateColors = [0xCCCCCC, 0xFFD700, 0x00FF00];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -30;
+        this.graphics.addChild(stateText);
     }
 
     private drawGenericSprite(): void {

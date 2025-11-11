@@ -299,6 +299,170 @@ private:
     bool active_;
 };
 
+/**
+ * Robot class - Programmable agent that can perform actions
+ * Based on ../source/robot.cpp - simplified version
+ */
+class Robot : public Sprite {
+public:
+    enum RobotState {
+        IDLE = 0,
+        RUNNING = 1,
+        PAUSED = 2,
+        TRAINING = 3
+    };
+
+    Robot(float x, float y)
+        : Sprite(x, y, 70.0f, 90.0f), state_(IDLE), instruction_count_(0) {}
+
+    // Get/set robot state
+    RobotState getState() const { return state_; }
+    void setState(RobotState state) { state_ = state; }
+
+    // Get state as integer (for JS binding)
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= IDLE && state <= TRAINING) {
+            state_ = static_cast<RobotState>(state);
+        }
+    }
+
+    // Instruction management (simplified - just count for now)
+    size_t getInstructionCount() const { return instruction_count_; }
+    void setInstructionCount(size_t count) { instruction_count_ = count; }
+    void addInstruction() { instruction_count_++; }
+    void clearInstructions() { instruction_count_ = 0; }
+
+    // Start/stop/pause
+    void start() { state_ = RUNNING; }
+    void stop() { state_ = IDLE; }
+    void pause() { state_ = PAUSED; }
+    void train() { state_ = TRAINING; }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Robots execute their program when running
+        // (actual execution logic would go here)
+    }
+
+private:
+    RobotState state_;
+    size_t instruction_count_;
+};
+
+/**
+ * House class - Workspace container where robots operate
+ * Based on ../source/house.cpp - simplified version
+ */
+class House : public Sprite {
+public:
+    House(float x, float y, size_t num_rooms = 1)
+        : Sprite(x, y, 150.0f, 120.0f), num_rooms_(num_rooms), current_room_(0) {
+        // Initialize rooms
+        room_occupied_.resize(num_rooms, false);
+    }
+
+    // Room management
+    size_t getNumRooms() const { return num_rooms_; }
+    size_t getCurrentRoom() const { return current_room_; }
+    void setCurrentRoom(size_t room) {
+        if (room < num_rooms_) {
+            current_room_ = room;
+        }
+    }
+
+    // Room occupancy
+    bool isRoomOccupied(size_t room) const {
+        return room < room_occupied_.size() && room_occupied_[room];
+    }
+
+    void setRoomOccupied(size_t room, bool occupied) {
+        if (room < room_occupied_.size()) {
+            room_occupied_[room] = occupied;
+        }
+    }
+
+    // Count occupied rooms
+    size_t countOccupiedRooms() const {
+        size_t count = 0;
+        for (bool occupied : room_occupied_) {
+            if (occupied) count++;
+        }
+        return count;
+    }
+
+    bool isFull() const { return countOccupiedRooms() >= num_rooms_; }
+    bool isEmpty() const { return countOccupiedRooms() == 0; }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Houses are static workspaces
+    }
+
+private:
+    size_t num_rooms_;
+    size_t current_room_;
+    std::vector<bool> room_occupied_;
+};
+
+/**
+ * Truck class - Delivery/transport vehicle
+ * Based on ../source/truck.cpp - simplified version
+ */
+class Truck : public Sprite {
+public:
+    enum TruckState {
+        EMPTY = 0,
+        LOADED = 1,
+        DELIVERING = 2
+    };
+
+    Truck(float x, float y)
+        : Sprite(x, y, 100.0f, 60.0f), state_(EMPTY), has_cargo_(false) {}
+
+    // Get/set truck state
+    TruckState getState() const { return state_; }
+    void setState(TruckState state) { state_ = state; }
+
+    // Get state as integer (for JS binding)
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= EMPTY && state <= DELIVERING) {
+            state_ = static_cast<TruckState>(state);
+        }
+    }
+
+    // Cargo management (simplified - just a flag for now)
+    bool hasCargo() const { return has_cargo_; }
+    void setCargo(bool has_cargo) {
+        has_cargo_ = has_cargo;
+        state_ = has_cargo ? LOADED : EMPTY;
+    }
+
+    void startDelivery() {
+        if (has_cargo_) {
+            state_ = DELIVERING;
+        }
+    }
+
+    void completeDelivery() {
+        has_cargo_ = false;
+        state_ = EMPTY;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Trucks can move during delivery
+    }
+
+private:
+    TruckState state_;
+    bool has_cargo_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -367,4 +531,50 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("CREATE_BOX", Wand::CREATE_BOX)
         .value("CREATE_NEST", Wand::CREATE_NEST)
         .value("CREATE_BIRD", Wand::CREATE_BIRD);
+
+    class_<Robot, base<Sprite>>("Robot")
+        .constructor<float, float>()
+        .function("getStateInt", &Robot::getStateInt)
+        .function("setStateInt", &Robot::setStateInt)
+        .function("getInstructionCount", &Robot::getInstructionCount)
+        .function("setInstructionCount", &Robot::setInstructionCount)
+        .function("addInstruction", &Robot::addInstruction)
+        .function("clearInstructions", &Robot::clearInstructions)
+        .function("start", &Robot::start)
+        .function("stop", &Robot::stop)
+        .function("pause", &Robot::pause)
+        .function("train", &Robot::train);
+
+    // Robot state enum values
+    enum_<Robot::RobotState>("RobotState")
+        .value("IDLE", Robot::IDLE)
+        .value("RUNNING", Robot::RUNNING)
+        .value("PAUSED", Robot::PAUSED)
+        .value("TRAINING", Robot::TRAINING);
+
+    class_<House, base<Sprite>>("House")
+        .constructor<float, float, size_t>()
+        .function("getNumRooms", &House::getNumRooms)
+        .function("getCurrentRoom", &House::getCurrentRoom)
+        .function("setCurrentRoom", &House::setCurrentRoom)
+        .function("isRoomOccupied", &House::isRoomOccupied)
+        .function("setRoomOccupied", &House::setRoomOccupied)
+        .function("countOccupiedRooms", &House::countOccupiedRooms)
+        .function("isFull", &House::isFull)
+        .function("isEmpty", &House::isEmpty);
+
+    class_<Truck, base<Sprite>>("Truck")
+        .constructor<float, float>()
+        .function("getStateInt", &Truck::getStateInt)
+        .function("setStateInt", &Truck::setStateInt)
+        .function("hasCargo", &Truck::hasCargo)
+        .function("setCargo", &Truck::setCargo)
+        .function("startDelivery", &Truck::startDelivery)
+        .function("completeDelivery", &Truck::completeDelivery);
+
+    // Truck state enum values
+    enum_<Truck::TruckState>("TruckState")
+        .value("EMPTY", Truck::EMPTY)
+        .value("LOADED", Truck::LOADED)
+        .value("DELIVERING", Truck::DELIVERING);
 }
