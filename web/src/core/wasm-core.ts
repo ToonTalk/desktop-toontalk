@@ -1351,6 +1351,71 @@ export class WasmCore {
         }
         return this.module.initialize();
     }
+
+    /**
+     * Create a CollisionManager instance from WASM
+     */
+    createCollisionManager(worldWidth: number, worldHeight: number, maxDepth: number = 5) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.CollisionManager) {
+            throw new Error('CollisionManager class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.CollisionManager(worldWidth, worldHeight, maxDepth);
+    }
+
+    /**
+     * Create an AnimationController instance from WASM
+     */
+    createAnimationController() {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.AnimationController) {
+            throw new Error('AnimationController class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.AnimationController();
+    }
+
+    /**
+     * Create a SceneManager instance from WASM
+     */
+    createSceneManager(viewportWidth: number, viewportHeight: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.SceneManager) {
+            throw new Error('SceneManager class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.SceneManager(viewportWidth, viewportHeight);
+    }
+
+    /**
+     * Create an EntityManager instance from WASM
+     */
+    createEntityManager() {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.EntityManager) {
+            throw new Error('EntityManager class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.EntityManager();
+    }
+
+    /**
+     * Create an InputManager instance from WASM
+     */
+    createInputManager() {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.InputManager) {
+            throw new Error('InputManager class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.InputManager();
+    }
 }
 
 // Singleton instance
