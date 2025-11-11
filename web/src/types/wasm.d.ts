@@ -26,12 +26,18 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Picture: typeof ToonTalkPicture;
     Sensor: typeof ToonTalkSensor;
     Notebook: typeof ToonTalkNotebook;
+    Bomb: typeof ToonTalkBomb;
+    Thought_Bubble: typeof ToonTalkThoughtBubble;
+    Mouse: typeof ToonTalkMouse;
 
     // Enums
     WandMode: typeof WandMode;
     RobotState: typeof RobotState;
     TruckState: typeof TruckState;
     SensorType: typeof SensorType;
+    BombState: typeof BombState;
+    MouseState: typeof MouseState;
+    MouseOperation: typeof MouseOperation;
 }
 
 /**
@@ -287,6 +293,85 @@ export declare class ToonTalkNotebook extends Sprite {
     setPageContent(page: number, hasContent: boolean): void;
     countPagesWithContent(): number;
     delete(): void;
+}
+
+/**
+ * Bomb class (matches objects.cpp) - Explosive tool
+ */
+export declare class ToonTalkBomb extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getFuseTime(): number;
+    setFuseTime(time: number): void;
+    getTimer(): number;
+    setTimer(time: number): void;
+    arm(): void;
+    explode(): void;
+    reset(): void;
+    delete(): void;
+}
+
+/**
+ * Bomb state enum (matches objects.cpp)
+ */
+export enum BombState {
+    INACTIVE = 0,
+    ARMED = 1,
+    EXPLODING = 2,
+    EXPLODED = 3
+}
+
+/**
+ * Thought_Bubble class (matches objects.cpp) - Robot program container
+ */
+export declare class ToonTalkThoughtBubble extends Sprite {
+    constructor(x: number, y: number);
+    hasCubby(): boolean;
+    setHasCubby(hasCubby: boolean): void;
+    getCubbyId(): number;
+    setCubbyId(id: number): void;
+    clearCubby(): void;
+    delete(): void;
+}
+
+/**
+ * Mouse class (matches objects.cpp) - Math operator
+ */
+export declare class ToonTalkMouse extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getOperationInt(): number;
+    setOperationInt(operation: number): void;
+    getOperand1(): number;
+    setOperand1(value: number): void;
+    getOperand2(): number;
+    setOperand2(value: number): void;
+    getResult(): number;
+    doOperation(): void;
+    finishOperation(): void;
+    delete(): void;
+}
+
+/**
+ * Mouse state enum (matches objects.cpp)
+ */
+export enum MouseState {
+    IDLE = 0,
+    WORKING = 1,
+    SMASHING = 2
+}
+
+/**
+ * Mouse operation enum (matches objects.cpp)
+ */
+export enum MouseOperation {
+    ADD = 0,
+    SUBTRACT = 1,
+    MULTIPLY = 2,
+    DIVIDE = 3,
+    NONE = 4
 }
 
 /**

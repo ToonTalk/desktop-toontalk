@@ -249,6 +249,41 @@ export class WasmCore {
         console.log('[WASM Test] After nextPage():', notebook.getCurrentPage());
         notebook.delete();
 
+        // Test 18: Create Bomb
+        const bomb = new this.module.Bomb(1300, 100);
+        console.log('[WASM Test] Created Bomb at:', bomb.getX(), bomb.getY());
+        console.log('[WASM Test] Bomb state:', bomb.getStateInt(), '(INACTIVE=0)');
+        console.log('[WASM Test] Fuse time:', bomb.getFuseTime(), 'seconds');
+        bomb.arm();
+        console.log('[WASM Test] After arm():', bomb.getStateInt(), '(ARMED=1)');
+        bomb.reset();
+        console.log('[WASM Test] After reset():', bomb.getStateInt(), '(INACTIVE=0)');
+        bomb.delete();
+
+        // Test 19: Create Thought_Bubble
+        const thoughtBubble = new this.module.Thought_Bubble(1400, 100);
+        console.log('[WASM Test] Created Thought_Bubble at:', thoughtBubble.getX(), thoughtBubble.getY());
+        console.log('[WASM Test] Has cubby:', thoughtBubble.hasCubby());
+        thoughtBubble.setCubbyId(42);
+        console.log('[WASM Test] After setCubbyId(42):', thoughtBubble.getCubbyId(), '- Has cubby:', thoughtBubble.hasCubby());
+        thoughtBubble.clearCubby();
+        console.log('[WASM Test] After clearCubby():', thoughtBubble.hasCubby());
+        thoughtBubble.delete();
+
+        // Test 20: Create Mouse
+        const mouse = new this.module.Mouse(1500, 100);
+        console.log('[WASM Test] Created Mouse at:', mouse.getX(), mouse.getY());
+        console.log('[WASM Test] Mouse state:', mouse.getStateInt(), '(IDLE=0)');
+        mouse.setOperand1(42);
+        mouse.setOperand2(13);
+        mouse.setOperationInt(0); // ADD
+        console.log('[WASM Test] Set operands: 42 + 13');
+        mouse.doOperation();
+        console.log('[WASM Test] After doOperation() - Result:', mouse.getResult(), '- State:', mouse.getStateInt(), '(SMASHING=2)');
+        mouse.finishOperation();
+        console.log('[WASM Test] After finishOperation() - State:', mouse.getStateInt(), '(IDLE=0)');
+        mouse.delete();
+
         console.log('[WASM Tests] ✅ All tests passed!');
     }
 
@@ -390,6 +425,36 @@ export class WasmCore {
             throw new Error('WASM module not loaded');
         }
         return new this.module.Notebook(x, y, numPages);
+    }
+
+    /**
+     * Create a Bomb instance from WASM
+     */
+    createBomb(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Bomb(x, y);
+    }
+
+    /**
+     * Create a Thought_Bubble instance from WASM
+     */
+    createThoughtBubble(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Thought_Bubble(x, y);
+    }
+
+    /**
+     * Create a Mouse instance from WASM
+     */
+    createMouse(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Mouse(x, y);
     }
 
     /**

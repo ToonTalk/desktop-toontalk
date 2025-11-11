@@ -177,12 +177,28 @@ class ToonTalkWeb {
         notebook1.setCurrentPage(2);
         this.renderer.addWasmSprite(new WasmSpriteView(notebook1, this.renderer.getStage(), this.renderer));
 
+        // Row 7: New objects - Bomb, Thought_Bubble, Mouse
+        const bomb1 = wasmCore.createBomb(centerX - 150, centerY + 600);
+        bomb1.arm(); // Show it counting down
+        this.renderer.addWasmSprite(new WasmSpriteView(bomb1, this.renderer.getStage(), this.renderer));
+
+        const thoughtBubble1 = wasmCore.createThoughtBubble(centerX, centerY + 600);
+        thoughtBubble1.setCubbyId(42); // Show program reference
+        this.renderer.addWasmSprite(new WasmSpriteView(thoughtBubble1, this.renderer.getStage(), this.renderer));
+
+        const mouse1 = wasmCore.createMouse(centerX + 150, centerY + 600);
+        mouse1.setOperand1(7);
+        mouse1.setOperand2(6);
+        mouse1.setOperationInt(2); // MULTIPLY
+        mouse1.doOperation(); // Show it smashing with result
+        this.renderer.addWasmSprite(new WasmSpriteView(mouse1, this.renderer.getStage(), this.renderer));
+
         console.log('✨ WASM scene created!');
         console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest');
-        console.log('   Tools: 1 Scale, 2 Wands');
-        console.log('   Advanced: 2 Robots, 1 House, 1 Truck');
+        console.log('   Tools: 1 Scale, 2 Wands, 1 Bomb, 1 Mouse');
+        console.log('   Advanced: 2 Robots, 1 House, 1 Truck, 1 Thought_Bubble');
         console.log('   Media: 1 Picture, 2 Sensors, 1 Notebook');
-        console.log('   Total: 18 interactive objects!');
+        console.log('   Total: 21 interactive objects!');
         console.log('');
         console.log('   💡 Drag objects to move them');
         console.log('   💡 Drop Number on Number to add');
