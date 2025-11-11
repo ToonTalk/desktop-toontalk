@@ -1721,6 +1721,328 @@ private:
     float timer_;
 };
 
+/**
+ * Connector - Tool for linking objects together
+ * Creates connections between objects for data flow or interaction
+ */
+class Connector : public Sprite {
+public:
+    enum ConnectorState {
+        DISCONNECTED = 0,
+        CONNECTING = 1,
+        CONNECTED = 2,
+        ERROR = 3
+    };
+
+    Connector(float x, float y)
+        : Sprite(x, y, 60.0f, 40.0f),
+          state_(DISCONNECTED),
+          connection_count_(0),
+          max_connections_(2),
+          source_id_(0),
+          target_id_(0) {}
+
+    // State management
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<ConnectorState>(state);
+        }
+    }
+
+    // Connection management
+    void connect(int sourceId, int targetId) {
+        if (state_ != CONNECTED && connection_count_ < max_connections_) {
+            source_id_ = sourceId;
+            target_id_ = targetId;
+            state_ = CONNECTED;
+            connection_count_++;
+        } else if (connection_count_ >= max_connections_) {
+            state_ = ERROR;
+        }
+    }
+
+    void disconnect() {
+        state_ = DISCONNECTED;
+        source_id_ = 0;
+        target_id_ = 0;
+        if (connection_count_ > 0) {
+            connection_count_--;
+        }
+    }
+
+    void startConnecting() {
+        state_ = CONNECTING;
+    }
+
+    // Getters/Setters
+    int getConnectionCount() const { return connection_count_; }
+    void setConnectionCount(int count) { connection_count_ = count; }
+
+    int getMaxConnections() const { return max_connections_; }
+    void setMaxConnections(int max) { max_connections_ = max; }
+
+    int getSourceId() const { return source_id_; }
+    void setSourceId(int id) { source_id_ = id; }
+
+    int getTargetId() const { return target_id_; }
+    void setTargetId(int id) { target_id_ = id; }
+
+    bool isConnected() const { return state_ == CONNECTED; }
+    bool hasError() const { return state_ == ERROR; }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    ConnectorState state_;
+    int connection_count_;
+    int max_connections_;
+    int source_id_;
+    int target_id_;
+};
+
+/**
+ * Timer - Time-based trigger tool
+ * Counts down and triggers events at specified intervals
+ */
+class Timer : public Sprite {
+public:
+    enum TimerState {
+        STOPPED = 0,
+        RUNNING = 1,
+        PAUSED = 2,
+        FINISHED = 3
+    };
+
+    Timer(float x, float y, float duration = 10.0f)
+        : Sprite(x, y, 70.0f, 70.0f),
+          state_(STOPPED),
+          duration_(duration),
+          elapsed_(0.0f),
+          remaining_(duration),
+          loop_(false),
+          trigger_count_(0) {}
+
+    // State management
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<TimerState>(state);
+        }
+    }
+
+    // Timer controls
+    void start() {
+        if (state_ == STOPPED || state_ == FINISHED) {
+            state_ = RUNNING;
+            elapsed_ = 0.0f;
+            remaining_ = duration_;
+        }
+    }
+
+    void pause() {
+        if (state_ == RUNNING) {
+            state_ = PAUSED;
+        }
+    }
+
+    void resume() {
+        if (state_ == PAUSED) {
+            state_ = RUNNING;
+        }
+    }
+
+    void stop() {
+        state_ = STOPPED;
+        elapsed_ = 0.0f;
+        remaining_ = duration_;
+    }
+
+    void reset() {
+        stop();
+        trigger_count_ = 0;
+    }
+
+    // Properties
+    float getDuration() const { return duration_; }
+    void setDuration(float dur) {
+        if (dur > 0.0f) {
+            duration_ = dur;
+            remaining_ = dur - elapsed_;
+        }
+    }
+
+    float getElapsed() const { return elapsed_; }
+    void setElapsed(float elapsed) { elapsed_ = elapsed; }
+
+    float getRemaining() const { return remaining_; }
+
+    float getProgress() const {
+        if (duration_ <= 0.0f) return 0.0f;
+        return elapsed_ / duration_;
+    }
+
+    bool isLoop() const { return loop_; }
+    void setLoop(bool loop) { loop_ = loop; }
+
+    int getTriggerCount() const { return trigger_count_; }
+    void setTriggerCount(int count) { trigger_count_ = count; }
+
+    bool isRunning() const { return state_ == RUNNING; }
+    bool isFinished() const { return state_ == FINISHED; }
+
+    void update(float deltaTime) override {
+        if (state_ == RUNNING) {
+            elapsed_ += deltaTime;
+            remaining_ = duration_ - elapsed_;
+
+            if (remaining_ <= 0.0f) {
+                trigger_count_++;
+                if (loop_) {
+                    elapsed_ = 0.0f;
+                    remaining_ = duration_;
+                } else {
+                    state_ = FINISHED;
+                    remaining_ = 0.0f;
+                }
+            }
+        }
+        Sprite::update(deltaTime);
+    }
+
+private:
+    TimerState state_;
+    float duration_;
+    float elapsed_;
+    float remaining_;
+    bool loop_;
+    int trigger_count_;
+};
+
+/**
+ * Counter - Counting tool with increment/decrement
+ * Tracks counts with optional min/max limits
+ */
+class Counter : public Sprite {
+public:
+    enum CounterState {
+        NORMAL = 0,
+        AT_MIN = 1,
+        AT_MAX = 2,
+        OVERFLOW = 3
+    };
+
+    Counter(float x, float y, int initialValue = 0)
+        : Sprite(x, y, 60.0f, 60.0f),
+          state_(NORMAL),
+          value_(initialValue),
+          min_value_(0),
+          max_value_(999),
+          step_(1),
+          has_min_limit_(false),
+          has_max_limit_(false) {
+        updateState();
+    }
+
+    // State management
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) {
+        if (state >= 0 && state <= 3) {
+            state_ = static_cast<CounterState>(state);
+        }
+    }
+
+    // Counting operations
+    void increment() {
+        int oldValue = value_;
+        value_ += step_;
+
+        if (has_max_limit_ && value_ > max_value_) {
+            value_ = max_value_;
+            state_ = AT_MAX;
+        } else if (!has_max_limit_ && value_ > max_value_) {
+            state_ = OVERFLOW;
+        } else {
+            updateState();
+        }
+    }
+
+    void decrement() {
+        int oldValue = value_;
+        value_ -= step_;
+
+        if (has_min_limit_ && value_ < min_value_) {
+            value_ = min_value_;
+            state_ = AT_MIN;
+        } else if (!has_min_limit_ && value_ < min_value_) {
+            value_ = min_value_; // Still clamp but mark as underflow
+            state_ = AT_MIN;
+        } else {
+            updateState();
+        }
+    }
+
+    void reset() {
+        value_ = 0;
+        updateState();
+    }
+
+    // Value management
+    int getValue() const { return value_; }
+    void setValue(int value) {
+        value_ = value;
+        updateState();
+    }
+
+    int getMinValue() const { return min_value_; }
+    void setMinValue(int value) { min_value_ = value; }
+
+    int getMaxValue() const { return max_value_; }
+    void setMaxValue(int value) { max_value_ = value; }
+
+    int getStep() const { return step_; }
+    void setStep(int step) {
+        if (step > 0) step_ = step;
+    }
+
+    bool hasMinLimit() const { return has_min_limit_; }
+    void setMinLimit(bool limit) { has_min_limit_ = limit; }
+
+    bool hasMaxLimit() const { return has_max_limit_; }
+    void setMaxLimit(bool limit) { has_max_limit_ = limit; }
+
+    bool isAtMin() const { return state_ == AT_MIN; }
+    bool isAtMax() const { return state_ == AT_MAX; }
+    bool isOverflow() const { return state_ == OVERFLOW; }
+
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+    }
+
+private:
+    void updateState() {
+        if (has_min_limit_ && value_ <= min_value_) {
+            state_ = AT_MIN;
+        } else if (has_max_limit_ && value_ >= max_value_) {
+            state_ = AT_MAX;
+        } else if (value_ > max_value_) {
+            state_ = OVERFLOW;
+        } else {
+            state_ = NORMAL;
+        }
+    }
+
+    CounterState state_;
+    int value_;
+    int min_value_;
+    int max_value_;
+    int step_;
+    bool has_min_limit_;
+    bool has_max_limit_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -2187,4 +2509,91 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("SILENT", Beeper::SILENT)
         .value("BEEPING", Beeper::BEEPING)
         .value("CONTINUOUS", Beeper::CONTINUOUS);
+
+    // Connector class
+    class_<Connector, base<Sprite>>("Connector")
+        .constructor<float, float>()
+        .function("getStateInt", &Connector::getStateInt)
+        .function("setStateInt", &Connector::setStateInt)
+        .function("connect", &Connector::connect)
+        .function("disconnect", &Connector::disconnect)
+        .function("startConnecting", &Connector::startConnecting)
+        .function("getConnectionCount", &Connector::getConnectionCount)
+        .function("setConnectionCount", &Connector::setConnectionCount)
+        .function("getMaxConnections", &Connector::getMaxConnections)
+        .function("setMaxConnections", &Connector::setMaxConnections)
+        .function("getSourceId", &Connector::getSourceId)
+        .function("setSourceId", &Connector::setSourceId)
+        .function("getTargetId", &Connector::getTargetId)
+        .function("setTargetId", &Connector::setTargetId)
+        .function("isConnected", &Connector::isConnected)
+        .function("hasError", &Connector::hasError);
+
+    // Connector state enum values
+    enum_<Connector::ConnectorState>("ConnectorState")
+        .value("DISCONNECTED", Connector::DISCONNECTED)
+        .value("CONNECTING", Connector::CONNECTING)
+        .value("CONNECTED", Connector::CONNECTED)
+        .value("ERROR", Connector::ERROR);
+
+    // Timer class
+    class_<Timer, base<Sprite>>("Timer")
+        .constructor<float, float, float>()
+        .function("getStateInt", &Timer::getStateInt)
+        .function("setStateInt", &Timer::setStateInt)
+        .function("start", &Timer::start)
+        .function("pause", &Timer::pause)
+        .function("resume", &Timer::resume)
+        .function("stop", &Timer::stop)
+        .function("reset", &Timer::reset)
+        .function("getDuration", &Timer::getDuration)
+        .function("setDuration", &Timer::setDuration)
+        .function("getElapsed", &Timer::getElapsed)
+        .function("setElapsed", &Timer::setElapsed)
+        .function("getRemaining", &Timer::getRemaining)
+        .function("getProgress", &Timer::getProgress)
+        .function("isLoop", &Timer::isLoop)
+        .function("setLoop", &Timer::setLoop)
+        .function("getTriggerCount", &Timer::getTriggerCount)
+        .function("setTriggerCount", &Timer::setTriggerCount)
+        .function("isRunning", &Timer::isRunning)
+        .function("isFinished", &Timer::isFinished);
+
+    // Timer state enum values
+    enum_<Timer::TimerState>("TimerState")
+        .value("STOPPED", Timer::STOPPED)
+        .value("RUNNING", Timer::RUNNING)
+        .value("PAUSED", Timer::PAUSED)
+        .value("FINISHED", Timer::FINISHED);
+
+    // Counter class
+    class_<Counter, base<Sprite>>("Counter")
+        .constructor<float, float, int>()
+        .function("getStateInt", &Counter::getStateInt)
+        .function("setStateInt", &Counter::setStateInt)
+        .function("increment", &Counter::increment)
+        .function("decrement", &Counter::decrement)
+        .function("reset", &Counter::reset)
+        .function("getValue", &Counter::getValue)
+        .function("setValue", &Counter::setValue)
+        .function("getMinValue", &Counter::getMinValue)
+        .function("setMinValue", &Counter::setMinValue)
+        .function("getMaxValue", &Counter::getMaxValue)
+        .function("setMaxValue", &Counter::setMaxValue)
+        .function("getStep", &Counter::getStep)
+        .function("setStep", &Counter::setStep)
+        .function("hasMinLimit", &Counter::hasMinLimit)
+        .function("setMinLimit", &Counter::setMinLimit)
+        .function("hasMaxLimit", &Counter::hasMaxLimit)
+        .function("setMaxLimit", &Counter::setMaxLimit)
+        .function("isAtMin", &Counter::isAtMin)
+        .function("isAtMax", &Counter::isAtMax)
+        .function("isOverflow", &Counter::isOverflow);
+
+    // Counter state enum values
+    enum_<Counter::CounterState>("CounterState")
+        .value("NORMAL", Counter::NORMAL)
+        .value("AT_MIN", Counter::AT_MIN)
+        .value("AT_MAX", Counter::AT_MAX)
+        .value("OVERFLOW", Counter::OVERFLOW);
 }

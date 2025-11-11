@@ -41,6 +41,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Flipper: typeof ToonTalkFlipper;
     Meter: typeof ToonTalkMeter;
     Beeper: typeof ToonTalkBeeper;
+    Connector: typeof ToonTalkConnector;
+    Timer: typeof ToonTalkTimer;
+    Counter: typeof ToonTalkCounter;
 
     // Enums
     WandMode: typeof WandMode;
@@ -61,6 +64,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     FlipperMode: typeof FlipperMode;
     MeterState: typeof MeterState;
     BeeperState: typeof BeeperState;
+    ConnectorState: typeof ConnectorState;
+    TimerState: typeof TimerState;
+    CounterState: typeof CounterState;
 }
 
 /**
@@ -718,6 +724,96 @@ export enum BeeperState {
     SILENT = 0,
     BEEPING = 1,
     CONTINUOUS = 2
+}
+
+export declare class ToonTalkConnector extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    connect(sourceId: number, targetId: number): void;
+    disconnect(): void;
+    startConnecting(): void;
+    getConnectionCount(): number;
+    setConnectionCount(count: number): void;
+    getMaxConnections(): number;
+    setMaxConnections(max: number): void;
+    getSourceId(): number;
+    setSourceId(id: number): void;
+    getTargetId(): number;
+    setTargetId(id: number): void;
+    isConnected(): boolean;
+    hasError(): boolean;
+    delete(): void;
+}
+
+export enum ConnectorState {
+    DISCONNECTED = 0,
+    CONNECTING = 1,
+    CONNECTED = 2,
+    ERROR = 3
+}
+
+export declare class ToonTalkTimer extends Sprite {
+    constructor(x: number, y: number, duration?: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    start(): void;
+    pause(): void;
+    resume(): void;
+    stop(): void;
+    reset(): void;
+    getDuration(): number;
+    setDuration(dur: number): void;
+    getElapsed(): number;
+    setElapsed(elapsed: number): void;
+    getRemaining(): number;
+    getProgress(): number;
+    isLoop(): boolean;
+    setLoop(loop: boolean): void;
+    getTriggerCount(): number;
+    setTriggerCount(count: number): void;
+    isRunning(): boolean;
+    isFinished(): boolean;
+    delete(): void;
+}
+
+export enum TimerState {
+    STOPPED = 0,
+    RUNNING = 1,
+    PAUSED = 2,
+    FINISHED = 3
+}
+
+export declare class ToonTalkCounter extends Sprite {
+    constructor(x: number, y: number, initialValue?: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    increment(): void;
+    decrement(): void;
+    reset(): void;
+    getValue(): number;
+    setValue(value: number): void;
+    getMinValue(): number;
+    setMinValue(value: number): void;
+    getMaxValue(): number;
+    setMaxValue(value: number): void;
+    getStep(): number;
+    setStep(step: number): void;
+    hasMinLimit(): boolean;
+    setMinLimit(limit: boolean): void;
+    hasMaxLimit(): boolean;
+    setMaxLimit(limit: boolean): void;
+    isAtMin(): boolean;
+    isAtMax(): boolean;
+    isOverflow(): boolean;
+    delete(): void;
+}
+
+export enum CounterState {
+    NORMAL = 0,
+    AT_MIN = 1,
+    AT_MAX = 2,
+    OVERFLOW = 3
 }
 
 /**

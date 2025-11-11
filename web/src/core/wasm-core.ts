@@ -532,6 +532,78 @@ export class WasmCore {
             console.log('[WASM Test] ⏭️  Skipping Beeper (not in WASM binary yet - rebuild required)');
         }
 
+        // Test 33: Create Connector (if available in WASM)
+        if (this.module.Connector) {
+            const connector = new this.module.Connector(3200, 100);
+            console.log('[WASM Test] Created Connector at:', connector.getX(), connector.getY());
+            console.log('[WASM Test] State:', connector.getStateInt(), '(DISCONNECTED=0)');
+            console.log('[WASM Test] MaxConnections:', connector.getMaxConnections());
+            connector.startConnecting();
+            console.log('[WASM Test] After startConnecting() - State:', connector.getStateInt(), '(CONNECTING=1)');
+            connector.connect(123, 456);
+            console.log('[WASM Test] After connect(123, 456) - State:', connector.getStateInt(), '(CONNECTED=2)');
+            console.log('[WASM Test] SourceId:', connector.getSourceId(), '- TargetId:', connector.getTargetId());
+            console.log('[WASM Test] isConnected:', connector.isConnected(), '- ConnectionCount:', connector.getConnectionCount());
+            connector.disconnect();
+            console.log('[WASM Test] After disconnect() - State:', connector.getStateInt(), '(DISCONNECTED=0)');
+            connector.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Connector (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 34: Create Timer (if available in WASM)
+        if (this.module.Timer) {
+            const timer = new this.module.Timer(3400, 100, 5.0);
+            console.log('[WASM Test] Created Timer at:', timer.getX(), timer.getY());
+            console.log('[WASM Test] Duration:', timer.getDuration(), 's');
+            console.log('[WASM Test] State:', timer.getStateInt(), '(STOPPED=0)');
+            timer.start();
+            console.log('[WASM Test] After start() - State:', timer.getStateInt(), '(RUNNING=1)', '- isRunning:', timer.isRunning());
+            timer.setElapsed(2.5);
+            console.log('[WASM Test] After setElapsed(2.5) - Progress:', timer.getProgress(), '- Remaining:', timer.getRemaining());
+            timer.pause();
+            console.log('[WASM Test] After pause() - State:', timer.getStateInt(), '(PAUSED=2)');
+            timer.resume();
+            console.log('[WASM Test] After resume() - State:', timer.getStateInt(), '(RUNNING=1)');
+            timer.setLoop(true);
+            console.log('[WASM Test] Loop enabled:', timer.isLoop());
+            timer.stop();
+            console.log('[WASM Test] After stop() - State:', timer.getStateInt(), '(STOPPED=0)');
+            timer.reset();
+            console.log('[WASM Test] After reset() - TriggerCount:', timer.getTriggerCount());
+            timer.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Timer (not in WASM binary yet - rebuild required)');
+        }
+
+        // Test 35: Create Counter (if available in WASM)
+        if (this.module.Counter) {
+            const counter = new this.module.Counter(3600, 100, 0);
+            console.log('[WASM Test] Created Counter at:', counter.getX(), counter.getY());
+            console.log('[WASM Test] Value:', counter.getValue(), '- State:', counter.getStateInt(), '(NORMAL=0)');
+            console.log('[WASM Test] Step:', counter.getStep());
+            counter.increment();
+            counter.increment();
+            counter.increment();
+            console.log('[WASM Test] After 3x increment() - Value:', counter.getValue());
+            counter.decrement();
+            console.log('[WASM Test] After decrement() - Value:', counter.getValue());
+            counter.setMinLimit(true);
+            counter.setMaxLimit(true);
+            counter.setMinValue(0);
+            counter.setMaxValue(10);
+            console.log('[WASM Test] Set limits - Min:', counter.getMinValue(), '- Max:', counter.getMaxValue());
+            counter.setValue(10);
+            console.log('[WASM Test] After setValue(10) - State:', counter.getStateInt(), '(AT_MAX=2)', '- isAtMax:', counter.isAtMax());
+            counter.increment();
+            console.log('[WASM Test] After increment() at max - Value:', counter.getValue(), '(should still be 10)');
+            counter.reset();
+            console.log('[WASM Test] After reset() - Value:', counter.getValue());
+            counter.delete();
+        } else {
+            console.log('[WASM Test] ⏭️  Skipping Counter (not in WASM binary yet - rebuild required)');
+        }
+
         console.log('[WASM Tests] ✅ All available tests passed!');
     }
 
@@ -859,6 +931,45 @@ export class WasmCore {
             throw new Error('Beeper class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
         }
         return new this.module.Beeper(x, y);
+    }
+
+    /**
+     * Create a Connector instance from WASM
+     */
+    createConnector(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Connector) {
+            throw new Error('Connector class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Connector(x, y);
+    }
+
+    /**
+     * Create a Timer instance from WASM
+     */
+    createTimer(x: number, y: number, duration: number = 10.0) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Timer) {
+            throw new Error('Timer class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Timer(x, y, duration);
+    }
+
+    /**
+     * Create a Counter instance from WASM
+     */
+    createCounter(x: number, y: number, initialValue: number = 0) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        if (!this.module.Counter) {
+            throw new Error('Counter class not available in WASM binary - rebuild required (cd web/core && ./build.sh)');
+        }
+        return new this.module.Counter(x, y, initialValue);
     }
 
     /**
