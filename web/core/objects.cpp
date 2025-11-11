@@ -2354,6 +2354,387 @@ private:
     int seed_;
 };
 
+/**
+ * Logger - Tool for recording and displaying log entries
+ * Records timestamped messages with severity levels
+ */
+class Logger : public Sprite {
+public:
+    enum LogLevel {
+        DEBUG = 0,
+        INFO = 1,
+        WARNING = 2,
+        ERROR = 3
+    };
+
+    enum LoggerState {
+        IDLE = 0,
+        LOGGING = 1,
+        PAUSED = 2,
+        FULL = 3
+    };
+
+    Logger(float x, float y, int max_entries = 100)
+        : Sprite(x, y, 80.0f, 70.0f),
+          state_(IDLE),
+          entry_count_(0),
+          max_entries_(max_entries),
+          min_level_(DEBUG),
+          current_level_(INFO),
+          debug_count_(0),
+          info_count_(0),
+          warning_count_(0),
+          error_count_(0) {}
+
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) { state_ = static_cast<LoggerState>(state); }
+
+    void startLogging() {
+        if (state_ != FULL) {
+            state_ = LOGGING;
+        }
+    }
+
+    void pauseLogging() {
+        if (state_ == LOGGING) {
+            state_ = PAUSED;
+        }
+    }
+
+    void resumeLogging() {
+        if (state_ == PAUSED) {
+            state_ = LOGGING;
+        }
+    }
+
+    void stopLogging() {
+        state_ = IDLE;
+    }
+
+    void clear() {
+        entry_count_ = 0;
+        debug_count_ = 0;
+        info_count_ = 0;
+        warning_count_ = 0;
+        error_count_ = 0;
+        if (state_ == FULL) {
+            state_ = IDLE;
+        }
+    }
+
+    void logEntry(int level) {
+        if (state_ == LOGGING && entry_count_ < max_entries_) {
+            current_level_ = static_cast<LogLevel>(level);
+            if (current_level_ >= min_level_) {
+                entry_count_++;
+                switch (current_level_) {
+                    case DEBUG: debug_count_++; break;
+                    case INFO: info_count_++; break;
+                    case WARNING: warning_count_++; break;
+                    case ERROR: error_count_++; break;
+                }
+                if (entry_count_ >= max_entries_) {
+                    state_ = FULL;
+                }
+            }
+        }
+    }
+
+    int getEntryCount() const { return entry_count_; }
+    int getMaxEntries() const { return max_entries_; }
+    void setMaxEntries(int max) { max_entries_ = max; }
+
+    int getMinLevelInt() const { return static_cast<int>(min_level_); }
+    void setMinLevelInt(int level) { min_level_ = static_cast<LogLevel>(level); }
+
+    int getCurrentLevelInt() const { return static_cast<int>(current_level_); }
+
+    int getDebugCount() const { return debug_count_; }
+    int getInfoCount() const { return info_count_; }
+    int getWarningCount() const { return warning_count_; }
+    int getErrorCount() const { return error_count_; }
+
+    bool isLogging() const { return state_ == LOGGING; }
+    bool isFull() const { return state_ == FULL; }
+
+    float getFullness() const {
+        if (max_entries_ <= 0) return 0.0f;
+        return static_cast<float>(entry_count_) / static_cast<float>(max_entries_);
+    }
+
+private:
+    LoggerState state_;
+    int entry_count_;
+    int max_entries_;
+    LogLevel min_level_;
+    LogLevel current_level_;
+    int debug_count_;
+    int info_count_;
+    int warning_count_;
+    int error_count_;
+};
+
+/**
+ * Filter - Tool for filtering and transforming values
+ * Applies configurable rules to accept/reject/transform input
+ */
+class Filter : public Sprite {
+public:
+    enum FilterMode {
+        PASS_ALL = 0,
+        PASS_RANGE = 1,
+        BLOCK_RANGE = 2,
+        TRANSFORM = 3
+    };
+
+    enum FilterState {
+        IDLE = 0,
+        ACTIVE = 1,
+        BYPASSED = 2
+    };
+
+    Filter(float x, float y)
+        : Sprite(x, y, 70.0f, 60.0f),
+          mode_(PASS_ALL),
+          state_(IDLE),
+          min_threshold_(0.0f),
+          max_threshold_(100.0f),
+          transform_scale_(1.0f),
+          transform_offset_(0.0f),
+          input_value_(0.0f),
+          output_value_(0.0f),
+          passed_count_(0),
+          blocked_count_(0) {}
+
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) { mode_ = static_cast<FilterMode>(mode); }
+
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) { state_ = static_cast<FilterState>(state); }
+
+    void activate() { state_ = ACTIVE; }
+    void deactivate() { state_ = IDLE; }
+    void bypass() { state_ = BYPASSED; }
+
+    bool processValue(float value) {
+        input_value_ = value;
+
+        if (state_ == BYPASSED) {
+            output_value_ = value;
+            passed_count_++;
+            return true;
+        }
+
+        if (state_ != ACTIVE) {
+            return false;
+        }
+
+        bool passes = false;
+        switch (mode_) {
+            case PASS_ALL:
+                passes = true;
+                output_value_ = value;
+                break;
+            case PASS_RANGE:
+                passes = (value >= min_threshold_ && value <= max_threshold_);
+                output_value_ = value;
+                break;
+            case BLOCK_RANGE:
+                passes = (value < min_threshold_ || value > max_threshold_);
+                output_value_ = value;
+                break;
+            case TRANSFORM:
+                passes = true;
+                output_value_ = value * transform_scale_ + transform_offset_;
+                break;
+        }
+
+        if (passes) {
+            passed_count_++;
+        } else {
+            blocked_count_++;
+        }
+
+        return passes;
+    }
+
+    float getInputValue() const { return input_value_; }
+    float getOutputValue() const { return output_value_; }
+
+    float getMinThreshold() const { return min_threshold_; }
+    void setMinThreshold(float value) { min_threshold_ = value; }
+
+    float getMaxThreshold() const { return max_threshold_; }
+    void setMaxThreshold(float value) { max_threshold_ = value; }
+
+    void setThresholds(float min_val, float max_val) {
+        min_threshold_ = min_val;
+        max_threshold_ = max_val;
+    }
+
+    float getTransformScale() const { return transform_scale_; }
+    void setTransformScale(float scale) { transform_scale_ = scale; }
+
+    float getTransformOffset() const { return transform_offset_; }
+    void setTransformOffset(float offset) { transform_offset_ = offset; }
+
+    void setTransform(float scale, float offset) {
+        transform_scale_ = scale;
+        transform_offset_ = offset;
+    }
+
+    int getPassedCount() const { return passed_count_; }
+    int getBlockedCount() const { return blocked_count_; }
+
+    void reset() {
+        passed_count_ = 0;
+        blocked_count_ = 0;
+        input_value_ = 0.0f;
+        output_value_ = 0.0f;
+    }
+
+    bool isActive() const { return state_ == ACTIVE; }
+    bool isBypassed() const { return state_ == BYPASSED; }
+
+private:
+    FilterMode mode_;
+    FilterState state_;
+    float min_threshold_;
+    float max_threshold_;
+    float transform_scale_;
+    float transform_offset_;
+    float input_value_;
+    float output_value_;
+    int passed_count_;
+    int blocked_count_;
+};
+
+/**
+ * Accumulator - Tool for accumulating and aggregating values
+ * Computes running statistics (sum, average, min, max)
+ */
+class Accumulator : public Sprite {
+public:
+    enum AccumulatorMode {
+        SUM = 0,
+        AVERAGE = 1,
+        MIN = 2,
+        MAX = 3,
+        COUNT = 4
+    };
+
+    enum AccumulatorState {
+        IDLE = 0,
+        ACCUMULATING = 1,
+        PAUSED = 2
+    };
+
+    Accumulator(float x, float y)
+        : Sprite(x, y, 70.0f, 60.0f),
+          mode_(SUM),
+          state_(IDLE),
+          sum_(0.0f),
+          count_(0),
+          min_value_(0.0f),
+          max_value_(0.0f),
+          current_value_(0.0f),
+          decay_rate_(0.0f) {}
+
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) { mode_ = static_cast<AccumulatorMode>(mode); }
+
+    int getStateInt() const { return static_cast<int>(state_); }
+    void setStateInt(int state) { state_ = static_cast<AccumulatorState>(state); }
+
+    void start() { state_ = ACCUMULATING; }
+    void pause() { if (state_ == ACCUMULATING) state_ = PAUSED; }
+    void resume() { if (state_ == PAUSED) state_ = ACCUMULATING; }
+    void stop() { state_ = IDLE; }
+
+    void accumulate(float value) {
+        if (state_ != ACCUMULATING) return;
+
+        if (count_ == 0) {
+            sum_ = value;
+            min_value_ = value;
+            max_value_ = value;
+        } else {
+            // Apply decay if configured
+            if (decay_rate_ > 0.0f) {
+                sum_ *= (1.0f - decay_rate_);
+            }
+
+            sum_ += value;
+            if (value < min_value_) min_value_ = value;
+            if (value > max_value_) max_value_ = value;
+        }
+
+        count_++;
+        updateCurrentValue();
+    }
+
+    void clear() {
+        sum_ = 0.0f;
+        count_ = 0;
+        min_value_ = 0.0f;
+        max_value_ = 0.0f;
+        current_value_ = 0.0f;
+    }
+
+    void reset() {
+        clear();
+        state_ = IDLE;
+    }
+
+    float getCurrentValue() const { return current_value_; }
+    float getSum() const { return sum_; }
+    int getCount() const { return count_; }
+    float getMinValue() const { return min_value_; }
+    float getMaxValue() const { return max_value_; }
+
+    float getAverage() const {
+        if (count_ == 0) return 0.0f;
+        return sum_ / static_cast<float>(count_);
+    }
+
+    float getDecayRate() const { return decay_rate_; }
+    void setDecayRate(float rate) {
+        decay_rate_ = (rate < 0.0f) ? 0.0f : (rate > 1.0f) ? 1.0f : rate;
+    }
+
+    bool isAccumulating() const { return state_ == ACCUMULATING; }
+
+private:
+    void updateCurrentValue() {
+        switch (mode_) {
+            case SUM:
+                current_value_ = sum_;
+                break;
+            case AVERAGE:
+                current_value_ = getAverage();
+                break;
+            case MIN:
+                current_value_ = min_value_;
+                break;
+            case MAX:
+                current_value_ = max_value_;
+                break;
+            case COUNT:
+                current_value_ = static_cast<float>(count_);
+                break;
+        }
+    }
+
+    AccumulatorMode mode_;
+    AccumulatorState state_;
+    float sum_;
+    int count_;
+    float min_value_;
+    float max_value_;
+    float current_value_;
+    float decay_rate_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -2987,4 +3368,123 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("INTEGER", Randomizer::INTEGER)
         .value("BOOLEAN", Randomizer::BOOLEAN)
         .value("DICE", Randomizer::DICE);
+
+    // Logger class
+    class_<Logger, base<Sprite>>("Logger")
+        .constructor<float, float, int>()
+        .function("getStateInt", &Logger::getStateInt)
+        .function("setStateInt", &Logger::setStateInt)
+        .function("startLogging", &Logger::startLogging)
+        .function("pauseLogging", &Logger::pauseLogging)
+        .function("resumeLogging", &Logger::resumeLogging)
+        .function("stopLogging", &Logger::stopLogging)
+        .function("clear", &Logger::clear)
+        .function("logEntry", &Logger::logEntry)
+        .function("getEntryCount", &Logger::getEntryCount)
+        .function("getMaxEntries", &Logger::getMaxEntries)
+        .function("setMaxEntries", &Logger::setMaxEntries)
+        .function("getMinLevelInt", &Logger::getMinLevelInt)
+        .function("setMinLevelInt", &Logger::setMinLevelInt)
+        .function("getCurrentLevelInt", &Logger::getCurrentLevelInt)
+        .function("getDebugCount", &Logger::getDebugCount)
+        .function("getInfoCount", &Logger::getInfoCount)
+        .function("getWarningCount", &Logger::getWarningCount)
+        .function("getErrorCount", &Logger::getErrorCount)
+        .function("isLogging", &Logger::isLogging)
+        .function("isFull", &Logger::isFull)
+        .function("getFullness", &Logger::getFullness);
+
+    // Logger state enum values
+    enum_<Logger::LoggerState>("LoggerState")
+        .value("IDLE", Logger::IDLE)
+        .value("LOGGING", Logger::LOGGING)
+        .value("PAUSED", Logger::PAUSED)
+        .value("FULL", Logger::FULL);
+
+    // Logger level enum values
+    enum_<Logger::LogLevel>("LogLevel")
+        .value("DEBUG", Logger::DEBUG)
+        .value("INFO", Logger::INFO)
+        .value("WARNING", Logger::WARNING)
+        .value("ERROR", Logger::ERROR);
+
+    // Filter class
+    class_<Filter, base<Sprite>>("Filter")
+        .constructor<float, float>()
+        .function("getModeInt", &Filter::getModeInt)
+        .function("setModeInt", &Filter::setModeInt)
+        .function("getStateInt", &Filter::getStateInt)
+        .function("setStateInt", &Filter::setStateInt)
+        .function("activate", &Filter::activate)
+        .function("deactivate", &Filter::deactivate)
+        .function("bypass", &Filter::bypass)
+        .function("processValue", &Filter::processValue)
+        .function("getInputValue", &Filter::getInputValue)
+        .function("getOutputValue", &Filter::getOutputValue)
+        .function("getMinThreshold", &Filter::getMinThreshold)
+        .function("setMinThreshold", &Filter::setMinThreshold)
+        .function("getMaxThreshold", &Filter::getMaxThreshold)
+        .function("setMaxThreshold", &Filter::setMaxThreshold)
+        .function("setThresholds", &Filter::setThresholds)
+        .function("getTransformScale", &Filter::getTransformScale)
+        .function("setTransformScale", &Filter::setTransformScale)
+        .function("getTransformOffset", &Filter::getTransformOffset)
+        .function("setTransformOffset", &Filter::setTransformOffset)
+        .function("setTransform", &Filter::setTransform)
+        .function("getPassedCount", &Filter::getPassedCount)
+        .function("getBlockedCount", &Filter::getBlockedCount)
+        .function("reset", &Filter::reset)
+        .function("isActive", &Filter::isActive)
+        .function("isBypassed", &Filter::isBypassed);
+
+    // Filter mode enum values
+    enum_<Filter::FilterMode>("FilterMode")
+        .value("PASS_ALL", Filter::PASS_ALL)
+        .value("PASS_RANGE", Filter::PASS_RANGE)
+        .value("BLOCK_RANGE", Filter::BLOCK_RANGE)
+        .value("TRANSFORM", Filter::TRANSFORM);
+
+    // Filter state enum values
+    enum_<Filter::FilterState>("FilterState")
+        .value("IDLE", Filter::IDLE)
+        .value("ACTIVE", Filter::ACTIVE)
+        .value("BYPASSED", Filter::BYPASSED);
+
+    // Accumulator class
+    class_<Accumulator, base<Sprite>>("Accumulator")
+        .constructor<float, float>()
+        .function("getModeInt", &Accumulator::getModeInt)
+        .function("setModeInt", &Accumulator::setModeInt)
+        .function("getStateInt", &Accumulator::getStateInt)
+        .function("setStateInt", &Accumulator::setStateInt)
+        .function("start", &Accumulator::start)
+        .function("pause", &Accumulator::pause)
+        .function("resume", &Accumulator::resume)
+        .function("stop", &Accumulator::stop)
+        .function("accumulate", &Accumulator::accumulate)
+        .function("clear", &Accumulator::clear)
+        .function("reset", &Accumulator::reset)
+        .function("getCurrentValue", &Accumulator::getCurrentValue)
+        .function("getSum", &Accumulator::getSum)
+        .function("getCount", &Accumulator::getCount)
+        .function("getMinValue", &Accumulator::getMinValue)
+        .function("getMaxValue", &Accumulator::getMaxValue)
+        .function("getAverage", &Accumulator::getAverage)
+        .function("getDecayRate", &Accumulator::getDecayRate)
+        .function("setDecayRate", &Accumulator::setDecayRate)
+        .function("isAccumulating", &Accumulator::isAccumulating);
+
+    // Accumulator mode enum values
+    enum_<Accumulator::AccumulatorMode>("AccumulatorMode")
+        .value("SUM", Accumulator::SUM)
+        .value("AVERAGE", Accumulator::AVERAGE)
+        .value("MIN", Accumulator::MIN)
+        .value("MAX", Accumulator::MAX)
+        .value("COUNT", Accumulator::COUNT);
+
+    // Accumulator state enum values
+    enum_<Accumulator::AccumulatorState>("AccumulatorState")
+        .value("IDLE", Accumulator::IDLE)
+        .value("ACCUMULATING", Accumulator::ACCUMULATING)
+        .value("PAUSED", Accumulator::PAUSED);
 }

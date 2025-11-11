@@ -47,6 +47,9 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Sampler: typeof ToonTalkSampler;
     Comparator: typeof ToonTalkComparator;
     Randomizer: typeof ToonTalkRandomizer;
+    Logger: typeof ToonTalkLogger;
+    Filter: typeof ToonTalkFilter;
+    Accumulator: typeof ToonTalkAccumulator;
 
     // Enums
     WandMode: typeof WandMode;
@@ -73,6 +76,12 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     SamplerState: typeof SamplerState;
     ComparisonResult: typeof ComparisonResult;
     RandomizerMode: typeof RandomizerMode;
+    LoggerState: typeof LoggerState;
+    LogLevel: typeof LogLevel;
+    FilterMode: typeof FilterMode;
+    FilterState: typeof FilterState;
+    AccumulatorMode: typeof AccumulatorMode;
+    AccumulatorState: typeof AccumulatorState;
 }
 
 /**
@@ -903,6 +912,137 @@ export enum RandomizerMode {
     INTEGER = 1,
     BOOLEAN = 2,
     DICE = 3
+}
+
+/**
+ * Logger - Records timestamped log entries with severity levels
+ */
+export declare class ToonTalkLogger extends Sprite {
+    constructor(x: number, y: number, maxEntries?: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    startLogging(): void;
+    pauseLogging(): void;
+    resumeLogging(): void;
+    stopLogging(): void;
+    clear(): void;
+    logEntry(level: number): void;
+    getEntryCount(): number;
+    getMaxEntries(): number;
+    setMaxEntries(max: number): void;
+    getMinLevelInt(): number;
+    setMinLevelInt(level: number): void;
+    getCurrentLevelInt(): number;
+    getDebugCount(): number;
+    getInfoCount(): number;
+    getWarningCount(): number;
+    getErrorCount(): number;
+    isLogging(): boolean;
+    isFull(): boolean;
+    getFullness(): number;
+    delete(): void;
+}
+
+export enum LoggerState {
+    IDLE = 0,
+    LOGGING = 1,
+    PAUSED = 2,
+    FULL = 3
+}
+
+export enum LogLevel {
+    DEBUG = 0,
+    INFO = 1,
+    WARNING = 2,
+    ERROR = 3
+}
+
+/**
+ * Filter - Filters and transforms values based on configurable rules
+ */
+export declare class ToonTalkFilter extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    activate(): void;
+    deactivate(): void;
+    bypass(): void;
+    processValue(value: number): boolean;
+    getInputValue(): number;
+    getOutputValue(): number;
+    getMinThreshold(): number;
+    setMinThreshold(value: number): void;
+    getMaxThreshold(): number;
+    setMaxThreshold(value: number): void;
+    setThresholds(min: number, max: number): void;
+    getTransformScale(): number;
+    setTransformScale(scale: number): void;
+    getTransformOffset(): number;
+    setTransformOffset(offset: number): void;
+    setTransform(scale: number, offset: number): void;
+    getPassedCount(): number;
+    getBlockedCount(): number;
+    reset(): void;
+    isActive(): boolean;
+    isBypassed(): boolean;
+    delete(): void;
+}
+
+export enum FilterMode {
+    PASS_ALL = 0,
+    PASS_RANGE = 1,
+    BLOCK_RANGE = 2,
+    TRANSFORM = 3
+}
+
+export enum FilterState {
+    IDLE = 0,
+    ACTIVE = 1,
+    BYPASSED = 2
+}
+
+/**
+ * Accumulator - Accumulates and aggregates values with running statistics
+ */
+export declare class ToonTalkAccumulator extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    start(): void;
+    pause(): void;
+    resume(): void;
+    stop(): void;
+    accumulate(value: number): void;
+    clear(): void;
+    reset(): void;
+    getCurrentValue(): number;
+    getSum(): number;
+    getCount(): number;
+    getMinValue(): number;
+    getMaxValue(): number;
+    getAverage(): number;
+    getDecayRate(): number;
+    setDecayRate(rate: number): void;
+    isAccumulating(): boolean;
+    delete(): void;
+}
+
+export enum AccumulatorMode {
+    SUM = 0,
+    AVERAGE = 1,
+    MIN = 2,
+    MAX = 3,
+    COUNT = 4
+}
+
+export enum AccumulatorState {
+    IDLE = 0,
+    ACCUMULATING = 1,
+    PAUSED = 2
 }
 
 /**
