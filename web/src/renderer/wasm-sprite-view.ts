@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -51,6 +51,7 @@ export class WasmSpriteView {
         if ('setVelocity' in this.wasmSprite) return 'bird';
         if ('getValue' in this.wasmSprite) return 'number';
         if ('getText' in this.wasmSprite) return 'text';
+        if ('getNumHoles' in this.wasmSprite) return 'nest';
         if ('getCapacity' in this.wasmSprite) return 'box';
         return 'sprite';
     }
@@ -76,6 +77,9 @@ export class WasmSpriteView {
                 break;
             case 'box':
                 this.drawBox();
+                break;
+            case 'nest':
+                this.drawNest();
                 break;
             default:
                 this.drawGenericSprite();
@@ -232,6 +236,70 @@ export class WasmSpriteView {
         this.graphics.addChild(capacityText);
 
         this.textDisplay = text;
+    }
+
+    private drawNest(): void {
+        const nest = this.wasmSprite as ToonTalkNest;
+        const numHoles = nest.getNumHoles();
+        const occupied = nest.countOccupied();
+
+        // Purple nest container
+        this.graphics.beginFill(0x9370DB);
+        this.graphics.drawRoundedRect(-70, -45, 140, 90, 8);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x663399);
+        this.graphics.drawRoundedRect(-70, -45, 140, 90, 8);
+
+        // Label at top
+        const label = new PIXI.Text('Nest', {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = -35;
+        this.graphics.addChild(label);
+
+        // Draw holes
+        const holeSpacing = 120 / (numHoles + 1);
+        for (let i = 0; i < numHoles; i++) {
+            const holeX = -60 + (i + 1) * holeSpacing;
+            const holeY = 5;
+            const isEmpty = nest.isHoleEmpty(i);
+
+            // Draw hole
+            if (isEmpty) {
+                // Empty hole - dark circle
+                this.graphics.beginFill(0x4B0082, 0.6);
+            } else {
+                // Occupied hole - light circle
+                this.graphics.beginFill(0xFFD700);
+            }
+            this.graphics.drawCircle(holeX, holeY, 12);
+            this.graphics.endFill();
+
+            // Hole border
+            this.graphics.lineStyle(2, isEmpty ? 0x663399 : 0xFFD700);
+            this.graphics.drawCircle(holeX, holeY, 12);
+        }
+
+        // Status text
+        const statusText = new PIXI.Text(`${occupied} / ${numHoles}`, {
+            fontSize: 14,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        statusText.anchor.set(0.5);
+        statusText.y = 30;
+        this.graphics.addChild(statusText);
+
+        this.textDisplay = statusText;
     }
 
     private drawGenericSprite(): void {
