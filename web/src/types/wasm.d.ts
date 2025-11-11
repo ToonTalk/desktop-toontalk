@@ -17,6 +17,7 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Number: typeof ToonTalkNumber;
     Text: typeof ToonTalkText;
     Box: typeof ToonTalkBox;
+    Nest: typeof ToonTalkNest;
 }
 
 /**
@@ -98,6 +99,22 @@ export declare class ToonTalkBox extends Sprite {
     removeItem(): boolean;
     clear(): void;
     getFullness(): number;
+    delete(): void;
+}
+
+/**
+ * Nest class (matches objects.cpp) - Container with holes
+ */
+export declare class ToonTalkNest extends Sprite {
+    constructor(x: number, y: number, numHoles?: number);
+    getNumHoles(): number;
+    isHoleEmpty(index: number): boolean;
+    setHole(index: number, occupied: boolean): void;
+    clearHole(index: number): void;
+    clearAll(): void;
+    countOccupied(): number;
+    isFull(): boolean;
+    isEmpty(): boolean;
     delete(): void;
 }
 

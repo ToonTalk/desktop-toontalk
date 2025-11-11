@@ -155,6 +155,15 @@ export class WasmCore {
         console.log('[WASM Test] isEmpty:', box.isEmpty(), '- isFull:', box.isFull());
         box.delete();
 
+        // Test 9: Create Nest
+        const nest = new this.module.Nest(400, 100, 4);
+        console.log('[WASM Test] Created Nest - Holes:', nest.getNumHoles());
+        nest.setHole(0, true);
+        nest.setHole(2, true);
+        console.log('[WASM Test] Filled 2 holes - Occupied:', nest.countOccupied());
+        console.log('[WASM Test] isEmpty:', nest.isEmpty(), '- isFull:', nest.isFull());
+        nest.delete();
+
         console.log('[WASM Tests] ✅ All tests passed!');
     }
 
@@ -206,6 +215,16 @@ export class WasmCore {
             throw new Error('WASM module not loaded');
         }
         return new this.module.Box(x, y, capacity);
+    }
+
+    /**
+     * Create a Nest instance from WASM
+     */
+    createNest(x: number, y: number, numHoles: number = 3) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Nest(x, y, numHoles);
     }
 
     /**

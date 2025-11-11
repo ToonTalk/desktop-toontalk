@@ -10,6 +10,7 @@
 #include <string>
 #include <sstream>
 #include <iomanip>
+#include <vector>
 
 namespace toontalk {
 
@@ -133,6 +134,85 @@ private:
     size_t count_;
 };
 
+/**
+ * Nest class - Container with holes (slots) for holding items
+ * Based on ../source/cubby.cpp - simplified version
+ */
+class Nest : public Sprite {
+public:
+    Nest(float x, float y, size_t num_holes = 3)
+        : Sprite(x, y, 120.0f, 80.0f), num_holes_(num_holes) {
+        // Initialize all holes as empty (nullptr)
+        holes_.resize(num_holes, nullptr);
+    }
+
+    // Get number of holes
+    size_t getNumHoles() const { return num_holes_; }
+
+    // Check if a hole is empty
+    bool isHoleEmpty(size_t index) const {
+        return index < holes_.size() && holes_[index] == nullptr;
+    }
+
+    // Get hole contents (returns pointer - be careful!)
+    void* getHoleContents(size_t index) const {
+        if (index < holes_.size()) {
+            return holes_[index];
+        }
+        return nullptr;
+    }
+
+    // Set hole contents (simplified - just tracking occupied state)
+    void setHole(size_t index, bool occupied) {
+        if (index < holes_.size()) {
+            holes_[index] = occupied ? reinterpret_cast<void*>(1) : nullptr;
+        }
+    }
+
+    // Clear a specific hole
+    void clearHole(size_t index) {
+        if (index < holes_.size()) {
+            holes_[index] = nullptr;
+        }
+    }
+
+    // Clear all holes
+    void clearAll() {
+        for (size_t i = 0; i < holes_.size(); ++i) {
+            holes_[i] = nullptr;
+        }
+    }
+
+    // Count occupied holes
+    size_t countOccupied() const {
+        size_t count = 0;
+        for (const auto& hole : holes_) {
+            if (hole != nullptr) count++;
+        }
+        return count;
+    }
+
+    // Check if nest is full
+    bool isFull() const {
+        return countOccupied() >= num_holes_;
+    }
+
+    // Check if nest is empty
+    bool isEmpty() const {
+        return countOccupied() == 0;
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Nests don't move on their own
+    }
+
+private:
+    size_t num_holes_;
+    std::vector<void*> holes_; // Simplified - just tracking occupied state
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -168,4 +248,15 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("removeItem", &Box::removeItem)
         .function("clear", &Box::clear)
         .function("getFullness", &Box::getFullness);
+
+    class_<Nest, base<Sprite>>("Nest")
+        .constructor<float, float, size_t>()
+        .function("getNumHoles", &Nest::getNumHoles)
+        .function("isHoleEmpty", &Nest::isHoleEmpty)
+        .function("setHole", &Nest::setHole)
+        .function("clearHole", &Nest::clearHole)
+        .function("clearAll", &Nest::clearAll)
+        .function("countOccupied", &Nest::countOccupied)
+        .function("isFull", &Nest::isFull)
+        .function("isEmpty", &Nest::isEmpty);
 }
