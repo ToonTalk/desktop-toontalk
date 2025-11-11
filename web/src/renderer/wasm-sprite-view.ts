@@ -960,7 +960,7 @@ export class WasmSpriteView {
         if (state === 1 || state === 2) {
             const sparkSize = state === 2 ? 8 : 4;
             this.graphics.beginFill(state === 2 ? 0xFFFF00 : 0xFFD700);
-            this.graphics.drawStar(0, -40, 4, sparkSize, sparkSize * 0.5);
+            this.drawStar(0, -40, 4, sparkSize, sparkSize * 0.5);
             this.graphics.endFill();
         }
 
@@ -972,7 +972,7 @@ export class WasmSpriteView {
                 const x = Math.cos(angle) * distance;
                 const y = Math.sin(angle) * distance;
                 this.graphics.beginFill(0xFF4500, 0.7);
-                this.graphics.drawStar(x, y, 4, 8, 4);
+                this.drawStar(x, y, 4, 8, 4);
                 this.graphics.endFill();
             }
         }
@@ -1201,6 +1201,28 @@ export class WasmSpriteView {
         stateText.anchor.set(0.5);
         stateText.y = 45;
         this.graphics.addChild(stateText);
+    }
+
+    /**
+     * Helper method to draw a star shape using PixiJS Graphics
+     * @param x Center X position
+     * @param y Center Y position
+     * @param points Number of star points
+     * @param outerRadius Outer radius of star
+     * @param innerRadius Inner radius of star
+     */
+    private drawStar(x: number, y: number, points: number, outerRadius: number, innerRadius: number): void {
+        const path: number[] = [];
+        const step = Math.PI / points;
+
+        for (let i = 0; i < points * 2; i++) {
+            const radius = i % 2 === 0 ? outerRadius : innerRadius;
+            const angle = i * step - Math.PI / 2;
+            path.push(x + Math.cos(angle) * radius);
+            path.push(y + Math.sin(angle) * radius);
+        }
+
+        this.graphics.drawPolygon(path);
     }
 
     private drawGenericSprite(): void {
