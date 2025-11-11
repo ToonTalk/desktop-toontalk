@@ -35,6 +35,12 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     Expander: typeof ToonTalkExpander;
     Copier: typeof ToonTalkCopier;
     Eraser: typeof ToonTalkEraser;
+    Cubby: typeof ToonTalkCubby;
+    Button: typeof ToonTalkButton;
+    Stack: typeof ToonTalkStack;
+    Flipper: typeof ToonTalkFlipper;
+    Meter: typeof ToonTalkMeter;
+    Beeper: typeof ToonTalkBeeper;
 
     // Enums
     WandMode: typeof WandMode;
@@ -51,6 +57,10 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     ExpanderState: typeof ExpanderState;
     CopierState: typeof CopierState;
     EraserState: typeof EraserState;
+    ButtonState: typeof ButtonState;
+    FlipperMode: typeof FlipperMode;
+    MeterState: typeof MeterState;
+    BeeperState: typeof BeeperState;
 }
 
 /**
@@ -565,6 +575,149 @@ export enum EraserState {
     READY = 0,
     ERASING = 1,
     DONE = 2
+}
+
+/**
+ * Cubby class (matches objects.cpp) - Multi-hole container with labels
+ */
+export declare class ToonTalkCubby extends Sprite {
+    constructor(x: number, y: number, numHoles?: number);
+    getNumHoles(): number;
+    getFilledCount(): number;
+    isHoleFilled(index: number): boolean;
+    setHoleFilled(index: number, filled: boolean): void;
+    getHoleLabel(index: number): string;
+    setHoleLabel(index: number, label: string): void;
+    isFull(): boolean;
+    isEmpty(): boolean;
+    clear(): void;
+    delete(): void;
+}
+
+/**
+ * Button class (matches objects.cpp) - UI control with keyboard binding
+ */
+export declare class ToonTalkButton extends Sprite {
+    constructor(x: number, y: number, keyBinding?: string);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getKeyBinding(): string;
+    setKeyBinding(key: string): void;
+    getPressCount(): number;
+    setPressCount(count: number): void;
+    isEnabled(): boolean;
+    setEnabled(enabled: boolean): void;
+    press(): void;
+    release(): void;
+    hover(): void;
+    unhover(): void;
+    delete(): void;
+}
+
+/**
+ * Button state enum (matches objects.cpp)
+ */
+export enum ButtonState {
+    NORMAL = 0,
+    HOVERED = 1,
+    PRESSED = 2,
+    DISABLED = 3
+}
+
+/**
+ * Stack class (matches objects.cpp) - LIFO data structure
+ */
+export declare class ToonTalkStack extends Sprite {
+    constructor(x: number, y: number, capacity?: number);
+    getCapacity(): number;
+    getCount(): number;
+    isFull(): boolean;
+    isEmpty(): boolean;
+    getFullness(): number;
+    push(): boolean;
+    pop(): boolean;
+    peek(): number;
+    clear(): void;
+    setCapacity(capacity: number): void;
+    delete(): void;
+}
+
+export declare class ToonTalkFlipper extends Sprite {
+    constructor(x: number, y: number);
+    getModeInt(): number;
+    setModeInt(mode: number): void;
+    nextMode(): void;
+    doFlip(): void;
+    reset(): void;
+    getFlipCount(): number;
+    setFlipCount(count: number): void;
+    getRotationAngle(): number;
+    setRotationAngle(angle: number): void;
+    hasAttached(): boolean;
+    setAttached(attached: boolean): void;
+    delete(): void;
+}
+
+export enum FlipperMode {
+    HORIZONTAL = 0,
+    VERTICAL = 1,
+    ROTATE_CW = 2,
+    ROTATE_CCW = 3
+}
+
+export declare class ToonTalkMeter extends Sprite {
+    constructor(x: number, y: number, minValue?: number, maxValue?: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    getValue(): number;
+    setValue(value: number): void;
+    getMinValue(): number;
+    setMinValue(value: number): void;
+    getMaxValue(): number;
+    setMaxValue(value: number): void;
+    getWarningThreshold(): number;
+    setWarningThreshold(value: number): void;
+    getCriticalThreshold(): number;
+    setCriticalThreshold(value: number): void;
+    getPercentage(): number;
+    isWarning(): boolean;
+    isCritical(): boolean;
+    isMaxed(): boolean;
+    increment(amount?: number): void;
+    decrement(amount?: number): void;
+    delete(): void;
+}
+
+export enum MeterState {
+    NORMAL = 0,
+    WARNING = 1,
+    CRITICAL = 2,
+    MAXED = 3
+}
+
+export declare class ToonTalkBeeper extends Sprite {
+    constructor(x: number, y: number);
+    getStateInt(): number;
+    setStateInt(state: number): void;
+    beep(): void;
+    startContinuous(): void;
+    stop(): void;
+    getBeepCount(): number;
+    setBeepCount(count: number): void;
+    getFrequency(): number;
+    setFrequency(freq: number): void;
+    getDuration(): number;
+    setDuration(dur: number): void;
+    getTimer(): number;
+    isBeeping(): boolean;
+    reset(): void;
+    delete(): void;
+}
+
+export enum BeeperState {
+    SILENT = 0,
+    BEEPING = 1,
+    CONTINUOUS = 2
 }
 
 /**
