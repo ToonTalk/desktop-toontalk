@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -53,6 +53,8 @@ export class WasmSpriteView {
         if ('getText' in this.wasmSprite) return 'text';
         if ('getNumHoles' in this.wasmSprite) return 'nest';
         if ('getCapacity' in this.wasmSprite) return 'box';
+        if ('getModeInt' in this.wasmSprite) return 'wand';
+        if ('isActive' in this.wasmSprite && !('getModeInt' in this.wasmSprite)) return 'scale';
         return 'sprite';
     }
 
@@ -80,6 +82,12 @@ export class WasmSpriteView {
                 break;
             case 'nest':
                 this.drawNest();
+                break;
+            case 'scale':
+                this.drawScale();
+                break;
+            case 'wand':
+                this.drawWand();
                 break;
             default:
                 this.drawGenericSprite();
@@ -300,6 +308,136 @@ export class WasmSpriteView {
         this.graphics.addChild(statusText);
 
         this.textDisplay = statusText;
+    }
+
+    private drawScale(): void {
+        const scale = this.wasmSprite as ToonTalkScale;
+        const isActive = scale.isActive();
+
+        // Silver/gray scale platform
+        this.graphics.beginFill(0xC0C0C0);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+        this.graphics.endFill();
+
+        // Border (gold if active, gray if not)
+        this.graphics.lineStyle(3, isActive ? 0xFFD700 : 0x808080);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+
+        // Draw scale platform with balance line
+        this.graphics.lineStyle(2, 0x404040);
+        this.graphics.moveTo(-25, 0);
+        this.graphics.lineTo(25, 0);
+
+        // Draw two pans (left and right)
+        this.graphics.beginFill(0xE0E0E0);
+        this.graphics.drawCircle(-15, -5, 10);
+        this.graphics.drawCircle(15, -5, 10);
+        this.graphics.endFill();
+
+        // Label
+        const label = new PIXI.Text('Scale', {
+            fontSize: 10,
+            fill: isActive ? 0xFFD700 : 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 20;
+        this.graphics.addChild(label);
+
+        // Status text
+        const statusText = new PIXI.Text(isActive ? 'ACTIVE' : 'Ready', {
+            fontSize: 8,
+            fill: isActive ? 0xFFD700 : 0xCCCCCC,
+            stroke: 0x000000,
+            strokeThickness: 1
+        });
+        statusText.anchor.set(0.5);
+        statusText.y = -22;
+        this.graphics.addChild(statusText);
+    }
+
+    private drawWand(): void {
+        const wand = this.wasmSprite as ToonTalkWand;
+        const mode = wand.getModeInt();
+        const isActive = wand.isActive();
+
+        // Wand stick (brown handle)
+        this.graphics.beginFill(0x8B4513);
+        this.graphics.drawRect(-5, -20, 10, 40);
+        this.graphics.endFill();
+
+        // Star at top (color changes based on mode)
+        const modeColors = [
+            0x32CD32, // CREATE_NUMBER - green
+            0xFFFF00, // CREATE_TEXT - yellow
+            0x8B4513, // CREATE_BOX - brown
+            0x9370DB, // CREATE_NEST - purple
+            0xFFD700  // CREATE_BIRD - gold
+        ];
+        const starColor = modeColors[mode] || 0xFFFFFF;
+
+        // Draw star
+        this.graphics.beginFill(starColor);
+        const numPoints = 5;
+        const outerRadius = 15;
+        const innerRadius = 7;
+        for (let i = 0; i < numPoints * 2; i++) {
+            const radius = i % 2 === 0 ? outerRadius : innerRadius;
+            const angle = (i * Math.PI) / numPoints - Math.PI / 2;
+            const x = Math.cos(angle) * radius;
+            const y = Math.sin(angle) * radius - 30;
+            if (i === 0) {
+                this.graphics.moveTo(x, y);
+            } else {
+                this.graphics.lineTo(x, y);
+            }
+        }
+        this.graphics.closePath();
+        this.graphics.endFill();
+
+        // Border/glow if active
+        if (isActive) {
+            this.graphics.lineStyle(3, 0xFFFFFF, 0.8);
+            for (let i = 0; i < numPoints * 2; i++) {
+                const radius = i % 2 === 0 ? outerRadius : innerRadius;
+                const angle = (i * Math.PI) / numPoints - Math.PI / 2;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius - 30;
+                if (i === 0) {
+                    this.graphics.moveTo(x, y);
+                } else {
+                    this.graphics.lineTo(x, y);
+                }
+            }
+            this.graphics.closePath();
+        }
+
+        // Label
+        const modeNames = ['Number', 'Text', 'Box', 'Nest', 'Bird'];
+        const label = new PIXI.Text('Wand', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 25;
+        this.graphics.addChild(label);
+
+        // Mode text
+        const modeText = new PIXI.Text(modeNames[mode] || '?', {
+            fontSize: 8,
+            fill: starColor,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        modeText.anchor.set(0.5);
+        modeText.y = 15;
+        this.graphics.addChild(modeText);
     }
 
     private drawGenericSprite(): void {

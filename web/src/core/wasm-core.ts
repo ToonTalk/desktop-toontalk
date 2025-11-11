@@ -164,6 +164,24 @@ export class WasmCore {
         console.log('[WASM Test] isEmpty:', nest.isEmpty(), '- isFull:', nest.isFull());
         nest.delete();
 
+        // Test 10: Create Scale
+        const scale = new this.module.Scale(500, 100);
+        console.log('[WASM Test] Created Scale at:', scale.getX(), scale.getY());
+        console.log('[WASM Test] Scale active:', scale.isActive());
+        scale.setActive(true);
+        console.log('[WASM Test] Scale activated:', scale.isActive());
+        scale.delete();
+
+        // Test 11: Create Wand
+        const wand = new this.module.Wand(600, 100, this.module.WandMode.CREATE_TEXT);
+        console.log('[WASM Test] Created Wand at:', wand.getX(), wand.getY());
+        console.log('[WASM Test] Wand mode:', wand.getModeInt(), '(CREATE_TEXT=1)');
+        wand.nextMode();
+        console.log('[WASM Test] After nextMode():', wand.getModeInt(), '(CREATE_BOX=2)');
+        wand.previousMode();
+        console.log('[WASM Test] After previousMode():', wand.getModeInt(), '(CREATE_TEXT=1)');
+        wand.delete();
+
         console.log('[WASM Tests] ✅ All tests passed!');
     }
 
@@ -225,6 +243,26 @@ export class WasmCore {
             throw new Error('WASM module not loaded');
         }
         return new this.module.Nest(x, y, numHoles);
+    }
+
+    /**
+     * Create a Scale instance from WASM
+     */
+    createScale(x: number, y: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Scale(x, y);
+    }
+
+    /**
+     * Create a Wand instance from WASM
+     */
+    createWand(x: number, y: number, mode?: number) {
+        if (!this.module) {
+            throw new Error('WASM module not loaded');
+        }
+        return new this.module.Wand(x, y, mode);
     }
 
     /**

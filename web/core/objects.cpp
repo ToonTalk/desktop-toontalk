@@ -213,6 +213,92 @@ private:
     std::vector<void*> holes_; // Simplified - just tracking occupied state
 };
 
+/**
+ * Scale class - Copy tool for duplicating objects
+ * Based on ../source/scale.cpp - simplified version
+ */
+class Scale : public Sprite {
+public:
+    Scale(float x, float y)
+        : Sprite(x, y, 60.0f, 60.0f), active_(false) {}
+
+    // Get/set active state (being used to copy)
+    bool isActive() const { return active_; }
+    void setActive(bool active) { active_ = active; }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Scales don't move on their own
+    }
+
+private:
+    bool active_;
+};
+
+/**
+ * Wand class - Magic wand for creating new objects
+ * Based on ../source/wand.cpp - simplified version
+ */
+class Wand : public Sprite {
+public:
+    enum WandMode {
+        CREATE_NUMBER = 0,
+        CREATE_TEXT = 1,
+        CREATE_BOX = 2,
+        CREATE_NEST = 3,
+        CREATE_BIRD = 4
+    };
+
+    Wand(float x, float y, WandMode mode = CREATE_NUMBER)
+        : Sprite(x, y, 50.0f, 80.0f), mode_(mode), active_(false) {}
+
+    // Get/set wand mode
+    WandMode getMode() const { return mode_; }
+    void setMode(WandMode mode) { mode_ = mode; }
+
+    // Get mode as integer (for JS binding)
+    int getModeInt() const { return static_cast<int>(mode_); }
+    void setModeInt(int mode) {
+        if (mode >= CREATE_NUMBER && mode <= CREATE_BIRD) {
+            mode_ = static_cast<WandMode>(mode);
+        }
+    }
+
+    // Get/set active state (being waved)
+    bool isActive() const { return active_; }
+    void setActive(bool active) { active_ = active; }
+
+    // Cycle through modes
+    void nextMode() {
+        int next = static_cast<int>(mode_) + 1;
+        if (next > CREATE_BIRD) {
+            mode_ = CREATE_NUMBER;
+        } else {
+            mode_ = static_cast<WandMode>(next);
+        }
+    }
+
+    void previousMode() {
+        int prev = static_cast<int>(mode_) - 1;
+        if (prev < CREATE_NUMBER) {
+            mode_ = CREATE_BIRD;
+        } else {
+            mode_ = static_cast<WandMode>(prev);
+        }
+    }
+
+    // Override update
+    void update(float deltaTime) override {
+        Sprite::update(deltaTime);
+        // Wands don't move on their own
+    }
+
+private:
+    WandMode mode_;
+    bool active_;
+};
+
 } // namespace toontalk
 
 // Emscripten bindings - only bind the NEW classes (Sprite is already bound in sprite.cpp)
@@ -259,4 +345,26 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("countOccupied", &Nest::countOccupied)
         .function("isFull", &Nest::isFull)
         .function("isEmpty", &Nest::isEmpty);
+
+    class_<Scale, base<Sprite>>("Scale")
+        .constructor<float, float>()
+        .function("isActive", &Scale::isActive)
+        .function("setActive", &Scale::setActive);
+
+    class_<Wand, base<Sprite>>("Wand")
+        .constructor<float, float, Wand::WandMode>()
+        .function("getModeInt", &Wand::getModeInt)
+        .function("setModeInt", &Wand::setModeInt)
+        .function("isActive", &Wand::isActive)
+        .function("setActive", &Wand::setActive)
+        .function("nextMode", &Wand::nextMode)
+        .function("previousMode", &Wand::previousMode);
+
+    // Wand mode enum values
+    enum_<Wand::WandMode>("WandMode")
+        .value("CREATE_NUMBER", Wand::CREATE_NUMBER)
+        .value("CREATE_TEXT", Wand::CREATE_TEXT)
+        .value("CREATE_BOX", Wand::CREATE_BOX)
+        .value("CREATE_NEST", Wand::CREATE_NEST)
+        .value("CREATE_BIRD", Wand::CREATE_BIRD);
 }

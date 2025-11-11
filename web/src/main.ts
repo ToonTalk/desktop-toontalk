@@ -123,12 +123,24 @@ class ToonTalkWeb {
         nest1.setHole(2, true);  // Fill third hole
         this.renderer.addWasmSprite(new WasmSpriteView(nest1, this.renderer.getStage(), this.renderer));
 
+        // Row 4 (Bottom-Bottom): Tools - Scale and Wand
+        const scale1 = wasmCore.createScale(centerX - 200, centerY + 220);
+        this.renderer.addWasmSprite(new WasmSpriteView(scale1, this.renderer.getStage(), this.renderer));
+
+        const wand1 = wasmCore.createWand(centerX - 50, centerY + 220, 1); // Mode 1 = CREATE_TEXT
+        this.renderer.addWasmSprite(new WasmSpriteView(wand1, this.renderer.getStage(), this.renderer));
+
+        const wand2 = wasmCore.createWand(centerX + 100, centerY + 220, 4); // Mode 4 = CREATE_BIRD
+        this.renderer.addWasmSprite(new WasmSpriteView(wand2, this.renderer.getStage(), this.renderer));
+
         console.log('✨ WASM scene created!');
-        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest');
+        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest, 1 Scale, 2 Wands');
         console.log('   💡 Drag objects to move them');
         console.log('   💡 Drop Number on Number to add');
         console.log('   💡 Drop Text on Text to concatenate');
         console.log('   💡 Drop anything on Box or Nest to store');
+        console.log('   💡 Use Scale to copy objects (future)');
+        console.log('   💡 Use Wand to create objects (future)');
     }
 
     private startGameLoop(): void {
