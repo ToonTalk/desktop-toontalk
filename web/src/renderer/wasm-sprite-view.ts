@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js';
-import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper } from '../types/wasm';
+import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper, ToonTalkConnector, ToonTalkTimer, ToonTalkCounter } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 
 /**
@@ -9,7 +9,7 @@ import type { ToonTalkRenderer } from './renderer';
  * visual representation that stays synchronized with the C++ object.
  */
 export class WasmSpriteView {
-    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper;
+    private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter;
     private graphics: PIXI.Graphics;
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
@@ -23,7 +23,7 @@ export class WasmSpriteView {
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
 
-    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper, stage: PIXI.Container, renderer: ToonTalkRenderer) {
+    constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
@@ -76,6 +76,9 @@ export class WasmSpriteView {
         if ('doFlip' in this.wasmSprite && 'getRotationAngle' in this.wasmSprite && 'nextMode' in this.wasmSprite) return 'flipper';
         if ('getPercentage' in this.wasmSprite && 'isWarning' in this.wasmSprite && 'isCritical' in this.wasmSprite) return 'meter';
         if ('beep' in this.wasmSprite && 'getFrequency' in this.wasmSprite && 'startContinuous' in this.wasmSprite) return 'beeper';
+        if ('connect' in this.wasmSprite && 'getSourceId' in this.wasmSprite && 'getTargetId' in this.wasmSprite) return 'connector';
+        if ('start' in this.wasmSprite && 'pause' in this.wasmSprite && 'getProgress' in this.wasmSprite && 'getDuration' in this.wasmSprite) return 'timer';
+        if ('increment' in this.wasmSprite && 'decrement' in this.wasmSprite && 'getStep' in this.wasmSprite) return 'counter';
         return 'sprite';
     }
 
@@ -172,6 +175,15 @@ export class WasmSpriteView {
                 break;
             case 'beeper':
                 this.drawBeeper();
+                break;
+            case 'connector':
+                this.drawConnector();
+                break;
+            case 'timer':
+                this.drawTimer();
+                break;
+            case 'counter':
+                this.drawCounter();
                 break;
             default:
                 this.drawGenericSprite();
@@ -1848,6 +1860,335 @@ export class WasmSpriteView {
         stateText.anchor.set(0.5);
         stateText.y = 50;
         this.graphics.addChild(stateText);
+    }
+
+    private drawConnector(): void {
+        const connector = this.wasmSprite as ToonTalkConnector;
+        const state = connector.getStateInt();
+        const connectionCount = connector.getConnectionCount();
+        const isConnected = connector.isConnected();
+        const hasError = connector.hasError();
+
+        // State colors
+        const stateColors = [
+            0x808080, // DISCONNECTED - gray
+            0xFFFF00, // CONNECTING - yellow
+            0x00FF00, // CONNECTED - green
+            0xFF0000  // ERROR - red
+        ];
+
+        // Connector body (plug/socket shape - yellow/gold)
+        this.graphics.beginFill(0xFFD700);
+        this.graphics.drawRoundedRect(-30, -20, 60, 40, 5);
+        this.graphics.endFill();
+
+        // Border (color based on state)
+        this.graphics.lineStyle(3, stateColors[state] || 0x808080);
+        this.graphics.drawRoundedRect(-30, -20, 60, 40, 5);
+
+        // Connection ports (two circles)
+        const portY = 0;
+        this.graphics.beginFill(isConnected ? 0x00FF00 : 0x404040);
+        this.graphics.drawCircle(-15, portY, 8);
+        this.graphics.endFill();
+
+        this.graphics.beginFill(isConnected ? 0x00FF00 : 0x404040);
+        this.graphics.drawCircle(15, portY, 8);
+        this.graphics.endFill();
+
+        // Connection line (if connected)
+        if (isConnected) {
+            this.graphics.lineStyle(3, 0x00FF00);
+            this.graphics.moveTo(-15, portY);
+            this.graphics.lineTo(15, portY);
+        } else if (state === 1) { // CONNECTING - animated dashed line
+            this.graphics.lineStyle(2, 0xFFFF00, 0.7);
+            for (let i = -15; i < 15; i += 8) {
+                this.graphics.moveTo(i, portY);
+                this.graphics.lineTo(i + 4, portY);
+            }
+        }
+
+        // Connection icon
+        const icon = new PIXI.Text(state === 2 ? '🔗' : (state === 3 ? '⚠️' : '○○'), {
+            fontSize: 16
+        });
+        icon.anchor.set(0.5);
+        icon.y = 0;
+        this.graphics.addChild(icon);
+
+        // Label
+        const label = new PIXI.Text('Connector', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 35;
+        this.graphics.addChild(label);
+
+        // Connection count
+        if (connectionCount > 0) {
+            const countText = new PIXI.Text(`×${connectionCount}`, {
+                fontSize: 10,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 2,
+                backgroundColor: 0x00FF00,
+                padding: 2
+            });
+            countText.anchor.set(0.5);
+            countText.x = 22;
+            countText.y = -18;
+            this.graphics.addChild(countText);
+        }
+
+        // State indicator
+        const stateNames = ['DISC', 'CONN-ING', 'CONN', 'ERROR'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -30;
+        this.graphics.addChild(stateText);
+    }
+
+    private drawTimer(): void {
+        const timer = this.wasmSprite as ToonTalkTimer;
+        const state = timer.getStateInt();
+        const duration = timer.getDuration();
+        const progress = timer.getProgress();
+        const remaining = timer.getRemaining();
+        const isLoop = timer.isLoop();
+
+        // Timer body (stopwatch shape - silver/blue)
+        const bodyColor = state === 1 ? 0x4169E1 : 0xC0C0C0;
+        this.graphics.beginFill(bodyColor);
+        this.graphics.drawCircle(0, 0, 35);
+        this.graphics.endFill();
+
+        // Border
+        this.graphics.lineStyle(3, 0x696969);
+        this.graphics.drawCircle(0, 0, 35);
+
+        // Progress arc (if running or paused)
+        if (progress > 0 && progress <= 1) {
+            const startAngle = -Math.PI / 2;
+            const endAngle = startAngle + (progress * 2 * Math.PI);
+            this.graphics.lineStyle(5, state === 1 ? 0x00FF00 : 0xFFFF00);
+            this.graphics.arc(0, 0, 30, startAngle, endAngle);
+        }
+
+        // Clock ticks
+        for (let i = 0; i < 12; i++) {
+            const angle = (i / 12) * Math.PI * 2 - Math.PI / 2;
+            const innerRadius = 25;
+            const outerRadius = i % 3 === 0 ? 30 : 28;
+            const x1 = Math.cos(angle) * innerRadius;
+            const y1 = Math.sin(angle) * innerRadius;
+            const x2 = Math.cos(angle) * outerRadius;
+            const y2 = Math.sin(angle) * outerRadius;
+            this.graphics.lineStyle(1, 0x000000);
+            this.graphics.moveTo(x1, y1);
+            this.graphics.lineTo(x2, y2);
+        }
+
+        // Timer hand (shows remaining time)
+        const handAngle = (1 - progress) * 2 * Math.PI - Math.PI / 2;
+        this.graphics.lineStyle(3, 0xFF0000);
+        this.graphics.moveTo(0, 0);
+        this.graphics.lineTo(Math.cos(handAngle) * 20, Math.sin(handAngle) * 20);
+
+        // Center dot
+        this.graphics.beginFill(0xFF0000);
+        this.graphics.drawCircle(0, 0, 3);
+        this.graphics.endFill();
+
+        // Remaining time display
+        const remainingText = new PIXI.Text(`${remaining.toFixed(1)}s`, {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        remainingText.anchor.set(0.5);
+        remainingText.y = 10;
+        this.graphics.addChild(remainingText);
+
+        // Label
+        const label = new PIXI.Text('Timer', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 50;
+        this.graphics.addChild(label);
+
+        // Loop indicator
+        if (isLoop) {
+            const loopIcon = new PIXI.Text('🔄', {
+                fontSize: 12
+            });
+            loopIcon.anchor.set(0.5);
+            loopIcon.x = 28;
+            loopIcon.y = -28;
+            this.graphics.addChild(loopIcon);
+        }
+
+        // State indicator
+        const stateNames = ['STOP', 'RUN', 'PAUSE', 'DONE'];
+        const stateColors = [0x808080, 0x00FF00, 0xFFFF00, 0xFF6347];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -42;
+        this.graphics.addChild(stateText);
+
+        // Play/pause/stop icon
+        let icon = '⏸️';
+        if (state === 0) icon = '⏹️';
+        else if (state === 1) icon = '▶️';
+        else if (state === 3) icon = '✅';
+
+        const iconText = new PIXI.Text(icon, {
+            fontSize: 12
+        });
+        iconText.anchor.set(0.5);
+        iconText.y = -15;
+        this.graphics.addChild(iconText);
+    }
+
+    private drawCounter(): void {
+        const counter = this.wasmSprite as ToonTalkCounter;
+        const state = counter.getStateInt();
+        const value = counter.getValue();
+        const step = counter.getStep();
+        const isAtMin = counter.isAtMin();
+        const isAtMax = counter.isAtMax();
+
+        // Counter body (digital display shape - dark blue)
+        this.graphics.beginFill(0x1C1C3C);
+        this.graphics.drawRoundedRect(-40, -40, 80, 80, 8);
+        this.graphics.endFill();
+
+        // Border (color based on state)
+        const stateColors = [
+            0x4169E1, // NORMAL - blue
+            0xFF6347, // AT_MIN - red
+            0xFF6347, // AT_MAX - red
+            0xFF0000  // OVERFLOW - bright red
+        ];
+        this.graphics.lineStyle(3, stateColors[state] || 0x4169E1);
+        this.graphics.drawRoundedRect(-40, -40, 80, 80, 8);
+
+        // Value display (large digital style)
+        const valueText = new PIXI.Text(`${value}`, {
+            fontSize: 24,
+            fill: state === 0 ? 0x00FF00 : 0xFF6347,
+            fontWeight: 'bold',
+            fontFamily: 'monospace',
+            stroke: 0x000000,
+            strokeThickness: 3
+        });
+        valueText.anchor.set(0.5);
+        valueText.y = -5;
+        this.graphics.addChild(valueText);
+
+        // Increment button (up arrow)
+        const upColor = isAtMax ? 0x404040 : 0x00FF00;
+        this.graphics.beginFill(upColor, 0.3);
+        this.graphics.drawCircle(0, -25, 8);
+        this.graphics.endFill();
+        this.graphics.lineStyle(2, upColor);
+        this.graphics.moveTo(-5, -22);
+        this.graphics.lineTo(0, -27);
+        this.graphics.lineTo(5, -22);
+
+        // Decrement button (down arrow)
+        const downColor = isAtMin ? 0x404040 : 0xFF6347;
+        this.graphics.beginFill(downColor, 0.3);
+        this.graphics.drawCircle(0, 25, 8);
+        this.graphics.endFill();
+        this.graphics.lineStyle(2, downColor);
+        this.graphics.moveTo(-5, 22);
+        this.graphics.lineTo(0, 27);
+        this.graphics.lineTo(5, 22);
+
+        // Step indicator
+        if (step > 1) {
+            const stepText = new PIXI.Text(`±${step}`, {
+                fontSize: 8,
+                fill: 0xFFFF00,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 1
+            });
+            stepText.anchor.set(0.5);
+            stepText.x = 28;
+            stepText.y = 0;
+            this.graphics.addChild(stepText);
+        }
+
+        // Label
+        const label = new PIXI.Text('Counter', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        label.anchor.set(0.5);
+        label.y = 50;
+        this.graphics.addChild(label);
+
+        // State indicator
+        const stateNames = ['NORMAL', 'MIN', 'MAX', 'OVER'];
+        const stateText = new PIXI.Text(stateNames[state] || '?', {
+            fontSize: 8,
+            fill: stateColors[state] || 0xCCCCCC,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 2
+        });
+        stateText.anchor.set(0.5);
+        stateText.y = -35;
+        this.graphics.addChild(stateText);
+
+        // Warning icons for limit states
+        if (isAtMin) {
+            const minIcon = new PIXI.Text('⬇️', {
+                fontSize: 12
+            });
+            minIcon.anchor.set(0.5);
+            minIcon.x = -28;
+            minIcon.y = 25;
+            this.graphics.addChild(minIcon);
+        }
+        if (isAtMax) {
+            const maxIcon = new PIXI.Text('⬆️', {
+                fontSize: 12
+            });
+            maxIcon.anchor.set(0.5);
+            maxIcon.x = 28;
+            maxIcon.y = -25;
+            this.graphics.addChild(maxIcon);
+        }
     }
 
     /**
