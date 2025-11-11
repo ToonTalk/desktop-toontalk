@@ -117,16 +117,18 @@ class ToonTalkWeb {
         box1.addItem();  // 5 items in the box
         this.renderer.addWasmSprite(new WasmSpriteView(box1, this.renderer.getStage(), this.renderer));
 
-        // Center: A generic sprite
-        const sprite1 = wasmCore.createSprite(centerX, centerY, 50, 50);
-        this.renderer.addWasmSprite(new WasmSpriteView(sprite1, this.renderer.getStage(), this.renderer));
+        // Center: A Nest with 4 holes (2 filled)
+        const nest1 = wasmCore.createNest(centerX, centerY, 4);
+        nest1.setHole(0, true);  // Fill first hole
+        nest1.setHole(2, true);  // Fill third hole
+        this.renderer.addWasmSprite(new WasmSpriteView(nest1, this.renderer.getStage(), this.renderer));
 
         console.log('✨ WASM scene created!');
-        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Sprite');
+        console.log('   Objects: 2 Birds, 2 Numbers, 2 Texts, 1 Box, 1 Nest');
         console.log('   💡 Drag objects to move them');
         console.log('   💡 Drop Number on Number to add');
         console.log('   💡 Drop Text on Text to concatenate');
-        console.log('   💡 Drop anything on Box to store');
+        console.log('   💡 Drop anything on Box or Nest to store');
     }
 
     private startGameLoop(): void {

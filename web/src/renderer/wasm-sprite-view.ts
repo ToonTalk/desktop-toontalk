@@ -521,13 +521,19 @@ export class WasmSpriteView {
 
             // Also update the fill level visual
             this.drawBox(); // Redraw to show new fill level
+        } else if (type === 'nest' && this.textDisplay) {
+            const nest = this.wasmSprite as ToonTalkNest;
+            this.textDisplay.text = `${nest.countOccupied()} / ${nest.getNumHoles()}`;
+
+            // Also update the hole visuals
+            this.drawNest(); // Redraw to show filled/empty holes
         }
     }
 
     /**
      * Get the underlying WASM sprite
      */
-    getWasmSprite(): Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox {
+    getWasmSprite(): Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest {
         return this.wasmSprite;
     }
 
@@ -560,6 +566,9 @@ export class WasmSpriteView {
 
         // Box can accept any object (storage)
         if (myType === 'box') return true;
+
+        // Nest can accept any object (into holes)
+        if (myType === 'nest') return true;
 
         return false;
     }
@@ -638,6 +647,28 @@ export class WasmSpriteView {
                 this.renderer.removeWasmSprite(droppedSprite);
             } else {
                 console.log('❌ Box is full!');
+            }
+        }
+
+        // Nest accepts anything (into first empty hole)
+        else if (myType === 'nest') {
+            const nest = this.wasmSprite as ToonTalkNest;
+
+            if (!nest.isFull()) {
+                // Find first empty hole
+                const numHoles = nest.getNumHoles();
+                for (let i = 0; i < numHoles; i++) {
+                    if (nest.isHoleEmpty(i)) {
+                        nest.setHole(i, true);
+                        console.log(`✨ Added item to nest hole ${i} (${nest.countOccupied()} / ${numHoles})`);
+
+                        // Remove the dropped object
+                        this.renderer.removeWasmSprite(droppedSprite);
+                        break;
+                    }
+                }
+            } else {
+                console.log('❌ Nest is full!');
             }
         }
     }
