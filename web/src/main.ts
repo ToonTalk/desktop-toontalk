@@ -270,6 +270,13 @@ class ToonTalkWeb {
         const canvas = this.renderer.getView();
         const gameEngine = getGameEngine();
 
+        // Check if camera system is available
+        if (!gameEngine.getSceneManager()) {
+            console.log('[Camera] Camera system not available - controls disabled');
+            console.log('[Camera] Rebuild WASM to enable camera controls');
+            return;
+        }
+
         // Zoom with mouse wheel
         canvas.addEventListener('wheel', (event: WheelEvent) => {
             event.preventDefault();
