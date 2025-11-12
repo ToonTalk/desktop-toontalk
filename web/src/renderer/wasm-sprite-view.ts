@@ -2,6 +2,7 @@ import * as PIXI from 'pixi.js';
 import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper, ToonTalkConnector, ToonTalkTimer, ToonTalkCounter, ToonTalkSampler, ToonTalkComparator, ToonTalkRandomizer, ToonTalkLogger, ToonTalkFilter, ToonTalkAccumulator, ToonTalkSequencer, ToonTalkTrigger, ToonTalkScheduler } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
 import { getGameEngine } from '../core/game-engine';
+import { getTextureManager } from '../core/texture-manager';
 
 /**
  * WasmSpriteView - Bridges WASM Sprite objects with PixiJS rendering
@@ -16,7 +17,9 @@ import { getGameEngine } from '../core/game-engine';
  */
 export class WasmSpriteView {
     private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer | ToonTalkLogger | ToonTalkFilter | ToonTalkAccumulator | ToonTalkSequencer | ToonTalkTrigger | ToonTalkScheduler;
-    private graphics: PIXI.Graphics;
+    private container: PIXI.Container;  // Container for both sprite and graphics
+    private sprite?: PIXI.Sprite;       // Textured sprite (if texture available)
+    private graphics: PIXI.Graphics;    // Graphics overlay (for text, borders, etc.)
     private textDisplay?: PIXI.Text;
     private destroyed: boolean = false;
     private renderer: ToonTalkRenderer;
@@ -36,21 +39,25 @@ export class WasmSpriteView {
 
     constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer | ToonTalkLogger | ToonTalkFilter | ToonTalkAccumulator | ToonTalkSequencer | ToonTalkTrigger | ToonTalkScheduler, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
+        this.container = new PIXI.Container();
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
 
-        // Draw the sprite (we'll enhance this later with actual textures)
+        // Add graphics to container
+        this.container.addChild(this.graphics);
+
+        // Draw the sprite with original ToonTalk textures
         this.drawSprite();
 
-        // Make it interactive
-        this.graphics.eventMode = 'static';
-        this.graphics.cursor = 'pointer';
+        // Make container interactive
+        this.container.eventMode = 'static';
+        this.container.cursor = 'pointer';
 
         // Add interaction handlers
         this.setupInteractions();
 
-        // Add to stage
-        stage.addChild(this.graphics);
+        // Add container to stage
+        stage.addChild(this.container);
 
         // Register with game engine systems (if available)
         this.registerWithGameEngine();
@@ -139,13 +146,45 @@ export class WasmSpriteView {
 
     /**
      * Draw a visual representation of the sprite
-     * Different shapes and styles for each object type
+     * Uses original ToonTalk textures when available, falls back to Graphics primitives
      */
     private drawSprite(): void {
         const type = this.getObjectType();
+        const textureManager = getTextureManager();
 
         this.graphics.clear();
 
+        // Try to use original ToonTalk texture
+        if (textureManager.isLoaded()) {
+            const texture = textureManager.getTexture(type);
+            if (texture) {
+                // Create textured sprite
+                this.sprite = new PIXI.Sprite(texture);
+
+                // Scale to match original size (textures are 88x96 pixels in original ToonTalk)
+                const targetWidth = this.wasmSprite.getWidth();
+                const targetHeight = this.wasmSprite.getHeight();
+                this.sprite.width = targetWidth;
+                this.sprite.height = targetHeight;
+
+                // Center anchor for easier transformations
+                this.sprite.anchor.set(0.5, 0.5);
+                this.sprite.x = targetWidth / 2;
+                this.sprite.y = targetHeight / 2;
+
+                // Add sprite below graphics layer
+                this.container.addChildAt(this.sprite, 0);
+
+                // Still draw text overlays for numbers/text
+                if (type === 'number' || type === 'text') {
+                    this.addTextOverlay(type);
+                }
+
+                return; // Done - using texture!
+            }
+        }
+
+        // Fallback to Graphics-based drawing
         switch (type) {
             case 'bird':
                 this.drawBird();
@@ -270,6 +309,42 @@ export class WasmSpriteView {
             default:
                 this.drawGenericSprite();
                 break;
+        }
+    }
+
+    /**
+     * Add text overlay for numbers and text when using textures
+     */
+    private addTextOverlay(type: string): void {
+        if (type === 'number') {
+            const num = this.wasmSprite as ToonTalkNumber;
+            const valueText = new PIXI.Text(num.toString(), {
+                fontSize: 24,
+                fill: 0x000000,
+                fontWeight: 'bold',
+                stroke: 0xFFFFFF,
+                strokeThickness: 2
+            });
+            valueText.anchor.set(0.5);
+            valueText.x = this.wasmSprite.getWidth() / 2;
+            valueText.y = this.wasmSprite.getHeight() / 2;
+            this.container.addChild(valueText);
+            this.textDisplay = valueText;
+        } else if (type === 'text') {
+            const txt = this.wasmSprite as ToonTalkText;
+            const textContent = txt.getText() || "(empty)";
+            const valueText = new PIXI.Text(textContent, {
+                fontSize: 18,
+                fill: 0x000000,
+                fontWeight: 'normal',
+                wordWrap: true,
+                wordWrapWidth: this.wasmSprite.getWidth() - 20
+            });
+            valueText.anchor.set(0.5);
+            valueText.x = this.wasmSprite.getWidth() / 2;
+            valueText.y = this.wasmSprite.getHeight() / 2;
+            this.container.addChild(valueText);
+            this.textDisplay = valueText;
         }
     }
 
