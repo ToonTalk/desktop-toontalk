@@ -37,13 +37,13 @@ export class TextureManager {
         console.log('[TextureManager] Loading original ToonTalk graphics...');
 
         const textureMap = {
-            'box': '/assets/sprites/box.bmp',
-            'nest': '/assets/sprites/nest.bmp',
-            'bird': '/assets/sprites/pumpy.bmp',
-            'number': '/assets/sprites/texpad.bmp',
-            'text': '/assets/sprites/texpad.bmp', // Same as number in original
-            'robot': '/assets/sprites/robot.bmp',
-            'background': '/assets/backgrounds/city.bmp'
+            'box': '/assets/sprites/box.png',
+            'nest': '/assets/sprites/nest.png',
+            'bird': '/assets/sprites/pumpy.png',
+            'number': '/assets/sprites/texpad.png',
+            'text': '/assets/sprites/texpad.png', // Same as number in original
+            'robot': '/assets/sprites/robot.png',
+            'background': '/assets/backgrounds/city.png'
         };
 
         const loadPromises: Promise<void>[] = [];
@@ -54,16 +54,12 @@ export class TextureManager {
                 console.log(`[TextureManager] ✓ Loaded ${key} (${path})`);
             }).catch((error: Error) => {
                 console.warn(`[TextureManager] ⚠️  Failed to load ${key}: ${error.message}`);
-                // Create fallback colored texture
+                // Create fallback colored rectangle
                 const graphics = new PIXI.Graphics();
                 graphics.beginFill(this._getFallbackColor(key));
                 graphics.drawRect(0, 0, 64, 64);
                 graphics.endFill();
                 const fallbackTexture = PIXI.RenderTexture.create({ width: 64, height: 64 });
-                const renderer = PIXI.autoDetectRenderer();
-                if (renderer instanceof PIXI.Renderer) {
-                    renderer.render(graphics, { renderTexture: fallbackTexture });
-                }
                 this.textures.set(key, fallbackTexture);
             });
             loadPromises.push(promise);
