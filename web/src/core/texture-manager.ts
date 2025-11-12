@@ -39,9 +39,9 @@ export class TextureManager {
         const textureMap = {
             'box': '/assets/sprites/box.png',
             'nest': '/assets/sprites/nest.png',
-            'bird': '/assets/sprites/pumpy.png',
-            'number': '/assets/sprites/texpad.png',
-            'text': '/assets/sprites/texpad.png', // Same as number in original
+            'bird': '/assets/sprites/bird.png',
+            'number': '/assets/sprites/number.png',
+            'text': '/assets/sprites/text.png',
             'robot': '/assets/sprites/robot.png',
             'background': '/assets/backgrounds/city.png'
         };
