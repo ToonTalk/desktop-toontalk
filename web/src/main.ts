@@ -1,16 +1,18 @@
 import { ToonTalkRenderer } from './renderer/renderer';
 import { InputManager } from './input/input';
 import { getWasmCore } from './core/wasm-core';
+import { getGameEngine } from './core/game-engine';
 import { WasmSpriteView } from './renderer/wasm-sprite-view';
 
 /**
  * ToonTalk Web - Main Entry Point
  *
- * This proof-of-concept demonstrates:
- * 1. PixiJS rendering initialization
- * 2. Basic sprite display
- * 3. Mouse interaction
- * 4. WASM module integration (C++ core)
+ * Replicates the original ToonTalk desktop behavior:
+ * 1. Camera system for world navigation (pan/zoom)
+ * 2. Collision detection for drag-and-drop
+ * 3. Smooth animations like the original
+ * 4. Entity management for tracking objects
+ * 5. Gesture recognition for touch input
  */
 
 class ToonTalkWeb {
@@ -18,6 +20,8 @@ class ToonTalkWeb {
     private inputManager: InputManager;
     private lastTime: number = 0;
     private fps: number = 0;
+    private isPanning: boolean = false;
+    private lastPanPosition: { x: number; y: number } = { x: 0, y: 0 };
 
     constructor() {
         this.renderer = new ToonTalkRenderer();
@@ -50,6 +54,18 @@ class ToonTalkWeb {
             const wasmCore = getWasmCore();
             await wasmCore.initialize();
             this.updateStatus('WASM core loaded');
+
+            // Initialize game engine with utilities
+            this.updateStatus('Initializing game engine...');
+            const gameEngine = getGameEngine();
+            await gameEngine.initialize(
+                this.renderer.getView().width,
+                this.renderer.getView().height
+            );
+            this.updateStatus('Game engine ready');
+
+            // Set up camera controls (like ToonTalk helicopter)
+            this.setupCameraControls();
 
             // Create demo content
             this.createDemoScene();
@@ -234,9 +250,117 @@ class ToonTalkWeb {
     }
 
     private update(deltaTime: number): void {
-        // Update game logic
-        // TODO: Call WASM update functions
+        // Update game engine (animations, input gestures, etc.)
+        const gameEngine = getGameEngine();
+        if (gameEngine.isInitialized()) {
+            gameEngine.update(deltaTime);
+        }
+
+        // Update renderer (sprite animations, etc.)
         this.renderer.update(deltaTime);
+    }
+
+    /**
+     * Setup camera controls like original ToonTalk
+     * - Mouse wheel: Zoom in/out (altitude)
+     * - Right-click drag: Pan camera (helicopter movement)
+     * - Double-click: Focus on object
+     */
+    private setupCameraControls(): void {
+        const canvas = this.renderer.getView();
+        const gameEngine = getGameEngine();
+
+        // Zoom with mouse wheel
+        canvas.addEventListener('wheel', (event: WheelEvent) => {
+            event.preventDefault();
+
+            const zoomDelta = event.deltaY > 0 ? 0.9 : 1.1;
+            const currentZoom = gameEngine.getCameraZoom();
+            const newZoom = Math.max(0.5, Math.min(3.0, currentZoom * zoomDelta));
+
+            gameEngine.setCameraZoom(newZoom);
+            console.log(`[Camera] Zoom: ${newZoom.toFixed(2)}x`);
+        });
+
+        // Pan with middle mouse or right-click drag
+        canvas.addEventListener('mousedown', (event: MouseEvent) => {
+            if (event.button === 1 || event.button === 2) { // Middle or right button
+                this.isPanning = true;
+                this.lastPanPosition = { x: event.clientX, y: event.clientY };
+                canvas.style.cursor = 'grabbing';
+            }
+        });
+
+        canvas.addEventListener('mousemove', (event: MouseEvent) => {
+            if (this.isPanning) {
+                const dx = this.lastPanPosition.x - event.clientX;
+                const dy = this.lastPanPosition.y - event.clientY;
+
+                // Invert pan direction (move camera opposite of drag)
+                gameEngine.panCamera(dx, dy);
+
+                this.lastPanPosition = { x: event.clientX, y: event.clientY };
+            }
+        });
+
+        canvas.addEventListener('mouseup', (event: MouseEvent) => {
+            if (event.button === 1 || event.button === 2) {
+                this.isPanning = false;
+                canvas.style.cursor = 'default';
+            }
+        });
+
+        // Keyboard shortcuts (like original ToonTalk)
+        window.addEventListener('keydown', (event: KeyboardEvent) => {
+            const panSpeed = 50;
+            const zoomSpeed = 0.1;
+
+            switch (event.key) {
+                case 'ArrowUp':
+                    gameEngine.panCamera(0, -panSpeed);
+                    event.preventDefault();
+                    break;
+                case 'ArrowDown':
+                    gameEngine.panCamera(0, panSpeed);
+                    event.preventDefault();
+                    break;
+                case 'ArrowLeft':
+                    gameEngine.panCamera(-panSpeed, 0);
+                    event.preventDefault();
+                    break;
+                case 'ArrowRight':
+                    gameEngine.panCamera(panSpeed, 0);
+                    event.preventDefault();
+                    break;
+                case '+':
+                case '=':
+                    const currentZoom = gameEngine.getCameraZoom();
+                    gameEngine.setCameraZoom(currentZoom + zoomSpeed);
+                    event.preventDefault();
+                    break;
+                case '-':
+                case '_':
+                    const currentZoomMinus = gameEngine.getCameraZoom();
+                    gameEngine.setCameraZoom(currentZoomMinus - zoomSpeed);
+                    event.preventDefault();
+                    break;
+                case 'Home':
+                    // Return to center (like ToonTalk "Go Home")
+                    const worldSize = gameEngine.getWorldSize();
+                    gameEngine.setCameraPosition(worldSize.width / 2, worldSize.height / 2);
+                    gameEngine.setCameraZoom(1.0);
+                    console.log('[Camera] Returned home');
+                    event.preventDefault();
+                    break;
+            }
+        });
+
+        console.log('[Camera] Controls ready:');
+        console.log('  - Mouse wheel: Zoom');
+        console.log('  - Right-click drag: Pan');
+        console.log('  - Arrow keys: Pan');
+        console.log('  - +/- keys: Zoom');
+        console.log('  - Home key: Return to center');
     }
 
     private updateStatus(status: string): void {
