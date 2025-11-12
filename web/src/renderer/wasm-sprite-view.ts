@@ -162,6 +162,9 @@ export class WasmSpriteView {
         if (textureManager.isLoaded()) {
             const texture = textureManager.getTexture(type);
             if (texture) {
+                // Hide graphics when using texture
+                this.graphics.visible = false;
+
                 // Create or update sprite with texture
                 if (!this.sprite) {
                     this.sprite = new PIXI.Sprite(texture);
@@ -178,6 +181,9 @@ export class WasmSpriteView {
         }
 
         // Fallback: Draw using Graphics if no texture available
+        // Make sure graphics is visible for fallback rendering
+        this.graphics.visible = true;
+
         switch (type) {
             case 'bird':
                 this.drawBird();
