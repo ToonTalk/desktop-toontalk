@@ -157,7 +157,27 @@ export class WasmSpriteView {
 
         this.graphics.clear();
 
-        // Draw using Graphics (textures disabled for now - need proper sprite sheets)
+        // Try to load texture from M25 sprites first
+        const textureManager = getTextureManager();
+        if (textureManager.isLoaded()) {
+            const texture = textureManager.getTexture(type);
+            if (texture) {
+                // Create or update sprite with texture
+                if (!this.sprite) {
+                    this.sprite = new PIXI.Sprite(texture);
+                    this.sprite.anchor.set(0.5);
+                    this.container.addChild(this.sprite);
+                } else {
+                    this.sprite.texture = texture;
+                }
+
+                // Add text overlay for number/text pads
+                this.addTextOverlay(type);
+                return;
+            }
+        }
+
+        // Fallback: Draw using Graphics if no texture available
         switch (type) {
             case 'bird':
                 this.drawBird();

@@ -6,10 +6,11 @@ import os
 
 # Sprite files to convert
 sprites = [
+    ('public/assets/sprites/bird.bmp', 'public/assets/sprites/bird.png'),
     ('public/assets/sprites/box.bmp', 'public/assets/sprites/box.png'),
     ('public/assets/sprites/nest.bmp', 'public/assets/sprites/nest.png'),
-    ('public/assets/sprites/pumpy.bmp', 'public/assets/sprites/pumpy.png'),
-    ('public/assets/sprites/texpad.bmp', 'public/assets/sprites/texpad.png'),
+    ('public/assets/sprites/number.bmp', 'public/assets/sprites/number.png'),
+    ('public/assets/sprites/text.bmp', 'public/assets/sprites/text.png'),
     ('public/assets/sprites/robot.bmp', 'public/assets/sprites/robot.png'),
 ]
 
