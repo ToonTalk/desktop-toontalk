@@ -57,11 +57,11 @@ class ToonTalkWeb {
             await wasmCore.initialize();
             this.updateStatus('WASM core loaded');
 
-            // Load original ToonTalk graphics
-            this.updateStatus('Loading ToonTalk graphics...');
-            const textureManager = getTextureManager();
-            await textureManager.loadTextures();
-            this.updateStatus('Graphics loaded');
+            // Load original ToonTalk graphics (disabled - need proper sprite sheets)
+            // this.updateStatus('Loading ToonTalk graphics...');
+            // const textureManager = getTextureManager();
+            // await textureManager.loadTextures();
+            // this.updateStatus('Graphics loaded');
 
             // Add city background
             this.addCityBackground();
