@@ -1,7 +1,9 @@
+import * as PIXI from 'pixi.js';
 import { ToonTalkRenderer } from './renderer/renderer';
 import { InputManager } from './input/input';
 import { getWasmCore } from './core/wasm-core';
 import { getGameEngine } from './core/game-engine';
+import { getTextureManager } from './core/texture-manager';
 import { WasmSpriteView } from './renderer/wasm-sprite-view';
 
 /**
@@ -55,6 +57,15 @@ class ToonTalkWeb {
             await wasmCore.initialize();
             this.updateStatus('WASM core loaded');
 
+            // Load original ToonTalk graphics
+            this.updateStatus('Loading ToonTalk graphics...');
+            const textureManager = getTextureManager();
+            await textureManager.loadTextures();
+            this.updateStatus('Graphics loaded');
+
+            // Add city background
+            this.addCityBackground();
+
             // Initialize game engine with utilities
             this.updateStatus('Initializing game engine...');
             const gameEngine = getGameEngine();
@@ -87,6 +98,33 @@ class ToonTalkWeb {
             console.error('Initialization failed:', error);
             this.updateStatus(`Error: ${error}`);
         }
+    }
+
+    /**
+     * Add the original ToonTalk city background
+     */
+    private addCityBackground(): void {
+        const textureManager = getTextureManager();
+        const bgTexture = textureManager.getTexture('background');
+
+        if (!bgTexture) {
+            console.warn('[Background] City texture not loaded, using blue background');
+            return;
+        }
+
+        // Create a tiling sprite that fills the world (repeats the city background)
+        const cityBg = new PIXI.TilingSprite(
+            bgTexture,
+            3200, // World width
+            2400  // World height
+        );
+        cityBg.x = 0;
+        cityBg.y = 0;
+
+        // Add to stage behind everything else
+        this.renderer.getStage().addChildAt(cityBg, 0);
+
+        console.log('[Background] ✨ Original ToonTalk city added!');
     }
 
     private createDemoScene(): void {
