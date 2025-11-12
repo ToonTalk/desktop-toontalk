@@ -1,12 +1,18 @@
 import * as PIXI from 'pixi.js';
 import type { Sprite, Bird, ToonTalkNumber, ToonTalkText, ToonTalkBox, ToonTalkNest, ToonTalkScale, ToonTalkWand, ToonTalkRobot, ToonTalkHouse, ToonTalkTruck, ToonTalkPicture, ToonTalkSensor, ToonTalkNotebook, ToonTalkBomb, ToonTalkThoughtBubble, ToonTalkMouse, ToonTalkVacuum, ToonTalkMartian, ToonTalkToolbox, ToonTalkExpander, ToonTalkCopier, ToonTalkEraser, ToonTalkCubby, ToonTalkButton, ToonTalkStack, ToonTalkFlipper, ToonTalkMeter, ToonTalkBeeper, ToonTalkConnector, ToonTalkTimer, ToonTalkCounter, ToonTalkSampler, ToonTalkComparator, ToonTalkRandomizer, ToonTalkLogger, ToonTalkFilter, ToonTalkAccumulator, ToonTalkSequencer, ToonTalkTrigger, ToonTalkScheduler } from '../types/wasm';
 import type { ToonTalkRenderer } from './renderer';
+import { getGameEngine } from '../core/game-engine';
 
 /**
  * WasmSpriteView - Bridges WASM Sprite objects with PixiJS rendering
  *
  * This takes a C++ Sprite (or Bird, Number, Text, Box) from WASM and creates a PixiJS
  * visual representation that stays synchronized with the C++ object.
+ *
+ * Now enhanced with WASM game engine utilities:
+ * - Collision detection via CollisionManager
+ * - Smooth animations via AnimationController
+ * - Entity tracking via EntityManager
  */
 export class WasmSpriteView {
     private wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer | ToonTalkLogger | ToonTalkFilter | ToonTalkAccumulator | ToonTalkSequencer | ToonTalkTrigger | ToonTalkScheduler;
@@ -22,6 +28,11 @@ export class WasmSpriteView {
     private isHovered: boolean = false;
     private dropTarget: WasmSpriteView | null = null;
     private dropOnLeftHalf: boolean = true; // Track which half we're dropping on
+
+    // Collision & Animation IDs
+    private collisionId: number = -1;
+    private entityId: number = -1;
+    private dropAnimationId: number = -1;
 
     constructor(wasmSprite: Sprite | Bird | ToonTalkNumber | ToonTalkText | ToonTalkBox | ToonTalkNest | ToonTalkScale | ToonTalkWand | ToonTalkRobot | ToonTalkHouse | ToonTalkTruck | ToonTalkPicture | ToonTalkSensor | ToonTalkNotebook | ToonTalkBomb | ToonTalkThoughtBubble | ToonTalkMouse | ToonTalkVacuum | ToonTalkMartian | ToonTalkToolbox | ToonTalkExpander | ToonTalkCopier | ToonTalkEraser | ToonTalkCubby | ToonTalkButton | ToonTalkStack | ToonTalkFlipper | ToonTalkMeter | ToonTalkBeeper | ToonTalkConnector | ToonTalkTimer | ToonTalkCounter | ToonTalkSampler | ToonTalkComparator | ToonTalkRandomizer | ToonTalkLogger | ToonTalkFilter | ToonTalkAccumulator | ToonTalkSequencer | ToonTalkTrigger | ToonTalkScheduler, stage: PIXI.Container, renderer: ToonTalkRenderer) {
         this.wasmSprite = wasmSprite;
@@ -41,7 +52,42 @@ export class WasmSpriteView {
         // Add to stage
         stage.addChild(this.graphics);
 
+        // Register with game engine systems (if available)
+        this.registerWithGameEngine();
+
         console.log('[WasmSpriteView] Created view for WASM sprite');
+    }
+
+    /**
+     * Register this sprite with the game engine's collision and entity systems
+     */
+    private registerWithGameEngine(): void {
+        const gameEngine = getGameEngine();
+        if (!gameEngine.isInitialized()) return;
+
+        try {
+            // Register collision bounds
+            const x = this.wasmSprite.getX();
+            const y = this.wasmSprite.getY();
+            const width = this.wasmSprite.getWidth();
+            const height = this.wasmSprite.getHeight();
+
+            this.collisionId = gameEngine.registerCollider(x, y, width, height);
+
+            // Register entity
+            const type = this.getObjectType();
+            this.entityId = gameEngine.createEntity(type);
+
+            // Store initial data
+            if (type === 'number') {
+                const num = this.wasmSprite as ToonTalkNumber;
+                gameEngine.setEntityComponent(this.entityId, 'value', num.getValue());
+            }
+
+            console.log(`[WasmSpriteView] Registered ${type} with collision ID ${this.collisionId}, entity ID ${this.entityId}`);
+        } catch (e) {
+            // Game engine systems not available (needs WASM rebuild)
+        }
     }
 
     /**
@@ -3884,6 +3930,22 @@ export class WasmSpriteView {
         // Update WASM sprite position
         this.wasmSprite.setPosition(newX, newY);
 
+        // Update collision bounds if collision system is available
+        const gameEngine = getGameEngine();
+        if (gameEngine.isInitialized() && this.collisionId >= 0) {
+            try {
+                gameEngine.updateCollider(
+                    this.collisionId,
+                    newX,
+                    newY,
+                    this.wasmSprite.getWidth(),
+                    this.wasmSprite.getHeight()
+                );
+            } catch (e) {
+                // Collision system not available
+            }
+        }
+
         // UX IMPROVEMENT: Use MOUSE position for collision detection
         // Original ToonTalk uses sprite centers (see source/text.cpp:991-993)
         // but using mouse position is more intuitive for web users
@@ -3990,6 +4052,23 @@ export class WasmSpriteView {
         // Sync visibility
         this.graphics.visible = this.wasmSprite.isVisible();
 
+        // Apply drop animation if active
+        const gameEngine = getGameEngine();
+        if (gameEngine.isInitialized() && this.dropAnimationId >= 0) {
+            try {
+                if (gameEngine.isAnimationActive(this.dropAnimationId)) {
+                    const animValue = gameEngine.getAnimationValue(this.dropAnimationId);
+                    this.graphics.scale.set(animValue);
+                } else {
+                    // Animation finished, reset scale
+                    this.graphics.scale.set(1.0);
+                    this.dropAnimationId = -1;
+                }
+            } catch (e) {
+                // Animation system not available
+            }
+        }
+
         // Update dynamic text displays
         const type = this.getObjectType();
         if (type === 'number' && this.textDisplay) {
@@ -4089,6 +4168,9 @@ export class WasmSpriteView {
                 console.log(`✨ ${myValue} + ${droppedValue} = ${result} (dropped on right)`);
             }
 
+            // Animate the drop effect
+            this.animateDropEffect();
+
             // Remove the dropped number
             this.renderer.removeWasmSprite(droppedSprite);
         }
@@ -4114,6 +4196,9 @@ export class WasmSpriteView {
 
             myText.setText(result);
 
+            // Animate the drop effect
+            this.animateDropEffect();
+
             // Remove the dropped text
             this.renderer.removeWasmSprite(droppedSprite);
         }
@@ -4125,6 +4210,9 @@ export class WasmSpriteView {
             if (!box.isFull()) {
                 box.addItem();
                 console.log(`✨ Added item to box (${box.getCount()} items)`);
+
+                // Animate the drop effect
+                this.animateDropEffect();
 
                 // Remove the dropped object
                 this.renderer.removeWasmSprite(droppedSprite);
@@ -4145,6 +4233,9 @@ export class WasmSpriteView {
                         nest.setHole(i, true);
                         console.log(`✨ Added item to nest hole ${i} (${nest.countOccupied()} / ${numHoles})`);
 
+                        // Animate the drop effect
+                        this.animateDropEffect();
+
                         // Remove the dropped object
                         this.renderer.removeWasmSprite(droppedSprite);
                         break;
@@ -4157,12 +4248,58 @@ export class WasmSpriteView {
     }
 
     /**
+     * Animate a smooth drop effect (like original ToonTalk!)
+     * Makes the target sprite bounce when something is dropped on it
+     */
+    private animateDropEffect(): void {
+        const gameEngine = getGameEngine();
+        if (!gameEngine.isInitialized() || !gameEngine.getAnimator()) return;
+
+        try {
+            // Create a bounce animation on the scale
+            const scaleStart = 1.0;
+            const scaleEnd = 1.3;
+            const duration = 0.3; // 300ms
+
+            // Bounce effect using EASE_OUT_BOUNCE easing
+            const animId = gameEngine.createAnimation(
+                scaleStart,
+                scaleEnd,
+                duration,
+                10 // EASE_OUT_BOUNCE = 10
+            );
+
+            this.dropAnimationId = animId;
+
+            // Apply animation in update loop
+            console.log('[Animation] Started drop bounce effect');
+        } catch (e) {
+            // Animation system not available
+        }
+    }
+
+    /**
      * Clean up resources
      */
     destroy(): void {
         if (this.destroyed) return;
 
         this.destroyed = true;
+
+        // Unregister from game engine systems
+        const gameEngine = getGameEngine();
+        if (gameEngine.isInitialized()) {
+            try {
+                if (this.entityId >= 0) {
+                    gameEngine.destroyEntity(this.entityId);
+                }
+                // Note: CollisionManager doesn't have unregister yet,
+                // it will be cleaned when objects are removed
+            } catch (e) {
+                // Game engine systems not available
+            }
+        }
+
         this.graphics.destroy();
         this.wasmSprite.delete(); // Important: free C++ memory!
 
