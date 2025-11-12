@@ -150,45 +150,14 @@ export class WasmSpriteView {
 
     /**
      * Draw a visual representation of the sprite
-     * Uses original ToonTalk textures when available, falls back to Graphics primitives
+     * Uses Graphics primitives styled like the original ToonTalk
      */
     private drawSprite(): void {
         const type = this.getObjectType();
-        const textureManager = getTextureManager();
 
         this.graphics.clear();
 
-        // Try to use original ToonTalk texture
-        if (textureManager.isLoaded()) {
-            const texture = textureManager.getTexture(type);
-            if (texture) {
-                // Create textured sprite
-                this.sprite = new PIXI.Sprite(texture);
-
-                // Scale to match original size (textures are 88x96 pixels in original ToonTalk)
-                const targetWidth = this.wasmSprite.getWidth();
-                const targetHeight = this.wasmSprite.getHeight();
-                this.sprite.width = targetWidth;
-                this.sprite.height = targetHeight;
-
-                // Center anchor for easier transformations
-                this.sprite.anchor.set(0.5, 0.5);
-                this.sprite.x = targetWidth / 2;
-                this.sprite.y = targetHeight / 2;
-
-                // Add sprite below graphics layer
-                this.container.addChildAt(this.sprite, 0);
-
-                // Still draw text overlays for numbers/text
-                if (type === 'number' || type === 'text') {
-                    this.addTextOverlay(type);
-                }
-
-                return; // Done - using texture!
-            }
-        }
-
-        // Fallback to Graphics-based drawing
+        // Draw using Graphics (textures disabled for now - need proper sprite sheets)
         switch (type) {
             case 'bird':
                 this.drawBird();
