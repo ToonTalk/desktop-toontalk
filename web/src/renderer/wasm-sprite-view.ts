@@ -43,6 +43,10 @@ export class WasmSpriteView {
         this.graphics = new PIXI.Graphics();
         this.renderer = renderer;
 
+        // Position container to match WASM sprite
+        this.container.x = wasmSprite.getX();
+        this.container.y = wasmSprite.getY();
+
         // Add graphics to container
         this.container.addChild(this.graphics);
 
@@ -3932,22 +3936,22 @@ export class WasmSpriteView {
      */
     private setupInteractions(): void {
         // Hover effects
-        this.graphics.on('pointerover', () => {
+        this.container.on('pointerover', () => {
             if (!this.isDragging) {
                 this.isHovered = true;
-                this.graphics.scale.set(1.1);
+                this.container.scale.set(1.1);
             }
         });
 
-        this.graphics.on('pointerout', () => {
+        this.container.on('pointerout', () => {
             if (!this.isDragging) {
                 this.isHovered = false;
-                this.graphics.scale.set(1);
+                this.container.scale.set(1);
             }
         });
 
         // Start drag
-        this.graphics.on('pointerdown', (event: PIXI.FederatedPointerEvent) => {
+        this.container.on('pointerdown', (event: PIXI.FederatedPointerEvent) => {
             this.startDrag(event);
         });
     }
@@ -3957,20 +3961,20 @@ export class WasmSpriteView {
      */
     private startDrag(event: PIXI.FederatedPointerEvent): void {
         this.isDragging = true;
-        this.originalScale = { x: this.graphics.scale.x, y: this.graphics.scale.y };
+        this.originalScale = { x: this.container.scale.x, y: this.container.scale.y };
 
         // Calculate drag offset (where on the sprite did we click?)
-        const spritePos = this.graphics.position;
+        const spritePos = this.container.position;
         this.dragOffset.x = spritePos.x - event.global.x;
         this.dragOffset.y = spritePos.y - event.global.y;
 
         // Visual feedback - lift the sprite
-        this.graphics.scale.set(1.15);
-        this.graphics.alpha = 0.8;
+        this.container.scale.set(1.15);
+        this.container.alpha = 0.8;
 
         // Move to front (higher z-index)
-        if (this.graphics.parent) {
-            this.graphics.parent.setChildIndex(this.graphics, this.graphics.parent.children.length - 1);
+        if (this.container.parent) {
+            this.container.parent.setChildIndex(this.container, this.container.parent.children.length - 1);
         }
 
         // Set up global move and up handlers
@@ -3980,14 +3984,14 @@ export class WasmSpriteView {
 
         const onPointerUp = () => {
             this.stopDrag();
-            this.graphics.off('globalpointermove', onPointerMove);
-            this.graphics.off('pointerup', onPointerUp);
-            this.graphics.off('pointerupoutside', onPointerUp);
+            this.container.off('globalpointermove', onPointerMove);
+            this.container.off('pointerup', onPointerUp);
+            this.container.off('pointerupoutside', onPointerUp);
         };
 
-        this.graphics.on('globalpointermove', onPointerMove);
-        this.graphics.on('pointerup', onPointerUp);
-        this.graphics.on('pointerupoutside', onPointerUp);
+        this.container.on('globalpointermove', onPointerMove);
+        this.container.on('pointerup', onPointerUp);
+        this.container.on('pointerupoutside', onPointerUp);
 
         console.log('[WasmSpriteView] Started dragging');
     }
@@ -4069,11 +4073,11 @@ export class WasmSpriteView {
 
         // Reset visual feedback
         if (this.isHovered) {
-            this.graphics.scale.set(1.1);
+            this.container.scale.set(1.1);
         } else {
-            this.graphics.scale.set(1);
+            this.container.scale.set(1);
         }
-        this.graphics.alpha = 1.0;
+        this.container.alpha = 1.0;
 
         console.log('[WasmSpriteView] Stopped dragging at',
             this.wasmSprite.getX(), this.wasmSprite.getY());
@@ -4111,21 +4115,15 @@ export class WasmSpriteView {
             this.wasmSprite.update(deltaTime);
         }
 
-        // Sync position from WASM to PixiJS (but not while dragging!)
-        if (!this.isDragging) {
-            this.graphics.x = this.wasmSprite.getX();
-            this.graphics.y = this.wasmSprite.getY();
-        } else {
-            // While dragging, keep PixiJS and WASM in sync
-            this.graphics.x = this.wasmSprite.getX();
-            this.graphics.y = this.wasmSprite.getY();
-        }
+        // Sync position from WASM to PixiJS
+        this.container.x = this.wasmSprite.getX();
+        this.container.y = this.wasmSprite.getY();
 
         // Sync rotation
-        this.graphics.rotation = this.wasmSprite.getRotation();
+        this.container.rotation = this.wasmSprite.getRotation();
 
         // Sync visibility
-        this.graphics.visible = this.wasmSprite.isVisible();
+        this.container.visible = this.wasmSprite.isVisible();
 
         // Apply drop animation if active
         const gameEngine = getGameEngine();
@@ -4133,10 +4131,10 @@ export class WasmSpriteView {
             try {
                 if (gameEngine.isAnimationActive(this.dropAnimationId)) {
                     const animValue = gameEngine.getAnimationValue(this.dropAnimationId);
-                    this.graphics.scale.set(animValue);
+                    this.container.scale.set(animValue);
                 } else {
                     // Animation finished, reset scale
-                    this.graphics.scale.set(1.0);
+                    this.container.scale.set(1.0);
                     this.dropAnimationId = -1;
                 }
             } catch (e) {
@@ -4175,10 +4173,10 @@ export class WasmSpriteView {
     }
 
     /**
-     * Get the PixiJS graphics object
+     * Get the PixiJS container (for highlighting and other operations)
      */
-    getGraphics(): PIXI.Graphics {
-        return this.graphics;
+    getGraphics(): PIXI.Container {
+        return this.container;
     }
 
     /**
@@ -4375,7 +4373,7 @@ export class WasmSpriteView {
             }
         }
 
-        this.graphics.destroy();
+        this.container.destroy({ children: true }); // Destroys container and all children (sprite, graphics, text)
         this.wasmSprite.delete(); // Important: free C++ memory!
 
         console.log('[WasmSpriteView] Destroyed');
