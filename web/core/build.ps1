@@ -60,5 +60,12 @@ Get-ChildItem toontalk-core.* | Format-Table Name, Length -AutoSize
 Set-Location ..
 
 Write-Host ""
-Write-Host "Files are ready in: core\build\" -ForegroundColor Cyan
-Write-Host "The web app will load toontalk-core.js and toontalk-core.wasm" -ForegroundColor Cyan
+Write-Host "Copying files to public directory..." -ForegroundColor Green
+New-Item -ItemType Directory -Force -Path "..\public\core\build" | Out-Null
+Copy-Item "build\toontalk-core.js" "..\public\core\build\" -Force
+Copy-Item "build\toontalk-core.wasm" "..\public\core\build\" -Force
+
+Write-Host ""
+Write-Host "✅ Build complete and files copied!" -ForegroundColor Green
+Write-Host "   Output: public\core\build\toontalk-core.{js,wasm}" -ForegroundColor Cyan
+Write-Host "   Reload your browser (Ctrl+Shift+R) to use the new WASM module" -ForegroundColor Yellow

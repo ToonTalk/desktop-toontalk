@@ -48,5 +48,13 @@ echo "Build complete! Output files:"
 ls -lh toontalk-core.*
 
 echo ""
-echo "Files are ready in: core/build/"
-echo "The web app will load toontalk-core.js and toontalk-core.wasm"
+echo "Copying files to public directory..."
+cd ..
+mkdir -p ../public/core/build
+cp build/toontalk-core.js ../public/core/build/
+cp build/toontalk-core.wasm ../public/core/build/
+
+echo ""
+echo "✅ Build complete and files copied!"
+echo "   Output: public/core/build/toontalk-core.{js,wasm}"
+echo "   Reload your browser (Ctrl+Shift+R) to use the new WASM module"
