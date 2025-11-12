@@ -36,36 +36,63 @@ export class GameEngine {
         }
 
         console.log('[GameEngine] Initializing game utilities...');
+        console.log('[GameEngine] NOTE: Some features require WASM rebuild (cd web/core && ./build.sh)');
 
-        // Initialize collision manager with world bounds
-        this.collision = wasmCore.createCollisionManager(
-            this.worldWidth,
-            this.worldHeight,
-            5  // Max quadtree depth
-        );
-        console.log('[GameEngine] ✓ Collision system ready');
+        // Try to initialize collision manager
+        try {
+            this.collision = wasmCore.createCollisionManager(
+                this.worldWidth,
+                this.worldHeight,
+                5  // Max quadtree depth
+            );
+            console.log('[GameEngine] ✓ Collision system ready');
+        } catch (e) {
+            console.log('[GameEngine] ⏭️  Collision system not available (needs rebuild)');
+        }
 
-        // Initialize animation controller for smooth transitions
-        this.animator = wasmCore.createAnimationController();
-        console.log('[GameEngine] ✓ Animation system ready');
+        // Try to initialize animation controller
+        try {
+            this.animator = wasmCore.createAnimationController();
+            console.log('[GameEngine] ✓ Animation system ready');
+        } catch (e) {
+            console.log('[GameEngine] ⏭️  Animation system not available (needs rebuild)');
+        }
 
-        // Initialize scene manager for camera/viewport
-        this.scene = wasmCore.createSceneManager(viewportWidth, viewportHeight);
-        // Start camera at center of world (like ToonTalk starting view)
-        this.scene.setCameraPosition(this.worldWidth / 2, this.worldHeight / 2);
-        this.scene.setCameraZoom(1.0);
-        console.log('[GameEngine] ✓ Camera system ready');
+        // Try to initialize scene manager
+        try {
+            this.scene = wasmCore.createSceneManager(viewportWidth, viewportHeight);
+            // Start camera at center of world (like ToonTalk starting view)
+            this.scene.setCameraPosition(this.worldWidth / 2, this.worldHeight / 2);
+            this.scene.setCameraZoom(1.0);
+            console.log('[GameEngine] ✓ Camera system ready');
+        } catch (e) {
+            console.log('[GameEngine] ⏭️  Camera system not available (needs rebuild)');
+        }
 
-        // Initialize entity manager for tracking objects
-        this.entities = wasmCore.createEntityManager();
-        console.log('[GameEngine] ✓ Entity system ready');
+        // Try to initialize entity manager
+        try {
+            this.entities = wasmCore.createEntityManager();
+            console.log('[GameEngine] ✓ Entity system ready');
+        } catch (e) {
+            console.log('[GameEngine] ⏭️  Entity system not available (needs rebuild)');
+        }
 
-        // Initialize gesture/input manager
-        this.wasmInput = wasmCore.createInputManager();
-        console.log('[GameEngine] ✓ Gesture recognition ready');
+        // Try to initialize gesture/input manager
+        try {
+            this.wasmInput = wasmCore.createInputManager();
+            console.log('[GameEngine] ✓ Gesture recognition ready');
+        } catch (e) {
+            console.log('[GameEngine] ⏭️  Gesture recognition not available (needs rebuild)');
+        }
 
         this.initialized = true;
-        console.log('[GameEngine] All systems initialized!');
+
+        if (this.collision && this.animator && this.scene && this.entities && this.wasmInput) {
+            console.log('[GameEngine] ✅ All systems initialized!');
+        } else {
+            console.log('[GameEngine] ⚠️  Running in limited mode - rebuild WASM for full features');
+            console.log('[GameEngine] Run: cd web/core && ./build.sh');
+        }
     }
 
     isInitialized(): boolean {
