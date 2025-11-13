@@ -395,7 +395,8 @@ export class WasmSpriteView {
         }
 
         // Update WASM sprite dimensions
-        this.wasmSprite.setSize(Math.round(newWidth), Math.round(newHeight));
+        this.wasmSprite.setWidth(Math.round(newWidth));
+        this.wasmSprite.setHeight(Math.round(newHeight));
 
         // Update visual sprite to match new dimensions
         if (this.sprite) {
