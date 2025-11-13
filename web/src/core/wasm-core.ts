@@ -903,11 +903,11 @@ export class WasmCore {
     /**
      * Create a Box instance from WASM
      */
-    createBox(x: number, y: number, capacity: number = 10) {
+    createBox(x: number, y: number, numHoles: number = 3) {
         if (!this.module) {
             throw new Error('WASM module not loaded');
         }
-        return new this.module.Box(x, y, capacity);
+        return new this.module.Box(x, y, numHoles);
     }
 
     /**

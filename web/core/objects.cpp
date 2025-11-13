@@ -86,41 +86,99 @@ private:
 };
 
 /**
- * Box class - Container that can hold other objects
+ * Box class - Container with multiple holes, like original ToonTalk Cubby
+ * Based on ../source/cubby.h and ../source/cubby.cpp
  */
 class Box : public Sprite {
 public:
-    Box(float x, float y, size_t capacity = 10)
-        : Sprite(x, y, 120.0f, 100.0f), capacity_(capacity), count_(0) {}
+    Box(float x, float y, size_t num_holes = 1)
+        : Sprite(x, y, calculateWidth(num_holes), 100.0f),
+          num_holes_(num_holes),
+          holes_filled_(num_holes, false),
+          labels_(num_holes, "") {
+        updateDimensions();
+    }
 
-    // Container operations
-    size_t getCapacity() const { return capacity_; }
-    size_t getCount() const { return count_; }
-    bool isEmpty() const { return count_ == 0; }
-    bool isFull() const { return count_ >= capacity_; }
+    // Number of holes
+    size_t getNumHoles() const { return num_holes_; }
 
-    // Simulate adding/removing items (simplified - no actual sprite storage in WASM)
+    void setNumHoles(size_t num) {
+        num_holes_ = num;
+        holes_filled_.resize(num, false);
+        labels_.resize(num, "");
+        updateDimensions();
+    }
+
+    // Hole-specific operations
+    bool isHoleFilled(size_t index) const {
+        return index < holes_filled_.size() && holes_filled_[index];
+    }
+
+    void setHoleFilled(size_t index, bool filled) {
+        if (index < holes_filled_.size()) {
+            holes_filled_[index] = filled;
+        }
+    }
+
+    // Get hole label
+    std::string getHoleLabel(size_t index) const {
+        if (index < labels_.size()) {
+            return labels_[index];
+        }
+        return "";
+    }
+
+    // Set hole label
+    void setHoleLabel(size_t index, const std::string& label) {
+        if (index < labels_.size()) {
+            labels_[index] = label;
+        }
+    }
+
+    // Container-level operations
+    size_t getCount() const {
+        size_t count = 0;
+        for (bool filled : holes_filled_) {
+            if (filled) count++;
+        }
+        return count;
+    }
+
+    bool isEmpty() const { return getCount() == 0; }
+    bool isFull() const { return getCount() >= num_holes_; }
+
+    void clear() {
+        for (size_t i = 0; i < holes_filled_.size(); ++i) {
+            holes_filled_[i] = false;
+        }
+    }
+
+    // Legacy methods for backward compatibility
     bool addItem() {
-        if (!isFull()) {
-            count_++;
-            return true;
+        // Fill first empty hole
+        for (size_t i = 0; i < holes_filled_.size(); ++i) {
+            if (!holes_filled_[i]) {
+                holes_filled_[i] = true;
+                return true;
+            }
         }
         return false;
     }
 
     bool removeItem() {
-        if (!isEmpty()) {
-            count_--;
-            return true;
+        // Empty last filled hole
+        for (int i = holes_filled_.size() - 1; i >= 0; --i) {
+            if (holes_filled_[i]) {
+                holes_filled_[i] = false;
+                return true;
+            }
         }
         return false;
     }
 
-    void clear() { count_ = 0; }
-
     // Get visual representation info
     float getFullness() const {
-        return capacity_ > 0 ? static_cast<float>(count_) / capacity_ : 0.0f;
+        return num_holes_ > 0 ? static_cast<float>(getCount()) / num_holes_ : 0.0f;
     }
 
     // Override update
@@ -130,8 +188,23 @@ public:
     }
 
 private:
-    size_t capacity_;
-    size_t count_;
+    size_t num_holes_;
+    std::vector<bool> holes_filled_;
+    std::vector<std::string> labels_;
+
+    // Calculate width based on number of holes (like original ToonTalk)
+    // Original: width = (5*number_of_holes+1)*peg_width
+    // Using peg_width ≈ 20 pixels as base unit
+    static float calculateWidth(size_t num_holes) {
+        const float PEG_WIDTH = 20.0f;
+        return (5.0f * num_holes + 1.0f) * PEG_WIDTH;
+    }
+
+    void updateDimensions() {
+        setWidth(calculateWidth(num_holes_));
+        // Height stays constant at 4 peg units
+        setHeight(4.0f * 20.0f); // 80 pixels
+    }
 };
 
 /**
@@ -3758,7 +3831,12 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
 
     class_<Box, base<Sprite>>("Box")
         .constructor<float, float, size_t>()
-        .function("getCapacity", &Box::getCapacity)
+        .function("getNumHoles", &Box::getNumHoles)
+        .function("setNumHoles", &Box::setNumHoles)
+        .function("isHoleFilled", &Box::isHoleFilled)
+        .function("setHoleFilled", &Box::setHoleFilled)
+        .function("getHoleLabel", &Box::getHoleLabel)
+        .function("setHoleLabel", &Box::setHoleLabel)
         .function("getCount", &Box::getCount)
         .function("isEmpty", &Box::isEmpty)
         .function("isFull", &Box::isFull)

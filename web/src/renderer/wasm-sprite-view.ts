@@ -735,59 +735,81 @@ export class WasmSpriteView {
 
     private drawBox(): void {
         const box = this.wasmSprite as ToonTalkBox;
-        const fullness = box.getFullness();
+        const numHoles = box.getNumHoles();
 
-        // Brown box shape
+        // Get WASM dimensions (game world coordinates)
+        const width = this.wasmSprite.getWidth();
+        const height = this.wasmSprite.getHeight();
+
+        // Peg-based sizing from original ToonTalk
+        // width = (5*numHoles + 1)*PEG_WIDTH, height = 4*PEG_WIDTH
+        const PEG_WIDTH = 20;
+        const WALL_WIDTH = PEG_WIDTH; // Wall between holes
+
+        // Brown box background
         this.graphics.beginFill(0x8B4513);
-        this.graphics.drawRect(-60, -50, 120, 100);
+        this.graphics.drawRect(-width/2, -height/2, width, height);
         this.graphics.endFill();
 
-        // Border
+        // Outer border
         this.graphics.lineStyle(3, 0x654321);
-        this.graphics.drawRect(-60, -50, 120, 100);
+        this.graphics.drawRect(-width/2, -height/2, width, height);
 
-        // Fill indicator (green fill level)
-        const fillHeight = 90 * fullness;
-        this.graphics.beginFill(0x90EE90, 0.6);
-        this.graphics.drawRect(-55, 45 - fillHeight, 110, fillHeight);
-        this.graphics.endFill();
+        // Draw each hole
+        const holeWidth = PEG_WIDTH * 4; // Each hole is 4 pegs wide
+        const holeHeight = height - (WALL_WIDTH * 2); // Leave wall margin top/bottom
 
-        // Label at top
-        const label = new PIXI.Text('Box', {
+        for (let i = 0; i < numHoles; i++) {
+            // Calculate hole position
+            // Original: insides_llx = llx + ((hole_index*5+1)*width)/x_tiles
+            const holeX = -width/2 + WALL_WIDTH + (i * (holeWidth + WALL_WIDTH));
+            const holeY = -height/2 + WALL_WIDTH;
+
+            // Hole interior (lighter brown)
+            this.graphics.beginFill(0xD2691E);
+            this.graphics.drawRect(holeX, holeY, holeWidth, holeHeight);
+            this.graphics.endFill();
+
+            // Hole border
+            this.graphics.lineStyle(2, 0x654321);
+            this.graphics.drawRect(holeX, holeY, holeWidth, holeHeight);
+
+            // Show filled/empty state
+            if (box.isHoleFilled(i)) {
+                // Green checkmark or indicator for filled holes
+                this.graphics.beginFill(0x90EE90, 0.7);
+                this.graphics.drawCircle(holeX + holeWidth/2, holeY + holeHeight/2, 8);
+                this.graphics.endFill();
+            }
+
+            // Show hole label if present
+            const label = box.getHoleLabel(i);
+            if (label && label.length > 0) {
+                const labelText = new PIXI.Text(label, {
+                    fontSize: 10,
+                    fill: 0x000000,
+                    fontWeight: 'bold'
+                });
+                labelText.anchor.set(0.5, 1);
+                labelText.x = holeX + holeWidth/2;
+                labelText.y = holeY - 2;
+                this.graphics.addChild(labelText);
+            }
+        }
+
+        // Overall box status text at bottom
+        const statusText = new PIXI.Text(`${box.getCount()}/${numHoles}`, {
             fontSize: 12,
             fill: 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 2
         });
-        label.anchor.set(0.5);
-        label.y = -35;
-        this.graphics.addChild(label);
+        statusText.anchor.set(0.5);
+        statusText.y = height/2 - 10;
+        this.graphics.addChild(statusText);
 
-        // Capacity text at center - make it clearer this is item count
-        const text = new PIXI.Text(`${box.getCount()} items`, {
-            fontSize: 14,
-            fill: 0xFFFFFF,
-            fontWeight: 'bold',
-            stroke: 0x000000,
-            strokeThickness: 2
-        });
-        text.anchor.set(0.5);
-        text.y = -5;
-        this.graphics.addChild(text);
-
-        // Capacity at bottom
-        const capacityText = new PIXI.Text(`(max ${box.getCapacity()})`, {
-            fontSize: 10,
-            fill: 0xFFFFFF,
-            stroke: 0x000000,
-            strokeThickness: 2
-        });
-        capacityText.anchor.set(0.5);
-        capacityText.y = 15;
-        this.graphics.addChild(capacityText);
-
-        this.textDisplay = text;
+        this.textDisplay = statusText;
     }
 
     private drawNest(): void {
