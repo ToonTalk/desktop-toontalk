@@ -346,14 +346,19 @@ export class WasmSpriteView {
             textContent = (this.wasmSprite as ToonTalkText).getText() || "";
         }
 
-        if (!textContent) return;
+        if (!textContent || textContent.trim().length === 0) return;
 
-        // Minimum dimensions to keep pads readable (based on M25 sprite sizes)
+        // Minimum and maximum dimensions to keep pads readable (based on M25 sprite sizes)
         const MIN_WIDTH = 152;
         const MIN_HEIGHT = 198;
+        const MAX_WIDTH = 350;  // Prevent pads from growing too large
+        const MAX_HEIGHT = 280;
 
         // Start with a base font size to measure text extent
         const baseFontSize = 100; // Arbitrary base size for measurement
+
+        // Trim text for measurement to avoid issues with leading/trailing spaces
+        const trimmedText = textContent.trim();
 
         // Create temporary text to measure dimensions
         const testStyle = new PIXI.TextStyle({
@@ -363,14 +368,10 @@ export class WasmSpriteView {
             wordWrap: false
         });
 
-        const metrics = PIXI.TextMetrics.measureText(textContent, testStyle);
+        const metrics = PIXI.TextMetrics.measureText(trimmedText, testStyle);
 
         // Calculate aspect ratio needed for the text
         const textAspectRatio = metrics.width / metrics.height;
-
-        // Get current dimensions
-        const currentWidth = this.wasmSprite.getWidth();
-        const currentHeight = this.wasmSprite.getHeight();
 
         // Calculate new dimensions that minimize wasted space
         let newWidth: number;
@@ -378,16 +379,16 @@ export class WasmSpriteView {
 
         if (textAspectRatio > 1.5) {
             // Very wide text - use wider pad
-            newWidth = Math.max(MIN_WIDTH * 1.5, currentWidth);
-            newHeight = Math.max(MIN_HEIGHT * 0.8, newWidth / textAspectRatio);
+            newWidth = Math.min(MAX_WIDTH, Math.max(MIN_WIDTH * 1.5, MIN_WIDTH));
+            newHeight = Math.min(MAX_HEIGHT, Math.max(MIN_HEIGHT * 0.8, newWidth / textAspectRatio));
         } else if (textAspectRatio < 0.7) {
             // Very tall text - use taller pad
-            newHeight = Math.max(MIN_HEIGHT * 1.2, currentHeight);
-            newWidth = Math.max(MIN_WIDTH * 0.8, newHeight * textAspectRatio);
+            newHeight = Math.min(MAX_HEIGHT, Math.max(MIN_HEIGHT * 1.2, MIN_HEIGHT));
+            newWidth = Math.min(MAX_WIDTH, Math.max(MIN_WIDTH * 0.8, newHeight * textAspectRatio));
         } else {
             // Roughly square - use default proportions
-            newWidth = Math.max(MIN_WIDTH, currentWidth);
-            newHeight = Math.max(MIN_HEIGHT, currentHeight);
+            newWidth = MIN_WIDTH;
+            newHeight = MIN_HEIGHT;
         }
 
         // Update WASM sprite dimensions
