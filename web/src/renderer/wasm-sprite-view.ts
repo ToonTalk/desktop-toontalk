@@ -532,7 +532,7 @@ export class WasmSpriteView {
             // Regular number or decimal - calculate font size to fit
             let fontSize = textHeight;
 
-            // Measure actual rendered height and scale to fit
+            // Measure actual rendered dimensions and scale to fit both width and height
             const testText = new PIXI.Text(numberStr, {
                 fontSize: fontSize,
                 fontWeight: 'bold',
@@ -540,9 +540,17 @@ export class WasmSpriteView {
             });
 
             const measuredHeight = testText.height;
+            const measuredWidth = testText.width;
+
+            // Scale down if either dimension is too large (use most restrictive scale)
+            let scale = 1.0;
             if (measuredHeight > textHeight) {
-                fontSize = (fontSize * textHeight) / measuredHeight;
+                scale = Math.min(scale, textHeight / measuredHeight);
             }
+            if (measuredWidth > textWidth) {
+                scale = Math.min(scale, textWidth / measuredWidth);
+            }
+            fontSize = fontSize * scale;
             testText.destroy();
 
             // Create final text with calculated font size
@@ -581,12 +589,12 @@ export class WasmSpriteView {
         const textHeight = height - 2 * edgeSize;
 
         if (textContent) {
-            // Calculate font size that fits within available text height
+            // Calculate font size that fits within available text area (both width and height)
             // PixiJS fontSize doesn't directly equal rendered height due to line height
             // Start with an estimate and measure actual bounds
             let fontSize = textHeight;
 
-            // Create test text to measure actual rendered height
+            // Create test text to measure actual rendered dimensions
             const testText = new PIXI.Text(textContent, {
                 fontSize: fontSize,
                 fontWeight: 'bold',
@@ -598,12 +606,18 @@ export class WasmSpriteView {
             });
 
             // PixiJS adds padding - scale fontSize to fit within bounds
-            // Actual height is usually 1.15-1.2x fontSize due to line metrics
+            // Check both height and width, use most restrictive scale
             const measuredHeight = testText.height;
+            const measuredWidth = testText.width;
+
+            let scale = 1.0;
             if (measuredHeight > textHeight) {
-                // Scale down to fit
-                fontSize = (fontSize * textHeight) / measuredHeight;
+                scale = Math.min(scale, textHeight / measuredHeight);
             }
+            if (measuredWidth > textWidth) {
+                scale = Math.min(scale, textWidth / measuredWidth);
+            }
+            fontSize = fontSize * scale;
             testText.destroy();
 
             // Create final text with calculated font size
