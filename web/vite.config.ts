@@ -23,7 +23,7 @@ export default defineConfig({
     sourcemap: true
   },
   optimizeDeps: {
-    exclude: ['toontalk-core'],
-    force: true  // Force re-optimization on Windows
-  }
+    exclude: ['toontalk-core']
+  },
+  cacheDir: 'node_modules/.vite-cache'  // Use different cache dir to avoid locks
 });
