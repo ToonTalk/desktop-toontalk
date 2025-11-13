@@ -20,7 +20,7 @@ export class WasmSpriteView {
     private container: PIXI.Container;  // Container for both sprite and graphics
     private sprite?: PIXI.Sprite;       // Textured sprite (if texture available)
     private graphics: PIXI.Graphics;    // Graphics overlay (for text, borders, etc.)
-    private textDisplay?: PIXI.Text;
+    private textDisplay?: PIXI.Text | PIXI.Container;
     private destroyed: boolean = false;
     private renderer: ToonTalkRenderer;
 
@@ -313,35 +313,176 @@ export class WasmSpriteView {
 
     /**
      * Add text overlay for numbers and text when using textures
+     * Matches original ToonTalk rendering with fractions, shrinking decimals, etc.
      */
     private addTextOverlay(type: string): void {
+        // Remove old text display if it exists
+        if (this.textDisplay) {
+            this.textDisplay.destroy();
+            this.textDisplay = null;
+        }
+
         if (type === 'number') {
-            const num = this.wasmSprite as ToonTalkNumber;
-            const valueText = new PIXI.Text(num.toString(), {
-                fontSize: 24,
+            this.renderNumberText();
+        } else if (type === 'text') {
+            this.renderTextPad();
+        }
+    }
+
+    /**
+     * Render number text with proper fraction formatting
+     * Original ToonTalk format: "1 1/2" displays as:
+     *   1  1
+     *      -
+     *      2
+     */
+    private renderNumberText(): void {
+        const num = this.wasmSprite as ToonTalkNumber;
+        const numberStr = num.toString();
+        const width = this.sprite?.width || 152;
+        const height = this.sprite?.height || 198;
+
+        // Check for fraction format: "integer numerator/denominator" or "numerator/denominator"
+        const spaceIndex = numberStr.indexOf(' ');
+        const slashIndex = numberStr.indexOf('/');
+
+        if (slashIndex > 0) {
+            // Fraction display
+            const container = new PIXI.Container();
+
+            if (spaceIndex > 0 && spaceIndex < slashIndex) {
+                // Mixed fraction: "1 1/2"
+                const integerPart = numberStr.substring(0, spaceIndex);
+                const numerator = numberStr.substring(spaceIndex + 1, slashIndex);
+                const denominator = numberStr.substring(slashIndex + 1);
+
+                // Integer part (larger, on left)
+                const intText = new PIXI.Text(integerPart, {
+                    fontSize: Math.min(48, height * 0.35),
+                    fill: 0x000000,
+                    fontWeight: 'bold',
+                    fontFamily: 'Arial'
+                });
+                intText.x = -width * 0.25;
+                intText.y = -intText.height / 2;
+                container.addChild(intText);
+
+                // Fraction part (smaller, on right, vertically stacked)
+                const fractionSize = Math.min(32, height * 0.25);
+
+                const numText = new PIXI.Text(numerator, {
+                    fontSize: fractionSize,
+                    fill: 0x000000,
+                    fontWeight: 'bold',
+                    fontFamily: 'Arial'
+                });
+                numText.anchor.set(0.5, 1);
+                numText.x = width * 0.15;
+                numText.y = -5;
+                container.addChild(numText);
+
+                // Fraction line
+                const line = new PIXI.Graphics();
+                line.lineStyle(2, 0x000000);
+                line.moveTo(-fractionSize * 0.6, 0);
+                line.lineTo(fractionSize * 0.6, 0);
+                line.x = width * 0.15;
+                line.y = 0;
+                container.addChild(line);
+
+                const denomText = new PIXI.Text(denominator, {
+                    fontSize: fractionSize,
+                    fill: 0x000000,
+                    fontWeight: 'bold',
+                    fontFamily: 'Arial'
+                });
+                denomText.anchor.set(0.5, 0);
+                denomText.x = width * 0.15;
+                denomText.y = 5;
+                container.addChild(denomText);
+
+            } else {
+                // Simple fraction: "1/2"
+                const numerator = numberStr.substring(0, slashIndex);
+                const denominator = numberStr.substring(slashIndex + 1);
+
+                const fractionSize = Math.min(36, height * 0.3);
+
+                const numText = new PIXI.Text(numerator, {
+                    fontSize: fractionSize,
+                    fill: 0x000000,
+                    fontWeight: 'bold',
+                    fontFamily: 'Arial'
+                });
+                numText.anchor.set(0.5, 1);
+                numText.y = -8;
+                container.addChild(numText);
+
+                // Fraction line
+                const lineWidth = Math.max(numText.width, fractionSize * 1.2);
+                const line = new PIXI.Graphics();
+                line.lineStyle(2, 0x000000);
+                line.moveTo(-lineWidth / 2, 0);
+                line.lineTo(lineWidth / 2, 0);
+                container.addChild(line);
+
+                const denomText = new PIXI.Text(denominator, {
+                    fontSize: fractionSize,
+                    fill: 0x000000,
+                    fontWeight: 'bold',
+                    fontFamily: 'Arial'
+                });
+                denomText.anchor.set(0.5, 0);
+                denomText.y = 8;
+                container.addChild(denomText);
+            }
+
+            container.x = width / 2;
+            container.y = height / 2;
+            this.container.addChild(container);
+            this.textDisplay = container;
+
+        } else {
+            // Regular number or decimal - use simple centered display
+            const fontSize = Math.min(40, height * 0.3);
+            const valueText = new PIXI.Text(numberStr, {
+                fontSize: fontSize,
                 fill: 0x000000,
                 fontWeight: 'bold',
-                stroke: 0xFFFFFF,
-                strokeThickness: 2
+                fontFamily: 'Arial'
             });
             valueText.anchor.set(0.5);
-            valueText.x = this.wasmSprite.getWidth() / 2;
-            valueText.y = this.wasmSprite.getHeight() / 2;
+            valueText.x = width / 2;
+            valueText.y = height / 2;
             this.container.addChild(valueText);
             this.textDisplay = valueText;
-        } else if (type === 'text') {
-            const txt = this.wasmSprite as ToonTalkText;
-            const textContent = txt.getText() || "(empty)";
+        }
+    }
+
+    /**
+     * Render text pad with proper formatting
+     */
+    private renderTextPad(): void {
+        const txt = this.wasmSprite as ToonTalkText;
+        const textContent = txt.getText() || "";
+        const width = this.sprite?.width || 152;
+        const height = this.sprite?.height || 198;
+
+        if (textContent) {
+            const fontSize = Math.min(24, height * 0.15);
             const valueText = new PIXI.Text(textContent, {
-                fontSize: 18,
+                fontSize: fontSize,
                 fill: 0x000000,
                 fontWeight: 'normal',
+                fontFamily: 'Arial',
                 wordWrap: true,
-                wordWrapWidth: this.wasmSprite.getWidth() - 20
+                wordWrapWidth: width - 30,
+                align: 'left',
+                breakWords: true
             });
             valueText.anchor.set(0.5);
-            valueText.x = this.wasmSprite.getWidth() / 2;
-            valueText.y = this.wasmSprite.getHeight() / 2;
+            valueText.x = width / 2;
+            valueText.y = height / 2;
             this.container.addChild(valueText);
             this.textDisplay = valueText;
         }
