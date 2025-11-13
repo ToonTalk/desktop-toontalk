@@ -342,6 +342,12 @@ export class WasmSpriteView {
         const width = this.sprite?.width || 152;
         const height = this.sprite?.height || 198;
 
+        // Original ToonTalk computes edge size as 1/10 of smaller dimension
+        // and subtracts 2*edge_size from both dimensions for text area
+        const edgeSize = Math.min(width, height) / 10;
+        const textWidth = width - 2 * edgeSize;
+        const textHeight = height - 2 * edgeSize;
+
         // Check for fraction format: "integer numerator/denominator" or "numerator/denominator"
         const spaceIndex = numberStr.indexOf(' ');
         const slashIndex = numberStr.indexOf('/');
@@ -356,19 +362,20 @@ export class WasmSpriteView {
                 const numerator = numberStr.substring(spaceIndex + 1, slashIndex);
                 const denominator = numberStr.substring(slashIndex + 1);
 
-                // Integer part (larger, on left) - should fill most of the height
+                // Integer part (larger, on left) - should fill available text height
+                // For fractions with integer part, text area is split: integer gets full height, fraction is half-sized
                 const intText = new PIXI.Text(integerPart, {
-                    fontSize: Math.min(140, height * 0.7),
+                    fontSize: textHeight,
                     fill: 0x000000,
                     fontWeight: 'bold',
                     fontFamily: 'Arial'
                 });
-                intText.x = -width * 0.25;
+                intText.x = -textWidth * 0.25;
                 intText.y = -intText.height / 2;
                 container.addChild(intText);
 
-                // Fraction part (smaller, on right, vertically stacked)
-                const fractionSize = Math.min(80, height * 0.4);
+                // Fraction part (half-sized, on right, vertically stacked)
+                const fractionSize = textHeight / 2;
 
                 const numText = new PIXI.Text(numerator, {
                     fontSize: fractionSize,
@@ -377,7 +384,7 @@ export class WasmSpriteView {
                     fontFamily: 'Arial'
                 });
                 numText.anchor.set(0.5, 1);
-                numText.x = width * 0.15;
+                numText.x = textWidth * 0.2;
                 numText.y = -5;
                 container.addChild(numText);
 
@@ -386,7 +393,7 @@ export class WasmSpriteView {
                 line.lineStyle(2, 0x000000);
                 line.moveTo(-fractionSize * 0.6, 0);
                 line.lineTo(fractionSize * 0.6, 0);
-                line.x = width * 0.15;
+                line.x = textWidth * 0.2;
                 line.y = 0;
                 container.addChild(line);
 
@@ -397,16 +404,17 @@ export class WasmSpriteView {
                     fontFamily: 'Arial'
                 });
                 denomText.anchor.set(0.5, 0);
-                denomText.x = width * 0.15;
+                denomText.x = textWidth * 0.2;
                 denomText.y = 5;
                 container.addChild(denomText);
 
             } else {
-                // Simple fraction: "1/2" - should fill most of the height
+                // Simple fraction: "1/2" - should fill available text height (split between num and denom)
                 const numerator = numberStr.substring(0, slashIndex);
                 const denominator = numberStr.substring(slashIndex + 1);
 
-                const fractionSize = Math.min(90, height * 0.45);
+                // For simple fractions, use half the text height for each part
+                const fractionSize = textHeight / 2;
 
                 const numText = new PIXI.Text(numerator, {
                     fontSize: fractionSize,
@@ -443,8 +451,8 @@ export class WasmSpriteView {
             this.textDisplay = container;
 
         } else {
-            // Regular number or decimal - should fill most of the height
-            const fontSize = Math.min(120, height * 0.6);
+            // Regular number or decimal - should fill available text height
+            const fontSize = textHeight;
             const valueText = new PIXI.Text(numberStr, {
                 fontSize: fontSize,
                 fill: 0x000000,
@@ -468,16 +476,22 @@ export class WasmSpriteView {
         const width = this.sprite?.width || 152;
         const height = this.sprite?.height || 198;
 
+        // Original ToonTalk computes edge size as 1/10 of smaller dimension
+        // and subtracts 2*edge_size from both dimensions for text area
+        const edgeSize = Math.min(width, height) / 10;
+        const textWidth = width - 2 * edgeSize;
+        const textHeight = height - 2 * edgeSize;
+
         if (textContent) {
-            // Text should fill most of the pad height, like "ToonTalk" example
-            const fontSize = Math.min(100, height * 0.5);
+            // Text should fill available text height, like "ToonTalk" example
+            const fontSize = textHeight;
             const valueText = new PIXI.Text(textContent, {
                 fontSize: fontSize,
                 fill: 0x000000,
                 fontWeight: 'bold',
                 fontFamily: 'Arial',
                 wordWrap: true,
-                wordWrapWidth: width - 20,
+                wordWrapWidth: textWidth,
                 align: 'center',
                 breakWords: true
             });
