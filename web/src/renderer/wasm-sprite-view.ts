@@ -356,9 +356,9 @@ export class WasmSpriteView {
                 const numerator = numberStr.substring(spaceIndex + 1, slashIndex);
                 const denominator = numberStr.substring(slashIndex + 1);
 
-                // Integer part (larger, on left)
+                // Integer part (larger, on left) - should fill most of the height
                 const intText = new PIXI.Text(integerPart, {
-                    fontSize: Math.min(48, height * 0.35),
+                    fontSize: Math.min(140, height * 0.7),
                     fill: 0x000000,
                     fontWeight: 'bold',
                     fontFamily: 'Arial'
@@ -368,7 +368,7 @@ export class WasmSpriteView {
                 container.addChild(intText);
 
                 // Fraction part (smaller, on right, vertically stacked)
-                const fractionSize = Math.min(32, height * 0.25);
+                const fractionSize = Math.min(80, height * 0.4);
 
                 const numText = new PIXI.Text(numerator, {
                     fontSize: fractionSize,
@@ -402,11 +402,11 @@ export class WasmSpriteView {
                 container.addChild(denomText);
 
             } else {
-                // Simple fraction: "1/2"
+                // Simple fraction: "1/2" - should fill most of the height
                 const numerator = numberStr.substring(0, slashIndex);
                 const denominator = numberStr.substring(slashIndex + 1);
 
-                const fractionSize = Math.min(36, height * 0.3);
+                const fractionSize = Math.min(90, height * 0.45);
 
                 const numText = new PIXI.Text(numerator, {
                     fontSize: fractionSize,
@@ -443,8 +443,8 @@ export class WasmSpriteView {
             this.textDisplay = container;
 
         } else {
-            // Regular number or decimal - use simple centered display
-            const fontSize = Math.min(40, height * 0.3);
+            // Regular number or decimal - should fill most of the height
+            const fontSize = Math.min(120, height * 0.6);
             const valueText = new PIXI.Text(numberStr, {
                 fontSize: fontSize,
                 fill: 0x000000,
@@ -469,15 +469,16 @@ export class WasmSpriteView {
         const height = this.sprite?.height || 198;
 
         if (textContent) {
-            const fontSize = Math.min(24, height * 0.15);
+            // Text should fill most of the pad height, like "ToonTalk" example
+            const fontSize = Math.min(100, height * 0.5);
             const valueText = new PIXI.Text(textContent, {
                 fontSize: fontSize,
                 fill: 0x000000,
-                fontWeight: 'normal',
+                fontWeight: 'bold',
                 fontFamily: 'Arial',
                 wordWrap: true,
-                wordWrapWidth: width - 30,
-                align: 'left',
+                wordWrapWidth: width - 20,
+                align: 'center',
                 breakWords: true
             });
             valueText.anchor.set(0.5);
