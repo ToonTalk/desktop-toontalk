@@ -550,7 +550,10 @@ export class WasmSpriteView {
      */
     private renderTextPad(): void {
         const txt = this.wasmSprite as ToonTalkText;
-        const textContent = txt.getText() || "";
+        let textContent = txt.getText() || "";
+
+        // Trim whitespace for consistent rendering (matches measurement)
+        textContent = textContent.trim();
 
         // Use WASM sprite dimensions (game world coordinates), not texture dimensions
         const width = this.wasmSprite.getWidth();
