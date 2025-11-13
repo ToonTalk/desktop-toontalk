@@ -339,8 +339,10 @@ export class WasmSpriteView {
     private renderNumberText(): void {
         const num = this.wasmSprite as ToonTalkNumber;
         const numberStr = num.toString();
-        const width = this.sprite?.width || 152;
-        const height = this.sprite?.height || 198;
+
+        // Use WASM sprite dimensions (game world coordinates), not texture dimensions
+        const width = this.wasmSprite.getWidth();
+        const height = this.wasmSprite.getHeight();
 
         // Original ToonTalk computes edge size as 1/10 of smaller dimension
         // and subtracts 2*edge_size from both dimensions for text area
@@ -445,8 +447,8 @@ export class WasmSpriteView {
                 container.addChild(denomText);
             }
 
-            container.x = width / 2;
-            container.y = height / 2;
+            container.x = 0;  // Centered in this.container's coordinate system
+            container.y = 0;
             this.container.addChild(container);
             this.textDisplay = container;
 
@@ -460,8 +462,8 @@ export class WasmSpriteView {
                 fontFamily: 'Arial'
             });
             valueText.anchor.set(0.5);
-            valueText.x = width / 2;
-            valueText.y = height / 2;
+            valueText.x = 0;  // Centered in container's coordinate system
+            valueText.y = 0;
             this.container.addChild(valueText);
             this.textDisplay = valueText;
         }
@@ -473,8 +475,10 @@ export class WasmSpriteView {
     private renderTextPad(): void {
         const txt = this.wasmSprite as ToonTalkText;
         const textContent = txt.getText() || "";
-        const width = this.sprite?.width || 152;
-        const height = this.sprite?.height || 198;
+
+        // Use WASM sprite dimensions (game world coordinates), not texture dimensions
+        const width = this.wasmSprite.getWidth();
+        const height = this.wasmSprite.getHeight();
 
         // Original ToonTalk computes edge size as 1/10 of smaller dimension
         // and subtracts 2*edge_size from both dimensions for text area
@@ -496,8 +500,8 @@ export class WasmSpriteView {
                 breakWords: true
             });
             valueText.anchor.set(0.5);
-            valueText.x = width / 2;
-            valueText.y = height / 2;
+            valueText.x = 0;  // Centered in container's coordinate system
+            valueText.y = 0;
             this.container.addChild(valueText);
             this.textDisplay = valueText;
         }
