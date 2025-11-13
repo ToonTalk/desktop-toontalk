@@ -145,13 +145,15 @@ export class WasmCore {
         console.log('[WASM Test] After append:", text.getText(), "- Length:', text.length());
         text.delete();
 
-        // Test 8: Create Box
-        const box = new this.module.Box(300, 100, 5);
-        console.log('[WASM Test] Created Box - Capacity:', box.getCapacity());
-        box.addItem();
-        box.addItem();
-        box.addItem();
-        console.log('[WASM Test] Added 3 items - Count:', box.getCount(), '- Fullness:', box.getFullness());
+        // Test 8: Create Box (with holes like original ToonTalk Cubby)
+        const box = new this.module.Box(300, 100, 3);
+        console.log('[WASM Test] Created Box - NumHoles:', box.getNumHoles());
+        box.setHoleLabel(0, "First");
+        box.setHoleLabel(1, "Second");
+        box.setHoleFilled(0, true);
+        box.setHoleFilled(2, true);
+        console.log('[WASM Test] Filled holes 0 and 2 - Count:', box.getCount(), '- Fullness:', box.getFullness());
+        console.log('[WASM Test] Hole 0 filled:', box.isHoleFilled(0), '- Hole 0 label:', box.getHoleLabel(0));
         console.log('[WASM Test] isEmpty:', box.isEmpty(), '- isFull:', box.isFull());
         box.delete();
 
