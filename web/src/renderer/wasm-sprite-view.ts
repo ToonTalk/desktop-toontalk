@@ -346,7 +346,7 @@ export class WasmSpriteView {
             textContent = (this.wasmSprite as ToonTalkText).getText() || "";
         }
 
-        if (!textContent) return;
+        if (!textContent || textContent.trim().length === 0) return;
 
         // Minimum dimensions to keep pads readable (based on M25 sprite sizes)
         const MIN_WIDTH = 152;
@@ -354,6 +354,9 @@ export class WasmSpriteView {
 
         // Start with a base font size to measure text extent
         const baseFontSize = 100; // Arbitrary base size for measurement
+
+        // Trim text for measurement to avoid issues with leading/trailing spaces
+        const trimmedText = textContent.trim();
 
         // Create temporary text to measure dimensions
         const testStyle = new PIXI.TextStyle({
@@ -363,7 +366,7 @@ export class WasmSpriteView {
             wordWrap: false
         });
 
-        const metrics = PIXI.TextMetrics.measureText(textContent, testStyle);
+        const metrics = PIXI.TextMetrics.measureText(trimmedText, testStyle);
 
         // Calculate aspect ratio needed for the text
         const textAspectRatio = metrics.width / metrics.height;
