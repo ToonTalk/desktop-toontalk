@@ -649,12 +649,16 @@ export class WasmSpriteView {
         const box = this.wasmSprite as ToonTalkBox;
         const numHoles = box.getNumHoles();
 
+        console.log(`[BoxOverlay] Rendering box with ${numHoles} holes, ${box.getCount()} filled`);
+
         // Create container for hole indicators
         const overlayContainer = new PIXI.Container();
 
         // Get texture dimensions to position indicators correctly
         const width = this.sprite ? this.sprite.width : 120;
         const height = this.sprite ? this.sprite.height : 100;
+
+        console.log(`[BoxOverlay] Box dimensions: ${width}x${height}`);
 
         // Position indicators for each hole
         const holeSpacing = width / (numHoles + 1);
@@ -664,6 +668,7 @@ export class WasmSpriteView {
 
             // Show filled state with a dot
             if (box.isHoleFilled(i)) {
+                console.log(`[BoxOverlay] Adding green dot for filled hole ${i} at x=${xPos}`);
                 const dot = new PIXI.Graphics();
                 dot.beginFill(0x90EE90);  // Light green
                 dot.drawCircle(0, 0, 6);
@@ -676,6 +681,7 @@ export class WasmSpriteView {
             // Show label if present
             const label = box.getHoleLabel(i);
             if (label && label.length > 0) {
+                console.log(`[BoxOverlay] Adding label "${label}" for hole ${i}`);
                 const labelText = new PIXI.Text(label, {
                     fontSize: 10,
                     fill: 0x000000,
@@ -702,6 +708,7 @@ export class WasmSpriteView {
         statusText.y = height/2 - 15;
         overlayContainer.addChild(statusText);
 
+        console.log(`[BoxOverlay] Adding overlay to container`);
         this.container.addChild(overlayContainer);
         this.textDisplay = overlayContainer;
     }
