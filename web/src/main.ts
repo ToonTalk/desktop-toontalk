@@ -162,13 +162,13 @@ class ToonTalkWeb {
         const text2 = wasmCore.createText(centerX - 50, centerY + 120, " World!");
         this.renderer.addWasmSprite(new WasmSpriteView(text2, this.renderer.getStage(), this.renderer));
 
-        // Row 3 (Bottom-Right): Box for storage
-        const box1 = wasmCore.createBox(centerX + 150, centerY + 120, 10);
-        box1.addItem();
-        box1.addItem();
-        box1.addItem();
-        box1.addItem();
-        box1.addItem();  // 5 items in the box
+        // Row 3 (Bottom-Right): Box with 3 holes
+        const box1 = wasmCore.createBox(centerX + 150, centerY + 120, 3);
+        box1.setHoleLabel(0, "First");
+        box1.setHoleLabel(1, "Second");
+        box1.setHoleLabel(2, "Third");
+        box1.setHoleFilled(0, true);  // Fill first hole
+        box1.setHoleFilled(2, true);  // Fill third hole (leave middle empty)
         this.renderer.addWasmSprite(new WasmSpriteView(box1, this.renderer.getStage(), this.renderer));
 
         // Center: A Nest with 4 holes (2 filled)

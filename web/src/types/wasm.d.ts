@@ -170,11 +170,16 @@ export declare class ToonTalkText extends Sprite {
 }
 
 /**
- * Box class (matches objects.cpp)
+ * Box class (matches objects.cpp) - Container with multiple holes like original ToonTalk Cubby
  */
 export declare class ToonTalkBox extends Sprite {
-    constructor(x: number, y: number, capacity?: number);
-    getCapacity(): number;
+    constructor(x: number, y: number, numHoles?: number);
+    getNumHoles(): number;
+    setNumHoles(num: number): void;
+    isHoleFilled(index: number): boolean;
+    setHoleFilled(index: number, filled: boolean): void;
+    getHoleLabel(index: number): string;
+    setHoleLabel(index: number, label: string): void;
     getCount(): number;
     isEmpty(): boolean;
     isFull(): boolean;
