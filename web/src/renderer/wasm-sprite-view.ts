@@ -322,10 +322,88 @@ export class WasmSpriteView {
             this.textDisplay = null;
         }
 
+        // Resize pad to fit content before rendering text
+        this.resizeToFitContent(type);
+
         if (type === 'number') {
             this.renderNumberText();
         } else if (type === 'text') {
             this.renderTextPad();
+        }
+    }
+
+    /**
+     * Resize pad to fit its content with minimal wasted space
+     * Mimics the original ToonTalk's good_size() calculation
+     */
+    private resizeToFitContent(type: string): void {
+        if (type !== 'number' && type !== 'text') return;
+
+        let textContent: string;
+        if (type === 'number') {
+            textContent = (this.wasmSprite as ToonTalkNumber).toString();
+        } else {
+            textContent = (this.wasmSprite as ToonTalkText).getText() || "";
+        }
+
+        if (!textContent) return;
+
+        // Start with a base font size to measure text extent
+        const baseFontSize = 100; // Arbitrary base size for measurement
+
+        // Create temporary text to measure dimensions
+        const testStyle = new PIXI.TextStyle({
+            fontSize: baseFontSize,
+            fontWeight: 'bold',
+            fontFamily: 'Arial',
+            wordWrap: false
+        });
+
+        const metrics = PIXI.TextMetrics.measureText(textContent, testStyle);
+
+        // Calculate aspect ratio needed for the text
+        // Add some padding for comfortable reading
+        const textAspectRatio = metrics.width / metrics.height;
+
+        // Get current dimensions
+        const currentWidth = this.wasmSprite.getWidth();
+        const currentHeight = this.wasmSprite.getHeight();
+        const currentAspectRatio = currentWidth / currentHeight;
+
+        // Calculate new dimensions that minimize wasted space
+        let newWidth: number;
+        let newHeight: number;
+
+        // Edge size will be 1/10 of smaller dimension
+        // Text area = dimensions - 2*edge_size
+        // We want text_area aspect ratio to match text content aspect ratio
+
+        if (textAspectRatio > currentAspectRatio) {
+            // Text is wider - keep width, reduce height
+            newWidth = currentWidth;
+            const edgeSize = currentWidth / 10;
+            const neededTextWidth = currentWidth - 2 * edgeSize;
+            const neededTextHeight = neededTextWidth / textAspectRatio;
+            newHeight = neededTextHeight + 2 * edgeSize;
+        } else {
+            // Text is taller - keep height, reduce width
+            newHeight = currentHeight;
+            const edgeSize = currentHeight / 10;
+            const neededTextHeight = currentHeight - 2 * edgeSize;
+            const neededTextWidth = neededTextHeight * textAspectRatio;
+            newWidth = neededTextWidth + 2 * edgeSize;
+        }
+
+        // Update WASM sprite dimensions
+        this.wasmSprite.setSize(Math.round(newWidth), Math.round(newHeight));
+
+        // Update visual sprite to match new dimensions
+        if (this.sprite) {
+            // Texture has fixed size (e.g., 152x198), but we want to display at newWidth x newHeight
+            // Calculate scale factors
+            const scaleX = newWidth / this.sprite.texture.width;
+            const scaleY = newHeight / this.sprite.texture.height;
+            this.sprite.scale.set(scaleX, scaleY);
         }
     }
 
