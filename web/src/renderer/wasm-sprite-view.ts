@@ -529,8 +529,23 @@ export class WasmSpriteView {
             this.textDisplay = container;
 
         } else {
-            // Regular number or decimal - should fill available text height
-            const fontSize = textHeight;
+            // Regular number or decimal - calculate font size to fit
+            let fontSize = textHeight;
+
+            // Measure actual rendered height and scale to fit
+            const testText = new PIXI.Text(numberStr, {
+                fontSize: fontSize,
+                fontWeight: 'bold',
+                fontFamily: 'Arial'
+            });
+
+            const measuredHeight = testText.height;
+            if (measuredHeight > textHeight) {
+                fontSize = (fontSize * textHeight) / measuredHeight;
+            }
+            testText.destroy();
+
+            // Create final text with calculated font size
             const valueText = new PIXI.Text(numberStr, {
                 fontSize: fontSize,
                 fill: 0x000000,
@@ -566,8 +581,32 @@ export class WasmSpriteView {
         const textHeight = height - 2 * edgeSize;
 
         if (textContent) {
-            // Text should fill available text height, like "ToonTalk" example
-            const fontSize = textHeight;
+            // Calculate font size that fits within available text height
+            // PixiJS fontSize doesn't directly equal rendered height due to line height
+            // Start with an estimate and measure actual bounds
+            let fontSize = textHeight;
+
+            // Create test text to measure actual rendered height
+            const testText = new PIXI.Text(textContent, {
+                fontSize: fontSize,
+                fontWeight: 'bold',
+                fontFamily: 'Arial',
+                wordWrap: true,
+                wordWrapWidth: textWidth,
+                align: 'center',
+                breakWords: false
+            });
+
+            // PixiJS adds padding - scale fontSize to fit within bounds
+            // Actual height is usually 1.15-1.2x fontSize due to line metrics
+            const measuredHeight = testText.height;
+            if (measuredHeight > textHeight) {
+                // Scale down to fit
+                fontSize = (fontSize * textHeight) / measuredHeight;
+            }
+            testText.destroy();
+
+            // Create final text with calculated font size
             const valueText = new PIXI.Text(textContent, {
                 fontSize: fontSize,
                 fill: 0x000000,
