@@ -330,6 +330,8 @@ export class WasmSpriteView {
             this.renderNumberText();
         } else if (type === 'text') {
             this.renderTextPad();
+        } else if (type === 'box') {
+            this.renderBoxOverlay();
         }
     }
 
@@ -638,6 +640,70 @@ export class WasmSpriteView {
             this.container.addChild(valueText);
             this.textDisplay = valueText;
         }
+    }
+
+    /**
+     * Render box overlay showing hole status and labels when using texture
+     */
+    private renderBoxOverlay(): void {
+        const box = this.wasmSprite as ToonTalkBox;
+        const numHoles = box.getNumHoles();
+
+        // Create container for hole indicators
+        const overlayContainer = new PIXI.Container();
+
+        // Get texture dimensions to position indicators correctly
+        const width = this.sprite ? this.sprite.width : 120;
+        const height = this.sprite ? this.sprite.height : 100;
+
+        // Position indicators for each hole
+        const holeSpacing = width / (numHoles + 1);
+
+        for (let i = 0; i < numHoles; i++) {
+            const xPos = -width/2 + holeSpacing * (i + 1);
+
+            // Show filled state with a dot
+            if (box.isHoleFilled(i)) {
+                const dot = new PIXI.Graphics();
+                dot.beginFill(0x90EE90);  // Light green
+                dot.drawCircle(0, 0, 6);
+                dot.endFill();
+                dot.x = xPos;
+                dot.y = height/4;
+                overlayContainer.addChild(dot);
+            }
+
+            // Show label if present
+            const label = box.getHoleLabel(i);
+            if (label && label.length > 0) {
+                const labelText = new PIXI.Text(label, {
+                    fontSize: 10,
+                    fill: 0x000000,
+                    fontWeight: 'bold',
+                    stroke: 0xFFFFFF,
+                    strokeThickness: 2
+                });
+                labelText.anchor.set(0.5);
+                labelText.x = xPos;
+                labelText.y = -height/2 + 10;
+                overlayContainer.addChild(labelText);
+            }
+        }
+
+        // Add status text at bottom
+        const statusText = new PIXI.Text(`${box.getCount()}/${numHoles}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            fontWeight: 'bold',
+            stroke: 0x000000,
+            strokeThickness: 3
+        });
+        statusText.anchor.set(0.5);
+        statusText.y = height/2 - 15;
+        overlayContainer.addChild(statusText);
+
+        this.container.addChild(overlayContainer);
+        this.textDisplay = overlayContainer;
     }
 
     private drawBird(): void {
