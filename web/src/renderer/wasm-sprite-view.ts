@@ -108,8 +108,9 @@ export class WasmSpriteView {
         if ('setVelocity' in this.wasmSprite) return 'bird';
         if ('getValue' in this.wasmSprite && !('getTypeInt' in this.wasmSprite) && !('getOperand1' in this.wasmSprite)) return 'number';
         if ('getText' in this.wasmSprite) return 'text';
+        // Box has getHoleLabel, Nest does not - check Box first
+        if ('getNumHoles' in this.wasmSprite && 'getHoleLabel' in this.wasmSprite) return 'box';
         if ('getNumHoles' in this.wasmSprite) return 'nest';
-        if ('getCapacity' in this.wasmSprite) return 'box';
         if ('getModeInt' in this.wasmSprite && 'nextMode' in this.wasmSprite) return 'wand';
         if ('isActive' in this.wasmSprite && !('getModeInt' in this.wasmSprite) && !('getTypeInt' in this.wasmSprite)) return 'scale';
         if ('getInstructionCount' in this.wasmSprite) return 'robot';
