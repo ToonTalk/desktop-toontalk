@@ -96,6 +96,8 @@ EMSCRIPTEN_BINDINGS(toontalk_core) {
         .function("setPosition", &Sprite::setPosition)
         .function("getWidth", &Sprite::getWidth)
         .function("getHeight", &Sprite::getHeight)
+        .function("setWidth", &Sprite::setWidth)
+        .function("setHeight", &Sprite::setHeight)
         .function("getRotation", &Sprite::getRotation)
         .function("setRotation", &Sprite::setRotation)
         .function("rotate", &Sprite::rotate)
