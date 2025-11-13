@@ -23,6 +23,7 @@ export default defineConfig({
     sourcemap: true
   },
   optimizeDeps: {
-    exclude: ['toontalk-core']
+    exclude: ['toontalk-core'],
+    force: true  // Force re-optimization on Windows
   }
 });
