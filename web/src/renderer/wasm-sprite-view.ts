@@ -348,6 +348,10 @@ export class WasmSpriteView {
 
         if (!textContent) return;
 
+        // Minimum dimensions to keep pads readable (based on M25 sprite sizes)
+        const MIN_WIDTH = 152;
+        const MIN_HEIGHT = 198;
+
         // Start with a base font size to measure text extent
         const baseFontSize = 100; // Arbitrary base size for measurement
 
@@ -362,36 +366,28 @@ export class WasmSpriteView {
         const metrics = PIXI.TextMetrics.measureText(textContent, testStyle);
 
         // Calculate aspect ratio needed for the text
-        // Add some padding for comfortable reading
         const textAspectRatio = metrics.width / metrics.height;
 
         // Get current dimensions
         const currentWidth = this.wasmSprite.getWidth();
         const currentHeight = this.wasmSprite.getHeight();
-        const currentAspectRatio = currentWidth / currentHeight;
 
         // Calculate new dimensions that minimize wasted space
         let newWidth: number;
         let newHeight: number;
 
-        // Edge size will be 1/10 of smaller dimension
-        // Text area = dimensions - 2*edge_size
-        // We want text_area aspect ratio to match text content aspect ratio
-
-        if (textAspectRatio > currentAspectRatio) {
-            // Text is wider - keep width, reduce height
-            newWidth = currentWidth;
-            const edgeSize = currentWidth / 10;
-            const neededTextWidth = currentWidth - 2 * edgeSize;
-            const neededTextHeight = neededTextWidth / textAspectRatio;
-            newHeight = neededTextHeight + 2 * edgeSize;
+        if (textAspectRatio > 1.5) {
+            // Very wide text - use wider pad
+            newWidth = Math.max(MIN_WIDTH * 1.5, currentWidth);
+            newHeight = Math.max(MIN_HEIGHT * 0.8, newWidth / textAspectRatio);
+        } else if (textAspectRatio < 0.7) {
+            // Very tall text - use taller pad
+            newHeight = Math.max(MIN_HEIGHT * 1.2, currentHeight);
+            newWidth = Math.max(MIN_WIDTH * 0.8, newHeight * textAspectRatio);
         } else {
-            // Text is taller - keep height, reduce width
-            newHeight = currentHeight;
-            const edgeSize = currentHeight / 10;
-            const neededTextHeight = currentHeight - 2 * edgeSize;
-            const neededTextWidth = neededTextHeight * textAspectRatio;
-            newWidth = neededTextWidth + 2 * edgeSize;
+            // Roughly square - use default proportions
+            newWidth = Math.max(MIN_WIDTH, currentWidth);
+            newHeight = Math.max(MIN_HEIGHT, currentHeight);
         }
 
         // Update WASM sprite dimensions
@@ -576,7 +572,7 @@ export class WasmSpriteView {
                 wordWrap: true,
                 wordWrapWidth: textWidth,
                 align: 'center',
-                breakWords: true
+                breakWords: false  // Keep whole words together
             });
             valueText.anchor.set(0.5);
             valueText.x = 0;  // Centered in container's coordinate system
