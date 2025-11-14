@@ -102,6 +102,206 @@ export class WasmSpriteView {
     }
 
     /**
+     * Setup drag-and-drop interactions
+     */
+    private setupInteractions(): void {
+        // Hover effects
+        this.container.on('pointerover', () => {
+            if (!this.isDragging) {
+                this.isHovered = true;
+                this.container.scale.set(1.05);
+                this.container.cursor = 'grab';
+            }
+        });
+
+        this.container.on('pointerout', () => {
+            if (!this.isDragging) {
+                this.isHovered = false;
+                this.container.scale.set(1);
+                this.container.cursor = 'pointer';
+            }
+        });
+
+        // Start drag
+        this.container.on('pointerdown', (event: PIXI.FederatedPointerEvent) => {
+            this.isDragging = true;
+            this.originalScale = { x: this.container.scale.x, y: this.container.scale.y };
+            this.container.scale.set(1.1);
+            this.container.cursor = 'grabbing';
+
+            // Store offset for smooth dragging
+            const globalPos = event.global;
+            this.dragOffset = {
+                x: globalPos.x - this.container.x,
+                y: globalPos.y - this.container.y
+            };
+
+            // Bring to front while dragging
+            this.container.zIndex = 1000;
+
+            event.stopPropagation();
+        });
+
+        // Drag move
+        this.container.on('pointermove', (event: PIXI.FederatedPointerEvent) => {
+            if (this.isDragging) {
+                const globalPos = event.global;
+                this.container.x = globalPos.x - this.dragOffset.x;
+                this.container.y = globalPos.y - this.dragOffset.y;
+
+                // Check for drop targets
+                this.updateDropTarget(globalPos.x, globalPos.y);
+            }
+        });
+
+        // End drag
+        this.container.on('pointerup', () => {
+            if (this.isDragging) {
+                this.isDragging = false;
+                this.container.scale.set(this.originalScale.x, this.originalScale.y);
+                this.container.cursor = this.isHovered ? 'grab' : 'pointer';
+                this.container.zIndex = 0;
+
+                // Handle drop
+                if (this.dropTarget) {
+                    this.handleDrop();
+                } else {
+                    // Update WASM sprite position
+                    this.wasmSprite.setPosition(this.container.x, this.container.y);
+                }
+
+                this.dropTarget = null;
+            }
+        });
+
+        // Global pointer up (in case we drag outside)
+        this.container.on('pointerupoutside', () => {
+            if (this.isDragging) {
+                this.isDragging = false;
+                this.container.scale.set(this.originalScale.x, this.originalScale.y);
+                this.container.cursor = 'pointer';
+                this.container.zIndex = 0;
+
+                // Update WASM sprite position
+                this.wasmSprite.setPosition(this.container.x, this.container.y);
+                this.dropTarget = null;
+            }
+        });
+    }
+
+    /**
+     * Check if we're hovering over a valid drop target
+     */
+    private updateDropTarget(x: number, y: number): void {
+        const target = this.renderer.findSpriteAt(x, y, this);
+
+        if (target) {
+            const targetType = target.getObjectType();
+            const myType = this.getObjectType();
+
+            // Can drop items into boxes or nests
+            if (targetType === 'box' || targetType === 'nest') {
+                this.dropTarget = target;
+                // Visual feedback - highlight the target
+                target.highlightAsDropTarget(true);
+            } else {
+                if (this.dropTarget) {
+                    this.dropTarget.highlightAsDropTarget(false);
+                }
+                this.dropTarget = null;
+            }
+        } else {
+            if (this.dropTarget) {
+                this.dropTarget.highlightAsDropTarget(false);
+            }
+            this.dropTarget = null;
+        }
+    }
+
+    /**
+     * Handle dropping this sprite into a container
+     */
+    private handleDrop(): void {
+        if (!this.dropTarget) return;
+
+        const targetType = this.dropTarget.getObjectType();
+
+        if (targetType === 'box') {
+            const box = this.dropTarget.getWasmSprite() as ToonTalkBox;
+            const numHoles = box.getNumHoles();
+
+            // Find first empty hole
+            for (let i = 0; i < numHoles; i++) {
+                if (!box.isHoleFilled(i)) {
+                    console.log(`[Drop] Placing item in box hole ${i}`);
+                    box.setHoleFilled(i, true);
+
+                    // Redraw the box to show the new filled hole
+                    this.dropTarget.redraw();
+
+                    // Hide the dropped sprite (it's now "in" the box)
+                    this.container.visible = false;
+                    return;
+                }
+            }
+
+            console.log('[Drop] Box is full!');
+        } else if (targetType === 'nest') {
+            const nest = this.dropTarget.getWasmSprite() as ToonTalkNest;
+            const numHoles = nest.getNumHoles();
+
+            // Find first empty hole
+            for (let i = 0; i < numHoles; i++) {
+                if (nest.isHoleEmpty(i)) {
+                    console.log(`[Drop] Placing item in nest hole ${i}`);
+                    nest.setHole(i, true);
+
+                    // Redraw the nest to show the new filled hole
+                    this.dropTarget.redraw();
+
+                    // Hide the dropped sprite
+                    this.container.visible = false;
+                    return;
+                }
+            }
+
+            console.log('[Drop] Nest is full!');
+        }
+
+        // If we couldn't drop, return to original position
+        this.wasmSprite.setPosition(this.container.x, this.container.y);
+    }
+
+    /**
+     * Highlight/unhighlight as a drop target
+     */
+    private highlightAsDropTarget(highlight: boolean): void {
+        if (highlight) {
+            // Add a green glow effect
+            const glow = new PIXI.Graphics();
+            glow.lineStyle(4, 0x00FF00, 0.8);
+            const width = this.wasmSprite.getWidth();
+            const height = this.wasmSprite.getHeight();
+            glow.drawRect(-width/2 - 5, -height/2 - 5, width + 10, height + 10);
+            glow.name = 'dropGlow';
+            this.container.addChild(glow);
+        } else {
+            // Remove glow
+            const glow = this.container.getChildByName('dropGlow');
+            if (glow) {
+                this.container.removeChild(glow);
+            }
+        }
+    }
+
+    /**
+     * Redraw the sprite (after state changes)
+     */
+    private redraw(): void {
+        this.drawSprite();
+    }
+
+    /**
      * Detect object type
      */
     private getObjectType(): string {
