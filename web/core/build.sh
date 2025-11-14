@@ -10,14 +10,32 @@ echo "================================"
 
 # Check if emscripten is available
 if ! command -v emcc &> /dev/null; then
-    echo "Error: Emscripten (emcc) not found!"
-    echo "Please install and activate emsdk:"
-    echo "  git clone https://github.com/emscripten-core/emsdk.git"
-    echo "  cd emsdk"
-    echo "  ./emsdk install latest"
-    echo "  ./emsdk activate latest"
-    echo "  source ./emsdk_env.sh"
-    exit 1
+    # Try to auto-source local emsdk if available
+    SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    EMSDK_ENV="$SCRIPT_DIR/emsdk/emsdk_env.sh"
+
+    if [ -f "$EMSDK_ENV" ]; then
+        echo "Emscripten not in PATH, sourcing local emsdk..."
+        source "$EMSDK_ENV"
+
+        if ! command -v emcc &> /dev/null; then
+            echo "Error: Failed to activate Emscripten!"
+            echo "Try running: source setup-emsdk.sh"
+            exit 1
+        fi
+        echo "✓ Emscripten activated from local emsdk"
+    else
+        echo "Error: Emscripten (emcc) not found!"
+        echo "Please install and activate emsdk:"
+        echo "  git clone https://github.com/emscripten-core/emsdk.git"
+        echo "  cd emsdk"
+        echo "  python emsdk.py install latest"
+        echo "  python emsdk.py activate latest"
+        echo "  source ./emsdk_env.sh"
+        echo ""
+        echo "Or run: source setup-emsdk.sh"
+        exit 1
+    fi
 fi
 
 echo "Using Emscripten: $(emcc --version | head -n 1)"
