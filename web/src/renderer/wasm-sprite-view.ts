@@ -962,20 +962,45 @@ export class WasmSpriteView {
 
     private drawNumber(): void {
         const num = this.wasmSprite as ToonTalkNumber;
+        const isBlank = num.isBlank();
+        const isOperation = num.isOperation();
+        const value = num.getValue();
 
-        // Green rounded rectangle
-        this.graphics.beginFill(0x32CD32);
+        // Color scheme: bright green for regular, darker green for operations, light green for blank
+        const fillColor = isBlank ? 0x90EE90 : (isOperation ? 0x228B22 : 0x32CD32);
+        const borderColor = isBlank ? 0x66BB66 : 0x228B22;
+
+        // Green rounded rectangle (classic ToonTalk number pad shape)
+        this.graphics.beginFill(fillColor);
         this.graphics.drawRoundedRect(-40, -30, 80, 60, 10);
         this.graphics.endFill();
 
-        // Border
-        this.graphics.lineStyle(3, 0x228B22);
-        this.graphics.drawRoundedRect(-40, -30, 80, 60, 10);
+        // Border (dashed if blank)
+        if (isBlank) {
+            // Dashed border for blank numbers
+            this.graphics.lineStyle(3, borderColor);
+            const dashLength = 5;
+            const gapLength = 3;
+            this.drawDashedRect(-40, -30, 80, 60, 10, dashLength, gapLength);
+        } else {
+            this.graphics.lineStyle(3, borderColor);
+            this.graphics.drawRoundedRect(-40, -30, 80, 60, 10);
+        }
 
-        // Display the number value
-        const valueText = new PIXI.Text(num.toString(), {
-            fontSize: 24,
-            fill: 0xFFFFFF,
+        // Display content
+        let displayText: string;
+        if (isBlank) {
+            displayText = '?';  // Blank number shows question mark
+        } else if (isOperation) {
+            // Show operation symbol (this would need operation type from WASM)
+            displayText = `op ${value}`;  // Placeholder - would show like "/5" or "×3"
+        } else {
+            displayText = num.toString();
+        }
+
+        const valueText = new PIXI.Text(displayText, {
+            fontSize: isBlank ? 36 : 24,
+            fill: isBlank ? 0x666666 : 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 3
@@ -983,8 +1008,53 @@ export class WasmSpriteView {
         valueText.anchor.set(0.5);
         this.graphics.addChild(valueText);
 
+        // Add small label for blank/operation state
+        if (isBlank || isOperation) {
+            const label = new PIXI.Text(isBlank ? 'BLANK' : 'OP', {
+                fontSize: 8,
+                fill: 0xFFFFFF,
+                fontWeight: 'bold',
+                stroke: 0x000000,
+                strokeThickness: 1
+            });
+            label.anchor.set(0.5);
+            label.y = -22;
+            this.graphics.addChild(label);
+        }
+
         // Store for updates
         this.textDisplay = valueText;
+    }
+
+    /**
+     * Helper to draw dashed rounded rectangle
+     */
+    private drawDashedRect(x: number, y: number, width: number, height: number, radius: number, dashLength: number, gapLength: number): void {
+        // Simplified dashed rect (just the sides, not rounded corners)
+        const perimeter = 2 * (width + height);
+        const totalDashLength = dashLength + gapLength;
+        let currentLength = 0;
+
+        // Top
+        for (let i = x; i < x + width; i += totalDashLength) {
+            this.graphics.moveTo(i, y);
+            this.graphics.lineTo(Math.min(i + dashLength, x + width), y);
+        }
+        // Right
+        for (let i = y; i < y + height; i += totalDashLength) {
+            this.graphics.moveTo(x + width, i);
+            this.graphics.lineTo(x + width, Math.min(i + dashLength, y + height));
+        }
+        // Bottom
+        for (let i = x + width; i > x; i -= totalDashLength) {
+            this.graphics.moveTo(i, y + height);
+            this.graphics.lineTo(Math.max(i - dashLength, x), y + height);
+        }
+        // Left
+        for (let i = y + height; i > y; i -= totalDashLength) {
+            this.graphics.moveTo(x, i);
+            this.graphics.lineTo(x, Math.max(i - dashLength, y));
+        }
     }
 
     private drawText(): void {
