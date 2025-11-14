@@ -67,9 +67,14 @@ if ! command -v emcc &> /dev/null; then
             echo "emcc not found after sourcing emsdk_env.sh, adding paths manually..."
 
             # Add emscripten directories to PATH
-            if [ -d "$SCRIPT_DIR/emsdk/upstream/emscripten" ]; then
-                export PATH="$SCRIPT_DIR/emsdk/upstream/emscripten:$PATH"
+            EMSCRIPTEN_DIR="$SCRIPT_DIR/emsdk/upstream/emscripten"
+            if [ -d "$EMSCRIPTEN_DIR" ]; then
+                export PATH="$EMSCRIPTEN_DIR:$PATH"
+                echo "Added to PATH: $EMSCRIPTEN_DIR"
+            else
+                echo "Warning: Directory not found: $EMSCRIPTEN_DIR"
             fi
+
             if [ -d "$SCRIPT_DIR/emsdk/upstream/bin" ]; then
                 export PATH="$SCRIPT_DIR/emsdk/upstream/bin:$PATH"
             fi
@@ -79,11 +84,24 @@ if ! command -v emcc &> /dev/null; then
                 export EMSDK="$SCRIPT_DIR/emsdk"
             fi
 
+            # Check if emcc file exists and is executable
+            if [ -f "$EMSCRIPTEN_DIR/emcc" ]; then
+                echo "emcc file exists at: $EMSCRIPTEN_DIR/emcc"
+                if [ -x "$EMSCRIPTEN_DIR/emcc" ]; then
+                    echo "emcc is executable"
+                else
+                    echo "emcc is NOT executable, fixing..."
+                    chmod +x "$EMSCRIPTEN_DIR/emcc"
+                fi
+            fi
+
             # Verify emcc is now available
             if ! command -v emcc &> /dev/null; then
                 echo "Error: Failed to activate Emscripten!"
-                echo "emcc should be at: $SCRIPT_DIR/emsdk/upstream/emscripten/emcc"
-                echo "Try running: source setup-emsdk.sh"
+                echo "Debug: SCRIPT_DIR=$SCRIPT_DIR"
+                echo "Debug: First 200 chars of PATH: ${PATH:0:200}"
+                echo "Debug: Looking for emcc..."
+                ls -la "$EMSCRIPTEN_DIR/emcc" 2>&1 || echo "File not found"
                 exit 1
             fi
         fi
