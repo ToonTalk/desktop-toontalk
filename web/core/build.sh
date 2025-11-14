@@ -19,24 +19,18 @@ if ! command -v emcc &> /dev/null; then
 
         # On Windows (Git Bash/MINGW), ensure Python is in PATH before sourcing emsdk
         if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
-            # Add common Python installation paths on Windows
-            export PATH="/c/Python312:/c/Python311:/c/Python310:/c/Python39:$PATH"
+            # Create a bin directory with Python wrapper to bypass Windows Store alias
+            PYTHON_BIN_DIR="$SCRIPT_DIR/.python-bin"
+            mkdir -p "$PYTHON_BIN_DIR"
 
-            # Create a shell function to bypass Windows app execution alias
-            # This ensures 'python' calls python.exe directly from the correct location
-            if [ -f "/c/Python311/python.exe" ]; then
-                python() { /c/Python311/python.exe "$@"; }
-                export -f python
-            elif [ -f "/c/Python312/python.exe" ]; then
-                python() { /c/Python312/python.exe "$@"; }
-                export -f python
-            elif [ -f "/c/Python310/python.exe" ]; then
-                python() { /c/Python310/python.exe "$@"; }
-                export -f python
-            elif [ -f "/c/Python39/python.exe" ]; then
-                python() { /c/Python39/python.exe "$@"; }
-                export -f python
+            # Copy the wrapper as 'python' in the bin directory
+            if [ -f "$SCRIPT_DIR/python-wrapper.sh" ]; then
+                cp "$SCRIPT_DIR/python-wrapper.sh" "$PYTHON_BIN_DIR/python"
+                chmod +x "$PYTHON_BIN_DIR/python"
             fi
+
+            # Add our bin directory to PATH FIRST so it's found before Windows Store alias
+            export PATH="$PYTHON_BIN_DIR:$PATH"
         fi
 
         source "$EMSDK_ENV"
