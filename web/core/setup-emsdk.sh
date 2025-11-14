@@ -17,6 +17,22 @@ echo "Setting up Emscripten SDK..."
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
     # Add common Python installation paths on Windows
     export PATH="/c/Python312:/c/Python311:/c/Python310:/c/Python39:$PATH"
+
+    # Create a shell function to bypass Windows app execution alias
+    # This ensures 'python' calls python.exe directly from the correct location
+    if [ -f "/c/Python311/python.exe" ]; then
+        python() { /c/Python311/python.exe "$@"; }
+        export -f python
+    elif [ -f "/c/Python312/python.exe" ]; then
+        python() { /c/Python312/python.exe "$@"; }
+        export -f python
+    elif [ -f "/c/Python310/python.exe" ]; then
+        python() { /c/Python310/python.exe "$@"; }
+        export -f python
+    elif [ -f "/c/Python39/python.exe" ]; then
+        python() { /c/Python39/python.exe "$@"; }
+        export -f python
+    fi
 fi
 
 source "$EMSDK_DIR/emsdk_env.sh"
