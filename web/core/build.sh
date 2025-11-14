@@ -16,6 +16,13 @@ if ! command -v emcc &> /dev/null; then
 
     if [ -f "$EMSDK_ENV" ]; then
         echo "Emscripten not in PATH, sourcing local emsdk..."
+
+        # On Windows (Git Bash/MINGW), ensure Python is in PATH before sourcing emsdk
+        if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
+            # Add common Python installation paths on Windows
+            export PATH="/c/Python312:/c/Python311:/c/Python310:/c/Python39:$PATH"
+        fi
+
         source "$EMSDK_ENV"
 
         if ! command -v emcc &> /dev/null; then
