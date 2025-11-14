@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ToonTalk Platform Layer Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #222;
+            color: #fff;
+        }
+        #canvas-container {
+            background: #000;
+            border: 2px solid #0f0;
+            width: 800px;
+            height: 600px;
+            position: relative;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #log {
+            background: #111;
+            border: 1px solid #333;
+            padding: 10px;
+            margin-top: 20px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 ToonTalk Platform Layer Test</h1>
+    <p>Testing C++ → JavaScript rendering bridge</p>
+
+    <div id="canvas-container">
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+
+    <div>
+        <button onclick="testPlatform()">Test Platform Layer</button>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+    </div>
+
+    <div id="log"></div>
+
+    <script>
+        // Set up the rendering bridge that C++ will call
+        window.ToonTalkRenderer = {
+            context: null,
+
+            init: function() {
+                const canvas = document.getElementById('canvas');
+                this.context = canvas.getContext('2d');
+                this.log('ToonTalkRenderer initialized');
+            },
+
+            drawRect: function(x, y, width, height, color) {
+                const ctx = this.context;
+                const colorStr = '#' + color.toString(16).padStart(6, '0');
+                ctx.fillStyle = colorStr;
+                ctx.fillRect(x, y, width, height);
+                this.log(`drawRect(${x}, ${y}, ${width}, ${height}, ${colorStr})`);
+            },
+
+            drawCircle: function(x, y, radius, color) {
+                const ctx = this.context;
+                const colorStr = '#' + color.toString(16).padStart(6, '0');
+                ctx.fillStyle = colorStr;
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                ctx.fill();
+                this.log(`drawCircle(${x}, ${y}, ${radius}, ${colorStr})`);
+            },
+
+            drawLine: function(x1, y1, x2, y2, color) {
+                const ctx = this.context;
+                const colorStr = '#' + color.toString(16).padStart(6, '0');
+                ctx.strokeStyle = colorStr;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
+                ctx.stroke();
+                this.log(`drawLine(${x1}, ${y1}, ${x2}, ${y2}, ${colorStr})`);
+            },
+
+            drawText: function(text, x, y, fontSize, color, fontFamily = 'Arial') {
+                const ctx = this.context;
+                const colorStr = '#' + color.toString(16).padStart(6, '0');
+                ctx.fillStyle = colorStr;
+                ctx.font = `${fontSize}px ${fontFamily}`;
+                ctx.fillText(text, x, y);
+                this.log(`drawText("${text}", ${x}, ${y}, ${fontSize}, ${colorStr})`);
+            },
+
+            clear: function() {
+                const ctx = this.context;
+                ctx.fillStyle = '#000';
+                ctx.fillRect(0, 0, 800, 600);
+                this.log('clear()');
+            },
+
+            present: function() {
+                // No-op for canvas 2D (auto-presents)
+            },
+
+            setClipRect: function(x, y, width, height) {
+                const ctx = this.context;
+                ctx.save();
+                ctx.beginPath();
+                ctx.rect(x, y, width, height);
+                ctx.clip();
+                this.log(`setClipRect(${x}, ${y}, ${width}, ${height})`);
+            },
+
+            clearClip: function() {
+                const ctx = this.context;
+                ctx.restore();
+                this.log('clearClip()');
+            },
+
+            log: function(message) {
+                console.log('[ToonTalkRenderer]', message);
+                const logDiv = document.getElementById('log');
+                const entry = document.createElement('div');
+                entry.textContent = `[${new Date().toLocaleTimeString()}] ${message}`;
+                logDiv.appendChild(entry);
+                logDiv.scrollTop = logDiv.scrollHeight;
+            }
+        };
+
+        // Initialize renderer
+        window.ToonTalkRenderer.init();
+
+        // Load WASM module
+        let Module;
+        createToonTalkCore().then(mod => {
+            Module = mod;
+            window.ToonTalkRenderer.log('✅ WASM module loaded successfully!');
+            window.ToonTalkRenderer.log('Ready to test platform layer');
+        }).catch(err => {
+            window.ToonTalkRenderer.log('❌ Error loading WASM: ' + err);
+            console.error(err);
+        });
+
+        function testPlatform() {
+            if (!Module) {
+                alert('WASM not loaded yet!');
+                return;
+            }
+
+            window.ToonTalkRenderer.log('--- Testing platform layer ---');
+
+            try {
+                // Call the C++ test function
+                Module.testPlatformLayer();
+                window.ToonTalkRenderer.log('✅ Platform layer test completed!');
+            } catch (err) {
+                window.ToonTalkRenderer.log('❌ Error: ' + err);
+                console.error(err);
+            }
+        }
+
+        function clearCanvas() {
+            window.ToonTalkRenderer.clear();
+        }
+    </script>
+    <script src="build/toontalk-core.js"></script>
+</body>
+</html>
