@@ -13,17 +13,34 @@ fi
 
 echo "Setting up Emscripten SDK..."
 
-# On Windows (Git Bash/MINGW), add real Python directory to PATH first
+# On Windows (Git Bash/MINGW), create a Python wrapper to bypass Windows Store alias
 if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
-    # Find Python installation and add its directory to PATH
-    # This puts the real python.exe before Windows Store alias
+    # Find Python installation
+    PYTHON_EXE=""
     for PYDIR in "/c/Python312" "/c/Python311" "/c/Python310" "/c/Python39"; do
         if [ -f "$PYDIR/python.exe" ]; then
             echo "Found Python at: $PYDIR"
-            export PATH="$PYDIR:$PATH"
+            PYTHON_EXE="$PYDIR/python.exe"
             break
         fi
     done
+
+    if [ -n "$PYTHON_EXE" ]; then
+        # Create a temporary bin directory with a python wrapper script
+        TEMP_BIN="$SCRIPT_DIR/.temp-bin"
+        mkdir -p "$TEMP_BIN"
+
+        # Create wrapper script that calls python.exe directly
+        cat > "$TEMP_BIN/python" << EOF
+#!/bin/bash
+exec "$PYTHON_EXE" "\$@"
+EOF
+        chmod +x "$TEMP_BIN/python"
+
+        # Add temp bin to PATH FIRST
+        export PATH="$TEMP_BIN:$PATH"
+        echo "Created Python wrapper in temporary bin directory"
+    fi
 fi
 
 source "$EMSDK_DIR/emsdk_env.sh"

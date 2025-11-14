@@ -3,6 +3,7 @@ web/core/emsdk/
 
 # Python wrapper bin (generated on Windows)
 web/core/.python-bin/
+web/core/.temp-bin/
 
 # Build outputs
 web/core/build/
