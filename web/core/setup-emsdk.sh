@@ -58,6 +58,24 @@ fi
 
 source "$EMSDK_DIR/emsdk_env.sh"
 
+# If emcc is still not found after sourcing, manually add emscripten to PATH
+if ! command -v emcc &> /dev/null; then
+    echo "emcc not found after sourcing emsdk_env.sh, adding paths manually..."
+
+    # Add emscripten directories to PATH
+    if [ -d "$EMSDK_DIR/upstream/emscripten" ]; then
+        export PATH="$EMSDK_DIR/upstream/emscripten:$PATH"
+    fi
+    if [ -d "$EMSDK_DIR/upstream/bin" ]; then
+        export PATH="$EMSDK_DIR/upstream/bin:$PATH"
+    fi
+
+    # Set EMSDK if not already set
+    if [ -z "$EMSDK" ]; then
+        export EMSDK="$EMSDK_DIR"
+    fi
+fi
+
 if command -v emcc &> /dev/null; then
     echo "✓ Emscripten is now available!"
     echo "  emcc version: $(emcc --version | head -1)"
@@ -65,5 +83,6 @@ if command -v emcc &> /dev/null; then
     echo "You can now run: bash build.sh"
 else
     echo "✗ Failed to set up Emscripten"
+    echo "emcc should be at: $EMSDK_DIR/upstream/emscripten/emcc"
     return 1
 fi

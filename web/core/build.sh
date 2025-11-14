@@ -62,10 +62,30 @@ if ! command -v emcc &> /dev/null; then
 
         source "$EMSDK_ENV"
 
+        # If emcc is still not found after sourcing, manually add emscripten to PATH
         if ! command -v emcc &> /dev/null; then
-            echo "Error: Failed to activate Emscripten!"
-            echo "Try running: source setup-emsdk.sh"
-            exit 1
+            echo "emcc not found after sourcing emsdk_env.sh, adding paths manually..."
+
+            # Add emscripten directories to PATH
+            if [ -d "$SCRIPT_DIR/emsdk/upstream/emscripten" ]; then
+                export PATH="$SCRIPT_DIR/emsdk/upstream/emscripten:$PATH"
+            fi
+            if [ -d "$SCRIPT_DIR/emsdk/upstream/bin" ]; then
+                export PATH="$SCRIPT_DIR/emsdk/upstream/bin:$PATH"
+            fi
+
+            # Set EMSDK if not already set
+            if [ -z "$EMSDK" ]; then
+                export EMSDK="$SCRIPT_DIR/emsdk"
+            fi
+
+            # Verify emcc is now available
+            if ! command -v emcc &> /dev/null; then
+                echo "Error: Failed to activate Emscripten!"
+                echo "emcc should be at: $SCRIPT_DIR/emsdk/upstream/emscripten/emcc"
+                echo "Try running: source setup-emsdk.sh"
+                exit 1
+            fi
         fi
         echo "✓ Emscripten activated from local emsdk"
     else
