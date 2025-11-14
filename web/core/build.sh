@@ -30,25 +30,29 @@ if ! command -v emcc &> /dev/null; then
             done
 
             if [ -n "$PYTHON_EXE" ]; then
-                # Create a temporary bin directory with a python wrapper script
+                # Create a temporary bin directory with python wrapper scripts
                 TEMP_BIN="$SCRIPT_DIR/.temp-bin"
                 mkdir -p "$TEMP_BIN"
 
-                # Create wrapper script that calls python.exe directly
+                # Create python wrapper
                 cat > "$TEMP_BIN/python" << EOF
 #!/bin/bash
 exec "$PYTHON_EXE" "\$@"
 EOF
                 chmod +x "$TEMP_BIN/python"
 
-                # Add temp bin to PATH FIRST
+                # Create python3 wrapper (emsdk prefers python3 from PATH)
+                cat > "$TEMP_BIN/python3" << EOF
+#!/bin/bash
+exec "$PYTHON_EXE" "\$@"
+EOF
+                chmod +x "$TEMP_BIN/python3"
+
+                # Add temp bin to PATH FIRST (so our python3 is found before Windows Store alias)
                 export PATH="$TEMP_BIN:$PATH"
 
-                # Set EMSDK_PYTHON environment variable (emsdk wrapper script checks this first)
-                export EMSDK_PYTHON="$PYTHON_EXE"
-
-                echo "Created Python wrapper in temporary bin directory"
-                echo "Set EMSDK_PYTHON=$PYTHON_EXE"
+                echo "Created Python wrappers (python, python3) in temporary bin directory"
+                echo "Using Python at: $PYTHON_EXE"
             fi
         fi
 
