@@ -60,19 +60,47 @@ if ! command -v emcc &> /dev/null; then
             fi
         fi
 
+        # Check if emsdk needs to be installed/activated
+        EMSCRIPTEN_DIR="$SCRIPT_DIR/emsdk/upstream/emscripten"
+        if [ ! -d "$EMSCRIPTEN_DIR" ]; then
+            echo "Emscripten SDK not installed. Installing and activating..."
+            echo "This may take a few minutes..."
+
+            cd "$SCRIPT_DIR/emsdk"
+
+            # Use python3 from our temp bin if on Windows
+            if [ -n "$PYTHON_EXE" ]; then
+                PYTHON_CMD="$PYTHON_EXE"
+            else
+                PYTHON_CMD="python3"
+            fi
+
+            # Install and activate latest emsdk
+            echo "Installing Emscripten SDK..."
+            "$PYTHON_CMD" emsdk.py install latest || {
+                echo "Error: Failed to install Emscripten SDK"
+                exit 1
+            }
+
+            echo "Activating Emscripten SDK..."
+            "$PYTHON_CMD" emsdk.py activate latest || {
+                echo "Error: Failed to activate Emscripten SDK"
+                exit 1
+            }
+
+            cd "$SCRIPT_DIR"
+            echo "✓ Emscripten SDK installed and activated"
+        fi
+
         source "$EMSDK_ENV"
 
         # If emcc is still not found after sourcing, manually add emscripten to PATH
         if ! command -v emcc &> /dev/null; then
-            echo "emcc not found after sourcing emsdk_env.sh, adding paths manually..."
+            echo "Adding Emscripten directories to PATH manually..."
 
             # Add emscripten directories to PATH
-            EMSCRIPTEN_DIR="$SCRIPT_DIR/emsdk/upstream/emscripten"
             if [ -d "$EMSCRIPTEN_DIR" ]; then
                 export PATH="$EMSCRIPTEN_DIR:$PATH"
-                echo "Added to PATH: $EMSCRIPTEN_DIR"
-            else
-                echo "Warning: Directory not found: $EMSCRIPTEN_DIR"
             fi
 
             if [ -d "$SCRIPT_DIR/emsdk/upstream/bin" ]; then
@@ -84,24 +112,11 @@ if ! command -v emcc &> /dev/null; then
                 export EMSDK="$SCRIPT_DIR/emsdk"
             fi
 
-            # Check if emcc file exists and is executable
-            if [ -f "$EMSCRIPTEN_DIR/emcc" ]; then
-                echo "emcc file exists at: $EMSCRIPTEN_DIR/emcc"
-                if [ -x "$EMSCRIPTEN_DIR/emcc" ]; then
-                    echo "emcc is executable"
-                else
-                    echo "emcc is NOT executable, fixing..."
-                    chmod +x "$EMSCRIPTEN_DIR/emcc"
-                fi
-            fi
-
             # Verify emcc is now available
             if ! command -v emcc &> /dev/null; then
                 echo "Error: Failed to activate Emscripten!"
-                echo "Debug: SCRIPT_DIR=$SCRIPT_DIR"
-                echo "Debug: First 200 chars of PATH: ${PATH:0:200}"
-                echo "Debug: Looking for emcc..."
-                ls -la "$EMSCRIPTEN_DIR/emcc" 2>&1 || echo "File not found"
+                echo "emcc should be at: $EMSCRIPTEN_DIR/emcc"
+                echo "Please try running: cd $SCRIPT_DIR/emsdk && python emsdk.py install latest && python emsdk.py activate latest"
                 exit 1
             fi
         fi
