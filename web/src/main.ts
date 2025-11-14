@@ -162,8 +162,8 @@ class ToonTalkWeb {
         const text2 = wasmCore.createText(centerX - 50, centerY + 120, " World!");
         this.renderer.addWasmSprite(new WasmSpriteView(text2, this.renderer.getStage(), this.renderer));
 
-        // Row 3 (Bottom-Right): Box with 3 holes
-        const box1 = wasmCore.createBox(centerX + 150, centerY + 120, 3);
+        // Row 1 (Top-Right): Box with 3 holes
+        const box1 = wasmCore.createBox(centerX + 200, centerY - 120, 3);
         box1.setHoleLabel(0, "First");
         box1.setHoleLabel(1, "Second");
         box1.setHoleLabel(2, "Third");
