@@ -1158,49 +1158,103 @@ export class WasmSpriteView {
 
     private drawScale(): void {
         const scale = this.wasmSprite as ToonTalkScale;
-        const isActive = scale.isActive();
+        const tiltState = scale.getTiltState();
+        const isFrozen = scale.isFrozen();
+        const isRemembering = scale.isRemembering();
 
-        // Silver/gray scale platform
-        this.graphics.beginFill(0xC0C0C0);
-        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+        // TiltState enum values from C++:
+        // TOTTER = 0, TILT_LEFT = 1, TILT_RIGHT = 2, BALANCED = 3, FROZEN = 4, REMEMBERING = 5
+
+        // Base platform (silver metallic)
+        const alpha = isRemembering ? 0.5 : 1.0;
+        this.graphics.beginFill(0xC0C0C0, alpha);
+        this.graphics.drawRoundedRect(-62, -48, 125, 97, 5);
         this.graphics.endFill();
 
-        // Border (gold if active, gray if not)
-        this.graphics.lineStyle(3, isActive ? 0xFFD700 : 0x808080);
-        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
+        // Border (blue if frozen, gold if remembering, gray otherwise)
+        const borderColor = isFrozen ? 0x4169E1 : (isRemembering ? 0xFFD700 : 0x808080);
+        this.graphics.lineStyle(3, borderColor, alpha);
+        this.graphics.drawRoundedRect(-62, -48, 125, 97, 5);
 
-        // Draw scale platform with balance line
-        this.graphics.lineStyle(2, 0x404040);
-        this.graphics.moveTo(-25, 0);
-        this.graphics.lineTo(25, 0);
-
-        // Draw two pans (left and right)
-        this.graphics.beginFill(0xE0E0E0);
-        this.graphics.drawCircle(-15, -5, 10);
-        this.graphics.drawCircle(15, -5, 10);
+        // Central pivot/fulcrum (triangular support)
+        this.graphics.beginFill(0x696969, alpha);
+        this.graphics.moveTo(-10, 10);
+        this.graphics.lineTo(10, 10);
+        this.graphics.lineTo(0, -5);
+        this.graphics.lineTo(-10, 10);
         this.graphics.endFill();
 
-        // Label
-        const label = new PIXI.Text('Scale', {
-            fontSize: 10,
-            fill: isActive ? 0xFFD700 : 0xFFFFFF,
+        // Calculate tilt angle based on state
+        let tiltAngle = 0;
+        let animationOffset = 0;
+
+        if (tiltState === 0) { // TOTTER
+            // Animate tottering back and forth
+            animationOffset = Math.sin(Date.now() / 200) * 10;
+        } else if (tiltState === 1) { // TILT_LEFT
+            tiltAngle = -15;
+        } else if (tiltState === 2) { // TILT_RIGHT
+            tiltAngle = 15;
+        } else if (tiltState === 3) { // BALANCED
+            tiltAngle = 0;
+        }
+
+        // Draw the beam (horizontal bar)
+        const beamLength = 50;
+        const beamY = -10;
+
+        this.graphics.lineStyle(4, 0x404040, alpha);
+        if (tiltState === 0) { // TOTTER - draw wavy
+            this.graphics.moveTo(-beamLength + animationOffset, beamY);
+            this.graphics.lineTo(beamLength - animationOffset, beamY);
+        } else {
+            // Draw tilted beam
+            const leftY = beamY - Math.tan(tiltAngle * Math.PI / 180) * beamLength;
+            const rightY = beamY + Math.tan(tiltAngle * Math.PI / 180) * beamLength;
+            this.graphics.moveTo(-beamLength, leftY);
+            this.graphics.lineTo(beamLength, rightY);
+        }
+
+        // Draw scale pans (dishes hanging from beam)
+        const panRadius = 12;
+        const leftPanY = beamY - Math.tan(tiltAngle * Math.PI / 180) * beamLength - 15;
+        const rightPanY = beamY + Math.tan(tiltAngle * Math.PI / 180) * beamLength - 15;
+
+        // Left pan
+        this.graphics.beginFill(0xE0E0E0, alpha);
+        this.graphics.drawEllipse(-beamLength, leftPanY, panRadius, panRadius * 0.4);
+        this.graphics.endFill();
+        this.graphics.lineStyle(2, 0x404040, alpha);
+        this.graphics.drawEllipse(-beamLength, leftPanY, panRadius, panRadius * 0.4);
+
+        // Right pan
+        this.graphics.beginFill(0xE0E0E0, alpha);
+        this.graphics.drawEllipse(beamLength, rightPanY, panRadius, panRadius * 0.4);
+        this.graphics.endFill();
+        this.graphics.lineStyle(2, 0x404040, alpha);
+        this.graphics.drawEllipse(beamLength, rightPanY, panRadius, panRadius * 0.4);
+
+        // Chains connecting pans to beam
+        this.graphics.lineStyle(1, 0x404040, alpha);
+        this.graphics.moveTo(-beamLength, beamY - Math.tan(tiltAngle * Math.PI / 180) * beamLength);
+        this.graphics.lineTo(-beamLength, leftPanY);
+        this.graphics.moveTo(beamLength, beamY + Math.tan(tiltAngle * Math.PI / 180) * beamLength);
+        this.graphics.lineTo(beamLength, rightPanY);
+
+        // Status label
+        const stateNames = ['TOTTER', 'LEFT', 'RIGHT', 'BALANCED', 'FROZEN', 'REMEMBER'];
+        const stateName = stateNames[tiltState] || 'UNKNOWN';
+
+        const statusText = new PIXI.Text(stateName, {
+            fontSize: 9,
+            fill: isFrozen ? 0x4169E1 : (isRemembering ? 0xFFD700 : 0xFFFFFF),
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 2
         });
-        label.anchor.set(0.5);
-        label.y = 20;
-        this.graphics.addChild(label);
-
-        // Status text
-        const statusText = new PIXI.Text(isActive ? 'ACTIVE' : 'Ready', {
-            fontSize: 8,
-            fill: isActive ? 0xFFD700 : 0xCCCCCC,
-            stroke: 0x000000,
-            strokeThickness: 1
-        });
         statusText.anchor.set(0.5);
-        statusText.y = -22;
+        statusText.y = 35;
+        statusText.alpha = alpha;
         this.graphics.addChild(statusText);
     }
 
