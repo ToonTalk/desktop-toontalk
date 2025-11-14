@@ -17,20 +17,17 @@ if ! command -v emcc &> /dev/null; then
     if [ -f "$EMSDK_ENV" ]; then
         echo "Emscripten not in PATH, sourcing local emsdk..."
 
-        # On Windows (Git Bash/MINGW), ensure Python is in PATH before sourcing emsdk
+        # On Windows (Git Bash/MINGW), add real Python directory to PATH first
         if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" || "$OSTYPE" == "cygwin" ]]; then
-            # Create a bin directory with Python wrapper to bypass Windows Store alias
-            PYTHON_BIN_DIR="$SCRIPT_DIR/.python-bin"
-            mkdir -p "$PYTHON_BIN_DIR"
-
-            # Copy the wrapper as 'python' in the bin directory
-            if [ -f "$SCRIPT_DIR/python-wrapper.sh" ]; then
-                cp "$SCRIPT_DIR/python-wrapper.sh" "$PYTHON_BIN_DIR/python"
-                chmod +x "$PYTHON_BIN_DIR/python"
-            fi
-
-            # Add our bin directory to PATH FIRST so it's found before Windows Store alias
-            export PATH="$PYTHON_BIN_DIR:$PATH"
+            # Find Python installation and add its directory to PATH
+            # This puts the real python.exe before Windows Store alias
+            for PYDIR in "/c/Python312" "/c/Python311" "/c/Python310" "/c/Python39"; do
+                if [ -f "$PYDIR/python.exe" ]; then
+                    echo "Found Python at: $PYDIR"
+                    export PATH="$PYDIR:$PATH"
+                    break
+                fi
+            done
         fi
 
         source "$EMSDK_ENV"
