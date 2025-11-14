@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Running ToonTalk on a Touch Screen, Stylus, or Tablet</title>
+</head>
+
+<body>
+
+<p align="center"><font size="6" face="Comic Sans MS"><b>Running ToonTalk with a Touch Screen, Stylus, or
+Tablet </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font face="Comic Sans MS">You can run ToonTalk in a way that treats the 
+mouse input as screen locations. This is called the absolute mouse mode. The 
+normal behavior of ToonTalk is to pay attention only to differences in mouse 
+position. We call this the relative mouse mode.</font></p>
+
+<p><font face="Comic Sans MS">In absolute mouse mode you click where you want to fly,
+walk, or move your hand. If you are on the floor and click on an object your hand moves
+there and you pick up the object. You can then click again to where you want to move the
+object. Another click will drop it. To use a tool like <a href="dusty.htm">Dusty</a>
+in this manner, click to pick him up, click again to move him to where you want him to be,
+then press a key to turn him on, and another key to turn him off.</font></p>
+
+<p><font face="Comic Sans MS">In absolute mouse mode you can also drag things around by
+keeping the pointer (or mouse button) down. </font></p>
+
+<p><font face="Comic Sans MS">If while your character is walking inside a room you click
+near the bottom of the screen, your character will sit down. While your character is
+sitting and you see the wall in front of you, you can click on the wall to stand up.</font></p>
+
+<p><font face="Comic Sans MS">To switch to absolute mouse mode just set the switch <a
+href="ttini.htm#AbsoluteMouseMode">AbsoluteMouseMode</a> to 1. If you are trying this mode
+with a real mouse as opposed to a stylus or touch sensitive screen, then you probably also
+want to set <a href="ttini.htm#ShowMouseCursor">ShowMouseCursor</a> to 1. Setting them
+back to 0 will restore the installation to relative mouse mode (its normal state).</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

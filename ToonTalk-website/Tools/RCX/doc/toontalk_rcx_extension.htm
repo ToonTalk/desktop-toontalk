@@ -1,0 +1,352 @@
+<html><!-- InstanceBegin template="/Templates/rcxtension.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebLabs - ToonTalk RCX extension</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="92%" class="title">ToonTalk RCX extension</td>
+    <td width="8%"><span class="menu"><a href="/index.html"><img src="../../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="62" colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="../../Sequences/doc/index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Collisions/doc/index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Eco/doc/index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="../../General/doc/index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td><div align="center"><span class="menuWhite"><a href="toontalk_rcx_extension.htm" class="menuWhite">ToonTalk RCX extension</a></span></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- InstanceBeginEditable name="mainbody" -->
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+
+
+
+<p class="paragraphheading"><b>The RCX Extension</b></p>
+<p class="mainbody"><span style="FONT-SIZE: 18pt; FONT-FAMILY: 'Comic Sans MS'"><img src="../RCXbird.png" width="120" height="167" align="left"></span><span class="mainbodybold">The goal of the RCX ToonTalk 
+    extension is to enable learners to create connected executable models of a 
+    phenomenon both in a virtual world (the computer screen) and in the physical 
+    one using the <a href="http://mindstorms.lego.com/">LEGO MindStorms</a> kit.</span></p>
+<div class="stx"><div class="Section1">
+  <p class="mainbodybold">The RCX extension is aimed at 
+    providing the basic functionality that TT projects involving RCX can use. 
+    Higher level TT software abstractions encapsulate specific project 
+    primitives. Such abstractions will be distributed in the form of TT 
+    notebooks containing robots that accomplish specific RCX-related tasks.</p>
+    <p class="MsoNormal" style="TEXT-ALIGN: justify">
+      <span class="mainbodybold">The communication between the PC 
+    and the RCX is implemented using IR devices. The LEGO kit comprises an IR 
+    tower that can be connected to an USB or serial port on the PC. The IR tower 
+    sends signals covering a narrow cone at a maximum distance of a few metres. IR 
+    communication is directional (i.e. the IR tower and RCX should “see” each 
+    other) and this might cause problems with mobile robots.</span></p>
+    <p class="mainbody">From a programming point of 
+    view, the RCX extension is a special bird that can fly &quot;outside&quot; of ToonTalk 
+    and communicate with the RCX. To execute a command on the RCX, e.g. turn on 
+    the motors, boxes that contain commands are given to the bird. If a response 
+    is needed, e.g. a sensor reading, then the box will include another bird 
+    that will bring back the response, thereby achieving communication from the 
+    RCX back to the computer.</p>
+    <p class="mainbody">The RCX is controlled by a 
+    firmware implementing an interpreter that executes low level byte code 
+    commands – either from downloaded programs or from direct commands received 
+    from a controlling computer. With the RCX extension the user can 
+    interactively:</p>
+    <ul style="MARGIN-TOP: 0pt" type="disc">
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">play a sound;</span> </li>
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">control motors;</span> </li>
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">set the RCX display to a 
+      sensor, message or variable value;</span> </li>
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">send a message;</span> </li>
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">set sensor type (since the RCX 
+      has no plug-and-play support, one must always tell it what kind of sensors 
+      is attached to what port);</span> </li>
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">get a sensor value;</span> </li>
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">set and get a variable;</span>
+      </li>
+      <li class="MsoNormal" style="TEXT-ALIGN: justify">
+        <span class="mainbodybold">store the data log of an 
+      experiment on the RCX and upload it to ToonTalk;</span> </li>
+    </ul>
+    <p class="mainbody">Since the RCX computer has 
+    very limited memory and processing power, it’s impossible to enhance the 
+    LEGO RCX firmware with a TT runtime engine. Thus, <i>program running on 
+    the RCX needsto be developed in another programming language.</i> However an 
+    RCX program is composed of independent parallel tasks that can be controlled 
+    interactively from TT. Using this capability, learners can “program” the RCX 
+    composing “behaviors” that are developed by more skillful members of the 
+    Weblabs community. </p>
+    <p class="parasubheading"><b><i>How 
+    to install and upgrade the extension:</i></b></p>
+    <p class="mainbody">Download and copy this file
+        <a href="../TTRcx.dll">
+    TTRcx.dll</a> to your ToonTalk directory, to install and/or upgrade the RCX 
+    extension.</p>
+    <p class="mainbody">The current version is: <b>1.0</b></p>
+    <p><span class="mainbody">To check the version of the 
+    currently installed RCX extension, execute the following command:</span><br>
+</p>
+    <div align="center">
+      <span style="FONT-FAMILY: 'Comic Sans MS'">
+      <a href="../RCXVersion.tt">
+      <img src="../RCXVersion.png" width="384" height="95"></a></span><br>
+&nbsp;</div>
+    <p class="parasubheading"><b><i><span style="FONT-FAMILY: 'Comic Sans MS'">How 
+    to set up and check the IR communication with the RCX:</span></i></b></p>
+    <p class="mainbody">To enable the connection 
+    between TT and the RCX, one must tell the program the port actually used by 
+    the IR tower (COM or USB). If everything is working correctly, i.e. the 
+    tower is connected to the PC and the RCX is on and oriented tower to tower, 
+    one hears a sound from the RCX.</p>
+    <p><span class="mainbody">To set up the IR tower use the 
+    following command:</span><br>
+</p>
+    <div align="center">
+      <span style="FONT-FAMILY: 'Comic Sans MS'">
+      <a href="../SetTower.tt">
+      <img src="../SetTower.png" width="264" height="95"></a></span><br>
+&nbsp;</div>
+    <hr width="100%" SIZE="2">
+    <p><br>
+      <span class="paragraphheading"><b>RCX Available</b>    <b>
+    Commands</b></span></p>
+    <p class="parasubheading"><b><i>1. 
+    Sound</i></b></p>
+    <p class="mainbodybold"><b>Play 
+    sound</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Play a built in sound. The second 
+    hole in the box contains the name of the sound. One of “key click”, “beep”, 
+    “sweep up”, “sweep down”, “error”, “fast sweep up”.</p>
+    <p class="parasubheading"><b><i>2. 
+    Motor</i></b></p>
+    <p class="mainbodybold"><b>On</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Turn the specified motor/s on. 
+    The second hole in the box contains the name of the motor: A, B or C. To 
+    control more than one motor, put the motor names in a box.</p>
+    <p class="mainbodybold"><b>Off</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Turn the specified motor/s off 
+    and leave it in brake status. The second hole in the box contains the name 
+    of the motor: A, B or C. To control more than one motor, put the motors 
+    names in a box.</p>
+    <p class="mainbodybold"><b>Float</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Turn the specified motor/s off 
+    and leave it in neutral status. The second hole in the box contains the name 
+    of the motor: A, B or C. To control more than one motor, put the motors 
+    names in a box.</p>
+    <p class="mainbodybold"><b>Set 
+    forward</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Set the direction of the 
+    specified motor/s forward. The second hole in the box contains the name of 
+    the motor: A, B or C. To control more than one motor, put the motor names 
+    in a box.</p>
+    <p class="mainbodybold"><b>Set 
+    backward</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Set the direction of the 
+    specified motor/s backward. The second hole in the box contains the name of 
+    the motor: A, B or C. To control more than one motor, put the motor names 
+    in a box.</p>
+    <p class="mainbodybold"><b>Reverse 
+    direction</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Reverse the direction of the 
+    specified motor/s. The second hole in the box contains the name of the 
+    motor: A, B or C. To control more than one motor, put the motor names in a 
+    box.</p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">&nbsp;</p>
+    <p class="parasubheading"><b><i>3. 
+    RCX display</i></b></p>
+    <p class="mainbodybold"><b>Set 
+    display</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Set the RCX display to monitor 
+    the specified sensor, global variable or message. The second hole in the box 
+    contains the message number, an integer in the range [1..255].</p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">&nbsp;</p>
+    <p class="parasubheading"><b><i>4. 
+    Message</i></b></p>
+    <p class="mainbodybold"><b>Send 
+    message</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Have the RCX send the specified 
+    message. The second hole in the box contains the name of the device to 
+    monitor. One of: “Sensor1”, “Sensor2”, “Sensor3”, “Var1”, “Var2”, …, 
+    “Var32”, “Message”.</p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">&nbsp;</p>
+    <p class="parasubheading"><b><i>
+    <span lang="IT">5. 
+    Sensor</span></i></b></p>
+    <p class="mainbodybold"><b>Set 
+    sensor type</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Tell the RCX the sensor type of 
+    the specified sensor. The second hole in the box contains the name of the 
+    sensor. One of: “1”, “2”, “3”. The third hole in the box contains the name 
+    of the type. One of: &quot;light&quot;, &quot;touch&quot;, &quot;temperature&quot;, &quot;angle&quot;.</p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">&nbsp;</p>
+    <p class="parasubheading"><b><i>6. 
+    Variable</i></b></p>
+    <p class="mainbodybold"><b>Get var</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Return the value of the specified 
+    variable. The second hole in the box contains the index of the variable. One 
+    of: “1”, “2”… “32”. The third hole a bird.</p>
+    <p class="mainbodybold"><b>Set var</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Set the value of the specified 
+    variable. The second hole in the box contains the index of the variable. One 
+    of: “1”, “2”… “32”. The third hole an integer in the range [-32767 .. 
+    +32767].</p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">&nbsp;</p>
+    <p class="parasubheading"><b><i>7. 
+    Data log</i></b></p>
+    <p class="mainbodybold"><b>Get 
+    Datalog Size</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Return the actual number of 
+    currently logged elements. The second hole in the box contains a bird.</p>
+    <p class="mainbodybold"><b>Set 
+    Datalog Size</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Clears the current data log buffer 
+    and allocates room for a new one of the given size. The second hole in the 
+    box contains an integer in the range [1 .. 1024].</p>
+    <p class="mainbodybold"><b>Get 
+    Datalog Element</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Return the specified data log 
+    element. The second hole in the box contains an integer in the range [1 .. 
+    1024]. The third hole a bird.</p>
+    <p class="mainbodybold"><b>Get 
+    Datalog Element Verbose</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Return a specified data log 
+    element. Each element is a pair where the first component is a string 
+    describing the source of the log value (e.g., “Sensor1”) and the second 
+    component is the integer value. The second hole in the box contains an 
+    integer in the range [1 .. 1024]. The third hole a bird.</p>
+    <p class="mainbodybold"><b>Set 
+    Datalog Element</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Store a 3 byte data point in the 
+    log. If there is no more space in the log, the data point is ignored. Only 
+    variables and sensor values can be logged. The second hole in the box 
+    contains the name of the element. One of: “Sensor1”, “Sensor2”, “Sensor3” or 
+    “Var1”, “Var2”… “Var32”.</p>
+    <p class="mainbodybold"><b>Get 
+    Datalog</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Return the whole content of the 
+    data log (i.e., all the recorded elements). The second hole in the box 
+    contains a bird.</p>
+    <p class="mainbodybold"><b>Get 
+    Datalog Verbose</b></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">
+    <span class="mainbody">Return the whole content of the 
+    data log. Each element is a pair where the first component is a string 
+    describing the source of the log value (e.g., “Sensor1”) and the second 
+    component is the integer value.</span>
+    <span class="mainbody">The second hole in the box 
+    contains a bird.</span></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">&nbsp;</p>
+    <p class="parasubheading"><b><i>8. 
+    Program/Tasks</i></b></p>
+    <p class="mainbodybold"><b>Download 
+    Program</b></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">
+    <span class="mainbody">Download a compiled RCX program 
+    into the specified program slot.</span>
+    <span class="mainbody">The second hole in the box 
+    contains the file name. The third hole an integer in the range [1..5] 
+    indicating the program slot; if this parameter is omitted, the current 
+    program slot is used.</span></p>
+    <p class="mainbodybold"><b>Run 
+    Program</b></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">
+    <span class="mainbody">Run the program in the specified 
+    slot.</span> <span class="mainbody">The second hole in 
+    the box contains an integer in the range [1..5] indicating the program slot; 
+    if this parameter is omitted, the current program slot is used.</span></p>
+    <p class="mainbodybold"><b>Stop 
+    Program</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Stop the running program. If no 
+    program is running, the command has no effect.</p>
+    <p class="mainbodybold"><b>Start 
+    Task</b></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">
+    <span class="mainbody">Start the specified task.</span>
+    <span class="mainbody">The second hole in the box 
+    contains an integer in the range [1..9] indicating the task.</span></p>
+    <p class="mainbodybold"><b>Stop Task</b></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">
+    <span class="mainbody">Stop the specified task.</span>
+    <span class="mainbody">The second hole in the box 
+    contains an integer in the range [1..9] indicating the task.</span></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">&nbsp;</p>
+    <p class="parasubheading"><b><i>9. 
+    Setup &amp; checking</i></b></p>
+    <p class="mainbodybold"><b>Get TTRcx 
+    Version</b></p>
+    <p class="mainbody" style="MARGIN-LEFT: 36pt">    Return a string that identifies 
+    the TTRcx.dll version currently installed.    The second hole in the box 
+    contains a bird. If this parameter is omitted, Marty will report the 
+    version.</p>
+    <p class="mainbodybold"><b>Set Tower 
+    Port</b></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">
+    <span class="mainbody">Define the IR device port and 
+    optionally test the communication link by having the RCX play a sound.</span>
+    <span class="mainbody">The second hole in the box 
+    contains the name of the port. One of: “USB”, “com1”, “com2”, “com3”.</span>
+    <span class="mainbody">The third hole in the box 
+    contains the name of the sound. One of: “key click”, “beep”, “sweep up”, 
+    “sweep down”, “error”, “fast sweep up”. This parameter is optional.</span></p>
+    <p class="mainbodybold"><b>Ping</b></p>
+    <p class="MsoNormal" style="MARGIN-LEFT: 36pt">
+    <span class="mainbody">Tests for the presence of the RCX 
+    and returns a string message.</span>
+    <span class="mainbody">The second hole in the box 
+    contains a bird.</span></p>
+    <p><span class="mainbodybold"><b>Note that:</b> most commands require a bird parameter to return a completion code to TT – 
+    such a code is always a character string, with value “OK” if the command 
+    completed successfully, or an error message otherwise. It is possible for 
+    these commands to omit the bird parameter: in this case, successful 
+    completion of the command is not notified, whereas error messages are passed 
+    to Marty. This multiple exception handling policy accounts for two different 
+    user perspectives: the direct, interactive usage mode in which the user can 
+    deal with failures on the spot; and the programmed mode in which the TT 
+    program has to monitor the correct execution of the RCX command and knows 
+    how to react to possible exceptions. The above command description takes the 
+    viewpoint of the direct/interactive usage perspective. </span>
+  </div>
+</div>
+
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+<!-- InstanceEnd --></html>

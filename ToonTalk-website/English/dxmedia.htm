@@ -1,0 +1,80 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Dealing with Problems Loading Pictures in ToonTalk</title>
+</head>
+
+<body>
+
+<p align="center"><strong><big><font face="Comic Sans MS">What to do if you get an error
+message when loading non-BMP pictures
+(GIF, JPG, PNG, or DIB) into ToonTalk</font></big></strong><font face="Comic Sans MS"><font size="5" face="Comic Sans MS"><b> </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=I1 width="58" height="51"></font></p>
+
+<p align="left"><strong><big><font face="Comic Sans MS">NOTE. Beginning with 
+version 3 (Beta 33 or
+version 2.40 or later) ToonTalk uses Microsoft's GDI+ instead of the DirectX Media extensions. This
+new API works with Windows 98 and Windows NT 4.0 and above it but does not work for
+Windows 95. For Windows 95 ToonTalk continues to use the DirectX Media extensions.</font></big></strong></p>
+
+<p><font face="Comic Sans MS">ToonTalk uses Microsoft's DirectX Media extensions to
+Windows to load pictures (other than BMP files). If loading non-BMP files signals an error
+there are few things to try before reporting the problem to <a
+href="mailto:support@toontalk.com">support@toontalk.com</a>.</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Microsoft designed things to use the same program code to
+    load pictures that is used by Internet Explorer. It turns out you need to have Internet
+    Explorer 4 or later loaded into the machine. You can either <a
+    href="http://www.microsoft.com/ie">download Internet Explorer from Microsoft</a> or stick
+    to BMP picture files in ToonTalk.</font></li>
+  <li><font face="Comic Sans MS">It is possible that the DirectX Media extensions haven't been
+    installed on your computer even though DirectX has been. You can <a
+    href="http://www.microsoft.com/directx/homeuser/downloads/default.asp">download the
+    DirectX Media extensions from Microsoft</a>.</font></li>
+  <li><font face="Comic Sans MS">It is possible that your computer has too old a version of
+    Microsoft's DirectX. You can <a
+    href="http://www.microsoft.com/directx/homeuser/downloads/default.asp">download the latest
+    version from Microsoft</a>.</font></li>
+  <li><font face="Comic Sans MS">Perhaps the picture file itself is the problem. Try viewing
+    the picture in a browser or paint program.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">If the problem persists after trying the above, then please
+report it to <a href="mailto:support@toontalk.com">support@toontalk.com</a>. Thank you.</font></p>
+
+<font face="Comic Sans MS">
+
+  <div align="center"><center>
+
+<p id="DontRead" align="center"><small><a href="toontalk.htm">home</a> | <a href="search.htm">
+search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a> | <a href="whatsnew.htm">
+news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a> | <a href="faq.htm">
+faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a> | <a href="endorse.htm">
+endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">
+contact us</a></small></p>
+  </center></div>
+
+</font>
+</body>
+</html>

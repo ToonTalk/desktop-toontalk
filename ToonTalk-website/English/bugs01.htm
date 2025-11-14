@@ -1,0 +1,1806 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>History of ToonTalk Enhancements and Bug Fixes - 2001</title>
+</head>
+
+<body>
+
+<p align="center"><big><font face="Comic Sans MS">History of ToonTalk Enhancements and Bug
+Fixes - 2001</font></big></p>
+
+<p><font face="Comic Sans MS">Here is the list of bugs and enhancements for 2001. &nbsp;Similar lists for <a href="bugs96.htm">1996</a>, <a href="bugs97.htm">1997</a>, <a
+href="bugs98.htm">1998</a>, <a href="bugs99.htm">1999</a>, <a href="bugs00.htm">2000</a>,
+<a href="bugs02.htm">2002</a>, <a href="bugs03.htm">2003</a>,
+<a href="bugs04.htm">2004</a></font><big><font size="3" face="Comic Sans MS">, 
+</font><big><font size="3" face="Comic Sans MS">
+<a href="bugs05.htm">2005</a>, and </font>
+<big><font size="3" face="Comic Sans MS">
+<a href="bugs06.htm">2006</a></font></big></big></big><font face="Comic Sans MS"> are available as well. </font></p>
+
+<p><font face="Comic Sans MS">If you already have ToonTalk and want the latest update then
+<a href="http://www.toontalk.com/English/patches.htm">click here</a>. </font></p>
+
+<p><font face="Comic Sans MS">1/9/2001</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Java applets now work correctly if a bomb taken out of a box
+    and used.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/10</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug generating a Java applet when a notebook with an
+    empty page was involved.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating a Java applet of a robot that has
+    a remote control for the looks of a picture in its box.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with a spurious warning when you quit
+    ToonTalk while a robot on the floor was holding a magic wand.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/11</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Introduced the notion of a local &quot;ini&quot; file that
+    looks just like a <a href="ttini.htm">toontalk.ini</a> file. When ToonTalk is started by
+    clicking on a TT, CTY, or DMO file then it looks for a file with the same name and with
+    the extension INI and uses any entries there to override the defaults in toontalk.ini. So,
+    for example, a TT file can set the <a href="ttini.htm#FileSearchPath">FileSearchPath</a>
+    to indicate where to find needed pictures and sounds on the web.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where sometimes producing a warning while
+    ToonTalk is started caused an error.</font></li>
+  <li><font face="Comic Sans MS">Improved the error handling when an attempt to read a URL
+    fails.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where if you double click on a CTY file and
+    give your name, the main notebook shows the city's name not yours.</font></li>
+  <li><font face="Comic Sans MS">Fixed a rare problem with erased pictures that have had a
+    picture dropped on them that caused errors.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem displaying some things that are exactly at
+    the minimum size (1 pixel at 640x480 screen resolution).</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem dealing with toontalk.ini entries that are
+    numbers greater than 64K.</font></li>
+  <li><font face="Comic Sans MS">Java applets sometimes started to run before fully
+    initializing.</font></li>
+  <li><font face="Comic Sans MS">Java applets now work correctly if an erased picture is
+    matched against an erased picture that a number or text pad has been dropped on.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem where sometimes describing a nest with things
+    on it caused an error.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem describing something with parts that are
+    ignored but would require a long description (over 2000 characters long).</font></li>
+  <li><font face="Comic Sans MS">Sometimes dropping something on the remote control for the
+    looks of something X ended up showing that thing under rather on top of X.</font></li>
+  <li><font face="Comic Sans MS">A warning is now given if you try to make a Java applet of
+    something that uses sensors that don't work in Java (e.g. the joystick sensors).</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where sometimes the page number was displayed
+    too large and at the wrong place if the notebook is too small.</font></li>
+  <li><font face="Comic Sans MS">Made further improvements to the display of objects at the
+    minimum size.</font></li>
+  <li><font face="Comic Sans MS">Java applets now work better if they contain a sensor that
+    can't work in Java (e.g. a joystick sensor). (Though they can't work as well as one would
+    like of course.)</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/14</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">You can now generate Java applets that use the magic wand to
+    copy self - e.g. the robot holding the wand. (This happens when the Wand's button is
+    displaying 'S'.)</font></li>
+  <li><font face="Comic Sans MS">Improved the way you can train robots to use the wand to copy
+    themselves. (Good way to express recursion.)</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/15</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If ToonTalk is reading something over the Internet, a message
+    asking you to wait while it fetches the file is now displayed. And if running in
+    full-screen this message appears as a subtitle.</font></li>
+  <li><font face="Comic Sans MS">If a picture included lots of pictures or sounds that are
+    being fetched over the Internet, then the mouse appeared to freeze (if running in a
+    window).</font></li>
+  <li><font face="Comic Sans MS">Sometimes resources for reading URLs were not released after
+    the file was read.</font></li>
+  <li><font face="Comic Sans MS">When ToonTalk was fetching the notebook of remote controls,
+    it sometimes spent time looking for files using the <a href="ttini.htm#FileSearchPath">FileSearchPath</a>
+    (which if it includes URLs can be very slow.)</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/16</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Simplified Java applets of pictures that involve birds who
+    don't have nests or whose nest isn't on the back of the picture.</font></li>
+  <li><font face="Comic Sans MS">Improved the display of birds flying to nests on the back of
+    pictures.</font></li>
+  <li><font face="Comic Sans MS">Improved the matching of sensors that show pictures with
+    pictures.</font></li>
+  <li><font face="Comic Sans MS">You can now remove everything from the back of a picture by
+    erasing its sensor that shows its parts. The sensor can be flipped to show the parts on
+    the back and then Dusty can erase them.</font></li>
+  <li><font face="Comic Sans MS">Robots can now be trained to flip some remote controls.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where the remote control for the looks of a
+    text pad, displayed wrong if it was very small.</font></li>
+  <li><font face="Comic Sans MS">Improved the animation of ToonTalk built-in animations when
+    running as a Java applet.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem reading the 'Delete' key in generated Java
+    applets.</font></li>
+  <li><font face="Comic Sans MS">You can now see the pictures on top of an invisible picture
+    in Java applets.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/17</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If you attempted to put a room or house on the clipboard and
+    the encoding was larger than 32,000 then it didn't work. The limit is now 2,000,000 bytes.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem putting a house on the clipboard when robots
+    were working inside.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with how erased remote controls that display
+    pictures used in boxes in thought bubbles matched things.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where sometimes the name of robot was
+    displayed at the wrong place.</font></li>
+  <li><font face="Comic Sans MS">If ToonTalk couldn't find the corresponding GIF or AU file
+    for a BMP or WAV while generating a Java applet a dialog box reporting the problem was
+    displayed. The warning is now placed in your log file and ToonTalk offers to display the
+    log file when you quit.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem sitting on the floor when an entire city has
+    been placed on the clipboard (by typing control-c when walking outside).</font></li>
+  <li><font face="Comic Sans MS">Java applets now display correctly changes to the appearance
+    of something that was dropped on an erased picture.</font></li>
+  <li><font face="Comic Sans MS">Improved the handling of scales in Java applets when
+    something next to them is erased.</font></li>
+  <li><font face="Comic Sans MS">Fixed the handling of scales in Java applets when used to
+    compare pictures.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/18</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Improved the handling of the dropping of a team of robots on
+    an erased box.</font></li>
+  <li><font face="Comic Sans MS">Fixed some problems erasing the remote control for the parts
+    of something.</font></li>
+  <li><font face="Comic Sans MS">If a robot was trained to change the page number of the main
+    notebook then sometimes when he repeated the notebook wasn't turned back to page 1. (Note
+    this only applies to the main notebook since robots are trained with it on page 1 - other
+    notebooks aren't automatically reset to page 1.)</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/21</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Improved the display of box labels.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem when something was dropped on the remote
+    looks for a picture and they were showing different sides.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 12/19 loading the remote looks
+    of things.</font></li>
+  <li><font face="Comic Sans MS">Marty no longer produces warnings about a robot somewhere
+    stopping due to a mismatch of his thought bubble and box when running the puzzle game.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes caused an error while quitting
+    ToonTalk.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/22</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java applets that occurs sometimes
+    when a robot was trained to use Dusty to spit out something.</font></li>
+  <li><font face="Comic Sans MS">Fixed a rare problem caused by a robot vacuuming something
+    up.</font></li>
+  <li><font face="Comic Sans MS">Improved the handling in Java applets of the remote control
+    for the looks of something being dropped on an erased picture.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/23</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem with Java applets of robots who change the
+    button on the magic wand.</font></li>
+  <li><font face="Comic Sans MS">Improved and generalized the way Java applets work of robots
+    who find things on the back of a picture. And such robots can now remove things from the
+    back of pictures.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem training a robot to flip over a remote
+    control for the parts of a picture (and other such remote controls).</font></li>
+  <li><font face="Comic Sans MS">Improved the handling in Java applets of notebooks with empty
+    pages.</font></li>
+  <li><font face="Comic Sans MS">Can now generate a Java applet of a robot with an erased
+    notebook in his thought bubble.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 12/18 where sometimes when
+    pictures are copied the copy comes out flipped over when the original isn't.</font></li>
+  <li><font face="Comic Sans MS">Improved the matching of flipped pictures.</font></li>
+  <li><font face="Comic Sans MS">A number on the back of a picture sometimes interfered with
+    turning the picture into a Java applet.</font></li>
+  <li><font face="Comic Sans MS">Improved the robustness of robots that flip things over.</font></li>
+  <li><font face="Comic Sans MS">Java applets now work correctly when a text or number pad is
+    dropped on an erased picture and the result is dropped on a notebook.</font></li>
+  <li><font face="Comic Sans MS">Java applets can now remove or add something to a notebook.</font></li>
+  <li><font face="Comic Sans MS">Java applets now support the erasing of the parts sensor of a
+    flipped picture to remove all items from the back.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/24</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed some memory leaks in the puzzle game.</font></li>
+  <li><font face="Comic Sans MS">Improved the wording of the warning that occurs when not
+    enough memory is available for caching sounds in memory.</font></li>
+  <li><font face="Comic Sans MS">Fixed a memory leak when Marty speaks in one language and
+    displays in another.</font></li>
+  <li><font face="Comic Sans MS">Improved the robustness of Marty displaying double-byte
+    characters (e.g. Japanese).</font></li>
+  <li><font face="Comic Sans MS">Fixed a memory leak when training a robot with a box
+    containing pictures that had been erased and had another picture dropped on them.</font></li>
+  <li><font face="Comic Sans MS">Made the dropping of something on the back of a flipped
+    picture more robust.</font></li>
+  <li><font face="Comic Sans MS">Improved the handling of the remote control for the looks
+    when it is flipped and the thing it is controls isn't.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where an error can occur if the clipboard
+    contains something that is only 1 or 2 characters long.</font></li>
+  <li><font face="Comic Sans MS">Java applets now work correctly if something is dropped on
+    the flipped remote control for the looks of something.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/25</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Improved the Java code when a robot uses Dusty or the magic
+    wand.</font></li>
+  <li><font face="Comic Sans MS">Generalized the way Java code finds things on the back of
+    pictures.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/26</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">When producing a Java applet from a picture, ToonTalk will
+    name the applet the same as the first text pad it finds on the back that is less than 32
+    characters long (was 31 earlier). It also deals better with the situation when there are
+    more than one text pad on the back that is less than 32 characters long. The most recently
+    added one should be chosen.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java applets when a flipped
+    picture defined by a user file is involved.</font></li>
+  <li><font face="Comic Sans MS">Began changing the Java applets to preserve the same
+    structure of flipped picture on the back of flipped pictures that is found in ToonTalk.
+    Previously every robot ran as if it were on the &quot;top level&quot; of the back of a
+    picture.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/28</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If a picture blows up in a Java applet then any robots
+    running on the back of pictures associated with that picture also stop. For example,
+    robots running on the back of a picture in a box that is on the back of the blown up
+    picture.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/29</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 12/22/00 that fixed the size of
+    text pads that had been flipped over. Once again they change size as you type to them
+    (unless they are in a box or the like). Thanks to Ross for reporting this.</font></li>
+  <li><font face="Comic Sans MS">Worked around a limitation of Java that prevented complex
+    pictures for working (when the compiled code to initialize them exceeded 64K).</font></li>
+  <li><font face="Comic Sans MS">Improved Java applets handling of &quot;global&quot; sensor
+    like time, keyboard, and mouse.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">31/1</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 10/13/00 that caused errors
+    when a notebook is dropped on an erased box (to coerce it to a box with a page in each
+    hole).</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem when dropping a notebook with empty pages on
+    an erased box.</font></li>
+  <li><font face="Comic Sans MS">Improved the handling of the main notebook in Java applets.</font></li>
+  <li><font face="Comic Sans MS">Improved the generation of Java applets of a robot (as
+    opposed to a picture with robots on the back).</font></li>
+  <li><font face="Comic Sans MS">Improved the information left in the Java log file.</font></li>
+  <li><font face="Comic Sans MS">If a Java applet has a robot dropping something on a box with
+    no holes or on a non-existent hole then the team that robot is part of is stopped but the
+    applet is no longer stopped.</font></li>
+  <li><font face="Comic Sans MS">Java applets can run robots that drop boxes on erased
+    notebooks.</font></li>
+  <li><font face="Comic Sans MS">Java applets can run robots that drop notebooks on erased
+    boxes.</font></li>
+  <li><font face="Comic Sans MS">Java applets can run robots that turn on and off pictures
+    using ' ' and '.'.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Starting on 10/24/99 ToonTalk would give a warning when a
+    robot pressed spaced to a picture since its meaning was changed from &quot;next
+    image&quot; to &quot;turn on&quot;. This warning (and accompanying offer to automatically
+    update things) no longer applies to robots created in a version of ToonTalk made after
+    today.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 10/31/00 that could cause
+    errors when loading non-BMP picture files.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">2/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Improved the way Java applets copy things. Among other things
+    connections between birds and nests are preserved correctly now.</font></li>
+  <li><font face="Comic Sans MS">Sometimes a Java applet was generated with erased pictures
+    that were zero-sized.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">3/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed problems in Java applets using the remote control for
+    the looks of a text pad.</font></li>
+  <li><font face="Comic Sans MS">Java applets no longer break if a non-text object is dropped
+    on an erased text pad.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">In the puzzle game, Marty gives you a new hint if you walk
+    over to him and he's not talking (and you've left the room at least once since he
+    introduced the current puzzle). The check for whether he was talking didn't work right if
+    he was using subtitles rather than a talk balloon and so he would sometimes skip over some
+    hints.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes caused an internal error while
+    quitting the puzzle game.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes occurred when a robot vacuumed
+    up a notebook.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when long-distance birds were involved the log file
+    contained a spurious warning about a nest having a negative number of birds associated
+    with it.</font></li>
+  <li><font face="Comic Sans MS">If a bird (and not her nest) is in a box in a thought bubble
+    of a robot and that robot was saved the bird was turned into a long-distance bird. Note
+    that you can still put a long-distance bird in a robot's thought bubble by saving the bird
+    first and then putting it in the thought bubble box.</font></li>
+  <li><font face="Comic Sans MS">Fixed a rare bug in Java applets dealing with a robot
+    dropping something on the floor.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem if rubout is typed too many times while
+    changing the label of a notebook.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where sometimes you could change a notebook
+    of remote controls for a picture and the change effected all such notebooks of that user.
+    (Might be this could also happen to other built-in notebooks before this fix.)</font></li>
+  <li><font face="Comic Sans MS">If a picture is destroyed (e.g. dropped in a notebook) while
+    its notebook of remote controls is on the floor, the notebook now disappears instantly. It
+    used to be it would be destroyed several seconds later and if used in the interim errors
+    could occur.</font></li>
+  <li><font face="Comic Sans MS">Robots that flip over pictures now run faster when not being
+    watched.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Birds and sensors in a thought bubble shouldn't really keep
+    links to nests and pictures, respectively. When a robot is saved such links are no longer
+    kept.</font></li>
+  <li><font face="Comic Sans MS">If something in a thought bubble formed a cycle of references
+    (e.g. the remote control for the looks of a picture on the back of the picture) then it
+    sometimes caused problems reloading.</font></li>
+  <li><font face="Comic Sans MS">Sometimes a flipped picture was displayed without displaying
+    things on the back (until you flipped it twice). Fixed now.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with very small things that are on the back
+    of pictures that caused its geometry to have visible round off errors.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where occasionally when flipping (by hand not
+    by robot) a picture over the notebook of remote controls didn't appear.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where difficulties describing the contents of
+    a thought bubble sometimes lead to an error. One such difficulty was if the description of
+    the contents of the thought bubble were too long (i.e. over 10K).</font></li>
+  <li><font face="Comic Sans MS">Improved how Java applets work when a built-in notebook is
+    copied.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem in Java applets with flipping over the parts
+    sensor of a picture.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when starting to run a demo ToonTalk asked the user
+    for his or her name.</font></li>
+  <li><font face="Comic Sans MS">If the command line options -i, -I, or -city are used then
+    the local ini file associated with the file name argument is used if it exists.</font></li>
+  <li><font face="Comic Sans MS">The local ini file is now also consulted when launching
+    ToonTalk (from StartTT). This means for example that a DMO file can have an associated INI
+    file that sets the DemoToonTalk32 entry to the desired version of the ToonTalk executable.
+    A DMO or CTY file can even reset the other Directory entries so that a different
+    installation of ToonTalk is used.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with local INI files.</font></li>
+  <li><font face="Comic Sans MS">Added the new command line options
+    &quot;-create_narration&quot; and &quot;-print_narration_start_times&quot;. These are
+    useful for <a href="make_dmo.htm">creating your own demos</a> with narration.</font></li>
+  <li><font face="Comic Sans MS">You can now create a narration file of a demo while replaying
+    the demo without creating a new one. (It used to be you need to use both -I and -o to add
+    narration to an existing demo.)</font></li>
+  <li><font face="Comic Sans MS">When ToonTalk generates a narration file, it now only
+    includes those WAV files that are needed. Previously it included all the appropriately
+    named WAV files.</font></li>
+  <li><font face="Comic Sans MS">Added the new toontalk.ini (and local ini file) option in the
+    Switches section. If &quot;ExitWhenDemoEnds=0&quot; then when a demo ends, the user is
+    left in control rather than exiting ToonTalk.</font></li>
+  <li><font face="Comic Sans MS">Sometimes when searching for a URL that doesn't exist,
+    ToonTalk mistakenly believed it did exist.</font></li>
+  <li><font face="Comic Sans MS">If ToonTalk can't load a non-BMP picture file (e.g. JPG, PNG,
+    or GIF) either because the file is missing (or not reachable if an Internet URL) or
+    because the version of ToonTalk doesn't have the DirectX Media installed, then ToonTalk
+    will attempt to load a BMP file with the same name (except for the extension) instead.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that interfered with finding the needed GIF
+    or AU files for a Java applet on the FileSearchPath.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk pictures containing JPG pictures can now be
+    translated to Java applets without requiring the GIF equivalent of the files.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">ToonTalk no longer imposes a limit of 128 objects on the
+    screen at once. The only limits now are memory and the time it takes to display the scene.</font></li>
+  <li><font face="Comic Sans MS">Occasionally something sitting on top of a notebook would
+    display as if it were on top of the notebook but under the top pages of the notebook.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where after generating a Java applet that
+    contains user-defined sounds that those sounds caused errors if used afterwards.</font></li>
+  <li><font face="Comic Sans MS">Java applets that use sensors displaying text now work in
+    Portuguese and Swedish (previously some worked in Swedish) in addition to English.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Improved the error message for missing picture files to only
+    append &quot;.bmp&quot; when appropriate.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced 2 days earlier that broke non-BMP
+    pictures.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem when a truck was loaded by a robot on the
+    back of a picture (and no address was given).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem loading long-distance birds introduced a week
+    ago.</font></li>
+  <li><font face="Comic Sans MS">In some screen resolutions when the programmer has a hat or
+    long hair, a part of the hat or hair was displayed behind the head.</font></li>
+  <li><font face="Comic Sans MS">Sometimes when a robot was trained to drop something back on
+    the stack it came from, the corresponding Java applet didn't work right.</font></li>
+  <li><font face="Comic Sans MS">Dropping some things back on its stack (e.g. in Tooly or a
+    notebook) only worked correctly for certain type of things (broken since 1/16/01).</font></li>
+  <li><font face="Comic Sans MS">Fixed some recently introduced problems generating Java
+    applets for user-defined pictures.</font></li>
+  <li><font face="Comic Sans MS">Sometimes when something was moved by a robot, an image of
+    where it was remained for a short while.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">13/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">In a Java applet a notebook no longer matches a copy of
+    itself unless it has been erased.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where sometimes Marty would wait several
+    seconds to give help when called via F1.</font></li>
+  <li><font face="Comic Sans MS">Improved the error handling if ToonTalk is run at a screen
+    resolution of 320x240 but the corresponding graphics data file is missing. (A common
+    problem when installing the beta version over the trial version.)</font></li>
+  <li><font face="Comic Sans MS">If you flipped a text or number pad over twice and then
+    erased it, it became an erased picture instead of an erased pad.</font></li>
+  <li><font face="Comic Sans MS">If you type '.', ' ', '-', or '+' to a scale it now behaves
+    sensibly.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where Marty would sometimes repeatedly give
+    the same description of an erased picture.</font></li>
+  <li><font face="Comic Sans MS">You can now put a scale on the back of a picture. (Though I'm
+    not sure that this is useful but it is consistent.)</font></li>
+  <li><font face="Comic Sans MS">The &quot;touching who?&quot; sensor no longer shows a
+    flipped over picture or text pad.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">14/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">An error sometimes occurred when a robot picked up a box from
+    a nest and typed a number to change the number of holes.</font></li>
+  <li><font face="Comic Sans MS">Sometimes the labels on a box were displayed beyond the edge
+    of the box.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating a Java applet when a picture has
+    an erased picture on top (not very useful).</font></li>
+  <li><font face="Comic Sans MS">Sometimes if a named Java applet is being generated and a
+    previous attempt was aborted or had an error, the new applet wasn't processed correctly.</font></li>
+  <li><font face="Comic Sans MS">If something was running when converted to a Java applet
+    sometimes some of the robots were not converted and the applet didn't run properly.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem the occurred sometimes when a Java applet
+    copies sensors on the back of pictures.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">15/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">When generating a text-based Java applet, ToonTalk now uses
+    the label on a bird to label the results and the label of a nest without a bird as a
+    prompt to the user to enter data. Previously these were ignored and only the box labels
+    under these objects were used if there were any.</font></li>
+  <li><font face="Comic Sans MS">Labels of birds and nests can now be one more than one line
+    and still work in Java applets.</font></li>
+  <li><font face="Comic Sans MS">Sometimes flipped pictures in a box on the back of a picture
+    got the &quot;allegiance&quot; of its sensors incorrectly transferred to the containing
+    picture.</font></li>
+  <li><font face="Comic Sans MS">Java applets now, like ToonTalk, now have two behaviors for
+    trucks that are loaded on the back of a picture. If no address is given the team runs on
+    the back of the picture. Otherwise it runs in a new house.</font></li>
+  <li><font face="Comic Sans MS">If something was dropped on the remote control for the looks
+    of something then Bammer the Mouse sometimes used his hammer on a point mid-way between
+    the sensor and the object being controlled.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that occasionally caused an error when a
+    notebook was being destroyed.</font></li>
+  <li><font face="Comic Sans MS">Digits on number pads are now displayed with a narrower font
+    when ToonTalk is run with double-byte characters (e.g. Japanese).</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that occurred sometimes in Java applets when
+    pictures with sensors on the back were in a box which was joined to another box.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem in Java applets if invalid keystrokes are
+    sent a number (e.g. 's').</font></li>
+  <li><font face="Comic Sans MS">Improved the way Java applets copy robots.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">16/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If you run demos by clicking on the 'See Demos' button,
+    ToonTalk now checks whether they have local ini files.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now produces correct Java for a robot that vacuums
+    up his box.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">17/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recently introduced problem that interfered with a
+    bird and her nest being on the back of different pictures.</font></li>
+  <li><font face="Comic Sans MS">Some kinds of failure to produce a working Java applet now
+    cause a dialog box to appear offering to give trouble-shooting help.</font></li>
+  <li><font face="Comic Sans MS">The position of text and numbers on top of pictures in Java
+    applets is now closer to the original layout in ToonTalk.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes occurred when a robot in
+    another house sucked up his box.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">18/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Text-based Java applets now run several times faster since
+    they no longer sleep to maintain a good frame rate. (Problem was introduced on 11/22/00.)</font></li>
+  <li><font face="Comic Sans MS">The user log file now contains a list of media files that a
+    generated Java applet needs to run properly.</font></li>
+  <li><font face="Comic Sans MS">When the Network entry <a
+    href="ttini.htm#SaveNestsAndBirdsAsLocal">SaveNestsAndBirdsAsLocal</a> is set to 1 in
+    toontalk.ini</font>,<font face="Comic Sans MS"> birds can once again be saved without
+    their nests so that when reconstructed the birds will build a new nest.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java applets involving trucks in
+    notebooks.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java applets when the same robot
+    is on multiple pages of a notebook.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java applets with notebooks in
+    trucks.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that occasionally caused an error when a
+    robot who is not the first member of his team sets off a bomb.</font></li>
+  <li><font face="Comic Sans MS">Many exceptions in a Java applet now only stop the team, not
+    the whole applet when they occur. E.g. when a number becomes too big, or division by zero.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that prevented Marty from giving a hint in
+    the puzzle game about using the bomb to start over.</font></li>
+  <li><font face="Comic Sans MS">Updated the Examples notebook on page 6.</font></li>
+  <li><font face="Comic Sans MS"><a name="Beta 27">Beta 26 released</a>.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">19/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes an error was triggered when describing (either by
+    Marty or as a comment in a Java applet) a read-only sensor that has had a number dropped
+    on it (e.g. the random number sensor). Also do more error checking for problems describing
+    things now so the consequences of the problem are minimized.</font></li>
+  <li><font face="Comic Sans MS">If while training a robot a key is typed to a number that is
+    invalid (e.g. any of the letters in &quot;invalid&quot;), then the robot doesn't remember
+    it.</font></li>
+  <li><font face="Comic Sans MS">Sometimes ToonTalk froze when you were holding (directly or
+    via the magic wand) a picture with active collision sensors. Problem introduced on 9/9/00.
+    Thanks to Jerry Balzano for reporting this.</font></li>
+  <li><font face="Comic Sans MS">The new Examples notebook introduced on 18/2 won't load in
+    old demos. Fixed by introducing a new version of the string DLL. Again thanks to Jerry
+    Balzano for reporting this.</font></li>
+  <li><font face="Comic Sans MS">Beta 26b released.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">20/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes an Internet file was cached but ToonTalk didn't use
+    it.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem turning an Internet URL into a text pad of
+    its contents.</font></li>
+  <li><font face="Comic Sans MS">The 'File to Picture' sensor has been extended to deal with
+    files of text that are not pictures. Dropping a file name (including an Internet URL) on
+    the sensor will now result in a text pad of the contents of that file.</font></li>
+  <li><font face="Comic Sans MS">If a picture is defined by a file that no longer exists then
+    sometimes ToonTalk made an extra wasteful attempt to read the file.</font></li>
+  <li><font face="Comic Sans MS">Fixed a serious memory leak dealing with non-BMP pictures.</font></li>
+  <li><font face="Comic Sans MS">If ToonTalk fails to find an HTML file to display it now
+    looks for the file in the directory given in the toontalk.ini file at the value of
+    HTMLFiles in the Directory. And if none is given it uses the appropriate directory at <a
+    href="http://www.toontalk.com">www.toontalk.com</a>.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now accepts JPEG files with the extension JPEG (as
+    well JPG which it has for some time now).</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug in the File to Picture sensor which sometimes
+    caused errors later.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">21/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed various bugs in the File to Picture sensor introduced
+    the day before.</font></li>
+  <li><font face="Comic Sans MS">Text pads are currently limited to a maximum length of 64K
+    (65,536). ToonTalk now handles better importing text files that are larger than that.
+    Though they are truncated to 64K.</font></li>
+  <li><font face="Comic Sans MS">When a multi-line text pad is dropped on an erased box, the
+    new line characters are now replaced by the language-specific name for the 'Enter' key.
+    (&quot;Enter&quot; in English.)</font></li>
+  <li><font face="Comic Sans MS">Improved the display of multi-line text.</font></li>
+  <li><font face="Comic Sans MS">Improved the display of box labels when the space is small
+    and the label doesn't fit.</font></li>
+  <li><font face="Comic Sans MS">Sometimes the Java applet would continue to run (and just
+    waste CPU cycles) after all the robots were finished.</font></li>
+  <li><font face="Comic Sans MS">If a truck contains a box with a nest with an egg in it (e.g.
+    pasted in that way) and it is dropped then the egg hatched but the bird was hard to find.</font></li>
+  <li><font face="Comic Sans MS">If a small nest with an egg in it is dropped the bird now
+    grows to a normal size quickly.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk didn't always deal correctly with local files that
+    are given in the URL format, e.g. file:///c:/toontalk/readme.txt.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">22/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If a robot was trained to type '+' or '-' to the remote
+    control for the looks of a picture in order to change its appearance or color, he did
+    nothing when translated to Java.</font></li>
+  <li><font face="Comic Sans MS">9 of the built-in sounds did not play back in a Java applet.</font></li>
+  <li><font face="Comic Sans MS">Some of the images of flowers did not have GIF equivalents
+    for Java applets.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">24/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If Java class archive or media files are needed and haven't
+    been installed ToonTalk will now search for them on the CD-ROM and the FileSearchPath and
+    if found copy them to the Java subdirectory of ToonTalk.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">26/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem where if you saved a city while holding
+    Dusty, Pumpy, or the Magic Wand then when you reloaded the city you found an extra copy of
+    what you are holding on the floor.</font></li>
+  <li><font face="Comic Sans MS">Occasionally when Marty is speaking and using subtitles that
+    some subtitles weren't shown.</font></li>
+  <li><font face="Comic Sans MS">If the remote control for the looks of a text pad was erased
+    and then something dropped on top, it couldn't be erased again. Thanks to Ross for
+    providing an example of this.</font></li>
+  <li><font face="Comic Sans MS">If a robot was trained to drop something on the side of
+    something (e.g. the right side of a text pad) and then is run where something that doesn't
+    care which side (e.g. a number pad) is underneath, then the robot now succeeds in dropping
+    what he is holding on top. Fixed for Java applets as well.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 2/19/01 that sometimes caused
+    descriptions of robots to be truncated.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem in Java applets that involve ToonTalk
+    animations from the Pictures notebook, that caused them not to display until something
+    else changes in the applet.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">27/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Some erased sensors in a thought bubble (&quot;touching
+    who&quot;, &quot;file to picture&quot;, and &quot;file to sound&quot;) didn't translate to
+    Java correctly.</font></li>
+  <li><font face="Comic Sans MS">File to Picture and File to Sound now work in Java applets
+    (if the appropriate GIF or JPG or JPEG or AU file is available).</font></li>
+  <li><font face="Comic Sans MS">Text pads that have been flipped and erased didn't translate
+    to Java correctly.</font></li>
+  <li><font face="Comic Sans MS">Multi-lined text pads had too narrow a font width when the
+    last line was the longest one.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with handling the 'backspace' key in Java
+    applets.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem typing to pictures of text pads in Java
+    applets.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem displaying zero-long text pads in Java
+    applets.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">28/2</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a rare problem destroying a nest with things on top
+    (e.g. the nest is in a box that was vacuumed by a robot or it was dropped on a notebook).</font></li>
+  <li><font face="Comic Sans MS">Fixed a recently introduced problem where foreign birds
+    didn't animate the delivery of things and they dropped them in the corner of the screen
+    rather than on the nest.</font></li>
+  <li><font face="Comic Sans MS">When ToonTalk tries to load a DLL for a foreign bird, it now
+    asks permission in all cases except when the programmer (as opposed to a robot) caused the
+    DLL to be loaded. Permission is a good idea since DLLs can do anything. If
+    AskBeforeForeignBirdsLoadDLL=0 in the Switches section of toontalk.ini then permission is
+    granted to all installed DLLs.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk no longer uses the FileSearchPath to find DLLs for
+    foreign birds. They must be installed in the ToonTalk directory. This is because otherwise
+    it could be a major security leak (i.e. a way to implement viruses in ToonTalk).</font></li>
+  <li><font face="Comic Sans MS">If a DLL implementing a foreign bird neglects to set some
+    output values, ToonTalk no longer triggers an error.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where an error occurred while trying to make
+    an abnormal termination (typically due to fatal DirectX errors) that caused dialog boxes
+    to repeatedly show up.</font></li>
+  <li><font face="Comic Sans MS">Improved the help messages generated by the 'File' foreign
+    bird extension.</font></li>
+  <li><font face="Comic Sans MS">If a notebook is loaded and the file or encoding has been
+    truncated, the first part of the notebook now loads fine.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes caused DirectX errors when
+    warnings were displayed before ToonTalk had finished initializing.</font></li>
+  <li><font face="Comic Sans MS">Fixed a rare problem where after being interrupted ToonTalk
+    has the wrong color palette.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem introduced a few days ago that caused errors
+    while quitting ToonTalk.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced in November 1999 that caused
+    foreign birds to animate in a confusing manner.</font></li>
+  <li><font face="Comic Sans MS">Primitive birds that were not able to load their associated
+    DLLs now behave just like ordinary birds - including how Marty gives help for using them.</font></li>
+  <li><font face="Comic Sans MS">Errors followed if you tried to train a robot to vacuum
+    something from the main notebook.</font></li>
+  <li><font face="Comic Sans MS">If you or a robot you were training vacuum up a page from one
+    of the notebooks that live in the main notebook (Pictures, Sounds, Examples, Sensors, or
+    Options) then those changes were permanent for that user name. Thanks to Micke for
+    reporting this.</font></li>
+  <li><font face="Comic Sans MS">If a picture was flipped over and you flipped a remote
+    control for its look back over then the notebook of sensors fly under the picture. This
+    now happens only if the front side of the picture is showing. Thanks to Micke for
+    reporting this.</font></li>
+  <li><font face="Comic Sans MS">Many of the options in the Directories section of
+    toontalk.ini now support the use of '*' to mean the users subdirectory of the ToonTalk's
+    User directory. So for example, &quot;URLCacheDir=*\..\..\Downloads&quot; sets the cache
+    directory for URLs to a subdirectory of ToonTalk called &quot;Downloads&quot;.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">2/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If ToonTalk needs a file that is only on the ToonTalk CD-ROM,
+    it asks the user to insert the CD. It now does so a maximum of 3 times.</font></li>
+  <li><font face="Comic Sans MS">When ToonTalk is looking for a file on the ToonTalk CD-ROM,
+    it now can deal with either version 1 or version 2 CD-ROMs. Thanks to Ross for reporting
+    this.</font></li>
+  <li><font face="Comic Sans MS">If you try to run ToonTalk at a screen resolution that your
+    computer can't handle then you get a dialog box saying that the default resolution is
+    changed and to try again. The default resolution was changed for only new users - now it
+    is changed for all users.</font></li>
+  <li><font face="Comic Sans MS">Improved the way ToonTalk shuts down.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk.ini entries did not work correctly if they were
+    longer than 255 characters. There is no limit to their size now. Thanks to Ross for
+    reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">ToonTalk now loads the local ini file of a city regardless of
+    how the city was loaded.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now saves the local ini file of a city when it is
+    saved if the local ini file came from the loading of a city (as opposed to loading a TT
+    file).</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with the handling of the INI entry
+    URLCacheDir.</font></li>
+  <li><font face="Comic Sans MS">Sometimes when flipping the view of a picture's parts sensor
+    the appearance wasn't updated. Thanks to Micke for reporting this.</font></li>
+  <li><font face="Comic Sans MS">Pumpy wasn't able to expand pixel size objects on fast
+    computers. Thanks to Micke for reporting this.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now loads a local ini file of a TT file when the
+    file is loaded. Earlier this only worked if the TT file was loaded while ToonTalk was
+    starting.</font></li>
+  <li><font face="Comic Sans MS">If the URLCacheDir has an entry then it is also added to the
+    FileSearchPath.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem if a local INI file was loaded prior to
+    finding out the name of the user.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem when a robot flips a text pad over and then
+    uses it again later. Thanks to Micke for providing an example where this happened.</font></li>
+  <li><font face="Comic Sans MS">Made the processing of path names from INI entries more
+    robust so they aren't broken by preceding and trailing spaces. And &quot;\..&quot; in a
+    path is now simplified.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Changed the installation program so that city (CTY), ToonTalk
+    object (TT), demo (DMO), user profile (USR) and puzzle (PZL) files are registered as MIME
+    types.&nbsp; In theory this means that programs other than the Windows Explorer and
+    Internet Explorer will do the right thing if you click on one of these files. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recently introduced problem that caused the user's
+    log file to contain warnings about something becoming a part of something while still on
+    the floor.</font></li>
+  <li><font face="Comic Sans MS">Sometimes sensors weren't updated when robots used them on
+    the back of a picture. Thanks to Ross for reporting this.</font></li>
+  <li><font face="Comic Sans MS">A picture of a text or number pad can now receive a new
+    appearance after being erased. Thanks to Ross for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">When running ToonTalk with speech and no talk balloons Marty
+    would sometimes skip over hints in the puzzle game.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced yesterday with sensors like 'File
+    to Picture' that become black when their current value is sucked off. Thanks to Ross for
+    reporting this.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced a week ago that prevented you from
+    changing the main notebook. Thanks to Ross for reporting this.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem in the generation of descriptions of unnamed
+    robots. (Introduced a few weeks ago.)</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where if you try to train a robot to vacuum
+    something off the main notebook (or you or a robot tries to vacuum a page from a picture's
+    notebook of sensors) then the page could be removed by hand. Thanks to Ross for reporting
+    this.</font></li>
+  <li><font face="Comic Sans MS"><a name="Beta 28">Released Beta 27b</a> (beta 27 was
+    aborted).</font></li>
+  <li><font face="Comic Sans MS">Marty appeared with no talk balloon in the credits screen if
+    he was set to use subtitles or only to speak.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">14/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If a sensor is on a nest then it doesn't change who it is
+    sensing when placed on the back of a picture. This wasn't true if you saved and then
+    restored such a picture. Thanks to Dreyfuss Pierre-Andre for reporting this.</font></li>
+  <li><font face="Comic Sans MS">If an error occurs while describing something (e.g. the
+    preamble to the encoding when something is put on the clipboard) then it now only
+    interferes with the generation of the description and doesn't signal an error.</font></li>
+  <li><font face="Comic Sans MS">Generating the description of a robot while he is working
+    sometimes caused an error. Thanks to Micke Kindborg for reporting this.</font></li>
+  <li><font face="Comic Sans MS">A spurious warning was sometimes generated when dropping a
+    number on certain sensors.</font></li>
+  <li><font face="Comic Sans MS">Some sensors (e.g. &quot;Visible?&quot;) were not kept
+    up-to-date if more than one copy of the sensor existed. Thanks to Dreyfuss Pierre-Andre
+    for reporting this.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk no longer crashes if you drop a picture on the back
+    of the remote control for its looks.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk sometimes crashed if you dropped a user-defined
+    sound pad on another user-defined sound pad.</font></li>
+  <li><font face="Comic Sans MS">If a sound was imported into ToonTalk from a directory that
+    wasn't on the FileSearchPath then copies of the sound couldn't find the WAV file.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">15/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when flying the helicopter over the eastern edge of
+    your city the easternmost street was draw with water showing.</font></li>
+  <li><font face="Comic Sans MS">Under some unusual circumstances Marty wouldn't talk in the
+    puzzle game.</font></li>
+  <li><font face="Comic Sans MS">Marty would only say one sentence and stop if certain voice
+    engines were chosen (this was only observed with Truvoice engines).</font></li>
+  <li><font face="Comic Sans MS">You can now select and copy a part of a stack of pictures
+    with the magic wand.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now uses a more robust method to decide if the
+    text-to-speech engine can only say some words (and spells the rest).</font></li>
+  <li><font face="Comic Sans MS">Improved the handling of problems that might occur while
+    initializing the text-to-speech system.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">16/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug in using the keyboard to change some sensors
+    introduced 2 days earlier.</font></li>
+  <li><font face="Comic Sans MS">Sensors whose value are multi-line text pads no longer show
+    an animated background since the text pad marquee is already animated indicating that it
+    is a sensor.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where if you visit a city that was saved
+    while on the floor, the main notebook showed the wrong user name. Thanks to Ross for
+    tracking this down.</font></li>
+  <li><font face="Comic Sans MS">The sensor for turning on and off sound effects wasn't
+    working correctly.</font></li>
+  <li><font face="Comic Sans MS">If you made changes for all users using 'Set Options' these
+    changes took effect even if overridden using the 'Options' notebook in your main notebook
+    for several hours. (The number of hours depended upon your time zone relative to GMT.)</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with the DefaultUser toontalk.ini feature
+    that caused part of the default information to sometimes be ignored.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk will no longer load the string DLL from the
+    connected directory but will always get it from the ToonTalk directory.</font></li>
+  <li><font face="Comic Sans MS">If you run ToonTalk in full-screen mode at a resolution your
+    computer doesn't support then ToonTalk provides a message that the default resolution has
+    been changed and you should try again. Prior to this fix its change of resolution only
+    worked for new users.</font></li>
+  <li><font face="Comic Sans MS">A new entry 'LeftAndRightMouseButtonsDownMeansEscape' was
+    added to toontalk.ini so that you must set this entry to 1 to retain the feature that
+    clicking the left and right mouse button is interpreted as pressing the Escape key.
+    Previously this was enabled only if mouse shortcuts were enabled.</font></li>
+  <li><font face="Comic Sans MS">When ToonTalk was started in a window and it needs to load
+    URLs or search for them, then the window was started with the wrong colors (pausing and
+    resuming always fixed it). Fixed now.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">17/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If a ToonTalk executable is run directly (not via StartTT or
+    double clicking a ToonTalk file), then ToonTalk now offers to make this executable the
+    default.</font></li>
+  <li><font face="Comic Sans MS">If a demo is run with a different executable than it was
+    created with a warning is added to the log file.</font></li>
+  <li><font face="Comic Sans MS">Sometimes the animated background of a sensor would stop
+    animating for a while.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">18/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem using the built-in voice for ToonTalk when
+    installing from a CD-ROM with a &quot;minimal install&quot;.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">19/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">When using Pumpy on a picture sometimes the white box that is
+    displayed to emphasize the selection is left on the screen for a second or two after the
+    picture has shrunk to a smaller size.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where the <a
+    href="command.htm#FrameDurationMinimum">minimum frame duration</a> has been inoperative
+    since January 2000.</font></li>
+  <li><font face="Comic Sans MS">Fixed a major memory leak that depended upon the screen
+    resolution, amount of physical memory, and usage pattern - on machines with 256 Mbytes
+    rarely if ever occurred. Problem was introduced in May 2000.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">21/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If you typed '-' to a sensor showing 'no' then it went black.
+    Thanks to Ross for reporting this.</font></li>
+  <li><font face="Comic Sans MS">Java applets that frequently copied remote controls ran
+    slowly and used lots of memory.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now often can recover from an error that there is no
+    enough memory while creating a DirectDraw surface.</font></li>
+  <li><font face="Comic Sans MS"><a name="Beta 29">Released Beta 28</a>.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug that occurs only on very fast machines when very
+    little is happening and no memory is devoted to caching (i.e. '-m 0' on the command line).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">26/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem that put a warning in the user's log file
+    about something becoming part of something while still on the floor. (I think this only
+    occurred sometimes during the puzzle game if a robot was running when you brought Marty a
+    solution.)</font></li>
+  <li><font face="Comic Sans MS">If ToonTalk runs out of memory it shrinks the cache it is
+    using. This code correctly freed up memory but it neglected to set a lower subsequent cap
+    on cache memory.</font></li>
+  <li><font face="Comic Sans MS">The random number remote control in some situations produced
+    numbers from 0 to 1000 rather than 0 to 999.</font></li>
+  <li><font face="Comic Sans MS">If you set of a bomb on puzzle 48 after loading a truck then
+    you ended up with an extra house and the following puzzle wasn't solvable. Thanks to Manal
+    El Khoreiby for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">27/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If you give a long-distance bird something that has robots
+    running on the back then the robots will be running when the bird arrives at its nest.
+    Thanks to Ross for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">29/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed some circumstances where Marty has something to say but
+    doesn't say it. Probably only happened in the puzzle game running with subtitles.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk had troubles producing a Java applet for pictures
+    with huge amounts of things on the back.</font></li>
+  <li><font face="Comic Sans MS">If you the ran ToonTalk puzzle game with the '-n' command
+    line option to specify your name, then the saved state when you last quit the puzzle game
+    wasn't always restored properly.</font></li>
+  <li><font face="Comic Sans MS">Fixed an installation problem that gave a useless default
+    meaning to the 5th joystick button.</font></li>
+  <li><font face="Comic Sans MS">Fixed some problems with Java applets of robots that get rid
+    of their box (e.g. putting it in a truck).</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with Java applets of robots that copy the top
+    element on top of a nest with the magic wand.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">30/3</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem where adding numbers to the current address
+    turned then black.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java applets when one of the
+    built-in notebooks was placed in a truck or box before generating the applet.</font></li>
+  <li><font face="Comic Sans MS">Sometimes dropping something on a picture turned off its
+    collision sensors for a cycle. Thanks to Ross for providing an example of this.</font></li>
+  <li><font face="Comic Sans MS">If a robot on the back of a picture stopped while holding
+    something and the picture was flipped over then what he was holding appeared on the floor
+    but couldn't be picked up.</font></li>
+  <li><font face="Comic Sans MS">A Java applet containing ToonTalk animation (e.g. person
+    walking) had the wrong size for the pictures if running at a resolution greater than
+    640x480.</font></li>
+  <li><font face="Comic Sans MS">Improved the way a robot uses a vacuum on the back of a
+    picture.</font></li>
+  <li><font face="Comic Sans MS">Sometimes in a Java applet when a picture has been erased and
+    a new picture dropped on top both images were displayed. Thanks to Ross for reporting
+    this.</font></li>
+  <li><font face="Comic Sans MS">The sensors that showing whether something is colliding can
+    be changed with the keyboard to undo a collision. This wasn't working right in Java
+    applets.</font></li>
+  <li><font face="Comic Sans MS">The sensor showing whether something was dropped doesn't
+    really make sense in Java. It now always shows 'yes' rather than 'no'. </font></li>
+  <li><font face="Comic Sans MS">The sensor showing whether your hand is visible in Java now
+    always shows 'no' rather than 'yes'.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">ToonTalk now deals much better with very large pictures
+    created while on the ground. (On the floor you can't make something bigger than the entire
+    floor.) It used to use up memory and sometimes crashed if you made a picture 100 times
+    bigger than usual. Such very large pictures sometimes still seem to disappear.</font></li>
+  <li><font face="Comic Sans MS">Dialog box added on 17/3/01 when running a different
+    executable than expected would sometimes be buried under other windows. Fixed now.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">2/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem running demos that involved long-distance
+    birds. (Though in general the demos don't currently recreate incoming messages so such
+    demos will probably fail.)</font></li>
+  <li><font face="Comic Sans MS">If you installed ToonTalk on a computer with more than 7
+    text-to-speech voices previously installed then the default voice (USMarty2 for the US
+    version) was not the default when running 'Set Options' but the first voice found was.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug processing FileSearchPath when * was used.</font></li>
+  <li><font face="Comic Sans MS">Version 2.36 released.</font></li>
+  <li><a name="Beta 30"><font face="Comic Sans MS">Beta 29 released.</font></a></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem if Marty was speaking and subtitles were
+    being displayed where Marty won't say the second thing he would normally say.</font></li>
+  <li><font face="Comic Sans MS">If you used 'Set Options' to change the resolution to 320x240
+    it only worked for new users. The next time they ran ToonTalk it switched to 640x480.</font></li>
+  <li><font face="Comic Sans MS">If a puzzle file just contains the name of an HTML file,
+    ToonTalk quits and launches a browser on the HTML page. In full-screen mode, a dialog box
+    informing the user that ToonTalk has been paused appeared. And if ToonTalk offered another
+    dialog box, e.g. that you can run with a higher screen resolution, then the puzzle's HTML
+    file wasn't always displayed. Currently this feature is only used in some trial versions
+    of ToonTalk.</font></li>
+  <li><font face="Comic Sans MS">If <a href="ttini.htm#URLCacheDir">URLCacheDir</a> is set
+    then sometimes 0-byte files were created.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java applets when the pictures or
+    sounds are found on the Internet due to the setting of <a href="ttini.htm#FileSearchPath">FileSearchPath</a>.
+    Also eliminated some redundant work here.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem that interfered with Start ToonTalk asking
+    for the ToonTalk CD-ROM when running demos from a ToonTalk installed from a CD-ROM and the
+    demos weren't installed on the local disk.</font></li>
+  <li><font face="Comic Sans MS">Start ToonTalk now displays an informative dialog box if
+    demos are requested that weren't installed.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If ToonTalk is installed and there are no voices then the
+    option of Marty speaking with subtitles is now disabled and commented as unavailable.</font></li>
+  <li><font face="Comic Sans MS">Made several improvements to how ToonTalk uses the system
+    file cache when dealing with URLs and <a href="ttini.htm#URLCacheDir">URLCacheDir</a>
+    isn't set.</font></li>
+  <li><font face="Comic Sans MS">Fixed a recently introduced problem that caused Marty to
+    sometimes ignore the PageUp button to have him repeat what he last said.</font></li>
+  <li><font face="Comic Sans MS">Fixed yet another problem with Marty stopping talking when
+    'Set Options' is set to speech and subtitles.</font></li>
+  <li><font face="Comic Sans MS">Sometimes when maximizing full-screen ToonTalk when it has
+    been iconized triggered a DirectDraw error.</font></li>
+  <li><font face="Comic Sans MS">If you trained a robot that already has a tool (e.g. many of
+    the puzzles an untrained robot has a magic wand) and you finish training him with him
+    holding the tool and there are things left behind that the robot when run vacuums up then
+    the robot got mixed up and stopped after finishing one cycle.</font></li>
+  <li><font face="Comic Sans MS">Removed a limitation of the file names of BMP files of a
+    maximum length of 128 characters. This interfered with using the system file cache since
+    such long names are common.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If you pressed PageUp and Marty was away, he would teleport
+    in and then repeat the last thing he said. This interferes with user program that want to
+    use PageUp and so he only repeats himself on PageUp if he is already on screen.</font></li>
+  <li><font face="Comic Sans MS">Improved the handling of imported sounds and their subsequent
+    export (e.g. in a city). If the sound can't be found on the original path but can be found
+    on the FileSearchPath (or the Users subdirectory) then the sound name changes from the
+    full path to the short name. Also it can deal with URLs that are cached in the system file
+    cache without the WAV extension.</font></li>
+  <li><font face="Comic Sans MS">Many parts of ToonTalk were confused by file names that had
+    no extension but had a '.' inside a directory name.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem running some Java applets as Java
+    applications (e.g. with jview.exe). If when generating an applet ToonTalk can't find GIF
+    or JPG files but only BMP files then the result only runs as an application.</font></li>
+  <li><font face="Comic Sans MS">If a Java applet contained sensors that can't be supported in
+    Java (e.g. the joystick sensors), then the log file filled with spurious warnings.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem that caused DirectX errors when a Java applet
+    was being generated and ToonTalk needed to search the Internet for missing sounds or
+    pictures.</font></li>
+  <li><font face="Comic Sans MS">If the latest ToonTalk (version 2.37) was installed by a
+    patch file then it will look for Java built-in sounds and pictures in the directories only
+    used by earlier versions of ToonTalk.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If a WAVE file is loaded over the Internet and <a
+    href="ttini.htm#URLCacheDir">URLCacheDir</a> isn't set then you got an MCI error about a
+    file not being found.</font></li>
+  <li><font face="Comic Sans MS">If due to other bugs a sound is loaded with an empty file
+    name it no longer causes further errors.</font></li>
+  <li><font face="Comic Sans MS">If in a Java applet robots on the back of a picture in a box
+    give it a speed or change its position the speed remains at zero and the position doesn't
+    change. Thanks to Ross for providing an example of this.</font></li>
+  <li><font face="Comic Sans MS">If in a Java applet, a &quot;touching who&quot; sensor is
+    added to the back of a picture that is already colliding (and some other collision sensors
+    for this picture are active) then the sensor wasn't updated until a second collision
+    occurs. Thanks to Ross for providing an example of this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">ToonTalk now handles better user sound files that have no
+    data, just a header. They don't make any sounds of course.</font></li>
+  <li><font face="Comic Sans MS">Introduced a new mode for Marty - &quot;subtitles without
+    speech&quot;.&nbsp; Previously if subtitles were chosen and speech wasn't operational
+    (e.g. no voices or no sound card) then the subtitles got stuck.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where there was sometimes a delay in updating
+    numeric sensors when placed on the back of a new picture. Thanks to Ross for providing an
+    example of this.</font></li>
+  <li><font face="Comic Sans MS">By pressing 'Esc' during the titles it sometimes cut the
+    speed which Marty displays text if not speaking in half. E.g. talk balloons or subtitles
+    stayed up twice as long as normal.</font></li>
+  <li><font face="Comic Sans MS">Parenthetical remarks are no longer removed from long
+    subtitles.</font></li>
+  <li><font face="Comic Sans MS">When ToonTalk describes the name of a file for a picture it
+    now uses the short version of the name if the full path no longer contains a file and the
+    picture can be found using the <a href="ttini.htm#FileSearchPath">FileSearchPath</a>.</font></li>
+  <li><font face="Comic Sans MS">If a sound was loaded using a URL (i.e. a non-local file)
+    then the full path is maintained and not shortened.</font></li>
+  <li><font face="Comic Sans MS">The <a href="ttini.htm#SpokenLanguage">SpokenLanguage</a>
+    option is now ignored if Marty is not in a mode where he speaks.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when no voices are installed on a computer, 'Set
+    Options' gives a choice of a voice named and then nothing follows.</font></li>
+  <li><font face="Comic Sans MS">The new mode of Marty &quot;subtitles without speech&quot;
+    sometimes responded correctly to PageDown to skip to the next line and sometimes not.</font></li>
+  <li><font face="Comic Sans MS">If a puzzle sequence ended with a puzzle containing the name
+    of an HTML file to display and then that same user name attempted to play the puzzle game
+    again an error occurred.</font></li>
+  <li><font face="Comic Sans MS">If when ToonTalk starts it needs to load files from the
+    Internet or a CD-ROM then the title bar of the window now informs you of the status and
+    asks you wait.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">13/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If a puzzle file contains just the name of an HTML file then
+    it was shown as you entered the rocket rather than when you leave. Broken the day before.</font></li>
+  <li><font face="Comic Sans MS">If you have solved all the puzzles and are running ToonTalk
+    in a window (not full-screen) then if you answer the dialog box that you want to start
+    over again, you started again with the wrong color palette.</font></li>
+  <li><font face="Comic Sans MS">Version 2.39 released.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">17/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug introduced on 11/4 that caused sounds from WAV
+    files to be silent.</font></li>
+  <li><font face="Comic Sans MS">Updated the option screen about turning sound on or off to
+    make it clear that it is only for sound effects and does not turn off speech.</font></li>
+  <li><a name="Beta 31"><font face="Comic Sans MS">Released 2.39b and Beta 30.</font></a></li>
+</ol>
+
+<p><font face="Comic Sans MS">19/4</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Introduced a new toontalk.ini called
+    &quot;MaximumItemsInDusty&quot; in the &quot;Switches&quot; section which limits the
+    number of objects kept inside of Dusty's stomach. Useful if you typically work in a saved
+    city and then save it again since everything Dusty ever vacuumed remains in his stomach
+    taking up memory.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem training a robot with a box containing a
+    flipped remote control for a picture's look. Thanks to Ross for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/5</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If the toontalk.ini entry &quot;BackgroundsDir&quot; in the
+    &quot;Directories&quot; section is set then if some backgrounds are missing from that
+    directory ToonTalk no longer looks for them using the FileSearchPath.</font></li>
+  <li><font face="Comic Sans MS">If a language version of ToonTalk is only installed on the
+    CD-ROM, then ToonTalk used to ask for the CD-ROM with a blank message box. It now asks in
+    English (since it hasn't found the file with the language-specific text strings).</font></li>
+  <li><font face="Comic Sans MS">ToonTalk no longer displays yes/no message boxes with no text
+    (e.g. the bug above).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">29/5</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Updated the Swedish translation of ToonTalk.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Added a new entry in the Directories section of toontalk.ini.
+    If MainNotebookLabel is set to a file name (which can include an * which is the user's
+    subdirectory of the Users directory) then the ToonTalk object at the file location is used
+    as a logo for the main notebook.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem in the Puzzle Game in situations where in
+    Free Play Marty would beam in to describe a problem. This left Marty in an unstable
+    condition that could cause errors on later puzzles.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where sometimes ToonTalk would have an error
+    while quitting while Marty was talking. (This problem was not normally observed since it
+    usually caused ToonTalk to exit prematurely while quitting.)</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes if saving (by typing control-c) an object after
+    flipping it back over, it was restored as the size it was when flipped. This problem can
+    be avoided on older versions of ToonTalk by dropping and then picking the object up before
+    saving it.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem recording a demo log that pasted something
+    from the clipboard whose encoding was larger than 64K.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes occurred when dropping a
+    remote looks of a picture on an erased picture.</font></li>
+  <li><font face="Comic Sans MS">Improved the new option added on 1/6 (MainNotebookLabel) so
+    that the user's name is displayed on top of the logo.</font></li>
+  <li><font face="Comic Sans MS">The internal implementation that determines if two things are
+    the same (e.g. dropping something back on a stack) was completely rewritten and is much
+    faster.</font></li>
+  <li><font face="Comic Sans MS">Objects containing copies of the same thing (picture, robot,
+    whatever) are now saved much more compactly. Can reduce the size of a city or encoding by
+    a factor of 10. The new Switches entry in toontalk.ini DumpCopiesCompactly can be set to
+    zero to turn this feature off and save things as before.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">13/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Made small improvement to the way ToonTalk launches a browser
+    when showing trouble shooting or other advice.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">16/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem with the wall decoration remote control where
+    some objects were displayed on the wall in not quite the right position.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">19/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem generating Java of a sound whose file name
+    contains '\' - e.g. anything other than the short name used when the file is on the
+    FileSearchPath.</font></li>
+  <li><font face="Comic Sans MS">If you log in with a new name and the DefaultUser is old then
+    you get a dialog box asking if you want Marty to forget everything you've done.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">20/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If in the &quot;FileExtensions&quot; section of the
+    toontalk.ini file you have &quot;MissingPictureFileExtension=gif&quot; then if a non-GIF
+    file for a picture is missing then and the GIF version exists then the picture will be
+    changed to use the GIF version from then on. Good for switching from one file format to
+    another for an application with lots of pictures. &quot;jpg&quot;, &quot;png&quot;, and
+    &quot;jpeg&quot; are other correct values.</font></li>
+  <li><font face="Comic Sans MS">If you removed something from the remote control for the wall
+    decoration then the remaining items were placed wrong (sometimes even off the edge).
+    Thanks to Ross for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">21/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If you dropped a flipped picture on a decoration sensor
+    (room, house, or roof) it was added. No longer.</font></li>
+  <li><font face="Comic Sans MS">The new code for deciding if two things were equal considered
+    two pictures equal even if they differed by &quot;SEE ALL&quot;, &quot;SEE SOME&quot;, or
+    &quot;SEE NONE&quot;. This meant that if something was saved in the new compact mode and
+    two kinds of visibility for the same picture occurred then when loaded they will have the
+    same kind of visibility.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes occurred while running Java
+    applets that used a remote control that displays a picture (e.g. touching who).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">22/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem converting to Java a robot that has a flipped
+    picture in the box in his thought bubble.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">23/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem with the size and placement of built-in
+    animations (e.g. person walking) when converted to a Java applet.</font></li>
+  <li><font face="Comic Sans MS">The new &quot;MissingPictureFileExtension&quot; didn't work
+    right if a picture had been created with the BMP extension (rather than just default to
+    it). Thanks to Ross for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">24/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a few small memory leaks and very large one when
+    converting to Java something that contains notebooks.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem converting to Java something that contained
+    the built-in Examples notebook.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">25/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">When copies of the same notebook, robot, or flipped picture
+    appear in something being converted to a Java applet, they now share the same generated
+    Java code.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with the new version of testing if two things
+    are equal that didn't work for some notebooks resulting in less compaction.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">26/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Marty behaved strangely and the credits were not given if you
+    visit a city that was saved while Marty was talking.</font></li>
+  <li><font face="Comic Sans MS">Introduced a new command line option &quot;-ini_file &lt;file
+    name&gt;&quot; that can specify a new location for the toontalk.ini file. The default
+    continues to be &quot;toontalk.ini&quot; on the Windows directory (called
+    &quot;WinNT&quot; on Windows NT and 2000). This is useful for installations where access
+    to the default location of the toontalk.ini file is restricted for security reasons. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">27/6</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Changed the autorun executable so that the next CD-ROM to be
+    capable of being run off the CD-ROM without installation (though this isn't recommended
+    because voices and the latest DirectX and speech facilities won't be installed).</font></li>
+  <li><font face="Comic Sans MS">Command line options that specify file names or user names
+    can now be quoted and contain spaces. E.g. -n &quot;Ken Kahn&quot; on the command line
+    makes the user name always be Ken Kahn.</font></li>
+  <li><font face="Comic Sans MS">Beta 31 released.</font></li>
+</ol>
+
+<p><a name="Beta 32"><font face="Comic Sans MS">8/7</font></a> 
+
+<ol>
+  <li><font face="Comic Sans MS">If you press F11 while sitting on the floor with nothing in
+    your hand then Bammer will run out backwards and undo the last thing he did. (If you are
+    holding something F11 means drop it and Bammer should ignore it.) This is a single-level
+    undo for Bammer for each house - pressing F11 again will not undo the &quot;bam&quot;
+    prior to the last one.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/7</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">You can now press F11 after Bammer has come out while
+    training a robot and the robot will remember things as if the object was dropped on the
+    floor not on the original target.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 12/6 that interfered with
+    generating a new demo log files.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/7</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recently introduced problem when something is dropped
+    on something while Bammer is dealing with a different drop. Thanks to Ross for reporting
+    it.</font></li>
+  <li><font face="Comic Sans MS">Fixed a recently introduced problem generating a Java applet
+    when copies of the same picture were involved.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">13/7</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Demos that start in a city with a modified main notebook,
+    only replayed if ToonTalk was installed on the same directory as when the demo was
+    recorded.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with the geometry of copies of the same
+    picture when translated to Java.</font></li>
+  <li><font face="Comic Sans MS">Improved the way remote control for looks in a thought bubble
+    for a robot are saved (to files or the clipboard).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">16/7</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem when Marty was speaking a different language
+    than was being used to display subtitles where the last subtitles were sometimes not
+    displayed.</font></li>
+  <li><font face="Comic Sans MS">Sometimes when something was dropped on a sensor the
+    translated Java ignored it.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">17/7</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sensors were sometimes saved so that when loaded back they
+    displayed an old value.</font></li>
+  <li><font face="Comic Sans MS">If a negative number was dropped on certain sensors (e.g. the
+    random number generator) then the translated Java version used the positive version of the
+    number.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">1/8</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If a picture has robot running on the back and is copied then
+    the corresponding Java didn't always run the copied robots.</font></li>
+  <li><font face="Comic Sans MS">Sometimes when a picture with robots and boxes on the back is
+    dropped on an erased picture the sensors in the boxes didn't work properly in the Java
+    applet.</font></li>
+  <li><font face="Comic Sans MS">If a sensor's value was changed (e.g. by dropping something
+    on top) then copies of that sensor were not always updated in Java applets.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">2/8</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">If something on top of a nest was copied by the Magic Wand
+    then the corresponding Java applet didn't work right.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">15/8</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Touch sensitive mice are now supported by ToonTalk. You'll
+    feel the helicopter, walls, etc. much like you do when using a force-feedback joystick.
+    You'll also find a sensor notebook (at the end of the main sensor notebook) for using
+    these effects in your own programs. You can have both a mouse and joystick and control and
+    sense them independently. Note that the mouse uses the mforces.ifr while the joysticks use
+    forces.ifr. You can edit either one using <a href="http://www.immersion.com">Immersion
+    Studio</a>. Note that if you add new effects you'll need to add them to both files.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug that has broken the joystick button down sensors
+    for buttons number 27 to 32 since April 2000. Until there is a new file format for
+    ToonTalk, these button sensors will be restored as active even if were turned off before
+    being saved.</font></li>
+  <li><font face="Comic Sans MS">Pasting joystick buttons were active but didn't display an
+    animated marquee until there values changed.</font></li>
+  <li><font face="Comic Sans MS">Improved the text on the opposite page of joystick and touch
+    sensitive mouse notebooks.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">16/8</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Added labels to joystick and touch sensitive mouse notebooks.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem introduced in early June that caused Marty to
+    not have a talk balloon during the credits screen when playing the puzzle game.</font></li>
+  <li><font face="Comic Sans MS">If a robot who sets off a bomb was retrained without stopping
+    him (so he also sets off a bomb), then the bomb was sometimes left on the floor after the
+    training.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem describing (by Marty or for the clipboard) a
+    remote control for force feedback effects when no such device was connected.</font></li>
+  <li><font face="Comic Sans MS">Improved the error handling when a problem occurs describing
+    a notebook contained in something.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes occurred when retraining a
+    robot that dropped things on the main notebook (and there no longer was a matching page).</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem that crashed ToonTalk if a robot was trained
+    to use Pumpy and was grabbed while using him.</font></li>
+  <li><font face="Comic Sans MS">Fixed problems in training a robot to use Pumpy.</font></li>
+  <li><font face="Comic Sans MS">When running a robot off screen who was trained to use Pumpy,
+    it didn't run faster than when watched.</font></li>
+  <li><font face="Comic Sans MS">When running a robot off screen who was trained to use Pumpy,
+    you no longer hear the sounds Pumpy makes.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem where putting a force feedback effect on the
+    clipboard was restored as ordinary text. Did not happen if the force feedback effect was
+    contained in something.</font></li>
+  <li><a name="Beta 33"><font face="Comic Sans MS">Beta 32 released.</font></a></li>
+</ol>
+
+<p><font face="Comic Sans MS">27/8</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fix from 15/8 of joystick button sensors 27 to 32 inactivated
+    until the next file format release since broke some old programs using joystick buttons.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/9</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed several bugs in the recently introduced ability to undo
+    the effects of Bammer.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">14/9</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">The customization feature MaximumItemsInDusty is now disabled
+    when playing the puzzle game since it can interfere with some puzzles.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">18/9</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes using the collision sensor to undo a collision left
+    the items overlapping by a pixel or two.</font></li>
+  <li><font face="Comic Sans MS">Sometimes some sensors that have an animated appearance did
+    not display the animation when not selected. (Problem introduced on 17/3.)</font></li>
+  <li><font face="Comic Sans MS">Improved the ability to run ToonTalk directly off a CD-ROM
+    with no installation.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">20/9</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Selection feedback is now enhanced to include color changes.
+    This feature can be turned off by setting &quot;ColorSelectionFeedback&quot; to 0 in the
+    Switches section of toontalk.ini.</font></li>
+  <li><font face="Comic Sans MS">The standard wiggling selection feedback can be turned off by
+    setting &quot;MovementSelectionFeedback&quot; to 0 in the Switches section of
+    toontalk.ini.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">21/9</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a small memory leak when quitting ToonTalk.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">22/9</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Made the selection from Dusty and Pumpy completely stable.
+    (For example, if you don't move the mouse then the selection doesn't change.)</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">25/9</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">The toontalk.ini customization &quot;MainNotebookLabel&quot;
+    did not work correctly in demos.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">24/10</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem that sometimes prevented a gentle recovery
+    from no free memory errors.</font></li>
+  <li><font face="Comic Sans MS">The toontalk.ini switch DumpCopiesCompactly was ignored in
+    demo logs.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">22/11</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem when dropping the remote control for the
+    visibility of a picture on the back of another picture. It didn't get updated properly.</font></li>
+  <li><font face="Comic Sans MS">Fixed a problem (introduced March 5) when Directories
+    switches are set in toontalk.ini and contain spaces.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">28/11</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem running demos on machines without a sound
+    card (or without Direct Sound drivers).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">29/11</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed several bugs related to dropping nests on nests. (If
+    nest A is dropped on nest B then all messages that would have been placed on nest A are
+    placed on B instead.) Thanks to Ross for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem returning a fresh robot or a truck back into
+    the stacks in Tooly the Toolbox. Thanks to Ross for reporting this.</font></li>
+  <li><font face="Comic Sans MS">If a text pad (fixed width) was saved on the clipboard (not
+    because it was part of something being saved) then when pasted back it became a variable
+    width text object.</font></li>
+  <li><font face="Comic Sans MS">Saving numbers on the clipboard (not because they are part of
+    something being saved) with operations (like '*' or '/') became text pads when pasted.
+    Thanks to Ross for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem saving a robot when something in its thought
+    bubble is equal to something else being saved at the same time.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem caching media files that were obtained from a
+    URL.</font></li>
+  <li><font face="Comic Sans MS">Puzzle 42 accepted any nest with 5 or more numbers on it. Now
+    the numbers must be different. (Otherwise can get stuck on the next puzzle.) Thanks to
+    Volker and his son for reporting this.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">When generating a Java applet using built-in sounds and
+    pictures and the needed files are missing then it used to give up. Now it gives up on
+    pictures if the picture files are missing and on sounds if the sound files are missing.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/12 (these changes were made during the previous 2 months)</font>
+
+<ol>
+  <li><font face="Comic Sans MS">ToonTalk can now run in 15-bit, 16-bit, 24-bit, and 32-bit
+    video modes in addition to the 8-bit (256 color) mode previously supported.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk will run in the color depth that Windows is set to
+    unless you are running full-screen and have set DesiredFullScreenBitsPerPixel in the
+    Switches section of toontalk.ini to a different value.</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now finds its built-in imagery in the directory
+    specified by BuiltinPictureDir in the Directories section of toontalk.ini. The default
+    file extension is specified by MissingBuiltinPictureFileExtension in the FileExtensions
+    section of toontalk.ini. The default is now to use 8-bit GIF files so they can be shared
+    with the Java applet generator. 24-bit imagery such as PNG files work fine (but are not
+    recommended when running with an 8-bit video mode).</font></li>
+  <li><font face="Comic Sans MS">Picture files now include a new extension &quot;ini&quot;.
+    Currently there is only a Files section in the ini file. It can contain Picture and
+    PictureMask entries. These are file names (either fully qualified or relative to the
+    location of the ini file). The PictureMask file should contain white pixels for the parts
+    of the Picture file that should be displayed and black for the parts that should be
+    transparent. For example, [Files]<br>
+    Picture=AL01.jpg<br>
+    PictureMask=masks\AL01.png</font></li>
+  <li><font face="Comic Sans MS">ToonTalk now uses a new Microsoft API (GDI+) to read picture
+    files. It deals better with PNG, GIF, and JPG than the old API. It also deals better with
+    transparent pixels in GIF or PNG files. It also supports Exif and TIFF files. This new
+    functionality does not work in Windows 95, however.</font></li>
+  <li><font face="Comic Sans MS">24-bit picture files now look much better in 8-bit video mode
+    (but is a bit slow).</font></li>
+  <li><font face="Comic Sans MS">When an object is turned off it now looks darker. And when
+    the power is turned off (via F8) then everything looks darker in a better way than
+    previously.</font></li>
+  <li><font face="Comic Sans MS"><a name="Beta34">Beta 33 released</a>.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">14/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem running with 16 or 24 bit graphics. Its
+    affect should be limited to the appearance of the programmer persona's hair or hat.</font></li>
+  <li><font face="Comic Sans MS">If a built-in ToonTalk picture or sound file is missing then
+    on some systems (e.g. Windows 98) a dialog box appeared (even in full-screen mode but then
+    it was &quot;underneath&quot; and couldn't be seen).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">17/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Changed the way text and number pads are displayed. The new
+    format looks nicer (no separators between characters) and faster. The display format of
+    variable width font is now much more like the fixed width font version.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">19/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">A demo file that used the millisecond timer didn't work right
+    if there were any cycles that took more than 1000 milliseconds.</font></li>
+  <li><font face="Comic Sans MS">Improved the way demos are recorded that start with a saved
+    city. It should be both faster and fixes some rare cases where the demo stopped running
+    properly.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">21/12</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">The Japanese version of ToonTalk now has ordinary looking
+    text pads. (Prior to this the style of text pads with variable width font was the only
+    available style and it didn't have a border or background color).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">Continue with <a href="bugs02.htm">2002</a>.</font></p>
+
+<p align="center"><font face="Comic Sans MS"><small><a href="toontalk.htm">home</a> | <a
+href="http://www.toontalk.com/English/search.htm">search</a> | <a href="buy.htm">purchase</a>
+| <a href="doc.htm">manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="press.htm">press</a> | <a href="address.htm">contact us</a></small></font></p>
+</body>
+</html>

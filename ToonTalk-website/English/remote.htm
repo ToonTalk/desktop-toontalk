@@ -1,0 +1,180 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Using Sensors and Remote Controls in ToonTalk</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Using Sensors and Remote Controls </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font face="Comic Sans MS" size="3">If you flip over a <a href="picture.htm">picture</a>,
+you'll see a <a href="notebook.htm">notebook</a> fly out. In the notebook you'll find
+sensors and remote controls for the picture. Sensors keep showing you something about the
+picture. Remote controls let you change things. Sometimes they are combined. Controllers
+are what we call sensors, remote controls, and combinations. Special sensors are in a
+special <a href="sensor.htm">sensor notebook</a>.</font></p>
+
+<p><font face="Comic Sans MS" size="3">Most controllers show a number that you can change
+just like any number. And when you do something about the picture changes as well. Also
+when you change the picture some other way the number changes automatically. Some
+controllers show text or pictures. You can change many of them by pressing the space bar,
+while holding it or pointing to it. </font></p>
+
+<p><font face="Comic Sans MS" size="3"><b>Tip.</b> To try out what a controller does, take
+it out and set it down on the floor. Flip the picture back over and set it down. Change
+the controller and see what happens. Or change the picture and see how the controller
+changes.</font></p>
+
+<p><font face="Comic Sans MS" size="3"><b>Tip.</b> Controllers sense or change the picture
+they are on the back side of. If they have never been on the back of a picture then they
+must have come from a notebook that lives on the back of a picture. Then they'll control
+that picture. </font></p>
+
+<p><font face="Comic Sans MS" size="3"><strong>Advanced Tip. </strong>If you want to place
+a sensor for a picture A on the back of picture B then the sensor needs to be sitting on a
+nest or else it will become a sensor for B when dropped on the back. We recommend using
+this only when pictures A and B are closely related to maintain modularity of your
+program. The protection that nests provide from switching which picture is being
+controlled applies as well to sensors brought to the nest by birds as well as those placed
+there directly by the programmer.</font></p>
+
+<p><font face="Comic Sans MS" size="3">Here is the list of controllers you'll find in a
+picture's notebook: </font>
+
+<dl>
+  <dt><strong><font face="Comic Sans MS" size="3"><a name="XSensor">Page 2 - From Left Side</a>
+    </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Picture's distance from the left side. If the
+    picture isn't part of another picture then 0 is the left edge of the screen and 1000 is
+    the right edge of the screen. If the picture has been added to another picture then 0 is
+    the left edge of the picture it is a part of and 1000 is its right edge. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 4 - From Bottom</strong> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">Picture's distance from the bottom. If the picture
+    isn't part of another picture then 0 is the bottom of the screen and 1000 is the top of
+    the screen. If the picture has been added to another picture then 0 is the bottom of the
+    picture it is a part of and 1000 is its top. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><a name="XSpeed"><strong>Page 6 - Speed to Right</strong></a>
+    </font></dt>
+  <dd><font face="Comic Sans MS" size="3">Speed the picture moves toward the right. 1000 means
+    it'll cross the screen in 1 second. Negative means it'll move to the left. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 8 - Speed to Top </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Speed the picture moves toward the top. 1000 means
+    it'll cross the screen in 1 second. Negative means it'll move to the bottom. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 10 - <a name="Width">Width</a> </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">The width of the picture. 1000 means as wide as the
+    screen. Or if the picture is part of another than as wide as the other picture. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 12 - Height </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">The height of the picture. 1000 means as tall as the
+    screen. Or if the picture is part of another than as tall as the other picture. </font></dd>
+  <dt><strong><small><a name="WhichPicture"></a></small><font face="Comic Sans MS" size="3">Page
+    14 - Which Picture?</font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Some pictures or animations have different
+    appearances. Some have 4 or 8 different directions they can move. This controller shows
+    the number of the picture being shown. For rectangles, circles and lines, it controls the
+    color of the geometric shape. For text and number pads it controls the color of the
+    characters. Changing the value of this remote control for pictures that are built-in
+    animations (e.g. an animated explosion) will reset the animation cycle so it start again
+    from the beginning.</font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 16 - Colliding? </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This controller shows a simple cartoon of either a
+    collision or a miss. You can turn a collision into a miss by pointing to the detector and
+    pressing the space bar. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 18 - 
+  <a name="TouchingWho">Touching Who? </a> </strong></font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor shows who the picture is colliding with.
+    It is black if nothing. If the picture is colliding with more than one just one
+    is shown. You can use Dusty to vacuum off the top picture to see others. Also you can flip
+    over those pictures you vacuum off. You will have the remote control for the
+  <a href="#RemoteLooks">Looks</a> of the picture that is colliding.
+    If there is <a href="picture.htm#BirdOnTheBack">a bird on the back</a> this can be very
+    useful. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 20 - Left Right hit? </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Like the controller on page 16 except only shows a
+    collision if it was mostly the left or right movement of the picture which caused it. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 22 - Up Down hit? </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Like the controller on page 16 except only shows a
+    collision if it was mostly the up or down movement of the picture which caused it. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 24 - <a name="Visible">Visible?</a></font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This controls whether the picture
+    is invisible or visible. Also whether the background is visible or not. </font></dd>
+  <dt><a name="AnimationFinished"><strong><font face="Comic Sans MS" size="3">Page 26 -
+    Animation Finished? </font></strong></a></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;Has my
+    animation stopped?&quot;. Some animations like walking never stop. Others like explosions
+    stop and don't cycle. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 28 - Held in Hand? </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;Is the
+    picture currently held?&quot;. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 30 - Selected? </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;Is the
+    picture wiggling and ready to be picked up or used?&quot;. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 32 - Just Dropped? </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;Has this
+    picture just been dropped?&quot;. </font></dd>
+  <dt><strong><small><a name="RemoteLooks"></a></small><font face="Comic Sans MS" size="3">Page
+    34 - Looks </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This one shows what the picture currently looks
+    like. You (or a robot you've trained) can drop a different picture (or a number or text
+    pad) here and the picture will be covered by the new picture. If you erase the looks
+    controller of the front side of picture A and drop another picture B on top then A will
+    then look like B.&nbsp; If you are running version 2.34 or Beta 26 or later then this
+    sensor can show either side of a picture. You can flip it by typing 'f' while holding it.
+    This way you can train robots to view and alter either the front or backside of a picture.
+    If you erase the sensor showing the back of a picture then everything on the back is
+    removed. This sensor is great for making objects explode or numbers that change as the
+    score changes or thousands of other neat uses. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 36 - <a name="Parts">Parts</a></font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This contains an ordinary box which 
+  contains remote controls for the looks of all the pictures that are directly 
+  on top of this picture. It contains one remote control for the looks of each 
+  picture per hole. Or if the picture is flipped it contains a box with a hole 
+  for each thing on the back. You can vacuum the box off the sensor and 
+  manipulate its contents (but adding or removing holes has no effect). If you 
+  want, for example, a robot to remove a particular part you can train the robot 
+  to find the part by going through the elements in the box until you find the 
+  part. Then you can place a box and a robot on the back that has been trained 
+  to blow up a bomb. If you use Dusty to erase the sensor you'll remove all the 
+  parts from the picture. You can also flip the sensor (by typing 'f') and it'll 
+  show the parts on the other side of the picture. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">Page 38 - <a name="Containers">Containers</a></font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">This contains a box. If the picture is 
+  part of another picture the first hole of the box will contain that picture. 
+  The second hole contains the picture that picture is a part of and so on. You 
+  can vacuum off the box and manipulate it.</font></dd>
+</dl>
+
+<dl>
+  <dd><p align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></font></small></p>
+  </dd>
+</dl>
+</body>
+</html>

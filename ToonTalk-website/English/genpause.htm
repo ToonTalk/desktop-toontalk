@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>ToonTalk Paused</title>
+		<meta content="Microsoft FrontPage 3.0" name="GENERATOR">
+		<link href="../dialog.css" type="text/css" rel="stylesheet">
+			<script language="javascript" id="clientEventHandlersJS">
+<!--
+
+function sendBack(which_button) {
+   window.returnValue = which_button;
+   window.close()
+}
+
+//-->
+			</script>
+	</head>
+	<body>
+		<p align="center">ToonTalk has been stopped.</p>
+		<DIV align="center">
+			<table id="Table1" cellSpacing="1" cellPadding="1" width="300" border="0" align="center">
+				<tr>
+					<td><p align="center"><input id="Button1" onclick="sendBack('1')" type="button" value="Back to ToonTalk" name="Button1"></p>
+					</td>
+					<td><p align="center"><input id="Button2" onclick="sendBack('2')" type="button" value="Come Back Later" name="Button2"></p>
+					</td>
+					<td><p align="center"><input id="Button3" onclick="sendBack('3')" type="button" value="Leave ToonTalk" name="Button3"></p>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p align="center"><input id="Button4" onclick="if (DontSaveMediaToo.checked) { sendBack('4') } else { sendBack('6')}" type="button" value="Save Everything" name="Button4"></p>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</DIV>
+		<P align="center">
+			<INPUT id="DontSaveMediaToo" type="checkbox" CHECKED name="DontSaveMediaToo">I 
+			don't plan to send my city to someone on another computer so keep the file as 
+			small as possible.</P>
+	</body>
+</html>

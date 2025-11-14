@@ -1,0 +1,97 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>File Specific ToonTalk Customizations</title>
+</head>
+
+<body link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>File Specific ToonTalk
+Customizations</b></font></p>
+
+<p><font size="4" face="Comic Sans MS"><strong><i>ADVANCED USERS ONLY.</i></strong></font></p>
+
+<p><strong><i><font face="Comic Sans MS" size="4" color="#FF0000">Note that as 
+of version 3.55 or Beta 42 this feature is turned off by default since most of 
+these uses are handled by subsequent enhancements. You can enable this feature 
+in 3.55 or Beta 42 or later by setting
+<a href="ttini.htm#UseLocalIniFilesWhenLoading">UseLocalIniFilesWhenLoading</a> 
+in toontalk.ini.</font></i></strong></p>
+
+<p><font face="Comic Sans MS">All of the customization <a href="ttini.htm">options
+available in toontalk.ini</a> can also be specified on a per-file basis. When you double
+click on a city file (CTY), a demo file (DMO), a puzzle file (PZL), or a ToonTalk object
+file (TT) then ToonTalk looks for a file with the same name except with an INI extension.
+This local INI file can specify things like the <a
+href="ttini.htm#SecondaryFileSearchPath">SecondaryFileSearchPath</a> to indicate where on
+the Internet needed pictures or sounds can be found. Or a demo file can indicate the <a
+href="ttini.htm#DemoToonTalk32">DemoToonTalk32</a> entry to specify which ToonTalk
+executable is compatible with this demo. Note that a local INI file can be either a local
+file or URL.&nbsp; For example, <a href="ftp://ftp.animated-programs.com/Test/test.cty">ftp://ftp.animated-programs.com/Test/test.cty</a>
+is a city that uses <a href="ftp://ftp.animated-programs.com/Test/test.ini">ftp://ftp.animated-programs.com/Test/test.ini</a>
+to indicate to ToonTalk where to find the picture on the floor.</font></p>
+
+<p><font face="Comic Sans MS">If you double-click on a TT or drag or paste the file into
+ToonTalk, then if there is an associated INI file it is loaded and the INI file will be
+able to control many of the options including all the Directory ones and <a
+href="ttini.htm#DefaultUser">DefaultUser</a>. But some options like the <a
+href="ttini.htm#SpokenLanguage">SpokenLanguage</a> can only be set when ToonTalk is
+starting. So some options set in a local INI file will be ignored unless the corresponding
+TT file is clicked on when no ToonTalk is running so that the INI file is processed while
+ToonTalk is initializing.</font></p>
+
+<p><font face="Comic Sans MS">If a CTY file has an associated INI file then if you save
+your city, you'll get a copy of the INI file. For example, if you double click on <a
+href="ftp://ftp.animated-programs.com/Test/test.cty">ftp://ftp.animated-programs.com/Test/test.cty</a>
+give your name and then save, then your saved city will continue to use a local copy of
+the&nbsp; <a href="ftp://ftp.animated-programs.com/Test/test.ini">ftp://ftp.animated-programs.com/Test/test.ini</a>
+file.</font><font size="2"
+face="Comic Sans MS"> </font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS">
+<a href="toontalk.htm" style="color: blue; text-decoration: underline; text-underline: single">home</a> | 
+<a href="search.htm" style="color: blue; text-decoration: underline; text-underline: single">search</a> | 
+<a href="buy.htm" style="color: blue; text-decoration: underline; text-underline: single">purchase</a> | 
+<a href="doc.htm" style="color: blue; text-decoration: underline; text-underline: single">manual</a>
+| 
+<a href="whatsnew.htm" style="color: blue; text-decoration: underline; text-underline: single">news</a> | 
+<a href="infodesk.htm" style="color: blue; text-decoration: underline; text-underline: single">info</a> | 
+<a href="games.htm" style="color: blue; text-decoration: underline; text-underline: single">games</a>
+| 
+<a href="faq.htm" style="color: blue; text-decoration: underline; text-underline: single">faq</a> | 
+<a href="support.htm" style="color: blue; text-decoration: underline; text-underline: single">support</a> | 
+<a href="free.htm" style="color: blue; text-decoration: underline; text-underline: single">downloads</a>
+| 
+<a href="endorse.htm" style="color: blue; text-decoration: underline; text-underline: single">endorsements</a> | 
+<a href="press.htm" style="color: blue; text-decoration: underline; text-underline: single">press</a> | 
+<a href="address.htm" style="color: blue; text-decoration: underline; text-underline: single">contact us</a></font></small></p>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>&nbsp;</b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<object id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+</object>
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</script>
+<input onclick="agentStart()" type="image" alt="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+</body>
+</html>

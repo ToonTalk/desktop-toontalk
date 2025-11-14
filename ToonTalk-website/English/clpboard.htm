@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Bringing Things in and out of ToonTalk</title>
+</head>
+
+<body>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Bringing Things in and out of
+ToonTalk </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p align="left"><font size="5" face="Comic Sans MS"><small>A common way to bring things
+into ToonTalk is by using the Windows clipboard. The easiest way to do this is by using
+control-c (holding down the control key (labeled 'Ctrl' on most keyboards) and 
+then pressing 'c') to copy whatever you are holding into the clipboard. If you 
+are on the floor and not holding anything then you'll put a copy of everything 
+on the floor on the clipboard. If you are standing in a house then the entire 
+house is put on the clipboard. If you are outside you'll copy the entire city. </small></font></p>
+
+<p align="left"><font size="5" face="Comic Sans MS"><small>Once something is on the
+clipboard you can paste it into any text editor or mail program. Control-v works as a
+shortcut for nearly all programs. You can also paste it into another ToonTalk (or the same
+one as an odd way to make a copy) using control-v. If you paste it into programs like Microsoft Word or
+WordPad then be sure to save as text and not in Word format. If you are using 
+unusual letters (e.g.&nbsp; ä) in labels or text pads then it is best to save as Unicode.</small></font></p>
+
+<p align="left"><font size="5" face="Comic Sans MS"><small>If you save the clipping as a
+file with the extension TT then when it is double clicked on the object in the clipping
+will be added to your ToonTalk if paused. If no ToonTalk is running it'll start a new
+ToonTalk. In either case the first time you sit on the floor the object will appear. 
+If, instead, you save the clipping with the extension XML, you can inspect the 
+internal format of ToonTalk objects using a web browser or other XML-capable 
+tool.</small></font></p>
+
+<p align="left"><font size="5" face="Comic Sans MS"><small>You can also use <a
+href="sensor.htm#Clipboard">the clipboard sensor</a> to bring things into and out of
+ToonTalk but most people find control-c and control-v quicker and easier. </small></font></p>
+
+<p align="left"><font size="5" face="Comic Sans MS"><small>If you want to save 
+something that includes pictures or sounds then it is better to click on 'Save 
+to File' in the dialog that appears if you press Pause while holding something.</small></font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4"><small><b><strong>Advanced tip: </strong></b>You
+can type control-c to a file when using the Windows Explorer (the desktop program). Then
+when you type control-v to ToonTalk it'll import that file. If it is a picture you should
+see the picture on the floor. If it is a sound then a sound. If it is a TT file then the
+ToonTalk object. Otherwise the text of the file will appear as a ToonTalk text pad.</small></font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4"><small><b><strong>Advanced tip: </strong></b>
+You can type control-c when pointing to a picture in a browser and then paste 
+the picture into ToonTalk with control-v.</small></font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4"><small><strong>Advanced tip:</strong>
+You can <a href="dragdrop.htm">drag one or more files</a> into ToonTalk at once.</small></font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4"><small><strong>Advanced tip:</strong>
+If you hold down the shift key while typing control-v and the clipboard contains 
+the name of a file or URL, then the contents of the file will appear in ToonTalk 
+when you are on the floor.</small></font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+</body>
+</html>

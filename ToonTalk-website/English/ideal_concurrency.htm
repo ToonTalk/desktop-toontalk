@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>How should the ideal language support concurrent and distributed 
+computation?</title>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Comic Sans MS" size="5">How should the ideal 
+language support concurrent and distributed computation?</font></b></p>
+<p><font face="Comic Sans MS">Over the last ten years, I've had many technical 
+discussions about why I believe that ToonTalk's model of concurrency is better 
+than that provided by multi-threaded LOGO implementations (including
+<a href="http://education.mit.edu/starlogo/">StarLogo</a> and
+<a href="http://ccl.northwestern.edu/netlogo/">NetLogo</a>) and Squeak.</font></p>
+<p><font face="Comic Sans MS">Very briefly, what we want are not just multiple 
+processes that cause side effects on the environment, but processes that also 
+consume and produce data. These processes need ways to communicate, synchronize, 
+and coordinate via primitives that are accessible by non-expert programmers. For 
+those who want to understand this issue in depth, here is an
+<a href="ideal_concurrency_excerpt.pdf">excerpt</a> from a draft of a paper 
+about using ToonTalk to explore infinity and cardinality.</font></p>
+<p><font face="Comic Sans MS">Concurrency combined with destructive operations 
+upon shared data leads to race conditions and other very hard to track down 
+bugs. Attempts to introduce locks and atomic actions add complexity and the risk 
+of deadlock. I strongly believe that destructive operations upon shared data 
+should not be part of any language with a general model of concurrency. And 
+non-general models of concurrency such that of StarLogo are of use in only 
+limited situations.</font></p>
+<p><font face="Comic Sans MS">Furthermore, I believe we want to support children 
+in building distributed computations. This need not add complexity to the system 
+if the model of concurrency generalizes to processes running on different 
+computers communicating over a network, as is the case in ToonTalk. Despite 
+limitations of the partial implementation of distributed computing in ToonTalk, 
+various networked games have been built such as battleships and two-player Pong. 
+Swiss high schools students have implemented a chat system in ToonTalk.</font></p>
+<p><font face="Comic Sans MS">Also the communication mechanism used by programs 
+should be of use for human-to-human communication as well. In the
+<a href="http://www.ioe.ac.uk/playground">Playground Project</a> young children 
+used ToonTalk's <a href="ldbird.htm">long-distance birds</a> to exchange their 
+ToonTalk games as well as text messages.</font></p>
+<p><font face="Comic Sans MS">The concurrency of a programming language should 
+have a solid theoretical foundation such as </font>
+<a href="http://en.wikipedia.org/wiki/Pi_calculus"><font face="Comic Sans MS">pi 
+calculus</font></a><font face="Comic Sans MS">.</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS">
+<a href="toontalk.htm" style="color: blue; text-decoration: underline; text-underline: single">home</a> | 
+<a href="search.htm" style="color: blue; text-decoration: underline; text-underline: single">search</a> | 
+<a href="buy.htm" style="color: blue; text-decoration: underline; text-underline: single">purchase</a> | 
+<a href="doc.htm" style="color: blue; text-decoration: underline; text-underline: single">manual</a>
+| 
+<a href="whatsnew.htm" style="color: blue; text-decoration: underline; text-underline: single">news</a> | 
+<a href="infodesk.htm" style="color: blue; text-decoration: underline; text-underline: single">info</a> | 
+<a href="games.htm" style="color: blue; text-decoration: underline; text-underline: single">games</a>
+| 
+<a href="faq.htm" style="color: blue; text-decoration: underline; text-underline: single">faq</a> | 
+<a href="support.htm" style="color: blue; text-decoration: underline; text-underline: single">support</a> | 
+<a href="free.htm" style="color: blue; text-decoration: underline; text-underline: single">downloads</a>
+| 
+<a href="endorse.htm" style="color: blue; text-decoration: underline; text-underline: single">endorsements</a> | 
+<a href="press.htm" style="color: blue; text-decoration: underline; text-underline: single">press</a> | 
+<a href="address.htm" style="color: blue; text-decoration: underline; text-underline: single">contact us</a></font></small></p>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>&nbsp;</b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<object id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+</object>
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</script>
+<input onclick="agentStart()" type="image" alt="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

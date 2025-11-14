@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Customizing ToonTalk's HTML Dialogs</title>
+</head>
+
+<body>
+
+<p align="center"><font size="6" face="Comic Sans MS"><b>Customizing ToonTalk's  HTML
+Dialogs</b></font><font FACE="Comic Sans MS" size="5"><strong> </strong></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font face="Comic Sans MS">ToonTalk displays all dialogs based 
+upon HTML files that are user accessible. The current list of dialog files that 
+you can customize are:</font> 
+
+<ul>
+  <li><p><font face="Comic Sans MS"><strong>starttt.htm</strong> This is the most important
+    dialog. It is the one you see when you start up ToonTalk. It has buttons for launching
+    ToonTalk in Free Play or Play Game modes. It can run any of the built-in demos. Options
+    can be set and help obtained. By customizing this file you can change which demos or
+    puzzle sequences are available, hide certain features of ToonTalk, and add new features
+    such as visiting a special pre-built city. To make these changes you need the ability to
+    edit HTML and perhaps to make changes to the JavaScript used on these pages.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>askname.htm</strong> This is the dialog that asks the
+    user to enter his or her name and select how he or she wants to look.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>genpause.htm</strong> This is the dialog that is
+    displayed when the user pauses or escapes from ToonTalk.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>hndpause.htm</b> This is the dialog that is 
+  displayed when the user pauses or escapes from ToonTalk and something in held 
+  in the programmer's hand.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>savpause.htm</b> This dialog is displayed 
+  after saving something.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>nosave.htm</strong> This differs from genpause.htm in
+    that the option to save the city is not included.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>dempause.htm</strong> This is the 
+  dialog that is displayed when a demo is paused.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>messboxc.htm</strong> This is the general dialog for
+    putting up messages and asking simple yes/no or OK type questions.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>clickme2.htm</strong> This is the dialog that is run
+    when the CD-ROM is inserted into the drive if ToonTalk has been installed. clickme.htm is
+    on the CD-ROM and is run if ToonTalk is not installed.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>ctypause.htm </b>This dialog is displayed if 
+  the loading of a city is interrupted.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">loadpaus.htm </font></b>
+  <font face="Comic Sans MS">This dialog is displayed if the loading of an 
+  object is interrupted.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">savctypa.htm </font></b>
+  <font face="Comic Sans MS">This dialog is displayed if the saving of a city is 
+  interrupted.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">savobjpa.htm </font></b>
+  <font face="Comic Sans MS">This dialog is displayed if the saving of an object 
+  is interrupted.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">cpyurlpa.htm </font></b>
+  <font face="Comic Sans MS">This dialog is displayed if the loading of a file 
+  over the Internet is interrupted.</font></p></li>
+</ul>
+
+<p><font face="Comic Sans MS">JavaScript is used on all the HTML dialog pages. Information
+is passed the page via <em>window.dialogArguments</em>. This is a string with semi-colons
+(';') separating different values. To return information to ToonTalk you need to send a
+string back as the value of <em>window.returnValue</em> and then you need to call <em>window.close()</em>.
+The string you&nbsp;return to ToonTalk should be a valid <a href="command.htm#HTMLDialogs">command
+line string</a>.</font></p>
+
+<p><font face="Comic Sans MS">Note that if you create a specialized dialog page and name
+it something.htm.tt or something.html.tt (where something can be any valid name) then when
+doubled clicked, Start ToonTalk will be launched and start with that dialog page.</font></p>
+
+<font
+FACE="Comic Sans MS" SIZE="3">
+</font>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

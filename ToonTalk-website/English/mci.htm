@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Running MCI from ToonTalk</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Running Microsoft Window's Media
+Control Interface</b></font></p>
+
+<p><font face="Comic Sans MS" size="3">Microsoft Windows supports a set of commands for
+playing sounds, music, videos, and other media devices called
+<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/multimed/htm/_win32_communication_with_mci_devices.asp">MCI</a>.
+You can send these commands to Windows from MCI by dropping a text pad with a command on
+it on the <a href="sensor.htm#TextToMCI">text-to-MCI sensor</a>. For example, if the pad
+has the text &quot;play c:\windows\media\town.mid&quot; and the 'town' MIDI file is in your Windows
+media folder you'll create a sound that you can vacuum off the sensor and spit out. Then
+pressing space will start the command to, in this case, hear the music. If you then drop
+the text pad with &quot;close all&quot; on an empty text-to-MCI sensor, you'll find on top
+of the sensor the command to stop the music. Several books describe Microsoft's MCI
+command language. </font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS">
+<a href="toontalk.htm" style="color: blue; text-decoration: underline; text-underline: single">home</a> | 
+<a href="search.htm" style="color: blue; text-decoration: underline; text-underline: single">search</a> | 
+<a href="buy.htm" style="color: blue; text-decoration: underline; text-underline: single">purchase</a> | 
+<a href="doc.htm" style="color: blue; text-decoration: underline; text-underline: single">manual</a>
+| 
+<a href="whatsnew.htm" style="color: blue; text-decoration: underline; text-underline: single">news</a> | 
+<a href="infodesk.htm" style="color: blue; text-decoration: underline; text-underline: single">info</a> | 
+<a href="games.htm" style="color: blue; text-decoration: underline; text-underline: single">games</a>
+| 
+<a href="faq.htm" style="color: blue; text-decoration: underline; text-underline: single">faq</a> | 
+<a href="support.htm" style="color: blue; text-decoration: underline; text-underline: single">support</a> | 
+<a href="free.htm" style="color: blue; text-decoration: underline; text-underline: single">downloads</a>
+| 
+<a href="endorse.htm" style="color: blue; text-decoration: underline; text-underline: single">endorsements</a> | 
+<a href="press.htm" style="color: blue; text-decoration: underline; text-underline: single">press</a> | 
+<a href="address.htm" style="color: blue; text-decoration: underline; text-underline: single">contact us</a></font></small></p>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>&nbsp;</b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<object id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+</object>
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</script>
+<input onclick="agentStart()" type="image" alt="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+</body>
+</html>

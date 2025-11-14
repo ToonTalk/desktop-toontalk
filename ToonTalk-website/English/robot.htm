@@ -1,0 +1,153 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>ToonTalk Robots</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font face="Comic Sans MS"><img src="../robot.gif" width="141" height="224"></font><font size="5" face="Comic Sans MS"><b> </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p align="center"><font size="5" face="Comic Sans MS"><i>You can train robots to do your
+bidding.</i></font></p>
+
+<p><font size="4" face="Comic Sans MS">Inside of <a href="tooly.htm">Tooly</a> you'll find
+a very large stack of robots. If you take one out you'll see he has an empty <a href="bubble.htm">thought bubble</a>. You can start training a fresh robot by dropping a
+box on him. You'll enter into the robot's thoughts and you'll control him. You can have
+him pick things up, use tools, and drop things. He'll remember everything. If you train
+him to take things out of, or put things into, a box he'll remember which hole it was by
+counting from the left side of the box. Once you are finished training him press the
+escape key (usually labeled <i>Esc</i>). </font></p>
+
+<p><font size="4" face="Comic Sans MS">You can then make the robot repeat what you trained
+him to do by giving him the box again. When he's done he'll try to do it again if the box
+still <a href="bubble.htm">matches the box in his thought bubble</a>. </font><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../robot1.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font size="4" face="Comic Sans MS">You can change a robot's name by typing a 
+new name while holding him. Sometimes long names look better if you break the 
+line by using the 'Enter' key.</font><font color="#FF0000" face="Comic Sans MS"><b><font size="4"> </font>
+<a href="../robot_name.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font size="4" face="Comic Sans MS"><b>Tip. </b>Robots are quite fussy. They only will
+work on a box like the one in their thought bubble. Luckily you can use <a href="dusty.htm">Dusty</a> to suck some things out of the box in a thought bubble. A good
+idea is to suck out only enough to get the robot to work when you want him to. Sometimes
+it is easier to suck the box out of the thought bubble, spit it out, change it and then
+drop it back on the thought bubble.</font></p>
+
+<p><font size="4" face="Comic Sans MS"><b>Teams of robots.</b> You can make a team of
+robots by dropping them on each other. When you give a box to the team the robot in front
+sees if it matches his thought bubble. If it does, he'll start working on it and the other
+teammates will move out of the way. If it doesn't match, he'll pass it along to the next
+robot in line. If there is stuff missing from the box or there is a nest where the robot
+wants something else or the mismatch was due to sensors that are changing on their own
+then he'll wait around. When the box is filled or the nest is covered he'll start up
+again.</font><font color="#FF0000" face="Comic Sans MS"><b><font size="4"> </font>
+<a href="../robot_team.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font size="4" face="Comic Sans MS"><b>Tip.</b> If you want a robot to do something
+only if something is <i>not</i> there, then you can have the robot in front of him check
+for something like the number 42 and the robot behind him won't be given the box to work
+on unless the number is different from 42.</font><font color="#FF0000" face="Comic Sans MS"><b><font size="4"> </font>
+<a href="../robot_negation.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font size="4" face="Comic Sans MS">Anywhere you need a robot you can use a team of
+robots as well. So you can drop a team in a <a href="truck.htm">truck</a> or put a team on
+the back of a <a href="picture.htm">picture</a>. The best way to break up a team is to use
+<a href="dusty.htm">Dusty</a> to pull them apart.</font></p>
+
+<p><a name="ReTraining"></a><font size="4" face="Comic Sans MS"><b>Tip.</b> If you trained
+a robot to almost do the right thing, but messed up a little, then you can re-train the
+robot. Just vacuum the box out of the robot's thought bubble, spit it out, and then drop
+the box on the robot (careful not to drop it back on the thought bubble). You'll re-enter
+the robot's thought bubble, but this time the robot will redo what he was trained to do
+until you click a mouse or keyboard button. Then you can keep training him as usual.</font><font color="#FF0000" face="Comic Sans MS"><b><font size="4"> </font>
+<a href="../robot_retrain.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font face="Comic Sans MS" size="3"><b>Advanced tip. </b>You can't train a robot to
+give something to other robots, but you can train a robot to load up a truck with other
+robots. Computer scientists would describe this as saying that while you can't do a
+procedure call, you can do a more general process spawn. If you want to get something back
+from the robots then arrange for them to give a reply to a bird. </font><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../robot_spawn.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font face="Comic Sans MS" size="3"><b>Advanced tip.</b> When you train a robot to give
+something to a bird, the bird flies off and returns empty handed (empty clawed?). But
+during training the bird does not take things to her nest since when the robot is run
+later it might be a different bird. If you need to compute something using something
+placed on a nest by a bird, then you'll need at least 2 robots. One to give the bird the
+item and another to work on the resulting item on the nest. A good trick is to give the
+first robot the box after training him to produce the box you want for training the second
+robot. </font><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../robot_spawn2.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font face="Comic Sans MS" size="3"><a name="Recursion"><b>Advanced tip.</b> Computer
+scientists talk about <i>recursive</i> programs - programs that use themselves. Here's how
+you can make recursive programs in ToonTalk.</a> Put a fresh robot on a blank page of your
+main <a href="notebook.htm">notebook</a>. Then train another robot to, among other things,
+find the page with the saved robot. Train the robot to put a copy of the robot in the
+notebook into a truck along with a box for him to work on. After finishing your robot's
+training, find the page where you saved the robot. Use <a href="dusty.htm">Dusty</a> to
+remove that robot and put in his place the robot you just trained. </font></p>
+
+<p><font face="Comic Sans MS" size="3">There is a
+much easier way to express recursion. A robot can now <a href="wand.htm#RobotCopying">use
+the magic wand to create a copy of himself</a> and his teammates. </font><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../robot_copy_self.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font face="Comic Sans MS" size="3">The factorial of a number (1 times 2 times 3 and so
+on up to your number) can be computed recursively or <i>iteratively</i> (repeatedly
+without using recursion). <a href="programs.htm#SingleFactorial">Click here</a> to find
+robots to compute the factorial using recursion once. <a href="programs.htm#DoubleFactorial">Click here</a> to find robots that compute factorial
+using recursion twice. Robots that compute factorial without recursion can found on page
+12 of the examples notebook which is on page 6 of your main notebook. </font></p>
+
+<p><small><a name="MetaProgramming"></a></small><font face="Comic Sans MS" size="3"><b>Advanced
+tip.</b> You can put robots in boxes and even train other robots to manipulate those
+robots. Computer scientists call this <i>meta-programming</i>. Robots cannot train other
+robots, but they can re-arrange teams, remove, edit and replace boxes in thought bubbles,
+and the like. <a href="box.htm#ExplodingTeams">Dropping a team of robots on a blank box</a> 
+breaks the team up -- one robot per hole of the box. </font></p>
+
+<p><small><a name="MetaProgramming"></a></small><font face="Comic Sans MS" size="3"><b>Advanced
+tip.</b> A robot in a box in a thought bubble will only match another robot with 
+the same name. You can use Dusty to &quot;erase&quot; a robot so that it will only match 
+any robot.</font></p>
+
+<p><small><a name="MetaProgramming"></a></small><font face="Comic Sans MS" size="3"><b>Advanced
+tip.</b> You can also train a robot to pick up a team of
+robots from a box and put them in a truck together with a box for them to work on.
+Computer scientists call this <i>higher-order programming</i>. There is a way of combining
+higher-order programming and recursive programming -- see if you can figure out how.</font></p>
+
+<p align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

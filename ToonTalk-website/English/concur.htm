@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\Program Files\Microsoft Office\Office\HTML.DOT">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Concurrency and ToonTalk</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="4" face="Comic Sans MS"><b>Concurrency and ToonTalk</b></font><font size="5" face="Comic Sans MS"><b> </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font face="Comic Sans MS">Before I attempt to explain concurrent computation in
+ToonTalk and why it is difficult to extend sequential languages to be concurrent, I'll
+explain the relationship between concurrency, parallelism, and distributed computing.
+Parallel processes are processes that are running within the same computer system. The
+system typically has more than one processor. Distributed processes are processes that
+typically run on different computer systems connected via a network. The distinction
+between parallel and distributed is important because distributed computing is typically
+across trust or organizational boundaries. Hence only distributed computing need be
+concerned with security, hardware failure recovery, and the like. In discussions where the
+distinction is not important, I refer to concurrent processes, i.e. processes that might
+be either parallel or distributed. </font></p>
+
+<p><font face="Comic Sans MS">ToonTalk is a thoroughly concurrent programming language.
+That is because all sub-computations are expressed as new, independent processes. If a
+robot needs to have some other robots perform some sub-computation, he must be trained to
+load up a truck with those other robots. The new house built by the crew in the truck is a
+new process. Unlike conventional languages (C, Java, Logo, Lisp, Fortran, Cobol, Perl,
+Basic, etc.), there is no way to express a subroutine call in ToonTalk. A call to a
+procedure transfers control to the procedure so that the program after the procedure call
+has to wait until the procedure finishes. When the procedure is done it returns (sometimes
+by returning a value). The calling program can then resume where it was when the procedure
+was called. One can get the equivalent behavior in ToonTalk by training a robot to load up
+a truck with robots and a box with a bird in it. The robot should put the nest of the bird
+in his box and do nothing more. That robot or other members of his team should be
+programmed to look for something in the nest. Consequently this process will suspend until
+the robots that were placed in the truck give the bird something. The robots waiting on
+the nest will see what was delivered and resume computation. In other words, a subroutine
+or procedure call in ToonTalk is just a very special pattern of use of trucks, birds, and
+robots. ToonTalk only provides the programmer with the more general ability to express the
+spawning of new processes.</font></p>
+
+<p><font face="Comic Sans MS">The lack of subroutines in ToonTalk makes it much more
+feasible to have much larger number of processes than conventional programming languages.
+The reason for this is that everyone implements subroutine calls using a data structure
+called a stack. Stacks are a very effective way of implementing procedural calls,
+including recursive calls. The problem is that each process (even if suspended) needs its
+own stack. This makes processes somewhat costly. A process in ToonTalk only needs 2
+pointers: to the program (the team of robots) and to the data (a box). There is no stack;
+there is nothing else. I've tested ToonTalk with tens of thousands of houses (i.e.
+processes). In contrast, when I used Java, it stopped working when I had just a few
+hundred processes. </font></p>
+
+<p><font face="Comic Sans MS">Conventional languages have <i>shared state</i>. The same
+variables, data structures, and objects can be accessed from different processes
+(processes that share data are often called threads). Sharing state is necessary in these
+languages in order for threads to work together. This sharing between concurrent
+independent processes is very dangerous, however. It leads to <i>race conditions</i>.
+Consider a variable, <i>A</i>, that is supposed to represent the current balance of a
+savings account. (<i>A</i> might be a global variable or it might be an instance variable
+of an object - both kinds of variables have this problem.) A subroutine has been written
+to withdraw <i>X</i> from <i>A</i> after checking if <i>X</i> is less than or equal to <i>A</i>.
+It withdraws by assigning <i>A</i> to <i>A-X</i>. In other words the subroutine allows a
+withdrawal only if there are sufficient funds in the account. Now let us introduce
+concurrency. Suppose there is an account with 10 dollars in it and one process would like
+to withdraw 9 dollars and another process wants to withdraw 8 dollars. With bad luck both
+withdrawals can occur. And even worse the balance might be 1 dollar, 2 dollars, or -7
+dollars after processing the two withdrawals. How? Consider this scenario:</font></p>
+
+<p><font face="Comic Sans MS">Process 1 checks that <i>A</i> is less than <i>X</i> and
+computes <i>A</i>-<i>X</i> to be 1 but before assigning <i>A</i> to 1, Process 2 runs and
+sees that <i>A</i> is still 10 so it processes the entire withdrawal and sets <i>A</i> to
+2. Process 1 resumes where it left off and sets <i>A</i> to 1.</font></p>
+
+<p><font face="Comic Sans MS">So how do conventional languages deal with race conditions?
+They introduce new programming constructs: <i>locks</i> or <i>critical regions</i>. For
+example, the withdrawal procedure could obtain a lock on A so that no other process can
+access it. It can then safely compare it to <i>X</i>, compute <i>A</i>-<i>X</i>, and set <i>A</i>
+to the result. It must then release the lock on <i>A</i> or else no one else can ever
+access <i>A</i>. Not only does this add complexity to the task of making programs, but it
+can lead to new problems: namely, <i>deadlock</i>. Suppose Process 1 locks A and then
+needs to find the value of B that is locked by Process 2. So Process 1 suspends and waits
+for Process 2 to unlock B. But what if Process 2 then needs to access the value of <i>A</i>?
+<i>A</i> is locked, so Process 2 also suspends. This is sometimes called a <i>deadly
+embrace</i>. You might think it would be easy to program in such a way to avoid this kind
+of mutual dependency. But the cycle of dependency might involve hundreds of processes.</font></p>
+
+<p><font face="Comic Sans MS">So why doesn't ToonTalk suffer from these problems? The
+reason is that ToonTalk has no shared state. A box can only exist in one place. And robots
+in the same house take turns - they never work on the same box at the same time. The lack
+of shared state is how ToonTalk avoids race or deadlock problems. But doesn't this limit
+the expressivity of the language? It would, if it wasn't for birds. The fact that copies
+of the same bird fly to the same nest provides a way for many-to-one communication that
+can be used instead of shared state. As an example, consider the ToonTalk bank account
+demo. Multiple processes can withdraw money from the same account. Each process has a copy
+of a bird whose nest is in the box that is representing the bank account. Robots in
+different houses can give the birds to this account withdrawal requests by giving the
+birds boxes containing the amount of money that to be withdrawn. We don't know which box
+will end up on top of the nest - but all them will be stacked up on the nest. (In other
+words, the requests are queued up on the nest.) The robots working on the box for the
+account will see a box appear on the nest for a withdrawal request. They will process the
+request before starting on the next request. There is no problem, even if the computation
+of the new balance requires a new sub-computation. The robot will load up the truck with
+robots and a box to compute the new balance. And then it will place the nest that will
+receive the answer in the location where the current balance is kept. The next request
+won't be processed until the sub-computation gives the bird the new balance and the
+appropriate nest is covered.</font></p>
+
+<p><font face="Comic Sans MS">In summary, attempts to add concurrency to languages with
+subroutines and shared state lead to complexity, costly implementations of processes, and
+bugs that are very hard to track down. ToonTalk, in contrast, was designed from scratch to
+be concurrent. In ToonTalk there is no need to introduce locks or critical regions,
+processes cost very little, and race conditions and deadlocks are avoided.</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+</body>
+</html>

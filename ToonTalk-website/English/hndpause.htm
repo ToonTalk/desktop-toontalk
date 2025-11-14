@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>ToonTalk Paused</title>
+		<meta content="Microsoft FrontPage 3.0" name="GENERATOR">
+		<link href="../dialog.css" type="text/css" rel="stylesheet">
+			<script language="javascript" id="clientEventHandlersJS">
+<!--
+
+function sendBack(which_button) {
+   window.returnValue = which_button; // + ";" + FileName.value;
+   window.close()
+}
+
+//-->
+			</script>
+	</head>
+	<body>
+		<p align="center">ToonTalk has been stopped.</p>
+		<DIV align="center">
+			<table id="Table1" cellSpacing="1" cellPadding="1" width="300" border="0" align="center">
+				<tr>
+					<td><p align="center"><input id="Button1" onclick="sendBack('1')" type="button" value="Back to ToonTalk" name="Button1"></p>
+					</td>
+					<td><p align="center"><input id="Button2" onclick="sendBack('2')" type="button" value="Come Back Later" name="Button2"></p>
+					</td>
+					<td><p align="center"><input id="Button3" onclick="sendBack('3')" type="button" value="Leave ToonTalk" name="Button3"></p>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p align="center"><input id="Button4" onclick="if (DontSaveMediaToo.checked) { sendBack('4') } else { sendBack('6')}" type="button" value="Save Everything" name="Button4"></p>
+					</td>
+					<td></td>
+				</tr>
+			</table>
+		</DIV>
+		<DIV align="center">&nbsp;</DIV>
+		<DIV align="center">There are lots of things you can do with what you are holding 
+			in hand.</DIV>
+		<DIV align="center">&nbsp;</DIV>
+		<DIV align="center">
+			<INPUT id="SaveIt" onclick="if (DontSaveMediaToo.checked) { sendBack('7') } else { sendBack('8')}" type="button" value="Save It to a File" name="SaveIt">&nbsp;</DIV>
+		<DIV align="center">&nbsp;</DIV>
+		<DIV align="center">&nbsp; <INPUT id="Button5" onclick="if (DontSaveMediaToo.checked) { sendBack('9') } else { sendBack('10')}" type="button" value="Save It, Make Java Applet, and Show Web Page" name="JavaApplet">&nbsp;</DIV>
+		<DIV align="center">&nbsp;</DIV>
+		<DIV align="center">
+			<INPUT id="Button6" onclick="sendBack('11')" type="button" value="Edit Picture" name="EditIt"></DIV>
+		<!--
+		<DIV align="center">&nbsp;</DIV>
+		<DIV align="center">
+			<INPUT id="FileName" type="file" name="FileName"></DIV>
+
+//-->
+		<P align="center">
+			<INPUT id="DontSaveMediaToo" type="checkbox" name="DontSaveMediaToo">I don't 
+			plan to send this stuff to someone on another computer so keep the file as 
+			small as possible.</P>
+	</body>
+</html>

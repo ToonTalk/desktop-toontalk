@@ -1,0 +1,191 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>How to Create Your Own Demos using Time Travel</title>
+</head>
+
+<body>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>How to Create Your Own Demos 
+using Time Travel </b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<object id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+</object>
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</script>
+<input onclick="agentStart()" type="image" alt="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+
+<p><font face="Comic Sans MS"><b><i>Advanced users:</i></b></font></p>
+
+<p><font face="Comic Sans MS">After running ToonTalk with <a href="ttravel.htm">
+time travel enabled</a>, you'll find a file named time_travel.dmo in your 
+ToonTalk user directory (typically a directory with your name that is a 
+subdirectory of ToonTalk that is a subdirectory of My Documents). Copy and 
+rename it but be sure to keep the DMO file extension. This file can be 
+distributed to anyone who has the same version of ToonTalk installed. It can be 
+linked to from a web page. When clicked upon this file will replay the time 
+travel log. The <a href="ttravel.htm">time travel VCR-like controls</a> will 
+appear when you move the mouse.</font></p>
+
+<p><font face="Comic Sans MS">A DMO file is internally a zip archive that 
+contains several lognnnnn.dmo files (one for each time travel segment) and a 
+0.xml file that contains some extra information. You can 
+use any of the
+<a href="http://www.google.com/search?sourceid=navclient&ie=UTF-8&oe=UTF-8&q=zip+utilities">
+common zip utilities</a> to add subtitles, text-to-speech, or narration to a 
+time travel archive by unzipping the DMO file and adding your files. You may find it is easiest to temporarily rename the file to have a ZIP 
+file extension while making any of the following enhancements to your demo.</font></p>
+
+<p><font face="Comic Sans MS"><b>Adding subtitles to your demos</b>.  </font></p>
+
+<p><font face="Comic Sans MS">When ToonTalk starts
+running a time travel demo named X it looks for a file named X.ust. (&quot;ust&quot; is the default
+extension name for American English subtitles - in general the extension is the two-letter
+country code followed by 't'. British English is &quot;ukt&quot;.) You can override the default for your computer by providing
+an &quot;<a href="ttini.htm#SubtitlesSuffix">SubtitlesSuffix</a>&quot; entry in the &quot;FileExtensions&quot; section of the
+ToonTalk.ini file in your Windows directory. A subtitle file is made of entries separated
+by a blank line. Each entry has the time in milliseconds since the beginning of the demo
+followed by the text of the subtitle. It is recommended that any lines of text more than
+60 characters be broken. The &quot;demos&quot; subdirectory of your ToonTalk installation
+has many sample subtitle files. One way to obtain the millisecond timings is to press F9
+while the demo is playing back. This will record the time in your &lt;user name&gt;.txt log
+file in the &quot;users&quot; subdirectory.</font></p>
+
+<p><font face="Comic Sans MS">One you have your UST file (or UKT, SET, PTT, JPT, 
+...) you should add it to the DMO file (it is a zip archive).</font></p>
+
+<p><font face="Comic Sans MS"><b>Adding narration to your demos</b>. </font></p>
+
+<p><font face="Comic Sans MS">The narration needs to be as either a single large 
+WAVE file or several smaller files. WAVE files are the Microsoft Windows 
+standard audio file and they usually have the WAV extension. Note that currently 
+the WAVE file cannot be compressed as an MP3 or Windows Media file.</font></p>
+
+<p><font face="Comic Sans MS">A single WAVE file will typically be larger than 
+several smaller WAVE files since there is no playback of quiet periods. Also 
+very large WAVE files may cause some performance problems. Currently ToonTalk 
+can only playback a WAVE file from the beginning so if during playback one uses 
+the VCR controls to jump into the middle of a narration you won't hear it. Until 
+ToonTalk is enhanced to play the sound files from any starting location, the 
+best alternative is to break your file into smaller pieces.</font></p>
+
+<p><font face="Comic Sans MS">You specify when you want a wave file to begin 
+playback during a demo by adding to your subtitle file an XML fragment such as:</font></p>
+
+<p><font face="Comic Sans MS">1412<br>
+&lt;?xml version=&quot;1.0&quot;?&gt;<br>
+&lt;SoundFile&gt;UK\s01.wav&lt;/SoundFile&gt;</font></p>
+
+<p><font face="Comic Sans MS">This indicates that 1.412 seconds into the demo 
+that ToonTalk should begin to play the sound file in the DMO archive named 
+UK\s01.wav. If you anticipate making different language versions of your demo we 
+recommend you use a folder name for each version. Alternatively you can keep all 
+the files at the top level of the zip archive and give them names like 
+UK_s01.wav. If you only want to have 
+narration without subtitles then the above can be the entire contents of your 
+subtitles file.</font></p>
+
+<p><font face="Comic Sans MS">If you wish to have narration generated by the 
+same text-to-speech engine that Marty uses, you can add an entry such as</font></p>
+
+<p><font face="Comic Sans MS">1412<br>
+&lt;?xml version=&quot;1.0&quot;?&gt;<br>
+&lt;TextToSpeech&gt;Welcome to my demo.&lt;/TextToSpeech&gt;</font></p>
+
+<p><font face="Comic Sans MS">An Example:</font></p>
+
+<p><font face="Comic Sans MS">Here is the beginning of the intro_v2.ust in the 
+intro_v2.dmo used in ToonTalk 3:</font></p>
+
+<p><font face="Comic Sans MS">1412<br>
+&lt;?xml version=&quot;1.0&quot;?&gt;<br>
+&lt;SoundFile&gt;US\s01.wav&lt;/SoundFile&gt;<br>
+<br>
+1412<br>
+Hello! Welcome to ToonTalk.<br>
+I'm Pat and I'll be happy to show you around.<br>
+<br>
+7297<br>
+&lt;?xml version=&quot;1.0&quot;?&gt;<br>
+&lt;SoundFile&gt;US\s02.wav&lt;/SoundFile&gt;<br>
+<br>
+7297<br>
+If I hold down the right mouse button,<br>
+we fly up.<br>
+<br>
+<b>Tips:</b></font> </p>
+
+<ul>
+  <li><font face="Comic Sans MS">Avoid using keyboard accelerators for tools (e.g. 'e' to make
+    Dusty erase things). These accelerators differ from language to language so if you use
+    them your demos probably won't work in a different language version of ToonTalk. </font></li>
+  <li><font face="Comic Sans MS">If you are creating a demo on a fast computer and expect the
+    demo to be run on slower machines then it is recommended that you add <a
+    href="command.htm#FrameDurationMinimum">-y 50</a> (or a similar number) to the command
+    line while recording to slow down your machine. We also recommend if you are 
+  making a demo that will run on slower computers to switch to a lower screen 
+  resolution before recording it (e.g. 800x600).</font></li>
+  <li><span lang="en-gb"><font face="Comic Sans MS">If your demo includes your 
+  own sounds or pictures then enable
+  <a href="ttini.htm#IncludeMediaInTimeTravelArchives">
+  IncludeMediaInTimeTravelArchives</a> so that the media files are included in 
+  the DMO file.</font></span></li>
+  <li><font face="Comic Sans MS">If your demo works only in a particular version 
+  of ToonTalk then if you add the ToonTalk executable (e.g. TT345.exe) to the 
+  DMO file ToonTalk will use this version when replaying the demo. Note that 
+  this will not work if the EXE is a later version than was installed and other 
+  files are needed to run this version.</font></li>
+  <li><font face="Comic Sans MS">If you have a script (e.g. the subtitles) 
+  before recording the time travel session you can see the subtitles while 
+  recording. To do so, place a copy of the script in the Demos subdirectory of 
+  the ToonTalk installation and name it time_travel.ust (or UKT etc.). Record a 
+  few seconds and exit ToonTalk. Then when you come back you'll see the 
+  subtitles. To enable this feature add SubtitlesAndNarrationEvenWithoutDemo=1 
+  to the Switches section of toontalk.ini.</font></li>
+  <li>
+
+<font face="Comic Sans MS">
+
+  If your demo includes Marty speaking then don't have Marty use subtitles 
+  since then they can't be added to the demo as well. The talk balloon is a good 
+  alternative (with or without text-to-speech).</font></li>
+  <li><font face="Comic Sans MS">You can create a video or animation of a demo by creating
+    series of <a href="scrnshot.htm">screen snapshots</a>.</font></li>
+</ul>
+
+<p><font face="Comic Sans MS" color="#FF0000"><b>Warning: This
+documentation applies to  </b></font><b>
+<font face="Comic Sans MS" color="#FF0000">version 3 (internal release 3.45 or Beta 42 or 
+later). Older versions can make <a href="make_dmo.htm">demos without time travel</a>.</font></b></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Customizing your ToonTalk Installation</title>
+</head>
+
+<body link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Old ToonTalk Installation
+Customizations</b></font></p>
+
+<p><font size="4" face="Comic Sans MS"><strong><i>ADVANCED USERS ONLY.</i></strong></font></p>
+
+<p><strong><i><font face="Comic Sans MS" size="4">
+<span style="background-color: #FF0000">These options are either for older 
+versions of ToonTalk or are no longer recommended.</span> The current options 
+are documented <a href="ttini.htm">here</a>.</font></i></strong></p>
+
+<p><font size="3" face="Comic Sans MS">You may edit the toontalk.ini file to customize
+ToonTalk. Beginning with version 2.52 and Beta 35 you'll find it in the ToonTalk
+subdirectory of &quot;My Documents&quot;. Earlier versions of ToonTalk stored it in your
+Windows directory. You can find out which version of ToonTalk you have by looking at the
+opening screen. Additional options are available for making a <a href="instlini.htm">custom 
+installation disk.</a></font><ul>
+  <li><font size="3" face="Comic Sans MS"><b>AutoDemoMaxIdle</b>. Value is number of seconds
+    to wait before restarting demos when running -autodemo 1 or 2. </font></li>
+  <li><a name="GeneralTextToSpeechEngine"><font face="Comic Sans MS"><strong>GeneralTextToSpeechEngine</strong>.
+    If its value is 1, then ToonTalk assumes that the text-to-speech engine can speak any
+    utterance. With the built-in engine for Marty if you set this to 1, you'll hear Marty
+    spelling many words he doesn't know how to say.</font></a></li>
+  <li></il></il><font size="3" face="Comic Sans MS"><a name="ClippingDir"><strong>ClippingDir</strong></a>.
+    If ClippingDir=&lt;a directory name&gt; is set in the Directories section of the
+    toontalk.ini file then when ToonTalk puts something on the clipboard it also puts a copy
+    in a file in ClippingDir with the users name (or if a city was put on the clipboard the
+    users name followed by &quot;_city&quot;). This directory can be the desktop or a
+    networked directory to simplify sharing. Or it can be set to &quot;a:&quot; to make it
+    easier to give someone a floppy with a copy of clipboard encoding.</font></li>
+  <li><font face="Comic Sans MS"><a name="FileSearchPath"><strong>FileSearchPath</strong></a>.
+    When ToonTalk is looking for a file (e.g. a user's BMP file for a picture or WAV file for
+    a sound), it looks in the Users subdirectory of ToonTalk (unless overridden by <a
+    href="#UserFiles">UserFiles</a>). If it can't find a file there, it will search the
+    directories listed in the FileSearchPath. FileSearchPath is a list of directories
+    separated by commas. Each directory can be a full file path (e.g. c:\toontalk\pictures), a
+    URL (e.g. http://www.toontalk.com/temp), or a relative path where * stands for the
+    Users\&lt;user name&gt; directory so for a user named Sue with ToonTalk installed in the
+    default location will be c:\program files\animated programs\toontalk\users\sue. For
+    example, &quot;*\..\..\extra_sounds&quot; specifies a user defined directory named
+    &quot;extra_sounds&quot; that is a direct subdirectory of the main ToonTalk directory.</font></li>
+  <li><font face="Comic Sans MS"><a name="SecondaryFileSearchPath"><strong>SecondaryFileSearchPath</strong></a>.
+    This has the same meaning as the FileSearchPath but these directories are searched only if
+    the directories specified by the FileSearchPath fail to contain the required files. This
+    is particularly useful for <a href="localini.htm">local INI files</a>. This entry is
+    operational in Beta 26 or version 2.34 or later.</font></li>
+  <li><font face="Comic Sans MS"><a name="URLCacheDir"><strong>URLCacheDir</strong>.</a> If
+    URLCacheDir=&lt;a directory name&gt; in the Directories section of the toontalk.ini file,
+    then when URLs are read they are cached in the specified directory. Used in conjunction
+    with FileSearchPath, you can post media needed by games or other ToonTalk applications on
+    the web and they are copied to a the URLCacheDir as needed. If this isn't set then the
+    system Internet file cache is used. This has the advantage and disadvantage that files are
+    automatically deleted when old and space is needed. Requires Beta 23 or version 2.09 or
+    later.</font></li>
+  <li><font face="Comic Sans MS"><strong>MissingBuiltinPictureFileExtension</strong>. If this
+    is set in the FileExtensions section of toontalk.ini then files with this extension will
+    be used if BackgroundsDir or BuiltinPictureDir is set. Typical values are GIF, PNG, or
+    JPG. Requires Beta 33 or 2.40 or later.</font></li>
+  <li><font face="Comic Sans MS"><strong>MissingBuiltinPictureFileExtensionIf8Bit</strong>. If
+    this is set in the FileExtensions section of toontalk.ini and you are running ToonTalk
+    with 256 colors then files with this extension will be used if BuiltinPictureDirIf8Bit,
+    BuiltinPictureDir, or BackgroundsDir is set. Typical values are GIF, PNG, or JPG. Requires
+    Beta 35 or 2.52 or later.</font></li>
+  <font
+    face="Comic Sans MS">
+</ul>
+
+<p align="center"><small><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></small></p>
+</font>
+  </body>
+</html>

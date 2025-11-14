@@ -1,0 +1,39 @@
+<HTML>
+   <HEAD>
+      <TITLE>ToonTalk Paused</TITLE>
+      <META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+      <LINK href="../dialog.css" type="text/css" rel="stylesheet">
+         <script language="javascript" id="clientEventHandlersJS">
+<!--
+// Translators: please translate the following 
+var ToonTalkStopped = "ToonTalk has been stopped.";
+
+function sendBack(which_button) {
+    window.returnValue = which_button; 
+    window.close();
+}
+
+//-->
+         </script>
+   </HEAD>
+   <BODY>
+      <P align="center"><script>
+if (window.dialogArguments == "") {
+   document.writeln(ToonTalkStopped); // needs to be translated (or pass in from ToonTalk)
+} else {
+   document.writeln(window.dialogArguments);
+};
+         </script></P>
+      <P align="center">
+         <TABLE id="Table1" height="0" cellSpacing="1" cellPadding="1" width="300" border="0">
+            <TR>
+               <TD><INPUT onclick="sendBack('1')" type="button" value="Back to ToonTalk" name="Button1"></TD>
+               <TD>
+                  <INPUT onclick="sendBack('2')" type="button" value="Come Back Later" name="Button2"></TD>
+               <TD>
+                  <INPUT onclick="sendBack('3')" type="button" value="Leave ToonTalk" name="Button3"></TD>
+            </TR>
+         </TABLE>
+      </P>
+   </BODY>
+</HTML>

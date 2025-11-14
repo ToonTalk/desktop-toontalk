@@ -1,0 +1,175 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Customizing the Installation of ToonTalk</title>
+</head>
+
+<body link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>ToonTalk Installation
+Customizations</b></font></p>
+
+<p><font size="4" face="Comic Sans MS"><strong><i>ADVANCED USERS ONLY.</i></strong></font></p>
+
+<p><strong style="font-weight: 400"><font face="Comic Sans MS">Beginning with 
+the ToonTalk 3.62 installer it is possible to generate a custom installer. This 
+customized installer can, for example, be copied to a CD-ROM to install in a 
+school or museum with settings that differ from the ToonTalk defaults. The 
+CD-ROM (or equivalent installation media) should contain at least two folders:</font></strong></p>
+
+<p><strong style="font-weight: 400"><font face="Comic Sans MS">ToonTalk -- These 
+are the files that are copied to the ToonTalk installation folder. Or if 
+MinimalInstall is enabled these are read from the CD-ROM when ToonTalk is 
+launched. Beginning with version 3.68 this directory can be zipped. To do so 
+place ToonTalk .zip at the top level of the CD-ROM. Note that you can have both 
+a directory and a zipped directory. In case of conflicts, files with the later 
+creation date will be installed.</font></strong></p>
+
+<p><strong style="font-weight: 400"><font face="Comic Sans MS">MyDocsTT -- These 
+are files that are copied to the ToonTalk users folder (typically the ToonTalk 
+folder in My Documents). Beginning with version 3.68 this directory can be 
+zipped. To do so place MyDocsTT .zip at the top level of the CD-ROM.</font></strong></p>
+
+<p><strong style="font-weight: 400"><font face="Comic Sans MS">AllInstl.ini -- 
+This file contains <a href="ttini.htm">ini file options</a> that all 
+installations should have. Note that this will change settings of existing 
+installations when installed. This file is at the top-level of the CD-ROM.</font></strong></p>
+
+<p><strong style="font-weight: 400"><font face="Comic Sans MS">NewInstl.ini -- 
+This file also contains ini file options but they only apply to subsequent 
+installations. These settings do not override any options set in an earlier 
+installation. This file is at the top-level of the CD-ROM.</font></strong></p>
+
+<p><strong style="font-weight: 400"><font face="Comic Sans MS">The AllInstl.ini 
+file also contains a new &quot;Install&quot; section that supports the following new 
+options that apply at installation time:</font></strong></p>
+
+<ul>
+  <li><p><b><font face="Comic Sans MS">MinimalInstall</font></b><font size="3" face="Comic Sans MS">. 
+  ToonTalk can be installed completely to the hard drive so the CD-ROM is only 
+  needed during installation (a setting of 0). Or nearly all the needed files 
+  can be left on the CD-ROM (a setting of 1). A setting of 2 asks during 
+  installation which option is preferred. 0 is the default. (Note in 3.62 this 
+  is not fully debugged.)</font></p></li>
+  <li><p><b><font face="Comic Sans MS">AskFullInstall</font></b><font size="3" face="Comic Sans MS">. 
+  This text is displayed in a dialog box if <b>MinimalInstall</b> is set to 2. A 
+  typical setting is &quot;</font><font face="Comic Sans MS">Do you want me to put 
+  all the ToonTalk files on your hard disk? If you answer no, then ToonTalk will 
+  be slower at first and require the CD-ROM to run but very little disk space 
+  will be used. If you choose to leave files on the CD-ROM you can run this 
+  installer again to change your decision.</font><font size="3" face="Comic Sans MS">&quot;.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">AddShortcutOnDesktop</font></b><font size="3" face="Comic Sans MS">. 
+  If this is set to 1 the installer creates a shortcut on the Desktop to launch 
+  ToonTalk.&nbsp; If set to 0 then no shortcut is created and the Start Menu 
+  must be used. A setting of 2 asks during installation which option is 
+  preferred. 1 is the default.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">AskAddShortcutOnDesktop</font></b><font size="3" face="Comic Sans MS">. 
+  This text is displayed in a dialog box if </font><b>
+  <font face="Comic Sans MS">AddShortcutOnDesktop</font></b><font size="3" face="Comic Sans MS">is 
+  set to 2. A 
+  typical setting is &quot;</font><font face="Comic Sans MS">Do you want me to add a 
+  ToonTalk icon to your desktop?</font><font size="3" face="Comic Sans MS">&quot;.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>ToonTalk32</b>. This option sets the default 
+  ToonTalk executable. A typical setting is TT361. Note that this also sets the 
+  corresponding option in the Executables section of toontalk.ini.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>DemoToonTalk32</b>. This option sets the 
+  default ToonTalk executable when running a demo. If this is not set then the 
+  value of <b>ToonTalk32 is used</b>. Note that this also sets the corresponding 
+  option in the Executables section of toontalk.ini.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>CommandLine</b>. If set this command line 
+  will be interpreted when the installer finishes. The WebLabs Project, for 
+  example, sets this option to &quot;-next_dialog wlab_ini.htm&quot; in order to ask the 
+  installer about new options defined by the HTML dialog file named wlab_ini.htm. 
+  This file is found in the language specific sub folder of the ToonTalk\Doc 
+  folder.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>Launch1</b>. If set this should specify an 
+  executable to launch from the CD-ROM. The file name should not include the 
+  device name since that depends upon the target computer. E.g. Launch1=\install\voices\samvoice.exe 
+  launches an EXE that installs a voice.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>Launch1CommandLine</b>. If set this text is 
+  passed as a command line to the EXE specified by <b>Launch1.</b></font></p></li>
+  <li><p><font face="Comic Sans MS"><b>Launch1Message</b>. If set this text is 
+  displayed in a dialog box before running the EXE specified by <b>Launch1.</b></font></p></li>
+  <li><p><font face="Comic Sans MS"><b>Launch2. </b>There can be any number of EXEs 
+  to launch. Each must be specified as 1 more than the previous launch.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">UninstallTitle</font></b><font size="3" face="Comic Sans MS">. 
+  This text is displayed on the Start Menu item for uninstalling ToonTalk. A 
+  typical setting is &quot;Remove ToonTalk 3.61 from My Computer&quot;.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">InstallTTFilesText</font></b><font size="3" face="Comic Sans MS">. 
+  This text is displayed while the installer is copying ToonTalk files. A 
+  typical setting is &quot;Copying ToonTalk files&quot;.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">InstallUserFilesText</font></b><font size="3" face="Comic Sans MS">. 
+  This text is displayed while the installer is copying ToonTalk user files 
+  (e.g. those of the <a href="defuser.htm">default user</a>). A 
+  typical setting is &quot;Copying ToonTalk user files&quot;.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>ProductVersion</b>. A typical setting is 
+  42.361.003 which means that it is version 3.61 (or beta 42) and the third 
+  version.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>MainTitle</b>. Displayed when installing. A 
+  typical setting is &quot;Installing WebLabs ToonTalk Version 3.61 ... &quot;.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>TitleCaptionBar</b>. Displayed on the title 
+  bar of the installer window. A typical setting is &quot;WebLabs ToonTalk Version 3.61 Setup&quot;.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>UninstallKey</b>. Displayed by the 
+  uninstaller. A typical setting is &quot;WebLabs ToonTalk Version 3.61&quot;.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>UninstallLogFileName</b>. The file name in 
+  the ToonTalk installation folder where uninstall information is kept. This 
+  value should be different for every installation version. A typical setting is 
+  &quot;unins361.isu&quot;.</font></p></li>
+  <li><p><b><font face="Comic Sans MS">DisplayLicense</font></b><font face="Comic Sans MS">. 
+  If set to 0 then the installer doesn't bother with the licensing screens.</font></p></li>
+  <li><p><font face="Comic Sans MS"><b>UnZipMessage</b>. Displayed if the ToonTalk 
+  folder or MyDocsTT folder are replaced with a Zip file. A typical value is 
+  &quot;Please wait while files are being extracted...&quot;.</font></p></li>
+</ul>
+
+
+  <font
+    face="Comic Sans MS">
+
+<p id="DontRead" align="center"><small>
+<a href="toontalk.htm" style="color: blue; text-decoration: underline; text-underline: single">home</a> | 
+<a href="search.htm" style="color: blue; text-decoration: underline; text-underline: single">search</a> | 
+<a href="buy.htm" style="color: blue; text-decoration: underline; text-underline: single">purchase</a> | 
+<a href="doc.htm" style="color: blue; text-decoration: underline; text-underline: single">manual</a>
+| 
+<a href="whatsnew.htm" style="color: blue; text-decoration: underline; text-underline: single">news</a> | 
+<a href="infodesk.htm" style="color: blue; text-decoration: underline; text-underline: single">info</a> | 
+<a href="games.htm" style="color: blue; text-decoration: underline; text-underline: single">games</a>
+| 
+<a href="faq.htm" style="color: blue; text-decoration: underline; text-underline: single">faq</a> | 
+<a href="support.htm" style="color: blue; text-decoration: underline; text-underline: single">support</a> | 
+<a href="free.htm" style="color: blue; text-decoration: underline; text-underline: single">downloads</a>
+| 
+<a href="endorse.htm" style="color: blue; text-decoration: underline; text-underline: single">endorsements</a> | 
+<a href="press.htm" style="color: blue; text-decoration: underline; text-underline: single">press</a> | 
+<a href="address.htm" style="color: blue; text-decoration: underline; text-underline: single">contact us</a></small></p>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>&nbsp;</b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p align="center">&nbsp;</p>
+</font>
+</body>
+</html>

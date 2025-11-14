@@ -1,0 +1,3254 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>History of ToonTalk Enhancements and Bug Fixes - 2004</title>
+</head>
+
+<body>
+
+<p align="center"><big><font face="Comic Sans MS">History of ToonTalk 
+Enhancements and Bug Fixes - 2004</font></p>
+
+<p><font size="3" face="Comic Sans MS">Here is the list of bugs and enhancements in 2004. 
+Similar lists for <a href="bugs96.htm">1996</a>, <a href="bugs97.htm">1997</a>, <a
+href="bugs98.htm">1998</a>, <a href="bugs99.htm">1999</a>, <a href="bugs00.htm">2000</a>, <a href="bugs01.htm">
+2001</a>, <a href="bugs02.htm">2002</a>, <a href="bugs03.htm">2003</a>, </font><big><font size="3" face="Comic Sans MS">
+<a href="bugs05.htm">2005</a>, and </font>
+<big><font size="3" face="Comic Sans MS">
+<a href="bugs06.htm">2006</a> </font>
+</big>
+</big><font size="3" face="Comic Sans MS">are available as well.</font><font size="3"></p>
+
+<p><font face="Comic Sans MS">5/1</font></p>
+
+<ol>
+  <li><font face="Comic Sans MS">If a nest is put on the clipboard without its 
+  bird, then when loaded into a ToonTalk with its bird the connection between 
+  them is re-established and the bird will find the nest.</font></li>
+  <li><font face="Comic Sans MS">Fixed memory leaks that occurred when nests 
+  were copied.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug that occurred when saving a nest 
+  that had been copied and saved without its bird.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/1</font></p>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed another memory leak when nests are 
+  destroyed.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug introduced on 11/12 that caused 
+  robots to find the wrong page of a user notebook (i.e. didn't apply to the 
+  built-in notebooks). This broke the portal mechanism in the Playground 
+  Adventure Game.</font></li>
+  <li><font face="Comic Sans MS">Released 3.39XX (very experimental).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Currently if you try to compute the log of a 
+  number greater what will fit in a 64-bit floating point number (about 300 
+  digits) you get an error message saying the operation failed. The message 
+  incorrectly referred to another operation.</font></li>
+</ol>
+<p><font face="Comic Sans MS">10/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recently introduced problem replaying 
+  demos (DMO files) that start with the user notebook that has been changed from 
+  the initial default. </font></li>
+</ol>
+<p><font face="Comic Sans MS">11/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed some other recently introduced bugs in 
+  replaying non-time-travel demos.</font></li>
+  <li><font face="Comic Sans MS">The new arrangement for non-time-travel demo 
+  files is that they are zipped, named demoXXX.dmo and contain a logXXXXXX.dmo 
+  file. The replay_logs.zip file is no longer created.</font></li>
+</ol>
+<p><font face="Comic Sans MS">12/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">If you dropped a nest on a notebook and left 
+  the page open, then birds would try to deliver things to the nest despite the 
+  fact it was in the notebook.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug that could lead to an infinite 
+  recursion and use up available memory when saving an object containing a nest 
+  without its bird.</font></li>
+  <li><font face="Comic Sans MS">If you drop a box next to a box and before 
+  Bammer comes drop something into the hole of the box underneath then Marty 
+  appeared and said confusing things.</font></li>
+  <li><font face="Comic Sans MS">If a box is given to a robot that is missing 
+  something the robot expects in his thought bubble the robot waits for the 
+  programmer to put something in the hole. If while the robot was waiting the 
+  city was saved and restored (either directly or via time travel) then the 
+  robot no longer noticed when the hole was filled.</font></li>
+  <li><font face="Comic Sans MS">Fixed a performance problem that occurred when 
+  many objects were destroyed at the same time.</font></li>
+  <li><font face="Comic Sans MS">If the city of the
+  <a href="ttini.htm#DefaultUser">DefaultUser</a> was saved while some animation 
+  was going on then when starting ToonTalk the animation had an incorrect 
+  geometry and timing.</font></li>
+</ol>
+<p><font face="Comic Sans MS">13/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem introduced on 5/1 where 
+  sometimes if a bird/nest pair is saved the connection was lost.</font></li>
+  <li><font face="Comic Sans MS">Fixed several minor memory leaks.</font></li>
+  <li><font face="Comic Sans MS">Fixed a possibly significant memory leak 
+  involving the pages of a notebook that it is open to when the notebook is 
+  destroyed.</font></li>
+  <li><font face="Comic Sans MS">Fixed a demo and time travel bug where 
+  sometimes the font size of on text pads became very small.</font></li>
+</ol>
+<p><font face="Comic Sans MS">14/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a possibly significant memory leak that 
+  occurred if an object was destroyed while it was busy animating.</font></li>
+  <li><font face="Comic Sans MS">Fixed more minor leaks.</font></li>
+  <li><font face="Comic Sans MS">Robots trained to flip pages of a notebook 
+  didn't always do the right thing when given the notebook of mathematical 
+  operations.</font></li>
+</ol>
+<p><font face="Comic Sans MS">15/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug where a robot was trained to drop 
+  something in hole (or was retrained and originally was trained to drop 
+  something on a bird in a box) that the bird got stuck after one delivery.</font></li>
+</ol>
+<p><font face="Comic Sans MS">16/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recently introduced bug that prevented 
+  a robot from flipping through pages of a notebook while on the screen.</font></li>
+</ol>
+<p><font face="Comic Sans MS">21/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug introduced on 1/5 that interfered 
+  with creating new long-distance birds.</font></li>
+  <li><font face="Comic Sans MS">If a bird is returning to a box where it 
+  started flying from and the programmer has put something in the box, then the 
+  bird flies back and forth waiting for the object to be removed. If while 
+  waiting the user scrolled to another screen ToonTalk crashed.</font></li>
+  <li><font face="Comic Sans MS">Sometimes if a city is saved while robots are 
+  using remote controls for pictures then those pictures were restored with the 
+  wrong geometry.</font></li>
+  <li><font face="Comic Sans MS">If a team of robots with 3 or more members is 
+  running off screen when a city is saved then sometimes they didn't work 
+  correctly when the city was restored.</font></li>
+  <li><font face="Comic Sans MS">Released 3.41X.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">22/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recently introduce bug saving birds and 
+  nests that caused their connection to sometimes be lost.</font></li>
+  <li><font face="Comic Sans MS">A robot who drops a zero-length text pad on an 
+  erased text pad waited forever.</font></li>
+</ol>
+<p><font face="Comic Sans MS">23/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug that caused user sounds in Java 
+  applets to be lost.</font></li>
+</ol>
+<p><font face="Comic Sans MS">24/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Removed a 64K limit on the number of parts the
+  <a href="remote.htm#Parts">parts sensor</a> can detect.</font></li>
+</ol>
+<p><font face="Comic Sans MS">26/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a memory leak involving notebooks 
+  (including sometimes the remote control notebook of pictures).</font></li>
+  <li><font face="Comic Sans MS">Fixed another memory leak involving the 
+  notebook of remote controls when it has been vacuum up (and a remote control 
+  for the looks of the picture is flipped).</font></li>
+</ol>
+<p><font face="Comic Sans MS">27/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a memory leak involving what is on the 
+  left page of a notebook if it has been selected (e.g. pointed to).</font></li>
+</ol>
+<p><font face="Comic Sans MS">30/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug where sometimes a demo log waits 
+  several seconds before starting.</font></li>
+  <li><font face="Comic Sans MS">Demo logs are no longer wasteful by recording 
+  everything while the titles are showing.</font></li>
+  <li><font face="Comic Sans MS">Fixed a minor bug caused sometimes by dropping 
+  a notebook on a notebook.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug replaying a demo or time travel log 
+  that occurred sometimes when a notebook was being added to a notebook.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">31/1</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem where if something is bammed 
+  but obscured by something over it, that it sometimes became invisible for a 
+  while.</font></li>
+  <li><font face="Comic Sans MS">Released 3.44X.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">2/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Undid a change introduced on 23/8/03 that 
+  caused animations to finish instantly if the camera panned (or you scrolled if 
+  you prefer that metaphor). This change fixed a problem where the geometry of 
+  actions came out wrong if panning happened while animating. The geometry is 
+  now correct so no need to finish instantly.</font></li>
+  <li><font face="Comic Sans MS">If a bird on the floor is given something she 
+  returned to the same screen (or camera) coordinates. Now she returns to the 
+  same floor coordinates. These are identical if no panning occurs while she is 
+  flying.</font></li>
+  <li><font face="Comic Sans MS">Fixed a time travel bug where the random number 
+  sensor behaved differently when replaying the past.</font></li>
+</ol>
+<p><font face="Comic Sans MS">3/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug that occurred if a city was saved 
+  while a house was exploding or if a time travel segment boundary occurred 
+  while a house was exploding.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug in time travel when Marty is giving 
+  help about things inside of Tooly.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug in time travel that sometimes 
+  caused a tool to be picked up during replay when a button on the tool was 
+  pressed while recording.</font></li>
+  <li><font face="Comic Sans MS">Introduced a new toontallk.ini option
+  <a href="ttini.htm#DontScrollOnFloor">DontScrollOnFloor </a>that makes the 
+  floor the same size as the screen so scrolling or panning is disabled. This is 
+  the way the puzzle game works - now it is an option in Free Play.</font></li>
+</ol>
+<p><font face="Comic Sans MS">4/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when replaying a time travel log the 
+  size of Marty's talk balloons were wrong.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where sometimes during time travel 
+  some objects animate strangely. For example, if you are holding Dusty 
+  sometimes he would switch to his &quot;inert&quot; form.</font></li>
+</ol>
+<p><font face="Comic Sans MS">5/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Tooly would sometimes get into a slightly 
+  incorrect state during time travel.</font></li>
+  <li><font face="Comic Sans MS">Time travel would sometimes cut off Marty in 
+  mid-sentence.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug in time travel caused by changing 
+  the main notebook and traveling back in time.</font></li>
+  <li><font face="Comic Sans MS">Sometimes a freshly trained robot would receive 
+  the wrong generated name during time travel playback.</font></li>
+</ol>
+<p><font face="Comic Sans MS">6/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem in time travel that occurred 
+  when a time travel segment boundary happened while something was falling onto 
+  a notebook page.</font></li>
+  <li><font face="Comic Sans MS">Reduced the amount of memory ToonTalk objects 
+  need to function by a few percent.</font></li>
+  <li><font face="Comic Sans MS">Fixed another time travel bug related to Tooly.</font></li>
+  <li><font face="Comic Sans MS">Fixed a bug that broke puzzle 44 (only if 
+  puzzle 43 was done - not if you jumped to puzzle 44). Generally any puzzles 
+  following a puzzle that required a covered nest as a solution could trigger 
+  this.</font></li>
+  <li><font face="Comic Sans MS">Released 3.45X.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug recently introduced when playing 
+  back a time travel log that involves adding things to the main notebook.</font></li>
+  <li><font face="Comic Sans MS">Fixed bugs in creating and replaying narrated 
+  demos (those not based upon time travel).</font></li>
+  <li><font face="Comic Sans MS">Fixed a performance bug that slowed down time 
+  travel replay at segment boundaries.</font></li>
+  <li><font face="Comic Sans MS">After you save something to a file, you now see 
+  a new dialog screen. It offers to show you the directory where your file was 
+  saved. Furthermore, the file is now created in a subdirectory called Programs 
+  of your user directory.</font></li>
+  <li></font><font size="3" face="Comic Sans MS">Released 3.46X.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS" size="3">11/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug combining multiple user 
+  media file names from different pages of the same notebook to determine what 
+  media files the entire notebook requires.</font></li>
+  <li><font face="Comic Sans MS" size="3">Since 3/2 the default value for the 
+  new toontalk.ini switch <a href="ttini.htm#DontScrollOnFloor">
+  DontScrollOnFloor</a> was set to 1.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk no longer leaves temporary 
+  copies of the snapshot when saving something to a file. The snapshot file is 
+  still inside the TT file and can be extracted by any unzip utility.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">12/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the timing accuracy of 
+  replaying subtitles or narration during time travel.</font></li>
+  <li><font face="Comic Sans MS" size="3">The message &quot;&lt;file name&gt; saved&quot; can 
+  now be generated in languages which have the file name last.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with sensors of a 
+  picture that has been bammed and then unbammed.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">13/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Demos and time travel can now deal 
+  with control-c of a file name in the Explorer followed by a control-v in 
+  ToonTalk.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Demos and time travel can now 
+  deal with the drag and drop of files into ToonTalk.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">The
+  <a href="sensor.htm#Milliseconds since Last Frame">milliseconds since last 
+  cycle sensor</a> in demos and time travel now works correctly if you pause 
+  ToonTalk and resume it after more than 65 seconds.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the accuracy of the relative 
+  time display when replaying someone else's time travel logs.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the handling while recording 
+  time travel of hitting of Pause followed by Play.</font></li>
+  <li><font face="Comic Sans MS" size="3">No longer sometimes repeat the same 
+  trouble shooting advice multiple times.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where time travel 
+  became confused after double Pause and then resume.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">14/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">When external files are imported into 
+  ToonTalk (e.g. by drag and drop) then a copy of the files is kept inside the 
+  time travel logs so they can be replayed even if that imported file no longer 
+  exists or is on another computer.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem if time travel 
+  recording was paused and then jumped to a different segment and play was 
+  pressed.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem (and unfortunately 
+  introduced a bug that was fixed 19/3) that occurred when adding to the end of 
+  a time travel archive.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">15/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">ToonTalk now recovers better from 
+  errors while replaying demos or time travel logs.</font></li>
+  <li><font face="Comic Sans MS" size="3">When a time travel demo has been 
+  replayed to the end you now the time travel buttons so you can add to the end, 
+  replay, or quit. Previously it just started adding to the end.</font></li>
+  <li><font face="Comic Sans MS" size="3">Demos now include a copy of the 
+  initial state of the main notebook.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel bug that occurred 
+  if you start a demo with the helicopter landing and then go back to a time 
+  when you are on the floor.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where occasionally 
+  ToonTalk wouldn't start because it thought ToonTalk was already running.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug that could cause errors 
+  while ToonTalk is exiting.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug creating a new time line 
+  while time travelling (recording while &quot;in the past&quot;). The change also means 
+  that making a new time line far into the past may take a long time but 
+  changing the recent past will be faster.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">16/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the handling of demos and 
+  time travel where the main notebook is altered.</font></li>
+  <li><font face="Comic Sans MS" size="3">A running robot now always ignores 
+  things dropped on him (previously it depended upon the exact details as to 
+  whether it would be ignored or cause confusion).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel bug caused by 
+  jumping to a segment where Marty is talking.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel bug sometimes 
+  caused by jumping to a segment where a bird is flying.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">17/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem using the
+  <a href="command.htm#OutputLog">-o</a> command line option to explicitly name 
+  the newly created demo file.</font></li>
+  <li><font face="Comic Sans MS" size="3">Demos created with </font><big>
+  <font face="Comic Sans MS" size="3">the <a href="command.htm#OutputLog">-o</a> 
+  command line option by default now end up in the Demos subfolder of the user's 
+  ToonTalk folder.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem creating a narrated 
+  demo using a subtitle file.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed another problem replaying 
+  narrated or subtitled demos where ToonTalk was paused during the recording.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sometimes the 
+  narration was stopped while replaying a demo.</font></li>
+  <li><font face="Comic Sans MS" size="3">Introduced a new toontalk.ini Switch 
+  called <a href="ttini.htm#KeepSavingScreenShots">KeepSavingScreenShots</a> 
+  that is handy for making a video from a ToonTalk demo.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">18/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where a robot didn't work 
+  correctly if trained to use the magic wand to copy something from a notebook 
+  page (rather than just pick up an automatically generated copy).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem replaying a demo where 
+  a user sound file was pasted into ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the handling of keyboard 
+  events to infinite stacks (e.g. in Tooly). Further improved on 24/3.</font></li>
+  <li><font face="Comic Sans MS" size="3">Generalized the way sounds respond to 
+  keyboard events to act like text pads. In particular you can now edit a 
+  text-to-speech sound by typing.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where ToonTalk forgot 
+  the original name of an imported sound file.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the handling of sound files 
+  dragged into ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">Removed some redundant computation 
+  that occurred while importing a sound file.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the location of newly copied 
+  items using the Magic Wand.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">19/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the accuracy of the timing of 
+  replaying demos. Many errors of less than a millisecond could accumulate to 
+  enough to cause subtitles or narration to get out of synch.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug when dividing an integer 
+  that was internally represented with more than 32 bits when divided by a 32 
+  bit integer produced 0 as the result.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">20/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug restoring a city that had 
+  been saved with the power off. Also affected time travel when power was off.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling if running 
+  a demo created by a later version of ToonTalk.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">21/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the replay of demos that had 
+  been paused while recording.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the display of a number in a 
+  box that had been flipped over and restored when rubout is typed to it.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the display of a number if 
+  its remote looks is typed to.</font></li>
+  <li><font face="Comic Sans MS" size="3">Since it can take quite a while to 
+  create a new time line by recording somewhere in the middle of time archive, 
+  the cursor now turns into an hourglass.</font></li>
+  <li><font face="Comic Sans MS" size="3">If something goes wrong while 
+  replaying a time travel segment ToonTalk skips to the next segment. It now 
+  also plays a &quot;plop&quot; sound to signal the replay isn't proceeding flawlessly.</font></li>
+  <li><font face="Comic Sans MS" size="3">If while recording time travel you 
+  click on Pause twice you get a dialog screen. Returning from that dialog 
+  screen used to return you to recording but now you return to the time travel 
+  interface so you can choose to do other things than continue recording.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the response if replaying a 
+  time travel log and a button other than the pause button is clicked.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">22/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a robot loads a truck and the city 
+  is full, the robot used to stop and Marty reported the problem. The truck now 
+  drives off and searches for a lot to become empty.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Fixed another problem replaying 
+  narrated or subtitled demos where ToonTalk was paused during the recording.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">24/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a memory leak related to pages 
+  in a notebook.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sped up the time to exit from 
+  ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem keeping track of user 
+  media files in notebooks where pages contain multiple user media files.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">25/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem in non-English 
+  versions of copying and pasting the mathematical operations that require more 
+  than one character (e.g. &quot;sine&quot; and &quot;denominator&quot;).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sensors that 
+  display words (e.g. &quot;yes&quot; and &quot;no&quot;) lost track of which natural language to 
+  use sometimes if added to a notebook.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem that caused Marty to 
+  say &quot;last key pressedIf you pick&quot; without a space between &quot;pressed&quot; and &quot;if&quot;.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes spurious warnings about 
+  something being destroyed twice were caused by destroying a picture when its 
+  notebook of remote controls was on the floor.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">26/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug caused by training a robot 
+  with a box containing copies of the same nest.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Fixed a bug caused by training a 
+  robot with a box containing </font></big><font face="Comic Sans MS" size="3">a 
+  bird and her nest.</font></li>
+  <li><font face="Comic Sans MS" size="3">The feedback you get when holding 
+  something over something else often did not correspond to what happened if the 
+  item was dropped. Now they should always be identical.</font></li>
+  <li><font face="Comic Sans MS" size="3">The remote looks of a picture when in 
+  the thought bubble of a robot is converted to an ordinary picture. This didn't 
+  happen if you sucked the box out of a robot's thought bubble and put a remote 
+  control for the looks of a picture in the box and put the box back in the 
+  thought bubble.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a major memory leak that 
+  occurred on computers with too little memory to hold all the graphical objects 
+  (less than 256MB with a moderate screen resolution). Also pausing and resuming 
+  many times in the same session caused this. And importing a very large picture 
+  (several MB) caused this. Another part of this leak was fixed on 28/2.</font></li>
+  <li><font face="Comic Sans MS" size="3">If an erased user picture is imported 
+  to another computer where the saved the media files are not available and 
+  hadn't been saved with the object, then it became an erased text pad.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">27/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Implemented a new toontalk.ini Switch
+  <a href="ttini.htm#SaveMediaInMainNotebook">SaveMediaInMainNotebook</a> that 
+  should be used if a user (or a default user) is to be moved to another 
+  computer.</font></li>
+  <li><font face="Comic Sans MS" size="3">Eliminated spurious warnings if a tool 
+  is dropped on an erased notebook.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a notebook is open to page with a 
+  picture with sensors on the back and the notebook is copied and one copy is 
+  vacuumed up then sometimes the sensors became blank.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">28/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Demos where more than 64K events 
+  happen within one cycle (probably has yet to happen) will now replay 
+  correctly.</font></li>
+  <li><font face="Comic Sans MS" size="3">The format of demos was changed for 
+  robustness and so that errors can be recovered from. Note this means that 
+  demos created with 3.55 or later are not likely to run correctly in older 
+  versions of ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">When replaying a demo or time travel 
+  of the dragging or pasting of multiple files into ToonTalk the resulting box 
+  was not the right size.</font></li>
+  <li><font face="Comic Sans MS" size="3">Eliminated some problems in time 
+  travel related to changes in the main notebook.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when text pads have been 
+  placed on a decoration sensor (wall, roof, or house) it switched back from See 
+  Some to See All so the background pad became visible.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sometimes the 
+  decoration sensors didn't fit in a box hole correctly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes the roof or house decoration 
+  wasn't updated correctly and multiple copies of decoration appeared on top. 
+  And the placement of the copies was not correct.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where notebooks 
+  containing user media that were placed in the main notebook lost track of 
+  media files needed for export.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the geometry of text pads 
+  that are picked up from Tooly and immediately typed to (before they have 
+  become a good size).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed another part of the leak 
+  discovered on 26/2.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with saving and 
+  restoring a picture that is missing its file.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">29/2</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes when rerecording during time 
+  travel the first new segment lasted too long.</font></li>
+  <li><font face="Comic Sans MS" size="3">If the time travel archive is missing 
+  the most recent version of the city (due to a crash or abnormal exit), 
+  ToonTalk now starts with the most recent log segment.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a city was saved or a time travel 
+  segment ended while houses were exploding then on replay the houses didn't 
+  explode properly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the drop feedback on boxes.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug processing </font><big><big>
+  <font face="Comic Sans MS" size="3">the <a href="command.htm#OutputLog">-o</a> 
+  command line option if the file name is quoted (typically because it contains 
+  spaces).</font></big></big></li>
+   <li><font face="Comic Sans MS" size="3">Fixed a bug processing </font><big><big>
+  <font face="Comic Sans MS" size="3">the <a href="command.htm#OutputLog">-o</a> 
+  command line option if the file name is </font></big></big>
+  <font face="Comic Sans MS" size="3">ended with DMO.</font></li>
+   <li><font face="Comic Sans MS" size="3">Numbers sometimes displayed drop 
+   feedback when something is held over them that can't be dropped on a number.</font></li>
+   <li><font face="Comic Sans MS" size="3">Sensors that expect text pads to be 
+   dropped on them now give drop feedback only if a text pad is held over them.</font></li>
+   <li><font face="Comic Sans MS" size="3">Improved drop feedback for notebooks.</font></li>
+   <li><font face="Comic Sans MS" size="3">You can now return an empty notebook 
+   back to a stack (e.g. the stack of empty notebooks in the main notebook).</font></li>
+   <li><font face="Comic Sans MS" size="3">Made additional drop feedback 
+   improvements.</font></li>
+   <li><font face="Comic Sans MS" size="3">Fixed a bug that was triggered by 
+   landing on the water. This can be done by almost landing and then moving the 
+   helicopter to towards the water.</font></li>
+   <li><font face="Comic Sans MS" size="3">If you suck a box out of a robot's 
+   thought bubble then you can either put a box back (typically after editing 
+   the box that was sucked out) or give it the robot for retraining. The drop 
+   feedback now indicates which will happen (depending upon whether the box is 
+   held over the robot or thought bubble).</font></li>
+   <li><font face="Comic Sans MS" size="3">Sometimes while exiting ToonTalk 
+   after running in full-screen mode, a dialog appeared but it was underneath 
+   the current window.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS" size="3">1/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a recently introduced bug that 
+  sometimes prevented dropping a box on a robot on the back of a picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug creating a new branch of 
+  the current time line.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug generating unique internal 
+  file names.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">2/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Replaced the 3.1 version of the 
+  multiple precision arithmetic package (GMP) with the 4.1 version. Is reported 
+  to be more robust and a workaround to a division bug that doubled the cost of 
+  division is no longer used.</font></li>
+  <li><font face="Comic Sans MS" size="3">Changed the default value of the 
+  toontalk.ini Switch <a href="ttini.htm#MovementSelectionFeedback">
+  MovementSelectionFeedback</a> from 1 to 2 pixels since this makes the wiggle 
+  feedback easier to notice.</font></li>
+  <li><font face="Comic Sans MS" size="3">The <a href="command.htm#InputLog">-I 
+  command line option</a> now accepts relative file paths. E.g. UK\intro_v2 to 
+  indicate the intro_v2.dmo file in the UK subfolder of the ToonTalk Demos 
+  folder.</font></li>
+  <li><font face="Comic Sans MS" size="3">Implemented a new toontalk.ini Switch
+  <a href="ttini.htm#MakeCurrentExeDefault">MakeCurrentExeDefault</a> so that 
+  you can more easily update which version of ToonTalk should be the default 
+  version.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">3/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the wording of the DLL 
+  foreign bird warning and now support different language versions of the 
+  warning.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a demo or time travel archive 
+  contains a ToonTalk executable (a version guaranteed to be able to run the 
+  demo), then you are now asked if you want to run it.</font></li>
+  <li><font face="Comic Sans MS" size="3">Implemented a new toontalk.ini 
+  Executables option <a href="ttini.htm#UseThisIniFileFirst">UseThisIniFileFirst</a>. 
+  This is useful for administering networked installations on multiple 
+  computers.</font></li>
+  <li><font face="Comic Sans MS" size="3">Implemented a new toontalk.ini 
+  Switches option <a href="ttini.htm#UseLocalIniFilesWhenLoading">
+  UseLocalIniFilesWhenLoading</a>.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">4/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where Marty would 
+  speak nonsense when describing a robot that did something after setting of a 
+  bomb (not clear how such a robot was trained). Fixed a bug in the 2/16 change &quot;</font><font face="Comic Sans MS" size="3">A 
+  running robot now always ignores things dropped on him&quot; that sometimes the 
+  robot didn't ignore things.</font></li>
+  <li><font face="Comic Sans MS" size="3">The maximum length of a toontalk.ini entry was 
+  doubled from 256 to 512 characters.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">5/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a long-distance bird is given 
+  something and ToonTalk can't connect to the nest, it keeps trying. I used to 
+  try once a second and now the frequency which it tries grows until it reaches 
+  a maximum of one minute.</font></li>
+  <li><font face="Comic Sans MS" size="3">The XML produced when a ToonTalk 
+  object is saved sometimes has additional information that is ignored by 
+  ToonTalk but is helpful in understanding by a human reader. This extra 
+  information is only added when something is placed on the clipboard to avoid 
+  the overhead in other cases.</font></li>
+  <li><font face="Comic Sans MS" size="3">The text on a sound pad can now be 
+  edited using the keyboard while it is held.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem caused by copying 
+  (e.g. using control-c) followed by multiple pastes (e.g. using control-v) 
+  where sometimes an part is shared between the two copies.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 18/2 that 
+  broke the self-copying mode of the Magic Wand.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made the DirectX graphics code more 
+  robust in rare circumstances where it caused an error.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug in the code that deals 
+  with loading bad XML for a shared boxed.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">6/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed some bugs introduced on 3/3 to 
+  deal with local ini files.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">8/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed bugs introduced since 2.39 that 
+  interfere with ToonTalk installations that fall back on the CD-ROM for files 
+  not installed to the hard disk.</font></li>
+  <li><font face="Comic Sans MS" size="3">If the toontalk.ini file doesn't have 
+  a setting for the Directories entry BuiltinPictureDir, a reasonable default is 
+  used instead.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">9/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If an XML file is loaded where a 
+  picture on top of a picture is missing geometry (seems there was a bug in 
+  ToonTalk versions from about a year ago that created such files), then these 
+  parts are now given a default size and location.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a robot can't find something he 
+  expects he now looks confused and scratches his head.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem that occasionally 
+  generated spurious warnings about something being a part of something else 
+  when placed on the floor.</font></li>
+  <li><font face="Comic Sans MS" size="3">The -next_dialog </font><big>
+  <font face="Comic Sans MS" size="3">command line option now supports partial 
+  file paths. (E.g. UK/dialog2.htm)</font></big></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk now recovers better from when 
+  the </font><big><font face="Comic Sans MS" size="3">-next_dialog </font><big>
+  <font face="Comic Sans MS" size="3">command line option specifies a 
+  non-existent file.</font></big></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">11/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">The message &quot;If you insert the 
+  ToonTalk CD-ROM and wait a few seconds, ToonTalk will be able to continue.&quot; is 
+  now in English if the CD-ROM is needed in order to access the 
+  language-specific string table.</font></li>
+  <li><font face="Comic Sans MS" size="3">HTML dialog files if not installed on 
+  the hard drive can now be loaded from the ToonTalk CD-ROM.</font></li>
+  <li><font face="Comic Sans MS" size="3">If the toontalk.ini file doesn't have 
+  an entry for DemoToonTalk32 then the entry for </font><big>
+  <font face="Comic Sans MS" size="3">ToonTalk32 is used instead.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">12/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If ToonTalk can't find some necessary 
+  internal files, it now checks the ToonTalk CD-ROM before quitting and 
+  reporting the problem.</font></li>
+  <li><font face="Comic Sans MS" size="3">Warning dialog screens about the speed 
+  of running off the CD-ROM and one advising that sound be turned on are no 
+  longer displayed. (They were sometimes displayed underneath other dialogs.)</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">14/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">ToonTalk recovers better from the 
+  loading of an invalid picture file.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">15/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where if a notebook is 
+  removed from the main notebook, changed, and then put on another page that it 
+  sometimes loses the changes.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduce a few weeks ago 
+  that prevented the dropping of things on the back of pictures (others than 
+  robots, boxes, text, and pictures).</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">16/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug resulting from copying a 
+  bird who has no nest with the Magic Wand.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where ToonTalk thought 
+  that successive pages in a notebook needed all the media files of the previous 
+  pages. (Just wasteful.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug that where the size of 
+  something on the page of a notebook that was copied was sometimes wrong.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug keeping track of media 
+  files in notebooks.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">19/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug adding to the end of an 
+  existing time travel archive.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">20/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel replay bug that 
+  sometimes caused problems replaying the first log segment.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes if a bird was given 
+  something and her nest had been copied and some of the copies were no longer 
+  available (e.g. on the wall of the rocket in the puzzle game) then one saw a 
+  large number of copies of the bird delivering things. The fix should also 
+  speed things up when the original nest has been vacuumed up or destroyed.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced a few weeks ago 
+  that caused the display of the relative time when replaying someone else's 
+  time travel archive to show zeroes.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where sometimes replaying 
+  a demo used the wrong user name.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">22/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug in replaying a demo or a 
+  time travel archive that began with the double clicking on a TT file. And 
+  older demos that started this way now have warnings in the log file.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">23/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed another bug in replaying a 
+  demo or a time travel archive that began with the double clicking on a TT 
+  file.
+ 
+
+  </font></li>
+  <li><font face="Comic Sans MS" size="3">When something is pasted into ToonTalk 
+  it begins running when it has settled down on the floor. Pictures began to run 
+  sooner than that.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">24/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">When you type to something in Tooly 
+  (or an infinite stack anywhere but on a notebook page) then its geometry is 
+  now identical to having picked it up first and then typed to it.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Fixed yet another bug in replaying a 
+  demo or a time travel archive that began with the double clicking on a TT 
+  file.
+ 
+
+  </font>
+  </big>
+
+  </li>
+</ol>
+<p><font face="Comic Sans MS" size="3">26/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel replay bug that 
+  happened when jumping from on the floor with something selected to a time 
+  where the programmer wasn't on the floor.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed two bugs for minimal installs 
+  (that require the CD-ROM to run).</font></li>
+  <li><font face="Comic Sans MS" size="3">Demos (and time travel) often don't 
+  replay correctly with a different screen resolution. Demos now record the 
+  screen resolution and on replay use the resolution that the demo was recorded 
+  with.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">29/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sometimes when 
+  clicking on the Play button in time travel you briefly see both the old image 
+  and the new changes.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">30/3</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Some HTML dialogs that should have had 
+  the buttons &quot;Retry&quot; and &quot;Cancel&quot; had &quot;Yes&quot; and &quot;No&quot; instead.</font></li>
+  <li><font face="Comic Sans MS" size="3">Generating a Java applet with a 
+  minimal installation asks for the CD-ROM when not necessary.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">2/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug replaying demos and time 
+  travel logs that was introduced with version 3.65</font></li>
+  <li><font face="Comic Sans MS" size="3">Recovers better now from problems 
+  replaying a time travel segment.</font></li>
+  <li><font face="Comic Sans MS" size="3">In the Puzzle Game sometimes robots 
+  are supplied that were trained earlier by the player. These robots were too 
+  small.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug that sometimes occurred if 
+  quitting while robots were running.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">3/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Introduced a new toontalk.ini Switch 
+  called <a href="ttini.htm#RunOncePerCycleIfMatchBlankWithSensor">
+  RunOncePerCycleIfMatchBlankWithSensor</a>.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">4/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Greatly improved the algorithm for 
+  deciding where a robot should drop something.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the size of things when a 
+  robot is working on the floor and you are standing up.</font></li>
+  <li><font face="Comic Sans MS" size="3">Introduced a new toontalk.ini Switch 
+  called <a href="ttini.htm#RobotDropLocationFollowsCamera">
+  RobotDropLocationFollowsCamera</a>.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.66.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">5/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Time travel archives were not 
+  recording those <a href="ttini.htm">toontalk.ini options</a> that can affect 
+  the accuracy of replay. This means that the replay may fail if ToonTalk is 
+  customized differently from when it was recorded. This shortcoming did not 
+  apply to non-time-travel demos. A work-around is to use the
+  <a href="command.htm#LocalIniFile">-local_ini_file command line option</a>. 
+  The options whose value can affect replay are 
+  LeftAndRightMouseButtonsDownMeansEscape, MaximumItemsInDusty, 
+  RunCharacterStopCharacter, DustyUsedOncePerClick, 
+  MillisecondsPumpyUsedPerClick, SensorsChangeAtDropNotWhenBammed, 
+  GoodSizesAreAFixedPercentageOfScreen, NumberShrinkage, DisplayTextRightToLeft, 
+  DontScrollOnFloor, RunOncePerCycleIfMatchBlankWithSensor, and 
+  RobotDropLocationFollowsCamera.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where demo or time travel 
+  recording was incorrect if a Java applet was generated during the session.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug replaying demos introduced 
+  3 days ago.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug in the </font><big><font face="Comic Sans MS" size="3"> <a href="ttini.htm#RobotDropLocationFollowsCamera">
+  RobotDropLocationFollowsCamera</a> feature introduced yesterday.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Further </font><big><font face="Comic Sans MS" size="3">
+  improved the algorithm for deciding where a robot should drop something. This 
+  includes improvements when watching the robot while standing in the room.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">6/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where StartTT (but not the 
+  main ToonTalk executable) ignored the new
+  <a href="ttini.htm#UseThisIniFileFirst">UseThisIniFileFirst</a> ini option.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Implemented a new command line 
+  option</font><big><font face="Comic Sans MS" size="3">
+  <a href="command.htm#LocalIniFile">-local_ini_file.</a></font></big></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">7/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Removed a confusing line for the user 
+  log file that only indicated a frame count that was sometimes negative.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk now attempts to recover from 
+  a DirectX error and if unsuccessful exits gracefully rather than crashing.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">8/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes when replaying a narrated 
+  time travel demo after jumping to a segment, the previous narration was played 
+  (and often interrupted by the next one).</font></li>
+  <li><font face="Comic Sans MS" size="3">When you begin recording in an 
+  existing time travel archive, ToonTalk now reads the critical toontalk.ini 
+  options. Previously the settings left by the time travel archive were in 
+  effect.</font></li>
+  <li><font face="Comic Sans MS" size="3">The user's folder name (entered when 
+  starting ToonTalk) is now limited to the first 100 characters in the user's 
+  name. This is to avoid overflows due to file names that include the user's 
+  folder name.</font></li>
+  <li><font face="Comic Sans MS" size="3">Implemented the new toontalk.ini 
+  switch <a href="ttini.htm#TTFileMax">TTFileMax</a> which maintains a fixed 
+  number of backups of the last thing saved by a user.</font></li>
+  <li><font face="Comic Sans MS" size="3">Implemented the new toontalk.ini 
+  directory options <a href="ttini.htm#UserProgramsFolderName">
+  UserProgramsFolderName</a> and </font><big>
+  <font face="Comic Sans MS" size="3">
+  <a href="ttini.htm#OldUserProgramsFolderName">OldUserProgramsFolderName</a>.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">9/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where the feature that if 
+  you drop something partially on a wall it moves so it is completely on the 
+  floor. This feature only worked if you either sat down on the floor or had 
+  move (i.e. scrolled) while on the floor. This broke some time travel replays.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 4/4 that 
+  caused the tools to have a small size for new users (and no Default User 
+  enabled). Bug is in 3.66 and 3.67 only.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.68 and beta 42.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3"><a name="Beta43">14/4</a></font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling with files 
+  inside of demo and time travel archives.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">15/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Added error handling in the case 
+  DirectInput has troubles acquiring access to the mouse.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling while 
+  using DirectDraw to show graphics.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where files were left 
+  open causing problems saving and restoring in Windows 98 and Me.</font></li>
+  <li><font face="Comic Sans MS" size="3">Rather than report an error trying to 
+  generate a crash report on Windows 98 and Me, ToonTalk no longer tries to 
+  generate a crash dump for those versions of Windows.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk sometimes generated XML with 
+  encoding instructions. This caused saving in Windows 98/Me to fail. A 
+  consequence of this is that sometimes to view XML generated by ToonTalk in 
+  Internet Explorer it needs to be saved as Unicode first. WordPad for example 
+  can read in the XML and save it as Unicode.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem starting ToonTalk 
+  while ToonTalk is already running that occurred only in Windows 98/Me.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">17/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Some redundant information in the XML 
+  produced by ToonTalk was removed shrinking the files somewhat.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">20/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">ToonTalk under rare circumstances can 
+  lose track of where a bird was supposed to return to and crash. Now the bird 
+  just doesn't return.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the location of the display 
+  of some objects when seen from the helicopter.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem replaying demos 
+  involving walking.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">21/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel replay problem 
+  involving colliding with the walls of the room while on the floor.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed many rare time travel replay 
+  bugs that caused the replay to be inaccurate.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk deals better now when 
+  something is dropped on 2 items and one of them can't accept the item.</font></li>
+  <li><font face="Comic Sans MS" size="3">If something is changing size while 
+  viewed from the helicopter it used to appear to drift away.</font></li>
+  <li><font face="Comic Sans MS" size="3">While replaying a time travel log and 
+  an error occurs ToonTalk didn't always jump to the next segment correctly.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">23/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">In Windows 98 and Me only the mouse 
+  cursor for clicking on time travel buttons was not visible.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">25/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Made further progress is getting the 
+  time travel buttons to work in full-screen mode in Windows 98/Me.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">28/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem dropping a box on an 
+  erased number (to obtain the number of holes).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with the clipboard 
+  sensor when multiple items&nbsp; are pasted at once.</font></li>
+  <li><font face="Comic Sans MS" size="3">The clipboard sensor no longer 
+  displays objects if a file is on the clipboard. When files are on the 
+  clipboard and this sensor is active this was a major performance bug.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a PZL file was on the clipboard 
+  then the copies of the initial items on the floor repeatedly appeared on the 
+  floor when in Free Play.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">29/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes a bird delivered things to 
+  its nest even though the nest was on a page of a notebook. No longer.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem saving objects with 
+  bird/nest pairs where sometimes the connection was not preserved when 
+  reloaded.</font></li>
+  <li><font face="Comic Sans MS" size="3">When entering time travel the mouse 
+  cursor now starts off over the pause button.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Made further progress is getting 
+  the time travel buttons to work in full-screen mode in Windows 98/Me.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">30/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem undoing a Bam of a 
+  numeric operation on another numeric operation.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">1/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes the user log had spurious 
+  warnings about memory consistency caused while exiting ToonTalk.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">2/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem caused sometimes by 
+  undoing Bammer's joining of boxes.</font></li>
+  <li><font face="Comic Sans MS" size="3">Demos and time travel archives 
+  remember which media files were added to ToonTalk. The sound files are no 
+  longer copied and kept in both temporarily storage and the media folder.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the way cities are saved and 
+  restored so that Bammer can be undone in some circumstances.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when Bammer is undone after 
+  combining numbers the result became for example &quot;+2&quot; rather than simply &quot;2&quot;.</font></li>
+  <li><font face="Comic Sans MS" size="3">When a sound file was pasted into 
+  ToonTalk it had room for 32 characters regardless of whether the sound file 
+  name was shorter or longer than that.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling while 
+  ToonTalk is zipping files.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">3/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a bird is loaded or copied from a 
+  thought bubble without a nest, it creates a new nest. If a city was saved 
+  while it was creating a new nest or a time travel segment boundary occurred 
+  then it did restore correctly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug caused by copying Tooly to 
+  the clipboard and then pasting him in.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling while time 
+  travel playback.</font></li>
+  <li><font face="Comic Sans MS" size="3">Time travel archives now contain city 
+  files. Earlier the contents of the file was merged with the DMO log files. 
+  This improves the playback of successive time travel segments.</font></li>
+  <li><font face="Comic Sans MS" size="3">When running in a window the mouse 
+  cursor changes to a &quot;wait state&quot; (e.g. an hourglass) in more situations than 
+  previously.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where ToonTalk crashed 
+  while exiting if the Magic Wand had just been dropped.</font></li>
+  <li><font face="Comic Sans MS" size="3">Demos and time travel archives of 
+  robots that had more than 4 temporary items (e.g. placed on the ground) now 
+  replay correctly.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">4/5</font></p>
+  <ol>
+    <li><font face="Comic Sans MS" size="3">Improved the way non-time travel 
+    demos are saved internally.</font></li>
+    <li><font face="Comic Sans MS" size="3">Sometimes demos and time travel 
+    involving adding and removing pictures to pictures didn't replay exactly 
+    correctly.</font></li>
+    <li><font face="Comic Sans MS" size="3">Fixed a problem in replaying demos 
+    and time travel where the collision sensor didn't go on or off exactly at 
+    the same time.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">5/5</font></p>
+  <ol>
+    <li><font face="Comic Sans MS" size="3">Improved the error handling during 
+    replay of demos and time travel.</font></li>
+    <li><font face="Comic Sans MS" size="3">When training a robot with a box 
+    containing sensors with numeric or textual values, the box in the robot's 
+    thought bubble has ordinary text or number pads rather than sensors in it. 
+    (Since sensors in a thought bubble don't make much sense and are costly and 
+    confusing.)</font></li>
+    <li><font face="Comic Sans MS" size="3">Improved the error handling when 
+    starting ToonTalk on a computer without the &quot;My Documents&quot; folder.</font></li>
+    <li><font face="Comic Sans MS" size="3">Fixed a bug where sometimes after 
+    pausing and returning to ToonTalk the built-in sounds were mixed up so 
+    sometimes the wrong sound was played.</font></li>
+    <li><font face="Comic Sans MS" size="3">Removed a spurious warning that 
+    sometimes was placed in the log file when loading remote controls.</font></li>
+    <li><font face="Comic Sans MS" size="3">When recording a new time line the 
+    new line no longer contains unneeded city files.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">6/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a city was saved or a time travel 
+  segment boundary caused a city to be saved where a bird has set down her 
+  message to remove things from her nest then it didn't restore properly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Time travel didn't always replay 
+  correctly when a boundary occurred while Tooly had just run off screen before 
+  you stood up.</font></li>
+  <li><font face="Comic Sans MS" size="3">If something was dropped on the remote 
+  control for the looks of a picture that isn't on screen (e.g. on the floor of 
+  another house) then it sometimes waited to finish the drop until you entered that 
+  house. Also improved the error handling if something goes wrong in this case.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduce the day before 
+  that caused some bugs with sensors changing allegiance.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when a large team of robots 
+  is stopped and dropped on the floor only some of the robots &quot;know&quot; that 
+  they've stopped and they animated incorrectly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a related bug when a large team 
+  of robots is running on the back of a picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a recently introduced bug that 
+  caused the dropping of a box on a robot on the back of a picture to be 
+  ignored.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where sometimes a freshly 
+  copied text pad had text was displayed beyond the edges of the text pad.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem restoring a city 
+  accurately while Tooly is moving on the floor.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem replaying demos and 
+  time travel that sometimes occurred when fixed width font text pads were 
+  involved and were recorded in Windows 2000/XP and replayed in Windows 98/Me 
+  (or vice versa). Also new version is much faster when manipulating fixed width 
+  font text pads.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">7/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">The command line option
+  <a href="command.htm#MustBeNewUser">-must_be_new_user</a> caused spurious 
+  warnings to be generated in log files.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sometimes nests 
+  weren't saved correctly in notebooks.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">11/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed some problems using F11 to undo 
+  the joining of robots into a team.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">12/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">An erased picture in a thought bubble 
+  no longer matches a flipped picture. (Except for robots trained in earlier 
+  versions of ToonTalk.) This makes it possible to have a robot react 
+  differently to flipped and unflipped pictures.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug the occurs sometimes when&nbsp; 
+  a robot is trained on a box containing sensors together with the text or 
+  number pad they are sensing.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when the parts or containers 
+  sensors are placed on the back of a picture they weren't updated.</font></li>
+  <li><font face="Comic Sans MS" size="3">The parts and containers sensors can 
+  be &quot;flipped&quot; to control whether they are sensing the front or back of a 
+  picture. This wasn't always saved correctly so when restoring a city or object 
+  the sensors may be sensing the back rather than the front.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes the containers remote 
+  control would display as black.</font></li>
+  <li><font face="Comic Sans MS" size="3">The </font><big>
+  <font face="Comic Sans MS" size="3">containers </font>
+  </big>
+
+  <font face="Comic Sans MS" size="3">remote now senses containers that are not 
+  pictures -- e.g. boxes. Except for robots created in older versions.</font></li>
+  <li><font face="Comic Sans MS" size="3">The containers sensor was limited to 
+  64K levels of containment. Limit is now larger than could possibly fit in 
+  memory.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem loading a notebook 
+  containing long-distance birds.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem caused sometimes by 
+  loading something containing flipped pictures in boxes.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">13/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the handling of F11 to undo 
+  Bammer so that the exactly correct state of the objects is restored.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">14/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Under some circumstances when a bird 
+  on the floor was given something she didn't return to exactly the same spot.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes a bird returning to a hole 
+  in a box didn't display at the correct location.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where some changes to 
+  sensors that display non-numeric values caused ToonTalk to occasionally 
+  freeze.</font></li>
+  <li><font face="Comic Sans MS" size="3">You can now erase a flipped picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where demos and time 
+  travel didn't always replay correctly if some of your actions were affected by 
+  bumping into a wall.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the error recovery when 
+  replaying someone else's time travel archive. (This accidentally caused other 
+  error recovery problems when replaying time travel until fixed on 6/6.)</font></li>
+  <li><font face="Comic Sans MS" size="3">When loading and an externally 
+  referenced object is missing, the resulting objects now has clearer text 
+  explaining what happened. And the text is nicely centered when appropriate.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">4/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where the size of 
+  pictures was wrong if flipped while standing up.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">5/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Was doing too much work when loading 
+  pictures with robots on the back including updating sensors and trying to run 
+  robots.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">6/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 14/5 that 
+  interfered with error handling during time travel playback.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">7/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">F7 (to hurry things up) interfered 
+  with the correct behaviour of birds when delivering something to a non-empty 
+  nest.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where if different 
+  parts of a time travel archive were produced with different versions of 
+  ToonTalk that later segments recorded that they were created with earlier 
+  versions. Sometimes caused inaccurate replay.</font></li>
+  <li><font face="Comic Sans MS" size="3">If operation was dropped on an erased 
+  numerical operation it became a number rather than remaining an operation.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug caused by F11 to undo the 
+  bamming of a number on a text pad.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes typing to a text pad that 
+  had been flipped did cause it to change size properly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem were the remote looks 
+  of number's good size was that of a text pad with 1 on it regardless of how 
+  digits the number had.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem in the puzzle game 
+  where if you did something not allowed (e.g. use the keyboard in those puzzles 
+  that prohibit using the keyboard) then the feedback sound began to play 
+  repeatedly. Bug introduced on 20/2/04.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes the remote control for the 
+  looks of a text pad displayed text beyond the edges of the text pad.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where the sound of 
+  using Pumpy sometimes played repeatedly even after done using him.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">8/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem introduced on 13/5 
+  dealing with destroying robots.</font></li>
+  <li><font face="Comic Sans MS" size="3">Control-s caused confusion when 
+  applied to Tooly or the tools that live in him. It is ignored now.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If the arrow keys are pressed while 
+  pointing to a label of a box then strange text ended up in the label.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the <i>KeyDescription</i> 
+  attribute in the XML describing what a robot types.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug&nbsp; pasting previously 
+  copied numbers with 10 or few digits in a base between 2 and 9 inclusive.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">11/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">You can now use arrow keys to edit all 
+  text (except the labels of boxes). A caret is displayed and you can insert or 
+  delete text from the insertion point. (Does not apply to robots trained in 
+  earlier versions.)</font></li>
+  <li><font face="Comic Sans MS" size="3">You can now type numbers even if the 
+  intermediate states are syntactically incorrect. It is only when dropped or 
+  when deselected does the newly typed number get updated. If the result is 
+  syntactically incorrect the number reverts to its previous value. </font><big>
+  <font face="Comic Sans MS" size="3">(Does not apply to robots trained in 
+  earlier versions.)</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">12/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed several recently introduced bugs 
+  with number typing and arrow key editing.</font></li>
+  <li><font face="Comic Sans MS" size="3">Dropping a text pad containing text 
+  that can be converted to a number on an erased number used to convert to a 
+  number only if the number was a &quot;long&quot; -- signed and fits within 32 bits. Can 
+  now be any syntactically correct number.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk now ignores preceding spaces 
+  when converting a text string to a number.</font></li>
+  <li><font face="Comic Sans MS" size="3">Flipped pictures now display a title 
+  bar containing a miniature of the appearance of the picture or pad and room to 
+  type a comment.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with which objects 
+  Dusty selects to operate on when called via F2 and then you move your hand as 
+  he is being grasped.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you pick up something with a 
+  dimension that is bigger than the screen you no longer grasp it on the edge 
+  but can grasp it in the middle.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">13/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">You can now save a city while grasping 
+  a large object by the middle and it will restore properly.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">14/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling in 
+  returning from an HTML dialog page.</font></li>
+  <li><font face="Comic Sans MS" size="3">If the toontalk.ini option
+  <a href="ttini.htm#RunAfterSaving">RunAfterSaving</a> is used and a Java 
+  applet is created then the executable specified by </font><big>
+  <font face="Comic Sans MS" size="3">RunAfterSaving is called with a path to 
+  the ToonTalk object saved along with the Java applet files.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Executables such as those specified by
+  </font><big><font face="Comic Sans MS" size="3">
+  <a href="ttini.htm#RunAfterSaving">RunAfterSaving</a> are now run with the 
+  connected directory being the ToonTalk installation directory. So these 
+  entries need not be full path names.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">15/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed another bug where sometimes 
+  bird/nest connections were not always saved properly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a recently introduced bug caused 
+  by typing to a non-numeric sensor.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a few problems introduced on 
+  12/6 in displaying the back of a picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released Beta 43.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3"><a name="Beta44">26/6</a></font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug that caused Windows 98 and 
+  Me to be unstable after displaying HTML dialogs if the text-to-speech engine 
+  hadn't been initialized.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">30/6</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem editing a number via 
+  the remote control for its looks.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem adding a comment to 
+  the back of a picture via its remote control for its looks.</font></li>
+  <li><font face="Comic Sans MS" size="3">Saving a city where a picture is 
+  inside of Dusty sometimes caused the picture to have the wrong size is spit 
+  out by Dusty in a restored city.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where the back of an 
+  erased object was displayed with no label or contents.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sometimes the 
+  title bar on the back of a picture was displayed with the wrong dimensions.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes a tool kept animating as if 
+  it were running if it was called for and something else was picked up before 
+  it reached your hand.</font></li>
+  <li><font face="Comic Sans MS" size="3">If multi-line text was pasted into 
+  ToonTalk it displayed with an extra blank line at the end. (This fixed caused 
+  some correct empty lines to not be displayed - fixed on 5/7/04.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Pressing F2 followed by F2 didn't 
+  cause Dusty to instantly jump into your hand if the power had been turned off.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made playback of demos and time travel 
+  more robust.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">1/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 20/3 that 
+  prevented birds from being seen when outside.</font></li>
+  <li><font face="Comic Sans MS" size="3">Pressing Delete to a remote control or 
+  a sound caused it to stop (like '.' does).</font></li>
+  <li><font face="Comic Sans MS" size="3">Control-c while holding a number pad 
+  followed by control-v sometimes pasted in a number in a different format.</font></li>
+  <li><font face="Comic Sans MS" size="3">Probably fixed a bug where Dusty 
+  sucked up a picture and its notebook of remote controls and then they were 
+  destroyed because <a href="ttini.htm#MaximumItemsInDusty">MaximumItemsInDusty</a> 
+  was exceeded.</font></li>
+  <li><font face="Comic Sans MS" size="3">Puzzles can specify that the goal 
+  should cover up the string of #s and the computation wasn't accurate so a bit 
+  of the string of #s could often be seen.</font></li>
+  <li><font face="Comic Sans MS" size="3">Variable width text pads that are not 
+  black or whose pad is invisible save to the clipboard as an XML encoding 
+  rather than as the text itself. So when pasted back they became black and show 
+  all.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed another problem where Dusty runs 
+  in place after being dropped.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where the variable 
+  font width text pad the can be interpreted as a number (e.g. &quot;123&quot;) becomes 
+  the number (e.g. 123) when copied and pasted back in.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">2/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a very minor memory leak.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">4/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Arrow key editing had the incorrect 
+  insertion point if the text was partly off-screen.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling for user 
+  imported sounds.</font></li>
+  <li><font face="Comic Sans MS" size="3">The snapshot created when saving 
+  something to a file or editing a picture wasn't always correct if the object 
+  was larger than the screen.</font></li>
+  <li><font face="Comic Sans MS" size="3">Text pads or labels containing the 
+  substring &quot;]]&gt;&quot; did not save correctly in XML (since that is the code for the 
+  end of a character data section).</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the error handling for text 
+  pads containing &quot;]]&gt;&quot; saved in earlier versions.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 10/6 that 
+  didn't display text pads correctly after a carriage return is added (without 
+  any following characters).</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">5/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes the geometry of a nest on 
+  the floor was not saved correctly interfering with demo and time-travel 
+  playback.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a text string that begins with a 
+  digit or numerical operation and containing a '/ ' is pasted into ToonTalk and 
+  it can't be interpreted as a number only the portion before the '/' was 
+  pasted.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you flipped a picture or text pad 
+  over multiple times very quickly you sometimes got copies of its notebook of 
+  remote controls.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when replaying a time travel 
+  archive you saw Tooly without anything inside his compartments.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a performance bug while Tooly is 
+  wiggling due to being selected.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">7/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Added a new Switch to toontalk.ini 
+  called <a href="ttini.htm#ReincarnateToolsIfDestroyed">
+  ReincarnateToolsIfDestroyed</a>. Previously if Tooly or one the tools that 
+  lives inside of him was vacuumed and then destroyed (because Dusty's stomach 
+  capacity was limited by <a href="ttini.htm#MaximumItemsInDusty">
+  MaximumItemsInDusty</a>) then errors and inconsistencies resulted. You can now 
+  elect to either have the tool be destroyed or reincarnated afresh.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">8/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where a robot that was 
+  matching a box with a nest that a bird was adding an additional element to 
+  would wait rather than match against what was on top of the nest that the bird 
+  temporarily removed. This fix introduced another bug matching covered nests 
+  that was partly fixed on 11/7 and completely fixed on 13/7.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem displaying erased 
+  flipped pictures.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Warnings added to the user log file (user_name.txt 
+  in the user's folder) before ToonTalk was initialized were lost.</font></li>
+  <li><font face="Comic Sans MS" size="3">If <a href="command.htm#OutputLog">-o</a> 
+  is used to create a flat demo file, then the time travel check mark is now 
+  ignored.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">11/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 8/7 
+  involving matching against covered nests.</font></li>
+  <li><font face="Comic Sans MS" size="3">When every member of a team of robots 
+  fails to match a box, then ToonTalk incorrectly animated some of the robots as 
+  waiting rather than giving up.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug in named flat demos 
+  created with </font><big><font face="Comic Sans MS" size="3">&nbsp;<a href="command.htm#OutputLog">-o</a> 
+  that depended upon what other demos had been made by this same user.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes while in full-screen mode 
+  ToonTalk displays a dialog while shutting down (e.g. about seeing hints or the 
+  log file) underneath the ToonTalk window. Fixing this introduced a bug fixed 
+  on 13/7 that crashed ToonTalk if a dialog was needed in full-screen mode 
+  before ToonTalk finished initializing.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">12/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug displaying the correct 
+  color floor or ground after Tooly had been vacuumed up.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes loading a robot caused it to 
+  move to the side. This was also wasteful.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">13/7</font></p>
+<ol>
+  <li><big><font face="Comic Sans MS" size="3">Fixed a bug introduced on 8/7 
+  involving matching against covered nests.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem recently introduced 
+  where pictures when flipped and then flipped back became the size they were 
+  when flipped.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed problems when flipping the 
+  remote control for the looks of a picture where extra copies of the notebook 
+  of remote controls appeared.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 11/7 where 
+  ToonTalk crashed in full-screen mode if a dialog was displayed before 
+  initialization completed.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">15/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If you vacuum up and then spit out a 
+  notebook of remote controls the image of the picture at the bottom center of 
+  the notebook temporarily became very wide.</font></li>
+  <li><font face="Comic Sans MS" size="3">Some built-in animations such as the 
+  helicopter in the Pictures notebook did not display in a steady way but jumped 
+  around.</font></li>
+  <li><font face="Comic Sans MS" size="3">Couldn't return to Tooly bombs, 
+  trucks, or nests.</font></li>
+  <li><font face="Comic Sans MS" size="3">The ball and paddle in the Pictures 
+  notebook had a second appearance (can type + or - or rubout) to them that was 
+  invisible and incorrect.</font></li>
+  <li><font face="Comic Sans MS" size="3">If </font><big>
+  <font face="Comic Sans MS" size="3">
+  <a href="ttini.htm#ReincarnateToolsIfDestroyed">ReincarnateToolsIfDestroyed</a> 
+  was set to 0 and the main notebook was destroyed then ToonTalk crashed when 
+  you trained a robot.</font></big></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">16/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where a notebook is 
+  copied, flipped to another page, a page is vacuumed off, and then the vacuum 
+  doesn't work on the same page of the notebook copy.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">19/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug saving something 
+  containing copies of the same nest where if the saved object was loaded into 
+  the same ToonTalk more than once then the bird/nest connections were confused.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you made a Java applet of a 
+  non-rectangular picture that changes its appearance, the new appearance was 
+  painted on top of the old appearance. Now the applet is made with a rectangle 
+  under the picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you flip a picture and type a 
+  comment, that comment will be used for the applet name unless there already is 
+  a short text pad on the back of the picture. </font></li>
+  <li><font face="Comic Sans MS" size="3">Released Beta 44 and 3.90.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3"><a name="Beta45">20/7</a></font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where copies of nests were 
+  not maintained correctly when taken out of a notebook. (Note that they were 
+  added to the notebook correctly so old code should work now.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Time travel replay sometimes went 
+  wrong if portions of it were re-recorded during playback.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">21/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Added three new switches to 
+  toontalk.ini to control how narrated or subtitles demos playback. They are
+  <a href="ttini.htm#DisplayAvailableSubtitlesInDemos">
+  DisplayAvailableSubtitlesInDemos</a>,
+  <a href="ttini.htm#PlayAvailableDemoSoundFiles">PlayAvailableDemoSoundFiles</a>, 
+  and&nbsp; <a href="ttini.htm#SpeakAvailableDemoText">SpeakAvailableDemoText</a>.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">22/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug saving cities or making 
+  demos where trucks are driving outside and you then fly in the helicopter. Or 
+  when you land the helicopter while trucks are driving around.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you turn on a picture when power is 
+  off (e.g. via F8) then it'll run when the power is back on. This didn't work 
+  if a city was saved, restored, and then power was turned back on. This broke 
+  some time travel replay.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a memory leak associated with 
+  loading cities with trucks driving around or many items left on the ground.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">23/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem saving a city when 
+  holding a number that has been completely rubbed out so that it is restored 
+  correctly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem unbamming something 
+  that was dropped on a picture with pictures with robots running on the back.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a number was copied and then edited 
+  while still attached to the wand it become the correct number only when 
+  dropped on the floor -- not when dropped on another number.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">26/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a expiration date problem with 
+  the Beta 44 installer.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">27/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where a robot edited a 
+  number without holding it and it acted like it wasn't edited.</font></li>
+  <li><font face="Comic Sans MS" size="3">Teams of robots now line up when you 
+  pick them up.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug caused by rubbing out a 
+  number completely.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot vacuumed up a notebook of 
+  remote controls for a picture then when that picture is flipped over the 
+  notebook was not selectable.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made a small improvement to the 
+  internal layout in memory for robots -- should run a bit faster and take less 
+  time.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">28/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed several bugs involving training 
+  robots to use Pumpy.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where ToonTalk crashed 
+  while training to report a warning to the log file about failing to create a 
+  demo zip archive.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">29/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug training a robot to vacuum 
+  a value off a sensor (like the Parts sensor) if the sensor wasn't in a box.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a couple bugs using the 
+  uncollide facility of the collision remote control.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.95.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug that occurs sometimes when 
+  a large team of robots uses the wand to copy themselves.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">30/7</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug that prevented Marty from 
+  saying the name of a robot that stops abnormally while running off-screen.</font></li>
+  <li><font face="Comic Sans MS" size="3">When a robot drops something 
+  unexpected on a text pad, there wasn't always a warning from Marty.</font></li>
+  <li><font face="Comic Sans MS" size="3">Under some circumstances after 
+  pressing F8, you can't select things or type to them.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed an non-symptomatic bug (wrong 
+  arguments passed to Windows API but no harm done) typing a label of a nest.</font></li>
+  <li><font face="Comic Sans MS" size="3">Since 22/02 robots don't stop just 
+  because the city is full of houses. Sometimes the image of a door appeared 
+  when the city filled up.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">7/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced with arrow key 
+  editing that can cause crashes when typing to erased numbers.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">8/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 29/7 that 
+  caused large robot teams to fail and to cause only some team members to be 
+  saved.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk would crash when dragging a 
+  picture or sound file into ToonTalk when time travel was off and demo was 
+  being created.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when ToonTalk exits 
+  abnormally a partial DMO file is left on the user's folder that caused a crash 
+  if opened.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.97</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">9/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed an apparently non-symptomatic 
+  bug related to training a robot to give a bird something.</font></li>
+  <li><font face="Comic Sans MS" size="3">Some of the keys from the number pad 
+  when NumLock was on were interpreted incorrectly as 'f' to flip the object.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed another bug where dropping 
+  something that robots usually ignore (e.g. a picture) on a team while working 
+  or waiting sometimes froze or crashed ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where a robot was trained 
+  to flip the pages of a notebook and was always flipping to the same page 
+  regardless of what page the notebook is open to.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a recently introduced bug where 
+  if you picked up a robot in a team while it was working sometimes you didn't 
+  get the whole team.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug displaying very large 
+  shrinking digit numbers (large enough for thousands of digits to appear and 
+  taller than the screen).</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved significantly the speed of 
+  displaying shrinking digit numbers when part of it is off screen.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Fixed a problem where the right 
+  border of a large number pad appeared and disappeared as its size changed.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.98.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">12/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a minor memory leak when loading 
+  XML containing nests.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed problems with the room 
+  decoration sensor where it worked in one house and when you went to another 
+  house it showed the decorations of the other house.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">15/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Made further improvements to the 
+  display of shrinking digits.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">16/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a box is left on the ground and 
+  then seen from a helicopter its contents were displayed twice (and at 
+  different places).</font></li>
+  <li><font face="Comic Sans MS" size="3">If a box with more than one hole is 
+  left on the ground then all but the first hole was displayed stretched when 
+  seen from the helicopter.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made even more improvements </font><big>
+  <font face="Comic Sans MS" size="3">to the display of shrinking digits.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sometimes the 
+  button on the Magic Wand drifts away from the wand (usually when pasting in a 
+  wand).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a recently introduce bug where 
+  shrinking digits weren't displayed in the portion of the number pad that stuck 
+  out into the water.</font></li>
+  <li><font face="Comic Sans MS" size="3">If something was pumped up too big (so 
+  it was over tens of millions of pixels in width or height) then it 
+  disappeared. Now Pumpy stops increasing its size and makes a funny sound.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.99.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">18/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed problems copying something 
+  containing a bird and multiple copies of her nest where sometimes the copy's 
+  birds were connected with the original.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed problems copying and pasting
+  </font><big><font face="Comic Sans MS" size="3">something containing a bird 
+  and multiple copies of her nest where sometimes the copy's birds were 
+  connected with the original.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Sensors on the floor sometimes changed 
+  their size as their values changed.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem typing and editing a 
+  notebook's label while holding it.</font></li>
+  <li><font face="Comic Sans MS" size="3">When you use Dusty to erase a page of 
+  a notebook, you end up erasing a copy of that page. The copy was the same size 
+  and position as the page leading to confusion. It now animates to the same 
+  size as if you grabbed a copy from the page.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with undoing a 
+  collision by typing to a collision sensor that was introduced on 29/7. It 
+  broke the Pong game in the Examples notebook and some Playground games.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes if a large team of robots 
+  was saved while running where an early robot was waiting for a sensor to 
+  change, then when loaded the team sometimes wouldn't run until stopped and 
+  restarted.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot is waiting for something to 
+  arrive on a nest, it is stopped (e.g. the picture it is on the back of is 
+  stopped), and then something arrives on the nest and the robot is resumed then 
+  ToonTalk sometimes crashed.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk has, on occasion, stopped 
+  with the error message &quot;The surface cannot be restored because it is an 
+  implicitly created surface.&quot;. This error is not serious is now ignored rather 
+  than stopping ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.100.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">19/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Discovered and fixed a major memory 
+  leak when saving things to XML.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">20/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed bugs introduced when fixing the 
+  XML memory leak yesterday.</font></li>
+  <li><font face="Comic Sans MS" size="3">If ToonTalk crashes or exits 
+  abnormally while generating a demo, then the demo file is incomplete and 
+  strange things happened if it was run. A dialog screen now says the demo is 
+  broken and exits from ToonTalk. Also some interim DMO files were left on the 
+  user's folder.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug exiting from ToonTalk when 
+  it had run for less than 1 second.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug when an object was more 
+  than 256 times larger than its normal size.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">21/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed another problem displaying very 
+  large objects where they disappeared when they become so large there was an 
+  arithmetic overflow.</font></li>
+  <li><font face="Comic Sans MS" size="3">Removed a &quot;feature&quot; where if an 
+  object's area was greater than 50,000,000 pixels it became the size of the 
+  screen instead.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes as you fly higher in the 
+  helicopter some objects on the ground when their height became less than one 
+  pixel, suddenly became somewhat taller.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">22/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 18/8 that 
+  can cause a crash when copying something with multiple bird/nest pairs.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem when a bird flies to 
+  her nest when both are on the back of the same picture and a copy of the nest 
+  is in Dusty.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where if you make an 
+  infinite stack of text pads on the floor, that they change size as you grasp 
+  them.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk ignored the arrow keys and 
+  the Delete, Home, PageUp, and PageDown buttons if they came from the number 
+  pad rather than another part of the keyboard.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.101.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">23/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">ToonTalk no longer foreshortens 
+  pictures left on the ground when seen from the helicopter.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed various bugs displaying very 
+  large boxes and their contents when seen from the helicopter.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug displaying very large 
+  boxes on the floor or ground.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug recording demos that begin 
+  with a robot that uses the millisecond timer. (This was true of many demos of 
+  the Playground city.)</font></li>
+  <li><font face="Comic Sans MS" size="3">If default user has altered the main 
+  notebook (e.g. the Playground city and notebook) then when creating a demo, a 
+  new user's notebook was clobbered to be like the top level of the default 
+  user's notebook. (If you visited the Playground city, you'd seen the Picture 
+  text had different color text.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.102</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">24/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed an installer bug since April 
+  that didn't provide a default voice, so there was no text-to-speech without 
+  using 'Set Options' to choose a voice (or if there was a setting from a 
+  previous installation).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 20/8 so that 
+  cities saved while Bammer is running, a bird is delivering something, or 
+  something was dropping into a box hole were not saved correctly. Note that 
+  cities are saved at time travel segment boundaries.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.103</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">25/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed another problem with displaying 
+  very large boxes (very many times larger than the screen when sitting down).</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">26/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed more problems displaying very 
+  large boxes.</font></li>
+  <li><font face="Comic Sans MS" size="3">When you use Pumpy to make something a 
+  &quot;good size&quot; then it keeps the center of the object at the same place. Now it 
+  does this unless that would result in the object going completely off screen.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.104.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">27/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a robot is trained to type 
+  something to a number that is ignored, the robot now forgets it.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot is trained to type an 
+  extended key or the keyboard's number pad to a text pad other than those used 
+  for editing (arrow keys and delete) then extra letters appeared.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you trained a robot to alter a 
+  number using the operations on the keyboard's number pad (e.g. /, *, and -) 
+  then the robot also remembered the insertion of a letter (e.g. 'j' when the 
+  number pad '*' was typed).</font></li>
+  <li><font face="Comic Sans MS" size="3">If anything other than a box is 
+  dropped on an erased notebook, you once again get a nice warning (broken since 
+  27/2).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where sensor/picture 
+  relationships weren't preserved correctly when a notebook is dropped on an 
+  erased box.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Fixed a bug where sensor/picture 
+  relationships weren't preserved correctly when a box is dropped on an erased 
+  notebook.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">If Dusty is used to erase the top 
+  element of an infinite stack (e.g. those in Tooly) they did not grow to a good 
+  size.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.105</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">31/8</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 19/8 that 
+  caused ToonTalk to crash sometimes while saving a city where robots were 
+  working on the floor.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">1/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a recently introduced bug 
+  training a robot to use arithmetic operators if typed using the keyboard's 
+  number pad.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug that sometimes prevented 
+  warnings from being added to your log file.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">2/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug using the + and - on the 
+  keyboard's number pad to remote controls.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.106</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">4/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a couple sentences that Marty 
+  speaks that referred to the old way of cycling through possible sensor values 
+  using the space bar.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a very large number (over 5000 
+  digits) is displayed then it used to put many repetitions of the warning that 
+  ToonTalk may run slowly in the log file.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot is renamed to consist only 
+  of white space (e.g. just &quot; &quot;) then it Java applets for it were generated 
+  incorrectly.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk would crash if a number was 
+  displayed (or typed to) if it had about 700,000 digits or more. The limit is 
+  now over 7,000,000 digits and rather than crash the number now just displays 
+  as &quot;Unable to display N digits. The 
+  number itself should be fine but it can't be saved and restored. &quot; The 
+  limit was doubled in early November.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with the UK English 
+  version where sometimes the final punctuation of sentences was missing when 
+  Marty was talking.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">7/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Removed a confusing and unnecessary 
+  warning from the log file: &quot;Failed to acquire access to mouse.&quot;</font></li>
+  <li><font face="Comic Sans MS" size="3">If a picture has a bigger picture on 
+  top and that bigger picture includes pictures that are set to &quot;SHOW ALL&quot; then 
+  sometimes the black background was displayed beyond the limits of the picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">Optimized the display of pictures that 
+  are parts of other pictures but are completely beyond the limits of the 
+  picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when minimized after time 
+  travel is paused, then ToonTalk got DirectX errors.</font></li>
+  <li><font face="Comic Sans MS" size="3">Updated the exact arithmetic package 
+  (GMP) used to version 4.1.2.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.107.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">8/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If you drop a team of robots on an 
+  erased box, you end up with a box with a hole for each robot. This didn't work 
+  for 0-holed erased boxes.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem introduced with 3.99 
+  that caused some demos and time travel archives made in earlier versions of 
+  ToonTalk to replay incorrectly. In particular, the new version of the 
+  Exploding Houses demo now works again.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem introduced on 16/8 
+  that caused the button on Maggie the Magic Wand to appear at the wrong place 
+  if loading a city that had been created at a different screen resolution.</font></li>
+  <li><font face="Comic Sans MS" size="3">Add a new Switch to toontalk.ini 
+  called <a href="ttini.htm#MaximumPauseDurationDueToTimeTravel">
+  MaximumPauseDurationDueToTimeTravel</a> that helps adapt to high overhead for 
+  time travel.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.108.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">9/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">The WebLabs ToonTalk FTP publishing 
+  tool now has a button for displaying the folder containing the recently saved 
+  item.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where a local ini file 
+  in DMO file zip archive was partly ignored. This is important for distributing 
+  demos with special needs.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">13/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">You can no longer grab things off a 
+  bird's nest if she has temporarily removed the stack to put something 
+  underneath. Doing so caused bugs.</font></li>
+  <li><font face="Comic Sans MS" size="3">You can no longer grab a nest after 
+  dropping something on it until that item has settled down on the nest. </font><big>
+  <font face="Comic Sans MS" size="3">Doing so caused bugs.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Using Pumpy to make a bird a good size 
+  was broken.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you repeatedly used the Magic Wand, 
+  your wand would drift downward and things looked confusing.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you picked up a number and typed a 
+  lot of things to it then the number became broken and displayed strange 
+  things. (Typically typing about 40 characters triggered this bug.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Extremely large (more than 64K pixels 
+  in one dimension) numbers inside boxes caused display bugs and crashes.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.109.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">14/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">When an object is destroyed by Bammer, 
+  then it is retained in a reduced form in case the user presses F11 to unbam. 
+  If a nest was part of that object then birds became mixed up and an copy of 
+  the bird begins to fly off and gets stuck. Also there was a memory leak in 
+  this situation.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes ToonTalk generated a 
+  spurious warning about a something not knowing about some of its parts.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a demo was being created when 
+  ToonTalk crashed (or was ended via the Task Manager) then the demo was 
+  unplayable. It is fixed the next time ToonTalk is run. This demo can be very 
+  helpful in tracking down bugs.</font></li>
+  <li><font face="Comic Sans MS" size="3">Updated three demos in the US, UK, SE, 
+  and PT versions of ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.110</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">15/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed another bug displaying text or 
+  number pads that were very large (more than 50,000 pixels in one dimension).</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">16/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced several months 
+  ago that prevented you from dropping a nest on a nest to merge them into one 
+  (where each bird flies to the combined nest).</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug caused by unbamming (via 
+  F11) the merging of two nests.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug saving a city (or a time 
+  travel segment boundary) when not on the floor. The problem was that when 
+  loaded the tools were at the default setting (Bigger for Pumpy, Suck for 
+  Dusty, and Copy for Maggie) regardless of what they were when saved.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel replay problem 
+  that caused minor replay problems at the boundaries between segments.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem replaying time travel 
+  or demos where a frame took over 1 second to execute.</font></li>
+  <li><font face="Comic Sans MS" size="3">Repeated use of Maggie the Magic Wand 
+  without waiting for the copying animation to complete caused the wand and hand 
+  to drift up or down. (This is a rewrite and more general version of the 
+  similar bug fixed on 13/9.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug caused by displaying 
+  numbers wider than the screen. (Probably this was an asymptomatic bug where 
+  incorrect parameters to the Windows API were ignored.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.111</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">17/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Updated ukver22.dll and usver22.dll 
+  (and on 23/9 ptver22.dll as well) so that when Marty speak a sentence like 
+  &quot;type '-' to change it&quot; the minus is now pronounced because he says </font><big>
+  <font face="Comic Sans MS" size="3">&quot;type '-' (minus) to change it&quot;. The 
+  Portuguese version uses &quot;menos&quot;. Part of the 3.111 full installer.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">24/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If you were holding a box from the 
+  middle and typed a digit to break the box then the remaining box may be far 
+  from your hand (but still held). It now adjusts so you are holding it on the 
+  edge.</font></li>
+  <li><font face="Comic Sans MS" size="3">When replaying time travel archives 
+  ToonTalk performs a significant optimization when replaying successive 
+  segments. This optimization doesn't apply if the next segment was recorded by 
+  rewinding back and re-recording. ToonTalk now uses the optimal playback when a 
+  segment boundary was due to re-recording but was subsequently recorded over by 
+  going back further in time.</font></li>
+  <li><font face="Comic Sans MS" size="3">With the introduction in mid-June of 
+  arrow key editing of numbers (and text pads) a bug was introduced where 
+  ToonTalk crashes if you save a zero-character text pad (created by rubbing out 
+  a single character), restore it, and then type to it.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">26/9</font></p>
+<ol>
+  <li><big><font face="Comic Sans MS" size="3">If a robot is holding a box types 
+  a digit to break the box then the remaining box may be far from its hand (but 
+  still held).</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Some animations were left in an 
+  inconsistent state when you stand up. In particular, a bird may be adding 
+  things to her nest and if you stand up, the bird may freeze or stop restoring 
+  the nest after removing the stack to put something on the bottom.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed yet another bug involving the 
+  display of objects that are more than 256 times larger than their normal or 
+  good size.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you pressed control-c while holding 
+  the wand and then pressed control-v you would see two wands until you dropped 
+  them. It was even more confusing if you typed control-c after the wand had 
+  copied something but before it was dropped. Similar (but not quite as 
+  confusing) things happened if you typed control-c and control-v while holding 
+  Dusty, Pumpy, or Tooly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Restored the functionality of the <i>
+  undocumented</i> command line feature &quot;-allow_multiple_toontalks 1&quot; which 
+  allows you to run more than one ToonTalk at a time. Mostly useful for testing 
+  long-distance birds on a single machine.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">27/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If you were on the ground outside and 
+  typed control-c followed by control-v then you saw a text pad with the XML 
+  encoding for the city. The control-v is now ignored if the encoding of a city 
+  is on the clipboard.</font></li>
+  <li><font face="Comic Sans MS" size="3">If the <a href="ttini.htm#DefaultUser">
+  DefaultUser</a> is to a non-existent directory then ToonTalk now checks if the 
+  files are instead in the Users folder of the ToonTalk installation directory.</font></li>
+  <li><font face="Comic Sans MS" size="3">The WebLabs ToonTalk FTP publishing 
+  tool now looks in the Windows directory for tt_ftp.ini if it can't find it in 
+  the My Documents\ToonTalk folder and copies it over if needed.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.112 and Beta 45. Only 
+  difference is that Beta 45 expires 75 days after installation.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3"><a name="Beta46">28/9</a></font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with trial and beta 
+  versions not expiring after a fixed number of days after installation.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">29/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem introduced on 16/9 
+  that caused the narration and subtitles of demos to occur at the wrong time.</font></li>
+  <li><font face="Comic Sans MS" size="3">Added error handling for dealing with 
+  failure to write files (possibly due to a full device or folder protection).</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when you click on the Record 
+  button in time travel, ToonTalk freezes for a couple minutes (as the archive 
+  is copied and updated). The mouse cursor no longer disappears and it shows an 
+  hour glass now.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes (e.g. when loading a complex 
+  city) ToonTalk appears to freeze when starting (and in some cases the screen 
+  is black for a few seconds). A message saying that ToonTalk is loading and to 
+  wait now appears on the screen.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.113. (And a modified 
+  version of Beta 45 called 45b which differs only in that it includes the 
+  latest (and safest) version of Microsoft's gdiplus.dll and it expires in 75 
+  days not 60.)</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">30/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Typing control-v while the clipboard 
+  holds the XML of a saved city, switches to that city. Note that you can save a 
+  city while outside by typing control-c (if on the ground your hand must be 
+  empty).</font></li>
+  <li><font face="Comic Sans MS" size="3">You can once again type control-v 
+  while the clipboard holds the XML of a saved house to create a copy of the 
+  house near where you are standing. Note you can save a house to the clipboard 
+  by typing control-c while standing in the house.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made further improvements to the error 
+  handling when ToonTalk is unable to write files.</font></li>
+  <li><font face="Comic Sans MS" size="3">Introduced the
+  <a href="ttini.htm#DoNotWarnAboutInabilityToWriteUserFiles">
+  DoNotWarnAboutInabilityToWriteUserFiles</a> toontalk.ini Switch.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 26/9 that 
+  caused large numbers (hundreds of digits) to get the wrong size and position.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">1/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem introduced on 26/9 
+  that caused very large rectangles and ovals to display at the wrong size.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where number and text 
+  pads when seen from the helicopter sometimes display parts too large.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Made further improvements to the 
+  error handling when ToonTalk is unable to write files.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes Bammer would come out when a 
+  robot with an attached tool (common in some of the puzzles) was dropped on 
+  something resulting in a crash.</font></li>
+  <li><font face="Comic Sans MS" size="3">If UserFiles is set, then ToonTalk no 
+  longer writes crash reports or temporary files to the default ToonTalk 
+  subfolder of My Documents.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.114.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">4/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If you train a robot to copy something 
+  in Tooly using Maggie the Magic Wand (rather than just picking it up) then the 
+  animation of the robot showed the thing copied by the wand attached far from 
+  the end of the wand.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you saved or put the main notebook 
+  on the clipboard then if you loaded it into a different user name (or a 
+  different computer) then any user-defined notebooks in the main notebook 
+  became empty.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you dropped a box with a nest in it 
+  just after a bird dropped something into the nest then sometimes the box acted 
+  like it was dropped on the thing that the bird dropped. For example, if the 
+  bird is dropping the number 2 and the box has more than 2 holes then it'll 
+  break after 2 holes because it was (mistakenly interpreted as having been) 
+  dropped on the 2.</font></li>
+  <li><font face="Comic Sans MS" size="3">Updated the FTP Publishing Tool to 
+  give better error messages when there are problems with the tt_ftp.ini file.</font></li>
+  <li><font face="Comic Sans MS" size="3">Flipping over a picture with pictures 
+  that have pictures on top and some robots running on the back caused things to 
+  be displayed strangely (sometimes things became invisible or flickered).</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.115.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">5/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where it is possible 
+  to set a robot that is to be retrained to allow only 0 steps and hence is 
+  untrainable.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot is being retrained and 
+  exits in the middle of using of a tool, the robot may be in a state where 
+  ToonTalk crashes when the robot is saved.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you retrained a robot and Marty 
+  appeared to explain about training robots and you didn't move the mouse then 
+  Marty sometimes appeared and disappeared a few times while saying good bye.</font></li>
+  <li><font face="Comic Sans MS" size="3">Under special circumstances with 
+  numbers being added and removed from a nest, ToonTalk could crash while 
+  displaying an uncovered number.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made several small improvements to 
+  some image files. Some are smaller and look as good. Others look better 
+  without being bigger. Available only via full or beta version installer.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.116.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">7/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes if a robot on the floor 
+  where the programmer is drops something on top of a stack of things on a nest 
+  and a bird has removed the stack to put something on the bottom, then the 
+  robot drops the item on the floor rather than on the top item of the stack.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you changed the screen resolution 
+  of ToonTalk and then logged in as the same user, sometimes things in notebooks 
+  open on the floor were the wrong size until the page is flipped (and flipped 
+  back). This seems to only have happened if the thing has parts that are 
+  outside its bounding box (e.g. robots and their thought bubble or trucks and 
+  their cargo).</font></li>
+  <li><font face="Comic Sans MS" size="3">If you changed the screen resolution 
+  of ToonTalk and then logged in as the same user with time travel enabled, then 
+  occasionally old segments didn't replay perfectly well. Now the old screen 
+  resolution is used to avoid this problem.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you changed the screen resolution 
+  of ToonTalk and then logged in as the same user then moved on the floor to 
+  where the walls are visible they were displayed with the wrong size.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved and shortened the wording of 
+  the warning to wait while things are loading.</font></li>
+  <li><font face="Comic Sans MS" size="3">The error handling when unable to 
+  write a file (introduced a week earlier) sometimes produced a spurious warning 
+  when all was well.</font></li>
+  <li><font face="Comic Sans MS" size="3">The DirectDraw error &quot;The previous 
+  blit operation that is transferring information to or from this surface is 
+  incomplete.&quot; no longer causes an abnormal termination.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">8/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If you turned Maggie the Magic Wand by 
+  pressing the space bar while there was nothing under the tip of the wand (e.g. 
+  you missed the target) and the wand is not in &quot;self-copying&quot; mode then the 
+  wand wouldn't work until dropped and picked up. Also you now hear a &quot;plop&quot; 
+  sound when trying to copying nothing (using the keyboard -- the mouse 
+  interface already did this).</font></li>
+  <li><big><font face="Comic Sans MS" size="3">If you turned Maggie the Magic 
+  Wand by a mouse button (an option available via 'Set Options') while there was 
+  nothing under the tip of the wand (e.g. you missed the target) and the wand is 
+  not in &quot;self-copying&quot; mode then the wand would drift upwards and it attempted 
+  to copy nothing.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when jumping between time 
+  travel segments you saw the hand and arm displayed separated or overlapping.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a time travel replay bug that 
+  can be caused by copying a bird which has no nest (e.g. in a thought bubble). 
+  The problem was that the nest was made by the bird .25 seconds faster than 
+  when originally recorded often causing larger problems latter.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">9/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes when exiting ToonTalk, it 
+  needs to save various files and this can take a noticeable amount of time. The 
+  cursor now turns into a hourglass upon exit.</font></li>
+  <li><font face="Comic Sans MS" size="3">When Marty describes a non-numeric 
+  remote control, he often said the same sentence twice. And he didn't use the 
+  new convention that '-' is followed by '(minus)' so it is spoken properly. 
+  Also if ToonTalk is customized to treat all mouse buttons the same then the 
+  sentence describing how to change these values was missing a phrase.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced many months 
+  earlier that caused the &quot;hit or miss&quot; sensors to display as black until the 
+  object involved first touches something else. If the sensor wasn't in a box 
+  then its size was wrong as a result.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Found additional cases where errors 
+  reading or writing files were not handled well.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a user does not have the file 
+  privileges to write to Windows 'Shared Documents' folder (but at least one 
+  earlier user did have the ability to write to it) then ToonTalk would crash 
+  when displaying the time travel buttons or when user defined pictures or 
+  sounds were brought into ToonTalk. Also improved the error handling and advise 
+  in dialog screens if this occurs.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you save a city while pointing to a 
+  picture in a notebook (or a time travel segment occurs at such a time) then 
+  sometimes when you pick up the picture it becomes the wrong size.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 7/15 that 
+  caused the 'hit or miss' sensors when directly on the floor to move around 
+  when changing state.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.117.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">12/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">When a number is dropped on an erased 
+  text pad the text pad displays the number. If the number was displayed with 
+  shrinking digits, then the coercion to a text pad resulted in an approximation 
+  (where the number of decimal places depended upon the size of the number pad). 
+  The text pad now displays the equivalent fractional value. The old behavior 
+  can be obtained by setting <a href="ttini.htm#NumberToTextConversionIsExact">
+  NumberToTextConversionIsExact</a> to 0.</font></li>
+  <li><font face="Comic Sans MS" size="3">Since December some warnings end up 
+  repeated many times in the user log file. Such as the warning that very large 
+  numbers can cause ToonTalk to freeze briefly.</font></li>
+  <li><font face="Comic Sans MS" size="3">If an empty file (0 bytes) is put on 
+  the clipboard then ToonTalk sometimes generated spurious warnings in the user 
+  log file.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">13/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Improved the way Marty described how 
+  to modify the mouse buttons using the shift and control buttons. (Only needed 
+  if ToonTalk is customized via 'Set Options' so that all mouse buttons are 
+  treated the same.) Applies to the US, UK, PT, and SE versions of ToonTalk.</font></li>
+  <li><font face="Comic Sans MS" size="3">Localized the warnings produced when 
+  ToonTalk fails to read or write files to Swedish (thanks Lennart) and 
+  Portuguese (thanks Leonel).</font></li>
+  <li><font face="Comic Sans MS" size="3">Spurious warnings were generated 
+  loading a city where a large team of robots (at least three or four robots) 
+  were working when it was saved.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where very large text 
+  pads (those with over 64K letters) were sometimes displayed with a 0 width 
+  (i.e. invisible).</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.118.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">14/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes when a city was loaded with 
+  active collision sensors they didn't show the correct state. Can also happen 
+  when time travelling.</font></li>
+  <li><font face="Comic Sans MS" size="3">When replaying a time travel archive 
+  where pictures are moving due to have non-zero x or y speed sensor values then 
+  the replay wasn't an accurate reproduction of the original movements.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a city was saved while leaving the 
+  training of a thought bubble (or time travel segment boundary) then sometimes 
+  some tool's buttons become very large when restored.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">16/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed another bug where w</font><big><font face="Comic Sans MS" size="3">hen 
+  replaying a time travel archive where pictures are moving due to have non-zero 
+  x or y speed sensor values then the replay wasn't an accurate reproduction of 
+  the original movements.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem replaying time travel 
+  archives if any single frame (cycle) takes more than 1 second. (Pretty rare.)</font></li>
+  <li><font face="Comic Sans MS" size="3">If a tool (e.g. Maggie the Magic Wand) 
+  was used on a picture that is moving because it has a speed (x or y speed 
+  sensor is not zero) then the picture's speeds were set to zero.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">17/10</font></p>
+<ol>
+  <li><big><font face="Comic Sans MS" size="3">Fixed yet another bug where w</font><big><font face="Comic Sans MS" size="3">hen 
+  replaying a time travel archive where pictures are moving due to have non-zero 
+  x or y speed sensor values then the replay wasn't an accurate reproduction of 
+  the original movements. This one only occurred if the pictures were on top of 
+  another picture.</font></big></big></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where if a city was saved 
+  (or while time travelling) while a picture was flipped over, then when 
+  restored the notebook of remote controls can have the wrong initial value 
+  (e.g. the looks sensor can be for the wrong side).</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">18/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where if Marty is in 
+  speaking only mode (no talk balloons or subtitles) and you press F7 while he 
+  is talking then sometimes he gets confused and won't leave when you press F1.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 5/5 where 
+  restoring a city where a text or number pad has been flipped over and its 
+  remote looks removed, that when restored ToonTalk occasionally crashed.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you were holding a text or number 
+  pad and near something with a collision sensor then sometimes you got a ghost 
+  of the thing in your hand and it wouldn't move correctly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.119</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">19/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem introduced two weeks 
+  earlier that sometimes caused old demos and time travel archive to not replay 
+  correctly.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you pressed a function key while 
+  pointing to something in a stack (e.g. in Tooly) then an item from the stack 
+  grew to a good size.</font></li>
+  <li><font face="Comic Sans MS" size="3">If while </font><big>
+  <font face="Comic Sans MS" size="3">training a robot </font>
+  </big>
+
+  <font face="Comic Sans MS" size="3">you pressed any keyboard button while 
+  pointing to something in Tooly, then the robot's training was confused and 
+  Marty gave a warning.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you saved a city while a robot was 
+  holding a box with 0 or more than 1 hole then when restored the box was the 
+  wrong size. Happened during time travel as well.</font></li>
+  <li><font face="Comic Sans MS" size="3">Found a minor performance bug and 
+  memory leak involving loading in something being held by a robot.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.120.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">21/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">The time travel replay bug fixed on 
+  16/10 broke some older demos.</font></li>
+  <li><font face="Comic Sans MS" size="3">The toontalk.ini Switch
+  <a href="ttini.htm#ExitWhenDemoEnds">ExitWhenDemoEnds</a> was ignored when 
+  replaying someone's time travel demo. Also you now can set this option via <a href="command.htm#ExitAtEndOfDemo">-exit_at_end_of_demo</a> 
+  on the command line as well.</font></li>
+  <li><font face="Comic Sans MS" size="3">If ToonTalk encounters a problem 
+  (without crashing) then depending upon the type of user (set by 'Set 
+  Options'), ToonTalk now zips up the files that would be useful in tracking 
+  down the problem and encourages the user to send it to support@toontalk.com.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where sometimes when 
+  standing a robot floats above the box he's working on. And then when you sit 
+  again it sometimes in under and sometimes over. And it was sometimes different 
+  during recording and replaying of a demo or during time travel.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you typed some text to a text pad 
+  or a label and then used the arrow keys (available since </font><big><font face="Comic Sans MS" size="3">11/6) 
+  to move the insertion point to the very beginning and typed something then 
+  sometimes nonsense resulted.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">If you save a city while entering or 
+  leaving a thought bubble and the tools are inside of Tooly, then when that 
+  city is restored and you leave the thought bubble the tools are in their 
+  default state rather than the state that they were in before entering the 
+  thought bubble. This broke some time travel archives. The fix only applies to 
+  time travel archives made in 3.121 or later.</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk crashed when saving some user 
+  media when it wasn't able to write a file. Additional error checking was 
+  added.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.121.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">23/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Made small improvements to the 
+  displaying of shrinking decimals.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a performance bug in loading 
+  user images.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">24/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where the user 
+  pictures and sounds weren't always included in time travel archives.</font></li>
+  <li><font face="Comic Sans MS" size="3">Numbers that are tall and wide when 
+  they changed value (but not the number of digits) would grow slightly each 
+  time.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Made more small improvements to 
+  the displaying of shrinking decimals.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">25/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If you dropped an operation of a long 
+  number (that is partly off screen) and the result is shorter (e.g. dividing a 
+  large number by itself to produce 1) then the result was sometimes off screen.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with the display of 
+  decimals that have a non-zero integer part, are negative, and the fraction 
+  part is a shrinking decimal.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem </font><big>
+  <font face="Comic Sans MS" size="3">with the display of decimals that have 
+  hundreds of digits for the integer part and the fraction part is a shrinking 
+  decimal.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">26/10</font></p>
+<ol>
+  <li><big><font face="Comic Sans MS" size="3">Made more small improvements to 
+  the displaying of shrinking decimals.</font></big></li>
+  <li><font face="Comic Sans MS" size="3">If a tool (e.g. Dusty or Tooly) 
+  settles down underneath another object that is very large then it flickered 
+  for a while.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">28/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where sometimes a robot 
+  used the wrong notebook. (Could only happen when a saved city was loaded in.)</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot was working and you grabbed 
+  his box sometimes he would end up confused and Marty would say give a 
+  misleading explanation. A confused robot stayed confused until you picked him 
+  up and dropped him.</font></li>
+  <li><font face="Comic Sans MS" size="3">Marty sometimes referred to a robot in 
+  front of you as a robot in another house.</font></li>
+  <li><font face="Comic Sans MS" size="3">When Marty is in the mode with 
+  speaking and subtitles then sometimes the subtitle would stay up until the 
+  next time Marty had something to say.</font></li>
+  <li><font face="Comic Sans MS" size="3">Added an undocumented feature that 
+  saves a city when a demo ends. This is useful for creating automatic tests of 
+  new ToonTalk releases.</font></li>
+  <li><font face="Comic Sans MS" size="3">If ToonTalk exited abnormally during 
+  time travel then the next time that user runs, ToonTalk tries to replay the 
+  last segment. If something goes wrong with the replay then sometimes ToonTalk 
+  would exit prematurely.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you picked up a number, typed to 
+  it, and pressed F1 then Marty would describe the number as it was prior to 
+  being typed to.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you are holding a shrinking decimal 
+  then Marty would suggest you type backspace to edit it when you can't edit 
+  these numbers (since they are infinitely long).</font></li>
+  <li><font face="Comic Sans MS" size="3">If you are holding a negative number 
+  then Marty suggested you can make it positive to subtract it from another 
+  number. (True but very confusing.)</font></li>
+  <li><font face="Comic Sans MS" size="3">If you are holding zero then Marty no 
+  longer suggests you might want to divide it into another number.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you are holding a shrinking decimal 
+  then Marty would sometimes show and speak as if it were a fraction&nbsp; and 
+  at other times as an exact decimal (typically with nearly 100 digits). Now he 
+  always refers to it as a fraction.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes things would go wrong when 
+  Marty tried to talk about negative fractions.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a city was saved (or a time travel 
+  segment boundary occurred) while a robot was in the middle of typing something 
+  to an object then sometimes the previous typing was ignored.</font></li>
+  <li><font face="Comic Sans MS" size="3">The 'Set Options' dialog screen for 
+  choosing a voice for Marty didn't show all the available choices. And it now 
+  displays the mode name and speaker name since some manufacturers of speech 
+  engines use one as a unique friendly name and others use the other.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">29/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a robot has an empty nest in his 
+  thought bubble and he is given a box with an empty nest in the corresponding 
+  location he'll accept the box. But if the box given to him also contains an 
+  empty nest that matches some other object then the robot waits for something 
+  to arrive. If in the meanwhile something arrives on the first nest causing the 
+  robot to no longer match he didn't notice until you gave him the box over 
+  again (or if he was on the back of a picture if you dropped the picture).
+  </font></li>
+  <li><font face="Comic Sans MS" size="3">If a number is edited, then it becomes 
+  the new number when dropped or when you move your hand away from the number. 
+  It now also becomes the new number if other things happen to it such as a 
+  robot dropping something on top.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you gave a robot a box with a 
+  sensor for the looks of a picture that is showing the front of the picture and 
+  the picture is flipped then it would not match an identical picture in the 
+  robot's thought bubble.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where a robot that 
+  matches against a sensor or empty nest and then waits because it encounters an 
+  empty nest where it expected a value then that robot may have run twice when 
+  it finally does match.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">30/10</font></p>
+<ol>
+  <li><big><big><font face="Comic Sans MS" size="3">Made more small improvements 
+  to the displaying of shrinking decimals.</font></big></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">31/10</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a performance bug when shrinking 
+  decimals were in a box.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">1/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Updated the FTP publishing tool to 
+  cache the user's FTP (or WebLabs) user name and password during the length of 
+  a ToonTalk session.</font></li>
+  <li><font face="Comic Sans MS" size="3">The FTP publishing tool now puts up 
+  the information screen that it may take a while to upload the file before 
+  connecting to the FTP server. (It used to do it just before transferring the 
+  file itself.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Introduced a new number display 
+  feature where numbers that have too many digits to display in the space they 
+  have use a scheme where the digits shrink and then grow. Thanks to Ana Isabel 
+  Sacristan for the suggestion. This feature can be turned off using the
+  <a href="ttini.htm#OKToDisplayNumbersShrinkingAndGrowing">
+  OKToDisplayNumbersShrinkingAndGrowing</a> toontalk.ini switch. This also 
+  displays fractions vertically. Note that this feature is only available in 
+  releases ending with X, or beta 46 or ToonTalk 3 or higher.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.122X (X for experimental).</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">3/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">On </font><big><font face="Comic Sans MS" size="3">21/10 
+  added a feature where ToonTalk creates a zip archive of files useful for 
+  debugging ToonTalk problems. This was triggered incorrectly if the problem was 
+  that time travel was taking too long to save cities. (And on 081104 also fixed 
+  the same problem for numbers so large that they took too long and when a 
+  number was too large to compute the digits needed -- about 6 million digits).</font></big></li>
+  <li><font face="Comic Sans MS" size="3">If a number is very large and part of 
+  it was left of the screen then the last digit sometimes was displayed a bit 
+  beyond the edge of the number. (This fix was copied to the non-experimental 
+  version on 8/11.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Made further improvements to the 
+  display of numbers in the experimental versions.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.123 (non-experimental 
+  version -- note there was no 3.122 non-experimental version).</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">4/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">The experimental releases now display 
+  a zero before a decimal when appropriate. E.g. 0.5 rather than .5.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made further improvements to the new 
+  way of displaying numbers. (Experimental version only.)</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot was holding a magic wand 
+  and has copied something and was stopped, then the wand became stuck to his 
+  feet.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">5/11</font></p>
+<ol>
+  <li><big><font face="Comic Sans MS" size="3">Made many further improvements to 
+  the new way of displaying numbers. (Experimental version only.)</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Something sensible now happens if you 
+  pick up a number and type multiple operators. E.g. 2-- now becomes 2 and 2-* 
+  becomes *-2.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where the operator was 
+  ignored if you typed it to a number that displays as an integer followed by a 
+  fraction.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">6/11</font></p>
+<ol>
+  <li><big><font face="Comic Sans MS" size="3">Made further improvements to the 
+  new way of displaying numbers. (Experimental version only.)</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">7/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Marty and text-to-speech sounds can 
+  now read any number up to 10 to the 3003 power. (By 9/11 the limit is 10 to 
+  the 30000000 power.) This works around a limitation in all tested 
+  text-to-speech engines that could not deal with numbers with a few hundred 
+  digits. </font><big><big><font face="Comic Sans MS" size="3">(Experimental 
+  version only.)</font></big></big></li>
+  <li><font face="Comic Sans MS" size="3">Furthermore when a number or string is 
+  dropped on a text-to-speech sound it is converted to words.</font></li>
+  <li><big><big><font face="Comic Sans MS" size="3">Made further improvements to 
+  the new way of displaying numbers. (Experimental version only.)</font></big></big></li>
+  <li><font face="Comic Sans MS" size="3">For many months the ability to type to 
+  or drop text pads or number pads on text-to-speech sounds was accidentally 
+  disabled.</font></li>
+  <li><font face="Comic Sans MS" size="3">When a text or number pad was dropped 
+  on an erased text pad, the pad would sometimes end up off screen if it became 
+  shorter it was partly off the left side. Its center now stays stable.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a city was saved while holding a 
+  number pad that has been edited it displayed incorrectly until it was dropped.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">8/11</font></p>
+<ol>
+  <li><big><big><big><font face="Comic Sans MS" size="3">Made further 
+  improvements to the new way of displaying numbers. (Experimental version 
+  only.)</font></big></big></big></li>
+  <li><big><font face="Comic Sans MS" size="3">On </font><big><font face="Comic Sans MS" size="3">21/10 
+  added a feature where ToonTalk creates a zip archive of files useful for 
+  debugging ToonTalk problems. This was triggered incorrectly if the problem was 
+  that numbers were so large that they took too long and when a 
+  number was too large to compute the digits needed -- about 6 million digits -- 
+  limit raised to about 12 million digits on 9/11). </font></big>
+  </big>
+
+  </li>
+  <li><big><big><font face="Comic Sans MS" size="3">If a number is very large 
+  and part of it was left of the screen then the last digit sometimes was 
+  displayed a bit beyond the edge of the number.</font></big></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">9/11</font></p>
+<ol>
+  <li><big><big><big><big><font face="Comic Sans MS" size="3">Made further 
+  improvements to the new way of displaying numbers. (Experimental version 
+  only.)</font></big></big></big></big></li>
+  <li><font face="Comic Sans MS" size="3">Made further improvements in the 
+  ability to speak numbers.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug where typing an operation 
+  to a floating point number (the gray numbers produced by taking roots, 
+  logarithms, or trigonometric functions) produced a malfunctioning operation.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made improvements to how ToonTalk 
+  displays number or text pads with millions of digits. But some problems still 
+  remain that cause the pad to be blank.</font></li>
+  <li><font face="Comic Sans MS" size="3">If ToonTalk is unable to write to the 
+  Shared Documents Folder and the toontalk.ini <a href="ttini.htm#MediaDir">
+  MediaDir</a> option is not set, then ToonTalk now creates a folder in the 
+  ToonTalk directory under My Documents.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.124 and 3.124X.</font></li>
+</ol>
+  <p><font face="Comic Sans MS" size="3">11/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem introduced in February 
+  that prevented birds from accepting non-numeric sensors directly (in a box 
+  worked fine). Also you couldn't drop such a sensor on a nest directly.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a similar bug (also from 
+  February) that prevented you from dropping a copy of the magic wand on a fresh 
+  untrained robot to give him the tool as an initial tool. (Used in creating 
+  puzzles mostly.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Some non-numeric sensors can be 
+  coerced to a number by dropping them on an erased number pad. (E.g. addresses 
+  or &quot;enumeration&quot; types.) This has been broken since June.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where adding two 
+  sensors for the address of a house resulted in a blank (and black) sensor.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes when Marty is speaking and 
+  showing subtitles and a multi-line subtitle was displayed followed by one with 
+  fewer lines then the older subtitle was partially still displayed.</font></li>
+  <li><font face="Comic Sans MS" size="3">You can only drop a box on an erased 
+  notebook (so each item in the box ends up a different page). ToonTalk no 
+  longer gives incorrect wiggle feedback if you hold something else over an 
+  erased notebook.</font></li>
+  <li><font face="Comic Sans MS" size="3">You also got incorrect wiggle feedback 
+  if you held a box over a picture.</font></li>
+  <li><font face="Comic Sans MS" size="3">And if you held something other than a 
+  text or number pad over a text pad.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot with a tool (e.g. the 
+  robots with the magic wand in the puzzle game) are trained to leave things on 
+  the floor to be vacuumed up then when running the robot after vacuuming tries 
+  to pick up the wand and could get confused.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug caused by grabbing 
+  something from a robot less than a second before the robot is about to vacuum 
+  the thing up.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem caused by calling for 
+  a tool with a function (F2, F3, or F5) while sitting down or entering a 
+  thought bubble before the tool has emerged from Tooly.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a text or number pad is wider or 
+  taller than 64K pixels then it was sometimes incorrectly displayed off screen. 
+  Also there is no longer a warning about this in the user's log file.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">12/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If something is wider or taller than 
+  the screen, picked up, and then typed to so that its size changes it sometimes 
+  moved from the hand. For very large things it moved way off screen. </font>
+  </li>
+  <li><font face="Comic Sans MS" size="3">If something was taller than the 
+  screen but not also wider than the screen, picked up, and then the city saved 
+  then when restored you weren't holding it in the same place.</font></li>
+  <li><font face="Comic Sans MS" size="3">The text pad in the sensor notebook 
+  opposite the text-to-speech sensor was replaced by a text-to-speech sound. 
+  Besides the change in color of the pad, this make it much easier to get a 
+  text-to-speech sound to edit or extend. (The old way of dropping text on the 
+  text-to-speech sensor, vacuuming it off, and spitting it out again still works 
+  as well.)</font></li>
+  <li><font face="Comic Sans MS" size="3">ToonTalk would display variable width 
+  font text pads that are very wide incorrectly or when very long not at all. To 
+  work around this all text pads with more than 64K characters in a line are 
+  displayed with a fixed width font.</font></li>
+  <li><font face="Comic Sans MS" size="3">When a sound was copied with Maggie 
+  the Magic Wand it sometimes had the wrong size and font size.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a text-to-speech sound or Marty 
+  attempted to say something with a thousand or more characters then there was a 
+  long (sometimes very long) pause before the speaking began. If ToonTalk was 
+  paused or stopped while some very long text was being said, there was 
+  sometimes a long pause in processing the command. Fixing these problems 
+  introduced a short pause (about a second) every 20 seconds or so of speech.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">13/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">The text pad opposite the mathematics 
+  notebook in English says &quot;Numbers and Functions&quot; -- it now starts a second 
+  line after the &quot;and&quot; to look better.</font></li>
+  <li><font face="Comic Sans MS" size="3">Made more improvements to how 
+  fractions and shrinking decimals are displayed. (Experimental version only.)</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">14/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If the toontalk.ini Switch
+  <a href="ttini.htm#OKToDisplayNumbersShrinkingAndGrowing">
+  OKToDisplayNumbersShrinkingAndGrowing</a> was set to 0 then a little of the 
+  new number display code was run.</font></li>
+  <li><font face="Comic Sans MS" size="3">Improved the appearance of numbers 
+  when &quot;good size&quot;. (Experimental version only.)</font></li>
+  <li><font face="Comic Sans MS" size="3">Numeric sensors that need more than 
+  four digits since August 2003 display with extra initial white space when 
+  their value falls back to four digits or less. This rarely looked better and 
+  often was confusing. Disabled in experimental version.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you press the Pause button while in 
+  the puzzle game the dialog now includes the option of skipping the current 
+  puzzle. </font><big><font face="Comic Sans MS" size="3">(Experimental version 
+  only.)</font></big></li>
+  <li><font face="Comic Sans MS" size="3">Released Beta 46, 3.125, and 3.125X. 
+  (3.125X and Beta 46 differ only in that the beta version expires after 75 
+  days.)</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3"><a name="Beta47"></a>15/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed some recently introduced 
+  problems displaying numbers. (Experimental version only.)</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Added a <span lang="en-us">
+  &quot;Skip this Puzzle&quot; button to the puzzle game. (Experimental version only and 
+  requires full installer.)</span></font></li>
+</ol>
+<p dir="ltr"><span lang="en-us"><font face="Comic Sans MS" size="3">18/11</font></span></p>
+<ol>
+  <li dir="ltr">
+  <p dir="ltr"><span lang="en-us"><font face="Comic Sans MS" size="3">Saving a 
+  city the included a nest that a robot had waited upon and then run and then 
+  the nest moved and the house where nest was is blown up crashed ToonTalk.</font></span></li>
+</ol>
+<p dir="ltr"><span lang="en-us"><font face="Comic Sans MS" size="3">19/11</font></span></p>
+<ol>
+  <li dir="ltr">
+  <p dir="ltr"><span lang="en-us"><font face="Comic Sans MS" size="3">Fixed a 
+  bug in the implementation of a long-distance bird that was given something and 
+  the nest can't be reached then sometimes it caused a stack overflow much 
+  later. Note that this includes &quot;accidental&quot; long-distance birds that were 
+  saved without their nest and then given something.</font></span></li>
+  <li dir="ltr">
+  <p dir="ltr"><span lang="en-us"><font face="Comic Sans MS" size="3">Fixed 
+  another bug in the new number display code. </font></span><big>
+  <font face="Comic Sans MS" size="3">(Experimental version only.)</font></big></li>
+</ol>
+<p dir="ltr"><font face="Comic Sans MS" size="3">21/11</font></p>
+<ol>
+  <li dir="ltr">
+  <p dir="ltr"><big><span lang="en-us"><font face="Comic Sans MS" size="3">Fixed 
+  another bug in the new number display code. </font></span><big>
+  <font face="Comic Sans MS" size="3">(Experimental version only.)</font></big></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a number was edited to 
+  something that is syntactically incorrect and it ended in an operation then 
+  the original number was restored but the operation was kept.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes Marty describing a 
+  rational number caused a crash.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you pasted the same file 
+  into ToonTalk more than once you saw a confusing dialog screen warning about 
+  the inability to write a file.</font></li>
+</ol>
+<p dir="ltr"><font face="Comic Sans MS" size="3">22/11</font></p>
+<ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes a robot with other 
+  robots behind it in the team that had been trained to type something ended up 
+  typing things later than it should. This could cause it to type to the wrong 
+  object.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes giving an untrained 
+  robot with a box with a flipped picture in it led to the robot being trained 
+  on an unflipped copy of the picture.</font></li>
+</ol>
+<p dir="ltr"><font face="Comic Sans MS" size="3">23/11</font></p>
+<ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If the remote control for the 
+  looks of a picture with a bird/nest pair on the back was dropped on an erased 
+  picture the resulting picture had the bird/nest pair connected with the 
+  original bird and nest rather than becoming a new pair.</font></li>
+</ol>
+<p dir="ltr"><font face="Comic Sans MS" size="3">24/11</font></p>
+<ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a robot was matching 
+  against something on a nest and a bird had removed the stack and was in 
+  process of returning the stack then sometimes the robot kept waiting even when 
+  the bird restored the stack.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Dropping a text pad on a 
+  notebook sometimes caused a crash.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes a robot running 
+  off-screen that computed a number using the horizontal or vertical location 
+  sensor for a picture ended up with a floating number (grey with a couple dozen 
+  digits after the decimal point).</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem with the new 
+  &quot;Skip this puzzle&quot; button introduced on the 15th.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.126 and 3.126X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">25/11</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug that can cause a 
+  crash or strange behavior if Marty is describing a number with several 
+  thousand digits or more.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Improved the way Marty 
+  describes large numbers (those with more than 13 digits).</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">When you vacuum the
+  <a href="remote.htm#TouchingWho">Touching Who? sensor</a>, you once again see 
+  the sensor switch to the next item being touched (if there is more than). 
+  Broken for years. Enables programs that can deal intelligently with multiple 
+  collisions.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">29/11</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you copied a flipped 
+  picture then the geometry of the label on the back was wrong.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you saved an extremely 
+  large number (e.g. 10 to 10,000,000 in base 32) then when loading ToonTalk 
+  crashed. ToonTalk recovers from the error but the value of such numbers are 
+  lost. A warning is also produced.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If the same user name saved 
+  something with user media and then saved something else the latter often 
+  included extra unneeded media files thereby wasting disk space.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Improved the warnings 
+  produced when a non-XML ToonTalk file is loaded.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you set the option for
+  <a href="options.htm#MartysTalkLevel">Marty's talk level</a> to a value 
+  greater than 128, it sometimes became negative and Marty talked even more than 
+  usual.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.127 and 3.127X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">30/11</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug where text pads 
+  had a strange size when taken from Tooly or a Notebook if the source wasn't a 
+  &quot;good size&quot;.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Very large numbers (over 
+  100,000 digits and pretty tall) on the floor or ground took many seconds to 
+  display. (New experimental version only.)</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug where sometimes 
+  very large numbers (over 1,000,000 digits and pretty tall) displayed as blank.
+  </font><big><font face="Comic Sans MS" size="3">(New experimental version 
+  only.)</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug displaying a 
+  shrinking then growing number where the left half was off screen and the right 
+  half had giant digits. </font><big><font face="Comic Sans MS" size="3">(New 
+  experimental version only.)</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem where the new 
+  experimental number display displayed spaces in numeric sensors differently 
+  when running old demos sometimes causing them to break.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem introduced on 
+  3 weeks ago that caused number pads on the floor to sometimes have a strange 
+  size when their value changed.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Pressing F8 while running a 
+  demo exited the demo rather than gave over control if
+  <a href="ttini.htm#ExitWhenDemoEnds">ExitWhenDemoEnds</a> was set to 1.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed some problems with the 
+  new (experimental version only) button for skipping a puzzle.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">1/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem displaying 
+  one of the buttons in the Publish dialog (WebLabs version only) where on some 
+  systems the text didn't fit in the button.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Added error handling if the 
+  installer can't copy files (due to file protection or disk full or the like).</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed several problems caused 
+  when a bird is returning to the back of a picture or to a house that no longer 
+  exists.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem when a bird 
+  is returning to a box and there no longer is the hole it came from.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed several problems 
+  displaying operations that included numbers displayed as fractions. (New 
+  experimental version only.)</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem displaying 
+  fractions while they are being edited by the keyboard. </font><big>
+  <font face="Comic Sans MS" size="3">(New experimental version only.)</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a robot has been trained 
+  to drop a box on the back of a picture then the box will fall on the first 
+  free robot if there is one on the back. (This enables robots to construct 
+  behaviors on the back of pictures. If this isn't desired then the robot should 
+  be trained to drop boxes and then robots.)</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">While training a robot can no 
+  longer activate a picture so robots run on the back though when run that may 
+  indeed happen.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">A sensor in a robot's thought 
+  bubble was sometimes activated unnecessarily.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">The FTP publishing tool now 
+  tries to find its tt_ftp.ini file in the ToonTalk installation directory if it 
+  can't find it in My Documents\ToonTalk or the windows directory.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you logged in with a user 
+  name that hadn't been used for a long time then sometimes you'd get a dialog 
+  asking if you want Marty to treat you as a new user. This was confusing and 
+  occasionally you got asked twice. No longer asked.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">2/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem where 
+  sometimes if Marty had too much to say there was an error.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed several problems with 
+  pictures glued to the floor where you could vacuum them up and bam things on 
+  top. Broken since early in the year. Also made it easier to type control-s or 
+  control-g to toggle the infinite stack or graspable status.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If the installation does not 
+  provide GIF files of the built-in imagery in the Java folder of the ToonTalk 
+  installation then ToonTalk now generates them as needed to make applets. Also 
+  the palette is now optimized for the image so it'll look better unless run 
+  with Windows in 256-color mode. Saves about 15MB on the user's disk and 
+  installation disk.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug introduced on 
+  20/8 that was asymptomatic on Windows 2000 and XP but crashed on start up with 
+  Windows Millennium (and probably 98 as well).</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem where if a 
+  robot on the back of a picture that was on the back of another picture loads 
+  up a truck with a box with sensors then the sensors had wrong allegiance.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.128 and 3.128X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">4/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem where numbers 
+  have a very small space (only for a few digits) where the font and display 
+  weren't very good. (Experimental version only.)</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you flipped a picture with 
+  flipped pictures on the back then sometimes the labels of the subpictures were 
+  the wrong font and the picture of the other side was the wrong width.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">5/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">When you drop a team of 
+  robots on an erased box you get one robot per hole. Sometimes the robots were 
+  copied and parts of the team were together in the holes.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">10/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">It was possible to save and 
+  restore a robot with a nest in its thought bubble box that would cause stack 
+  overflows. (I tried to hard to reproduce this and couldn't so I ensured that 
+  when saved it will load OK.)</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If some long-distance birds 
+  are trying to deliver something and you are holding the nest and then stand 
+  up, you ended up with frozen ungraspable flying birds on the floor.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Somehow a bomb exploded 
+  without knowing where it was. Not clear how this arose but it no longer 
+  crashes if this happens.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a user media file is 
+  missing you still get a warning in the log file but it is no longer marked as 
+  a ToonTalk bug that should be reported.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">It was possible to have 
+  ToonTalk running in UK English but speaking US English (not just using a US 
+  English voice but using a different string table) that led to a crash when 
+  Marty said something (probably that was quite different in the two versions). 
+  Also fixed the same problem if running US English and speaking UK English.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes editing a fraction 
+  displayed poorly. </font><big><big><font face="Comic Sans MS" size="3">
+  (Experimental version only.)</font></big></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you edited a fraction 
+  while it was attached to the Magic Wand it displayed incorrectly. </font><big>
+  <font face="Comic Sans MS" size="3">&nbsp;(Experimental version only.)</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If </font><big><font face="Comic Sans MS" size="3">
+  <a href="ttini.htm#OKToDisplayNumbersShrinkingAndGrowing">
+  OKToDisplayNumbersShrinkingAndGrowing</a> was set to 0 then the Good Size of 
+  fractions (e.g. Pumpy in 'G' mode) was wrong in the experimental version.</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you typed multiple 
+  arithmetic operations at the end of a number once again the last one is used 
+  (since 6/11 the first one was used). E.g. 2/* will multiply by 2 not divide.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you took the width or 
+  height sensors of a picture to another house or put them on the ground they 
+  produced strange numbers and sizes.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you vacuumed up Tooly, 
+  stood up, and saved your city then ToonTalk crashed when restoring that city.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Pumpy sometimes let you pump 
+  things so big that they didn't display properly.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a robot was trained to 
+  change the mode of the Magic Wand multiple times while in the Puzzle Game then 
+  it didn't run correctly when you stood up and watched it.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.129 and 3.129X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">11/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Glued items and infinite 
+  stacks on the floor are now below Tooly and others. Previously if you had a 
+  large picture glued to the floor then Tooly could end up under it.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem where a nest 
+  was copied, a bird given something and then the nest copy was destroyed or 
+  vacuumed.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed some problems with 
+  birds moving the stack on a nest while a robot was working on it as well.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem introduced 
+  with 3.129 concerning width and height sensors in some circumstances (one was 
+  while being copied they didn't work right).</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">12/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug where roof and 
+  house decoration sensor stopped working properly if you stood up.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug where sometimes 
+  the object dropped on the </font><big><font face="Comic Sans MS" size="3">roof 
+  and house decoration sensor ended up with the wrong dimensions on the house.</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug where if you sat 
+  on the grass and moved your hand enough that the camera needed to move then 
+  objects on the ground moved.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes pictures 
+  (rectangular or SHOW ALL) were displayed with a thin black line above them.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.130 and 3.130X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">13/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Immediately after training a 
+  robot his name was displayed at the wrong place. Fixed some (but not all) 
+  other occurrences of a robot's name being displayed in the &quot;wrong&quot; place.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem where 
+  dropping a number on a single letter text pad changed its size in an 
+  inappropriate manner. Bug introduced on 24/9.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">14/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">The fix of the size of a text 
+  pad after a number was dropped on it required a different fix to the problem 
+  on 24/9 of coping and pasting a zero-length text pad that is not inside 
+  something.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed many instances of where 
+  a object became a different size when manipulated that occurred only if Tooly 
+  was not himself a Good Size.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a robot dropped a nest on 
+  a nest while it was off screen it would sometimes leave a copy of the dropped 
+  nest on the floor.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a robot was trained to 
+  drop a nest with an egg in it on another nest then sometimes when it ran it 
+  would get confused.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">The fix of 11/12 introduced a 
+  bug where if you gave a bird something whose nest had been copied and then 
+  removed a copy of the bird delivered the message but a copy of the message was 
+  created and left on top of where the bird was.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Many very frequent mouse 
+  clicks to use Maggie the Wand sometimes crashed ToonTalk.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">The fix of 10/12 to deal with 
+  speaking and displaying different English dialects caused a spurious warning 
+  about a missing puzzle file.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">An untrained robot now 
+  animates to indicate it is waiting to be trained and so its appearance is 
+  different from trained robots whose box has been sucked out and erase trained 
+  robots.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If 1280x1024 was chosen as 
+  the resolution ToonTalk instead ran at 1280x960 (or tried to -- if in 
+  full-screen mode DirectX refused to switch to that resolution you got a 
+  message to try again at a lower resolution). (It is strange that all the other 
+  standard resolutions are 4x3 except this one.)</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Modified the main ToonTalk 
+  executable to run off a CD-ROM (it uses the location of the executable as an 
+  indication where the ToonTalk files are kept).</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">15/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">The UK English version now 
+  has a different splash screen and a different location for the version 
+  information and copyright notice.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you train a robot to break 
+  the main box into parts and then get rid of the one labeled &quot;My Box&quot;, ToonTalk 
+  now picks one of the other pieces as the new box this team of robots is 
+  working on.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Erased pictures and boxes in 
+  a thought bubble no longer keep their parts or contents (for recreation by 
+  Maggie the Magic Wand in 'O' mode).</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug caused by giving 
+  a robot a box with an infinite recursion -- e.g. a picture containing box 
+  containing the remote looks of the picture.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Modified the Start ToonTalk 
+  executable to enable running ToonTalk off a CD-ROM without installation.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">When replaying a demo the 
+  user profile file (USR) for that user was updated needlessly.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">16/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem with the 
+  switching of &quot;My Box&quot; implemented yesterday if a city was saved (or a time 
+  travel segment boundary) while training a robot.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.131 and 3.131X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">17/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug introduced on 
+  29/7 where if a robot is trained to vacuum something off a remote control then 
+  he remembered it as vacuuming off the FIRST remote control in the box.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you drop a file name on 
+  the the &quot;File to Picture&quot; sensor (renamed &quot;File to Object on 19/12) then for 
+  many months the file is turned into a ToonTalk object even if it isn't a 
+  picture. Works well with TT files. Changed today to also work with URLs not 
+  just local file names.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you type control-shift-v 
+  while the clipboard has text that is a file name or URL then the file (not the 
+  text) is pasted into ToonTalk.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">18/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a few bugs that 
+  prevented old demos from running in the latest version correctly.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem with demos 
+  and time travel that used the new control-shift-v feature to paste in files.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem </font><big>
+  <font face="Comic Sans MS" size="3">with demos and time travel when a file 
+  without an extension is pasted in.</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug where a very 
+  large object is shrunk by Pumpy and it sometimes suddenly moved off screen.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If the ToonTalk FTP 
+  publishing tool can't find it INI customization file it now also looks in the
+  <a href="ttini.htm#UserFiles">UserFiles</a> folder is specified in 
+  toontalk.ini.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes when pasting text 
+  (or a file containing text) the log file contained spurious warnings about 
+  problems parsing XML.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">19/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">ToonTalk no longer creates a 
+  ToonTalk folder under My Documents if it is started with a toontalk.ini file 
+  that gives another location for </font><big>
+  <font face="Comic Sans MS" size="3"><a href="ttini.htm#UserFiles">UserFiles</a>. 
+  Also crash reports end up a subfolder of <a href="ttini.htm#UserFiles">
+  UserFiles</a> if specified.</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Updated the ClickMe.exe that 
+  is once again run from the ToonTalk CD-ROM as the AutoPlay executable. It 
+  gives the user the choice of installing or running ToonTalk off the CD-ROM.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">When running off the CD-ROM 
+  without installation the user is asked where user files should be kept.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Various Directories entries 
+  in toontalk.ini can now be specified as ?\Foo where ? is replaced by the path 
+  to the ToonTalk executable. This enables ToonTalk to be run off of removable 
+  media (e.g. a memory key or a CD/RW disk) without installation.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.132 and 3.132X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">26/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Since the release of 3.119 
+  ToonTalk can crash if during time travel you pause and 'Come Back Later' while 
+  mouse speed sensors are active.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If a robot is trained to 
+  destroy a notebook, the comment of the notebook (if it has one) was destroyed 
+  twice.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Released 3.133 and 3.133X.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">27/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a bug where user 
+  pictures with transparent areas were replaced with black if the pictures were 
+  copied and then saved without ever being displayed. E.g. by dropping a box of 
+  them on an erased notebook.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a minor problem where 
+  some demos initialized the contents of Tooly the Toolbox twice.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">29/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Sometimes if a tool such as 
+  Dusty the Vacuum jumps into your hand after being called then his selection 
+  point isn't at his mouth.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Improved the error messages 
+  when a demo or time travel doesn't replay correctly.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">30/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><big><font face="Comic Sans MS" size="3">You can now 
+  <a href="dragdrop.htm">drag and 
+  drop</a> a link from a browser (Internet Explorer and Netscape tested) into 
+  ToonTalk. Experimental version only.</font></big></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you jumped to a segment in 
+  time travel where the sensor notebook (on page 4 of your main notebook) had 
+  earlier been opened then sometimes the replay broke (due to the non-existence 
+  of Clipboard Remote on replay).</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">If you drag a single file 
+  into ToonTalk you no longer get that item in a box.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">ToonTalk now deals better 
+  with URLs that contain a question mark.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">31/12</font><ol>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Introduced the 
+  <a href="ttini.htm#KeepRunningDemoDespiteProblems">KeepRunningDemoDespiteProblems</a> toontalk.ini Switch and the 
+  <a href="command.htm#KeepRunningDemoDespiteProblems">-keep_running_demo_despite_problems</a> 
+  command line option so that ToonTalk doesn't quit running a demo or time 
+  travel segment when an anomaly is encountered.</font></li>
+  <li dir="ltr">
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Fixed a problem where the new 
+  ability to 
+  drag and drop a link from a browser didn't create the object at the drop 
+  location.</font></li>
+</ol>
+  <p dir="ltr"><font face="Comic Sans MS" size="3">Continued for </font><big><big><font size="3" face="Comic Sans MS">
+  <a href="bugs05.htm">2005</a>.</font></big></big></big><p align="center"><font face="Comic Sans MS"><small><a href="toontalk.htm">home</a> | <a
+href="http://www.toontalk.com/English/search.htm">search</a> | <a href="buy.htm">purchase</a>
+| <a href="doc.htm">manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="press.htm">press</a> | <a href="address.htm">contact us</a></small></font></p>
+
+</body>
+</html>

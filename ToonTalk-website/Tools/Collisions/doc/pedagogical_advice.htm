@@ -1,0 +1,187 @@
+<html><!-- InstanceBegin template="/Templates/collision.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebLabs - Collision Tools</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="92%"><span class="title">Collision Tools</span></td>
+    <td width="8%"><span class="menu"><a href="/index.html"><img src="../../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="../../Sequences/Doc/index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Eco/doc/index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="../../RCX/doc/index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="../../General/doc/index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td width="25%"><div align="center"><a href="pedagogical_advice.htm" class="menuWhite">1D collision activities</a></div></td>
+          <td width="25%"><div align="center"><a href="1d-collision.htm" class="menuWhite">1D collision tool </a></div></td>
+          <td width="25%"><div align="center"><a href="mass_tool.htm" class="menuWhite">Mass tool </a></div></td>
+          <td width="25%">            <div align="center"><a href="guidance.htm" class="menuWhite">Teacher Guidance</a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- InstanceBeginEditable name="mainbody" -->
+    <p class="paragraphheading">Pedagogical advice: 1D collision activities </p>
+    <p class="parasubheading">Outline of the activity sequence</p>
+  <p class="mainbody">The activity sequence consists of a number of cycles involving prediction, 
+  phenomena observation, modelling, model testing and consideration of the 
+  current model’s scope of application:</p>
+  <img src="../Guidance_activity_cycle.png" width="620" height="231">
+  <p class="mainbody">The cycle consists of essentially the same activities being conducted with 
+  different <i>classes </i>of collision phenomena. There are perhaps five 
+  different 'classes' of perfectly elastic collision that can occur between the 
+  carts (see table). The collision events in the different classes appear 
+  visually different, although they are all governed by the same laws of 
+  conservation of momentum and energy. The first four classes are similar in 
+  that they deal with carts of the same mass and the fifth represents collisions 
+  between carts of differing mass.</p>
+  <p>
+  <img src="../Guidance_colls_table.GIF" width="596" height="344"><O:P>&nbsp;</O:P>
+  </p>
+  <h1 class="paragraphheading">Potential problems and lessons learnt</h1>
+  <p class="mainbodybold">Pretests</p>
+  <p class="mainbody">You need to have a group discussion before the pre-tests about the meanings of 
+  the terms and questions, to ensure that the students understand them. 
+  You specifically need to discuss the terms ‘frictionless’ and ‘velocity’.</p>
+  <h4 class="mainbodybold">Typical modelling solutions</h4>
+  <p class="mainbody">Our experience has shown that students are likely to produce three 
+  different types of model - 'Transfer', 'Reflect' and 'Swap'. We include 
+  examples of these models here for reference.</p>
+  <p class="mainbody">The Transfer model is likely to be attempted for Collision type A - the 
+  robot is programmed to copy the speed from cart1 to cart2, then set cart2's 
+  speed to zero:</p>
+  <p>      <a href="../Transfer.tt">
+    <img src="../Transfer.png"></a>
+      </p>
+  <p class="mainbody">The Reflect model is likely to be attempted for Collision type B - the 
+  robot is programmed to change the sign of both carts' speeds (i.e. reverse 
+  direction):</p>
+  <p>      <a href="../Reflect.tt">
+    <img src="../Reflect.png"></a>
+      <br>
+&nbsp;</p>
+  <p class="mainbody">The Swap model is likely to be attempted for Collision types C/D - the 
+  robot is programmed to swap both carts' speeds:</p>
+  <p>      <a href="../Swap.tt">
+    <img src="../Swap.png"></a><br>
+&nbsp;</p>
+  <p class="parasubheading">Modelling issues</p>
+  <ul>
+    <li class="mainbody">Note that it is optional to also train the robot to 'uncollide' after 
+    manipulating the speed sensors. 'Uncolliding' is changing the value of a 
+    collision sensor (from colliding to not-colliding) which is done using the 
+    '-' key. Doing this ensures that the robot will only run once (i.e. it is 
+    trained to run only when colliding, and you tell it to uncollide so it won't 
+    be colliding next time it checks). This adds a bit of complexity, but gets 
+    around the problem of carts sometimes getting 'stuck together' as a robot 
+    continuously runs.<br>
+&nbsp;</li>
+    <li><span class="mainbody">The expected solution for Collision type A is a 'Transfer' model in 
+    which the robot would copy Speed 1 and assign it to Speed 2 and then set 
+    Speed 1 to zero. There are a number of potential mistakes that students 
+    might make:</span><br>
+&nbsp;<ul>
+      <li class="mainbody">The first modelling approach for all students was to train the robot to 
+      set an explicit value to Speed 2. For example, students would set up the 
+      input so that Speed 1 was say 5, but instead of copying Speed 1 over to 
+      Speed 2 they would take a 5 from the toolbox and add it to Speed 2 (or 
+      simply type 5 on the sensor). As an intervention, the researchers would 
+      suggest trying a different speed (say 20) for the speed of cart1 and show 
+      that cart2 would always move at 5 after collision instead of the incoming 
+      speed of cart1. Even after this intervention, some students would then 
+      train a new robot to set the speed of cart2 to 20 after collision. </li>
+    </ul>
+    <ul>
+      <li class="mainbody">Students might train the robot to take (instead of copy) Speed 1 and 
+      add it to Speed 2. This results in the Speed 1 sensor being lost after the 
+      robot runs once. </li>
+      <li class="mainbody">Students might train the robot to first set Speed 1 to zero, then copy 
+      it over to Speed 2. This results in both speeds always being set to zero.
+      </li>
+      <li class="mainbody">Students might train their robot with a single digit Speed 1 (e.g. 
+      speed = 1) and make Speed 1 zero by using the delete key. This works fine 
+      for any single digit speed, but breaks down if the speed is greater than 
+      9. For example, if Speed 1 is 50 then the robot will change the speed to 5 
+      by deleting just the last digit.</li>
+    </ul>
+    </li>
+  </ul>
+  <ul>
+    <li class="mainbody">When programming a ‘Reflect’ model (carts simply change direction when 
+    they hit something), students might not realize how to change a negative 
+    number to a positive number. They might see that pressing the ‘-‘ key 
+    changes positive to negative but not realize that the inverse is also true. 
+    This can be demonstrated using a Speed sensor and showing how an object 
+    repeatedly reverses direction each time the '-' key is pressed.</li>
+  </ul>
+  <ul>
+    <li class="mainbody">Conceptual and ToonTalk issues involved in correctly programming a 
+    'Swap' model that students might need help with: </li>
+  </ul>
+  <ul>
+    <ul>
+      <li class="mainbody">Firstly students need to realize that they have to use an intermediate 
+      variable (some form of storage) in order to swap values. This is true in 
+      any programming language. If you want to swap the value of x with the 
+      value of y, then you first need to store the value of x in z, then assign 
+      the value of y to x, then assign the value of z (the original x value) to 
+      y. This can be explained to students by analogy e.g. “if you had a glass 
+      of coke and a glass of water, and wanted to swap the glasses they were in, 
+      how could you do it?”. </li>
+      <li class="mainbody">There is an additional complication in ToonTalk where you first need 
+      to convert the Speed sensor(s) into a number. This can be done by copying 
+      Speed sensor and dropping it on top of a ‘0’ number pad (this both 
+      converts it from a sensor to a number and adds it to the 0 i.e. doesn’t 
+      change the value). The swapping will not work correctly unless you do 
+      this. </li>
+    </ul>
+  </ul>
+  <h4 class="parasubheading">General</h4>
+  <ul>
+    <li class="mainbody">At certain points, a student was selected and asked to explain how 
+    their model worked followed by a group discussion. This worked really well 
+    although it wasn’t explicitly part of the activity sequence. </li>
+    <li class="mainbody">When working on webreports, encourage students to save their reports 
+    regularly so that not too much work is lost if there are any problems 
+    saving. </li>
+  </ul>
+</div>
+
+
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+<!-- InstanceEnd --></html>

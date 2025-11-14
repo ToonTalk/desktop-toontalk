@@ -1,0 +1,456 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\Program Files\Microsoft Office\Office\HTML.DOT">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>How to Create ToonTalk Extensions</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>How to Create ToonTalk Extensions<strong> </strong>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></b></font></p>
+
+<p><strong><font face="Comic Sans MS"><i>For very advanced users only:</i></font></strong></p>
+
+<p><font face="Comic Sans MS">Programmers in languages like C or Pascal can define new <a
+href="extend.htm">extensions</a> to ToonTalk. A ToonTalk user thinks of an extension is a
+faraway place that cannot be visited. But a user can obtain a bird which will
+&quot;fly&quot; there. The bird can even bring along other birds who can fly back with
+things made by the extension. Extensions can make any capability of the underlying
+operating system (e.g. Windows) available to users inside of ToonTalk. Examples include
+files, window management, Internet access, producing music or 3D graphics, and much more.
+If you do make a ToonTalk extension, <i>please</i> contribute it to the larger ToonTalk
+community by sending it to support@toontalk.com.</font></p>
+
+<p><font face="Comic Sans MS">Extensions are implemented as Microsoft Windows DLLs
+(dynamic link libraries). The library needs only to export one procedure. The procedure's
+type should be:</font></p>
+
+<p><font face="Terminal"><b>BOOL __declspec(dllexport) receive(HANDLE handle, void
+**data_in, char *types_in, char *label, char *country_code, void ***data_out, char
+**types_out, char **to_say, BOOL *ok_to_speak, HINSTANCE string_library);</b></font></p>
+
+<p><font face="Comic Sans MS">If a bird connected to an extension is given a box then the
+receiver associated with that bird is called with the following arguments:</font></p>
+
+<p><font face="Comic Sans MS"><b>HANDLE handle.</b></font></p>
+
+<p><font face="Comic Sans MS">A handle associated with the bird. Will be NULL unless the
+bird was created by an extension. Used, for example, by the file extension to hold the
+file handle.</font></p>
+
+<p><font face="Comic Sans MS"><b>void **data_in</b></font></p>
+
+<p><font face="Comic Sans MS"><i>data_in</i> is an array of pointers. It is interpreted
+relative to types described in <em>types_in</em>. <i>data_in</i> is flat, i.e. elements of
+<i>data_in</i> are not themselves pointers to arrays of pointers.</font></p>
+
+<p><font face="Comic Sans MS"><b>char *types_in</b></font></p>
+
+<p><font face="Comic Sans MS">A null-terminated string describing the ToonTalk types of
+the box received by the bird. <i>L</i> is for a long integer from a ToonTalk number pad. <i>S</i>
+is for a string for a ToonTalk text pad. <i>H</i> is for a handle of a bird to an
+extension. Square brackets (<i>[])</i> enclose the elements of a box. A minus sign (<i>-)</i>
+indicates an empty hole of a box. <i>B</i> indicates a normal bird. <i>?</i> is for all
+other ToonTalk objects. For L, S, B, - and ? there is a corresponding data item in the
+data argument described above. The elements of a box inside a box occur in place in <i>data_in.</i>
+A handle (H) needs 3 data items: the receiver procedure, the associated handle, and a
+string that labels the handle.</font></p>
+
+<p><font face="Comic Sans MS"><b>char *label</b></font></p>
+
+<p><font face="Comic Sans MS">A null-terminated string labeling this bird. Typically can
+be seen on the T-shirt of the bird.</font></p>
+
+<p><font face="Comic Sans MS"><b>char *country_code</b></font></p>
+
+<p><font face="Comic Sans MS">A null-terminated 2 letter string indicating the country
+code of this version of ToonTalk. Examples include &quot;US&quot;, &quot;UK&quot;,
+&quot;SE&quot;, &quot;DE&quot;, and &quot;BR&quot;. This argument is provided in case the
+extension wants Marty to speak or to put up a dialog box in a language sensitive manner.</font></p>
+
+<p><font face="Comic Sans MS"><b>void ***data_out</b></font></p>
+
+<p><font face="Comic Sans MS">This is an array of pointers -- one for each bird in the box
+given to the extension bird. This enables an extension to specify what items should be
+given to birds that it receives. Each element of <i>data_out</i> should be set to another
+array of pointers whose length and elements are consistent with the corresponding elements
+in <i>types_out</i> (described below). Note that storage allocated for the values of <i>types_out</i>
+should be allocated in Windows global heap. (E.g. using GlobalAlloc.)</font></p>
+
+<p><font face="Comic Sans MS"><b>char **types_out</b></font></p>
+
+<p><font face="Comic Sans MS">This is an array of pointers -- one for each bird in the box
+given to the extension bird. To specify what a bird should receive set the corresponding
+element (its occurrence while scanning from left to right) to a globally allocated
+null-terminated string that describes the types in exactly the same manner as <i>types_in</i>.
+For each element in <i>types_out</i>, a ToonTalk item is created using the data in <i>data_out</i>.</font></p>
+
+<p><font face="Comic Sans MS"><b>char **to_say</b></font></p>
+
+<p><font face="Comic Sans MS">Should be set to a null-terminated globally allocated string
+if the extension wishes Marty to say something.</font></p>
+
+<p><font face="Comic Sans MS"><b>BOOL *ok_to_speak</b></font></p>
+
+<p><font face="Comic Sans MS">This should be set to non-zero if, when Marty is to speak
+the <i>to_say</i> string, he should use a text-to-speech engine. If not set, then Marty
+will use talk balloons.</font></p>
+
+<p><font face="Comic Sans MS"><b>HINSTANCE string_library</b></font></p>
+
+<p><font face="Comic Sans MS">This is a handle on the currently loaded ToonTalk string
+resource DLL. It should be ignored unless the writer of the extension has access to
+ToonTalk's string table.</font></p>
+
+<p><font face="Comic Sans MS"><i>Returns.</i></font></p>
+
+<p><font face="Comic Sans MS">The receiver procedure should return non-zero if the <i>data_out</i>
+and <i>types_out</i> variables were set.</font></p>
+
+<p><font face="Comic Sans MS"><i>Remarks.</i></font></p>
+
+<p><font face="Comic Sans MS">If <i>types_in</i> is NULL then the procedure is being
+called so that Marty can describe what this bird does. If <i>types_in</i> is
+&quot;H&quot;, then the last bird associated with <i>handle</i> is being destroyed. Here
+is an opportunity to clean up (e.g. close file handles).</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Comic Sans MS">The DEF file for the DLL should contain the line:</font></p>
+
+<p><font size="4" face="Terminal">EXPORTS receive@1</font></p>
+
+<p><font face="Comic Sans MS">The DLL should be named &quot;TT&quot; followed by the
+extension name. Simply placing the DLL file in the ToonTalk directory installs it.</font></p>
+
+<p><font size="4" face="Comic Sans MS"><i>Sample code.</i></font></p>
+
+<p><font face="Comic Sans MS">Here is an example definition of a file extension defined in
+C++ (though with only minor differences could have been defined in C).</font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Terminal"><code>// Copyright (c) 1992,1998. Ken Kahn, Animated Programs,
+All rights reserved.</code></font></p>
+
+<p><font face="Terminal"><code>// You may copy and modify this file so long as you keep
+this copyright notice.</code></font></p>
+
+<p><font face="Terminal"><code>#include &lt;windows.h&gt;</code></font></p>
+
+<p><font face="Terminal"><code>extern &quot;C&quot; int __declspec(dllexport) WEP (int
+nParam);</code></font></p>
+
+<p><font face="Terminal"><code>extern &quot;C&quot; BOOL __declspec(dllexport)
+receive(HANDLE handle, void **data, char *types, void ***out, char **out_types, char
+**to_say, HINSTANCE string_library);</code></font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Terminal"><code>int FAR PASCAL LibMain (HANDLE , WORD , WORD , LPSTR ) {</code></font>
+
+<dir>
+  <li><font face="Terminal"><code>return 1 ;</code></font></li>
+</dir>
+
+<p><font face="Terminal"><code>}</code></font></p>
+
+<p><font face="Terminal"><code>int __declspec(dllexport) WEP (int) {</code></font> 
+
+<dir>
+  <li><font face="Terminal"><code>return 1 ;</code></font></li>
+</dir>
+
+<p><font face="Terminal"><code>}</code></font></p>
+
+<p><font face="Terminal"><code>char *copy_string(char *source, int length) {</code></font>
+
+<dir>
+  <li><font face="Terminal"><code>if (source == NULL) return(NULL);</code></font><p><font
+    face="Terminal"><code>if (length &lt;= 0) length = strlen(source);</code></font></p>
+    <p><font face="Terminal"><code>char *destination = (char *) GlobalAlloc(0,length+1); //
+    Can't use library's local storage</code></font></p>
+    <p><font face="Terminal"><code>memcpy(destination,source,length);</code></font></p>
+    <p><font face="Terminal"><code>destination[length] = '\0'; // terminate the string</code></font></p>
+    <p><font face="Terminal"><code>return(destination);</code></font></p>
+  </li>
+</dir>
+
+<p><font face="Terminal"><code>};</code></font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Terminal"><code>// This receiver procedure is associated with opened files</code></font></p>
+
+<p><font face="Terminal"><code>BOOL file_receive(HANDLE handle, void **data, char *types,
+char *label, char *country_code, </code></font></p>
+
+<p><font face="Terminal"><code>void ***out, char **out_types, char **to_say, BOOL
+*ok_to_speak, HINSTANCE string_library) {</code></font> 
+
+<ul>
+  <li><font face="Terminal"><code>if (types == NULL) { // want help</code></font><dir>
+      <li><font face="Terminal"><code>*to_say = copy_string(&quot;This is a file handle.&quot;,0);
+        // could give better help</code></font><p><font face="Terminal"><code>return(TRUE);</code></font></p>
+      </li>
+    </dir>
+    <p><font face="Terminal"><code>};</code></font></p>
+    <p><font face="Terminal"><code>if (strcmp(types,&quot;[SLB]&quot;) == 0) {</code></font><dir>
+      <li><font face="Terminal"><code>if (stricmp((char *) data[0],&quot;Read&quot;) == 0) { //
+        box contains &quot;Read&quot;, a number, followed by a bird</code></font><dir>
+          <li><font face="Terminal"><code>long number_of_bytes_to_read = (long) data[1]; </code></font><p><font
+            face="Terminal"><code>DWORD number_of_bytes_read;</code></font></p>
+            <p><font face="Terminal"><code>char *buffer = (char *)
+            GlobalAlloc(0,number_of_bytes_to_read+1);</code></font></p>
+            <p><font face="Terminal"><code>if
+            (!ReadFile(handle,buffer,number_of_bytes_to_read,&amp;number_of_bytes_read,NULL)) {</code></font><dir>
+              <li><font face="Terminal"><code>// set *to_say to describe the error.</code></font></li>
+            </dir>
+            <p><font face="Terminal"><code>};</code></font></p>
+            <p><font face="Terminal"><code>// give the bird in the third hole of the box a string
+            containing the characters just read</code></font></p>
+            <p><font face="Terminal"><code>out_types[0] = copy_string(&quot;S&quot;,1);</code></font></p>
+            <p><font face="Terminal"><code>out[0] = (void * *) GlobalAlloc(0,sizeof(void*)); </code></font></p>
+            <p><font face="Terminal"><code>buffer[number_of_bytes_read] = '\0'; // terminate string</code></font></p>
+            <p><font face="Terminal"><code>out[0][0] = (void *) buffer;</code></font></p>
+            <p><font face="Terminal"><code>return(TRUE);</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>} else if (stricmp((char *) data[0],&quot;Read Bytes&quot;)
+        == 0) {</code></font><dir>
+          <li><font face="Terminal"><code>long number_of_bytes_to_read = (long) data[1]; </code></font><p><font
+            face="Terminal"><code>DWORD number_of_bytes_read;</code></font></p>
+            <p><font face="Terminal"><code>char *buffer = (char *)
+            GlobalAlloc(0,number_of_bytes_to_read+1);</code></font></p>
+            <p><font face="Terminal"><code>if
+            (!ReadFile(handle,buffer,number_of_bytes_to_read,&amp;number_of_bytes_read,NULL)) {</code></font><dir>
+              <li><font face="Terminal"><code>// set *to_say to describe the error.</code></font></li>
+            </dir>
+            <p><font face="Terminal"><code>};</code></font></p>
+            <p><font face="Terminal"><code>// give the bird a box which for each character read
+            contains an integer whose value is the ASCII encoding of the character </code></font></p>
+            <p><font face="Terminal"><code>out_types[0] = (char *)
+            GlobalAlloc(0,number_of_bytes_read+3); // 3 extra for [] and terminator</code></font></p>
+            <p><font face="Terminal"><code>out[0] = (void * *)
+            GlobalAlloc(0,sizeof(void*)*number_of_bytes_read);</code></font></p>
+            <p><font face="Terminal"><code>int out_type_index = 0;</code></font></p>
+            <p><font face="Terminal"><code>out_types[0][out_type_index++] = '[';</code></font></p>
+            <p><font face="Terminal"><code>for (DWORD i = 0; i &lt; number_of_bytes_read; i++) {</code></font><dir>
+              <li><font face="Terminal"><code>out_types[0][out_type_index++] = 'L';</code></font><p><font
+                face="Terminal"><code>out[0][i] = (void *) buffer[i];</code></font></p>
+              </li>
+            </dir>
+            <p><font face="Terminal"><code>};</code></font></p>
+            <p><font face="Terminal"><code>out_types[0][out_type_index++] = ']';</code></font></p>
+            <p><font face="Terminal"><code>out_types[0][out_type_index++] = '\0'; // terminate string</code></font></p>
+            <p><font face="Terminal"><code>return(TRUE);</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>};</code></font></p>
+      </li>
+    </dir>
+    <p><font face="Terminal"><code>} else if (strcmp(types,&quot;[SSB]&quot;) == 0) {</code></font><dir>
+      <li><font face="Terminal"><code>if (stricmp((char *) data[0],&quot;Write&quot;) == 0) { //
+        box is Write, followed by a text pad, followed by a bird</code></font><dir>
+          <li><font face="Terminal"><code>char *buffer = (char *) data[1];</code></font><p><font
+            face="Terminal"><code>long number_of_bytes_to_write = strlen(buffer);</code></font></p>
+            <p><font face="Terminal"><code>DWORD number_of_bytes_written;</code></font></p>
+            <p><font face="Terminal"><code>if
+            (WriteFile(handle,buffer,number_of_bytes_to_write,&amp;number_of_bytes_written,NULL)) {</code></font><dir>
+              <li><font face="Terminal"><code>out_types[0] = copy_string(&quot;L&quot;,1);</code></font><p><font
+                face="Terminal"><code>out[0] = (void * *) GlobalAlloc(0,sizeof(void*));</code></font></p>
+                <p><font face="Terminal"><code>out[0][0] = (void *) number_of_bytes_written;</code></font></p>
+                <p><font face="Terminal"><code>return(TRUE);</code></font></p>
+              </li>
+            </dir>
+            <p><font face="Terminal"><code>} else {</code></font><dir>
+              <li><font face="Terminal"><code>// set *to_say to describe error</code></font><p><font
+                face="Terminal"><code>return(FALSE);</code></font></p>
+              </li>
+            </dir>
+            <p><font face="Terminal"><code>};</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>};</code></font></p>
+      </li>
+    </dir>
+    <p><font face="Terminal"><code>} else if (strncmp(types,&quot;[S[&quot;,3) == 0) { //
+    looking for [S[LL...LL]B] where S is Write Bytes</code></font><dir>
+      <li><font face="Terminal"><code>if (stricmp((char *) data[0],&quot;Write Bytes&quot;) == 0)
+        {</code></font><dir>
+          <li><font face="Terminal"><code>int index = 3; // already checked first 3 characters of type</code></font><p><font
+            face="Terminal"><code>while (types[index] != '\0') {</code></font><dir>
+              <li><font face="Terminal"><code>if (types[index] == ']') { // OK so far</code></font><dir>
+                  <li><font face="Terminal"><code>if (types[index+1] == 'B' &amp;&amp; types[index+2] == ']')
+                    { // everything fine</code></font><dir>
+                      <li><font face="Terminal"><code>index -= 3; // index is now the size of the box of numbers</code></font><p><font
+                        face="Terminal"><code>unsigned char *buffer = new unsigned char[index];</code></font></p>
+                        <p><font face="Terminal"><code>for (int i = 0; i &lt; index; i++) {</code></font><dir>
+                        <li><font face="Terminal"><code>buffer[i] = (unsigned char) data[i+1];</code></font></li>
+                        </dir>
+                        <p><font face="Terminal"><code>};</code></font></p>
+                        <p><font face="Terminal"><code>DWORD number_of_bytes_written;</code></font></p>
+                        <p><font face="Terminal"><code>if
+                        (WriteFile(handle,buffer,index,&amp;number_of_bytes_written,NULL)) {</code></font><dir>
+                        <li><font face="Terminal"><code>// give the bird a number showing how many characters were
+                        written</code></font><p><font face="Terminal"><code>out_types[0] =
+                        copy_string(&quot;L&quot;,1);</code></font></p>
+                        <p><font face="Terminal"><code>out[0] = (void * *) GlobalAlloc(0,sizeof(void*));</code></font></p>
+                        <p><font face="Terminal"><code>out[0][0] = (void *) number_of_bytes_written;</code></font></p>
+                        <p><font face="Terminal"><code>return(TRUE);</code></font></p>
+                        </li>
+                        </dir>
+                        <p><font face="Terminal"><code>} else {</code></font><dir>
+                        <li><font face="Terminal"><code>// Set *to_say to describe error</code></font><p><font
+                        face="Terminal"><code>return(FALSE);</code></font></p>
+                        </li>
+                        </dir>
+                        <p><font face="Terminal"><code>};</code></font></p>
+                      </li>
+                    </dir>
+                    <p><font face="Terminal"><code>} else break; // fall through</code></font></p>
+                  </li>
+                </dir>
+                <p><font face="Terminal"><code>} else if (types[index] == 'L') {</code></font><dir>
+                  <li><font face="Terminal"><code>index++;</code></font></li>
+                </dir>
+                <p><font face="Terminal"><code>} else { // no good</code></font><dir>
+                  <li><font face="Terminal"><code>break; // fall through to code which should set *to_say </code></font></li>
+                </dir>
+                <p><font face="Terminal"><code>};</code></font></p>
+              </li>
+            </dir>
+            <p><font face="Terminal"><code>};</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>};</code></font></p>
+      </li>
+    </dir>
+    <p><font face="Terminal"><code>} else if (strcmp(types,&quot;H&quot;) == 0) { // this
+    means that the last bird associated with this handle has been destroyed</code></font><dir>
+      <li><font face="Terminal"><code>if (!CloseHandle(handle)) {</code></font><dir>
+          <li><font face="Terminal"><code>// Set *to_say to describe problem</code></font></li>
+        </dir>
+        <p><font face="Terminal"><code>};</code></font></p>
+        <p><font face="Terminal"><code>return(FALSE);</code></font></p>
+      </li>
+    </dir>
+    <p><font face="Terminal"><code>};</code></font></p>
+    <p><font face="Terminal"><code>// Set *to_say to give help on how to use this extension</code></font></p>
+    <p><font face="Terminal"><code>return(FALSE);</code></font></p>
+  </li>
+</ul>
+
+<p><font face="Terminal"><code>};</code></font></p>
+
+<p>&nbsp;</p>
+
+<p><font face="Terminal"><code>// Here is the exported procedure for opening file handles</code></font></p>
+
+<p><font face="Terminal"><code>BOOL __declspec(dllexport) receive(HANDLE handle, void
+**data, char *types, char *label, char *country_code, </code></font></p>
+
+<p><font face="Terminal"><code>void ***out, char **out_types, char **to_say, BOOL
+*ok_to_speak, HINSTANCE string_library) {</code></font> 
+
+<dir>
+  <li><font face="Terminal"><code>if (types == NULL) { // asking for help</code></font><dir>
+      <li><font face="Terminal"><code>// Set *to_say to help string</code></font><p><font
+        face="Terminal"><code>return(TRUE);</code></font></p>
+      </li>
+    </dir>
+    <p><font face="Terminal"><code>};</code></font></p>
+    <p><font face="Terminal"><code>if (strcmp(types,&quot;[SSB]&quot;) == 0) {</code></font><dir>
+      <li><font face="Terminal"><code>char *selector = (char *) data[0];</code></font><p><font
+        face="Terminal"><code>DWORD creation;</code></font></p>
+        <p><font face="Terminal"><code>char *device_control_string = NULL;</code></font></p>
+        <p><font face="Terminal"><code>char name[MAX_PATH];</code></font></p>
+        <p><font face="Terminal"><code>if (stricmp(selector,&quot;Create File&quot;) == 0) { //
+        received a box with &quot;Create File&quot;, followed by the file name, followed by a bird</code></font><dir>
+          <li><font face="Terminal"><code>creation = CREATE_NEW;</code></font><p><font face="Terminal"><code>strcpy(name,(char
+            *) data[1]);</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>} else if (stricmp(selector,&quot;Open&quot;) == 0) { //
+        received a box with &quot;Open&quot;, followed by the file name, followed by a bird</code></font><dir>
+          <li><font face="Terminal"><code>creation = OPEN_EXISTING;</code></font><p><font
+            face="Terminal"><code>strcpy(name,(char *) data[1]);</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>} else {</code></font><dir>
+          <li><font face="Terminal"><code>// set *to_say to describe problem</code></font><p><font
+            face="Terminal"><code>return(FALSE);</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>};</code></font></p>
+        <p><font face="Terminal"><code>HANDLE file =
+        CreateFile(name,GENERIC_READ|GENERIC_WRITE,0,NULL,creation,FILE_ATTRIBUTE_NORMAL,NULL); </code></font></p>
+        <p><font face="Terminal"><code>if (file == INVALID_HANDLE_VALUE) {</code></font><dir>
+          <li><font face="Terminal"><code>// set *to_say to describe problem</code></font><p><font
+            face="Terminal"><code>return(FALSE);</code></font></p>
+          </li>
+        </dir>
+        <p><font face="Terminal"><code>};</code></font></p>
+        <p><font face="Terminal"><code>// give the bird in the third hole a box with a new bird
+        which is associated with the file handle</code></font></p>
+        <p><font face="Terminal"><code>out_types[0] = copy_string(&quot;[H]&quot;,3);</code></font></p>
+        <p><font face="Terminal"><code>out[0] = (void * *) GlobalAlloc(0,3*sizeof(void*)); </code></font></p>
+        <p><font face="Terminal"><code>out[0][0] = (void *) file_receive; // behavior defined
+        above</code></font></p>
+        <p><font face="Terminal"><code>out[0][1] = (void *) file; // file handle</code></font></p>
+        <p><font face="Terminal"><code>out[0][2] = copy_string(name,0); // use the file name as a
+        label</code></font></p>
+        <p><font face="Terminal"><code>return(TRUE);</code></font></p>
+      </li>
+    </dir>
+    <p><font face="Terminal"><code>} else if (strcmp(types,&quot;H&quot;) == 0) { // destroyed</code></font><dir>
+      <li><font face="Terminal"><code>return(FALSE);</code></font></li>
+    </dir>
+    <p><font face="Terminal"><code>};</code></font></p>
+    <p><font face="Terminal"><code>// Set *to_say to give help</code></font></p>
+    <p><font face="Terminal"><code>return(FALSE);</code></font></p>
+  </li>
+</dir>
+
+<p><font face="Terminal"><code>};</code></font></p>
+
+<p align="center">
+
+<font face="Comic Sans MS">
+
+<small><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></small></font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

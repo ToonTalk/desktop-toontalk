@@ -1,0 +1,114 @@
+<html><!-- InstanceBegin template="/Templates/general.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebLabs - General Tools</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="92%"><span class="title">General Tools</span></td>
+    <td width="8%"><span class="menu"><a href="/index.html"><img src="../../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="../../Sequences/doc/index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Collisions/doc/index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Eco/doc/index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="../../RCX/doc/index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td width="33%"><div align="center"><a href="sensor_to_excel.htm" class="menuWhite">Sensor to Excel </a></div></td>
+          <td width="33%"><div align="center"></div>            <div align="center"><a href="grapher.htm" class="menuWhite">A simple fast graphing tool</a></div></td>
+          <td width="33%">            <div align="center"><a href="graphing_tools.htm" class="menuWhite">Graphing Tools </a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- InstanceBeginEditable name="mainbody" -->
+<p class="paragraphheading">A simple fast graphing tool</p>
+<div class="stx">
+<p class="parasubheading">What does it do?</p>
+  <p><span class="mainbody">  It makes a graph of the incoming numbers.</span><br>
+&nbsp;</p>
+  <p class="parasubheading">How do I use it?</p>
+  <p class="mainbody">Give the bird the numbers. By default each line or bar is 100 
+  units wide (enough for 10 bars). The default image of a bar is a thin 
+  multi-coloured line that you may replace with what you like.</p>
+  <p class="mainbody">Note that the numbers should be between 0 and 1000. If your data isn't a 
+  good match for this range then you can flip the tool over and change the 
+  operation from '*1' to whatever you need. E.g., *100 if your data is between 0 
+  and 10. Note if your data is between 900 and 1000 you can have an operation 
+  like '-900; *10' that will scale and shift your data to be viewed best.</p>
+  <p class="mainbody"><br>
+  You can put this tool on the back of another image rather than the graph paper 
+  it uses by default.</p>
+  <p class="mainbody">Note if your installation doesn't permit ToonTalk&nbsp;to extract images for 
+  this tool then just use a rectangle for the bar and graph paper background.</p>
+  <p class="mainbody">&nbsp;</p>
+  <p class="parasubheading">How does it work?</p>
+  <p class="mainbody">It is surprisingly simple. It adds the bar to the picture and then sets it 
+  width to a constant and its height to the next incoming number. The y 
+  (up/down) is set to 0 and the x (left/right) is set to a number that is 
+  incremented by the width for each number. It stops when x reaches 1000 (the 
+  right edge). You can then press space while pointing to it to start it again 
+  where it'll display the next set of data on top of the current set. If you 
+  want another graph then you can replace the box of a fresh graph with this 
+  graph.</p>
+  <p class="mainbody">&nbsp;</p>
+  <p class="parasubheading">What can I use it for?</p>
+  <p class="mainbody">Making nice graphs that change as data arrives.</p>
+  <p>  <a href="GrapherDemo.tt">
+  <img src="GrapherDemo.gif" width="259" height="261"></a>&nbsp;<br>
+  &nbsp;</p>
+  <h3 class="parasubheading">Here's a nice example using this tool:</h3>
+  <p class="mainbody">This displays a&nbsp;bar graph of the&nbsp;inverse squares scaled by 1000. I.e.</p>
+  <p><span class="mainbody">1000/4 + 1000/9 + 1000/16 + ...</span><br>
+  &nbsp;</p>
+  <hr size="1">
+  <applet code=GrapherDemo.class 
+width=262 height=302
+archive=ttclass2.zip
+>
+<param name=pictureWidth value=260>
+<param name=pictureHeight value=262>
+<param name=runInNewWindow value=0>
+<param name=language value=English>
+<param name=DigitsAfterDecimalPoint value=100>
+<param name=cabbase value=ttclass2.cab>
+    <p>You need a browser that can run Java to see this.  The latest browsers from Microsoft or Netscape should work fine.</p>
+</applet>  <hr size="1">
+  <p>
+  <a href="GrapherDemo.txt">
+  <span class="mainbody">Click to see the Java source code.</span><br>
+  </a>
+  <a href="GrapherDemo.tt" class="mainbody">
+  Click to load this into ToonTalk.</a><br>
+  <br>
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+<!-- InstanceEnd --></html>

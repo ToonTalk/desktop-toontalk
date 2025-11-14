@@ -1,0 +1,118 @@
+<html><!-- InstanceBegin template="/Templates/sequence.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebLabs - Sequence Tools</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="94%" height="55"><span class="title">Sequence Tools </span></td>
+    <td width="6%"><span class="menu"><a href="/index.html"><img src="../../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Collisions/doc/index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Eco/doc/index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="../../RCX/doc/index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="../../General/doc/index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td width="14%" height="47"><div align="center"><a href="reciprocals.htm" class="menuWhite">Reciprocals </a></div></td>
+          <td width="14%"><div align="center"><a href="decimal_to_fraction_converter.htm" class="menuWhite">Decimal to fraction converter </a></div></td>
+          <td width="14%"><div align="center"><a href="constant.htm" class="menuWhite">Constant </a></div></td>
+          <td width="14%">            <div align="center"><a href="AddUp.htm" class="menuWhite">Add Up </a></div></td>
+          <td width="14%"><div align="center"><a href="add1.htm" class="menuWhite">Add 1 </a></div></td>
+          <td width="14%"><div align="center"><a href="StreamOut.htm" class="menuWhite">Stream numbers to nest </a></div></td>
+          <td width="14%"><div align="center"><a href="spread.htm" class="menuWhite">Spread numbers from nest </a></div>            
+          <div align="center"></div></td>
+        </tr>
+        <tr>
+          <td height="47"><div align="center"><a href="Halver.htm" class="menuWhite">Halver robot </a></div></td>
+          <td><div align="center"><a href="HalverSequenceNotebook.htm" class="menuWhite">Halver Sequence notebook </a></div></td>
+          <td><div align="center"><a href="Fibonacci.htm" class="menuWhite">Fibonacci<br>
+          (on a nest) </a></div></td>
+          <td><div align="center"><a href="Fibonacci_box.htm" class="menuWhite">Fibonacci <br>
+          (in  a box) </a></div></td>
+          <td><div align="center"><a href="divided_by.htm" class="menuWhite">Divides by?</a></div></td>
+          <td><div align="center"><a href="converge_diverge_guidance.htm" class="menuWhite">Convergence <br>
+          &amp; divergence</a></div></td>
+          <td><div align="center"><a href="../../Collisions/doc/guidance.htm" class="menuWhite">Teacher Guidance</a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- InstanceBeginEditable name="mainbody" -->
+
+<p class="paragraphheading">Pedagogical advice: Canonical sequences</p>
+<div class="stx">
+  <h2 class="parasubheading">Introduction</h2>
+  <p><span class="mainbody">The purpose of this report is to collect types of sequences that students 
+  frequently pose in <a href="guess_my_robot_teacher_guide.htm">guess my robot</a>, and comment on their mathematical structure. The analysis 
+  of these sequences is presented as background knowledge for the teacher. It is 
+  not our intention that it will be taught upfront. Rather, after a student 
+  comes across such a sequence, and tackles it, the teacher might want to follow 
+  up with investigation of the formal aspects.</span></p>
+  <h2><i>a<sub>n</sub> = p*a<sub>n-1</sub> +q</i></h2>
+  <p><span class="mainbody">This is one of the most common forms of sequences used by students. Note 
+  the equivalent complementary form:</span></p>
+  <p align="left"><span class="mainbody"><i>a<sub>n</sub> = p*(a<sub>n-1</sub> +q) =&nbsp; p*a<sub>n-1</sub> 
+      +p*q</i></span><i><br>
+&nbsp;</i></p>
+  <p align="left"><span class="mainbody">The closed form of this type of sequence seems a bit more 
+  complicated:</span><br>
+</p>
+  </div>
+  <p align="left" class="mainbody"><i>a<sub>n</sub> = p* a<sub>n-1</sub> + q = <br>
+      p*(p* a<sub>n-2</sub> + q) + q = <br>
+      p<sup>2</sup>* a<sub>n-2</sub> +p* q + q = …<br>
+      p<sup>n-1</sup>* a<sub>1</sub> + q* &#931; (p<sup>i-2</sup>) = <br>
+    &nbsp;<br>
+      p<sup>n-1</sup>* a<sub>1</sub> + q*(1- p<sup>n-1</sup>)/(1-p)</i></p>
+  <p align="left" class="mainbody">&nbsp;</p>
+  <p align="left" class="mainbody">Students approach sequences of this type intuitively, trying 
+  various values for X and Y. Interestingly, solving it formally is not as hard 
+  as you might expect. If we take three consecutive terms, we can write 2 
+  formulas:</p>
+  <p align="left" class="mainbody"><i>a<sub>n</sub> =&nbsp; p*a<sub>n-1</sub> +q<br>
+      a<sub>n+1</sub> =&nbsp; p*a<sub>n</sub> +q </i></p>
+  <p align="center">&nbsp;</p>
+  <p align="left" class="mainbody">We do a bit of algebra:</p>
+  <p align="left"><span class="mainbody"><i>q =&nbsp; a<sub>n</sub> - p*a<sub>n-1</sub> </i><br>
+          <i>q = a<sub>n+1</sub> -&nbsp; p*a<sub>n</sub><br>
+          a<sub>n&nbsp; </sub>- p*a<sub>n-1</sub></i> <i>= </i>a<sub>n+1</sub><i> - p*a<sub>n<br>
+          </sub>p*(a<sub>n</sub> - a<sub>n-1</sub>) =&nbsp;a<sub>n+1</sub> - a<sub>n</sub></i><br>
+          </span><br>
+&nbsp;</p>
+  <p class="mainbody">Finally, we get:</p>
+  <p class="mainbody"><i>p = (a<sub>n+1</sub> - a<sub>n</sub>) / (a<sub>n</sub> - a<sub>n-1</sub>)<br>
+      q= a<sub>n+1</sub> - a<sub>n*</sub>p</i></p>
+</div>
+
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+<!-- InstanceEnd --></html>

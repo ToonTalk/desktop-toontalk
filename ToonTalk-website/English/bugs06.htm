@@ -1,0 +1,138 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>History of ToonTalk Enhancements and Bug Fixes - 2006</title>
+</head>
+
+<body>
+
+<p align="center"><big><font face="Comic Sans MS">History of ToonTalk 
+Enhancements and Bug Fixes - 2006</font></p>
+
+<p><font size="3" face="Comic Sans MS">Here is the list of bugs and enhancements in 2006.  Similar lists for <a href="bugs96.htm">1996</a>, <a href="bugs97.htm">1997</a>, <a
+href="bugs98.htm">1998</a>, <a href="bugs99.htm">1999</a>, <a href="bugs00.htm">2000</a>, <a href="bugs01.htm">
+2001</a>, <a href="bugs02.htm">2002</a>, <a href="bugs03.htm">2003</a>, </font><big><font size="3" face="Comic Sans MS">
+<a href="bugs04.htm">2004</a> and </font>
+<big><font size="3" face="Comic Sans MS">
+<a href="bugs05.htm">2005</a> </font>
+</big>
+</big><font size="3" face="Comic Sans MS">are available as well.</font></p>
+
+<p><font face="Comic Sans MS" size="3">1/1</font></p>
+
+<ol>
+  <li><font face="Comic Sans MS" size="3">If while training a robot the main box 
+  (My Box) is split into pieces and the pieces are joined so that the main box 
+  ends up on the right or inside another box then sometimes the robot used to 
+  vacuum up its box after running.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS" size="3">1/2</font></p>
+
+<ol>
+  <li><font face="Comic Sans MS" size="3">Sometimes if a picture has a sensor on 
+  its back and the picture has been turned into an infinite stack then ToonTalk 
+  crashed when a copy of the picture was removed from the stack.</font></li>
+  <li><font face="Comic Sans MS" size="3">When you stand up or enter a thought 
+  bubble your hand automatically moves down off the screen. If while moving the 
+  hand pointed to a picture which was using the Selected sensor then it used to 
+  be triggered even if the hand was moving automatically.</font></li>
+</ol>
+
+<p><font face="Comic Sans MS" size="3">1/17</font></p>
+
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a picture was added to a decoration 
+  sensor (for the wall, room, or roof) and then that picture moved or changed 
+  size by changing sensors then the decoration on the wall, room, or roof wasn't 
+  updated.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.183.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">1/30</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If the sensor for whether a picture is 
+  selected is on the back of a picture and that picture is copied then the 
+  sensor in the copy showed that it is selected until it is deselected, 
+  selected, and then deselected again.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.184.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">4/12</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem editing the label on a 
+  nest or a robot with arrow keys.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">5/9</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Restored a feature (after about 3 
+  years) that when a nest is saved and all its birds have been destroyed then 
+  when it is restored there is a new egg in the nest and a new bird will hatch.</font></li>
+  <li><big><font face="Comic Sans MS" size="3">Scales no longer consider upper 
+  and lower case versions of the same letter as equal. Note that scales saved as 
+  part of old programs continue to behave as before.</font></big></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">5/21</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">The restoration of the saving of a 
+  nest with no birds as a nest with an egg (see 5/9) did not work (immediately) 
+  when the nest was saved in a notebook.</font></li>
+  <li><font face="Comic Sans MS" size="3">If a robot is given a box that has an 
+  empty hole where something else is in the corresponding position in the box in 
+  the robot's thought bubble, then the robot waits for something to be put in 
+  that hole. For the last 3 years a portion of the box in the thought bubble 
+  glows red. It no longer does since glowing red is understood to mean a 
+  mismatch not a suspension of matching.</font></li>
+  <li><font face="Comic Sans MS" size="3">The ToonTalk executable now supports 
+  Spanish if a Spanish version of ToonTalk is available (it is in progress).</font></li>
+  <li><font face="Comic Sans MS" size="3"><a name="Beta52">Released 3.185 and Beta 51.</a></font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">6/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If a robot was trained to type 
+  something to something and when running that thing isn't there, the robot used 
+  to hang. Now it continues and a warning is added to the log file.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/4</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a bug introduced on 1/15/05 that 
+  caused an error when rubbing out an empty robot name (e.g. typing rubout twice 
+  after picking up a robot).</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">If ran with
+  <a href="ttini.htm#DontScrollOnFloor">DontScrollOnFloor</a> = 1 and then reset 
+  it to 0 then you still couldn't move around on the floor if logged in with a 
+  user name that had been saved with scrolling turned off.</font></li>
+  <li><font face="Comic Sans MS" size="3">Sometimes (for example, when turned 
+  into a stack) a user imported picture in a saved city became full sized when 
+  copied/selected.</font></li>
+  <li><font face="Comic Sans MS" size="3">If you erased a sensor and then 
+  vacuumed up the picture being sensed then if other objects are vacuumed so 
+  that the picture is destroyed then the internal state became inconsistent and 
+  crashes were possible. This can happen if the number of items vacuumed exceeds
+  <a href="ttini.htm#MaximumItemsInDusty">MaximumItemsInDusty</a>.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">10/11</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Released 3.186.</font></li>
+</ol>
+<p><font face="Comic Sans MS" size="3">12/5</font></p>
+<ol>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem with the container 
+  sensor that it doesn't show something that is on the back of something else.</font></li>
+  <li><font face="Comic Sans MS" size="3">Fixed a problem where undo did nothing 
+  when it should have been able to undo the last action of Bammer.</font></li>
+  <li><font face="Comic Sans MS" size="3">Released 3.187.</font></li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</big>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+</body>
+</html>

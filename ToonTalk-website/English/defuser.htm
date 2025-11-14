@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Creating a Default User in ToonTalk</title>
+</head>
+
+<body>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Creating a <i>Default 
+User</i> in ToonTalk </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font size="4" face="Comic Sans MS"><strong><i>ADVANCED USERS ONLY.</i></strong></font></p>
+
+<font face="Comic Sans MS">
+
+<p>You can customize ToonTalk so that all new users begin as &quot;copies&quot; of a user 
+you have created. You can create a user and customize things, change 
+the main notebook, or save the city and everyone will start off with those 
+changes.</p>
+
+<p>There are two ways of telling ToonTalk about the default user:</p>
+
+<ol>
+  <li>Adding an entry to toontalk.ini. If you set
+  <a href="ttini.htm#DefaultUser">DefaultUser</a> then every new ToonTalk user 
+  on that computer will be affected.</li>
+  <li>Adding to the command line (typically of an icon). If you add &quot;<a href="command.htm#DefaultUser">-default_user</a> 
+  username&quot; to the command line of the ToonTalk icon then every new user who 
+  starts ToonTalk using that icon will be affected. You may want to create 
+  multiple icons with different default users for different purposes.</li>
+</ol>
+
+<p>Note that if the main notebook of your default user contains user pictures or 
+sounds that are not also in the default user's saved city then you need to set
+<a name="SaveMediaInMainNotebook" href="ttini.htm#SaveMediaInMainNotebook"><span lang="en-gb">
+SaveMediaInMainNotebook</span>=1</a> in toontalk.ini.</p>
+
+<p><span lang="en-gb">Also note that if your default user has a saved city and 
+the user logs in with a user name that already has a saved city they will end up 
+in the their saved city, not the saved city of the default user. You can avoid 
+this by using <a href="command.htm#MustBeNewUser">-must_be_new_user 1</a> on the 
+command line.</span></p>
+
+<p><b>Tips</b></p>
+
+<ul>
+  <li>Pick a user name for your default user that a user won't pick 
+  accidentally. Anyone logging with the default user's name will change things 
+  for all future new users.</li>
+  <li>If you save a city while logged in as the default user then everything is 
+  saved including things like the contents of <a href="dusty.htm">Dusty</a>'s 
+  stomach. One way to save a city with nothing in Dusty's stomach is to build a 
+  temporary house, go there, have Dusty spit out everything, and then have a 
+  robot destroy the house <i>after</i> you have left the house. If the robot 
+  destroys the house while you are in then Dusty will suck everything up again.</li>
+  <li>It is OK to add to the main notebook but removing or replacing things can 
+  cause confusion. There may even be robots that were trained to, say, find a 
+  sensor in the sensor notebook on page 4. If you replace page 4 with something 
+  else then that robot will break.</li>
+  <li>You might want to delete the USR file of the default user since this 
+  contains information like what things Marty has already explained and what 
+  puzzles you have already done. On the other hand if you want to customize how 
+  Marty speaks or how much he speaks using the <a href="options.htm">Options</a> notebook then leave the 
+  USR file alone.<p id="DontRead" align="center"><small><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></small></p>
+
+  </li>
+</ul>
+
+</font>
+
+</body>
+
+</html>

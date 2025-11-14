@@ -1,0 +1,235 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="keywords"
+content="import sounds, import pictures, importing sounds, importing pictures, mouse buttons, random number generator, clock, decoration, multi-media">
+<title>Using Global Sensors in ToonTalk</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>Using Sensors </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font face="Comic Sans MS" size="3">On page 4 of your main notebook is a notebook full
+of sensors. These are great for making things respond to the mouse and keyboard. There are
+also sensors for measuring time, getting random numbers, and the address of the house.
+Some sensors are for bringing in pictures, sounds, text, and ToonTalk objects from the
+outside. Sensors work very much like the <a href="remote.htm">controllers for pictures</a>.
+</font></p>
+
+<p><font face="Comic Sans MS" size="3">The sensors in the notebook are: </font>
+
+<dl>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 2</strong> - Mouse's Right Speed </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor measures how fast the computer's mouse
+    (not <a href="bammer.htm">Bammer</a>) is moving from left to right. If it is negative the
+    mouse is moving from right to left. A speed of 1000 means the mouse can cross the screen
+    in 1 second. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 4</strong> - Mouse's Up Speed </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor measures how fast the computer's mouse
+    is moving up. If it is negative the mouse is moving down. A speed of 1000 means the mouse
+    can cross the screen in 1 second. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 6</strong> - Mouse's Left Button
+    Clicked </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question, &quot;Was the left
+    mouse button just pressed?&quot; If you press the left mouse button it'll switch from
+    &quot;no&quot; to &quot;yes&quot; and then back to &quot;no&quot; again very quickly. But
+    a robot can catch it and react to it being &quot;yes&quot;. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 8</strong> - Mouse's Middle Button
+    Clicked </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question, &quot;Was the
+    middle mouse button just pressed?&quot; If you press the middle mouse button it'll switch
+    from &quot;no&quot; to &quot;yes&quot; and then back to &quot;no&quot; again very quickly </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 10</strong> - Mouse's Right Button
+    Clicked </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question, &quot;Was the
+    right mouse button just pressed?&quot; If you press the right mouse button it'll switch
+    from &quot;no&quot; to &quot;yes&quot; and then back to &quot;no&quot; again very quickly.
+    </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 12</strong> - Mouse's Left Button Down </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question, &quot;Is the left
+    mouse button down right now?&quot; If you press the left mouse button it'll switch from
+    &quot;no&quot; to &quot;yes&quot; and stay that way until you release the mouse button. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 14</strong> - Mouse's Middle Button
+    Down </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question, &quot;Is the
+    middle mouse button down right now?&quot; If you press the middle mouse button it'll
+    switch from &quot;no&quot; to &quot;yes&quot; and stay that way until you release the
+    mouse button. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 16</strong> - Mouse's Right Button Down
+    </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question, &quot;Is the right
+    mouse button down right now?&quot; If you press the right mouse button it'll switch from
+    &quot;no&quot; to &quot;yes&quot; and stay that way until you release the mouse button. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 18</strong> - Key Just Pressed </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor shows the keyboard button that was just
+    pushed. When you push a key, this sensor goes from blank, to showing the key, to blank
+    again very quickly. A robot can be trained to catch the change. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 20</strong> - Last Keystroke </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;What was the
+    last button on the keyboard to be pressed?&quot; It shows the key until another button is
+    pushed. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><a name="OLE_LINK2"><strong>Page 22</strong> - Shift
+    Button Down </a></font></dt>
+  <dd><font face="Comic Sans MS" size="3"><a name="OLE_LINK2">This sensor answers the question
+    &quot;Is the <i>Shift</i> button on the keyboard down right now?&quot;</a> </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 24</strong> - Control Button Down </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;Is the <i>Control</i>
+    button (often labeled <i>Ctrl</i>) on the keyboard down right now?&quot; </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 26</strong> - 
+  <a name="Milliseconds since Last Frame">Milliseconds since Last
+    Frame </a> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;How much time
+    has passed since you last answered this question?&quot;. The answer is in milliseconds
+    (one thousandths of a second). It is possible to build timers and clocks using this
+    sensor. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 28</strong> - Number between 0 and 999 </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question &quot;What is a
+    number between 0 and 999?&quot; It tries its best to be <i>random</i>, like flipping a
+    coin or tossing dice. If you want a copy of this that doesn't change drop it on a zero. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><a name="Clipboard"><strong>Page 30</strong> - To
+    and from other Programs</a> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor connects ToonTalk to the <a
+    href="clpboard.htm"><i>clipboard</i></a> of Microsoft Windows. If you drop something on
+    this sensor when it is empty (black), then Bammer will smash what you dropped into the
+    clipboard. You can now go to some other Windows program like a mail program or word
+    processor and select <i>Paste</i> from its menu (usually its <i>Edit</i> menu). The text
+    that is pasted can be saved in files, sent by email, or whatever. When you want to go the
+    other direction and bring something into ToonTalk from the outside then just select the
+    text that ToonTalk generated and select <i>Copy</i> from the menu. The ToonTalk clipboard
+    sensor will now show the object that was copied. You can use <a href="dusty.htm">Dusty</a>
+    to remove it from the clipboard and then spit it out. You can also copy text into ToonTalk
+    this way. Control-c to copy and control-v to paste are convenient keyboard shortcuts.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><a name="HandVisible"><strong>Page 32</strong> -
+    Hand Visible? </a></font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor answers the question, &quot;Is your hand
+    visible?&quot;. You can press the space bar while pointing to or holding this sensor and
+    you'll make your hand invisible if its visible or visible if its invisible. When playing a
+    game like Ping Pong (on page 24 of the samples notebook on page 6 of your main notebook)
+    you usually want to hide your hand. This is a good way to let robots do that for you when
+    the game starts. Pushing F9 also hides your hand. Pushing it again shows it. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><a name="PictureFile"><strong>Page 34</strong> -
+    File to Picture </a></font></dt>
+  <dd><font face="Comic Sans MS" size="3">This sensor converts file names into pictures. Just
+    drop a text pad with the file name of a Windows BMP file onto the sensor and <a
+    href="bammer.htm">Bammer</a> should smash it. If your picture file is in the ToonTalk
+    &quot;users&quot; subdirectory or the <a href="ttini.htm#FileSearchPath">FileSearchPath</a>,
+    then you can use just the short name of the file. </font><font face="Comic Sans MS"><font
+    size="3">You can then remove the picture using <a href="dusty.htm">Dusty</a>. You can make
+    BMP files in lots of ways - the Paint Brush program included in Windows makes them. You
+    can make the color black in your pictures transparent if you use the <a
+    href="remote.htm#Visible">visibility controller</a> for your picture. The file name can be
+    a URL like </font>http://www.toontalk.com/ghost.bmp. The file can be JPG, PNG, GIF, or DIB as well if the file name ends with &quot;.jpg&quot;,
+    &quot;.jpeg&quot;, &quot;.png&quot;, &quot;.gif&quot;, or &quot;.dib&quot;.  If you load
+    a picture with a transparent color (currently only GIF and PNG files support this), then
+    that color will be invisible when the picture's <a href="remote.htm#Visible">visibility</a>
+    is set to 'See Some'. Some GIF files with transparency that display properly in a browser
+    will display in ToonTalk areas as white instead of transparent. Various programs will save these GIF
+    files correctly. For example, reading and writing them into Adobe Photoshop fixes the
+    problem. Also, unfortunately, the Microsoft API being used also makes cyan (100% red, 0%
+    green, and 100% blue) invisible as well. If you need cyan and transparency then don't use
+    a transparent color but use black for transparency (and very near black for when you need
+    black). Or use a color near cyan. You can also bring pictures into ToonTalk by running
+    ToonTalk in a window and then pressing control-F8 to release the mouse and then dragging
+    files into the ToonTalk windows. Pressing control-F8 again restores the mouse. Or by
+    copying the file name in the Windows Explorer and pasting it into ToonTalk.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><a name="SoundFile"><strong>Page 36</strong> - File
+    to Sound </a></font></dt>
+  <dd><font face="Comic Sans MS"><font size="3">This sensor converts file names into sounds.
+    Just drop a text pad with the file name of a Windows WAV (sounds) file onto the sensor and
+    <a href="bammer.htm">Bammer</a> should smash it. The sound will play until finished or you
+    use <a href="dusty.htm">Dusty</a> to vacuum it off. You can get <a href="sound.htm">a
+    sound pad</a> that you can use many times. Just vacuum it off the sensor and have Dusty
+    spit it out. If your wave file is in the ToonTalk &quot;users&quot; subdirectory or the <a
+    href="ttini.htm#FileSearchPath">FileSearchPath</a>, then you can use just the short name
+    of the file. You can play a music file using the following MCI remote control. 
+  The file name can be a URL like </font><a
+    href="http://www.toontalk.com/noteD.wav">http://www.toontalk.com/noteD.wav</a>. You can
+    also bring sounds into ToonTalk by running ToonTalk in a window and then pressing
+    control-F8 to release the mouse and then dragging files into the ToonTalk windows.
+    Pressing control-F8 again restores the mouse. Or by copying the file name in the Windows
+    Explorer and pasting it into ToonTalk. </font></dd>
+  <dt><strong><small><a name="TextToMCI"></a></small><font face="Comic Sans MS" size="3">Page
+    38</strong> - Media Control Interface </font></dt>
+  <dd><font face="Comic Sans MS" size="3">If you drop a text pad on this sensor, the text is
+    sent to <a href="mci.htm">Microsoft Window's Media Control Interface</a> (MCI). This is a
+    general way to play different kinds of media. You can vacuum off the newly created <a
+    href="sound.htm">sound pad</a> and use it like any sound. For example, dropping &quot;play
+    c:\windows\media\canyon.mid&quot; on this controller will create a pad for playing the
+    &quot;canyon.mid&quot; MIDI file. </font></dd>
+  <dt><strong><small><a name="TextToSpeech"></a></small><font face="Comic Sans MS" size="3">Page
+    40</strong> - Text to Speech </font></dt>
+  <dd><font face="Comic Sans MS" size="3">If you drop a text pad on this sensor, the text is
+    spoken. This creates a <a href="sound.htm">sound
+    pad</a> that you can vacuum off the sensor. As a shortcut you can just take 
+  the label on page 39 and edit it to be the text you want to hear.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 42</strong> - Wall Decoration </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This contains a picture of the wall of the room. You
+    can drop pictures and text on top of it and the wall of the room you are in will look just
+    like this sensor. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 44</strong> - House Decoration </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This contains a picture of the front of the house.
+    You can drop pictures and text on top of it and the house you are in will look just like
+    this sensor. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 46</strong> - Roof Decoration </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This contains a picture of the roof of the house.
+    You can drop pictures and text on top of it and the roof of the house you are in will look
+    just like this sensor. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><a name="Address"><strong>Page 48</strong> - My
+    Address </a></font></dt>
+  <dd><font face="Comic Sans MS" size="3">On this page is a box with 2 sensors showing <a
+    href="location.htm">the address</a> of the house it is in. The first sensor shows the
+    avenue number and the second sensor the street number. Avenues run north and south.
+    Streets run east and west. You can make new addresses from old ones. If you drop an
+    address on a <a href="truck.htm">truck</a>, then the crew will build a house as close as
+    they can to that address. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 50</strong> - Language</font></dt>
+  <dd><font face="Comic Sans MS" size="3">This displays the name of the language currently
+    being used by ToonTalk. Some values are &quot;English&quot;, </font><font
+    face="Comic Sans MS"><font size="3">&quot;</font>Brasileiro&quot;, &quot;Português&quot;, 
+  and &quot;Swedish&quot;.</font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 52</strong> - Foreign Bird </font></dt>
+  <dd><font face="Comic Sans MS" size="3">This contains <a href="extend.htm">a bird that can
+    fly outside of ToonTalk</a> and make connections with the operating system and other
+    external services. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>Page 54</strong> - Joystick </font></dt>
+  <dd><small><a name="Joysticks"></a></small><font face="Comic Sans MS" size="3">A notebook of
+    joystick sensors. This notebook will only appear if you have connected a joystick to your
+    computer. You may need to <a href="joycalib.htm">tell Windows about your joystick or game
+    controller</a>. If you have more than one joystick connected to your computer the
+    following pages will have notebooks for those joysticks. There are many <a
+    href="joysense.htm">joystick sensors</a>. If the joystick is a force feedback device then
+    an additional notebook will appear for using <a href="force.htm">force effects</a>.</font></dd>
+</dl>
+
+<p align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

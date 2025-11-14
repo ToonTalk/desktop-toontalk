@@ -1,0 +1,126 @@
+<html><!-- InstanceBegin template="/Templates/randomecologies.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebLabs - Modeling Randomness &amp; Ecologies</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="94%" height="55"><span class="title">Modelling Randomness &amp; Ecologies</span></td>
+    <td width="6%"><span class="menu"><a href="/index.html"><img src="../../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="../../Sequences/doc/index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Collisions/doc/index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="../../RCX/doc/index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="../../General/doc/index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td width="14%" height="47"><div align="center"><a href="moving_randomly_using_the_sweeper.htm" class="menuWhite">TT Sweeper Bot</a></div></td>
+          <td width="14%"><div align="center"><a href="toontalk_sweeper_bot.htm" class="menuWhite">More TT <br>
+          Sweeper Bot</a><a href="/Eco/doc/toontalk_sweeper_bot.htm"></a></div></td>
+          <td width="14%"><div align="center"><a href="interactions_notebook.htm" class="menuWhite">Interactions<br>
+          notebook </a></div></td>
+          <td width="14%">            <div align="center"><a href="animate.htm" class="menuWhite">Animate </a></div></td>
+          <td width="14%"><div align="center"><a href="move_and_animate_notebook.htm" class="menuWhite">Move &amp; animate <br>
+          notebook </a></div></td>
+          <td width="14%"><div align="center"><a href="move_and_turn.htm" class="menuWhite">Move &amp; turn </a></div></td>
+          <td width="14%"><div align="center"><a href="reproduction_via_cloning.htm" class="menuWhite">Reproduction<br>
+          via cloning </a></div>            <div align="center"></div></td>
+        </tr>
+        <tr>
+          <td height="47"><div align="center"><a href="mendelian_genetics_simulation_to.htm" class="menuWhite">Mendelian genetics <br>
+          sim tool </a></div></td>
+          <td><div align="center"><a href="bounce_random_garden.htm" class="menuWhite">Bounce Random Garden </a></div></td>
+          <td><div align="center"><a href="destructive_random_garden.htm" class="menuWhite">Destructive random garden </a></div></td>
+          <td><div align="center"><a href="random_garden.htm" class="menuWhite">Random Garden </a></div></td>
+          <td><div align="center"><a href="stream_bar_graph.htm" class="menuWhite">Stream bar graph </a></div></td>
+          <td><div align="center"><a href="stream_counter.htm" class="menuWhite">Stream counter </a></div></td>
+          <td><div align="center"><a href="../../Collisions/doc/guidance.htm" class="menuWhite">Teacher Guidance</a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- InstanceBeginEditable name="mainbody" -->
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+
+
+
+<p class="paragraphheading">Chase, avoid, and random</p>
+<div class="stx">
+  <p class="mainbody">This is a little demonstration of a set of animal gadgets for movement. The 
+    only active thing in this demo is the blue rectangle that sends out sensory 
+    probes regularly and then moves towards a goal for a while and then switches 
+    to a new goal if there is one.
+  </p>
+  <p class="mainbody">Blue moves towards dark green rectangles at a 
+  speed of 100. Blue dislikes dark red and moves away from them at a speed of 
+  200. Sometimes it selects a&nbsp;random goal and moves towards it at a speed of 50. 
+  Every 6 seconds blue switches goals if there is a new one. If there are many 
+  new ones it switches to the most recent one.</p>
+  <p class="mainbody">Probes are visible for demonstration/debugging purposes as they have a similar 
+  colour to the object they are searching for.&nbsp;They last 2 seconds. One is 
+  stationary and the other moves a bit.</p>
+  <h1 class="parasubheading">How this works</h1>
+  <p class="mainbody">The blue rectangle has 4 animal gadgets on the back:</p>
+  <ol>
+    <li>
+      <p class="mainbody"><b>Goal tracker</b>. This switches to a new goal (if one has been 
+        delivered by a bird) every 5 seconds (easy to change). It moves towards its 
+        goal with&nbsp;separately specified&nbsp;horizontal and vertical speeds. The speeds 
+        can be negative to avoid something. The object being tracked (or avoided) 
+        can be moving and this behaviour will adjust accordingly. </p>
+    </li>
+    <li>
+      <p class="mainbody"><b>Positive probe</b>. Sends out a probe that lasts 6 seconds (easy to 
+        change). You can control what the probe is looking for (here it is green 
+        rectangles) and what speed it will move towards objects it finds. Note that a 
+        probe can optionally move while it is searching for something.</p>
+    </li>
+    <li>
+      <p class="mainbody"><b>Negative probe</b>. Similar to a positive probe but uses negative 
+        speeds so it moves away from any object it finds. </p>
+    </li>
+    <li>
+      <p class="mainbody"><b>Random goal generator</b>. Sends out a new random goal every 6 
+        seconds.</p>
+      </li>
+  </ol>
+  
+  <br>
+  <br>
+  <a href="../chase_avoid_and_random2.tt">
+  <img src="../chase_avoid_and_random2.GIF" width="600" height="438"></a>
+  </div>
+
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+<!-- InstanceEnd --></html>

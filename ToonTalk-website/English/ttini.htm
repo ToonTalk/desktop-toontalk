@@ -1,0 +1,696 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>Customizing your ToonTalk Installation</title>
+</head>
+
+<body link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>ToonTalk Installation
+Customizations </b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<object id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+</object>
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</script>
+<input onclick="agentStart()" type="image" alt="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+
+<p><font size="4" face="Comic Sans MS"><strong><i>ADVANCED USERS ONLY.</i></strong></font></p>
+
+<p><font size="3" face="Comic Sans MS">You can 
+read and set these values most easily by clicking on the SET links below (or 
+equivalently click on 'Set Options' after starting ToonTalk and then 
+'Advanced Options'). Alternatively, you may edit the toontalk.ini file to customize
+ToonTalk. You'll find it in the ToonTalk
+subdirectory of &quot;My Documents&quot;. Earlier versions of ToonTalk stored it in your
+Windows directory. You can find out which version of ToonTalk you have by looking at the
+opening screen. Additional options are available for making a <a href="instlini.htm">custom 
+installation disk.</a></font><ul>
+		<UL>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="AbsoluteMouseMode">
+                AbsoluteMouseMode</a></b>. 
+                <span style="font-weight: 400">If set to 1 then ToonTalk will 
+                treat the mouse as a source of screen coordinates rather than 
+                changes in screen position. Ideal for tablet PCs, stylus input 
+                devices, and touch sensitive screens. More details <a href="absolute.htm">
+                here</a>.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="AskBeforeForeignBirdsLoadDLL">
+                AskBeforeForeignBirdsLoadDLL</a></b>. 
+                        <span style="font-weight: 400">If set to 0 then ToonTalk 
+                will not put up a dialog asking if it is OK to load a DLL that 
+                implements a foreign bird. Default is 1. Setting it to 0 is 
+                recommended only if you are either sure that ToonTalk code you 
+                load was not written with the intent of damaging your files or 
+                that the only DLLs available are safe ones. Note that TTFile.dll 
+                is not safe since it allows ToonTalk robots to read and write 
+                files.</span> </font>
+	        <li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>&nbsp;<b>BackgroundsDir</b>. 
+                <span style="font-weight: 400">If this is set in the Directories 
+                section of toontalk.ini then its value is where ToonTalk will 
+                look for background images. If this is not set then ToonTalk 
+                will look in the directory set by BuiltinPictureDir (if it has 
+                been set). </span> </font>
+				<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>&nbsp;<b>BuiltinPictureDir</b>.
+                <span style="font-weight: 400">If this is set in the Directories 
+                section of toontalk.ini then its value is where ToonTalk will 
+                look for all of its built-in graphics.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>&nbsp;<b>BuiltinPictureDirIf8Bit</b>. 
+                <span style="font-weight: 400">If this is set  and you are 
+                running ToonTalk with 256 colors then its value is where 
+                ToonTalk will look for all of its built-in graphics (except for 
+                the background images).</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>CityFileMax</b><span style="font-weight: 400">. 
+                When you save your city (via the 'Save Everything' button), 
+                ToonTalk will maintain the last CityFileMax saved city files if 
+                this is set to a number greater than 0.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="ClippingDir">
+                ClippingDir</a></b>. 
+					<span style="font-weight: 400">If ClippingDir set then when 
+                ToonTalk puts something on the clipboard it also puts a copy in 
+                a file in ClippingDir with the users name (or if a city was put 
+                on the clipboard the users name followed by &quot;_city&quot;). This 
+                directory can be the desktop or a networked directory to 
+                simplify sharing. Or it can be set to &quot;a:&quot; to make it easier to 
+                give someone a floppy with a copy of clipboard encoding.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>ColorSelectionFeedback</b><span style="font-weight: 400">. If set to 
+                1 then when something is selected in addition to wiggling its 
+                color repeatedly changes a little.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+                DefaultNumberDisplayBase</b>. Can be set to a value between 2 
+                and 36 inclusive. Numbers will be in this base unless explicitly 
+                specified otherwise.</font><li>
+                <font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>DefaultUser</b>. 
+                <span style="font-weight: 400">This feature is provided for a 
+                classroom or museum where there is a desire to change the 
+                initial notebook, layout, and/or city. Just customize these 
+                things under a user name and then provide that user name here. <a href="defuser.htm">
+                Click here</a> for more information.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="DemoToonTalk32">
+                DemoToonTalk32</a></b>. 
+					<span style="font-weight: 400">This entry should have the 
+                name of a ToonTalk executable to be run when replaying a demo.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>DesiredFullScreenBitsPerPixel</b>. 
+                <span style="font-weight: 400">If this is set to 8, 15, 16, 24, 
+                or 32 in the Switches section of toontalk.ini then ToonTalk will 
+                run with this color depth when in full-screen mode. Any other 
+                value and ToonTalk will use the same color depth as Windows. 
+                Note this works with all 32-bit versions of Windows except 
+                Windows 95.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>DigitsAfterDecimalPoint</b><span style="font-weight: 400">. When 
+                ToonTalk creates a Java applet there isn't support for exact 
+                unlimited arithmetic. You can specify how many digits of 
+                accuracy is desired with this option.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>DisplayAvailableSubtitlesInDemos</b><span style="font-weight: 400">. 
+                If set to 1 and a demo includes subtitles then they are 
+                displayed.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+                <a name="DisplayPositionsAsIntegers">DisplayPositionsAsIntegers</a></b>. If set to 1 then the sensors for 
+                a <a href="remote.htm#XSensor">picture's position</a> are 
+                displayed as integers rather than as exact values.</font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+						<span lang="en-gb"><b><a name="DisplayTextRightToLeft">
+                DisplayTextRightToLeft</a></b>. 
+                        <span style="font-weight: 400">Should be set to 1 only 
+                for languages where text is displayed from right to left - e.g. 
+                Hebrew and Arabic.</span></span><li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="DontScrollOnFloor">DontScrollOnFloor</a></b>. 
+                        <span style="font-weight: 400">If set to 1, then the 
+                        entire floor is visible when you sit down and no 
+                        scrolling or panning occurs.</span><li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="DurationBeforeAutoHideTimeTravelButtons">
+                        DurationBeforeAutoHideTimeTravelButtons</a></b>. 
+                        <span style="font-weight: 400">If this has a value 
+                        greater than zero, then the time travel buttons will 
+                        hide themselves after the specified number of 
+                        milliseconds if the mouse and keyboard are idle. The 
+                        buttons will automatically reappear if the mouse or 
+                        keyboard is used.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="DustyUsedOncePerClick">DustyUsedOncePerClick</a></b>.
+                        <span style="font-weight: 400">If set to 1 then Dusty 
+                will only suck, erase, or spit one thing when turned on. You'll 
+                need to turn him on repeatedly to work on many things.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="EmailToReportCrash">EmailToReportCrash</a></b>. 
+                        <span style="font-weight: 400">If set then it is opened 
+                as a URL. Typically it is a mailto URL. For example, it can be &quot;<a href="mailto:support@toontalk.com?subject=ToonTalk Crash Report&body=Please add any information that might be useful.">mailto:support@toontalk.com?subject=ToonTalk 
+                Crash Report&amp;body=Please add any information that might be 
+                useful.</a>&quot;.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+                <a name="EumulateMouseForFullScreenTimeTravel">
+                EumulateMouseForFullScreenTimeTravel</a></b>. If set to 1 then 
+                when running in full-screen mode and ToonTalk needs to display a 
+                cursor for using the time travel button then ToonTalk does not 
+                use the built-in Windows cursor. On some systems the built-in 
+                cursor isn't always displayed.</font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+                <a name="ExitWhenDemoEnds">ExitWhenDemoEnds</a></b>. If set to 0 
+                then at the end of a demo the player is in control in the world 
+                as it was at the end of the demo. Otherwise ToonTalk exits at 
+                the end of a demo.</font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="FileSearchPath">
+                FileSearchPath</a></b>. 
+                <span style="font-weight: 400">When ToonTalk is looking for a 
+                file (e.g. a user's BMP file for a picture or WAV file for a 
+                sound), it looks in the Users subdirectory of ToonTalk (unless 
+                overridden by <a href="#UserFiles">UserFiles</a>). If it can't 
+                find a file there, it will search the directories listed in the 
+                FileSearchPath. FileSearchPath is a list of directories 
+                separated by commas. Each directory can be a full file path 
+                (e.g. c:\toontalk\pictures), a URL (e.g. http://www.toontalk.com/temp), 
+                or a relative path where * stands for the Users\&lt;user name&gt; 
+                directory so for a user named Sue with ToonTalk installed in the 
+                default location will be c:\program files\animated 
+                programs\toontalk\users\sue. For example, &quot;*\..\..\extra_sounds&quot; 
+                specifies a user defined directory named &quot;extra_sounds&quot; that is 
+                a direct subdirectory of the main ToonTalk directory. </span> </font>
+				<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="FixedFont">
+                FixedFont</a></b>.
+                <span style="font-weight: 400">This can be set to the name of a 
+                font that should be used for text which is displayed with a 
+                fixed width font.</span> </font>
+				<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="GenerateLogs">
+                GenerateLogs</a></b>. 
+                <span style="font-weight: 400">This generates files named 
+                log&lt;number&gt;.dmo on the ToonTalk users directory which can be 
+                replayed. Good for reproducing problems. You can reach these 
+                files from &quot;My Documents&quot; to &quot;ToonTalk&quot; to the folder with the 
+                user's name. The value is the number of logs kept. Also used for <a href="ttravel.htm">
+                time travel</a>. If negative old logs are not deleted.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="GoodSizesAreAFixedPercentageOfScreen">
+                GoodSizesAreAFixedPercentageOfScreen</a></b>.
+                        <span style="font-weight: 400">If set to 1 then Marty, 
+                your hand, Tooly, and other tools will have the same relative 
+                size compared to the screen (or window) regardless of the screen 
+                resolution. Good for collaborating and giving demos but does use 
+                up quite a bit of screen real estate.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+						<span lang="en-gb"><b><a name="IncludeMediaInTimeTravelArchives">
+                IncludeMediaInTimeTravelArchives</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then ToonTalk 
+                includes the media needed to run time travel archives saved on 
+                this machine on other machines. Enabling this slows down time 
+                travel recording a little and can make the time travel archives 
+                much larger than otherwise.</span></span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="JavaSourceHTML">JavaSourceHTML</a></b>. 
+                        <span style="font-weight: 400">If set then is inserted 
+                in the HTML page as the link to the Java source code that is 
+                generated when you <a href="java.htm">
+                create a Java applet</a>.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>JoystickDeadZone</b>. 
+                <span style="font-weight: 400">This feature works only if you 
+                have <a href="joystick.htm">
+                a joystick or game controller</a> connected to your computer. A 
+                joystick sometimes is not being touched but tells the computer 
+                that it has moved a little bit. This feature tells ToonTalk how 
+                small movements should be to be ignored. The value goes from 0 
+                to 10,000. </span> </font>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+						<span lang="en-gb"><b><a name="KeepAllTimeTravelSegments">
+                KeepAllTimeTravelSegments</a></b>. 
+                        <span style="font-weight: 400">If this has a non-zero 
+                value then time travel archives are never trimmed despite the 
+                setting of
+  <a href="#GenerateLogs">GenerateLogs</a>. A value greater than is 0 is 
+                wasteful of disk space. For trouble-shooting and for keeping 
+                complete records of a session (e.g. when doing educational 
+                research) then a value of 1 is useful. Note that if a user 
+                creates new time line branches by pressing the record button 
+                during time travel then the new time travel archive will not 
+                include files that would normally have been deleted. Note that 
+                if you want to ensure that all time lines are available for 
+                analysis then set
+  <a name="MaximumNumberOfTimeLines" href="#MaximumNumberOfTimeLines">
+                MaximumNumberOfTimeLines</a> to a large number.</span></span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="KeepSavingScreenShots">
+                KeepSavingScreenShots</a></b>.<span style="font-weight: 400"> If set 
+                to 1 in the Switches section then if you press control-F11 to 
+                generate screen shots, ToonTalk will continue to generate screen 
+                shots until you exit. Useful for generating a video from a demo. </span>
+				</font>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>LeftAndRightMouseButtonsDownMeansEscape</b>.<span style="font-weight: 400"> 
+                This should be set to 1, if you want to press the equivalent of 
+                the Escape key by clicking on the left and right mouse button at 
+                the same time. </span></font>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+                <a name="LogNetworkEvents"> <b>LogNetworkEvents</b>.</a> 
+                <span style="font-weight: 400">If this is set to 1, then the 
+                user log file (&lt;user name&gt;.txt in the Users folder), will 
+                describe all the message traffic as <a href="ldbird.htm">
+                birds fly to nests on other computers</a>.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="MakeCurrentExeDefault">MakeCurrentExeDefault</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then when you 
+                run a ToonTalk executable it automatically becomes the default 
+                version. If set to 0 it is not. If set to 2 then the user is 
+                queried each time a version of ToonTalk is run that is different 
+                from the default.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> </font><big>
+                <font face="Comic Sans MS" size="3"><b>
+                <a name="MartyAppearsOnlyIfCalled">MartyAppearsOnlyIfCalled</a></b>. 
+                If set to 1 then when Marty wants to say something an icon 
+                appears and lasts
+                <a href="#MartyHasSomethingToSayDisplayDuration">
+                MartyHasSomethingToSayDisplayDuration</a> seconds before going 
+                away and forgetting what it was he wanted to say.&nbsp; If 
+                before the icon disappears one presses the F1 key then Marty 
+                will say then what he currently says when triggered by an event.</font></big><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> </font><big>
+                <font face="Comic Sans MS" size="3"><b>
+                <a name="MartyHasSomethingToSayDisplayDuration">
+                MartyHasSomethingToSayDisplayDuration</a></b>. Number of seconds 
+                the icon indicating that Marty wants to say something is 
+                displayed. Ignored unless <a href="#MartyAppearsOnlyIfCalled">
+                MartyAppearsOnlyIfCalled</a> is set.</font></big><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="MaximumItemsInDusty">
+                MaximumItemsInDusty</a></b>. 
+					<span style="font-weight: 400">Everything Dusty sucks up can 
+                be spit out again. This can be wasteful, especially if you 
+                frequently save your city and continue in the next session. If 
+                this is set to n then Dusty can only spit out the last n items 
+                sucked up. The others are destroyed for good and their resources 
+                freed. </span></font>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>MaximumNumberOfHoles</b>. <span style="font-weight: 400">Boxes, when 
+                they have very many holes (over a thousand), start to slow down 
+                ToonTalk. Use this option to override the default of 65,535 
+                maximum holes to a box.</span><li>
+                <a href="ttinidlg.htm.tt">SET</a>
+						<span lang="en-gb"><b><a name="MaximumNumberOfTimeLines">
+                        MaximumNumberOfTimeLines</a></b>.
+                        <span style="font-weight: 400">If you enable <a href="ttravel.htm">
+                        time travel</a> and attempt to alter the past the 
+                        previous time line is saved. This controls the number of 
+                        previous versions kept.</span></span><li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<span lang="en-gb">MaximumPauseDurationDueToTimeTravel</span></b><span style="font-weight: 400" lang="en-gb">. 
+                        If <a href="ttravel.htm">
+                        time travel</a> causes pauses longer than this value in 
+                        milliseconds, then time travel segments are doubled in 
+                        length. If the time travel overhead is large then this 
+                        repeated doubling will make time travel overhead very 
+                        rare. But then it will be hard to move back a little bit 
+                        in time.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="MediaDir">MediaDir</a></b><span style="font-weight: 400">. 
+                If set in the Directories section to a file path then ToonTalk 
+                will keep all user picture and sound files in a subdirectory 
+                named Media. The default is Shared Documents (and if that is not 
+                accessible then \My Documents\ToonTalk\Shared Documents is 
+                used).</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="MessageAskingToReportCrash">
+                MessageAskingToReportCrash</a></b>. 
+                        <span style="font-weight: 400">If set then it is used to 
+                ask the user if he or she wants to generate a crash report.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="MillisecondsPumpyUsedPerClick">
+                MillisecondsPumpyUsedPerClick</a></b>. 
+					    <span style="font-weight: 400">If set to a value greater 
+                than 0, then Pumpy will work for that many milliseconds and then 
+                turn himself off. Values between 500 to 1000 make Pumpy easier 
+                to control.</span><li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="MinimumTimeSample">MinimumTimeSample</a></b>. 
+                        <span style="font-weight: 400">This controls how 
+                        accurate the millisecond timer is. The default value is 
+                        1. If, for example, it is set to 10 then the timer has 
+                        10 millisecond accuracy. On a few systems this may speed 
+                        up ToonTalk. If set to 0 or a negative value, leaves the 
+                        system default set by Microsoft Windows. Note that you 
+                        should set this to 0 to run on an Apple Macintosh 
+                        running VirtualPC. </span>
+					    </font>
+	        <li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>MissingBuiltinPictureFileExtension</b>.
+                <span style="font-weight: 400">If this is set then files with 
+                this extension will be used if BackgroundsDir or 
+                BuiltinPictureDir is set. Typical values are GIF, PNG, or JPG.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>MissingBuiltinPictureFileExtensionIf8Bit</b>. 
+                <span style="font-weight: 400">If this is set and you are 
+                running ToonTalk with 256 colors then files with this extension 
+                will be used if BuiltinPictureDirIf8Bit, BuiltinPictureDir, or 
+                BackgroundsDir is set. Typical values are GIF, PNG, or JPG.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="MissingPictureFileExtension">
+                MissingPictureFileExtension</a></b>. 
+					<span style="font-weight: 400">If this is set then files 
+                with this extension will be used to find pictures that were 
+                loaded without any file extension. The default value is BMP. 
+                Other typical values are GIF, PNG, or JPG.</span><li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="MovementSelectionFeedback">
+                        MovementSelectionFeedback</a></b>.
+                        <span style="font-weight: 400">This controls how objects 
+                        wiggle when selected. It describes the number of pixels 
+                        they move. If set to 0 they will not move.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> </font>
+				<font size="3" face="Comic Sans MS">
+                <b>NarrationFileSuffix</b>. 
+                <span style="font-weight: 400">The value currently must 
+					be either SPK for US English narration, TAL for Swedish narration, 
+                UKN for UK English, PTN for European Portuguese, BRN for 
+                Brazilian Portuguese or JPN for Japanese.&nbsp; Defaults to 
+					appropriate value of the current language. By using this 
+                option you can have narration in a different language than the 
+                demo and its subtitles.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>NumberShrinkage</b><span style="font-weight: 400">. 
+                If set to a value between 0.0 and 1.0 then it is used as the 
+                amount that successive digits shrink when displaying shrinking 
+                digit fractions or numbers whose value doesn't fit on the number 
+                pad.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+                NumberToTextConversionIsExact</b>. If set to 1 then when a 
+                number is dropped on an erased text pad the result is displayed 
+                as an exact decimal if possible. This is important for tools 
+                that convert ToonTalk data to strings for use by other programs 
+                such as Excel.</font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="PictureEditor">PictureEditor</a></b>. 
+                        <span style="font-weight: 400">If set it specifies the 
+                program that will run when 'Edit Picture' is selected. E.g., 
+                setting PictureEditor to &quot;mspaint.exe&quot; makes sure that Microsoft 
+                Paint is used. If not set then the program associated with the 
+                PNG extension is launched.</span></font><li>
+						<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+                        <b>PlayAvailableDemoSoundFiles</b><span style="font-weight: 400">. 
+                        If set to 1 then a demo includes narration or custom 
+                        sound effects then they are played.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="OldUserProgramsFolderName">
+                OldUserProgramsFolderName</a></b>. 
+                        <span style="font-weight: 400">If set it provides the 
+                subfolder name for old backed up programs. This folder is 
+                created under the user's program directory. Default is &quot;My Old 
+                Programs&quot;.</span></font><li>
+						<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+                        <b>OKToDisplayNumbersShrinkingAndGrowing</b><span style="font-weight: 400">. 
+                        If set to 1 then when a number can't be displayed 
+                        because there is too little room then the digits of the 
+                        number shrink and then grow to show the ends of the 
+                        number and to convey that there are many (tiny) digits 
+                        in between.</span></font><li>
+						<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+                        <b>ReincarnateToolsIfDestroyed</b>. If set to 1 then 
+                        when a tool (Pumpy, Tooly, Dusty, Maggie, or Notey) is 
+                        destroyed (e.g. vacuuming up Pumpy and then the 
+                        MaximumItemsInDusty was reached), then a new fresh tool 
+                        is built.</font><li>
+						<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+                        <b><a name="RemoveUnneededThingsFromThoughtBubbles">RemoveUnneededThingsFromThoughtBubbles</a></b><span style="font-weight: 400">. 
+                        If set to 1 then when a robot is trained or the box in 
+                        its thought bubble is replaced then the box is 
+                        simplified. For example and erased box will no longer be 
+                        able to be restored by copying with Maggie in 'O' mode. 
+                        Keeps robots small for saving, loading, and copying.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="RobotDropLocationFollowsCamera">
+                RobotDropLocationFollowsCamera</a></b>. 
+                        <span style="font-weight: 400">If set to 0 then a robot 
+                will drop things so that you can see them even if you have moved 
+                around on the floor after giving the robot a box.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="RunAfterSaving">RunAfterSaving</a></b>. 
+                        <span style="font-weight: 400">If set this program will 
+                run after a ToonTalk object is saved using the 'Save It' button. 
+                E.g., setting RunAfterSaving to &quot;C:\Program 
+                Files\WinZip\WINZIP32.EXE&quot; will open the Zip archive in the 
+                newly created TT file.
+                        </span>
+					<li>
+                <a href="ttinidlg.htm.tt">SET</a> <b> <a name="RunOncePerCycleIfMatchBlankWithSensor">
+									RunOncePerCycleIfMatchBlankWithSensor</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then if a 
+                        robot matches an erased pad or picture in its thought 
+                        bubble with a sensor then the robot will only run once 
+                        during that cycle. This has long been the behavior when 
+                        matching non erased things with sensors and was once 
+                        true for erased things as well.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="SaveInXML">SaveInXML</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then when 
+                items are placed on the clipboard or dropped on the main 
+                notebook they are saved as <a href="xml.htm">
+                XML</a> rather than ToonTalk's internal format. Requires 
+                2.54 or Beta 36 or later. Default is 1. Note that after beta 40 
+                or 3.00 cities cannot be saved in the old format. And the 
+                setting of this switch is ignored if <a href="ttravel.htm">
+							time travel </a>
+					is enabled. Setting this to 0 is only of use to bring things 
+                saved in later versions of ToonTalk into older versions of 
+                ToonTalk.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+						<span lang="en-gb"><b><a name="SaveMediaInMainNotebook">
+                SaveMediaInMainNotebook</a></b>. 
+                        <span style="font-weight: 400">If this has a non-zero 
+                value in the Switches section then main notebook </span>  </span>
+						<span style="font-weight: 400">will keep a copy of<span lang="en-gb"> 
+                the media files</span> it references</span><span style="font-weight: 400" lang="en-gb">. 
+                Good for transporting a user's files to another computer or 
+                generating a <a href="#DefaultUser">DefaultUser</a> with user 
+                media files.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="SaveNestsAndBirdsAsLocal">
+                SaveNestsAndBirdsAsLocal</a></b>.
+                <span style="font-weight: 400">If this is set to 1, then birds 
+                and nests are saved as if they were local breaking any network 
+                connections. With this set to 1, one can save a bird without her 
+                nest and when reconstructed she will build her own nest. Or you 
+                can save a nest without a bird and it will be saved with an egg 
+                in it.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="SecondaryFileSearchPath">
+                SecondaryFileSearchPath</a></b>. 
+					<span style="font-weight: 400">This has the same meaning as 
+                the FileSearchPath but these directories are searched only if 
+                the directories specified by the FileSearchPath fail to contain 
+                the required files. This is particularly useful for <a href="localini.htm">
+						local INI files</a>.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+						<span lang="en-gb"><b><a name="SecondsBetweenLogs">
+                SecondsBetweenLogs</a></b>. 
+                        <span style="font-weight: 400">If set to a number 
+                greater than 0 then <a href="ttravel.htm">
+                time travel</a> is enabled and the number specifies how long 
+                each time travel segment lasts. Can also be <a href="command.htm#SecondsBetweenLogs">
+                customized on the command line</a>.</span></span><li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="SensorsChangeAtDropNotWhenBammed">
+                        SensorsChangeAtDropNotWhenBammed</a></b>. 
+					    <span style="font-weight: 400">The Parts and Container 
+                        sensor are, beginning with 2.80 and Beta 39, updated 
+                        when Bammer hits them, not when a picture is dropped on 
+                        another picture. The old behavior can be obtained by 
+                        setting this to 1. </span>
+					    </font>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="ShowCrashDirectoryAfterCrashes">
+                ShowCrashDirectoryAfterCrashes</a></b>.
+                <span style="font-weight: 400">If set to 1 then upon a crash 
+                ToonTalk displays the directory where the crash report was 
+                generated. This makes it easier to drag the file to an email 
+                message so it is sent as an attachment.</span></font><li>
+						<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+                        <b>ShowDialogAfterSaving</b><span style="font-weight: 400">. If 
+                        set to 1 then after saving something with 'Save to File' 
+                        a dialog appears offering to open the folder. Often is 
+                        set to 0 if
+                        <a href="#RunAfterSaving">RunAfterSaving</a> is set.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="ShowMouseCursor">ShowMouseCursor</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then you'll 
+                see the mouse cursor while running ToonTalk. Useful if running 
+                in <a href="absolute.htm">
+                absolute mouse mode</a> with a mouse.</span></font><li>
+						<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a>
+                        <b>SpeakAvailableDemoText</b><span style="font-weight: 400">. 
+                        If set to 0 then nothing is spoken even if a demo 
+                        specifies that narration should be spoken using a 
+                        text-to-speech engine.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="SpeakToolButtons">SpeakToolButtons</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then whenever 
+                you change the button on a tool (Pumpy, Dusty, or Maggie) to the 
+                next value (by clicking on the button or pressing space while 
+                pointing to the tool) you will hear a description of the new 
+                state of the tool.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="SpokenLanguage">
+                SpokenLanguage</a></b>.
+                <span style="font-weight: 400">ToonTalk can use one language for 
+                speaking and another for everything else. The language needs to 
+                be installed (i.e. one of the options on the language page 
+                reached by clicking on 'Set Options'.)</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>SubtitlesSpeed</b>. 
+                <span style="font-weight: 400">Value is percentage of normal 
+                speed. If greater than 100 subtitles will be faster. If value is 
+                0 ToonTalk will not show subtitles for demos. </span> </font>
+			    <span style="font-weight: 400">
+				<font face="Comic Sans MS">&nbsp;</font></span><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="SubtitlesSuffix">
+                SubtitlesSuffix</a></b>. </font>
+				<font size="3" face="Comic Sans MS"> 
+					<span style="font-weight: 400">The value currently must be either UST for American English subtitles, UKT for 
+					British English subtitles, SET for Swedish subtitles, PTT 
+                for European Portuguese, BRT for Brazilian Portuguese, or JPT 
+                for Japanese.&nbsp; You can have subtitles 
+					in a different language than the narration.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="ToonTalk32">
+                ToonTalk32</a></b>.
+                <span style="font-weight: 400">This entry should have the name 
+                of a ToonTalk executable to be run in 'Free Play' and 'Play 
+                Game'. This is normally reset by the installation of patch files 
+                or when running a different ToonTalk executable.</span> </font>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="ToonTalkSourceHTML">ToonTalkSourceHTML</a></b>. 
+                        <span style="font-weight: 400">If set then is inserted 
+                in the HTML page as the link to the ToonTalk source that is 
+                generated when you <a href="java.htm">
+                create a Java applet</a>. This link can then be clicked on 
+                within a browser to bring the saved object back into ToonTalk.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="TryToRecoverFromCrashes">
+                TryToRecoverFromCrashes</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then the old 
+                behavior upon crashing of asking the user if he or she wants to 
+                continue anyway. If 0 will put up a dialog asking the user to 
+                send a crash report. Note that if set to 1 while many crashes 
+                are avoided strange things sometimes follow the recovery.</span></font><li>
+				<font face="Comic Sans MS">
+                <a href="ttinidlg.htm.tt" name="TurnOffJoystickAutoCenter">SET <b>TurnOffJoystickAutoCenter</b>.</a> 
+                <span style="font-weight: 400">This feature only works if you 
+                have a force feedback joystick. Autocenter uses the joystick 
+                motors to simulate the springs in a standard joystick. Turning 
+                it off makes the effects better but the joystick harder to 
+                control. </span> </font>
+			<li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="TTFileMax">
+                TTFileMax</a></b>. 
+                        <span style="font-weight: 400">If set to 1 or greater 
+                then when you click on 'Save it to a file' then the previous 
+                ToonTalk file is copied to the &quot;my old programs&quot; folder before 
+                proceeding. TTFileMax specifies how many old copies are kept. A 
+                value of 0 turns off this feature.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="URLCacheDir">
+                URLCacheDir.</a></b>
+                <span style="font-weight: 400">If URLCacheDir is set, then when 
+                URLs are read they are cached in the specified directory. If 
+                this isn't set then the system Internet file cache is used. This 
+                has the advantage and disadvantage that files are automatically 
+                deleted when old and space is needed.</span><li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="UseLocalIniFilesWhenLoading">
+                        UseLocalIniFilesWhenLoading</a></b>. 
+                        <span style="font-weight: 400">If set to 1 then the old 
+                        behavior of looking for <a href="localini.htm">
+                        local ini files</a> when loading a file is restored. <font size="3">
+                This feature was introduced for backwards compatibility. Later 
+                enhancements have made this feature obsolete. To our knowledge 
+                only the Playground Project used this feature so you may need to 
+                enable it to load files from
+                <a href="http://www.ioe.ac.uk/playground">
+                www.ioe.ac.uk/playground</a>.</font></span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="UserFiles">
+                UserFiles</a></b>. 
+                <span style="font-weight: 400">If UserFiles is set, then 
+                ToonTalk will look at the specified directory for user-specific 
+                files. These include changes to notebooks, saved cities, and the 
+                user customizations and profile. You can set this to a directory 
+                on a local file server, if users move between machines on the 
+                same local area network. Or it can be set to &quot;a:&quot; if the files 
+                should be kept on a floppy - making it easier to move between 
+                computers (say at home and at school).</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="UserProgramsFolderName">UserProgramsFolderName</a></b>. 
+                        <span style="font-weight: 400">If set it provides the 
+                subfolder name for user programs. This folder is created under 
+                the user's directory. Default is &quot;My Programs&quot;.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="UseThisIniFileFirst">UseThisIniFileFirst</a></b>. 
+                        <span style="font-weight: 400">&nbsp;If set to the name 
+                of an ini file, then when looking for the value of an option, 
+                ToonTalk will use this file, and only if it has no value will it 
+                look for a value in the default ini file. One common use of this 
+                is when many computers are part of a local network. The ini file 
+                can then be administered more easily by placing it on a shared 
+                network drive.</span></font><li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <b> <a name="VariableFont">
+                VariableFont</a></b>.
+                <span style="font-weight: 400">This can be set to the name of a 
+                font that should be used for text which is displayed with a 
+                variable width font.</span>
+					<li>
+                <a href="ttinidlg.htm.tt">SET</a> <b>
+						<a name="ZipFiles">ZipFiles</a></b>. 
+                        <span style="font-weight: 400">If this Switch is set to 
+                        0 then the XML for cities, demos, and objects is saved 
+                        uncompressed.</span></UL>
+        </font>
+  <li>
+				<font face="Comic Sans MS"><a href="ttinidlg.htm.tt">SET</a> <a name="ButtonKeyboardEquivalents"></a></font><font size="3" face="Comic Sans MS"><b>[ButtonKeyboardEquivalents].
+    </b>This allows you to define what <a href="joystick.htm">joystick</a> buttons 3 and
+    upward mean (and also the middle mouse button which is treated the same as joystick button
+    number 3). You can specify special keys by enclosing them with &quot;&lt;&gt;&quot;. The
+    special keys available are &lt;F1&gt;, &lt;F2&gt;, ... &lt;F12&gt;, &lt;Escape&gt;, and
+    &lt;space&gt;. For example, the default values are
+    </font><ul>
+      <li><font face="Comic Sans MS">3=&lt;<a href="keyboard.htm#F12">F12</a>&gt;</font></li>
+      <li><font face="Comic Sans MS">4=.</font></li>
+      <li><font face="Comic Sans MS">5=&lt;<a href="keyboard.htm#F11">F11</a>&gt;</font></li>
+      <li><font face="Comic Sans MS">6=+</font></li>
+      <li><font face="Comic Sans MS">7=-</font></li>
+      <li><font face="Comic Sans MS">8=&lt;Escape&gt;</font></li>
+      <li><font face="Comic Sans MS">9=&lt;F1&gt;</font></li>
+      <li><font face="Comic Sans MS">10=&lt;F2&gt;</font></li>
+      <li><font face="Comic Sans MS">11=&lt;F3&gt;</font></li>
+      <li><font face="Comic Sans MS">12=&lt;F4&gt;</font></li>
+      <li><font face="Comic Sans MS">13=&lt;F5&gt;</font></li>
+      <li><font face="Comic Sans MS">14=&lt;F6&gt;</font></li>
+    </ul>
+  </li>
+  <font
+    face="Comic Sans MS">
+</ul>
+
+<p>Some options are obsolete or no longer recommended. They can be found
+<a href="ttiniold.htm">here</a>.</p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></font></small></p>
+</font>
+  </body>
+</html>

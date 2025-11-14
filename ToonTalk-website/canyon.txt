@@ -1,0 +1,44 @@
+   This is the result of "pasting" a ToonTalk object. You can include
+this in files, email, or whatever. To decode it just use any program
+that can copy this to Window's clipboard. For example, you can use
+Window's Notepad or Write program. Just be sure your selection includes
+the code below and then select the Copy command in the Edit menu. 
+Then it will appear in the ToonTalk remote control for the clipboard. 
+Just use Dusty to vacuum it off the clipboard. 
+   The following is a movie of a switch which is partly visible. The first
+thing on the back is a box with 3 holes. The hole labeled with "On?"
+contains a remote control for which picture or color is shown. The hole
+labeled with "Next" contains a sound "play c:\windows\media\canyon.mid".
+The hole labeled with "Saved" contains a sound "close all". And the
+second thing on the back is a robot who wants a box with 3 holes. The
+hole labeled with "On?" contains the number 1. The hole labeled with
+"Next" contains a sound "play c:\windows\media\canyon.mid". The hole
+labeled with "Saved" contains a sound "close all".  If given a box like
+that he will pick up what's in the second hole inside his box.  And push
+' ' to change what he is holding.  And drop it.  And pick up what's in
+the third hole inside his box.  And drop it on the second hole inside
+his box.  And pick up the last thing he made or found.  And drop it on
+the third hole inside his box. Otherwise, he'll give the box to the
+robot behind him in line. The second robot wants a box with 3 holes. The
+hole labeled with "On?" contains the number 0. The hole labeled with
+"Next" contains a sound "close all". The hole labeled with "Saved"
+contains a sound "play c:\windows\media\canyon.mid".  If given a box
+like that he will pick up what's in the second hole inside his box.  And
+push ' ' to change what he is holding.  And drop it.  And pick up what's
+in the third hole inside his box.  And drop it on the second hole inside
+his box.  And pick up the last thing he made or found.  And drop it on
+the third hole inside his box. .
+   What follows is in a special code and was produced by ToonTalk(tm) 
+Beta Version 8C. 
+4!@%!(%A-C!C!CAC#C:D"C@C"C!C!C#C!CAC!C$C!C%COAnA?A!C$A!C!C!C!C+A!C'C&CNA
+eAxAtA!C7AAC!CpAlAaAyAACcA:A\AwAiAnAdAoAwAsA\AmAeAdAiAaA\AcAaAnAyAoAnA.A
+mAiAdA'CSAaAvAeAdA!C7A*C!CcAlAoAsAeAACaAlAlA D D D D D D D D&CAC!C$C!C%C
+OAnA?A!C!C"C!C!C!C+A!C&CNAeAxAtA!C7AAC!CpAlAaAyAACcA:A\AwAiAnAdAoAwAsA\A
+mAeAdAiAaA\AcAaAnAyAoAnA.AmAiAdA'CSAaAvAeAdA!C7A*C!CcAlAoAsAeAACaAlAlAAC
+tB D:C!C"C D!C(C!C"C D!C2C.C DAC)C5C D!C(C!C#C D!C*C!C"C D!C(C5C D!C*C!C
+#C D!C8C&CAC!C$C!C%COAnA?A!C!C!C!C!C!C+A!C&CNAeAxAtA!C7A*C!CcAlAoAsAeAAC
+aAlAlA'CSAaAvAeAdA!C7AAC!CpAlAaAyAACcA:A\AwAiAnAdAoAwAsA\AmAeAdAiAaA\AcA
+aAnAyAoAnA.AmAiAdAACsB D:C!C"C D!C(C!C"C D!C2C.C DAC)C5C D!C(C!C#C D!C*C
+!C"C D!C(C5C D!C*C!C#C D!C8C D D D D D D D D D..
+This is the end of the code for the ToonTalk object. 
+

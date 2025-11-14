@@ -1,0 +1,112 @@
+<html><!-- InstanceBegin template="/Templates/sequence.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebLabs - Sequence Tools</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="94%" height="55"><span class="title">Sequence Tools </span></td>
+    <td width="6%"><span class="menu"><a href="/index.html"><img src="../../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Collisions/doc/index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Eco/doc/index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="../../RCX/doc/index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="../../General/doc/index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td width="14%" height="47"><div align="center"><a href="reciprocals.htm" class="menuWhite">Reciprocals </a></div></td>
+          <td width="14%"><div align="center"><a href="decimal_to_fraction_converter.htm" class="menuWhite">Decimal to fraction converter </a></div></td>
+          <td width="14%"><div align="center"><a href="constant.htm" class="menuWhite">Constant </a></div></td>
+          <td width="14%">            <div align="center"><a href="AddUp.htm" class="menuWhite">Add Up </a></div></td>
+          <td width="14%"><div align="center"><a href="add1.htm" class="menuWhite">Add 1 </a></div></td>
+          <td width="14%"><div align="center"><a href="StreamOut.htm" class="menuWhite">Stream numbers to nest </a></div></td>
+          <td width="14%"><div align="center"><a href="spread.htm" class="menuWhite">Spread numbers from nest </a></div>            
+          <div align="center"></div></td>
+        </tr>
+        <tr>
+          <td height="47"><div align="center"><a href="Halver.htm" class="menuWhite">Halver robot </a></div></td>
+          <td><div align="center"><a href="HalverSequenceNotebook.htm" class="menuWhite">Halver Sequence notebook </a></div></td>
+          <td><div align="center"><a href="Fibonacci.htm" class="menuWhite">Fibonacci<br>
+          (on a nest) </a></div></td>
+          <td><div align="center"><a href="Fibonacci_box.htm" class="menuWhite">Fibonacci <br>
+          (in  a box) </a></div></td>
+          <td><div align="center"><a href="divided_by.htm" class="menuWhite">Divides by?</a></div></td>
+          <td><div align="center"><a href="converge_diverge_guidance.htm" class="menuWhite">Convergence <br>
+          &amp; divergence</a></div></td>
+          <td><div align="center"><a href="../../Collisions/doc/guidance.htm" class="menuWhite">Teacher Guidance</a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- InstanceBeginEditable name="mainbody" -->
+
+<p class="paragraphheading">Pedagogical advice: Not just any N</p>
+<div class="stx">
+  <span class="mainbody">As the last task in number challenge, I wanted to get the kids to generate the 
+  even numbers and then generalize to apply function:</span><br>
+  <p class="mainbody">Create a box with two holes, in and out.&nbsp; Put the natural numbers nest in 
+      the in hole. </p>
+<p>
+      <img style="WIDTH: 759px; HEIGHT: 339px" src="../even-manual.jpg"></p>
+  <p class="mainbody">Using the numbers coming into the natural numbers nest send the even 
+          numbers to the out bird.</p>
+  <p class="mainbody">Trying to predict how kids will approach this task, we thought it is likely 
+  that they will do it by removing every other element. E.g., use dusty to suck 
+  1, give 2 to the bird, suck 3, give 4 to the bird, etc.</p>
+  <p class="mainbody">The problem with this is that it is quite hard to train a robot to 
+  replicate this behaviour. A robot only &quot;sees&quot; the top item on the nest. It 
+  cannot operate on two succesive items in one iteration. In order to simulate 
+  the &quot;eat one, pass one&quot; behavior above, we have two options:</p>
+  <ul>
+    <li class="mainbody">Use a team, and a switch to pass control between the robots. </li>
+    <li class="mainbody">Use a stream-splitter: a robot that forks a stream in two, There's a 
+    cute trick for doing this with a single robot. </li>
+  </ul>
+  <p class="mainbody">In any case, much too complex for the level of programming our kids have 
+  mastered.</p>
+  <p><span class="mainbody"><br>
+  After some consideration, we decided it is better to change the task so that 
+  it deals with multiples of 10 instead:</span><br>
+  <br>
+  <span class="mainbody">Create a box with two holes, in and out.&nbsp; Put the natural numbers nest in 
+      the in hole.</span></p>
+  <p>
+          <img style="WIDTH: 745px; HEIGHT: 338px" src="../tens-manual.jpg"></p>
+  <p class="mainbody">Using the numbers coming into the natural numbers nest and Tooly, send 
+          the multiples of 10 to the out bird.</p>
+  <p><span class="mainbody">Inter alias, there's still a problem with the graphical presentation of the 
+  task: the image is too dense, and its hard to understand what the robot does, 
+  and what the user is requested to do.</span><br>
+  </div>
+
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+<!-- InstanceEnd --></html>

@@ -1,0 +1,309 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>ToonTalk Command Line Options</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>ToonTalk Command Line Options </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font size="4" face="Comic Sans MS">When you start up ToonTalk it asks your name. You
+can supply your name on the command line instead. You can also click on &quot;Set
+Options&quot; and change many of the options listed below very easily. Many of the
+options described below can be controlled by items in the <a href="options.htm">options
+notebook</a> in ToonTalk found page 10 of your main <a href="notebook.htm">notebook</a>. </font></p>
+
+<p><font face="Comic Sans MS" size="3"><b><i>ADVANCED USERS ONLY:</i></b> </font></p>
+
+<p><font face="Comic Sans MS" size="3">Alternatively you can customize ToonTalk by editing
+the shortcut called &quot;ToonTalk&quot; (Alt-Enter when the icon is selected). After the
+part that goes StartTT.exe, you can add any of the following options separated by spaces.
+Note that if the shortcut ends with &quot; then place these options after the quote. For
+example,</font></p>
+
+<p>&quot;C:\Program Files\Animated Programs\ToonTalk\StartTT.exe&quot; -c 5 -houses 2</p>
+
+<p><font face="Comic Sans MS" size="3">when given as a shortcut will start ToonTalk with
+cities that have 5 streets and avenues with room for 2 houses per block. The following commands
+will override any options set by clicking on &quot;Set Options&quot;.</font><small> </small>
+
+<dl>
+  <a name="UserName">
+  <dt><strong><font face="Comic Sans MS" size="3">-n &lt;name&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Name can be any length but should not contain spaces
+    or special characters. If you add this you will not be asked for a user name. </font></dd>
+  </a>
+  <dt><strong><font face="Comic Sans MS" size="3">-h &lt;head&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Head can be 0 (bald), 1 (hair), or 2 (hat). Default
+    is 2. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-s &lt;sound&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Sound can be 0 to turn off sound.</font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-f &lt;full screen&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Full screen can be 0 (small screen), 1 (full screen
+    where ToonTalk takes exclusive control of the screen), or 2 (normal window that is twice
+    the screen resolution). Option 1 tends to look nicer and is typically faster. &nbsp; 1
+    also will work regardless of the current screen resolution or number of colors. </font></dd>
+  <a name="OutputLog">
+  <dt><strong><font face="Comic Sans MS" size="3">-o &lt;output log file name&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Everything you do is recorded in the file. It can be
+    played back by using -I. Great way of capturing a bug. The extension .DMO is added to the
+    file name. </font></dd>
+  </a>
+  <dt><strong><font face="Comic Sans MS" size="3"><a name="InputLog">-i &lt;input log file name&gt;
+  </a> </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Redoes all the actions recorded when the -o option
+    was used. -I behaves the same but will slow down to the original recording speed if
+    running on a faster machine. Starting with Beta 18 or Release 1.1 the file name can be a
+    URL</font><font face="Comic Sans MS">.</font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-c &lt;city size&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">City size by default is 10×10 blocks 
+  (each block by default holds 4 houses). If negative will initialize
+    the city with random houses. Your computer needs lots of memory and free disk space to run
+    ToonTalk with large active cities. Note that this has no effect on saved cities. 
+  Beginning with version 3 (internal version 3.160) you can specify both the 
+  width and height of the city by providing a value such as 5x10.</font></dd><a name="HousesToABlock"><dt><strong><font face="Comic Sans MS" size="3">-houses &lt;n&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Determines how many houses are on a 
+  block. Can range from 1 to thousands. 4 is the default. </font>
+  </a>
+  <dt><strong><font face="Comic Sans MS" size="3">-city &lt;file name&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Indicates which saved city you want to 
+  be in when ToonTalk starts.</font><a name="MouseButtons"><dt><strong><font face="Comic Sans MS" size="3">-b &lt;0, 1, 2 or 3&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Describes the number of mouse buttons available. See
+    </a><a href="mouse.htm">mouse buttons for details. </font></dd>
+  </a>
+  <dt><strong><font face="Comic Sans MS" size="3">-r &lt;reading speed percentage&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Reading speed controls how long text stays in a talk
+    balloon. 100 percent is the default. Larger numbers makes the text stay a shorter time.
+    Does not work if speech is also enabled.</font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-l &lt;letter size in talk balloons&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Default is 100 percent. </font></dd>
+  <a name="FontChange">
+  <dt><strong><font face="Comic Sans MS" size="3">-font_variable &lt;font name&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Variable width font used in Marty's talk balloons
+    and elsewhere. If its name has a space like New Modern enter it as new_modern. Arial is
+    the default. </font></dd>
+  </a>
+  <dt><font face="Comic Sans MS" size="3"><strong>-font_fixed &lt;font name&gt; </strong></font></dt>
+  <dd><font face="Comic Sans MS" size="3">Fixed width font used on text and number pads and
+    elsewhere. Courier New is the default </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-m &lt;memory devoted to cache&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Default is 100 (which uses 25% of free memory).
+    Larger numbers should speed up ToonTalk somewhat but will leave less memory for other
+    purposes. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-u &lt;user profile maintained&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">1 means to keep track in *.usr which operations user
+    has performed and customize help accordingly. 0 turns it off. 1 is the default. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-a &lt;advice level&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Ranges from 0 to 6. if 0 then the Martian will say
+    everything possible. If set to a value greater than 6 then he will say nothing 
+  on his own initiative. 2 is the default. </font></dd>
+  <a name="TemporaryUser">
+  <dt><strong><font face="Comic Sans MS" size="3">-t &lt;temporary user&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">1 means do not read or generate user files or
+    notebooks. 0 is the default. </font></dd>
+  </a>
+  <dt><strong><font face="Comic Sans MS" size="3">-q &lt;ToonTalk speed&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">100 is default. Higher numbers speeds up all
+    animations. </font></dd>
+  <a name="FrameDurationMinimum">
+  <dt><strong><font face="Comic Sans MS" size="3">-y &lt;minimum frame duration in
+    milliseconds&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">0 is default. 50, for example, will result in a
+    frame rate of 20 fps maximum even if running on a very fast computer. </font></dd>
+  </a>
+  <dt><strong><font face="Comic Sans MS" size="3">-bird &lt;see birds returning outside&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">If 0 then birds take no time to return after
+    delivering to a nest when the programmer is watching from outside. Default is 1. </font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-puzzle &lt;file name&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Starts up ToonTalk running the <a
+    href="make_pzl.htm">puzzle</a> contained in file name. File name may also be a number in
+    which case the system puzzle named p&lt;number&gt;.pzl is used. If you look at &lt;user
+    name&gt;.log in the Users subdirectory you'll see which puzzles you most recently solved.
+    Starting with Beta 18 or Release 1.1 the file name can be a URL</font><font
+    face="Comic Sans MS">.</font></dd>
+  <dt><strong><font face="Comic Sans MS" size="3">-next_puzzle 1 </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">Starts up ToonTalk at the next puzzle for this user.
+    It starts with the first puzzle if no puzzles have been solved by this user. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>-autodemo &lt;0, 1 or 2&gt;</strong> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">0 is the default and turns off auto demo mode. 1
+    means that when idle for 30 seconds the system repeatedly shows the introductory tour. If
+    someone begins &quot;play game&quot; or &quot;free play&quot; then it will wait 120
+    seconds. The number of seconds is controlled by the line in your <a href="ttini.htm">toontalk.ini</a>
+    that reads &quot;AutoDemoMaxIdle=120&quot;.&nbsp; -autodemo 2 differs only in that it will
+    go through all the demos one by one when idle. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><strong>-subtitles &lt;speed&gt;</strong> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">If showing a demo and subtitles exist then show them
+    at a reading speed whose default is 100. If speed is 0 then no subtitles are shown. The
+    default language of the subtitles can be overridden by &quot;SubtitlesSuffix=ust&quot; in
+    the &quot;Executables&quot; section of ToonTalk.ini. Where UST is the American English
+    subtitles suffix. UKT is for UK English. SET is for Swedish. And so on. </font></dd>
+  <a name="TextToSpeech">
+  <dt><strong><font face="Comic Sans MS" size="3">-speak &lt;0, 1&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">1 turns on text-to-speech. 0 turns it off. 1 is the
+    default. </font></dd>
+  </a>
+  <dt><strong><font face="Comic Sans MS" size="3">-balloon &lt;0,1&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">1 turns on word balloons for the Martian. Default is
+    1. </font></dd>
+  <a name="MouseSensitivity">
+  <dt><strong><font face="Comic Sans MS" size="3">-mouse_sensitivity &lt;sensitivity&gt; </font></strong></dt>
+  <dd><font face="Comic Sans MS" size="3">100 is normal. A number larger than 100 will make
+    small moves of the mouse mean big movements in ToonTalk. A number smaller than 100 will
+    make the mouse less sensitive. </font></dd>
+  </a>
+  <dt><strong><font face="Comic Sans MS">-unicode_code_page &lt;number&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">Converts text to Unicode which can display text in all of the
+    world's languages. For example, -unicode_code_page 932 enables the Japanese code page so
+    that you can cut and paste Japanese text. You'll also need to use -font_variable 
+  to change to a Unicode font. If the default language is Japanese, this is 
+  automatically set. </font></dd>
+  <dt><strong><font face="Comic Sans MS">-language &lt;language&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">Overrides the default language. You can choose any installed
+    language by name (e.g. &quot;English&quot; or &quot;Swedish&quot;) or by the 2-letter
+    country code (e.g. &quot;UK&quot;, &quot;US&quot;, or &quot;SE&quot;).</font></dd>
+  <dt><strong><font face="Comic Sans MS">-<a name="SpokenLanguage">spoken_language</a>
+    &lt;language&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">Overrides the default language only when Marty 
+  is speaking. Note that the talk balloon still uses the default language. </font></dd>
+  <dt><a name="AvenuesAsNumbers"><strong><font face="Comic Sans MS">-avenues_as_numbers
+    &lt;0,1&gt;</font></strong></a></dt>
+  <dd><font face="Comic Sans MS">If given a value of 1, then avenues will show 
+  as digits rather than as words (ordinals). </font></dd>
+  <dt><a name="AdjustableSizes"><strong><font face="Comic Sans MS">-adjustable_sizes
+    &lt;0,1&gt;</font></strong></a></dt>
+  <dd><font face="Comic Sans MS">If given a value of 0 then Tooly and his 
+  friends will have the same apparent size regardless of the screen resolution. 
+  With the default value of 1 they are smaller but sharper when run with higher 
+  screen resolutions.</font></dd>
+  <dt><strong><font face="Comic Sans MS">-closed_caption &lt;0,1&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">If given a value of 1 then you'll hear Marty 
+  speak and also see subtitles. Default is 0.</font></dd>
+  <dt><strong><font face="Comic Sans MS">-subtitle_marty &lt;0,1&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">If given a value of 1 then you'll see subtitles 
+  rather than talk balloons.&nbsp; Default is 0.</font></dd>
+  <dt><strong><font face="Comic Sans MS">-create_narration &lt;0,1&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">If given a value of 1 will <a href="make_dmo.htm">generate a
+    narration file</a> in the Demos directory. Default is 0.</font></dd>
+  <dt><strong><font face="Comic Sans MS">-print_narration_start_times &lt;0,1&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">If given a value of 1 will list start times of each narration
+    segment in your log file. Good for <a href="make_dmo.htm">adding subtitles to narrated
+    demos</a>. Default is 0.</font></dd>
+  <dt><a name="IntegerPositions"><strong><font face="Comic Sans MS">-integer_positions
+    &lt;0,1&gt;</font></strong></a></dt>
+  <dd><font face="Comic Sans MS">If given a value of 0 then the <a href="remote.htm#XSensor">x
+    and y position sensors</a> will display their exact values. With a value of 
+  1 the values are as integers. 1 is the default.</font></dd>
+  <dt><a name="HTMLDialogs"><strong><font face="Comic Sans MS">-set_option(&lt;category&gt;,&lt;element&gt;,&lt;value&gt;)</font></strong></a></dt>
+  <dd><font face="Comic Sans MS">Useful when customizing ToonTalk's
+  <a href="dialogs.htm">HTML
+    dialogs</a>. If passed to Start ToonTalk then <a href="ttini.htm">toontalk.ini</a> 
+  is updated using the three arguments.</font></dd>
+  <dt><font face="Comic Sans MS"><a name="NextDialog"><strong>-next_dialog</strong></a>
+  <b>&lt;HTML file name&gt;</b></font></dt>
+  <dd><font face="Comic Sans MS">Useful when customizing ToonTalk's <a href="dialogs.htm">HTML
+    dialogs</a>. If passed to Start ToonTalk then this will be the next (or 
+  first) dialog displayed. </font></dd>
+  <dt><strong><font face="Comic Sans MS">-previous_dialog</font></strong></dt>
+  <dd><font face="Comic Sans MS">Useful when customizing ToonTalk's <a href="dialogs.htm">HTML
+    dialogs</a>. If passed to Start ToonTalk then the previous dialog is 
+  displayed. Acts much like the &quot;Back&quot; button in a browser.</font></dd>
+  <dt><strong><font face="Comic Sans MS">-backup_settings</font></strong></dt>
+  <dd><font face="Comic Sans MS">Useful when customizing ToonTalk's <a href="dialogs.htm">HTML
+    dialogs</a>. If passed to Start ToonTalk then the current state of toontalk.ini is saved.
+    Useful in the first of a sequence of option screens. Requires Beta 35 or 2.52 or later.</font></dd>
+  <dt><strong><font face="Comic Sans MS">-cancel_settings</font></strong></dt>
+  <dd><font face="Comic Sans MS">Useful when customizing ToonTalk's <a href="dialogs.htm">HTML
+    dialogs</a>. If passed to Start ToonTalk then toontalk.ini is restored to the state it was
+    in when backup_settings was processed. Also returns to the starttt.htm 
+  dialog</font></dd>
+  <dt><strong><font face="Comic Sans MS">-accept_settings</font></strong></dt>
+  <dd><font face="Comic Sans MS">Useful when customizing ToonTalk's <a href="dialogs.htm">HTML
+    dialogs</a>. If passed to Start ToonTalk then the state saved when backup_settings was
+    processed is erased. Also returns to the starttt.htm dialog.</font></dd>
+  <dt><strong><font face="Comic Sans MS">-<a name="ScreenWidth">screen_width</a> &lt;screen
+    width&gt;</font></strong></dt>
+  <dd><font face="Comic Sans MS">Sets the screen width (and the height which is 3/4 of the
+    width) of the ToonTalk window or the resolution of the screen if running full-screen.
+    Better to use 'Set Options' to set this but  this
+    accepts any screen width. For example, -screen_width 2048 will run ToonTalk at 2048x1536
+    resolution. Common screen resolutions are easier to set by clicking on 'Set Options' after
+    starting ToonTalk.</font></dd>
+  <dt><b><font face="Comic Sans MS">-<a name="DefaultUser">default_user</a> 
+  &lt;user name&gt; </font></b></dt>
+    <dd><font face="Comic Sans MS">A command line alternative to the 
+    toontalk.ini <a href="ttini.htm#DefaultUser">DefaultUser</a> customization. </font><font size="3" face="Comic Sans MS">
+    <a href="defuser.htm">Click here</a> for more information.</font></dd>
+  <dt><b><span lang="en-gb"><font face="Comic Sans MS">
+  <a name="SecondsBetweenLogs">-seconds_between_logs &lt;number&gt;</a></font></span></b></dt>
+  <dd><span lang="en-gb"><font face="Comic Sans MS">If number is greater than 0 
+  then <a href="ttravel.htm">time travel</a> is enabled and the number specifies 
+  how long each time travel segment lasts. Can also be
+  <a href="ttini.htm#SecondsBetweenLogs">customized for all in toontalk.ini</a>. </font></span></dd>
+<dt><b><span lang="en-gb"><font face="Comic Sans MS">
+<a name="TimeTravelEnabled">-time_travel_enabled &lt;0,1&gt;</a></font></span></b></dt>
+<dd><span lang="en-gb"><font face="Comic Sans MS">Sets the default value for the 
+check mark on the dialog screen that asks users their name.</font></span></dd>
+<dt><b><span lang="en-gb"><font face="Comic Sans MS">
+<a name="MustBeNewUser">-must_be_new_user</a> &lt;0,1&gt;</font></span></b></dt>
+<dd><font face="Comic Sans MS"><span lang="en-gb">If set to 1 then ToonTalk will 
+guarantee that the user name is new. If an existing user name is given a number 
+is added to make it unique. This is mostly useful in conjunction with the
+<a href="defuser.htm">default user</a> option.
+Requires beta 42 or 3.55 or later</span>.</font></dd>
+<dt><b><font face="Comic Sans MS">
+<a name="LocalIniFile">-local_ini_file<span lang="en-gb"> </span>&lt;ini file name<span lang="en-gb">&gt;</span></a></font></b></dt>
+<dd><font face="Comic Sans MS"><span lang="en-gb">If set t</span>hen ToonTalk 
+will use the toontalk.ini entries in the file name before using the ordinary 
+ones<span lang="en-gb">.</span> If the file name is not a full path name, then 
+it is assumed to be relative to the ToonTalk installation directory.<span lang="en-gb">
+Requires beta 42 or 3.</span>67<span lang="en-gb"> or later</span>.</font></dd>
+  <dt><big><font face="Comic Sans MS" size="3"><b>-<a name="ExitAtEndOfDemo">exit_at_end_of_demo</a> 
+  &lt;0, 1&gt;</b></font></big></dt>
+  <dd><font face="Comic Sans MS">When set to 0 at the end of a demo or time 
+  travel archive the player is left in control. Default is 1.  See also </font><big><font face="Comic Sans MS" size="3">the 
+  toontalk.ini Switch <a href="ttini.htm#ExitWhenDemoEnds">ExitWhenDemoEnds</a>.</font></big></dd>
+  <dt><a name="KeepRunningDemoDespiteProblems"><b><font face="Comic Sans MS">
+  -keep_running_demo_despite_problems</font></b><big><b><font face="Comic Sans MS" size="3"> 
+  &lt;0, 1&gt;</font></b></big></a></dt>
+  <dd>
+  <font
+    face="Comic Sans MS">
+  If set to 1 then when ToonTalk discovers a problem when replaying a demo or 
+  time travel segment, it continues and ignores the problem. Many demo replay 
+  anomalies have no symptoms and can be ignored -- others will cause the demo to 
+  replay strangely.  See also the
+  <a href="ttini.htm#KeepRunningDemoDespiteProblems">ToonTalk.ini equivalent</a>.</font>
+  <p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+    <p align="center">&nbsp;</p>
+  </dd>
+</dl>
+</body>
+</html>

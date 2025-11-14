@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>Customizing ToonTalk for Time Travel</title>
+		<meta content="Microsoft Visual Studio.NET 7.0" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="../dialog.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="../common.js"></script>
+		<script language="javascript" id="clientEventHandlersJS">
+
+		</script>
+	</head>
+	<body>
+		<P align="center">Customizing ToonTalk for Time Travel.</P>
+		<P align="left">If you enable time travel then while running ToonTalk you can go 
+			back in time. You can replay something that just happened. You can even change 
+			the past! Perhaps to undo a mistake. You can send your time travel logs to 
+			others and they can see what you did.</P>
+		<P align="left">That's the good news. The bad news is that depending upon what you 
+			are doing and how powerful your computer is, time travel may make ToonTalk run 
+			more slowly and it may pause now and then. Also this is a new feature and there 
+			are probably some bugs remaining.</P>
+		<P align="left">I recommend you try it out by clicking the following button: <INPUT onclick="setOption('Switches','SecondsBetweenLogs',10); setOption('Switches','GenerateLogs',100); closeWindow(' -free_play 1')"
+				type="button" value="TURN ON TIME TRAVEL" name="Next" ID="Button1">
+		</P>
+		<P align="left">If you discover problems please report them to <A href="mailto:support@toontalk.com">
+				support@toontalk.com</A>. You'll find a file called time_travel.dmo in your 
+			user directory (part of the ToonTalk subdirectory of My Documents). Please 
+			attach that file to your email if you are having problems.</P>
+		<P align="left">If you want to turn off time travel just click on this button: <INPUT id="Button2" onclick="setOption('Switches','SecondsBetweenLogs',0); closeWindow(' -free_play 1')"
+				type="button" value="TURN OFF TIME TRAVEL" name="Next"></P>
+	</body>
+</html>

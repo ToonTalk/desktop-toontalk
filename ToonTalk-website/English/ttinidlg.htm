@@ -1,0 +1,874 @@
+<html>
+	<head>
+		<title>Customizing your ToonTalk Installation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+		<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+		<LINK href="../dialog.css" type="text/css" rel="stylesheet">
+			<script language="javascript" src="../common.js"></script>
+			<script language="javascript" id="clientEventHandlersJS"></script>
+	</head>
+	<body link="#0000ff" vlink="#800080">
+		<p align="center"><font size="5" face="Comic Sans MS">ToonTalk Installation 
+				Customizations</font></p>
+		<P><i><font size="3" face="Comic Sans MS">You can click on a </font>
+        <font size="4" face="Comic Sans MS"> <INPUT id="Button3" type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS">&nbsp;button 
+					to read or change the value of an option. When you are 
+        finished you can click on this: </font>
+        </i>
+        <INPUT id="Button4" onclick="closeWindow('***CLOSED***')" type="button" value="I'm finished."
+				name="Button1"></P>
+		<UL>
+			<li>
+				<font size="4">
+                <INPUT id="Button43" onclick="closeWindow('-set_option(Switches,AbsoluteMouseMode,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+				<font face="Comic Sans MS" size="3"><a name="AbsoluteMouseMode">AbsoluteMouseMode</a>. 
+                <span style="font-weight: 400">If 
+					set to 1 then ToonTalk will treat the mouse as a source of screen coordinates 
+					rather than changes in screen position. Ideal for tablet PCs, stylus input 
+					devices, and touch sensitive screens. More details <a href="absolute.htm" onclick="closeWindow('-browse absolute.htm')">here</a>.</span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button56" onclick="closeWindow('-set_option(Switches,AskBeforeForeignBirdsLoadDLL,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="AskBeforeForeignBirdsLoadDLL"><font size="3">AskBeforeForeignBirdsLoadDLL</font></a><font size="3">. 
+                        <span style="font-weight: 400">If 
+					set to 0 then ToonTalk will not put up a dialog asking if it is OK to load a 
+					DLL that implements a foreign bird. Default is 1. Setting it to 0 is 
+					recommended only if you are either sure that ToonTalk code you load was not 
+					written with the intent of damaging your files or that the only DLLs available 
+					are safe ones. Note that TTFile.dll is not safe since it allows ToonTalk robots 
+					to read and write files.</span> </font>
+				</font>
+	        <li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button36" onclick="closeWindow('-set_option(Directories,BackgroundsDir,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font size="3" face="Comic Sans MS">BackgroundsDir. 
+                <span style="font-weight: 400">If this is set in the Directories 
+					section of toontalk.ini then its value is where ToonTalk will look for 
+					background images. If this is not set then ToonTalk will look in the directory 
+					set by BuiltinPictureDir (if it has been set).</span></font><span style="font-weight: 400"><font size="3">
+                </font>
+                </span>
+			<li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button35" onclick="closeWindow('-set_option(Directories,BuiltinPictureDir,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> BuiltinPictureDir.
+                <span style="font-weight: 400">If this is set in the Directories 
+                section of toontalk.ini then its value is where ToonTalk will 
+                look for all of its built-in graphics.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button37" onclick="closeWindow('-set_option(Directories,BuiltinPictureDirIf8Bit,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> BuiltinPictureDirIf8Bit. 
+                <span style="font-weight: 400">If this is set and you are running ToonTalk with 256 colors then its value 
+                is where ToonTalk will look for all of its built-in graphics 
+                (except for the background images).</span></font><li>
+				<font size="4" face="Comic Sans MS"><INPUT id="Button82" onclick="closeWindow('-set_option(Switches,CityFileMax,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font size="3">CityFileMax</font><span style="font-weight: 400"><font size="3">. When you save your 
+                city (via the 'Save Everything' button), ToonTalk will maintain 
+                the last CityFileMax saved city files if this is set to a number 
+                greater than 0.</font></span><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button24" onclick="closeWindow('-set_option(Directories,ClippingDir,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="ClippingDir">ClippingDir</a>. 
+					<span style="font-weight: 400">If ClippingDir set then when ToonTalk puts something on the clipboard it 
+					also puts a copy in a file in ClippingDir with the users name (or if a city was 
+					put on the clipboard the users name followed by "_city"). This directory can be 
+					the desktop or a networked directory to simplify sharing. Or it can be set to 
+					"a:" to make it easier to give someone a floppy with a copy of clipboard 
+					encoding.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button85" onclick="closeWindow('-set_option(Switches,ColorSelectionFeedback,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font size="3">ColorSelectionFeedback<span style="font-weight: 400">. If set to 1 then when something is 
+                selected in addition to wiggling its color repeatedly changes a 
+                little.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button94" onclick="closeWindow('-set_option(Switches,DefaultNumberDisplayBase,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font size="3">DefaultNumberDisplayBase<span style="font-weight: 400">. 
+                Can be set to a value between 2 and 36 inclusive. Numbers will 
+                be in this base unless explicitly specified otherwise.</span></font><li>
+                <font size="4" face="Comic Sans MS">
+                <INPUT id="Button9" onclick="closeWindow('-set_option(User,DefaultUser,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> DefaultUser. 
+                <span style="font-weight: 400">This 
+					feature is provided for a classroom or museum where there is a desire to change 
+					the initial notebook, layout, and/or city. Just customize these things under a 
+					user name and then provide that user name here. <a href="defuser.htm" onclick="closeWindow('-browse defuser.htm')">Click here</a>
+					for more information.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button11" onclick="closeWindow('-set_option(Executables,DemoToonTalk32,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="DemoToonTalk32">DemoToonTalk32</a>. 
+					<span style="font-weight: 400">This entry should have the name of a ToonTalk 
+					executable to be run when replaying a demo.</span></font><li>
+				<font size="4">
+                <INPUT id="Button42" onclick="closeWindow('-set_option(Switches,DesiredFullScreenBitsPerPixel,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+				<font face="Comic Sans MS" size="3">DesiredFullScreenBitsPerPixel. 
+                <span style="font-weight: 400">If this is set to 8, 15, 
+					16, 24, or 32 in the Switches section of toontalk.ini then ToonTalk will run 
+					with this color depth when in full-screen mode. Any other value and ToonTalk 
+					will use the same color depth as Windows. Note this works with all 32-bit versions of Windows except Windows 95.</span></font><li>
+				<font size="4">
+                <INPUT id="Button92" onclick="closeWindow('-set_option(Switches,DigitsAfterDecimalPoint,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3">
+				DigitsAfterDecimalPoint</font><span style="font-weight: 400"><font size="3">. When 
+                ToonTalk creates a Java applet there isn't support for exact 
+                unlimited arithmetic. You can specify how many digits of 
+                accuracy is desired with this option.</font></span><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button86" onclick="closeWindow('-set_option(Switches,DisplayAvailableSubtitlesInDemos,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font size="3">DisplayAvailableSubtitlesInDemos</font><span style="font-weight: 400"><font size="3">. 
+                If set to 1 and a demo includes subtitles then they are 
+                displayed.</font></span><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button98" onclick="closeWindow('-set_option(Switches,DisplayPositionsAsIntegers,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS">
+                <b>DisplayPositionsAsIntegers</b>. 
+                <span style="font-weight: 400">If set to 1 then the sensors 
+                for a <a href="remote.htm#XSensor">picture's position</a> are 
+                displayed as integers rather than as exact values.</span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button69" onclick="closeWindow('-set_option(Switches,DisplayTextRightToLeft,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<span lang="en-gb"><a name="DisplayTextRightToLeft">
+                <font size="3">DisplayTextRightToLeft</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">Should be set to 1 only for 
+                        languages where text is displayed from right to left - 
+                        e.g. Hebrew and Arabic.</font></span></span><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button70" onclick="closeWindow('-set_option(Switches,DontScrollOnFloor,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="DontScrollOnFloor"><font size="3">DontScrollOnFloor</font></a><font size="3">.
+                        </font> 
+                        <span style="font-weight: 400"><font size="3">If 
+                        set to 1, then the entire floor 
+                        is visible when you sit down and no scrolling or panning 
+                        occurs.</font></span><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button68" onclick="closeWindow('-set_option(Switches,DurationBeforeAutoHideTimeTravelButtons,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="DurationBeforeAutoHideTimeTravelButtons">
+                        <font size="3">DurationBeforeAutoHideTimeTravelButtons</font></a><font size="3">.
+                        </font> 
+                        <span style="font-weight: 400"><font size="3">If this has a value greater than zero, then the time 
+                        travel buttons will hide themselves after the specified 
+                        number of milliseconds if the mouse and keyboard are 
+                        idle. The buttons will automatically reappear if the 
+                        mouse or keyboard is used.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button45" onclick="closeWindow('-set_option(Switches,DustyUsedOncePerClick,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="DustyUsedOncePerClick"><font size="3">DustyUsedOncePerClick</font></a><font size="3">.
+                </font>
+                        <span style="font-weight: 400"><font size="3">If set to 1 then Dusty 
+                        will only suck, erase, or spit one thing when turned on. 
+                        You'll need to turn him on repeatedly to work on many 
+                        things.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button54" onclick="closeWindow('-set_option(User,EmailToReportCrash,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="EmailToReportCrash"><font size="3">EmailToReportCrash</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set then it is opened as a URL. Typically it is a mailto URL. For 
+					example, it can be "<a href="mailto:support@toontalk.com?subject=ToonTalk Crash Report&body=Please add any information that might be useful.">mailto:support@toontalk.com?subject=ToonTalk 
+                        Crash Report&amp;body=Please add any information that might 
+                        be useful.</a>&quot;.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button97" onclick="closeWindow('-set_option(Switches,EumulateMouseForFullScreenTimeTravel,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						</font><font size="3">
+                EumulateMouseForFullScreenTimeTravel.<span style="font-weight: 400"> 
+                If set to 1 then when running in full-screen mode and ToonTalk 
+                needs to display a cursor for using the time travel button then 
+                ToonTalk does not use the built-in Windows cursor. On some 
+                systems the built-in cursor isn't always displayed.</span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button96" onclick="closeWindow('-set_option(Switches,ExitWhenDemoEnds,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						</font><font size="3">ExitWhenDemoEnds<span style="font-weight: 400">. 
+                If set to 0 then at the end of a demo the player is in control 
+                in the world as it was at the end of the demo. Otherwise 
+                ToonTalk exits at the end of a demo.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button28" onclick="closeWindow('-set_option(Directories,FileSearchPath,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font face="Comic Sans MS"><a name="FileSearchPath">
+                <font size="3">FileSearchPath</font></a><font size="3">. 
+                <span style="font-weight: 400">When 
+					ToonTalk is looking for a file (e.g. a user's BMP file for a picture or WAV 
+					file for a sound), it looks in the Users subdirectory of ToonTalk (unless 
+					overridden by <a href="#UserFiles">UserFiles</a>). If it can't find a file 
+					there, it will search the directories listed in the FileSearchPath. 
+					FileSearchPath is a list of directories separated by commas. Each directory can 
+					be a full file path (e.g. c:\toontalk\pictures), a URL (e.g. 
+					http://www.toontalk.com/temp), or a relative path where * stands for the 
+					Users\&lt;user name&gt; directory so for a user named Sue with ToonTalk 
+					installed in the default location will be c:\program files\animated 
+					programs\toontalk\users\sue. For example, "*\..\..\extra_sounds" specifies a 
+					user defined directory named "extra_sounds" that is a direct subdirectory of 
+					the main ToonTalk directory.</span></font></font><span style="font-weight: 400"><font size="3">
+                </font>
+                </span>
+			<li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button26" onclick="closeWindow('-set_option(User,FixedFont,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font face="Comic Sans MS"><a name="FixedFont"><font size="3">FixedFont</font></a><font size="3">.
+                <span style="font-weight: 400">This can be set to the name of a 
+                font that should be used for text which is displayed with a 
+                fixed width font.</span></font></font><font size="3"> </font>
+			<li>
+				<font size="4"><INPUT id="Button2" onclick="closeWindow('-set_option(Switches,GenerateLogs,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+				<font size="3" face="Comic Sans MS"><a name="GenerateLogs">GenerateLogs</a>. 
+                <span style="font-weight: 400">This 
+					generates files named log&lt;number&gt;.dmo on the ToonTalk users directory 
+					which can be replayed. Good for reproducing problems. You can reach these files 
+					from "My Documents" to "ToonTalk" to the folder with the user's name. The value 
+					is the number of logs kept. Also used for <a href="ttravel.htm" onclick="closeWindow('-browse ttravel.htm')">time travel</a>. 
+					If negative old logs are not deleted.</span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button51" onclick="closeWindow('-set_option(Switches,GoodSizesAreAFixedPercentageOfScreen,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="GoodSizesAreAFixedPercentageOfScreen">
+                <font size="3">GoodSizesAreAFixedPercentageOfScreen</font></a><font size="3">.
+                </font>
+                        <span style="font-weight: 400"><font size="3">If set to 1 then Marty, 
+                        your hand, Tooly, and other tools will have the same 
+                        relative size compared to the screen (or window) 
+                        regardless of the screen resolution. Good for 
+                        collaborating and giving demos but does use up quite a 
+                        bit of screen real estate.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button65" onclick="closeWindow('-set_option(Switches,IncludeMediaInTimeTravelArchives,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<span lang="en-gb"><a name="IncludeMediaInTimeTravelArchives">
+                <font size="3">IncludeMediaInTimeTravelArchives</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set to 1 then ToonTalk 
+                        includes the media needed to run time travel archives 
+                        saved on this machine on other machines. Enabling this 
+                        slows down time travel recording a little and can make 
+                        the time travel archives much larger than otherwise.</font></span></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button48" onclick="closeWindow('-set_option(Java,JavaSourceHTML,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="JavaSourceHTML"><font size="3">JavaSourceHTML</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set  then  is inserted in the HTML page as the 
+						link to the Java source code that is generated when you <a href="java.htm" onclick="closeWindow('-browse java.htm')">create 
+							a Java applet</a>.</font></span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button6" onclick="closeWindow('-set_option(Switches,JoystickDeadZone,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> JoystickDeadZone. 
+                <span style="font-weight: 400">This feature works only if 
+					you have <a href="joystick.htm" onclick="closeWindow('-browse joystick.htm')">a 
+						joystick or game controller</a> connected to your 
+                computer. A joystick sometimes is not being touched but tells 
+                the computer that it has moved a little bit. This feature tells 
+                ToonTalk how small movements should be to be ignored. The value 
+                goes from 0 to 10,000. </span> </font>
+			<li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button67" onclick="closeWindow('-set_option(Switches,KeepAllTimeTravelSegments,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<span lang="en-gb"><a name="KeepAllTimeTravelSegments">
+                <font size="3">KeepAllTimeTravelSegments</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If this has a non-zero value then time 
+  travel archives are never trimmed despite the setting of
+  <a href="#GenerateLogs">GenerateLogs</a>. A value greater than is 0 is wasteful of disk space. For trouble-shooting and for keeping complete records 
+  of a session (e.g. when doing educational research) then a value of 1 is 
+  useful. Note that if a user creates new time line branches by pressing the 
+  record button during time travel then the new time travel archive will not 
+  include files that would normally have been deleted. Note that if you want to 
+  ensure that all time lines are available for analysis then set
+  <a name="MaximumNumberOfTimeLines" href="#MaximumNumberOfTimeLines">MaximumNumberOfTimeLines</a> 
+                        to a large number.</font></span></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button75" onclick="closeWindow('-set_option(Switches,KeepSavingScreenShots,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="KeepSavingScreenShots">KeepSavingScreenShots</a>.<span style="font-weight: 400"> 
+                        If set to 1 in the Switches section then if you press 
+                        control-F11 to generate screen shots, ToonTalk will 
+                        continue to generate screen shots until you exit. Useful 
+                        for generating a video from a demo.</span></font><span style="font-weight: 400"><font size="3">
+                        </font>
+					    </span>
+				</font>
+			<li>
+				<font size="4">
+                <INPUT id="Button34" onclick="closeWindow('-set_option(Switches,LeftAndRightMouseButtonsDownMeansEscape,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+				<font size="3" face="Comic Sans MS">
+                <a name="LeftAndRightMouseButtonsDownMeansEscape">LeftAndRightMouseButtonsDownMeansEscape</a>.<span style="font-weight: 400"> This should be set to 1, if you 
+                want to press the equivalent of the Escape key by clicking on 
+                the left and right mouse button at the same time.</span></font><span style="font-weight: 400"><font size="3">
+                </font>
+                </span>
+			<li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button32" onclick="closeWindow('-set_option(Network,LogNetworkEvents,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS">
+                <a name="LogNetworkEvents">LogNetworkEvents</a>. 
+                <span style="font-weight: 400">If this is set to 1, then the user log file (&lt;user name&gt;.txt 
+                in the 
+					Users folder), will 
+					describe all the message traffic as <a href="ldbird.htm" onclick="closeWindow('-browse ldbird.htm')">birds fly to nests on 
+						other computers</a>.</span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button72" onclick="closeWindow('-set_option(Switches,MakeCurrentExeDefault,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<font size="3"><a name="MakeCurrentExeDefault">MakeCurrentExeDefault</a>. </font> 
+                        <span style="font-weight: 400"><font size="3">If set to 1 then when you run a ToonTalk executable it automatically becomes the 
+						default version. If set to 0 it is not. If set to 2 then the user is queried 
+						each time a version of ToonTalk is run that is different from the default.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button99" onclick="closeWindow('-set_option(Switches,MartyAppearsOnlyIfCalled,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						</font><big><font face="Comic Sans MS" size="3"><b>
+                <a name="MartyAppearsOnlyIfCalled">MartyAppearsOnlyIfCalled</a></b>.<span style="font-weight: 400"> 
+                If set to 1 then when Marty wants to say something an icon 
+                appears and lasts
+                <a href="#MartyHasSomethingToSayDisplayDuration">
+                MartyHasSomethingToSayDisplayDuration</a> seconds before going 
+                away and forgetting what it was he wanted to say.&nbsp; If 
+                before the icon disappears one presses the F1 key then Marty 
+                will say then what he currently says when triggered by an event.</span></font></big><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button100" onclick="closeWindow('-set_option(Switches,MartyHasSomethingToSayDisplayDuration,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						</font><big><font face="Comic Sans MS" size="3"><b>
+                <a name="MartyHasSomethingToSayDisplayDuration">MartyHasSomethingToSayDisplayDuration</a></b>. 
+                <span style="font-weight: 400">Number of seconds 
+                the icon indicating that Marty wants to say something is 
+                displayed. Ignored unless <a href="#MartyAppearsOnlyIfCalled">
+                MartyAppearsOnlyIfCalled</a> is set.</span></font></big><li>
+				<font size="4">
+                <INPUT id="Button40" onclick="closeWindow('-set_option(Switches,MaximumItemsInDusty,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+				<font face="Comic Sans MS"><a name="MaximumItemsInDusty">
+                <font size="3">MaximumItemsInDusty</font></a><font size="3">. 
+					<span style="font-weight: 400">Everything Dusty sucks up can 
+                be spit out again. This can be wasteful, especially if you 
+                frequently save your city and continue in the next session. If 
+                this is set to n then Dusty can only spit out the last n items 
+                sucked up. The others are destroyed for good and their resources 
+                freed.</span></font></font><span style="font-weight: 400"><font size="3">
+                </font>
+                </span>
+			<li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button7" onclick="closeWindow('-set_option(Switches,JoystickDeadZone,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS">
+                <a name="MaximumNumberOfHoles">MaximumNumberOfHoles</a>. <span style="font-weight: 400">Boxes, when 
+                they have very many holes (over a thousand), start to slow down 
+                ToonTalk. Use this option to override the default of 65,535 
+                maximum holes to a box.</span></font><font face="Comic Sans MS"><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button64" onclick="closeWindow('-set_option(Switches,MaximumNumberOfTimeLines,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<span lang="en-gb"><a name="MaximumNumberOfTimeLines">
+                        <font size="3">MaximumNumberOfTimeLines</font></a><font size="3">.
+                        </font>
+                        <span style="font-weight: 400"><font size="3">If you enable <a href="ttravel.htm" onclick="closeWindow('-browse ttravel.htm')">time travel</a> 
+                        and attempt to alter the past the previous time line is 
+                        saved. This controls the number of previous versions 
+                        kept.</font></span></span><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button84" onclick="closeWindow('-set_option(Switches,MaximumPauseDurationDueToTimeTravel,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<span lang="en-gb"><font size="3">MaximumPauseDurationDueToTimeTravel</font></span><font size="3"><span style="font-weight: 400" lang="en-gb">. 
+                        If  </span> 
+                        </font> 
+                        <span style="font-weight: 400" lang="en-gb"> 
+                        <font size="3"> <a href="ttravel.htm" onclick="closeWindow('-browse ttravel.htm')">time travel</a> causes pauses longer than this value in 
+                        milliseconds, then time travel segments are doubled in 
+                        length. If the time travel overhead is large then this 
+                        repeated doubling will make time travel overhead very 
+                        rare. But then it will be hard to move back a little bit 
+                        in time.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button61" onclick="closeWindow('-set_option(Directories,MediaDir,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="MediaDir"><font size="3">MediaDir</font></a><span style="font-weight: 400"><font size="3">. If set in the Directories section to a file 
+						path then ToonTalk will keep all user picture and sound files in a subdirectory 
+						named Media. The default is Shared Documents (and if that is not accessible 
+						then \My Documents\ToonTalk\Shared Documents is used).</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button53" onclick="closeWindow('-set_option(User,MessageAskingToReportCrash,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="MessageAskingToReportCrash"><font size="3">MessageAskingToReportCrash</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set 
+					    then it is used to ask the user if he or she wants to 
+                        generate a crash report.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button46" onclick="closeWindow('-set_option(Switches,MillisecondsPumpyUsedPerClick,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="MillisecondsPumpyUsedPerClick"><font size="3">MillisecondsPumpyUsedPerClick</font></a><font size="3">.
+                </font> 
+					    <span style="font-weight: 400"><font size="3">If set to a value greater than 0, then Pumpy will work for that many 
+					milliseconds and then turn himself off. Values between 500 to 1000 make Pumpy 
+					easier to control.</font></span><li>
+						<font size="4">
+                <INPUT id="Button57" onclick="closeWindow('-set_option(Switches,MinimumTimeSample,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="MinimumTimeSample"><font size="3">MinimumTimeSample</font></a><font size="3">.
+                        </font> 
+                        <span style="font-weight: 400"><font size="3">This controls how 
+					accurate the millisecond timer is. The default value is 1. If, for example, it 
+					is set to 10 then the timer has 10 millisecond accuracy. On a few systems this 
+					may speed up ToonTalk. If set to 0 or a negative value, leaves the system 
+					default set by Microsoft Windows. Note that you should set this to 0 to run on 
+					an Apple Macintosh running VirtualPC. </font> </span>
+					    </font>
+	        <li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button39" onclick="closeWindow('-set_option(FileExtensions,MissingBuiltinPictureFileExtension,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> MissingBuiltinPictureFileExtension.
+                <span style="font-weight: 400">If this is set then files with 
+                this extension will be used if BackgroundsDir or 
+                BuiltinPictureDir is set. Typical values are GIF, PNG, or JPG.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button41" onclick="closeWindow('-set_option(FileExtensions,MissingBuiltinPictureFileExtensionIf8Bit,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> MissingBuiltinPictureFileExtensionIf8Bit. 
+                <span style="font-weight: 400">If this is set and you are running ToonTalk 
+					with 256 colors then files with this extension will be used 
+                if BuiltinPictureDirIf8Bit, BuiltinPictureDir, or BackgroundsDir 
+                is set. Typical values are GIF, PNG, or JPG.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button38" onclick="closeWindow('-set_option(FileExtensions,MissingPictureFileExtension,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="MissingPictureFileExtension">MissingPictureFileExtension</a>. 
+					<span style="font-weight: 400">If this is set then files with 
+					this extension will be used to find pictures that were loaded without any file 
+					extension. The default value is BMP. Other typical values are GIF, PNG, or JPG.</span></font><font face="Comic Sans MS"><li>
+						<font size="4">
+                <INPUT id="Button58" onclick="closeWindow('-set_option(Switches,MovementSelectionFeedback,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="MovementSelectionFeedback"><font size="3">MovementSelectionFeedback</font></a><font size="3">.
+                        </font>
+                        <span style="font-weight: 400"><font size="3">This controls how objects 
+                        wiggle when selected. It describes the number of pixels 
+                        they move. If set to 0 they will not move.</font></span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button81" onclick="closeWindow('-set_option(FileExtensions,NarrationFileSuffix,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> NarrationFileSuffix. 
+                <span style="font-weight: 400">The value currently must 
+					be either SPK for US English narration, TAL for Swedish narration, 
+                UKN for UK English, PTN for European Portuguese, BRN for 
+                Brazilian Portuguese or JPN for Japanese.&nbsp; Defaults to 
+					appropriate value of the current language. By using this 
+                option you can have narration in a different language than the 
+                demo and its subtitles.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button83" onclick="closeWindow('-set_option(Switches,NumberShrinkage,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+                <font size="3">NumberShrinkage<span style="font-weight: 400">. 
+                If set to a value between 0.0 and 1.0 then it is used as the 
+                amount that successive digits shrink when displaying shrinking 
+                digit fractions or numbers whose value doesn't fit on the number 
+                pad.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button95" onclick="closeWindow('-set_option(Switches,NumberToTextConversionIsExact,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+                <font size="3">NumberToTextConversionIsExact. </font> <span style="font-weight: 400">
+                <font size="3">If 
+                set to 1 then when a number is dropped on an erased text pad the 
+                result is displayed as an exact decimal if possible. This is 
+                important for tools that convert ToonTalk data to strings for 
+                use by other programs such as Excel.</font></span><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button62" onclick="closeWindow('-set_option(Executables,PictureEditor,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="PictureEditor"><font size="3">PictureEditor</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set it specifies the program 
+                that will run when 'Edit Picture' is selected. E.g., 
+					    setting PictureEditor to &quot;mspaint.exe&quot; makes sure that Microsoft Paint 
+                        is used. If not set then the program associated with the 
+                        PNG extension is launched.</font></span></font><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button87" onclick="closeWindow('-set_option(Switches,PlayAvailableDemoSoundFiles,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<font size="3">PlayAvailableDemoSoundFiles</font><span style="font-weight: 400"><font size="3">. 
+                If set to 1 then a demo includes narration or custom sound 
+                effects then they are played.</font></span><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button80" onclick="closeWindow('-set_option(Switches,OldUserProgramsFolderName,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="OldUserProgramsFolderName"><font size="3">OldUserProgramsFolderName</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set  it provides the subfolder name for old backed up 
+						programs. This folder is created under the user's program directory. Default is 
+						"My Old Programs".</font></span></font><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button89" onclick="closeWindow('-set_option(Switches,OKToDisplayNumbersShrinkingAndGrowing,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<font size="3">OKToDisplayNumbersShrinkingAndGrowing</font><span style="font-weight: 400"><font size="3">. 
+                If set to 1 then when a number can't be displayed because there 
+                is too little room then the digits of the number shrink and then 
+                grow to show the ends of the number and to convey that there are 
+                many (tiny) digits in between.</font></span><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button93" onclick="closeWindow('-set_option(Switches,ReincarnateToolsIfDestroyed,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<font size="3">ReincarnateToolsIfDestroyed</font><span style="font-weight: 400"><font size="3">. 
+                        If set to 1 then when a tool (Pumpy, Tooly, Dusty, 
+                        Maggie, or Notey) is destroyed (e.g. vacuuming up Pumpy 
+                        and then the MaximumItemsInDusty was reached), then a 
+                        new fresh tool is built.</font></span><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button90" onclick="closeWindow('-set_option(Switches,RemoveUnneededThingsFromThoughtBubbles,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<font size="3">RemoveUnneededThingsFromThoughtBubbles</font><span style="font-weight: 400"><font size="3">. 
+                        If set to 1 then when a robot is trained or the box in 
+                        its thought bubble is replaced then the box is 
+                        simplified. For example and erased box will no longer be 
+                        able to be restored by copying with Maggie in 'O' mode. 
+                        Keeps robots small for saving, loading, and copying.</font></span><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button77" onclick="closeWindow('-set_option(Switches,RobotDropLocationFollowsCamera,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="RobotDropLocationFollowsCamera">RobotDropLocationFollowsCamera</a>. 
+                        <span style="font-weight: 400">If set to 0 then a robot will drop things so that you 
+                        can see them even if you have moved around on the floor 
+                        after giving the robot a box.</span></font></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button63" onclick="closeWindow('-set_option(Executables,RunAfterSaving,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="RunAfterSaving"><font size="3">RunAfterSaving</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set this program will run after a ToonTalk object is saved using 
+					the 'Save It' button. E.g., setting RunAfterSaving to &quot;C:\Program Files\WinZip\WINZIP32.EXE&quot; 
+					will open the Zip archive in the newly created TT file.
+                </font>
+                        </span>
+					<li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button76" onclick="closeWindow('-set_option(Switches,RunOncePerCycleIfMatchBlankWithSensor,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="RunOncePerCycleIfMatchBlankWithSensor">
+									RunOncePerCycleIfMatchBlankWithSensor</a>. 
+                        <span style="font-weight: 400">If set to 1 then if a robot 
+                        matches an erased pad or picture in its thought bubble 
+                        with a sensor then the robot will only run once during 
+                        that cycle. This has long been the behavior when 
+                        matching non erased things with sensors and was once 
+                        true for erased things as well.</span></font></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button47" onclick="closeWindow('-set_option(Switches,SaveInXML,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="SaveInXML"><font size="3">SaveInXML</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set to 1 then when items are placed on 
+						the clipboard or dropped on the main notebook they are saved as <a href="xml.htm" onclick="closeWindow('-browse xml.htm')">XML</a>
+						rather than ToonTalk's internal format.&nbsp; Requires 2.54 or Beta 36 or 
+						later. Default is 1. Note that after beta 40 or 3.00 cities cannot be saved in 
+						the old format. And the setting of this switch is ignored if <a href="ttravel.htm" onclick="closeWindow('-browse ttravel.htm')">
+							time travel </a>
+					is enabled. Setting this to 0 is only of use to bring things saved in later 
+					versions of ToonTalk into older versions of ToonTalk.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button71" onclick="closeWindow('-set_option(Switches,SaveMediaInMainNotebook,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<span lang="en-gb"><a name="SaveMediaInMainNotebook">
+                <font size="3">SaveMediaInMainNotebook</font></a><font size="3">. 
+                        <span style="font-weight: 400">If this has a non-zero  value in the Switches 
+  section then  main notebook </span>  </font>  </span>
+						<font size="3">
+						<span style="font-weight: 400">will keep a copy of<span lang="en-gb"> the media files</span>
+						it references</span></font><span style="font-weight: 400" lang="en-gb"><font size="3">. Good for transporting a user's files to another 
+  computer or generating a <a href="#DefaultUser">DefaultUser</a> with user 
+                        media files.</font></span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button33" onclick="closeWindow('-set_option(Network,SaveNestsAndBirdsAsLocal,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="SaveNestsAndBirdsAsLocal">SaveNestsAndBirdsAsLocal</a>.
+                <span style="font-weight: 400">If this is set to 1, then birds 
+                and nests are saved as if they were local breaking any network 
+                connections. With this set to 1, one can save a bird without her 
+                nest and when reconstructed she will build her own nest. Or you 
+                can save a nest without a bird and it will be saved with an egg 
+                in it.</span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button29" onclick="closeWindow('-set_option(Directories,SecondaryFileSearchPath,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="SecondaryFileSearchPath">SecondaryFileSearchPath</a>. 
+					<span style="font-weight: 400">This has the same meaning as the FileSearchPath but these directories are 
+					searched only if the directories specified by the FileSearchPath fail to 
+					contain the required files. This is particularly useful for <a href="localini.htm" onclick="closeWindow('-browse localini.htm')">
+						local INI files</a>.</span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button66" onclick="closeWindow('-set_option(Switches,SecondsBetweenLogs,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<span lang="en-gb"><a name="SecondsBetweenLogs">
+                <font size="3">SecondsBetweenLogs</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set to a number  greater than 0 then <a href="ttravel.htm" onclick="closeWindow('-browse ttravel.htm')">time travel</a> is 
+  enabled and the number specifies how long each time travel segment lasts. 
+   
+  Can 
+  also be <a href="command.htm#SecondsBetweenLogs" onclick="closeWindow('-browse command.htm#SecondsBetweenLogs')">customized on the command line</a>.</font></span></span><li>
+						<font size="4">
+                <INPUT id="Button59" onclick="closeWindow('-set_option(Switches,SensorsChangeAtDropNotWhenBammed,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="SensorsChangeAtDropNotWhenBammed">
+                        <font size="3">SensorsChangeAtDropNotWhenBammed</font></a><font size="3">.
+                        </font> 
+					    <span style="font-weight: 400"><font size="3">The Parts and Container sensor are, 
+                        beginning with 2.80 and Beta 39, updated 
+					when Bammer hits them, not when a picture is dropped on 
+                        another picture. The 
+					old behavior can be obtained by setting this  to 1. </font> </span>
+					    </font>
+			<li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button55" onclick="closeWindow('-set_option(Switches,ShowCrashDirectoryAfterCrashes,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="ShowCrashDirectoryAfterCrashes"><font size="3">ShowCrashDirectoryAfterCrashes</font></a><font size="3">.
+                </font>
+                <span style="font-weight: 400"><font size="3">If set to 1 then upon a crash ToonTalk displays the 
+                        directory where the crash report was generated. This 
+                        makes it easier to drag the file to an email message so 
+                        it is sent as an attachment.</font></span></font><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button91" onclick="closeWindow('-set_option(Switches,ShowDialogAfterSaving,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<font size="3">ShowDialogAfterSaving</font><span style="font-weight: 400"><font size="3">. If 
+                set to 1 then after saving something with 'Save to File' a 
+                dialog appears offering to open the folder. Often is set to 0 if
+                        <a href="#RunAfterSaving">RunAfterSaving</a> is set.</font></span><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button44" onclick="closeWindow('-set_option(Switches,ShowMouseCursor,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="ShowMouseCursor"><font size="3">ShowMouseCursor</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set to 1 then you'll see the 
+						mouse cursor while running ToonTalk. Useful if running in <a href="absolute.htm" onclick="closeWindow('-browse absolute.htm')">absolute 
+							mouse mode</a>
+					with a mouse.</font></span></font><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button88" onclick="closeWindow('-set_option(Switches,SpeakAvailableDemoText,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<font size="3">SpeakAvailableDemoText</font><span style="font-weight: 400"><font size="3">. 
+                If set to 0 then nothing is spoken even if a demo specifies that 
+                narration should be spoken using a text-to-speech engine.</font></span><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button50" onclick="closeWindow('-set_option(Switches,SpeakToolButtons,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="SpeakToolButtons"><font size="3">SpeakToolButtons</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set to 1 then whenever 
+                        you change the button on a tool (Pumpy, Dusty, or 
+                        Maggie) to the next value (by clicking on the button or 
+                        pressing space while pointing to the tool) you will hear 
+                        a description of the new state of the tool.</font></span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button27" onclick="closeWindow('-set_option(User,SpokenLanguage,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="SpokenLanguage">SpokenLanguage</a>.
+                <span style="font-weight: 400">ToonTalk can use one language for 
+                speaking and another for everything else. The language needs to 
+                be installed (i.e. one of the options on the language page 
+                reached by clicking on 'Set Options'.)</span></font><li>
+				<font size="3" face="Comic Sans MS"> <INPUT id="Button1" onclick="closeWindow('-set_option(Switches,SubtitlesSpeed,***?***)')"
+						type="button" value="SET" name="Button1"> SubtitlesSpeed. 
+                <span style="font-weight: 400">Value is percentage of normal 
+					speed. If greater than 100 subtitles will be faster. If value is 0 ToonTalk 
+					will not show subtitles for demos. </span> </font>
+			    <span style="font-weight: 400">
+				<font size="3" face="Comic Sans MS">&nbsp;</font></span><li>
+				<font size="4" face="Comic Sans MS"><INPUT id="Button2" onclick="closeWindow('-set_option(FileExtensions,SubtitlesSuffix,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="SubtitlesSuffix">SubtitlesSuffix</a>. 
+					<span style="font-weight: 400">The value currently must be either UST for American English subtitles, UKT for 
+					British English subtitles, SET for Swedish subtitles, PTT 
+                for European Portuguese, BRT for Brazilian Portuguese, or JPT 
+                for Japanese.&nbsp; You can have subtitles 
+					in a different language than the narration. </span> </font>
+			<li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button10" onclick="closeWindow('-set_option(Executables,ToonTalk32,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="ToonTalk32">ToonTalk32</a>.
+                <span style="font-weight: 400">This entry should have the name of a ToonTalk executable to be run 
+                in 'Free Play' and 'Play Game'. This is normally reset by the 
+                installation of patch files or when running a different ToonTalk 
+                executable.</span></font><font size="3"> </font>
+			<li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button49" onclick="closeWindow('-set_option(Java,ToonTalkSourceHTML,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="ToonTalkSourceHTML"><font size="3">ToonTalkSourceHTML</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set then  is inserted in the HTML page as 
+						the link to the ToonTalk source that is generated when you <a href="java.htm" onclick="closeWindow('-browse java.htm')">create 
+							a Java applet</a>. This link can then be clicked on 
+                        within a browser to bring the saved object back into 
+                        ToonTalk.</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4">
+                <INPUT id="Button52" onclick="closeWindow('-set_option(Switches,TryToRecoverFromCrashes,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="TryToRecoverFromCrashes"><font size="3">TryToRecoverFromCrashes</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set to 1 then the old 
+                        behavior upon crashing of asking the user if he or she 
+                        wants to continue anyway. If 0 will put up a dialog 
+                        asking the user to send a crash report. Note that if set 
+                to 1 while many crashes are avoided strange things sometimes 
+                follow the recovery.</font></span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button8" onclick="closeWindow('-set_option(Switches,TurnOffJoystickAutoCenter,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> TurnOffJoystickAutoCenter. 
+                <span style="font-weight: 400">This feature only 
+					works if you have a force feedback joystick. Autocenter uses the joystick 
+					motors to simulate the springs in a standard joystick. Turning it off makes the 
+					effects better but the joystick harder to control. </span> </font>
+			<li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button78" onclick="closeWindow('-set_option(Switches,TTFileMax,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="TTFileMax">TTFileMax</a>. 
+                        <span style="font-weight: 400">If set to 1 or greater then when you click on 'Save it to a file' 
+								then the previous ToonTalk file is copied to the "my old programs" folder 
+								before proceeding. TTFileMax specifies how many 
+                        old copies are kept. A value of 0 turns off this 
+                        feature.</span></font></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button30" onclick="closeWindow('-set_option(Directories,URLCacheDir,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="URLCacheDir">URLCacheDir.</a>
+                <span style="font-weight: 400">If 
+					URLCacheDir is set, then when URLs are read they are cached 
+                in the specified directory. If this isn't set then the system 
+                Internet file cache is used. This has the advantage and 
+                disadvantage that files are automatically deleted when old and 
+                space is needed.</span></font><font face="Comic Sans MS"><li>
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button73" onclick="closeWindow('-set_option(Switches,UseLocalIniFilesWhenLoading,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="UseLocalIniFilesWhenLoading"><font size="3">UseLocalIniFilesWhenLoading</font></a><font size="3">.
+                        </font> 
+                        <span style="font-weight: 400"><font size="3">If set 
+						to 1 then the old behavior of looking for <a href="localini.htm" onclick="closeWindow('-browse localini.htm')">local ini files</a> 
+                        when loading a file is restored. This feature was 
+                        introduced for backwards compatibility. Later 
+                        enhancements have made this feature obsolete. To our 
+                        knowledge only the Playground Project used this feature 
+                        so you may need to enable it to load files from
+                        <a href="http://www.ioe.ac.uk/playground">
+                        www.ioe.ac.uk/playground</a>.</font></span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button31" onclick="closeWindow('-set_option(Directories,UserFiles,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> <a name="UserFiles">UserFiles</a>. 
+                <span style="font-weight: 400">If UserFiles is set, then 
+                ToonTalk will look at the specified directory for user-specific 
+                files. These include changes to notebooks, saved cities, and the 
+                user customizations and profile. You can set this to a directory 
+                on a local file server, if users move between machines on the 
+                same local area network. Or it can be set to &quot;a:&quot; if the files 
+                should be kept on a floppy - making it easier to move between 
+                computers (say at home and at school).</span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button79" onclick="closeWindow('-set_option(Directories,UserProgramsFolderName,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="UserProgramsFolderName"><font size="3">UserProgramsFolderName</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set it provides the subfolder name for user programs. This 
+						folder is created under the user's directory. Default is "My Programs".</font></span></font><li>
+				<font face="Comic Sans MS">
+						<font size="4" face="Comic Sans MS">
+                <INPUT id="Button74" onclick="closeWindow('-set_option(Executables,UseThisIniFileFirst,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+						<a name="UseThisIniFileFirst"><font size="3">UseThisIniFileFirst</font></a><font size="3">.
+                </font> 
+                        <span style="font-weight: 400"><font size="3">If set to 
+                the name of an ini file, then when looking for the value of an 
+                option, ToonTalk will use this file, and only if it has no value 
+                will it look for a value in the default ini file. One common use of this is when many computers 
+						are part of a local network. The ini file can then be administered more easily 
+						by placing it on a shared network drive.</font></span></font><li>
+				<font size="4" face="Comic Sans MS">
+                <INPUT id="Button25" onclick="closeWindow('-set_option(User,VariableFont,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+				<font face="Comic Sans MS"><a name="VariableFont">
+                <font size="3">VariableFont</font></a><font size="3">.
+                <span style="font-weight: 400">This can be set to the name of a 
+                font that should be used for text which is displayed with a 
+                variable width font.</span></font></font><font size="3"> </font>
+            	<font face="Comic Sans MS">
+					<li>
+						<font size="4">
+                <INPUT id="Button60" onclick="closeWindow('-set_option(Switches,ZipFiles,***?***)')"
+					type="button" value="SET" name="Button1"></font><font size="3"> </font>
+						<a name="ZipFiles"><font size="3">ZipFiles</font></a><font size="3">.
+                        </font> 
+                        <span style="font-weight: 400"><font size="3">If this Switch is set 
+                        to 0 then the XML for cities, demos, and objects is 
+                        saved uncompressed.</font></span><li>
+                <font size="3" face="Comic Sans MS">[ButtonKeyboardEquivalents]. 
+                <span style="font-weight: 400">These options allows you to define what <a href="joystick.htm" onclick="closeWindow('-browse joystick.htm')">joystick</a> 
+                buttons 3 and upward mean (and also the middle mouse button 
+                which is treated the same as joystick button number 3). You can 
+                specify special keys by enclosing them with &quot;&lt;&gt;&quot;. The special 
+                keys available are &lt;F1&gt;, &lt;F2&gt;, ... &lt;F12&gt;, &lt;Escape&gt;, and &lt;space&gt;.</span> </font>
+                <font size="4" face="Comic Sans MS">
+                <INPUT id="Button12" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,3,***?***)')"
+					type="button" value="SET button 3 " name="Button1"></font><font size="3" face="Comic Sans MS"> </font>
+                <font size="4" face="Comic Sans MS">
+                <INPUT id="Button13" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,4,***?***)')"
+					type="button" value="SET button 4 " name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button14" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,5,***?***)')"
+					type="button" value="SET button 5 " name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button15" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,6,***?***)')"
+					type="button" value="SET button 6 " name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button16" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,7,***?***)')"
+					type="button" value="SET button 7 " name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button17" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,8,***?***)')"
+					type="button" value="SET button 8 " name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button18" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,9,***?***)')"
+					type="button" value="SET button 9 " name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button19" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,10,***?***)')"
+					type="button" value="SET button 10" name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button20" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,11,***?***)')"
+					type="button" value="SET button 11" name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button21" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,12,***?***)')"
+					type="button" value="SET button 12" name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button22" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,13,***?***)')"
+					type="button" value="SET button 13" name="Button1"><font size="3" face="Comic Sans MS"> </font>
+                <INPUT id="Button23" onclick="closeWindow('-set_option(ButtonKeyboardEquivalents,14,***?***)')"
+					type="button" value="SET button 14" name="Button1"></font></UL>
+		<P><BIG>
+        <INPUT id="Button5" onclick="closeWindow('***CLOSED***')" type="button" value="I'm finished setting options."
+					name="Button1"></BIG></P>
+				</font>
+	</body>
+</html>

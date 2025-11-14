@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>What is your name?</title>
+		<meta content="Microsoft Visual Studio.NET 7.0" name="GENERATOR">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<link rel="stylesheet" type="text/css" href="../dialog.css">
+		<script language="javascript" src="../common.js"></script>
+		<script language="javascript" src="../agent.js"></script>
+		<script language="javascript" src="strings.js"></script>
+		<script language="javascript" id="clientEventHandlersJS">
+<!--
+
+// translators -- just translate the following:
+
+var noTimeTravelInPuzzleGame = "Time travel is not available while playing the puzzle game. "
+
+var greeting1 = "Hi";
+var greeting2 = "Hello";
+var introduction1 = "I'm"; // followed by the agent's name
+var introduction2 = ""; // if introduction1 is "" then this could be "is my name"
+var whatIsYourName = "What is your name? | Please type your name here.";
+var explainAppearanceButtons = "Click one of these buttons to choose how you look and to start ToonTalk. | Pick whether you want long hair, a hat, or to be bald.";
+
+var timeTravelOn = "Time travel is on.";
+var timeTravelOff = "Time travel is off.";
+var timeTravelDisabled = "You cannot time travel while playing the puzzle game.";
+var timeTravelDescription = "Time travel is really neat since you can go back in time and fix things or replay.";
+var timeTravelTryIt = "Try it and if you notice ToonTalk pausing a lot then save, quit, and restart with it off.";
+
+var longHairDescription = "Click here and you'll have long hair.|If you want hair like this click here.";
+var hatDescription = "Click here and you'll wear a hat.|If you want to wear a hat click here.";
+var baldDescription = "Click here and you'll be bald.|If you want to look bald click here.";
+
+// translators -- ignore the rest
+
+function loadBody() 	{
+	//get the arguments
+//	var arrArgs = new Array();
+//   arrArgs = window.dialogArguments.split(";");
+     UserName.value = currentParameter("old_name"); // was window.dialogArguments;
+     initialUserName = UserName.value; // for Agent1 - new on 070504
+     mostRecentUserName = initialUserName;
+     UserName.select();
+     if (currentParameter("time_travel_enabled") == "-1") { // e.g. no time travel - e.g. puzzle game
+		  TimeTravel.disabled = true; // new on 250903
+		  TimeTravel.checked = false;
+		  TimeTravel.nextSibling.data = noTimeTravelInPuzzleGame;
+	  } else {
+        TimeTravel.checked = (currentParameter("time_travel_enabled") != "0");
+     };
+     agentStart(); 
+}
+
+function sendBack(which_button) {
+    window.returnValue = "-n " + UserName.value + " -h " + which_button; // order matters if old user name and changing head appearance
+    if (TimeTravel.checked) {
+		 window.returnValue = window.returnValue + ' -time_travel_enabled 1';
+	 } else {
+	    window.returnValue = window.returnValue + ' -time_travel_enabled 0';
+	 };
+	 agentEnd();	
+    window.close();
+}
+
+// and the rest is specific to Microsoft Agent:
+
+var nameWaitID = -1;
+var initialUserName = null;
+var mostRecentUserName = null;
+var checkUserNameEvery = 500; // milliseconds
+
+var greetedByName = false;
+var introducedSelf = false;
+
+var GREETING = 1;
+var EXPLAIN_NAME_FIELD = 2;
+var WAIT_FOR_NAME_CHANGE = 3;
+var EXPLAIN_APPEARANCE_BUTTONS = 4;
+var WAITING_TO_START_TOONTALK = 5;
+
+function mainLoop() {
+	if (Agent1 == null || interrupted) return;
+	if (enterState(GREETING)) {
+		if (initialUserName == UserName.value) { // name hasn't changed
+			say(greeting);
+			if (!introducedSelf) {
+				say(introduction1 + " " + Agent1.name + " " + introduction2 + ".");
+				introducedSelf = true;
+//				breakhere();
+			};
+		};
+	} else if (enterState(EXPLAIN_NAME_FIELD)) {
+	   if (initialUserName == UserName.value) { // name hasn't changed
+			moveNearNameField();
+			say(whatIsYourName);
+			if (nameWaitID < 0) { // yet to be initialized
+				nameWaitID = setInterval("waitForNameChange()",checkUserNameEvery);
+				nextStateWhenIdle = false;
+			};
+			changeState(WAIT_FOR_NAME_CHANGE);
+	   } else {
+	      // name has already been changed
+	      changeState(EXPLAIN_APPEARANCE_BUTTONS);
+		};
+	} else if (enterState(WAIT_FOR_NAME_CHANGE)) {
+		moveNearNameField(); // should be no-op if already there but maybe went off to explain something else
+	   // do nothing special -- could be idle	
+	} else if (enterState(EXPLAIN_APPEARANCE_BUTTONS)) {
+		nextStateWhenIdle = true; // no longer waiting for name
+		if (!greetedByName) {
+			say(greeting1 + " " + UserName.value + "|" + greeting2 + " " + UserName.value);
+			greetedByName = true;
+		}
+		Agent1.MoveTo(Bald.offsetLeft+Bald.offsetWidth+10,Bald.offsetTop);
+		Agent1.GestureAt(Bald.offsetLeft,Bald.offsetTop+Bald.offsetHeight/2);
+		say(explainAppearanceButtons);
+	}
+}
+
+function waitForNameChange() {
+   debug("waitForNameChange " + initialUserName + " " + mostRecentUserName + " " + UserName.value);
+	if (initialUserName == UserName.value) {
+	   // no change so wait
+	} else if (mostRecentUserName == UserName.value) {
+	   // hasn't changed in checkUserNameEvery milliseconds
+	   clearInterval(nameWaitID); // so stop this
+	   nameWaitID = -1;
+	   changeState(EXPLAIN_APPEARANCE_BUTTONS);
+	   resumeMainLoop();
+	} else if (currentState != WAIT_FOR_NAME_CHANGE) {
+		clearInterval(nameWaitID); // stop this since moved on to next state
+		nameWaitID = -1;
+	} else {
+		mostRecentUserName = UserName.value;	
+	};
+}
+
+//var explainedTimeTravel = false;
+
+function explainTimeTravel() {
+	if (Agent1 == null) return;
+	explanationID = setTimeout("reallyExplainTimeTravel()",mouseOverWait);
+}
+
+function reallyExplainTimeTravel() {
+   Agent1.stop();
+//	if (!explainedTimeTravel) {
+	   explainedTimeTravel = true;
+	   Agent1.MoveTo(TimeTravel.offsetLeft+50,TimeTravel.offsetTop-100);
+	   Agent1.GestureAt(TimeTravel.offsetLeft,TimeTravel.offsetTop);
+	   if (TimeTravel.disabled) {
+	      say(timeTravelDisabled);
+	   } else if (TimeTravel.checked) {
+	      say(timeTravelOn);
+	   } else {
+			say(timeTravelOff);
+	   };
+	   if (!TimeTravel.checked && !TimeTravel.disabled) {
+	   	say(timeTravelDescription);
+	      say(timeTravelTryIt);
+	   };
+//	};
+}
+
+function moveNearNameField() {
+	Agent1.MoveTo(UserName.offsetLeft-175,UserName.offsetTop-UserName.offsetHeight/2,2000); // at double speed
+}
+
+
+-->
+
+</script>
+<Script Language="JavaScript" For="AgentControl" Event="Click(CharacterID, Button, Shift, X, Y)">
+<!--
+		reactToAgentClicked(CharacterID, Button, Shift, X, Y);
+-->
+
+</Script>
+<Script Language="JavaScript" For="AgentControl" Event="IdleStart(CharacterID)">
+<!--
+      idleAgent(CharacterID);
+-->
+</Script>
+
+	</head>
+	<body onload="loadBody()">
+		<OBJECT id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+		</OBJECT>
+		<p align="center">Hi. Please type your name.</p>
+		<p align="center"><input id="UserName" type="text" class="text" size="171" value="No Name" name="UserName"
+				style="WIDTH: 630px; HEIGHT: 44px"></p>
+		<p align="center">Then click on one of these pictures:</p>
+		<p align="center">
+			<input id="LongHair" type="image" onclick="sendBack('1')" name="LongHair" onMouseOver="explainNow(longHairDescription,'LongHair')" onMouseOut="stopExplaining()"
+				src="../hairhead.jpg" alt="Long Hair" style="BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BORDER-BOTTOM-STYLE: outset"
+				WIDTH="64" HEIGHT="61"> 
+			<input id="Hat" onclick="sendBack('2')" style="BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BORDER-BOTTOM-STYLE: outset"
+				type="image" alt="Hat" src="../hathead.jpg" name="Hat" onMouseOver="explainNow(hatDescription,'Hat')"  onMouseOut="stopExplaining()" WIDTH="58" HEIGHT="65">
+			<input id="Bald" onclick="sendBack('0')" style="BORDER-TOP-STYLE: outset; BORDER-RIGHT-STYLE: outset; BORDER-LEFT-STYLE: outset; BORDER-BOTTOM-STYLE: outset"
+				type="image" alt="Bald" src="../baldhead.jpg" name="Bald" onMouseOver="explainNow(baldDescription,'Bald')"  onMouseOut="stopExplaining()" WIDTH="64" HEIGHT="54">
+		</p>
+		<DIV onMouseOver="explainTimeTravel()" onMouseOut="stopExplaining()" onMouseDown="TimeTravel.checked = !TimeTravel.checked && !TimeTravel.disabled">
+		<INPUT id="TimeTravel" type="checkbox" name="TimeTravel">I want to be able to 
+			travel in time to undo mistakes or replay what I just did. (Sometimes ToonTalk 
+			runs slowly when this is checked.)&nbsp; <A href="ttravel.htm">Click here</A> for 
+			more help.
+			</DIV>
+	</body>
+</html>

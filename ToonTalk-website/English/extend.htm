@@ -1,0 +1,131 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\Program Files\Microsoft Office\Office\HTML.DOT">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>How to Use ToonTalk Extensions</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>How to Use ToonTalk Extensions<strong> </strong>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></b></font></p>
+
+<p><strong><font size="4" face="Comic Sans MS"><i>For advanced users only:</i></font></strong></p>
+
+<p><font face="Comic Sans MS" size="3">ToonTalk extensions are <a href="bird.htm">birds</a>
+that can fly &quot;outside&quot; of ToonTalk to the operating system. You start off with
+only one &quot;foreign&quot; bird. But she can bring you a bird connected to any ToonTalk
+extension installed on your system. You can find her near the end of your <a
+href="sensor.htm">sensor notebook</a>. She has a question mark on her T-shirt. To
+&quot;open&quot; an extension, give her a box with 2 holes: the first should hold the name
+of the extension and the second another bird who will come back with a new bird (in a
+box). The kinds of messages (boxes), the new bird should be given depends upon which
+extension she flies to.</font></p>
+
+<p><font face="Comic Sans MS" size="3">Any programmer who can make Windows DLLs (Dynamic
+Link Libraries) can <a href="extend2.htm">make new extensions</a>. Over time
+we hope that programmers will add new extensions, for example, for generating 
+music, or connecting to the Internet, or doing 3D graphics. Currently, only two <a href="extendin.htm">extensions
+that can be installed</a>. One is for
+<a href="http://www.weblabs.org.uk/wlplone/Members/michele/my_reports/Report.2004-02-04.4122/index_html">
+controlling the LEGO Mindstorms RCX brick</a> and the other is for interfacing 
+with the file system and is described below.</font></p>
+
+<p><small><a name="FileExtension"></a></small><font face="Comic Sans MS" size="3"><b>The
+FILE extension.</b> This extension enables you to open files and read and write them. You
+should give a bird connected to this extension a box with 3 holes. The first hole should
+contain one of the message names listed below. The second hole should contain the name of
+the file you want. The third hole should contain a bird who will receive a box with
+another bird in it. This new bird will take messages to the file. </font>
+
+<dl>
+  <dt><font face="Comic Sans MS" size="3"><b>Create File.</b> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">If the first hole contains the words &quot;create
+    file&quot;, then a file will be created for you. The second hole should contain the name
+    of the file you want to create. A file with that name should not already exist. The name
+    should follow the file naming rules of the operating system. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Open.</b> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">If the first hole contains the word
+    &quot;open&quot;, then a file will be opened for you. The second hole should contain the
+    name of a file that already exists. The file is opened using Windows <i>CreateFile</i>
+    procedure. This means the name can be the name of a file, pipe, mail slot, communications
+    resource (e.g. &quot;LPT1&quot; or &quot;COM1&quot;), disk device, console, or directory
+    to open. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Open Serial Port.</b> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">If the first hole contains the words &quot;open
+    serial port&quot;, then a serial port will be opened with the characteristics specified in
+    the name found in the second hole. For example, if the second hole contains &quot;COM1:
+    baud=1200 parity=N data=8 stop=1&quot; then the serial port number one of your computer
+    will be opened with a 1200 baud rate, with parity off, 8 bit data, and stop equal to 1.
+    This feature relies upon Windows <i>BuildCommDCB</i> procedure to interpret port
+    descriptions. </font></dd>
+</dl>
+
+<p><font face="Comic Sans MS" size="3"><b>Messages to Files. </b>After you successfully
+opened or created a file, you should have a bird that flies to that file. She should have
+the file name on her T-shirt. You can give her a message with 3 holes. The first hole can
+be any of the message names listed below. The proper contents of the second hole depend
+upon the first. The third hole should contain a bird who will receive a reply.</font> 
+
+<dl>
+  <dt><font face="Comic Sans MS" size="3"><b>Read</b>. </font></dt>
+  <dd><font face="Comic Sans MS" size="3">The second hole should contain a number that says
+    how many letters or characters to read. The bird is given a text pad with the letters
+    read. If the end of the file was reached, then the number of letters will be less. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Write</b>. </font></dt>
+  <dd><font face="Comic Sans MS" size="3">The second hole should contain a text pad to add to
+    the file. The bird is given a number pad that shows the number of letters actually added
+    to the file. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Read Bytes.</b> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">The second hole should contain a number that says
+    how many letters or characters to read. The bird is given a box with a hole for each
+    character read. Inside each hole is the ASCII number for the character. If the end of the
+    file was reached, then the number of letters will be less. </font></dd>
+  <dt><font face="Comic Sans MS" size="3"><b>Write Bytes.</b> </font></dt>
+  <dd><font face="Comic Sans MS" size="3">The second hole should contain a box with a hole for
+    each byte to add to the file. Each hole should contain a number between 0 and 255. If a
+    number is too large only the low order byte will be written. You can use the ASCII
+    encoding of characters here. The bird is given a number pad that shows the number of
+    letters actually added to the file. </font></dd>
+</dl>
+
+<p><font face="Comic Sans MS" size="3">The ability to read and write bytes is particularly
+important when dealing with serial or parallel communication ports.</font></p>
+
+<p align="center">
+
+<font face="Comic Sans MS">
+
+<small><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></small></font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

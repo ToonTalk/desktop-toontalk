@@ -1,0 +1,108 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>How to Create Your Own Demos - Old Version</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>How to Create Your Own Demos</b></font></p>
+
+<p align="center"><font size="5" face="Comic Sans MS" color="#FF0000"><b>WARNING: MUCH OF
+THIS HAS CHANGED SINCE VERSION 2.33 OR BETA 26</b></font></p>
+
+<p align="center"><font size="5" face="Comic Sans MS" color="#FF0000"><b><a
+href="make_dmo.htm">CLICK HERE</a> FOR THE NEW VERSION</b></font></p>
+
+<p><font face="Comic Sans MS"><b><i>Advanced users:</i></b></font></p>
+
+<p><font face="Comic Sans MS">To create a demo just add -o &lt;<i>filename</i>&gt; to <a
+href="command.htm#OutputLog">the command line</a> before starting ToonTalk. This will
+create a file named filename.DMO in the &quot;demos&quot; subdirectory of ToonTalk. The
+&quot;dmo&quot; file records everything you do (every mouse movement, keyboard click,
+etc.) Double clicking on the file will start up the demo. Alternatively adding -I
+&lt;filename&gt; to the command line will run the demo. Please check the &quot;demos&quot;
+subdirectory first to learn the names of existing demos so you don't override them.</font></p>
+
+<p><font face="Comic Sans MS">If you are creating a demo on a fast computer and expect the
+demo to be run on slower machines then it is recommended that you add <a
+href="command.htm#FrameDurationMinimum">-y 50</a> or so to the command line while
+recording to slow down your machine.</font></p>
+
+<p><font face="Comic Sans MS"><b>Adding subtitles to your demos</b>. When ToonTalk starts
+running a demo named X it looks for a file named X.ust. (&quot;ust&quot; is the default
+extension name for (American) English subtitles.) You can override the default for your
+computer by providing an &quot;SubtitlesSuffix&quot; entry in the
+&quot;FileExtensions&quot; section of the ToonTalk.ini file in your Windows directory. A
+subtitle file is made of entries separated by a blank line. Each entry has the time in
+milliseconds since the beginning of the demo followed by the text of the subtitle. It is
+recommended that any lines of text more than 60 characters be broken. The
+&quot;demos&quot; subdirectory of your ToonTalk installation has many sample subtitle
+files. One way to obtain the millisecond timings is to press F9 while the demo is playing
+back.This will record the time in your &lt;username&gt;.txt log file in the
+&quot;users&quot; subdirectory.</font></p>
+
+<p><font face="Comic Sans MS"><b>Adding narration to your demos</b>. When ToonTalk starts
+running a demo named X it looks for a file named X.spk. (&quot;spk&quot; is the default
+extension name for (American) English narration files.) You can override the default for
+your computer by providing an &quot;SubtitlesSuffix&quot; entry in the
+&quot;FileExtensions&quot; section of the ToonTalk.ini file in your Windows directory. To
+create a narration file you should record segments of the narration (256 is the maximum
+number) and name them &quot;s01.wav&quot;, &quot;s02.wav&quot; and so on. These files
+should be placed on the main ToonTalk directory. While replaying your demo you should
+press F11 to start the next narration segment. If you prefer to record and synchronize the
+pre-recorded narration instead then add -d 451 to the command line as well as the -o
+&lt;filename&gt; and again press F11 when you wish to add the next narration segment. When
+ToonTalk exits it will write a new &quot;spk&quot; in the demos subdirectory.</font></p>
+
+<p><font face="Comic Sans MS"><b>Coordinating the subtitles and narration</b>. If you wish
+to create both narration and subtitles, it is recommended you create the narration first
+and then run your demo with &quot;-d 3210&quot; which will print the start times of each
+segment in your &lt;<i>username</i>&gt;.log in the &quot;Users&quot; subdirectory. You can
+then use these times in your subtitles file. </font></p>
+
+<p><font face="Comic Sans MS"><b>Tips:</b></font> 
+
+<ul>
+  <li><font face="Comic Sans MS">A demo file works for the same resolution as it was recorded.
+    With luck you can record a high-resolution demo and copy it to the low resolution
+    subdirectory and it will work. See the subdirectories of &quot;Demos&quot;. </font></li>
+  <li><font face="Comic Sans MS">A demo recorded with speech on might not replay correctly
+    when speech is turned off. </font></li>
+  <li><font face="Comic Sans MS">Speech is turned off when replaying a demo with narration
+    unless you are <a href="command.htm#TextToSpeechUsesDirectSound">running with the
+    text-to-speech engine using DirectSound</a>. </font></li>
+  <li><font face="Comic Sans MS">If you make a mistake while recording a demo you needn't redo
+    the whole thing. You can run tt202 -I PartlyGood -o NewVersion and then take control just
+    before the old demo goes bad. </font></li>
+  <li><font face="Comic Sans MS">Avoid using keyboard accelerators for tools (e.g. 'e' to make
+    Dusty erase things). These accelerators differ from language to language so if you use
+    them your demos probably won't work in a different language version of ToonTalk. </font></li>
+  <li><font face="Comic Sans MS">If you create a demo for a user named Pat, then when that
+    demo is run it may change the user profile for Pat. To avoid this use -t 1 in the command
+    line to indicate that this is a &quot;temporary&quot; user and a user profile should not
+    be kept.</font></li>
+</ul>
+
+<p align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a
+href="http://www.toontalk.com/English/search.htm">search</a> | <a href="buy.htm">purchase</a>
+| <a href="doc.htm">manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,7 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TR|07 Aug 2005 14:01:28 -0000
+vti_extenderversion:SR|5.0.2.6417
+vti_lineageid:SR|{A2EDE390-5286-4FA9-9A0C-2F693FE36835}
+vti_cacheddtm:TX|07 Aug 2005 14:01:28 -0000
+vti_filesize:IR|21319
+vti_backlinkinfo:VX|General/doc/GrapherDemo.htm General/doc/grapher.htm

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Loading Playground games into ToonTalk prior to version 2.35 or beta 27</title>
+</head>
+
+<body>
+
+<p align="center"><big><big><font face="Comic Sans MS">Loading Playground games into
+ToonTalk prior to version 2.35 or Beta 27</font></big></big></p>
+
+<p align="left"><font face="Comic Sans MS">If you have ToonTalk version 2.35 or Beta 27 or
+later then you the following should happen automatically when you click on things in
+Internet Explorer while browsing <a
+href="http://www.ioe.ac.uk/playground/gameplace/gamelist.htm">The Game Place</a>. If
+something goes wrong (which it does in some circumstance when using Netscape Navigator)
+then you'll have to do the following:</font></p>
+
+<p><font face="Comic Sans MS">If you don't have the Playground sounds and pictures you
+should add (or edit) the <a href="ttini.htm#FileSearchPath">FileSearchPath</a> entry in
+the Directories section of your <a href="ttini.htm">toontalk.ini file</a> (on c:\windows
+or c:\winnt) as follows:</font></p>
+
+<p>FileSearchPath=http://www.ioe.ac.uk/playground/media;http://www.ioe.ac.uk/playground/ttlibrary/playgrounds</p>
+
+<p><font face="Comic Sans MS">which tells ToonTalk to look on the Playground web site for
+any missing files. </font></p>
+
+<p><font face="Comic Sans MS">The first time you load a game (by simply clicking on the
+picture on the game at <a href="http://www.ioe.ac.uk/playground/gameplace/gamelist.htm">The
+Game Place</a>), you should be <em>patient</em> as ToonTalk loads the needed files over
+the Internet. (ToonTalk will appear to freeze as the files are loaded - there are plans to
+improve this in coming releases.) These files are cached (in the same place that Internet
+Explorer caches such files) so the second time you load the game it should be much faster
+(unless you've loaded many other things subsequently). If you rather be sure that the
+second time you load a game it will go fast (and will work even if you are no longer
+connected to the net), then make the following changes to the Directories section of
+toontalk.ini by adding entries for <a href="ttini.htm#FileSearchPath">FileSearchPath</a>
+and <a href="ttini.htm#URLCacheDir">URLCacheDir</a>:</font></p>
+
+<p>FileSearchPath=*\..\..\downloads;http://www.ioe.ac.uk/playground/media;http://www.ioe.ac.uk/playground/ttlibrary/playgrounds
+<br>
+URLCacheDir=*\..\..\downloads;</p>
+
+<p><font face="Comic Sans MS">This ensures that the files loaded off the Internet are
+saved in the &quot;toontalk\downloads&quot; directory. </font></p>
+
+<p><font face="Comic Sans MS">Note that a few games use artwork which is copyrighted and
+not available from the Playground web site.</font></p>
+
+<p align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a
+href="http://www.toontalk.com/English/search.htm">search</a> | <a href="buy.htm">purchase</a>
+| <a href="doc.htm">manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

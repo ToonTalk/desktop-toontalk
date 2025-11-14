@@ -1,0 +1,1456 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>ToonTalk enhancements and bug fixes - 1996</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+</head>
+
+<body>
+
+<p align="center"><big><font face="Comic Sans MS">History of ToonTalk Enhancements and Bug
+Fixes - 1996</font></big></p>
+
+<p><font face="Comic Sans MS">Here is the list of bugs and enhancements for 1996. &nbsp;Similar lists for <a href="bugs97.htm">1997</a>, <a
+href="bugs98.htm">1998</a>, <a href="bugs99.htm">1999</a>, <a href="bugs00.htm">2000</a>, <a href="bugs01.htm">
+2001</a>, <a href="bugs02.htm">2002</a>, <a href="bugs03.htm">2003</a>,
+<a href="bugs04.htm">2004</a></font><big><font size="3" face="Comic Sans MS">, 
+</font><big><font size="3" face="Comic Sans MS">
+<a href="bugs05.htm">2005</a>, and </font>
+<big><font size="3" face="Comic Sans MS">
+<a href="bugs06.htm">2006</a></font></big></big></big><font face="Comic Sans MS"> are available as well. </font></p>
+
+<p><font face="Comic Sans MS">No records were kept prior to 3/25/96 (the first public beta
+release).&nbsp; Programming on ToonTalk began in October 1992.</font></p>
+
+<p><font face="Comic Sans MS">3/25/96 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Pasting an object from ToonTalk had some non-standard new
+    line (carriage return) characters. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">3/30 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The font used when Marty is talking (and the opening screen)
+    was under-specified so on some machines looked very bad. Now Arial is used unless
+    overridden by -e &lt;font name&gt; </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/4 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a minor bug when user enters a long name with spaces or
+    other non-alphanumeric characters. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug that can lead to a crash when training a robot to
+    use certain kinds of remote controls (&quot;Which picture?&quot; and the Lego sensors). </font></li>
+  <li><font face="Comic Sans MS">If something other than a box was placed on top of a robot
+    without anything in his thought bubble and then a box was dropped on the robot or thought
+    bubble such that a part of it overlapped with the object on top of the robot but it mostly
+    was over the robot then confusion followed. </font></li>
+  <li><font face="Comic Sans MS">If a robot was trained to attach box to the side on another
+    and then when working tried to add a box to the side of a blank box it crashed. Now robot
+    stops and Martian explains problem. </font></li>
+  <li><font face="Comic Sans MS">Sometimes when Martian was explaining why a robot stopped it
+    would repeat part of the sentence and skip another part. </font></li>
+  <li><font face="Comic Sans MS">Scales sometimes would not change to tilt but robots still
+    matched as if they were showing the right tilt. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug introduced on 4/4 that may cause a memory
+    violation on start up. </font></li>
+  <li><font face="Comic Sans MS">Sometimes a robot would get confused and say he didn't expect
+    to keep track of so many things. Not anymore. </font></li>
+  <li><font face="Comic Sans MS">The maximum city size is 255 (or -255 if you want it half
+    filled with randomly placed houses) but you used to be able to set it to 256 and get weird
+    results. </font></li>
+  <li><font face="Comic Sans MS">Marty now explains city size maximums if you try to set size
+    to bigger value. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/13 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">If a notebook had many pages (more than some number between
+    100 and 1300) then system crashed while terminating. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/15 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a memory violation bug that generated no known
+    symptoms. </font></li>
+  <li><font face="Comic Sans MS">Martian's advice about how to pause ToonTalk was only
+    partially updated and he got confused. </font></li>
+  <li><font face="Comic Sans MS">ToonTalk debugging switches causes logs of events to be
+    generated. Type names in these logs were wrong. </font></li>
+  <li><font face="Comic Sans MS">Changed the way robots keep track of items that are put
+    inside something. </font></li>
+  <li><font face="Comic Sans MS">The 32bit version was using a small cache size. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/16 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">&quot;Swap if bigger&quot; robot in example notebook was
+    broken. </font></li>
+  <li><font face="Comic Sans MS">Robots now no longer flip notebooks to page 1 before starting
+    but do behave as if the main notebook was on page 1 when starting but &quot;flips&quot; to
+    it only first time the robot sends keyboard characters to notebook. </font></li>
+  <li><font face="Comic Sans MS">If a picture of a number or text with robots on the back was
+    dropped on the clipboard remote control then only the text was saved now the entire thing.
+    </font></li>
+  <li><font face="Comic Sans MS">Geometry of things on clipboard improved. </font></li>
+  <li><font face="Comic Sans MS">If multiple text pads were dropped on a text pad it sometimes
+    crashed. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/18 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug introduced on 4/15 regarding how robots keep
+    track of things. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/22 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a minor bug when displaying short bits of text that are
+    off the side of the screen. </font></li>
+  <li><font face="Comic Sans MS">You can now push both the left and right mouse buttons to
+    pause ToonTalk. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/23 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">While running a replay any mouse button brings up the pause
+    dialog. </font></li>
+  <li><font face="Comic Sans MS">While holding a notebook you can now use right-mouse to go to
+    next page and middle-button to go back. </font></li>
+  <li><font face="Comic Sans MS">32bit debugger complained about code using SelectObject.
+    Seemed to have re-written it so it no longer complains. No symptoms known. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/24 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug introduced on 4/16 that sometimes caused the
+    system to crash when dealing with the ToonTalk clipboard. </font></li>
+  <li><font face="Comic Sans MS">Enumeration types (e.g. &quot;your heads looks&quot; which
+    can be &quot;hat&quot;, &quot;long hair&quot;, or &quot;bald&quot;) when held can now be
+    cycled through using the mouse (middle is backwards and right is forwards). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/25 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Remote controls that are numbers can now be changed by the
+    mouse when held (middle is backwards and right is forwards). </font></li>
+  <li><font face="Comic Sans MS">Remote controls that have a limited range (e.g. the
+    &quot;which picture&quot; remote control now stay in range automatically. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/26 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">If you put your hand under the Martian's talk balloon, you
+    sometimes got an image of the balloon even after Marty moved away. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">4/29 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The pasting of a ToonTalk object includes a generated
+    description of the object. It was sometimes truncated. </font></li>
+  <li><font face="Comic Sans MS">Aesthetic changes to pasting of a ToonTalk object. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/4 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Nests destruction is postponed until their last bird. If the
+    house is being destroyed and contains a nest and the last bird then there was a problem
+    depending upon the order they were destroyed. The problem had no serious consequences. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/5 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when a robot is trained to use the keyboard while
+    holding or pointing to a notebook it got confused. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/7 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when robots in other houses are using the main
+    notebook and the programmer is as well the response to typing digits to go to a particular
+    page behaved oddly. </font></li>
+  <li><font face="Comic Sans MS">Fixed various problems with birds. E.g. when flying back to
+    her nest and the nest if being transported by another bird, it led to unpredictable
+    behavior. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/8 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">If you hold down F11, then ToonTalk will make snapshots of
+    frames called frm&lt;number&gt;.bmp where number is the frame number. Successive identical
+    frames are not saved. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/9 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed more bugs with birds flying outside. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/10 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed more bugs with birds flying outside. </font></li>
+  <li><font face="Comic Sans MS">If a robot is trained to make sounds in another house then it
+    used to get stuck. </font></li>
+  <li><font face="Comic Sans MS">If a robot is making sounds in a house and the programmer
+    leaves the sounds stop. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug introduced on 4/26 where if you pointed to an
+    object where something was on top, the thing on top couldn't be seen. </font></li>
+  <li><font face="Comic Sans MS">Pictures lost their size if changed by remote controls but
+    not if changed by the Bike Pump. [Thanks to Tobias for pointing this out.] </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/11 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed more bugs with birds flying outside. </font></li>
+  <li><font face="Comic Sans MS">Added a new command line switch -bird 0 which makes it so
+    birds take no time to return after delivering a message. Good for watching systolic
+    algorithms. -bird 1 is the default which shows birds returning. </font></li>
+  <li><font face="Comic Sans MS">Sometimes a bird would put something on her nest in a way in
+    which you couldn't pick it off (though the vacuum could). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The ToonTalk clipboard used to be confused by programs that
+    copied using a different convention about how carriage return/line feed work. (E.g.
+    Netscape didn't work but wordpad did.) </font></li>
+  <li><font face="Comic Sans MS">For a while now you can put robots in a fresh notebook that
+    were trained to find other robots in the main notebook (by dropping the label on the
+    notebook). Used to only work if you found something in the notebook and only got one copy.
+    </font></li>
+  <li><font face="Comic Sans MS">Sometimes when pasting text into ToonTalk's clipboard boxes
+    appeared which were unprintable characters from the carriage return/line feed problem. </font></li>
+  <li><font face="Comic Sans MS">For very large multiple line text sometimes ToonTalk froze. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/20 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Many small changes to what Marty the Martian says. </font></li>
+  <li><font face="Comic Sans MS">Re-structured internals of Marty so should be easier to
+    translate to another language </font></li>
+  <li><font face="Comic Sans MS">Fixed bugs with ordinals like 23th. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/21 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">More small changes to what Marty says. </font></li>
+  <li><font face="Comic Sans MS">Marty now describes what can be done with remote controls
+    (and options) in much more detail, including new ability to use mouse buttons to change
+    things. </font></li>
+  <li><font face="Comic Sans MS">Fixed a problem using mouse buttons while holding an address.
+    </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/22 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Used to be that if the command line set up some options but
+    didn't specify the user name then it would ask for a user name and if it is an existing
+    one then the options of that user would override the command line. </font></li>
+  <li><font face="Comic Sans MS">One a few machines the full-screen mode is very slow. It now
+    checks and warns the user if it is. </font></li>
+  <li><font face="Comic Sans MS">If there are problems running in full-screen mode (-f 1, e.g.
+    on Windows NT) it will now switch over to -f 2. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/23 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed multiple bugs that occur when a bird's nest is copied
+    and the copies are in different houses and the bird is given something. </font></li>
+  <li><font face="Comic Sans MS">When training a bird to receive something whose nest has been
+    copied it used to copy the bird and message. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/24 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">It is now easier to return things to the notebook. If neither
+    page is empty and something is dropped on top that is on one of the pages then it is
+    returned regardless of which side of the notebook it is dropped. </font></li>
+  <li><font face="Comic Sans MS">If only one page is empty and something is dropped on the
+    notebook it will go to the blank page regardless of which side it was on. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/26 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Windows95 version of ToonTalk started. </font></li>
+  <li><font face="Comic Sans MS">Win95 version uses Direct Sound sounds now mix and more audio
+    features are now feasible. </font></li>
+  <li><font face="Comic Sans MS">Sound effects notebook on page 8 was missing some newer
+    sounds and still referring to obsolete sounds. </font></li>
+  <li><font face="Comic Sans MS">Win95 version does not use the file resind.dat. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/28 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">If a robot was trained to drop a box on a number it lost
+    track of things. </font></li>
+  <li><font face="Comic Sans MS">If a robot performed operations on a sensor, they were
+    remembered but not seen while inside the thought bubble. </font></li>
+  <li><font face="Comic Sans MS">Fixed bug introduced on 5/20 where Marty sometimes when
+    describing what a robot does says things like &quot;the new numbera number&quot;. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/30 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Robots trained to break a box into pieces by dropping it on a
+    number, got stuck when running. </font></li>
+  <li><font face="Comic Sans MS">Sometimes changing the appearance of your head (between hat,
+    bald, and long hair) corrupted some internal data. </font></li>
+  <li><font face="Comic Sans MS">Sometimes when lots of birds and/or trucks are using a door
+    then the programmer can't get through it even after the birds and trucks are done. Fixed
+    now. </font></li>
+  <li><font face="Comic Sans MS">If a bird was taking something to her nest in the same room
+    and the programmer was looking at the house from the outside, you could see the bird fly
+    out (backwards!) and then fly back in. No longer. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">5/31 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes if a number A is dropped on number B and before
+    mouse smashes them together another number is dropped on A then the system crashed. Fixed.
+    </font></li>
+  <li><font face="Comic Sans MS">If a zero-hole box was dropped on another it triggered an
+    error (divide by zero). </font></li>
+  <li><font face="Comic Sans MS">If a box was dropped next to a zero hole box, it would not
+    click together. </font></li>
+  <li><font face="Comic Sans MS">When a small or large box was broken into pieces one of the
+    pieces was default size. </font></li>
+  <li><font face="Comic Sans MS">If a robot was trained to flip through pages of a notebook
+    then if the typing was fast it ended up on a different page when it was redoing the
+    actions. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/2 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed recently introduced spurious warning from Marty when
+    dropping something on a box containing a zero-hole box. </font></li>
+  <li><font face="Comic Sans MS">Robots trained to drop a box on a blank number got confused
+    when running. </font></li>
+  <li><font face="Comic Sans MS">Robots trained to drop a box on a number sometimes got
+    confused too. </font></li>
+  <li><font face="Comic Sans MS">Changes to notebooks made on 5/24 had problem that if
+    something was dropped on the right page and both left and right was empty it ended up on
+    the left. </font></li>
+  <li><font face="Comic Sans MS">When holding something over the notebook, sometimes only one
+    page wiggled as feedback now the entire notebook does. </font></li>
+  <li><font face="Comic Sans MS">Fixed a rare problem with robots running off screen that
+    crashed the system. </font></li>
+  <li><font face="Comic Sans MS">If more than one bird returns to the same cubby (but
+    different holes) things got confused. </font></li>
+  <li><font face="Comic Sans MS">If you dropped a robot on a notebook and quickly flipped
+    pages sometimes it used to crash. </font></li>
+  <li><font face="Comic Sans MS">If you dropped a labeled box on a zero-hole box, it looked
+    funny. </font></li>
+  <li><font face="Comic Sans MS">If you made a zero-hole box blank its size was wrong. </font></li>
+  <li><font face="Comic Sans MS">If you copied a partially visible picture of a number it used
+    to become fully visible. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/3 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes if a robot was trained to drop things on a notebook
+    to find the right page and if that robot is working in another house and the notebook is
+    open to the page it is looking for it got mixed up about which page to get things from. </font></li>
+  <li><font face="Comic Sans MS">Programmed around Borland compiler bug that also occurred
+    same time as above. </font></li>
+  <li><font face="Comic Sans MS">Sometimes when a bird is returning to a house before it blows
+    up the memory and other resources taken by the things in the house weren't reclaimed when
+    the house explodes. </font></li>
+  <li><font face="Comic Sans MS">If a robot working off screen picked up a random number or
+    mouse sensor from a notebook it would take a cycle before it became non-zero and might be
+    used before that. </font></li>
+  <li><font face="Comic Sans MS">32 bit version can now have a much deeper number of boxes
+    insides of boxes. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/4 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes when a bird in another house whose nest has been
+    copied was given something then a copy of the thing appeared on the floor (and went away
+    if you stood up and sat down again). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/5 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem robot's sometimes stop working and stay
+    floating above everything else. This also fixes a problem with running some of the demos
+    with the 32 bit version. </font></li>
+  <li><font face="Comic Sans MS">Added a new remote control for producing sounds. This is
+    meant to make it easier for a user to import their own sounds (Wave and Midi files). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/6 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The 32bit version on some systems (especially Windows NT) had
+    the problem that text and the street were drawn out of order so the helicopter landed
+    under the street and text floated above things. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/9 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">If sound is turned off on start up (-s 0 for example) then
+    the 32 bit version will no longer initialize and later release the Direct Sound device. </font></li>
+  <li><font face="Comic Sans MS">If asked for your name and you click on the close box you get
+    asked again. If you click on it again then ToonTalk is terminated. Only need to do it once
+    now. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/11 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Added a new remote control for bringing into ToonTalk user
+    art. Just drop the file name on the remote control and then vacuum up the result. The file
+    should be in Windows BMP format and should work for any format. </font></li>
+  <li><font face="Comic Sans MS">If you flip over a user picture and use the remote control
+    for visibility to make it &quot;see some&quot; then the black bits become transparent. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug with remote control for sound that when vacuumed
+    up sometimes crashed or hung. </font></li>
+  <li><font face="Comic Sans MS">Notebooks sometimes if copied and then the copies destroyed
+    lead to inconsistent memory. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/16 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Marty would sometimes make spurious warnings about full
+    screen mode being too slow. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug when vacuuming up a sound created by the
+    &quot;file to sound&quot; remote control. </font></li>
+  <li><font face="Comic Sans MS">User defined pictures now can be saved in the notebook,
+    copied, and used inside of a robot's thought bubble. </font></li>
+  <li><font face="Comic Sans MS">User defined sounds can now be stopped by vacuuming up the
+    file name. </font></li>
+  <li><font face="Comic Sans MS">The file to sound remote control is now restored in the
+    process. </font></li>
+  <li><font face="Comic Sans MS">Sometimes after taking off a house can be seen being built
+    even though it was built long ago. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/17 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Sometimes door were shown for one frame far to the left of
+    where they should be. Trucks driving into the house sometimes drove to this wrong location
+    of the door. </font></li>
+  <li><font face="Comic Sans MS">Sometimes when landing near a house being built it looked as
+    if two trucks drove in. </font></li>
+  <li><font face="Comic Sans MS">The Windows 95 version now uses DirectSound for the narration
+    and for user audio. The sounds are all mixed as a result. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/18 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Used to be if you grabbed a truck or something out of it as
+    it was driving away you could crash the system. </font></li>
+  <li><font face="Comic Sans MS">Trucks used to &quot;sink&quot; below everything else as they
+    drove off. Looked bad and stuff inside only partly &quot;dropped&quot; too. </font></li>
+  <li><font face="Comic Sans MS">If a robot was about to put something in a truck but the
+    programmer put something in first confusion resulted. </font></li>
+  <li><font face="Comic Sans MS">If a remote control for converting a file to a sound or
+    picture was dropped in the notebook it got very small. </font></li>
+  <li><font face="Comic Sans MS">Remote control for file to sound now has a better size and
+    shape when on the floor. </font></li>
+  <li><font face="Comic Sans MS">Better error messages when there is trouble loading a file as
+    a picture or sound. </font></li>
+  <li><font face="Comic Sans MS">Can no longer add text to a remote control for file to sound
+    that already has a file name. </font></li>
+  <li><font face="Comic Sans MS">When user defined pictures are dropped on the clipboard
+    remote control then Marty now reminds the user which files need to accompany the
+    &quot;cutting&quot;. </font></li>
+  <li><font face="Comic Sans MS">User pictures in clipboard displayed wrong for all but one
+    copy. </font></li>
+  <li><font face="Comic Sans MS">If you place a remote sensor for a picture or the clipboard
+    with something on it into the notebook now the thing &quot;on top&quot; is saved. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">6/19 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The geometry of boxes inside of boxes inside of boxes when
+    expanded is now improved. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/2 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Redid the entire low-level graphics. The Win95 version now
+    uses DirectDraw through out. -v 25 -f 1 now works in the Win95 version so with a fast
+    machine you get fast, clean, high resolution images. </font></li>
+  <li><font face="Comic Sans MS">Minor improvement in how the bike pump jumps into your hand
+    when you press F3 </font></li>
+  <li><font face="Comic Sans MS">F12 now puts a copy of the screen on the clipboard. You can
+    then paste the result into a paint program or the like. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/7 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed problems with localization of ToonTalk to countries
+    where there is no comma or period separating every three digits in long numbers. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/8 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem in the Win 95 Direct Draw version that
+    transparent surfaces weren't always initialized properly. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/9 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a serious memory leak introduced about a month ago. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/16 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Implemented a whole set of keyboard accelerators (see
+    keyboard.txt). </font></li>
+  <li><font face="Comic Sans MS">Tools can now be turned on and off. </font></li>
+  <li><font face="Comic Sans MS">Tools &quot;mode&quot; can be changed via the keyboard. </font></li>
+  <li><font face="Comic Sans MS">Any keyboard button will pause a demo now. </font></li>
+  <li><font face="Comic Sans MS">One button mice work better now. Shift click to fly up. </font></li>
+  <li><font face="Comic Sans MS">Dropping numbers on text now changes the first or last
+    character accordingly. </font></li>
+  <li><font face="Comic Sans MS">Dropping number or text on pictures now by default shows only
+    the text itself and not the underlying pads. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/18 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">You can now saved the state of a room by pressing F6 while in
+    it. Good for <a href="make_pzl.htm">generating puzzles</a>. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/19 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Crude puzzle facility operational. -puzzle &lt;file_name&gt;
+    is the interface. </font></li>
+  <li><font face="Comic Sans MS">Dropping pictures on the clipboard sometimes crashed. </font></li>
+  <li><font face="Comic Sans MS">Boxes can now be added to pictures. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/21 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">You can now get up while holding something and bring it to
+    another house. </font></li>
+  <li><font face="Comic Sans MS">When text pads are &quot;see some&quot; they no longer try to
+    imitate the spacing of the invisible pads. </font></li>
+  <li><font face="Comic Sans MS">You can now paste numbers into ToonTalk. Previously they
+    appeared as text pads with digits on them. </font></li>
+  <li><font face="Comic Sans MS">Fixed how Marty talked about boxes. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/24 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Puzzle engine complete. Supports hints, wall decorations and
+    much more. </font></li>
+  <li><font face="Comic Sans MS">Fixed a geometry problem when certain items were created
+    while the programmer was flying high over the city. </font></li>
+  <li><font face="Comic Sans MS">If you exited ToonTalk while holding the magic wand it used
+    to crash. </font></li>
+  <li><font face="Comic Sans MS">The arm didn't quite fit the hand while using a magic wand. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/26 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">You can now copy the magic wand by pressing 's' while holding
+    it. </font></li>
+  <li><font face="Comic Sans MS">You can now give an untrained robot a wand and then train
+    him. He'll always start off holding the wand. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/30 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">New experimental input scheme implemented. Currently -new 1
+    switch need to turn it on. Mouse click now means pick up, then turn on, the turn off, then
+    drop. Shift click means pick up, turn on, turn off, turn on, etc.. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">7/31 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Lots more features added to support puzzles. </font></li>
+  <li><font face="Comic Sans MS">If a box is dropped on a number then you couldn't put
+    anything in part of the box until you picked up and dropped the box. Fixed. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recently introduced bug where Marty can crash system.
+    </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug in puzzle mode when training a robot and leaving
+    stuff in the thought bubble when done training. </font></li>
+  <li><font face="Comic Sans MS">Introduced a puzzle between 10 and 11 and modified 11. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/23 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Simplified puzzle 14 </font></li>
+  <li><font face="Comic Sans MS">Marty sometimes repeated himself when describing what a tool
+    can do. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/24 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Modified StartTT.exe to give puzzles as an option. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/25 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed many Swedish and a few English grammatical problems
+    with what Marty says. </font></li>
+  <li><font face="Comic Sans MS">The comparison of text by scales now follows the alphabetic
+    ordering conventions of the language that has been set as the Windows default. </font></li>
+  <li><font face="Comic Sans MS">If you dropped a picture on its notebook of remote controls
+    and sensors the system crashed. Can't add anything to such notebooks anymore. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/29 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">32bit version crashed or behaved badly if run with Windows
+    set to more than 256 colors. </font></li>
+  <li><font face="Comic Sans MS">Fixed bugs causing the system to crash while abnormally
+    terminating. </font></li>
+  <li><font face="Comic Sans MS">Puzzles now have an opening &quot;story book&quot; and Marty
+    looks injured. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/30 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Puzzle now starts with user on the ground. </font></li>
+  <li><font face="Comic Sans MS">Initial greetings when doing puzzles improved. </font></li>
+  <li><font face="Comic Sans MS">If not starting with first puzzle then doesn't go through
+    intro. </font></li>
+  <li><font face="Comic Sans MS">The user profile (the USR file) now tracks which was the last
+    puzzle done. The command line -next_puzzle 1 runs the next puzzle (or first one if none
+    done before). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">8/31 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed bug where going in and out of houses caused some birds
+    to forget to deliver their goods. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where sometimes an object inside of a box
+    disappeared for a few seconds. </font></li>
+  <li><font face="Comic Sans MS">Added puzzles 21 to 25 (most of the letter/word puzzles) </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/1 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug when training a robot to drop something from the
+    magic wand into the main notebook where it sometimes got confused. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where a robot with an attached wand finishes
+    training with something attached to his wand. </font></li>
+  <li><font face="Comic Sans MS">Used to be you could turn on bike pump, vacuum and wand just
+    by pointing to them and pressing space. Must be held now. </font></li>
+  <li><font face="Comic Sans MS">Used to be you could flip a picture by pointing and typing
+    'f'. Must be held now. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/9 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug that caused the first demo (intro.dmo) to stop
+    when helicopter is taking off. Also bug made it harder to take off using mouse buttons. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where a bird is returning to a house that the
+    programmer is in and its exploding. Used to crash. </font></li>
+  <li><font face="Comic Sans MS">Previously if you changed the number of holes in a box (by
+    typing while holding it or by dropping it on a number) and the box already was that size
+    nothing happened. Now a zero-hole box is created. </font></li>
+  <li><font face="Comic Sans MS">This way robots can be trained to take off first element of
+    box and not get confused when box has just 1 hole. </font></li>
+  <li><font face="Comic Sans MS">Sometimes when a large box was split into pieces the pieces
+    ended up off-screen. No longer and geometry improved. </font></li>
+  <li><font face="Comic Sans MS">Fixed puzzle 14 (add to make birth year) where it thought you
+    were 96 years old. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/10 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Sound effect notebook had pages alternating between sound
+    label (e.g. &quot;helicopter sound&quot;) and sound names (&quot;helicopter&quot;). Sound
+    labels have been eliminated but change won't take effect until Beta version 5. </font></li>
+  <li><font face="Comic Sans MS">Fixed various labels and buttons in the Swedish version. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/11 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The new remote controls for adding user sounds and pictures
+    was missing from the &quot;Sensors&quot; notebook. </font></li>
+  <li><font face="Comic Sans MS">Improved the labels on some of the sensors. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where when terminating a font object sometimes
+    was deleted twice. </font></li>
+  <li><font face="Comic Sans MS">Revised the format of puzzles, updated all puzzles, and added
+    a few intermediate puzzles. </font></li>
+  <li><font face="Comic Sans MS">Boxes no longer respond to the keyboard during puzzles. </font></li>
+  <li><font face="Comic Sans MS">Marty's response to bringing back an incomplete solution was
+    improved. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">A few puzzles require the state of the previous puzzle. If
+    you now quit on such puzzles you'll start again on the previous one next time. </font></li>
+  <li><font face="Comic Sans MS">Puzzles that provide a robot trained in a previous puzzle
+    would crash if not solved the first time. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/13 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed problem where StartTT launched puzzle mode with the
+    wrong switches so you couldn't leave a room holding something. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/15 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The 16bit version read numbers larger than 64K as text
+    strings. </font></li>
+  <li><font face="Comic Sans MS">Audio was missing from pump and vacuum when turned on. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/17 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">If there is something wrong with the DAT files, you got a
+    warning and then it crashed. </font></li>
+  <li><font face="Comic Sans MS">Martian now only looks dizzy at the beginning of the puzzle
+    mode. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/18 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Bike pump now acts better (new animation) while waiting to be
+    used. </font></li>
+  <li><font face="Comic Sans MS">Fixed various problems with the clipboard and numbers. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/20 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">If you use the bike pump on other tools, the notebook, or
+    tool box the change is now persistent (for that user name). You can make them smaller if
+    you prefer. Also if items taken from the notebook and toolbox are scaled proportionately. </font></li>
+  <li><font face="Comic Sans MS">If you call for a tool (F2, F3, F4, or F5) then when you drop
+    it, it'll go back to where it was before (and that size as well). </font></li>
+  <li><font face="Comic Sans MS">Default sizes and positions of tools changed. </font></li>
+  <li><font face="Comic Sans MS">When the toolbox opens up in the thought bubble and the tools
+    come out, the animation was very abrupt. Now is smooth. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/22 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Keyboard accelerators to tools (like &quot;n&quot; to make
+    bike pump make things narrow, or &quot;b&quot; so vacuum makes things blank) now also turn
+    on the tool as well. </font></li>
+  <li><font face="Comic Sans MS">Fixed various problems with sizes of things when robot is
+    trained. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/23 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem with pause followed by &quot;back to
+    ToonTalk&quot; where another pause was needed. </font></li>
+  <li><font face="Comic Sans MS">In puzzles sometimes when you dropped things on another it
+    went underneath another. </font></li>
+  <li><font face="Comic Sans MS">Training robots to pick up and set down the toolbox used to
+    confuse them. </font></li>
+  <li><font face="Comic Sans MS">DMO files now record the favorite positions and sizes of your
+    tools to that the replay can depend upon them ending up at the same place. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/24 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">More of the player's state while doing puzzles is saved so
+    that when he or she resumes it'll remember enough to continue properly. </font></li>
+  <li><font face="Comic Sans MS">Fixed some problems with lost DirectDraw surfaces in the 32
+    bit version. </font></li>
+  <li><font face="Comic Sans MS">16 bit version had a problem that many rectangular items had
+    a black line on the top. </font></li>
+  <li><font face="Comic Sans MS">16 bit version had the problem that if something was under
+    something with text or numbers on it and you pointed to the lower thing then a moving thin
+    horizontal line would break the text. </font></li>
+  <li><font face="Comic Sans MS">If you copy the result of pasting the contents of a room into
+    Window's clipboard and take out the clipboard remote control then the objects are restored
+    to the room. Great for revising puzzles. </font></li>
+  <li><font face="Comic Sans MS">Updated the first puzzle to have a reminder about how to get
+    up. </font></li>
+  <li><font face="Comic Sans MS">Sometimes if something is dropped on something then the thing
+    on top floated above other objects. Items dropped into such floaters dropped down through
+    the object. </font></li>
+  <li><font face="Comic Sans MS">Remote controls which only are inside of a vacuum are no
+    longer updated. </font></li>
+  <li><font face="Comic Sans MS">Messages on the walls in puzzles now look much nicer. </font></li>
+  <li><font face="Comic Sans MS">Puzzles themselves no longer contain congratulatory phrases
+    but are generated by the puzzle engine instead. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/25 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Puzzle format now accepts #### for the message on the wall.
+    It is replaced by the goal. </font></li>
+  <li><font face="Comic Sans MS">Geometry of the box a robot in training is working on was
+    improved. </font></li>
+  <li><font face="Comic Sans MS">Puzzles updated. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/27 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recent bug where tools used off screen or back of
+    pictures caused the sound to be stopped. </font></li>
+  <li><font face="Comic Sans MS">Updated the textures used for streets, water, etc. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/28 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Added new animation of robot waiting. </font></li>
+  <li><font face="Comic Sans MS">Improved animation of trucks driving outside. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/29 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed bugs in 32 bit version that occurred when resuming
+    ToonTalk (after iconizing it). </font></li>
+  <li><font face="Comic Sans MS">Puzzle state is now saved after every puzzle so can restart
+    even if system or machine crashes. </font></li>
+  <li><font face="Comic Sans MS">Improved the animation of waiting robots. </font></li>
+  <li><font face="Comic Sans MS">If you used keyboard accelerators to change the mode of a
+    tool while it was on then you the first key turned off the tool and you needed to press it
+    twice. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug in 32 bit version when running puzzles that floor
+    flashed. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">9/30 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed problem with darkening the screen while power is off
+    (F8) where it looked bad in some situations. </font></li>
+  <li><font face="Comic Sans MS">32 bit version doesn't work well in non-256 color mode. Warns
+    about it now. </font></li>
+  <li><font face="Comic Sans MS">Broken rocket added to puzzle mode. </font></li>
+  <li><font face="Comic Sans MS">Flipping pictures and numbers using keyboard commands ('f')
+    weren't working right. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/1 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Blank numbers and text pads now display just the pad and not
+    a blank plate on top. </font></li>
+  <li><font face="Comic Sans MS">Blank text pads that were more than one line displayed wrong.
+    </font></li>
+  <li><font face="Comic Sans MS">Added inside of rocket to puzzle mode. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/3 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Added buttons to Dusty, Pumpy and Magic Wand. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug going from puzzle 9 to 10 (file name string too
+    short). </font></li>
+  <li><font face="Comic Sans MS">Fixed a recently introduced bug where text pads were shifted
+    upward a bit. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/4 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Made major changes to how Marty talks about tools. </font></li>
+  <li><font face="Comic Sans MS">Made some improvements to how Marty behaves. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/5 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Marty used to not talk about something if it first came up
+    while he was talking about something else. </font></li>
+  <li><font face="Comic Sans MS">Marty now responds to PageDown (next talk balloon) and PageUp
+    (repeat previous). </font></li>
+  <li><font face="Comic Sans MS">Marty's default reading speed is now twice as slow (since
+    PageDown is the preferred way to get him to speed up). -r 200 on the command line will
+    restore the old. </font></li>
+  <li><font face="Comic Sans MS">Sometimes the text in Marty's talk balloon would go off the
+    edge of the screen. </font></li>
+  <li><font face="Comic Sans MS">The default size of Marty's letters is now 10% smaller than
+    before. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/6 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed various bugs with robots using buttons on tools. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/7 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed problem reporting error message when puzzle file can't
+    be loaded. </font></li>
+  <li><font face="Comic Sans MS">Used to be you could drop the toolbox on the clipboard and
+    cause trouble. </font></li>
+  <li><font face="Comic Sans MS">Fixed a minor bug when dropping a number on text. </font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with the display of text pads in the 16bit
+    version. </font></li>
+  <li><font face="Comic Sans MS">Used to be if you pointed to some text and typed enter to add
+    a new line that it moved up. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/9 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug that only manifested itself on Win NT when
+    running in 16 color mode (or maybe true colour as well). </font></li>
+  <li><font face="Comic Sans MS">Updated the Welcome and Start applications. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/11 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recent problem where using the keyboard accelerators
+    when training a robot that had a training counter (e.g. in puzzles) it used two steps to
+    do one thing. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a recent problem where trucks won't drive off after a
+    robot loaded them up. </font></li>
+  <li><font face="Comic Sans MS">If you stand up holding a tool that is on it is now turned
+    off. </font></li>
+  <li><font face="Comic Sans MS">If you vacuum up the toolbox it no longer follows you around
+    outside. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where you get up holding a tool and then later
+    after the tool it still comes into your hand. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where logs sometimes had the wrong favorite sizes
+    and locations for tools. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/13 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">When you have a solution in the puzzle game it now ends up in
+    a slot inside the rocket. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/14 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Added new acting for Marty. </font></li>
+  <li><font face="Comic Sans MS">Added a door to broken rocket in puzzle game. </font></li>
+  <li><font face="Comic Sans MS">Added opening titles. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/15 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Saved puzzle state now includes filled slots inside the
+    rocket. </font></li>
+  <li><font face="Comic Sans MS">Using magic wand repeated caused your arm to drip upward no
+    longer. </font></li>
+  <li><font face="Comic Sans MS">Using your magic wand without moving the mouse caused the
+    wand to select things below its tip. </font></li>
+  <li><font face="Comic Sans MS">The vacuum now waits a second when turned on before being
+    used again. </font></li>
+  <li><font face="Comic Sans MS">Initial &quot;camera&quot; position for starting puzzle game
+    improved. </font></li>
+  <li><font face="Comic Sans MS">A few puzzles like #7 rely upon the state of #6 so if you
+    quit before doing #7 then you have to do #6 over again. Fixed problem where slots showed
+    the old solution. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/16 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Added multiple floors. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/17 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed bug where puzzles started using the second slot. </font></li>
+  <li><font face="Comic Sans MS">Fixed bug where goal on wall wasn't placed right. </font></li>
+  <li><font face="Comic Sans MS">Marty now very rarely breaks a sentence across talk balloons.
+    </font></li>
+  <li><font face="Comic Sans MS">Marty's talk balloon is now smaller. </font></li>
+  <li><font face="Comic Sans MS">Marty didn't respond to PageDown if there wasn't anything
+    else to say. </font></li>
+  <li><font face="Comic Sans MS">If you picked up some things, stood up and then sat again
+    then the item was invisible until dropped (and your hand wasn't holding it right). </font></li>
+  <li><font face="Comic Sans MS">Trucks sometimes got bigger rather than smaller when driving
+    into a house. </font></li>
+  <li><font face="Comic Sans MS">Fixed some help with tools and buttons. </font></li>
+  <li><font face="Comic Sans MS">Marty eventually kept suggesting you try PageDown and PageUp
+    even after you have. </font></li>
+  <li><font face="Comic Sans MS">Fixed how Marty talks about text with more than one line. </font></li>
+  <li><font face="Comic Sans MS">Swedish version had tools starting off with wrong (English)
+    labels. </font></li>
+  <li><font face="Comic Sans MS">Fixed various other things Marty says. </font></li>
+  <li><font face="Comic Sans MS">Marty can now break a hyphenated word. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/18 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Major re-write of installation program. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/19 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Improved color palette. </font></li>
+  <li><font face="Comic Sans MS">Buttons on tools now look like buttons. </font></li>
+  <li><font face="Comic Sans MS">Messages (like credits and story text) now can include \r to
+    force carriage returns. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/20 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">More work on improving installation program. </font></li>
+  <li><font face="Comic Sans MS">Fixed problem in puzzle mode when completely a level that the
+    inside of the rocket wasn't updated properly. </font></li>
+  <li><font face="Comic Sans MS">Typing 'Esc' during the titles, credits or intro skips them
+    all and starts the action. </font></li>
+  <li><font face="Comic Sans MS">Added animation of user persona putting things in and taking
+    things out of his/her pocket. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/21 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Updated the graphics for the &quot;welcome&quot; (autoplay)
+    program and the start ToonTalk program. </font></li>
+  <li><font face="Comic Sans MS">Dialog that asks name also now ask for appearance (hair, hat
+    or bald). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/22 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed recent bug that make -o on command line not work </font></li>
+  <li><font face="Comic Sans MS">Fixed other bugs in adding narration to ToonTalk demos </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/23 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed various installation bugs </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/25 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed various problems with the animation and sound effects
+    of the bike pump. </font></li>
+  <li><font face="Comic Sans MS">-c &lt;city size&gt; option if negative made a random city -
+    occasionally it got stuck in a loop. </font></li>
+  <li><font face="Comic Sans MS">Improved the animation of Marty. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/26 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Redid intro demo. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">10/31 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Redid all the other demos. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/2 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug in 16 bit version that crashed system after F11
+    copied </font></li>
+</ol>
+
+<ol>
+  <li><font face="Comic Sans MS">the screen to a file. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/3 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug with very large (larger than the screen)
+    rectangle items. (The fix does sometimes clip the object a pixel or two too soon so that
+    you can see through it on the right side.) </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug where it would sometimes crash when leaving the
+    helicopter if you pressed 'Esc' on opening screen to skip credits. </font></li>
+  <li><font face="Comic Sans MS">Fixed a few minor memory leaks. </font></li>
+  <li><font face="Comic Sans MS">Fixed a serious memory leak when a robot was taken from a
+    notebook. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/5 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The 2 &quot;alphabet&quot; puzzles now work in Swedish with
+    their extra letters. </font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with end of the third part of the Ping Pong
+    demo. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/6 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Added 2 more puzzles. </font></li>
+  <li><font face="Comic Sans MS">Fixed a problem inside of a thought bubble with the display
+    of the steps remaining. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/8 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Marty now leaves &quot;. . .&quot; at the end of his talk
+    balloon when he has more to say. </font></li>
+  <li><font face="Comic Sans MS">Puzzles now have bombs so that it is easy to reset the
+    puzzle. </font></li>
+  <li><font face="Comic Sans MS">If you now bring Marty the wrong thing you don't lose what
+    you brought and you don't get a hint. Hints only come if you come to Marty empty handed.
+    -bomb 0 on the command line restores the old behavior. </font></li>
+  <li><font face="Comic Sans MS">About 10 new puzzles added. </font></li>
+  <li><font face="Comic Sans MS">Marty now gives you a hint if you walk up close to him even
+    if you came in the rocket with the wrong thing. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/11 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed problems with running 32bit version when display is set
+    to more than 256 colors. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Implemented auto demo mode. -autodemo &lt;0, 1 or 2&gt; to
+    the Start ToonTalk command line will run no autodemo, repeatedly run intro, or run through
+    all demos respectively. If not running a demo and machine is idle more than
+    AutoDemoMaxIdle (a switch in toontalk.ini) seconds (120 or 2 minutes is the default) then
+    will quit ToonTalk and start or resume Start ToonTalk. </font></li>
+  <li><font face="Comic Sans MS">ToonTalk refuses to allow a screen saver to run if it is in
+    full screen mode. (Used to refuse only if running a demo.) </font></li>
+  <li><font face="Comic Sans MS">Full screen mode when paused (either by user or by abnormal
+    situation requiring a message box) it now minimizing the ToonTalk window so that message
+    box or dialog box is always visible. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/13 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem where text pads when pumped didn't grow
+    right. </font></li>
+  <li><font face="Comic Sans MS">Improved the appearance of labels of boxes. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/14 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed problem where you got a hint from Marty if you walked
+    up to him even though he was still introducing the problem. Have to leave and come back
+    for a hint now. </font></li>
+  <li><font face="Comic Sans MS">Pressing F4 crashed the system if in a puzzle with function
+    keys enabled. </font></li>
+  <li><font face="Comic Sans MS">If a puzzle starts with a previously trained robot and you
+    blew up the house while the robot was running sometimes the system would crash. </font></li>
+  <li><font face="Comic Sans MS">Puzzle 34 was broken. </font></li>
+  <li><font face="Comic Sans MS">Puzzle 35 introduced (others moved later). </font></li>
+  <li><font face="Comic Sans MS">Giving a robot a box while he was already working on another
+    sometimes crashed the system. </font></li>
+  <li><font face="Comic Sans MS">Marty sometimes had too small a talk balloon for short (1 or
+    2 word) messages and they were finished on the next balloon. </font></li>
+  <li><font face="Comic Sans MS">The 32 bit version when it terminated did not always properly
+    re-activate the Start ToonTalk program (if there is one). </font></li>
+  <li><font face="Comic Sans MS">Improved English introductory demo. </font></li>
+  <li><font face="Comic Sans MS">Sometimes you can copy Bammer the Mouse with the wand but it
+    was confusing no longer can. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/16 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a Window's resource leak in 16 bit version. </font></li>
+  <li><font face="Comic Sans MS">Fixed a problem with 16 bit version not exiting properly. </font></li>
+  <li><font face="Comic Sans MS">Fixed a display problem when running 640x480 (32 bit version
+    only). </font></li>
+  <li><font face="Comic Sans MS">Fixed a memory leak in free play if player has done puzzles
+    earlier. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/17 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed another Window's resource leak in 16 bit version. </font></li>
+  <li><font face="Comic Sans MS">Reporting problems going to full-screen mode used to mess up
+    demos. </font></li>
+  <li><font face="Comic Sans MS">Fixed a recent bug where rectangular objects had black dots
+    on the right side. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/18 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Robots used to get mixed up when trained to put a number or
+    text pad down and then drop something on top of it. </font></li>
+  <li><font face="Comic Sans MS">Added several more puzzles. </font></li>
+  <li><font face="Comic Sans MS">If house was destroyed the same time something was being
+    destroyed (e.g. by Bammer the mouse) the system sometimes crashed. </font></li>
+  <li><font face="Comic Sans MS">Marty would give a puzzle hint if you approached him after
+    giving him a correct solution. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/22 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a bug destroying a nest with hundreds of things on it. </font></li>
+  <li><font face="Comic Sans MS">Scales used to tilt back and forth if you make the items next
+    to it blank (except in thought bubbles). The tilt is based on the original value for blank
+    text or number pads. </font></li>
+  <li><font face="Comic Sans MS">A robot would sometimes wait (suspend) when remote sensors
+    were involved even though they matched and others didn't. Now it gives up as it should. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">11/23 to 11/27 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed several bugs, added many new puzzles, improved
+    presentation of opening credits. (But neglect to update this file.) </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/2 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">In puzzle mode the wand cannot be set to &quot;S&quot; for
+    self-copying. </font></li>
+  <li><font face="Comic Sans MS">Fixed typo in p4.pzl </font></li>
+  <li><font face="Comic Sans MS">When house is blown up and the wall shows a picture of the
+    solution then sometimes a bunch of ###s were drawn on top of the picture. </font></li>
+  <li><font face="Comic Sans MS">Marty now gives a hint about using a bomb even if you keep
+    coming back empty handed. </font></li>
+  <li><font face="Comic Sans MS">Sometimes if Marty is talking and then wants to add something
+    it only showed up when he repeated himself. Works now. </font></li>
+  <li><font face="Comic Sans MS">Fixed a typo in p1.pzl and added a new hint to p5.pzl. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug when exploding a house with robots inside that
+    are loading up trucks. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug when standing up while holding the magic wand
+    while something was still attached to it. </font></li>
+  <li><font face="Comic Sans MS">Fixed pages 72 and 74 in pictures notebook. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/3 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Robots can now be trained to use Pumpy the bike pump. </font></li>
+  <li><font face="Comic Sans MS">Sometimes when dropping a robot back into a notebook the
+    notebook disappeared. </font></li>
+  <li><font face="Comic Sans MS">Restructured the internal workings of the Marty's text
+    generation to work better with multiple languages. </font></li>
+  <li><font face="Comic Sans MS">Introduced -language name command line option. American and
+    Swedish are currently operational and more to come. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/4 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Region for clicking on a tool's button was doubled in size. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/5 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a minor memory leak when using a wand with a counter
+    (many puzzles). </font></li>
+  <li><font face="Comic Sans MS">Puzzle game now starts you off very close to the rocket door.
+    </font></li>
+  <li><font face="Comic Sans MS">Sometimes you got 2 hints during one visit to Marty. 1 per
+    visit now. </font></li>
+  <li><font face="Comic Sans MS">If you leave the rocket while Marty is talking then he'll
+    repeat himself when you come back. </font></li>
+  <li><font face="Comic Sans MS">Timing of demos was sometimes off by a few seconds. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/6 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Major re-write of the installation program. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/9 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Marty would sometimes repeat himself over and over again. </font></li>
+  <li><font face="Comic Sans MS">Improved the placement of Marty's text in the thought
+    balloon. </font></li>
+  <li><font face="Comic Sans MS">Pausing ToonTalk no long iconizes the main window. </font></li>
+  <li><font face="Comic Sans MS">Fixed the hints for puzzle #15 (generate 1,2, etc.). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/10 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed a problem with initializing colors on some boards for
+    16 bit version. </font></li>
+  <li><font face="Comic Sans MS">Fixed NT installation problems. </font></li>
+  <li><font face="Comic Sans MS">Marty described Dusty wrong sometimes. </font></li>
+  <li><font face="Comic Sans MS">Sometimes Marty would not say anything useful about a tool
+    when </font></li>
+  <li><font face="Comic Sans MS">F1 is pressed while held. </font></li>
+  <li><font face="Comic Sans MS">Improved the placement of very short messages in thought
+    balloons. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/11 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Redid &quot;Append Lists&quot; demo. </font></li>
+  <li><font face="Comic Sans MS">Marty now tries to give help when you do a significant action
+    (pick up, drop, use, ...) or when you press PageDown (and he's not talking). </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/12 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Marty no longer repeats explanation about what
+    &quot;...&quot; means. </font></li>
+  <li><font face="Comic Sans MS">Marty no longer repeats what is wrong if you walk out with
+    the wrong and thing and come back with it. </font></li>
+  <li><font face="Comic Sans MS">Marty would sometimes say he was waiting for a
+    &quot;blank&quot; number or whatever when he wasn't. </font></li>
+  <li><font face="Comic Sans MS">Bomb used to get stuck to the floor on the first Dusty puzzle
+    (#5). </font></li>
+  <li><font face="Comic Sans MS">In puzzles the message on the wall is now on a picture. </font></li>
+  <li><font face="Comic Sans MS">Marty now gives a good response to bringing back too small a
+    number. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/16 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Fixed lots of little odds and ends about Marty's behavior. </font></li>
+  <li><font face="Comic Sans MS">If training a robot and using the keyboard sometimes it would
+    mistakenly think that there was a training counter and it was used up. </font></li>
+  <li><font face="Comic Sans MS">'B' for blank for vacuum was replaced by 'E' for erase. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/22 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Reworked many internal parts of Marty so that he is easier to
+    translate to other languages. </font></li>
+  <li><font face="Comic Sans MS">Fixed a bug when Marty tried to describe some kinds of remote
+    controls while they were still in a notebook. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/26 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">The sounds notebook now contains special sound objects. These
+    will work across different language version of ToonTalk. The old way of typing a name
+    still works but generates a warning. </font></li>
+  <li><font face="Comic Sans MS">Sensors that display text, (e.g. &quot;yes&quot; or
+    &quot;no&quot; for whether the left mouse button is down) are now saved in the natural
+    language of the system they came from. This way things saved can be brought into other
+    language versions of ToonTalk and still work fine. </font></li>
+  <li><font face="Comic Sans MS">If you tried to return something to the notebook of remote
+    controls (that lives on the back of pictures) you got a warning from Marty rather than
+    just let the item fall back on the notebook. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">12/30 </font>
+
+<ol>
+  <li><font face="Comic Sans MS">Added subtitles to demos. Adding -subtitles 100 to the
+    command line turns them on. (Larger numbers indicate a faster speed for the subtitles.) </font></li>
+  <li><font face="Comic Sans MS">Can also turn them on by adding
+    &quot;SubtitlesSuffix=ust&quot; to the &quot;Executables&quot; section of ToonTalk.ini.
+    Where UST is the American English subtitles suffix. </font></li>
+</ol>
+
+<p><font face="Comic Sans MS">Continue with <a href="bugs97.htm">1997</a>.</font></p>
+
+<p align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a
+href="http://www.toontalk.com/English/search.htm">search</a> | <a href="buy.htm">purchase</a>
+| <a href="doc.htm">manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

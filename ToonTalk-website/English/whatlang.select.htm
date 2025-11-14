@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+   <head>
+      <title>Setting ToonTalk Language</title>
+      <meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+      <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+      <LINK rel="stylesheet" type="text/css" href="../dialog.css">
+      <script language="javascript" src="../common.js"></script>
+      <script id="clientEventHandlersJS" language="javascript">
+var oneLanguageInstalledString = "Only one language has been installed."; // needs translation
+var nextDialog = "whatvce.htm";
+var category = "Language";
+function getSelectedButton() { // overriding common.js
+   return LanguageChoices.selectedIndex+1; // +1 to switch to one-indexing
+}
+function checkDefaultButton() {
+   // do nothing
+}
+      </script>
+   </head>
+   <body>
+      <P>Do you want to change which language Toontalk uses?</P>
+      <P>I want ToonTalk to use
+         <SELECT id="Select1" NAME="LanguageChoices">
+         </SELECT>
+         <script>
+            var availableLanguagesString = currentParameter("Languages"); // should be Languages
+            var availableLanguages = availableLanguagesString.split('{');
+            if (availableLanguages.length == 1) {
+               document.writeln(oneLanguageInstalledString);
+            };
+            //clear the list
+	         LanguageChoices.options.length = 0;
+
+	         //add the arguments to the list
+	         for (var i = 0; i < availableLanguages.length; i++) {
+		         LanguageChoices.options[LanguageChoices.options.length] = new Option(availableLanguages[i]);
+		      }
+	         //set current default to be selected
+	         LanguageChoices.options[currentParameter("Language")-1].selected = true;
+         </script>
+      </P>
+      <P>ToonTalk has been translated to other languages. This changes what language 
+         Marty speaks or displays.</P>
+      <SCRIPT language="javascript" src="BNCD.js"> </SCRIPT>
+   </body>
+</html>

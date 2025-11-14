@@ -1,0 +1,114 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Aesthetics of computer scientists or mathematicians?</title>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Comic Sans MS" size="5">Should the design of 
+the ideal programming system for children be driven primarily by the aesthetics 
+of computer scientists or mathematicians?</font></b><font FACE="Comic Sans MS" size="5"><strong> </strong></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+<p><font face="Comic Sans MS">The design of LOGO was largely based upon Lisp. 
+The design of Lisp was largely based upon lambda calculus, a branch of 
+mathematics. This makes Lisp (and probably to a lesser extent LOGO) a language 
+that is not only a good tool for expressing programs but an object to think 
+about and with. One consequence of this is that Lisp is well-suited for 
+meta-programming. Programs can construct other programs. Programs can reflect 
+upon themselves. This is a consequence of the small clean kernel underlying Lisp 
+that is based upon lambda calculus. Alan Kay in a talk at Stanford in 2003 
+described Lisp as &quot;a mathematical object that can see itself&quot;.</font></p>
+<p><font face="Comic Sans MS">The kernels of some programming languages such as 
+Lisp, Prolog, concurrent constraint programming languages, and functional 
+programming languages have a mathematical beauty. A very small basis set can 
+generate incredible richness. In contrast, languages like Smalltalk, Oz, Python, 
+and Java were designed by computer scientists. The beauty and elegance of these 
+languages seems more akin to that of engineering than mathematics.</font></p>
+<p><font face="Comic Sans MS">A question to explore further is how to compare 
+languages such as Lisp that are based upon
+<a href="http://en.wikipedia.org/wiki/Lambda_calculus">lambda calculus</a> and 
+those which are based upon a calculus of processes such as </font>
+<a href="http://en.wikipedia.org/wiki/Pi_calculus"><font face="Comic Sans MS">pi 
+calculus</font></a><font face="Comic Sans MS">. Perhaps processes are more 
+valuable and fundamental than functions. If so languages should focus upon
+<a href="ideal_concurrency.htm">doing concurrency right</a> and not be as 
+concerned about functional programming.</font></p>
+<p><font face="Comic Sans MS">It may be that in practice even the mathematically 
+beautiful programming languages are complex engineering artifacts. Maybe the 
+structure and elegance of the kernel matters little if programmers need to put 
+most of their efforts into understanding large engineered libraries of useful 
+components. Not much real programming is done completely bottom up from language 
+primitives. And even if someone builds a large program &quot;from scratch&quot; much of 
+their cognitive effort probably is going into designing and using higher level 
+chunks of code even if they built those levels themselves.</font></p>
+<p><font face="Comic Sans MS">I think this situation is analogous to the idea of 
+reductionism in science and philosophy. I think it is a great achievement that 
+one can understand everything in the universe in terms of atoms, or elementary 
+particles, or quarks, or super strings. It is important that things can in 
+principle be reduced to primitive elements. In theory it can explain why you 
+can't put a round peg in a square hole. But usually it is not the level at which 
+informative, helpful, or satisfying explanations come from. Similarly, I think 
+it is great if one can see that a complex program bottoms out ultimately in a 
+small set of primitives even if most of one's thinking about programs occurs at 
+higher levels of organization.</font></p>
+<p><font face="Comic Sans MS">So what about ToonTalk? It appears to be in the 
+engineer/computer scientist family of languages. It has many more primitive 
+elements and constructs than say lambda calculus or the Horn clauses underlying 
+most logic programming languages. And yet its design was directly inspired by 
+concurrent constraint languages which are mathematical beauties. What happened?</font></p>
+<p><font face="Comic Sans MS">ToonTalk has very few true building blocks. They 
+are pads (atomic data), boxes (compound data structures), birds/nests 
+(communication channels), and robots (program fragments). What about all the 
+other things in ToonTalk? They are ways of expressing certain kinds of actions, 
+not things themselves. A truck is not really a part of a ToonTalk computation 
+but is a way of expressing the spawning of a new process. The Magic Wand is not 
+a thing but a way of expressing the copying of other things. The helicopter is a 
+way to monitor an ongoing computation at different scales and locations. 
+Notebooks were designed as a way to get the functionality of a file system for 
+persistence and sharing. But notebooks can also be used as an alternative to 
+boxes and maybe from the point of a view of a mathematician that is a mistake.</font></p>
+<p><font face="Comic Sans MS">ToonTalk often operates at a level below that of 
+the concurrent constraint programming languages. In Janus, you can understand 
+communication as the asking and telling of constraints. In ToonTalk, the 
+corresponding constructs are in terms of waiting for things to arrive on a nest 
+(asking) or giving things to birds (telling). Despite a direct mapping between 
+Janus and ToonTalk, it is hard to think about constraint programming in 
+ToonTalk. </font></p>
+<p><font face="Comic Sans MS">Is the ToonTalk world too rich? Would a sparser 
+set of primitives lead to a language that is a better object of study and 
+contemplation? Would a sparser ToonTalk have more layers of software? Could 
+these higher-level components be concretized as well as ToonTalk currently does? 
+Many good questions remain.</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">manual</a>
+| <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">games</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="endorse.htm">endorsements</a> | <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>New Version of ToonTalk Numbers</title>
+</head>
+
+<body>
+
+<p align="center"><font size="6" face="Comic Sans MS"><b>New Version of ToonTalk Numbers</b></font><font size="5" face="Comic Sans MS"><b>&nbsp;</b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<object id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+</object>
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</script>
+<input onclick="agentStart()" type="image" alt="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+
+<p align="center"><img src="../newnum.jpg" alt="newnum.jpg (11535 bytes)" width="479" height="70"></p>
+
+<p align="left"><font face="Comic Sans MS" size="3">This page describes numbers, 
+including many improvements
+were made to numbers beginning with beta 34 (or release version 2.50 or greater). <a href="number.htm">Click here</a> to read about the old version.</font></p>
+
+<p><font size="4" face="Comic Sans MS">If you drop a number, for example, 2, on 
+another number, say, 7, they will be added by <a href="bammer.htm">Bammer</a> turning the 7 into a 9 and
+destroying the 2. If you type the key for an operation before dropping the 2 then the
+following will happen: </font>
+
+<ul>
+  <li><p><font size="4" face="Comic Sans MS">x or * multiply <i>(7 x2 becomes 14)</i> </font></p></li>
+  <li><p><font size="4" face="Comic Sans MS">/ divide <i>(7 /2 becomes 3)</i>&nbsp; </font><font color="#FF0000" face="Comic Sans MS"><b>
+  <a href="../math_operations.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p></li>
+  <li><p><font size="4" face="Comic Sans MS">% remainder <i>(7 %2 becomes 1)</i>&nbsp; </font><font color="#FF0000" face="Comic Sans MS"><b>
+  <a href="../math_remainder.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p></li>
+  <li><p><font face="Comic Sans MS" size="4">^ to raise to a power <i>(7 ^2 becomes 
+  49) </i></font><font color="#FF0000" face="Comic Sans MS"><b>
+  <a href="../math_power.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p></li>
+  <li><p><font size="4" face="Comic Sans MS">= set to number on top <i>(7 =2 becomes 2 as does any
+    number with =2 dropped on it)</i>&nbsp; </font><font color="#FF0000" face="Comic Sans MS"><b>
+  <a href="../number_set_equal.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p></li>
+  <li><p><font size="4" face="Comic Sans MS">- makes the number negative <i>(7 plus -2 becomes 5)</i>
+    </font></p></li>
+</ul>
+
+<p><font size="4" face="Comic Sans MS">You can change a number when holding or pointing to
+it by typing. You can also drop a number on a <a href="notebook.htm">notebook</a> to go to
+that page number. If you drop a number on a <a href="text.htm">text pad</a> you'll change
+the first or last letter depending on which side of the pad you dropped it. If, for
+example, you dropped 2 on the right side of the text pad containing &quot;ABC&quot;, it'll
+be turned into &quot;ABE&quot;.</font></p>
+
+<p><font face="Comic Sans MS" size="2"><a name="BlankText"><b><i>ADVANCED USERS ONLY:</i></b></a>
+</font></p>
+
+<p><font face="Comic Sans MS" size="3"><b>Blank numbers.</b> </font></p>
+
+<p><font face="Comic Sans MS" size="3">A blank number pad can be any number. They are
+handy inside of a robot's <a href="bubble.htm">thought bubble</a>. This way a robot will
+only accept a box with a number where the blank number is. This corresponds to a
+&quot;type test&quot; in conventional programming languages.</font></p>
+
+<p><font face="Comic Sans MS" size="3">They can also be used for something called
+&quot;type conversion&quot;. You can change a <a href="text.htm">text pad</a> that is
+showing a number into a number by dropping it on a blank number pad. </font><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../text_to_number.dmo"><font color="#FF0000" size="4">SHOW ME</font></a><font size="4"> </font></b></font><font face="Comic Sans MS" size="3">Or you can take a <a href="box.htm">box </a>and drop it on a blank number pad and the pad will end up showing
+how many holes the box has. You can even drop a team of robots on a blank number pad to
+find out how many robots there are. Dropping a notebook on an erased number pad turns the
+pad into the number of pages in the notebook. You need to use <a href="dusty.htm">Dusty</a>
+to remove the number from a pad to make it blank. </font><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../number_coercion.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font face="Comic Sans MS" size="3">The following operations on numbers as strings of
+bits are supported as well but only advanced users need to worry about them. </font>
+
+<ul>
+  <li><p><font face="Comic Sans MS" size="3">~ complements or negates all the bits 
+  <i>(~2 becomes -3 since it is
+  <a href="http://mathforum.org/library/drmath/view/54344.html">two's complement</a>)
+  </i> </font></p></li>
+  <li><p><font face="Comic Sans MS" size="3">&amp; bitwise and of numbers <i>(7 &amp;2 becomes 2 or
+    in binary 111 AND 010 becomes 010) </i> </font></p></li>
+  <li><p><font face="Comic Sans MS" size="3">| bitwise or of numbers <i>(7 |2 becomes 7 or in
+    binary 111 OR 010 becomes 111) </i> </font></p></li>
+</ul>
+
+<p><strong><font face="Comic Sans MS">Arbitrarily large integers.</font></strong></p>
+
+<p><font face="Comic Sans MS">This means that numbers behave as they should and not as
+they do in nearly every other programming language. In the earlier version of ToonTalk all
+numbers needed to be between 2147483647 and -2147483648. Now the only limit is the amount
+of memory need to store a number. Numbers with 100,000 digits work just fine however some
+operations may take a noticeable amount of time. Multiplying two 100,000 digit long
+numbers may <a href="slownumb.htm">freeze ToonTalk for a few seconds</a>.</font></p>
+
+<p><font face="Comic Sans MS">Prior to 3.107 or beta 45, ToonTalk would crash or 
+exit when displaying a number with more than about 750,000 digits. The limit was 
+raised to 7,500,000 in version 
+3.107. Numbers larger than this can still be used in computations but they 
+display an explanation that ToonTalk can't compute the digits. Even larger 
+numbers can be displayed in a base that is a power of two (e.g. hexadecimal or 
+base 32).</font></p>
+
+<p><font face="Comic Sans MS">Beginning with 3.125 or beta 46, if the number pad 
+is in a box or notebook or its size has been changed by Pumpy and there isn't 
+enough room to display all the digits then the first and last digits are 
+displayed at full size and the digits in between are displayed as shrinking to 
+dots and then growing again. (This feature can be turned off using the 
+toontalk.ini </font><big><font face="Comic Sans MS" size="3">
+  <a href="ttini.htm#OKToDisplayNumbersShrinkingAndGrowing">
+  OKToDisplayNumbersShrinkingAndGrowing</a></font></big><font face="Comic Sans MS"> 
+switch.) Here is the 37th
+<a href="http://mathworld.wolfram.com/MersennePrime.html">Mersenne prime</a> 
+which has 909,526 digits: </font><font color="#FF0000" face="Comic Sans MS"><b>
+<font color="#FF0000" size="4"><a href="../math_mersenne.dmo">
+<font color="#FF0000">SHOW ME (this will pause for a few seconds while 
+computing)</font></a></font></b></font></p>
+
+<p align="center"><img border="0" src="../mersenne37.gif" width="376" height="249"></p>
+
+<p><strong><font face="Comic Sans MS">Exact rational numbers.</font></strong></p>
+
+<p><font face="Comic Sans MS">In the older version division always returned the quotient
+and threw away the remainder (though using % you can get the remainder). So dropping
+&quot;/3&quot; on &quot;4&quot; used to result in &quot;1&quot; while now it results in
+&quot;4/3&quot;. This is not approximated internally but is stored exactly with a
+numerator and denominator that can be as long as needed. For example, dropping
+&quot;*6&quot; on to &quot;4/3&quot; will result in exactly &quot;8&quot;.</font></p>
+
+<p><font face="Comic Sans MS">Beginning with Beta 39 (or version 2.99g) there is 
+a <a name="ShrinkingDigits">new way of displaying numbers</a> that are fractions that cannot be shown as exact 
+decimals. The idea is to have the digits shrink as they approach the right side 
+of the number pad. Here is 1/7:
+<img border="0" src="../shrinknum.jpg" width="868" height="72"></font><font color="#FF0000" face="Comic Sans MS"><b><font size="4"> </font>
+<a href="../shrinking_digits.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font face="Comic Sans MS">A number like &quot;3/2&quot; can be displayed as either </font><img src="../throtwo.jpg" alt="throtwo.jpg (2127 bytes)" WIDTH="75" HEIGHT="35"><font face="Comic Sans MS"> or <img src="../oneoneo2.jpg" alt="oneoneo2.jpg (2481 bytes)" WIDTH="125" HEIGHT="35"> or </font><img src="../onept5.jpg" alt="onept5.jpg (1849 bytes)" WIDTH="74" HEIGHT="35"><font face="Comic Sans MS">. At the beginning of the notebook on
+page 12 of your main notebook you'll find four styles of displaying rational numbers. They
+are</font> 
+
+<ol>
+  <li><p><font face="Comic Sans MS"><strong>Fraction.</strong> A numerator over a denominator
+    where they have no common divisors and hence are as small as possible.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Integer followed by a proper fraction. </strong>The
+    closest integer to the number (from zero) followed by a proper fraction. The sum of the
+    integer and fraction is exactly the number.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Exact decimal or fraction if no exact decimal exists.</strong>
+    Same as number 1 except it will display as a decimal number if it can do so exactly.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Exact decimal or an integer followed by a proper
+    fraction if no exact decimal exists.</strong> Same as number 2 except it will display as a
+    decimal number if it can do so exactly.</font></p></li>
+</ol>
+
+<p><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../fraction_formats.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><font face="Comic Sans MS">You can use choose among the four sample numbers in the
+notebook on page 12 to control which format is used. Also if you erase one of these
+numbers and drop a number with a different format on top, it'll be converted to the format
+of the erased number.</font></p>
+
+<p><font face="Comic Sans MS">Fractions are displayed as follows (unless this 
+feature is turned off by setting </font><big><font face="Comic Sans MS" size="3">
+  <a href="ttini.htm#OKToDisplayNumbersShrinkingAndGrowing">
+  OKToDisplayNumbersShrinkingAndGrowing</a> to 0 or the internal version number 
+is less than</font></big><font face="Comic Sans MS">3.125</font><big><font face="Comic Sans MS" size="3">): </font>
+  </big>
+
+</p>
+
+<p><big><font face="Comic Sans MS" size="3">
+<img border="0" src="../three_halves.gif" width="48" height="69"> and
+<img border="0" src="../one_and_one_halfy.gif" width="92" height="79">.</font></big></p>
+
+<p><strong><font face="Comic Sans MS">Sensors and rational numbers.</font></strong></p>
+
+<p><font face="Comic Sans MS">Most numeric sensors truncate whatever value they are given
+to an integer. The only exceptions are a picture's sensors for its <a href="remote.htm#XSensor">x and y position</a>,
+<a href="remote.htm#Width">width and height</a>, and <a href="remote.htm#XSpeed">x and y
+speed</a>. These can now have fractional values. By default only the speed sensors display
+the exact value - the other sensors display their integer value. You can override this by
+adding &quot;<a href="command.htm#IntegerPositions">-integer_positions 0</a>&quot; to the
+command line.</font></p>
+
+<p><b><font face="Comic Sans MS">Editing and typing numbers.</font></b></p>
+
+<p><font face="Comic Sans MS">Beginning with version 3.78 or beta 43 y</font><big><font face="Comic Sans MS" size="3">ou 
+can now type numbers even if the intermediate states are syntactically 
+incorrect. It is only when dropped or when deselected does the newly typed 
+number gets updated. If the result is syntactically incorrect the number reverts 
+to its previous value. You can also use arrow keys to edit numbers (except the 
+shrinking digits since they are infinitely long).</font></big></p>
+
+<p><font face="Comic Sans MS" size="2"><a name="BlankText"><b><i>ADVANCED USERS ONLY:</i></b></a>
+</font></p>
+
+<p><strong><font face="Comic Sans MS">Changes to operations.</font></strong></p>
+
+<p><font face="Comic Sans MS">It has always worked in ToonTalk to pick up a number, say 5,
+and type '\' and it becomes '\5' which is the operation of dividing by 5. You can drop it
+any number and it'll divide that number by 5. But &quot;\5&quot; isn't really a number, it
+is an operation on numbers. To help make this distinction clear the color of operations is
+somewhat different from numbers. So &quot;\5&quot; looks like <img src="../divide5.jpg" alt="divide5.jpg (1347 bytes)" WIDTH="49" HEIGHT="35">.</font></p>
+
+<p><font face="Comic Sans MS"><a name="CompositeOperations."><strong>Composite operations.</strong></a>
+</font></p>
+
+<p><font face="Comic Sans MS">What should happen if &quot;2&quot; is dropped on
+&quot;\5&quot;? The result in the old ToonTalk was &quot;\7&quot; as if you operating on
+the number part of the operation. Now the operations are concatenated so the result is <img src="../div5add2.jpg" alt="div5add2.jpg (2786 bytes)" WIDTH="152" HEIGHT="35">. This is an
+operation that will divide by 5 and then add 2 to the result.</font><font color="#FF0000" face="Comic Sans MS"><b><font size="4"> </font>
+<a href="../operation_sequences.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><strong><font face="Comic Sans MS">New Operations.</font></strong></p>
+
+<p><font face="Comic Sans MS"><strong>Exponentiation</strong>. There is one new operation
+that you can type. It raises a number to a power. You can type &quot;^&quot; to any number
+to turn it into the power operation. For example dropping &quot;^3&quot; on to
+&quot;5&quot; will result in &quot;5x5x5&quot; or &quot;125&quot;. If the number is
+negative then the reciprocal of the result results. &quot;^-3&quot; on 5 results in
+&quot;1/125&quot; or &quot;.008&quot;. The exponent can be fractional as well to compute
+roots like square root. Dropping &quot;^1/2&quot; on 9 results in &quot;3&quot;. Dropping
+&quot;^3/2&quot; on &quot;9/4&quot; results in &quot;27/8&quot; since the square root is
+3/2 and cubing that is 27/8.</font></p>
+
+<p><font face="Comic Sans MS">Whenever ever possible ToonTalk will try to compute an exact
+result when taking a root of a number. When there is no rational root then an
+approximation is used. It is displayed in gray to indicate that it is an inexact number.
+(See below for more about inexact numbers.) For example, dropping &quot;^1/2&quot; on
+&quot;2&quot; will result in an inexact approximation of the square root of 2.</font></p>
+
+<p><font face="Comic Sans MS">Calculating an even root of a negative number should result
+in an imaginary number. It currently fails and Marty explains that some arithmetic
+couldn't be done.</font></p>
+
+<p><font face="Comic Sans MS">In the notebook on page 12 you'll find the following new
+operations:</font> 
+
+<ol>
+  <li><p><font face="Comic Sans MS"><strong>Integer Part.</strong> Throws away the fractional
+    part. Does nothing if the number is already an integer.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Fraction Part.</strong> Throws away the integer part.
+    Becomes zero if the number is an integer and therefore has no fractional part.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Numerator.</strong> Becomes the numerator. Does
+    nothing if the number is already an integer.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Denominator.</strong> Becomes the denominator.
+    Becomes one if the number is an integer.</font></p></li>
+</ol>
+
+<p><font face="Comic Sans MS">And the following operations return 
+inexact values even when there is a correct exact rational value (e.g. Log 10 of 
+10 is 1.000000 rather than exactly 1):</font></p>
+
+<ol>
+  <li><p><font face="Comic Sans MS"><strong>Sine.</strong> Becomes the sine of the 
+  number it is dropped on. It treats the number as an angle in degrees.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Cosine.</strong> Becomes the cosine of 
+  the number it is dropped on. It treats the number as an angle in degrees.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Tangent.</strong> Becomes the tangent 
+  of the number it is dropped on. It treats the number as an angle in degrees.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Arc Sine.</strong> Becomes the inverse 
+  sine in degrees of the number it is dropped on.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Arc Cosine.</strong> Becomes the 
+  inverse cosine in degrees of the number it is dropped on.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Arc Tangent.</strong> Becomes the 
+  inverse tangent in degrees of the number it is dropped on.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Natural Log.</strong> Becomes the 
+  natural log of the number it is dropped on.</font></p></li>
+  <li><p><font face="Comic Sans MS"><strong>Log Base 10.</strong> Becomes the log 
+  base 10 of the number it is dropped on.</font></p></li>
+</ol>
+
+<p><font face="Comic Sans MS"><strong><a name="OperatorsWithoutValues">Operators without
+values</a>.</strong> </font></p>
+
+<p><font face="Comic Sans MS">All of the binary operations (+, -, *, /, %, ^,&nbsp; 
+|, and &amp;)
+can be rubbed out (using the 'Backspace' key) so that the operation remains without any
+numbers. This can be given its first number value by dropping it on a number or by
+dropping a number on it. It then becomes an ordinary operation that can be dropped on
+another number.</font></p>
+
+<p><strong><font face="Comic Sans MS">Inexact numbers.</font></strong></p>
+
+<p><font face="Comic Sans MS">The trigonometric operations above and the log operations
+produce inexact results. Sometimes the exponential operation also produce inexact results
+but only if the result is irrational. All other operations produce exact results if given
+exact inputs. ToonTalk represents these inexact results (when they are between 
+10<sup>308</sup> and -10<sup>328) </sup>internally as 64-bit IEEE floating
+point numbers. Any operation where at least one of the numbers involved is inexact has an
+inexact result. The only exception is the &quot;=&quot; operation that makes the number
+underneath equal to the one being dropped. In this case the exactness depends only upon
+the number with the &quot;=&quot; operation.</font></p>
+
+<p><font face="Comic Sans MS">Tiny round-off errors are common and may accumulate. Inexact
+numbers work like ordinary numbers but are displayed in gray to remind you that they are
+inexact.</font></p>
+
+<p><font face="Comic Sans MS">If you drop an inexact number on an erased exact number
+it'll be converted to the closest equivalent exact rational number.</font></p>
+
+<p><strong><font face="Comic Sans MS">Bases.</font></strong></p>
+
+<p><font face="Comic Sans MS">You can view or type numbers in any <a href="numbbase.htm">base
+between 2 and 36</a>. </font><font color="#FF0000" face="Comic Sans MS"><b>
+<a href="../number_bases.dmo"><font color="#FF0000" size="4">SHOW ME</font></a></b></font></p>
+
+<p><strong><font face="Comic Sans MS">Speed and memory issues.</font></strong></p>
+
+<p><font face="Comic Sans MS">Very large integers and exact fractions can on occasion take
+a <a href="slownumb.htm">very long time</a> to compute, display, save, or load.</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

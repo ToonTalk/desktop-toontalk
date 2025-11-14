@@ -1,0 +1,99 @@
+
+body, td {
+	background: #FFFFFF;
+	font-family: arial, helvetica, sans-serif;
+}
+
+h1	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 20pt;
+	text-align: center;
+	color: #993300;
+}
+
+h2	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 16pt;
+	color: #3333cc;
+}
+
+h3	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 14pt;
+	color: #663333;
+}
+
+dl	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10pt;
+}
+
+ul	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10pt;
+}
+
+ol	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10pt;
+}
+
+p	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10pt;
+	text-align: justify;
+}
+
+p.center {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10pt;
+	text-align: center;
+}
+
+
+p.olho	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 12pt;
+	text-align: justify;
+}
+
+p.autor	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+}
+
+p.reply	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 10pt;
+	margin-left: 50px;
+	text-align: justify;
+	color: #666666;
+}
+
+th	{
+	font-family: arial, helvetica, sans-serif;
+	font-size: 8pt;
+}
+
+a	{
+	text-decoration: none;
+}	
+
+a.menu	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 8pt;
+	text-decoration: none;
+	font-weight: regular;
+	color: #660000;
+}	
+
+.bola	{
+	font-family: arial,helvetica,sans-serif;
+	font-size: 7pt;
+	text-decoration: none;
+	font-weight: bold;
+	color: #cccccc;
+	
+}

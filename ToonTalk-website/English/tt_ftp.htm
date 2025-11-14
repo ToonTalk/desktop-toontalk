@@ -1,0 +1,88 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>The ToonTalk Publishing Tool</title>
+</head>
+
+<body>
+
+<p align="center"><b><strong>
+<font face="Comic Sans MS" style="font-size: larger">The ToonTalk Publishing 
+Tool</font></strong><font size="5" face="Comic Sans MS"> </font>
+</b>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p id="DontRead" align="left"><i><font face="Comic Sans MS">Advanced Users:</font></i></p>
+
+<p id="DontRead" align="left"><font face="Comic Sans MS">ToonTalk 3 includes a 
+publishing tool called TT_FTP.EXE. It can be enabled by setting
+<a href="ttini.htm#RunAfterSaving">RunAfterSaving</a> to TT_FTP.EXE. It can be 
+customized by editing tt_ftp.ini found in the ToonTalk folder under My 
+Documents. Here is a sample version:</font></p>
+
+<p>[HTML] </p>
+<p>Start=English\Publish.htm </p>
+<p>Finished=English\Finished.htm </p>
+<p>WebSite=http://www.weblabs.org.uk/wlplone </p>
+<p>MessageBox=English\messbox.htm </p>
+<p>[FTP] </p>
+<p>Directory=/wlplone/Members/*/.clipboard/</p>
+<p>Server=weblabs.dsv.su.se</p>
+<p>[Messages] </p>
+<p>PleaseWait=Click OK to continue. There may be a pause while your file is 
+copied to the website. </p>
+<p>ExpertFTPError=An error occurred while attempting to upload the file using 
+FTP. The error is </p>
+<p>NonExpertFTPError=Something went wrong trying to copy your file to the web 
+site. Sorry. Try again later. </p>
+<p>ZipError=An error occurred while creating a zip file to upload the Java 
+applet to the web site. Sorry.</p>
+
+<p id="DontRead" align="left"><font face="Comic Sans MS">The HTML section names 
+dialog files for when the tool starts and finishes. The FTP section lists the 
+directory and server. Messages can be edited (e.g. for a different language).</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS">
+<a href="toontalk.htm" style="color: blue; text-decoration: underline; text-underline: single">home</a> | 
+<a href="search.htm" style="color: blue; text-decoration: underline; text-underline: single">search</a> | 
+<a href="buy.htm" style="color: blue; text-decoration: underline; text-underline: single">purchase</a> | 
+<a href="doc.htm" style="color: blue; text-decoration: underline; text-underline: single">manual</a>
+| 
+<a href="whatsnew.htm" style="color: blue; text-decoration: underline; text-underline: single">news</a> | 
+<a href="infodesk.htm" style="color: blue; text-decoration: underline; text-underline: single">info</a> | 
+<a href="games.htm" style="color: blue; text-decoration: underline; text-underline: single">games</a>
+| 
+<a href="faq.htm" style="color: blue; text-decoration: underline; text-underline: single">faq</a> | 
+<a href="support.htm" style="color: blue; text-decoration: underline; text-underline: single">support</a> | 
+<a href="free.htm" style="color: blue; text-decoration: underline; text-underline: single">downloads</a>
+| 
+<a href="endorse.htm" style="color: blue; text-decoration: underline; text-underline: single">endorsements</a> | 
+<a href="press.htm" style="color: blue; text-decoration: underline; text-underline: single">press</a> | 
+<a href="address.htm" style="color: blue; text-decoration: underline; text-underline: single">contact us</a></font></small></p>
+
+</body>
+
+</html>

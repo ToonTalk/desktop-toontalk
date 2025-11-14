@@ -1,0 +1,20 @@
+   This is the result of "pasting" a ToonTalk object.  You can include
+this in files, email, or whatever.  To decode it just use any program
+that can copy this to Window's clipboard.  For example, you can use
+Window's notepad or write program.  Just be sure your selection includes
+the code below and then select the Copy command in the Edit menu.
+Then it will appear in the ToonTalk remote control for the clipboard.
+Just use Dusty to vacuum it off the clipboard.
+The following is a movie of a person walking which is partly visible. 
+The first thing on the back is a box with one hole whose hole labeled
+with "Picture #" contains a remote control for the picture selector. 
+The second thing on the back is a robot who wants a box with one hole
+whose hole contains any number.  If given a box like that he will move
+to the stack of numbers.  And pick up a number.  And drop it on the
+first hole of the box he's working on.  
+   What follows is in a special code and was produced by ToonTalk(TM) 
+Beta Version 4A.
+4!@%!(%@-C%C!C#C#C]B!C%C#C!C!C#C!CAC!C"C!C+CPAiAcAtAuArAeAAC#A!C$A%C!C!C
+!C+A!C'CDA7C@A'C4B5C,B.C&C+C!C"C!C!C"C!C!C!C+A"C!C"C D!C"C%C D!C#C!C!C D
+!C(C5C D!C*C!C!C D!C8C DDA7C@A'CXB/CAD0C..
+This is the end of the code for the ToonTalk object.

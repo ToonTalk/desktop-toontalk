@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>WebLabs - Modeling Randomness &amp; Ecologies</title>
+<!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="94%" height="55"><span class="title">Modelling Randomness &amp; Ecologies</span></td>
+    <td width="6%"><span class="menu"><a href="/index.html"><img src="../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="../Sequences/doc/index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="../Collisions/doc/index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="../Eco/doc/index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="../RCX/doc/index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="../General/doc/index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td width="14%" height="47"><div align="center"><a href="../Eco/doc/moving_randomly_using_the_sweeper.htm" class="menuWhite">TT Sweeper Bot</a></div></td>
+          <td width="14%"><div align="center"><a href="../Eco/doc/toontalk_sweeper_bot.htm" class="menuWhite">More TT <br>
+          Sweeper Bot</a><a href="/Eco/doc/toontalk_sweeper_bot.htm"></a></div></td>
+          <td width="14%"><div align="center"><a href="../Eco/doc/interactions_notebook.htm" class="menuWhite">Interactions<br>
+          notebook </a></div></td>
+          <td width="14%">            <div align="center"><a href="../Eco/doc/animate.htm" class="menuWhite">Animate </a></div></td>
+          <td width="14%"><div align="center"><a href="../Eco/doc/move_and_animate_notebook.htm" class="menuWhite">Move &amp; animate <br>
+          notebook </a></div></td>
+          <td width="14%"><div align="center"><a href="../Eco/doc/move_and_turn.htm" class="menuWhite">Move &amp; turn </a></div></td>
+          <td width="14%"><div align="center"><a href="../Eco/doc/reproduction_via_cloning.htm" class="menuWhite">Reproduction<br>
+          via cloning </a></div>            <div align="center"></div></td>
+        </tr>
+        <tr>
+          <td height="47"><div align="center"><a href="../Eco/doc/mendelian_genetics_simulation_to.htm" class="menuWhite">Mendelian genetics <br>
+          sim tool </a></div></td>
+          <td><div align="center"><a href="../Eco/doc/bounce_random_garden.htm" class="menuWhite">Bounce Random Garden </a></div></td>
+          <td><div align="center"><a href="../Eco/doc/destructive_random_garden.htm" class="menuWhite">Destructive random garden </a></div></td>
+          <td><div align="center"><a href="../Eco/doc/random_garden.htm" class="menuWhite">Random Garden </a></div></td>
+          <td><div align="center"><a href="../Eco/doc/stream_bar_graph.htm" class="menuWhite">Stream bar graph </a></div></td>
+          <td><div align="center"><a href="../Eco/doc/stream_counter.htm" class="menuWhite">Stream counter </a></div></td>
+          <td><div align="center"><a href="../Collisions/doc/guidance.htm" class="menuWhite">Teacher Guidance</a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- TemplateBeginEditable name="mainbody" -->
+      <p class="mainbody">Type text here....</p>
+      <p>&nbsp; </p>
+    <!-- TemplateEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+</html>

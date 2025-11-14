@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+   <head>
+      <title>Setting ToonTalk Language</title>
+      <meta content="Microsoft Visual Studio.NET 7.0" name="GENERATOR">
+      <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+      <LINK href="../dialog.css" type="text/css" rel="stylesheet">
+      <script language="javascript" src="../common.js"></script>
+      <script language="javascript" id="clientEventHandlersJS">
+var oneLanguageInstalledString = "That is the only language that has been installed."; // needs translation
+var languageWantedString = "I want ToonTalk to use ";
+var noLanguagesInstalledString = "Can't find any languages. Maybe you need to re-install or contact support@toontalk.com";
+//var nextDialog = "spoklang.htm";
+var category = "Language";
+      </script>
+   </head>
+   <body>
+      <P>Time to customize your WebLabs ToonTalk installation.</P>
+      <P>Do you want to change which language ToonTalk displays?</P>
+      <form id="Form1" name="Buttons">
+         <script>
+            var availableLanguagesString = currentParameter("Languages"); // should be Languages
+            if (availableLanguagesString == "" || availableLanguagesString == null) {
+               document.writeln("<p>" + noLanguagesInstalledString + "</p>");
+            } else { 
+               var availableLanguages = availableLanguagesString.split('{');
+               for (var i = 0; i < availableLanguages.length; i++) {
+                  document.writeln('<P><INPUT id="Radio1" type="radio" name="RadioGroup" value="' + (i+1) + '"');
+                  if (i == 0 && availableLanguages.length == 1) { // first one check if only one
+                     document.writeln(" CHECKED");
+                  }; 
+                  document.writeln('>&nbsp;' + languageWantedString + availableLanguages[i] + '.</P>');
+               };
+               if (availableLanguages.length == 1) {
+                  document.writeln(oneLanguageInstalledString);
+               }
+            }
+         </script>
+         <P></P>
+      </form>
+      <P>ToonTalk has been translated to other languages. This changes what language 
+         that Marty displays and is on text pads and dialogs.</P>
+      <P align="center">
+         <INPUT onclick="sendBack('-next_dialog spoklang.htm')" type="button" value=">>NEXT>>" name="Next" ID="Button1">
+         <SCRIPT language="javascript">checkDefaultButton();</SCRIPT>
+      </P>
+   </body>
+</html>

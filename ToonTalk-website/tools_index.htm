@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>WebReports - Tools</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+		<!-- Basic crude style for Netscape4.x - This can be removed
+         if you don't want the special NS4 look - it will still work,
+	 just be plain text instead.  -->
+		<link rel="Stylesheet" type="text/css" href="http://www.weblabs.org.uk/wlplone/ploneNS4.css">
+			<!-- Main style sheets for CSS2 capable browsers -->
+			<style type="text/css" media="screen"> @import url(http://www.weblabs.org.uk/wlplone/plone.css?skin=);
+	</style>
+			<!-- Custom style sheet if available -->
+			<style type="text/css" media="all">@import url(http://www.weblabs.org.uk/wlplone/ploneCustom.css);
+	</style>
+			<!-- Style sheet used for printing -->
+			<link rel="stylesheet" type="text/css" media="print" href="http://www.weblabs.org.uk/wlplone/plonePrint.css">
+				<!-- Style sheet used for presentations (Opera is the only browser supporting this at the moment) -->
+				<link rel="stylesheet" type="text/css" media="projection" href="http://www.weblabs.org.uk/wlplone/plonePresentation.css">
+					<link rel="shortcut icon" href="http://www.weblabs.org.uk/wlplone/favicon.ico" type="image/x-icon">
+						<link rel="home" href="http://www.weblabs.org.uk/wlplone" title="Front Page">
+							<link rel="search" href="http://www.weblabs.org.uk/wlplone/search_form" title="Search this site">
+								<!-- Disable IE6 image toolbar -->
+								<meta http-equiv="imagetoolbar" content="no">
+								<!-- Common Plone ECMAScripts -->
+								<script type="text/javascript" src="http://www.weblabs.org.uk/wlplone/plone_javascripts.js"></script>
+								<script type="text/javascript" src="http://www.weblabs.org.uk/wlplone/plone_formtooltip.js"></script>
+	</head>
+	<body>
+		<a class="skipnav" href="#documentContent">Skip to content</a>
+		<div>
+			<div class="top">
+				<a href="http://www.weblabs.org.uk/wlplone"><img src="http://www.weblabs.org.uk/wlplone/logo.jpg?skin=" class="logo" border="0" alt=""
+						width="187" height="53"> </a>
+			</div>
+			<hr class="netscape4">
+			<!-- div class="pathBar"
+             metal:define-macro="pathBar"
+             tal:define="breadcrumbs python:here.breadcrumbs(here);
+                         portal_url portal_url|here/portal_url;">
+            <a href="#"
+               tal:condition="here/portal_membership/getHomeFolder"
+               tal:attributes="href string:${here/absolute_url}/addtoFavorites"
+               tal:define="addFavorite here/addFavorite.gif">
+                <img tal:replace="structure python:addFavorite.tag(css_class='addFavorite', title='Add this location to My Favorites')" />
+            </a>
+	    <span tal:omit-tag="" i18n:translate="you_are_here">You are here:</span>
+	        <span tal:condition="breadcrumbs" tal:omit-tag="">
+                <a i18n:translate="tabs_home" tal:attributes="href portal_url">Home</a>
+                <strong>&raquo;</strong>
+            </span>
+            <span tal:condition="not: breadcrumbs" i18n:translate="tabs_home" tal:omit-tag="">
+                Home
+            </span>
+            <span tal:repeat="crumb breadcrumbs">
+                <metal:block tal:define="global is_last repeat/crumb/end" />
+                <a href="#"
+                   tal:condition="python:not is_last"
+                   tal:attributes="href python:crumb[1]"
+                   tal:content="structure python:crumb[0]"
+                   i18n:translate="">crumb</a>
+                <strong tal:condition="python:not is_last"> &raquo; </strong>
+                <span tal:condition="python: is_last"
+                      tal:content="structure python:crumb[0]"
+                      i18n:translate="">crumb</span>
+            </span>
+        </div -->
+			<hr class="netscape4">
+		</div>
+		<table class="columns">
+			<tbody>
+				<tr>
+					<td class="left">
+						<div class="box">&nbsp;
+						</div>
+					</td>
+					<td class="main">
+						<div class="document">
+							<div id="content">
+								<!-- metal:block metal:use-macro="here/header/macros/portal_message">
+                     Message box
+                     </metal:block -->
+								<div class="documentActions">
+									<a name="documentContent"><a href="http://www.weblabs.org.uk/wlplone/Tools/portal_form/sendto_form">
+											&nbsp; </a>
+										<!-- Jesper -->
+										<a href="javascript:this.print();">&nbsp; </a>
+										<span class="advbox">
+											<span>
+												<a href="folder_contents"></a>
+											</span>
+										</span>
+										<a></a>
+								</div>
+								<div>
+									<h1>Tools</h1>
+									<br>
+									<table border="0" width="100%">
+										<tbody>
+											<tr>
+												<td>
+													<a href="infinity/tool_index_html">
+														<span>Infinity</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="sequences/tool_index_html">
+														<span>Sequences</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="randomness/tool_index_html">
+														<span>Randomness</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="fibonacci/tool_index_html">
+														<span>Fibonacci</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="primes/tool_index_html">
+														<span>Primes and Factors</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="collisions/tool_index_html">
+														<span>Collisions</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="ecoliteracy/tool_index_html">
+														<span>Ecoliteracy</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="force/tool_index_html">
+														<span>Force and Acceleration</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="general/tool_index_html">
+														<span>General</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>
+													<a href="all/tool_index_html">
+														<span>All</span>
+													</a>
+												</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+									<br>
+									<br>
+									<br>
+								</div>
+								<div>
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr class="netscape4">
+	</body>
+</html>

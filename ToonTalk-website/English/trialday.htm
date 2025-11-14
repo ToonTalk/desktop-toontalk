@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<LINK rel="stylesheet" type="text/css" href="../dialog.css">
+<script language="javascript" id="clientEventHandlersJS">
+<!--
+function sendBack(which_button) {
+    window.returnValue = which_button; 
+    window.close();
+}
+var parameters = null;
+function currentParameter(name) {
+   if (parameters == null) { // new on 011002
+      if (typeof window.dialogArguments == "undefined") {
+         return("***DEFINED ONLY WHEN RUN FROM TOONTALK***")
+      };
+      parameters = window.dialogArguments.split(";")
+   };
+   for (var i = 0; i < parameters.length; i = i+2) {
+      if (parameters[i] == name) {
+         return(parameters[i+1]) // like an alist
+      }    
+   };
+   return(0) // just in case
+}
+
+
+//-->
+			</script>
+
+<title>Trial days remaining warning</title>
+</head>
+
+<body>
+<strong><big>
+<p><font size="5">Your trial version of ToonTalk has <script language="javascript" id="clientEventHandlersJS">
+<!--
+document.writeln(currentParameter("daysLeft"));
+//-->
+			</script>
+days left.</font></p>
+<p align="center">
+<INPUT onclick="sendBack('1')" type="button" value="I want to buy ToonTalk now" name="Button1"
+				ID="Button1"> </p>
+<p align="center">
+<INPUT onclick="sendBack('2')" type="button" value="I want to run ToonTalk now (and maybe I'll buy it later)" name="Button2"
+				ID="Button2"> </p>
+</p>
+<p>&nbsp;</p>
+<p><font size="5">If you have an activation code please enter it:
+<input id="UserName" type="text" class="text" size="20" name="Code"> <input onclick="sendBack(Code.value)" type="button" value="Submit" name="B1"></form></font></p>
+</body>
+
+</html>

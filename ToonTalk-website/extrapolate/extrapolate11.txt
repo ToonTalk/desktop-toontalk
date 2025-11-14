@@ -1,0 +1,282 @@
+According to http://groups.yahoo.com/group/LogoForum/message/12312
+this code with small modifications will run in aUCBLogo-4.686. Probably true of many other LOGO dialects.
+
+
+make "x 5.10531
+make "y 5.10531
+make "new_line "||
+make "return "\¶
+make "commands [forward right repeat setPenColour setPen setXCor setYCor]
+make "pen_colour1 [[255 255 255]]
+make "pen_colour2 [[0 255 0]]
+make "pen_colour3 [[0 0 255]]
+
+to max :x :y
+ ifElse (:x > :y)
+   [output :x]
+   [output :y] 
+end
+
+to interpolate :x :a :b
+ output :a + :x * (:b - :a)
+end
+
+to expand :code :factor :pen_colour_name
+ if (:code = []) [output []]
+ let "command first :code
+ make "code butFirst :code
+ let "arg (list first :code)
+ make "code butFirst :code
+ while [(and [:code <> []] [not command? first :code])]
+    [make "arg lput first :code :arg
+     make "code butFirst :code]
+ let "expansion []
+ if (:command = "setPenColour)
+    [make :pen_colour_name :arg
+     output expand :code :factor :pen_colour_name]
+ ifElse (:command = "forward)
+    [local "arg_expression
+     ifElse (and [butFirst :arg = []] [number? first :arg])
+       [make "arg_expression quotient first :arg :factor]
+       [make "arg_expression (sentence "quotient :arg :factor)]
+     make "expansion (sentence :expansion                                             
+                               "setPenColour thing :pen_colour_name
+                               "forward :arg_expression)
+     repeat :factor - 1 [make "expansion (sentence :expansion                                             
+                                                   "right 0 
+                                                   "setPenColour thing :pen_colour_name
+                                                   "forward :arg_expression)]]
+    [if (:command = "right)
+        [make "expansion (sentence "right :arg)]]
+ output (sentence :expansion expand :code :factor :pen_colour_name) 
+end
+
+to least_common_multiple :n :m
+ output (:n * :m) / greatest_common_divisor :n :m
+end
+
+to greatest_common_divisor :a :b
+ while [:a <> :b]
+       [ifElse :a > :b
+          [make "a :a - :b]
+          [make "b :b - :a]]
+ output :a
+end
+
+to canonicalize :x
+ ; for now
+ output :x 
+end
+
+to repeat_code :count :code
+ if (:count = 0) [output []]
+ output (sentence :code repeat_code :count - 1 :code) 
+end
+
+to command? :x
+ output member? :x :commands
+end
+
+to set_pen_colour :colour
+ let "red abs first :colour
+ let "green abs first butFirst :colour
+ let "blue abs first butFirst butFirst :colour
+ if :red > 255
+    [make "red 255 - mod :red 256]
+ if :green > 255
+    [make "green 255 - mod :green 256]
+ if :blue > 255
+    [make "blue 255 - mod :blue 256]
+ setPenColour (list :red :green :blue)
+end
+
+to square_to_triangle
+test [setPenColour [0 0 255] setPen "pu right 270 forward 30 setPen "pd repeat 4 [right 90 forward 20]] 
+     [setPenColour [255 0 0] setPen "pu right 90 forward 40 setPen "pd repeat 3 [right 120 forward 40]] 
+     0 20 .01 100
+     
+end
+
+to circle_to_triangle
+test [setPenColour [0 180 0] setPen "pu forward -300 right 270 forward 200 setPen "pd repeat 360 [right 1 forward .5]] 
+     [setPenColour [50 0 150] setPen "pu forward -300 right 90 forward 400 setPen "pd repeat 3 [right 120 forward 150]] 
+     -0.5 1.5 .02 0
+end
+
+to interpolate_programs :program1 :program2
+ make "pen_colour1 [[0 0 0]]
+ make "pen_colour2 [[0 0 0]]
+ let "p1 canonicalize :program1
+ let "p2 canonicalize :program2
+ let "expanded1 []
+ let "expanded2 []
+ while [and [:p1 <> []] [:p2 <> []]]
+   [if (first :p1 <> first :p2)
+       [(sh "programs "too "different)
+        stop]
+    let "command first :p1
+    make "p1 butFirst :p1
+    make "p2 butFirst :p2
+    ifElse (:command = "repeat)
+       [let "repeat1 first :p1
+        let "repeat2 first :p2
+        make "p1 butFirst :p1
+        make "p2 butFirst :p2
+        let "repeat_count least_common_multiple :repeat1 :repeat2
+        make "expanded1 (sentence :expanded1 
+                                  repeat_code :repeat1 expand first :p1 :repeat_count / :repeat1 "pen_colour1)
+        make "expanded2 (sentence :expanded2
+                                  repeat_code :repeat2 expand first :p2 :repeat_count / :repeat2 "pen_colour2)
+        make "p1 butFirst :p1
+        make "p2 butFirst :p2]
+      [let "arg1 (list first :p1)
+       make "p1 butFirst :p1
+       while [(and [:p1 <> []] [not command? first :p1])]
+         [make "arg1 lput first :p1 :arg1
+          make "p1 butFirst :p1]
+       let "arg2 (list first :p2)
+       make "p2 butFirst :p2
+       while [(and [:p2 <> []] [not command? first :p2])]
+         [make "arg2 lput first :p2 :arg2
+          make "p2 butFirst :p2]
+       if (:command = "setPenColour)
+          [make "pen_colour1 :arg1
+           make "pen_colour2 :arg2]
+       make "expanded1 (sentence :expanded1 :command :arg1)
+       make "expanded2 (sentence :expanded2 :command :arg2)]]
+  output interpolate_each_command :expanded1 :expanded2
+end
+
+to interpolate_each_command :program1 :program2
+ if (:program1 = []) [output []]
+ make "command first :program1
+ ; following version keeps the RGB values between 0 and 255
+ if (:command = "setPenColour) [make "command "set_pen_colour]
+ make "program1 butFirst :program1
+ make "program2 butFirst :program2
+ let "arg1 (list first :program1)
+ make "program1 butFirst :program1
+ while [(and [:program1 <> []] [not command? first :program1])]
+    [make "arg1 lput first :program1 :arg1
+     make "program1 butFirst :program1]
+ let "arg2 (list first :program2)
+ make "program2 butFirst :program2
+ while [(and [:program2 <> []] [not command? first :program2])]
+    [make "arg2 lput first :program2 :arg2
+     make "program2 butFirst :program2]
+ if (:arg1 = :arg2)
+    [output (sentence :command :arg1 :new_line interpolate_each_command :program1 :program2)]
+ output (sentence :command "interpolate "|:x| :arg1 :arg2 :new_line
+                  interpolate_each_command :program1 :program2)
+end
+
+to define_interpolated_program :name :p1 :p2
+ define :name (list [x] interpolate_programs :p1 :p2)
+end
+
+to circle_to_star
+test [setPenColour [0 80 250] setPen "pu forward -100 right 270 forward 300 setPen "pd repeat 360 [right 1 forward .5]] 
+     [setPenColour [230 2 120] setPen "pu forward -100 right 90 forward 500 setPen "pd repeat 5 [right 144 forward 150]] 
+     -2 1 .02 0
+end
+
+to define_circle_to_9star
+define_interpolated_program "circle_to_9star 
+     [repeat 360 [right 1 setPenColour [0 180 100] forward 4 right 1 setPenColour [255 175 105] forward 4]] 
+     [repeat 9 [right 80 setPenColour [100 64 64] forward 200 right 0 setPenColour [128 200 128] forward 200]] 
+end
+
+to interpolate3 :x :y :a :b :c
+ output :a + :x * (:b - :a) + :y * (:c - :a)
+end
+
+to interpolate_each_command3 :program1 :program2 :program3
+ if (:program1 = []) [output []]
+ make "command first :program1
+ ; following version keeps the RGB values between 0 and 255
+ if (:command = "setPenColour) [make "command "set_pen_colour]
+ make "program1 butFirst :program1
+ make "program2 butFirst :program2
+ make "program3 butFirst :program3
+ let "arg1 (list first :program1)
+ make "program1 butFirst :program1
+ while [(and [:program1 <> []] [not command? first :program1])]
+    [make "arg1 lput first :program1 :arg1
+     make "program1 butFirst :program1]
+ let "arg2 (list first :program2)
+ make "program2 butFirst :program2
+ while [(and [:program2 <> []] [not command? first :program2])]
+    [make "arg2 lput first :program2 :arg2
+     make "program2 butFirst :program2]
+ let "arg3 (list first :program3)
+ make "program3 butFirst :program3
+ while [(and [:program3 <> []] [not command? first :program3])]
+    [make "arg3 lput first :program3 :arg3
+     make "program3 butFirst :program3]
+ if (and [:arg1 = :arg2] [:arg2 = :arg3])
+    [output (sentence :command :arg1 :new_line interpolate_each_command3 :program1 :program2 :program3)]
+ output (sentence :command "interpolate3 "|:x| "|:y| :arg1 :arg2 :arg3 :new_line
+                  interpolate_each_command3 :program1 :program2 :program3 )
+end
+
+to interpolate_programs3 :program1 :program2 :programs3
+ make "pen_colour1 [[0 0 0]]
+ make "pen_colour2 [[0 0 0]]
+ make "pen_colour3 [[0 0 0]]
+ let "p1 canonicalize :program1
+ let "p2 canonicalize :program2
+ let "p3 canonicalize :program3
+ let "expanded1 []
+ let "expanded2 []
+ let "expanded3 []
+ while [(and [:p1 <> []] [:p2 <> []] [:p3 <> []])]
+   [if (or [first :p1 <> first :p2] [first :p1 <> first :p3])
+       [(sh "programs "too "different)
+        stop]
+    let "command first :p1
+    make "p1 butFirst :p1
+    make "p2 butFirst :p2
+    make "p3 butFirst :p3
+    ifElse (:command = "repeat)
+       [let "repeat1 first :p1
+        let "repeat2 first :p2
+        let "repeat3 first :p3
+        make "p1 butFirst :p1
+        make "p2 butFirst :p2
+        make "p3 butFirst :p3
+        let "repeat_count least_common_multiple least_common_multiple :repeat1 :repeat2 :repeat3
+        make "expanded1 (sentence :expanded1 
+                                  repeat_code :repeat1 expand first :p1 :repeat_count / :repeat1 "pen_colour1)
+        make "expanded2 (sentence :expanded2
+                                  repeat_code :repeat2 expand first :p2 :repeat_count / :repeat2 "pen_colour2)
+        make "expanded3 (sentence :expanded3
+                                  repeat_code :repeat3 expand first :p3 :repeat_count / :repeat3 "pen_colour3)
+        make "p1 butFirst :p1
+        make "p2 butFirst :p2
+        make "p3 butFirst :p3]
+      [let "arg1 (list first :p1)
+       make "p1 butFirst :p1
+       while [(and [:p1 <> []] [not command? first :p1])]
+         [make "arg1 lput first :p1 :arg1
+          make "p1 butFirst :p1]
+       let "arg2 (list first :p2)
+       make "p2 butFirst :p2
+       while [(and [:p2 <> []] [not command? first :p2])]
+         [make "arg2 lput first :p2 :arg2
+          make "p2 butFirst :p2]
+       let "arg3 (list first :p3)
+       make "p3 butFirst :p3
+       while [(and [:p3 <> []] [not command? first :p3])]
+         [make "arg3 lput first :p3 :arg3
+          make "p3 butFirst :p3]
+       if (:command = "setPenColour)
+          [make "pen_colour1 :arg1
+           make "pen_colour2 :arg2
+           make "pen_colour3 :arg3]
+       make "expanded1 (sentence :expanded1 :command :arg1)
+       make "expanded2 (sentence :expanded2 :command :arg2)
+       make "expanded3 (sentence :expanded3 :command :arg3)]]
+  output interpolate_each_command3 :expanded1 :expanded2 :expanded3
+end
+
+	

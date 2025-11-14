@@ -1,0 +1,66 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Installing ToonTalk on a Networked Server</title>
+</head>
+
+<body>
+
+<p align="center"><strong><font face="Comic Sans MS"><big><big>Installing ToonTalk on a
+Networked Server</big></big></font></strong><font size="5" face="Comic Sans MS"><b> </b></font>
+<OBJECT id=AgentControl codeBase=#VERSION=2,0,0,0 classid=clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F VIEWASTEXT></OBJECT>
+
+<SCRIPT language=javascript src="../agent.js"></SCRIPT>
+<SCRIPT language=javascript src="strings.js"></SCRIPT>
+<SCRIPT language=JavaScript event="Click(CharacterID, Button, Shift, X, Y)" for=AgentControl> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </SCRIPT><SCRIPT language=JavaScript event=IdleStart(CharacterID) for=AgentControl> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</SCRIPT>
+<INPUT onclick=agentStart() type=image alt="Peedy can read this page for you." src="../reading.gif" name=Image1 width="58" height="51"></p>
+
+<p><font face="Comic Sans MS">It is possible to install the ToonTalk files on a networked
+file server and then install it on each licensed client machine in a minimal manner taking
+up very little disk space.</font> 
+
+<ol>
+  <li><font face="Comic Sans MS">Copy the entire ToonTalk folder on the CD-ROM to the server on the directory of your
+    choice.</font></li>
+  <li><font face="Comic Sans MS">Edit the <a href="ttini.htm">toontallk.ini</a> 
+  file's Directory section to refer to the ToonTalk folder on the server. You'll 
+  find it in the ToonTalk folder under My Documents.</font></li>
+  <li><font face="Comic Sans MS">Copy the toontalk.ini file to each node (again 
+  the ToonTalk folder under My Documents).</font></li>
+</ol>
+
+<p><font face="Comic Sans MS">If you are installing to a version of Windows 
+prior to Windows XP then we advise that one installs on each node and then 
+removes the files placed in the ToonTalk folder.</font></p>
+
+<p><font face="Comic Sans MS">If your users use different computers then by setting the
+ToonTalk Users directory to a directory on the network server, ToonTalk will remember
+their state regardless of which computer they are using. To arrange this you'll have to
+edit the <a href="ttini.htm#UserFiles">UserFiles entry of toontalk.ini</a> file on the
+Windows directory of each local machine.  </font></p>
+
+<p><font face="Comic Sans MS">Please report any problems to <a href="mailto:support@toontalk.com">support@toontalk.com</a>.</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">
+home</a> | <a href="search.htm">search</a> | <a href="buy.htm">purchase</a> | <a href="doc.htm">
+manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a> | <a href="games.htm">
+games</a> | <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">
+downloads</a> | <a href="endorse.htm">endorsements</a> | <a href="press.htm">
+press</a> | <a href="address.htm">contact us</a></font></small></p>
+</body>
+</html>

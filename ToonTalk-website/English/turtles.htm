@@ -1,0 +1,135 @@
+<html>
+
+
+<!-- Mirrored from www.toontalk.com/English/turtles.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Jul 2015 22:22:03 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Where does turtle geometry fit into the picture?</title>
+</head>
+
+<body>
+
+<p align="center"><b><font face="Comic Sans MS" size="5">Where does turtle 
+geometry fit into the picture? </font></b></p>
+<p align="center"><b><font face="Comic Sans MS" size="5">An instance of the 
+choice between message passing and user interfaces?</font></b></p>
+<p><font face="Comic Sans MS">Despite my love of
+<a href="http://www.whoishostingthis.com/resources/logo/">turtle 
+geometry</a> and <a href="http://el.media.mit.edu/logo-foundation/what_is_logo/index.html">Logo</a>,
+I never added it to ToonTalk. Ten years ago I began to add it and 
+also began user testing. The idea was that there was a <a href="bird.htm">bird</a> 
+for each turtle. If you gave the bird a box containing the text pad &quot;FORWARD&quot; 
+and the number pad &quot;100&quot; then the bird would fly to the object and it would move 
+forward 100 units in the direction of its current heading. Non-programming 
+adults and a fourth-grade class seemed to really get the idea of ToonTalk 
+(despite its primitive state) but were unhappy with the message passing 
+interface. It was too indirect and clumsy.</font></p>
+<p><font face="Comic Sans MS">I redesigned ToonTalk to support
+<a href="remote.htm">remote controls</a> to support picture programming in a 
+more direct intuitive manner. For example, a sensor for the horizontal position 
+of a picture appears just as numbers do (except it has an animated marquee to 
+indicate its special status). One can manipulate this remote control as an 
+ordinary number and the associated picture's position changes accordingly. These 
+work in both directions so if the picture is moved the number is updated. This 
+scheme is similar to the property sheets used in a huge variety of software 
+where the properties show the current state of an object and can be edited to 
+change the object. In ToonTalk the equivalent of a property sheet is broken up 
+into small pieces corresponding to single properties. This provides a nice 
+&quot;declarative&quot; interface for objects. Children as young as six in the
+<a href="http://www.ioe.ac.uk/playground">Playground Project</a> made heavy use 
+of these ToonTalk remote controls. But these remote controls only support a 
+Cartesian geometry and don't support turtle geometry as well.</font></p>
+<p><font face="Comic Sans MS">So why not add <i>FORWARD</i> and <i>RIGHT</i> 
+sensors to ToonTalk? The equivalent of a <i>RIGHT</i> sensor would be 
+straightforward; just add a sensor for the heading of a picture. The equivalent 
+of &quot;RIGHT 90&quot; would be to drop a number pad with &quot;90&quot; on the heading sensor and 
+the current heading will be incremented by 90 degrees. But what sensor would 
+play the role of FORWARD? This stumped me for many years. The best idea I have 
+is to introduce a sensor for the picture's distance to where you want it to be 
+(in the direction of its current heading). So if you dropped 100 on such a 
+sensor the picture would move forward correctly. The really odd thing is that 
+this sensor would always display &quot;0&quot; since as soon as it is changed the picture 
+moves and it is where you instructed it to be. Maybe a better version would be a 
+sensor for the distance to its &quot;goal&quot;. If its speed is infinite then it will 
+also always display &quot;0&quot; but if it is given a finite speed it will glide towards 
+it goal and the value displayed will decrement at the speed until it reaches 
+zero. Some other design issues remain such as how to integrate the trails left 
+by turtles' pens. Are they new objects or are they alterations of the object 
+they are drawing onto?</font></p>
+<p><font face="Comic Sans MS">I now believe that rather than choosing between 
+message passing and user interfaces (property sheets/remote controls) that they 
+should exist at different levels. The primitive low-level way of manipulating 
+pictures is via message passing as I originally intended ten years ago. This 
+will probably be used only by more advanced users, particularly those enhancing 
+the system itself. The ideal system should provide primitive support so that 
+remote controls can be built within the language. They would behave much as they 
+currently do in ToonTalk but their implementation would be transparent. Ordinary 
+users could inspect, edit, and create new kinds. The challenge here isn't just 
+to implement sensors within the language but do so in a manner that non-experts 
+can understand.</font></p>
+
+<p><font face="Comic Sans MS">More generally I think a good way to proceed is to 
+open the development of new &quot;primitives&quot; to a wide community. The kernel of the 
+system can be small but include a way to &quot;plug in&quot; modules written in any nearly 
+programming language. This could be based upon an improved version of ToonTalk's
+<a href="extend.htm">foreign birds</a>. This provides a way to user birds to 
+interface any external code. The bird or message passing level of interface can 
+then be used to provide higher level functionality in need be.</font></p>
+
+<p><font face="Comic Sans MS">
+More recently I've revisited this issue in the context of <a href='https://github.com/ToonTalk/ToonTalk/wiki'>ToonTalk Reborn</a>.
+Building upon browser primitives a <a href='http://toontalk.github.io/ToonTalk/docs/manual/examples.html'>message passing turtle</a> can be defined.
+More work needs to be done to simplify its interface and add the ability to leave trails when the pen is down.
+</font></p>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS">
+<a href="toontalk.htm" style="color: blue; text-decoration: underline; text-underline: single">home</a> | 
+<a href="search.htm" style="color: blue; text-decoration: underline; text-underline: single">search</a> | 
+<a href="buy.htm" style="color: blue; text-decoration: underline; text-underline: single">purchase</a> | 
+<a href="doc.htm" style="color: blue; text-decoration: underline; text-underline: single">manual</a>
+| 
+<a href="whatsnew.htm" style="color: blue; text-decoration: underline; text-underline: single">news</a> | 
+<a href="infodesk.htm" style="color: blue; text-decoration: underline; text-underline: single">info</a> | 
+<a href="games.htm" style="color: blue; text-decoration: underline; text-underline: single">games</a>
+| 
+<a href="faq.htm" style="color: blue; text-decoration: underline; text-underline: single">faq</a> | 
+<a href="support.htm" style="color: blue; text-decoration: underline; text-underline: single">support</a> | 
+<a href="free.htm" style="color: blue; text-decoration: underline; text-underline: single">downloads</a>
+| 
+<a href="endorse.htm" style="color: blue; text-decoration: underline; text-underline: single">endorsements</a> | 
+<a href="press.htm" style="color: blue; text-decoration: underline; text-underline: single">press</a> | 
+<a href="address.htm" style="color: blue; text-decoration: underline; text-underline: single">contact us</a></font></small></p>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>&nbsp;</b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<!-- Clippy.js is sort of working but needs more work if will be used
+
+<link rel="stylesheet" type="text/css" href="../clippy.css" media="all">
+
+<script src="../jquery.min.js"></script>
+
+
+<script src="../clippy.js"></script>
+
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+</script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+
+</script>
+<input onclick="agentStart()" type="image" title="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+
+-->
+
+<p>&nbsp;</p>
+
+</body>
+
+</html>

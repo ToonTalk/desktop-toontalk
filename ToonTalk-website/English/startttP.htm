@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title>What do you want to do with ToonTalk?</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK rel="stylesheet" type="text/css" href="../dialog.css">
+		<script language="javascript" src="../agent.js"></script>
+		<script language="javascript" src="strings.js"></script>
+		<script id="clientEventHandlersJS" language="javascript">
+<!--
+function sendBack(message) {
+    agentEnd();
+    window.returnValue = message; 
+    window.close();
+}
+
+// and now for Microsoft Agent specific code:
+
+var WELCOME_TO_TOONTALK = 1;
+var EXPLAIN_PUZZLE_GAME = 2;
+var EXPLAIN_DEMOS = 3;
+var EXPLAIN_FREE_PLAY = 4;
+var EXPLAIN_SET_OPTIONS = 5;
+var EXPLAIN_HELP = 6;
+var EXPLAIN_PLAYGROUND = 7;
+var EXPLAIN_ABOUT = 8;
+var GET_OUT_OF_THE_WAY = 9;
+var WAITING_FOR_CLICK = 10;
+
+var puzzleGameDescription = "To play a game and learn how to use ToonTalk click here.|Click here to play the puzzle game to learn how to use ToonTalk.";
+var demosDescription = "Click here to see what demos you can watch.";
+var freePlayDescription = "To explore ToonTalk click here.|Click here to enter Free Play.|Click here to make things in ToonTalk.";
+var setOptionsDescription = "To customize ToonTalk click here.|Click here to change how Marty speaks, mouse button shortcuts, and more.";
+var helpDescription = "Click here to find out how everything works in ToonTalk.|Click here to see ToonTalk documentation.";
+var aboutDescription = "Click here to see which version of ToonTalk is installed.";
+var playgroundDescription = "Click here to visit the Playground city or use the Playground notebook. Play or create ToonTalk games.";
+
+var introDemoDescription = "Click here to see the Introductory Tour of ToonTalk.";
+var explodeDemoDescription = "Click to see how to build a town full of exploding houses in ToonTalk.";
+var swapDemoDescription = "See how to swap things in ToonTalk.";
+var pongAct1DemoDescription = "Watch act 1 of the Building of a Pong Game.";
+var pongAct2DemoDescription = "Watch act 2 of the Building of a Pong Game.";
+var pongAct3DemoDescription = "Watch act 3 of the Building of a Pong Game.";
+var fibonacciDemoDescription = "See how to make the Fibonacci number sequence.";
+var factorialDemoDescription = "See how to program a robot to multiply together 1 times 2 times 3 times 4 and so on.";
+var appendDemoDescription = "Click here to see how to append lists together in ToonTalk. This is a good computer science example.";
+var bankAccountDemoDescription = "See how to program a bank account in ToonTalk. This is another good computer science example.";
+
+var greeted = false;
+
+function mainLoop() {
+	if (Agent1 == null || interrupted) return;
+	if (enterState(WELCOME_TO_TOONTALK)) {
+	   if (!greeted) {
+			Agent1.Play("Greet");
+			say(greeting);
+			greeted = true;
+		};
+	} else if (enterState(EXPLAIN_PUZZLE_GAME)) {
+		explain(puzzleGameDescription,"PuzzleGameButton");
+	} else if (enterState(EXPLAIN_DEMOS)) {
+		explain(demosDescription,"DemosButton");
+	} else if (enterState(EXPLAIN_FREE_PLAY)) {
+		explain(freePlayDescription,"FreePlayButton");
+	} else if (enterState(EXPLAIN_SET_OPTIONS)) {
+		explain(setOptionsDescription,"SetOptionsButton");
+	} else if (enterState(EXPLAIN_HELP)) {
+		explain(helpDescription,"HelpButton");
+	} else if (enterState(EXPLAIN_ABOUT)) {
+		explain(aboutDescription,"AboutButton");
+	} else if (enterState(EXPLAIN_PLAYGROUND)) {
+		explain(playgroundDescription,"PlaygroundButton");
+	} else if (enterState(GET_OUT_OF_THE_WAY)) {
+	   moveDown(200);
+	   nextState();
+	} else if (enterState(WAITING_FOR_CLICK)) {
+	   nextStateWhenIdle = false;
+	};
+}
+
+-->
+</script>
+
+<Script Language="JavaScript" For="AgentControl" Event="Click(CharacterID, Button, Shift, X, Y)">
+<!--
+		reactToAgentClicked(CharacterID, Button, Shift, X, Y);
+-->
+</Script>
+
+<Script Language="JavaScript" For="AgentControl" Event="IdleStart(CharacterID)">
+<!--
+      idleAgent(CharacterID);
+-->
+</script>
+
+	</head>
+	<body onload="agentStart()">
+		<OBJECT id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT></OBJECT>
+		<table id="wholeTable" border="0" width="300" align="center">
+		<tr>
+		<td width="280">
+		<p align="center">
+		<input type="image" id="PuzzleGameImage" onClick="sendBack('-next_puzzle 1')" src="../playpzl.jpg"
+				 onMouseOver="explainNow(puzzleGameDescription,'PuzzleGameImage')" onMouseOut="stopExplaining()"
+				 alt="Learn ToonTalk while playing a game" WIDTH="256" HEIGHT="192"></p></td>
+		<td width="33%" valign="middle">
+		<table id="DemoTable" border="0" cellpadding="5" cellspacing="2" align="center">
+		<tr>
+		<td valign="middle">
+		<input id="IntroDemo" type="image" onClick="sendBack('-I UK\\intro_v2')" src="../intro8.gif" alt="Introductory Tour" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(introDemoDescription,'IntroDemo')" onMouseOut="stopExplaining()"></td>
+		<td valign="middle">
+		<input id="ExplodeDemo" type="image" onClick="sendBack('-I UK\\explode2')" src="../explode8.gif" alt="Exploding Houses" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(explodeDemoDescription,'ExplodeDemo')" onMouseOut="stopExplaining()"></td></tr>
+		<tr>
+		<td valign="middle">
+		<input id="SwapDemo" type="image" onClick="sendBack('-I swap -demo_exe TT202')" src="../swap8.gif" alt="Swap Numbers" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(swapDemoDescription,'SwapDemo')" onMouseOut="stopExplaining()"></td>
+		<td valign="middle">
+		<input id="PongAct1Demo" type="image" onClick="sendBack('-I pongact1 -demo_exe TT202')" src="../pong1_8.gif" alt="Ping Pong - Act 1" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(pongAct1DemoDescription,'PongAct1Demo')" onMouseOut="stopExplaining()"></td></tr>
+		<tr>
+		<td valign="middle">
+		<input id="PongAct2Demo" type="image" onClick="sendBack('-I pongact2 -demo_exe TT202')" src="../pong2_8.gif" alt="Ping Pong - Act 2" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(pongAct2DemoDescription,'PongAct2Demo')" onMouseOut="stopExplaining()"></td>
+		<td valign="middle">
+		<input id="PongAct3Demo" type="image" onClick="sendBack('-I pongact3 -demo_exe TT202')" src="../pong3_8.gif" alt="Ping Pong - Act 3" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(pongAct3DemoDescription,'PongAct3Demo')" onMouseOut="stopExplaining()"></td></tr>
+		<tr>
+		<td valign="middle">
+		<input id="FibonacciDemo" type="image" onClick="sendBack('-I fibs -demo_exe TT202')" src="../fibs8.gif" alt="Fibonacci Numbers" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(fibonacciDemoDescription,'FibonacciDemo')" onMouseOut="stopExplaining()"></td>
+		<td valign="middle">
+		<input id="FactorialDemo" type="image" onClick="sendBack('-I fact -demo_exe TT202')" src="../fact8.gif" alt="Factorial" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(factorialDemoDescription,'FactorialDemo')" onMouseOut="stopExplaining()"></td></tr>
+		<tr>
+		<td valign="middle">
+		<input id="BankAccountDemo" type="image" onClick="sendBack('-I account -demo_exe TT202')" src="../account8.gif" alt="Bank Account" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(bankAccountDemoDescription,'BankAccountDemo')" onMouseOut="stopExplaining()"></td>
+		<td valign="middle">
+		<input id="AppendDemo" type="image" onClick="sendBack('-I append -demo_exe TT202')" src="../append8.gif" alt="Append Lists" WIDTH="80" HEIGHT="60"
+				 onMouseOver="explainNow(appendDemoDescription,'AppendDemo')" onMouseOut="stopExplaining()"></td></tr>
+		</table></td>
+		<td width="34%" valign="middle">
+		<input id="FreePlayImage" type="image" onClick="sendBack('-next_puzzle 0')" src="../freeplay.jpg" alt="Create and program neat things" WIDTH="256" HEIGHT="192"
+				 onMouseOver="explainNow(freePlayDescription,'FreePlayImage')" onMouseOut="stopExplaining()">></td></tr>
+		<tr>
+		<td width="270">
+		<P align="center">
+		<input id="PuzzleGameButton" type="button" value="Play Puzzle Game" onClick="sendBack('-next_puzzle 1')"
+				 onMouseOver="explainNow(puzzleGameDescription,'PuzzleGameButton')" onMouseOut="stopExplaining()"></P></td>
+		<td width="33%">
+		<P align="center">
+		<input id="DemosButton" type="button" value="Show Demos" onClick="sendBack('-next_dialog pickdemo.htm')"
+				 onMouseOver="explainNow(demosDescription,'DemosButton');" onMouseOut="stopExplaining()"></P></td>
+		<td width="34%">
+		<P align="center">
+		<input id="FreePlayButton" type="button" value="FreePlay" onClick="sendBack('-next_puzzle 0')"
+				 onMouseOver="explainNow(freePlayDescription,'FreePlayButton')" onMouseOut="stopExplaining()"></P></td></tr>
+		<tr>
+		<td width="270" height="60" valign="bottom">
+		<P align="center">
+		<input id="SetOptionsButton" type="button" value="Set Options" onClick="sendBack('-next_dialog option1.htm')"
+				 onMouseOver="explainNow(setOptionsDescription,'SetOptionsButton')" onMouseOut="stopExplaining()"></P></td>
+		<td width="33%" height="60" valign="bottom">
+		<P align="center">
+		<input id="AboutButton" type="button" value="About ToonTalk" onClick="sendBack('-next_dialog about.htm')"
+				 onMouseOver="explainNow(aboutDescription,'AboutButton')" onMouseOut="stopExplaining()"></P></td>
+		<td width="34%" height="60" valign="bottom">
+		<P align="center">
+		<input id="HelpButton" type="button" value="Help" onClick="sendBack('-help 1')"
+				 onMouseOver="explainNow(helpDescription,'HelpButton')" onMouseOut="stopExplaining()"></P></td></tr>
+		<TR>
+		<TD vAlign="bottom" width="270" height="60"></TD>
+		<TD vAlign="bottom" width="33%" height="60">
+		<INPUT id="PlaygroundButton" onclick="sendBack('-next_dialog visitpg.htm')" type="button" value="Visit Playground" name="Playground"
+				 onMouseOver="explainNow(playgroundDescription,'PlaygroundButton')" onMouseOut="stopExplaining()"></TD>
+		<TD vAlign="bottom" width="34%" height="60"></TD></TR></table>
+	</body>
+</html>

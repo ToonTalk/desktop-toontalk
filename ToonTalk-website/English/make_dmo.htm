@@ -1,0 +1,153 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>How to Create Your Own Demos</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>How to Create Your Own Demos</b></font></p>
+
+<p align="left"><b><font face="Comic Sans MS">You can also make narrated or subtitled </font>
+<font face="Comic Sans MS" color="#FF0000">
+<a href="mk_ttdmo.htm">demos using time travel</a></font><font face="Comic Sans MS">. 
+Such demos will have VCR-like controls for replaying and skipping sections.</font></b></p>
+
+<p><font face="Comic Sans MS"><b><i>Advanced users:</i></b></font></p>
+
+<p><font face="Comic Sans MS">To create a demo just add -o &lt;<i>filename</i>&gt; to <a
+href="command.htm#OutputLog">the command line</a> before starting ToonTalk. This will
+create a file named filename.DMO in the &quot;demos&quot; subdirectory of ToonTalk. The
+&quot;dmo&quot; file records everything you do (every mouse movement, keyboard click,
+etc.) Double clicking on the file will start up the demo. Alternatively adding -I
+&lt;filename&gt; to the command line will run the demo. Please check the &quot;demos&quot;
+subdirectory first to learn the names of existing demos so you don't override them. Note
+that if the command line includes both -I and -o then the newly created output demo will
+just contain the new part of the demo. At the Windows command line you can put together
+the two parts of a demo by entering &quot;copy /b demo1.dmo+demo2.dmo demo3.dmo&quot;
+where demo2.dmo was created as an extension to demo1.dmo. Alternatively set
+<a href="ttini.htm#GenerateLogs">GenerateLogs</a> to a value greater than 0 and 
+then retrieve and rename the demos created in the Demos folder.</font></p>
+
+<p><font face="Comic Sans MS"><b>Adding subtitles to your demos</b>.  </font></p>
+
+<p><font face="Comic Sans MS">When ToonTalk starts
+running a demo named X it looks for a file named X.ust. (&quot;ust&quot; is the default
+extension name for American English subtitles - in general the extension is the two-letter
+country code followed by 't'.) You can override the default for your computer by providing
+an &quot;<a href="ttini.htm#SubtitlesSuffix">SubtitlesSuffix</a>&quot; entry in the &quot;FileExtensions&quot; section of the
+ToonTalk.ini file in your Windows directory. A subtitle file is made of entries separated
+by a blank line. Each entry has the time in milliseconds since the beginning of the demo
+followed by the text of the subtitle. It is recommended that any lines of text more than
+60 characters be broken. The &quot;demos&quot; subdirectory of your ToonTalk installation
+has many sample subtitle files. One way to obtain the millisecond timings is to press F9
+while the demo is playing back. This will record the time in your &lt;user name&gt;.txt log
+file in the &quot;users&quot; subdirectory.</font></p>
+
+<p><font face="Comic Sans MS"><b>Adding narration to your demos</b>. </font></p>
+
+<p><font face="Comic Sans MS">When ToonTalk starts
+running a demo named X it looks for a file named X.spk. (&quot;spk&quot; is the default
+extension name for American English narration files - in general the extension is the
+two-letter country code followed by 'n'.) You can override the default for your computer
+by providing an &quot;SubtitlesSuffix&quot; entry in the &quot;FileExtensions&quot;
+section of the ToonTalk.ini file in your Windows directory. To create a narration file you
+should record segments of the narration (256 is the maximum number) and name them
+&quot;s01.wav&quot;, &quot;s02.wav&quot; and so on. These files should be placed on the
+main ToonTalk directory while generating the narration file. </font></p>
+
+<p><font face="Comic Sans MS">To create the narration file (in the &quot;Demos&quot;
+subdirectory) add '-create_narration 1' or '-create_narration 2' to the command line.
+&nbsp; A value of 1 changes the meaning of F11 to mean start the next narration segment
+(the next s&lt;nn&gt;.wav file). A value of 2 means use the start times from the subtitle
+file. If you want to specify the times when the narration should start but don't want
+subtitles, then create a temporary subtitle file (where the lines of text could be
+anything (e.g. &quot;X&quot;) and only the start times are important. You can use
+'-create_narration' together with '-o' or '-I' depending upon whether you want to create
+the demo and narration at the same time, or to add narration to an existing demo.</font></p>
+
+<p><font face="Comic Sans MS"><b>Coordinating the subtitles and narration</b>. </font></p>
+
+<p><font face="Comic Sans MS">If you wish
+to create both narration and subtitles, you can create the subtitles first and use
+'-create_narration 2' or else you can create the narration first and then run your demo
+with &quot;-print_narration_start_times 1&quot; which will print the start times of each
+segment in your &lt;<i>user name</i>&gt;.log in the &quot;Users&quot; subdirectory. You
+can then use these times while creating your subtitles file. </font></p>
+
+<p><font face="Comic Sans MS"><b>Tips:</b></font> 
+
+<ul>
+  <li><p><font face="Comic Sans MS">If you make a mistake while recording a demo you needn't redo
+    the whole thing. You can run toontalk -I PartlyGood -o NewVersion and then take control
+    just before the old demo goes bad. </font></p></li>
+  <li><p><font face="Comic Sans MS">Avoid using keyboard accelerators for tools (e.g. 'e' to make
+    Dusty erase things). These accelerators differ from language to language so if you use
+    them your demos probably won't work in a different language version of ToonTalk. </font></p></li>
+  <li><p><font face="Comic Sans MS">If you are creating a demo on a fast computer and expect the
+    demo to be run on slower machines then it is recommended that you add <a
+    href="command.htm#FrameDurationMinimum">-y 50</a> (or a similar number) to the command
+    line while recording to slow down your machine. And set the screen 
+  resolution relatively low -- perhaps 800x600. Use 'Set Options' for this.</font></p></li>
+  <li><p><font face="Comic Sans MS">You can create a video or animation of a demo by creating
+    series of <a href="scrnshot.htm">screen snapshots</a>.</font></p></li>
+  <li><p>
+
+<font face="Comic Sans MS">
+
+  If your demo includes Marty speaking then don't have Marty use subtitles 
+  since then they can't be added to the demo as well. The talk balloon is a good 
+  alternative (with or without text-to-speech).</font></p></li>
+</ul>
+
+<p id="DontRead" align="center"><small><font face="Comic Sans MS">
+<a href="toontalk.htm" style="color: blue; text-decoration: underline; text-underline: single">home</a> | 
+<a href="search.htm" style="color: blue; text-decoration: underline; text-underline: single">search</a> | 
+<a href="buy.htm" style="color: blue; text-decoration: underline; text-underline: single">purchase</a> | 
+<a href="doc.htm" style="color: blue; text-decoration: underline; text-underline: single">manual</a>
+| 
+<a href="whatsnew.htm" style="color: blue; text-decoration: underline; text-underline: single">news</a> | 
+<a href="infodesk.htm" style="color: blue; text-decoration: underline; text-underline: single">info</a> | 
+<a href="games.htm" style="color: blue; text-decoration: underline; text-underline: single">games</a>
+| 
+<a href="faq.htm" style="color: blue; text-decoration: underline; text-underline: single">faq</a> | 
+<a href="support.htm" style="color: blue; text-decoration: underline; text-underline: single">support</a> | 
+<a href="free.htm" style="color: blue; text-decoration: underline; text-underline: single">downloads</a>
+| 
+<a href="endorse.htm" style="color: blue; text-decoration: underline; text-underline: single">endorsements</a> | 
+<a href="press.htm" style="color: blue; text-decoration: underline; text-underline: single">press</a> | 
+<a href="address.htm" style="color: blue; text-decoration: underline; text-underline: single">contact us</a></font></small></p>
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>&nbsp;</b></font><b><font FACE="Comic Sans MS" SIZE="5">
+
+<object id="AgentControl" codeBase="#VERSION=2,0,0,0" classid="clsid:D45FD31B-5C6E-11D1-9EC1-00C04FD7081F" VIEWASTEXT>
+</object>
+<script language="javascript" src="../agent.js"></script>
+<script language="javascript" src="strings.js">
+</script>
+<script language="JavaScript" event="Click(CharacterID, Button, Shift, X, Y)" for="AgentControl"> 
+
+<!-- 
+
+reactToAgentClicked(CharacterID, Button, Shift, X, Y); 
+
+--> </script>
+<script language="JavaScript" event="IdleStart(CharacterID)" for="AgentControl"> 
+
+<!-- 
+
+idleAgent(CharacterID); 
+
+--> 
+
+</script>
+<input onclick="agentStart()" type="image" alt="Peedy can read this page for you." src="../reading.gif" name="Image1" width="58" height="51"></font></b></p>
+
+<p>&nbsp;</p>
+</body>
+</html>

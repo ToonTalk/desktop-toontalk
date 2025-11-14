@@ -1,0 +1,109 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Version" content="8.0.4308">
+<meta name="Date" content="7/8/97">
+<meta name="Template" content="C:\PROGRAM FILES\MICROSOFT OFFICE\OFFICE\html.dot">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<title>How to Create Your Own Demos</title>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<p align="center"><font size="5" face="Comic Sans MS"><b>How to Create Your Own Demos 
+using Time Travel</b></font></p>
+
+<p><font face="Comic Sans MS"><b><i>Advanced users:</i></b></font></p>
+
+<p><font face="Comic Sans MS">To create a demo using time travel just run 
+ToonTalk with time travel on. This will
+create a file named time_travel.DMO in the user's folder in the ToonTalk folder 
+in My Documents. The &quot;dmo&quot; file records everything you do (every mouse movement, 
+keyboard click, etc.) Double clicking on the file will start up the demo. You 
+will probably want to copy and rename it. time_travel.DMO can be inspected or 
+altered by unzipping it with any unzip program.</font></p>
+
+<p><font face="Comic Sans MS">If your demo includes pictures or sounds that you 
+have imported into ToonTalk, they set the
+						<span lang="en-gb">
+<a href="ttini.htm#IncludeMediaInTimeTravelArchives">IncludeMediaInTimeTravelArchives</a> 
+option to 1 before creating your demo.</span></font></p>
+
+<p><font face="Comic Sans MS"><b>Adding subtitles to your demos</b>. When ToonTalk starts
+running a time travel demo named X it looks for a file named X.ust inside the 
+time_travel.DMO archive. (&quot;ust&quot; is the default
+extension name for American English subtitles - in general the extension is the two-letter
+country code followed by 't'.) You can override the default for your computer by providing
+an &quot;SubtitlesSuffix&quot; entry in the &quot;FileExtensions&quot; section of the
+ToonTalk.ini file in your Windows directory. A subtitle file is made of entries separated
+by a blank line. Each entry has the time in milliseconds since the beginning of the demo
+followed by the text of the subtitle. It is recommended that any lines of text more than
+60 characters be broken. The &quot;demos&quot; subdirectory of your ToonTalk installation
+has many sample subtitle files. One way to obtain the millisecond timings is to press F9
+while the demo is playing back. This will record the time in your &lt;user name&gt;.txt log
+file in the &quot;users&quot; subdirectory.</font></p>
+
+<p><font face="Comic Sans MS"><b>Adding narration to your demos</b>. When ToonTalk starts
+running a time travel demo named X it looks for a file named X.spkinside the 
+time_travel.DMO archive. (&quot;spk&quot; is the default
+extension name for American English narration files - in general the extension is the
+two-letter country code followed by 'n'.) You can override the default for your computer
+by providing an &quot;SubtitlesSuffix&quot; entry in the &quot;FileExtensions&quot;
+section of the ToonTalk.ini file in your Windows directory. To create a narration file you
+should record segments of the narration (256 is the maximum number) and name them
+&quot;s01.wav&quot;, &quot;s02.wav&quot; and so on. These files should be placed on the
+main ToonTalk directory while generating the narration file. </font></p>
+
+<p><font face="Comic Sans MS">To create the narration file (in the &quot;Demos&quot;
+subdirectory) add '-create_narration 1' or '-create_narration 2' to the command line.
+&nbsp; A value of 1 changes the meaning of F11 to mean start the next narration segment
+(the next s&lt;nn&gt;.wav file). A value of 2 means use the start times from the subtitle
+file. If you want to specify the times when the narration should start but don't want
+subtitles, then create a temporary subtitle file (where the lines of text could be
+anything (e.g. &quot;X&quot;) and only the start times are important. You can use
+'-create_narration' together with '-o' or '-I' depending upon whether you want to create
+the demo and narration at the same time, or to add narration to an existing demo.</font></p>
+
+<p><font face="Comic Sans MS"><b>Coordinating the subtitles and narration</b>. If you wish
+to create both narration and subtitles, you can create the subtitles first and use
+'-create_narration 2' or else you can create the narration first and then run your demo
+with &quot;-print_narration_start_times 1&quot; which will print the start times of each
+segment in your &lt;<i>user name</i>&gt;.log in the &quot;Users&quot; subdirectory. You
+can then use these times while creating your subtitles file. </font></p>
+
+<p><font face="Comic Sans MS"><b>Tips:</b></font> 
+
+<ul>
+  <li><font face="Comic Sans MS">A demo file works for the same resolution as it was recorded.
+    With luck you can record a high-resolution demo and copy it to the low resolution
+    subdirectory and it will work. See the subdirectories of &quot;Demos&quot; 
+  in the ToonTalk installation directory for examples. </font></li>
+  <li><font face="Comic Sans MS">Avoid using keyboard accelerators for tools (e.g. 'e' to make
+    Dusty erase things). These accelerators differ from language to language so if you use
+    them your demos probably won't work in a different language version of ToonTalk. </font></li>
+  <li><font face="Comic Sans MS">If you are creating a demo on a fast computer and expect the
+    demo to be run on slower machines then it is recommended that you add <a
+    href="command.htm#FrameDurationMinimum">-y 50</a> (or a similar number) to the command
+    line while recording to slow down your machine.</font></li>
+  <li><font face="Comic Sans MS">You can create a video or animation of a demo by creating
+    series of <a href="scrnshot.htm">screen snapshots</a>.</font></li>
+</ul>
+
+<p align="center"><small><font face="Comic Sans MS"><a href="toontalk.htm">home</a> | <a
+href="http://www.toontalk.com/English/search.htm">search</a> | <a href="buy.htm">purchase</a>
+| <a href="doc.htm">manual</a> | <a href="whatsnew.htm">news</a> | <a href="infodesk.htm">info</a>
+| <a href="faq.htm">faq</a> | <a href="support.htm">support</a> | <a href="free.htm">downloads</a>
+| <a href="press.htm">press</a> | <a href="address.htm">contact us</a></font></small></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</body>
+</html>

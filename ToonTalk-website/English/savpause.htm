@@ -1,0 +1,56 @@
+<HTML>
+	<HEAD>
+		<TITLE>ToonTalk Paused</TITLE>
+		<META content="Microsoft Visual Studio 7.0" name="GENERATOR">
+		<LINK href="../dialog.css" type="text/css" rel="stylesheet">
+			<script language="javascript" id="clientEventHandlersJS">
+<!--
+// Translators: please translate the following 
+var ToonTalkStopped = "ToonTalk has been stopped.";
+
+function sendBack(which_button) {
+    window.returnValue = which_button; 
+    window.close();
+}
+
+//-->
+			</script>
+	</HEAD>
+	<BODY>
+		<P align="center"><script>
+if (window.dialogArguments == "") {
+   document.writeln(ToonTalkStopped);
+//   Button5.visible = false;
+} else {
+   document.writeln(window.dialogArguments);
+};
+// added button5 below on 100204
+			</script>
+		<P align="center">
+			<INPUT onclick="sendBack('12')" type="button" value="See the folder with your file" name="Button5"
+				ID="Button5"></P>
+		<P align="center">&nbsp;</P>
+		<P align="center">
+			<TABLE id="Table1" height="0" cellSpacing="1" cellPadding="1" width="300" border="0">
+				<TR>
+					<TD><INPUT onclick="sendBack('1')" type="button" value="Back to ToonTalk" name="Button1"></TD>
+					<TD>
+						<INPUT onclick="sendBack('2')" type="button" value="Come Back Later" name="Button2"></TD>
+					<TD>
+						<INPUT onclick="sendBack('3')" type="button" value="Leave ToonTalk" name="Button3"></TD>
+				</TR>
+				<tr>
+					<td></td>
+					<td><p align="center"><input id="Button4" onclick="if (DontSaveMediaToo.checked) { sendBack('4') } else { sendBack('6')}"
+								type="button" value="Save Everything" name="Button4"></p>
+					</td>
+					<td></td>
+				</tr>
+			</TABLE>
+		</P>
+		<P align="center">
+			<INPUT id="DontSaveMediaToo" type="checkbox" CHECKED name="DontSaveMediaToo">I 
+			don't plan to send my city to someone on another computer so keep the file as 
+			small as possible.</P>
+	</BODY>
+</HTML>

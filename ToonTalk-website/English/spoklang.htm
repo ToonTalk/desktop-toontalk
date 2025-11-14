@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+   <head>
+      <title>Setting ToonTalk Spoken Language</title>
+      <meta content="Microsoft Visual Studio.NET 7.0" name="GENERATOR">
+      <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+      <LINK href="../dialog.css" type="text/css" rel="stylesheet">
+      <script language="javascript" src="../common.js"></script>
+      <script language="javascript" id="clientEventHandlersJS">
+var oneLanguageInstalledString = "That is the only language that has been installed."; // needs translation
+var languageWantedString = "I want ToonTalk to use ";
+var noLanguagesInstalledString = "Can't find any languages. Maybe you need to re-install or contact support@toontalk.com";
+var nextDialog = "spoklang.htm";
+//var category = "Language";
+      </script>
+   </head>
+   <body>
+      <P>Do you want to change which language ToonTalk speaks? For ToonTalk use by 
+         WebLabs in Sweden and Portugal (and other countries when ToonTalk is 
+         translated), I recommend you try using English as the spoken language. This is 
+         due the lack of an adequate text-to-speech engine in Swedish or European 
+         Portuguese. If you have already chosen English as the display language then 
+         English is already the default spoken language as well.</P>
+      <P align="center"><input id="Button1" onclick="window.returnValue = '-set_option(User,SpokenLanguage,English) -accept_settings';window.close()" type="button" value="Use English as the spoken language" name="Button1"><input id="Button2" onclick="window.returnValue = '-set_option(User,SpokenLanguage, ) -accept_settings';window.close()" type="button" value="Do NOT use English as the spoken language" name="Button1">
+      </P>
+      <P align="left">If you want to customize ToonTalk in other ways, then click on 
+         'Set Options' in the ToonTalk start screen.</P>
+   </body>
+</html>

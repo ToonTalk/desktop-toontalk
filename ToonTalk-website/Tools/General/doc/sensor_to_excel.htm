@@ -1,0 +1,108 @@
+<html><!-- InstanceBegin template="/Templates/general.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebLabs - General Tools</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../toontalk.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="mainbody">
+<table width="100%"  border="0">
+  <tr>
+    <td width="92%"><span class="title">General Tools</span></td>
+    <td width="8%"><span class="menu"><a href="/index.html"><img src="../../logos/logotron.gif" alt="Back to home page" width="55" height="53" border="0" align="right"></a></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table width="100%"  border="0" bgcolor="#F48222">
+      <tr class="menu">
+        <td width="14%"><div align="center"><a href="../../Sequences/doc/index.htm">Sequences</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Infinity/doc/index.htm">Infinity</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Collisions/doc/index.htm">Collisions</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Lunar/doc/index.htm">Lunar Lander</a></div></td>
+        <td width="14%"><div align="center"><a href="../../Eco/doc/index.htm">Randomness<br>
+&amp; Ecologies</a></div></td>
+        <td width="14%"><div align="center"><a href="../../RCX/doc/index.htm">LEGO<br>
+          Mindstorms</a></div></td>
+        <td width="14%"><div align="center"><a href="index.htm">General Tools</a></div></td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" bgcolor="#000099">
+        <tr>
+          <td width="33%"><div align="center"><a href="sensor_to_excel.htm" class="menuWhite">Sensor to Excel </a></div></td>
+          <td width="33%"><div align="center"></div>            <div align="center"><a href="grapher.htm" class="menuWhite">A simple fast graphing tool</a></div></td>
+          <td width="33%">            <div align="center"><a href="graphing_tools.htm" class="menuWhite">Graphing Tools </a></div></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><!-- InstanceBeginEditable name="mainbody" -->
+<p class="paragraphheading">Sensor to Excel</p>
+<div class="stx">
+  <p class="parasubheading">What does it do?</p>
+  <p><span class="mainbody">  Records sensor data versus elapsed time to the clipboard, in such a form that 
+  it can easily be pasted into Microsoft Excel for plotting.</span><br>
+  <br>
+&nbsp;</p>
+  <p class="parasubheading">How do I use it?</p>
+  <p>  <span class="mainbody">Typical usage is outlined below:</span></p>
+  <ol>
+    <li class="mainbody">Press F8 to turn off power. Set up whatever 
+    conditions you want. Because the power is off, speed sensors will not have 
+    an immediate effect. </li>
+    <li class="mainbody">Give the sensor (in its box) that you want to record 
+    to the Excel bird. Again because power is off the tool will not start 
+    recording data. </li>
+    <li class="mainbody">Once you are sure everything is as you want it, press 
+    F8 to start recording sensor data to the clipboard. </li>
+    <li class="mainbody">Press F8 again to stop movement and data recording.
+    </li>
+    <li class="mainbody">Now switch to Excel. Select the cell A1 and paste. 
+    You should get two columns of data pasted in. The first column (A) is time 
+    elapsed from when you started recording data (in seconds) - so the first 
+    cell should always be 0. The second column (B) is the value of the sensor 
+    you were recording at each corresponding time. To plot this, select both 
+    columns, click the chart wizard, select <i>X/Y (scatter) </i>as your chart 
+    type, and continue (select which type you want, label the axes and so on if 
+    you want). You will end up with a graph with time in seconds on X and the 
+    sensor value on Y.&nbsp; </li>
+    <li class="mainbody">Now if you want to go back to ToonTalk and repeat the 
+    process etc, then make sure you suck up the existing Excel tool and take a 
+    new one from the notebook (so two things aren't trying to copy to the 
+    clipboard at once). </li>
+    </ol>
+  <p>&nbsp;</p>
+  <p class="parasubheading">How does it work?</p>
+  <p>  <span class="mainbody">A few teams of robots are used. Essentially it records elapsed time by making 
+  use of the ToonTalk timer, and samples the value of the selected sensor each 
+  time. Some programming tricks to do with inserting tabs and newlines so the 
+  data will paste into Excel nicely.</span><br>
+  <br>
+&nbsp;</p>
+  <p class="parasubheading">What can I use it for?</p>
+  <p>    <span class="mainbody">Recording and plotting the value of a sensor over time. Especially useful for 
+  all kinds of motion, for example plotting the value of a position sensor (e.g. 
+  right) while setting and changing the corresponding speed sensor (right 
+  speed).</span><br>
+  <br>
+  <br>
+  <a href="../SensorToExcel.tt">
+  <img src="../SensorToExcel.png"></a>
+</div>
+
+<!-- InstanceEndEditable --></td>
+  </tr>
+</table>
+</body>
+
+<!-- InstanceEnd --></html>
