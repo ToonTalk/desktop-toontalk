@@ -54,11 +54,11 @@ echo "Running CMake..."
 python $EMSDK/upstream/emscripten/emcmake.py cmake ..
 
 echo "Building WASM module..."
-# Use ninja if available, otherwise make
-if command -v ninja &> /dev/null; then
+# Use ninja if build.ninja was generated, otherwise use make
+if [ -f "build.ninja" ]; then
     ninja
 else
-    python $EMSDK/upstream/emscripten/emmake.py make
+    emmake make
 fi
 
 echo ""
