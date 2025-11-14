@@ -27,9 +27,15 @@ endif()
 
 # Source files (to be expanded)
 set(CORE_SOURCES
-    sprite.cpp
-    core.cpp
-    objects.cpp
+    platform/platform.cpp
+    stubs/windows_stubs.cpp
+    test_platform.cpp
+)
+
+# Include directories
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/platform
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs
 )
 
 # Create WASM library
