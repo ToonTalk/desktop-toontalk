@@ -1059,26 +1059,88 @@ export class WasmSpriteView {
 
     private drawText(): void {
         const txt = this.wasmSprite as ToonTalkText;
-        const textContent = txt.getText() || "(empty)";
+        const isBlank = txt.isBlank();
+        const fontType = txt.getFontType(); // 0 = FIXED_WIDTH, 1 = VARIABLE_WIDTH
+        const textContent = txt.getText();
+        const insertionPoint = txt.getInsertionPoint();
 
-        // Yellow rounded rectangle
-        this.graphics.beginFill(0xFFFF00);
+        // Color scheme: bright yellow for regular, light yellow for blank
+        const fillColor = isBlank ? 0xFFFFCC : 0xFFFF00;
+        const borderColor = isBlank ? 0xDDDD99 : 0xFFAA00;
+
+        // Yellow rounded rectangle (classic ToonTalk text pad shape)
+        this.graphics.beginFill(fillColor);
         this.graphics.drawRoundedRect(-50, -20, 100, 40, 8);
         this.graphics.endFill();
 
-        // Border
-        this.graphics.lineStyle(2, 0xFFAA00);
-        this.graphics.drawRoundedRect(-50, -20, 100, 40, 8);
+        // Border (dashed if blank)
+        if (isBlank) {
+            this.graphics.lineStyle(2, borderColor);
+            const dashLength = 4;
+            const gapLength = 2;
+            this.drawDashedRect(-50, -20, 100, 40, 8, dashLength, gapLength);
+        } else {
+            this.graphics.lineStyle(2, borderColor);
+            this.graphics.drawRoundedRect(-50, -20, 100, 40, 8);
+        }
 
-        // Display text
-        const displayText = new PIXI.Text(textContent, {
-            fontSize: 14,
-            fill: 0x000000,
+        // Display content
+        let displayContent: string;
+        if (isBlank) {
+            displayContent = '?';
+        } else if (!textContent || textContent.length === 0) {
+            displayContent = 'A';  // Default empty text pad shows "A"
+        } else {
+            displayContent = textContent;
+        }
+
+        // Font selection based on type
+        const fontFamily = fontType === 0 ? 'Courier New, monospace' : 'Comic Sans MS, sans-serif';
+
+        const displayText = new PIXI.Text(displayContent, {
+            fontFamily: fontFamily,
+            fontSize: isBlank ? 24 : 14,
+            fill: isBlank ? 0x999999 : 0x000000,
             wordWrap: true,
             wordWrapWidth: 90
         });
         displayText.anchor.set(0.5);
         this.graphics.addChild(displayText);
+
+        // Show insertion point cursor if text is not blank and has content
+        if (!isBlank && textContent && textContent.length > 0) {
+            // Calculate cursor position (simplified - would need proper text metrics)
+            const charWidth = fontType === 0 ? 8 : 7; // Approximate character width
+            const cursorX = -45 + (Math.min(insertionPoint, textContent.length) * charWidth);
+
+            // Draw blinking cursor (simplified - just a vertical line)
+            if (Math.floor(Date.now() / 500) % 2 === 0) { // Blink every 500ms
+                this.graphics.lineStyle(2, 0xFF0000);
+                this.graphics.moveTo(cursorX, -15);
+                this.graphics.lineTo(cursorX, 15);
+            }
+        }
+
+        // Add label for font type and blank state
+        let label = '';
+        if (isBlank) {
+            label = 'BLANK';
+        } else if (fontType === 1) {
+            label = 'VAR';  // Variable width font indicator
+        } else {
+            label = 'FIXED';  // Fixed width font indicator
+        }
+
+        const labelText = new PIXI.Text(label, {
+            fontSize: 7,
+            fill: isBlank ? 0x999999 : 0x666666,
+            fontWeight: 'bold',
+            stroke: 0xFFFFFF,
+            strokeThickness: 1
+        });
+        labelText.anchor.set(0.5);
+        labelText.y = -14;
+        this.graphics.addChild(labelText);
 
         this.textDisplay = displayText;
     }
