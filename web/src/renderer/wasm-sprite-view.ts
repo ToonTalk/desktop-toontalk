@@ -156,6 +156,8 @@ export class WasmSpriteView {
     private drawSprite(): void {
         const type = this.getObjectType();
 
+        console.log(`[drawSprite] Drawing sprite of type: ${type}`);
+
         this.graphics.clear();
 
         // Try to load texture from M25 sprites first
@@ -163,6 +165,8 @@ export class WasmSpriteView {
         if (textureManager.isLoaded()) {
             const texture = textureManager.getTexture(type);
             if (texture) {
+                console.log(`[drawSprite] Using texture for type: ${type}`);
+
                 // Hide graphics when using texture
                 this.graphics.visible = false;
 
@@ -178,6 +182,8 @@ export class WasmSpriteView {
                 // Add text overlay for number/text pads
                 this.addTextOverlay(type);
                 return;
+            } else {
+                console.log(`[drawSprite] No texture found for type: ${type}, using fallback graphics`);
             }
         }
 
