@@ -30,29 +30,26 @@ if ! command -v emcc &> /dev/null; then
             done
 
             if [ -n "$PYTHON_EXE" ]; then
-                # Create a temporary bin directory with python wrapper scripts
-                TEMP_BIN="$SCRIPT_DIR/.temp-bin"
-                mkdir -p "$TEMP_BIN"
+                # Add Python directory directly to PATH (before Windows Store alias paths)
+                PYTHON_DIR=$(dirname "$PYTHON_EXE")
+                export PATH="$PYTHON_DIR:$PATH"
 
-                # Create python wrapper
-                cat > "$TEMP_BIN/python" << EOF
-#!/bin/bash
-exec "$PYTHON_EXE" "\$@"
-EOF
-                chmod +x "$TEMP_BIN/python"
+                # Create a python3 symlink/copy in Python's own directory if it doesn't exist
+                if [ ! -f "$PYTHON_DIR/python3.exe" ]; then
+                    # Try to create a copy of python.exe as python3.exe in the Python directory
+                    if cp "$PYTHON_EXE" "$PYTHON_DIR/python3.exe" 2>/dev/null; then
+                        echo "Created python3.exe in Python directory"
+                    else
+                        echo "Note: Could not create python3.exe (may need admin rights)"
+                    fi
+                fi
 
-                # Create python3 wrapper (emsdk prefers python3 from PATH)
-                cat > "$TEMP_BIN/python3" << EOF
-#!/bin/bash
-exec "$PYTHON_EXE" "\$@"
-EOF
-                chmod +x "$TEMP_BIN/python3"
-
-                # Add temp bin to PATH FIRST (so our python3 is found before Windows Store alias)
-                export PATH="$TEMP_BIN:$PATH"
-
-                echo "Created Python wrappers (python, python3) in temporary bin directory"
-                echo "Using Python at: $PYTHON_EXE"
+                echo "Added Python directory to PATH: $PYTHON_DIR"
+                echo "Python executable: $PYTHON_EXE"
+                # Verify python3 can be found
+                if command -v python3 &> /dev/null; then
+                    echo "python3 found at: $(command -v python3)"
+                fi
             fi
         fi
 
