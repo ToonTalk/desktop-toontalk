@@ -4056,6 +4056,15 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("subtract", &Number::subtract)
         .function("multiply", &Number::multiply)
         .function("divide", &Number::divide)
+        .function("remainder", &Number::remainder)
+        .function("power", &Number::power)
+        .function("bitwiseNot", &Number::bitwiseNot)
+        .function("bitwiseAnd", &Number::bitwiseAnd)
+        .function("bitwiseOr", &Number::bitwiseOr)
+        .function("isBlank", &Number::isBlank)
+        .function("setBlank", &Number::setBlank)
+        .function("isOperation", &Number::isOperation)
+        .function("setOperation", &Number::setOperation)
         .function("toString", &Number::toString);
 
     class_<Text, base<Sprite>>("Text")
@@ -4064,7 +4073,22 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("setText", &Text::setText)
         .function("append", &Text::append)
         .function("clear", &Text::clear)
-        .function("length", &Text::length);
+        .function("length", &Text::length)
+        .function("getFontType", &Text::getFontType)
+        .function("setFontType", &Text::setFontType)
+        .function("isBlank", &Text::isBlank)
+        .function("setBlank", &Text::setBlank)
+        .function("getInsertionPoint", &Text::getInsertionPoint)
+        .function("setInsertionPoint", &Text::setInsertionPoint)
+        .function("combineLeft", &Text::combineLeft)
+        .function("combineRight", &Text::combineRight)
+        .function("changeFirstLetter", &Text::changeFirstLetter)
+        .function("changeLastLetter", &Text::changeLastLetter);
+
+    // Text FontType enum
+    enum_<Text::FontType>("TextFontType")
+        .value("FIXED_WIDTH", Text::FIXED_WIDTH)
+        .value("VARIABLE_WIDTH", Text::VARIABLE_WIDTH);
 
     class_<Box, base<Sprite>>("Box")
         .constructor<float, float, size_t>()
@@ -4080,7 +4104,9 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("addItem", &Box::addItem)
         .function("removeItem", &Box::removeItem)
         .function("clear", &Box::clear)
-        .function("getFullness", &Box::getFullness);
+        .function("getFullness", &Box::getFullness)
+        .function("isBlank", &Box::isBlank)
+        .function("setBlank", &Box::setBlank);
 
     class_<Nest, base<Sprite>>("Nest")
         .constructor<float, float, size_t>()
@@ -4095,8 +4121,26 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
 
     class_<Scale, base<Sprite>>("Scale")
         .constructor<float, float>()
+        .function("getTiltState", &Scale::getTiltState)
+        .function("setTiltState", &Scale::setTiltState)
+        .function("isFrozen", &Scale::isFrozen)
+        .function("setFrozen", &Scale::setFrozen)
+        .function("isRemembering", &Scale::isRemembering)
+        .function("setRemembering", &Scale::setRemembering)
+        .function("nextState", &Scale::nextState)
+        .function("previousState", &Scale::previousState)
+        .function("compareNeighbors", &Scale::compareNeighbors)
         .function("isActive", &Scale::isActive)
         .function("setActive", &Scale::setActive);
+
+    // Scale TiltState enum
+    enum_<Scale::TiltState>("ScaleTiltState")
+        .value("TOTTER", Scale::TOTTER)
+        .value("TILT_LEFT", Scale::TILT_LEFT)
+        .value("TILT_RIGHT", Scale::TILT_RIGHT)
+        .value("BALANCED", Scale::BALANCED)
+        .value("FROZEN", Scale::FROZEN)
+        .value("REMEMBERING", Scale::REMEMBERING);
 
     class_<Wand, base<Sprite>>("Wand")
         .constructor<float, float, Wand::WandMode>()

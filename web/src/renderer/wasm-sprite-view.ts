@@ -962,45 +962,20 @@ export class WasmSpriteView {
 
     private drawNumber(): void {
         const num = this.wasmSprite as ToonTalkNumber;
-        const isBlank = num.isBlank();
-        const isOperation = num.isOperation();
-        const value = num.getValue();
 
-        // Color scheme: bright green for regular, darker green for operations, light green for blank
-        const fillColor = isBlank ? 0x90EE90 : (isOperation ? 0x228B22 : 0x32CD32);
-        const borderColor = isBlank ? 0x66BB66 : 0x228B22;
-
-        // Green rounded rectangle (classic ToonTalk number pad shape)
-        this.graphics.beginFill(fillColor);
+        // Simple green rounded rectangle
+        this.graphics.beginFill(0x32CD32);
         this.graphics.drawRoundedRect(-40, -30, 80, 60, 10);
         this.graphics.endFill();
 
-        // Border (dashed if blank)
-        if (isBlank) {
-            // Dashed border for blank numbers
-            this.graphics.lineStyle(3, borderColor);
-            const dashLength = 5;
-            const gapLength = 3;
-            this.drawDashedRect(-40, -30, 80, 60, 10, dashLength, gapLength);
-        } else {
-            this.graphics.lineStyle(3, borderColor);
-            this.graphics.drawRoundedRect(-40, -30, 80, 60, 10);
-        }
+        // Border
+        this.graphics.lineStyle(3, 0x228B22);
+        this.graphics.drawRoundedRect(-40, -30, 80, 60, 10);
 
-        // Display content
-        let displayText: string;
-        if (isBlank) {
-            displayText = '?';  // Blank number shows question mark
-        } else if (isOperation) {
-            // Show operation symbol (this would need operation type from WASM)
-            displayText = `op ${value}`;  // Placeholder - would show like "/5" or "×3"
-        } else {
-            displayText = num.toString();
-        }
-
-        const valueText = new PIXI.Text(displayText, {
-            fontSize: isBlank ? 36 : 24,
-            fill: isBlank ? 0x666666 : 0xFFFFFF,
+        // Display the number value
+        const valueText = new PIXI.Text(num.toString(), {
+            fontSize: 24,
+            fill: 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 3
@@ -1008,139 +983,32 @@ export class WasmSpriteView {
         valueText.anchor.set(0.5);
         this.graphics.addChild(valueText);
 
-        // Add small label for blank/operation state
-        if (isBlank || isOperation) {
-            const label = new PIXI.Text(isBlank ? 'BLANK' : 'OP', {
-                fontSize: 8,
-                fill: 0xFFFFFF,
-                fontWeight: 'bold',
-                stroke: 0x000000,
-                strokeThickness: 1
-            });
-            label.anchor.set(0.5);
-            label.y = -22;
-            this.graphics.addChild(label);
-        }
-
         // Store for updates
         this.textDisplay = valueText;
     }
 
-    /**
-     * Helper to draw dashed rounded rectangle
-     */
-    private drawDashedRect(x: number, y: number, width: number, height: number, radius: number, dashLength: number, gapLength: number): void {
-        // Simplified dashed rect (just the sides, not rounded corners)
-        const perimeter = 2 * (width + height);
-        const totalDashLength = dashLength + gapLength;
-        let currentLength = 0;
-
-        // Top
-        for (let i = x; i < x + width; i += totalDashLength) {
-            this.graphics.moveTo(i, y);
-            this.graphics.lineTo(Math.min(i + dashLength, x + width), y);
-        }
-        // Right
-        for (let i = y; i < y + height; i += totalDashLength) {
-            this.graphics.moveTo(x + width, i);
-            this.graphics.lineTo(x + width, Math.min(i + dashLength, y + height));
-        }
-        // Bottom
-        for (let i = x + width; i > x; i -= totalDashLength) {
-            this.graphics.moveTo(i, y + height);
-            this.graphics.lineTo(Math.max(i - dashLength, x), y + height);
-        }
-        // Left
-        for (let i = y + height; i > y; i -= totalDashLength) {
-            this.graphics.moveTo(x, i);
-            this.graphics.lineTo(x, Math.max(i - dashLength, y));
-        }
-    }
-
     private drawText(): void {
         const txt = this.wasmSprite as ToonTalkText;
-        const isBlank = txt.isBlank();
-        const fontType = txt.getFontType(); // 0 = FIXED_WIDTH, 1 = VARIABLE_WIDTH
-        const textContent = txt.getText();
-        const insertionPoint = txt.getInsertionPoint();
+        const textContent = txt.getText() || "A";
 
-        // Color scheme: bright yellow for regular, light yellow for blank
-        const fillColor = isBlank ? 0xFFFFCC : 0xFFFF00;
-        const borderColor = isBlank ? 0xDDDD99 : 0xFFAA00;
-
-        // Yellow rounded rectangle (classic ToonTalk text pad shape)
-        this.graphics.beginFill(fillColor);
+        // Simple yellow rounded rectangle
+        this.graphics.beginFill(0xFFFF00);
         this.graphics.drawRoundedRect(-50, -20, 100, 40, 8);
         this.graphics.endFill();
 
-        // Border (dashed if blank)
-        if (isBlank) {
-            this.graphics.lineStyle(2, borderColor);
-            const dashLength = 4;
-            const gapLength = 2;
-            this.drawDashedRect(-50, -20, 100, 40, 8, dashLength, gapLength);
-        } else {
-            this.graphics.lineStyle(2, borderColor);
-            this.graphics.drawRoundedRect(-50, -20, 100, 40, 8);
-        }
+        // Border
+        this.graphics.lineStyle(2, 0xFFAA00);
+        this.graphics.drawRoundedRect(-50, -20, 100, 40, 8);
 
-        // Display content
-        let displayContent: string;
-        if (isBlank) {
-            displayContent = '?';
-        } else if (!textContent || textContent.length === 0) {
-            displayContent = 'A';  // Default empty text pad shows "A"
-        } else {
-            displayContent = textContent;
-        }
-
-        // Font selection based on type
-        const fontFamily = fontType === 0 ? 'Courier New, monospace' : 'Comic Sans MS, sans-serif';
-
-        const displayText = new PIXI.Text(displayContent, {
-            fontFamily: fontFamily,
-            fontSize: isBlank ? 24 : 14,
-            fill: isBlank ? 0x999999 : 0x000000,
+        // Display text
+        const displayText = new PIXI.Text(textContent, {
+            fontSize: 14,
+            fill: 0x000000,
             wordWrap: true,
             wordWrapWidth: 90
         });
         displayText.anchor.set(0.5);
         this.graphics.addChild(displayText);
-
-        // Show insertion point cursor if text is not blank and has content
-        if (!isBlank && textContent && textContent.length > 0) {
-            // Calculate cursor position (simplified - would need proper text metrics)
-            const charWidth = fontType === 0 ? 8 : 7; // Approximate character width
-            const cursorX = -45 + (Math.min(insertionPoint, textContent.length) * charWidth);
-
-            // Draw blinking cursor (simplified - just a vertical line)
-            if (Math.floor(Date.now() / 500) % 2 === 0) { // Blink every 500ms
-                this.graphics.lineStyle(2, 0xFF0000);
-                this.graphics.moveTo(cursorX, -15);
-                this.graphics.lineTo(cursorX, 15);
-            }
-        }
-
-        // Add label for font type and blank state
-        let label = '';
-        if (isBlank) {
-            label = 'BLANK';
-        } else if (fontType === 1) {
-            label = 'VAR';  // Variable width font indicator
-        } else {
-            label = 'FIXED';  // Fixed width font indicator
-        }
-
-        const labelText = new PIXI.Text(label, {
-            fontSize: 7,
-            fill: isBlank ? 0x999999 : 0x666666,
-            fontWeight: 'bold',
-            stroke: 0xFFFFFF,
-            strokeThickness: 1
-        });
-        labelText.anchor.set(0.5);
-        labelText.y = -14;
-        this.graphics.addChild(labelText);
 
         this.textDisplay = displayText;
     }
@@ -1148,108 +1016,30 @@ export class WasmSpriteView {
     private drawBox(): void {
         const box = this.wasmSprite as ToonTalkBox;
         const numHoles = box.getNumHoles();
-        const isBlank = box.isBlank();
 
-        // Get WASM dimensions (game world coordinates)
+        // Get WASM dimensions
         const width = this.wasmSprite.getWidth();
         const height = this.wasmSprite.getHeight();
 
-        // Peg-based sizing from original ToonTalk
-        // width = (5*numHoles + 1)*PEG_WIDTH, height = 4*PEG_WIDTH
-        const PEG_WIDTH = 20;
-        const WALL_WIDTH = PEG_WIDTH; // Wall between holes
-
-        // Color scheme: brown for regular, lighter brown for blank
-        const fillColor = isBlank ? 0xA0826D : 0x8B4513;
-        const borderColor = 0x654321;
-        const alpha = isBlank ? 0.7 : 1.0;
-
-        // Brown box background (classic ToonTalk wooden box)
-        this.graphics.beginFill(fillColor, alpha);
+        // Simple brown box background
+        this.graphics.beginFill(0x8B4513);
         this.graphics.drawRect(-width/2, -height/2, width, height);
         this.graphics.endFill();
 
-        // Outer border (dashed if blank)
-        if (isBlank) {
-            this.graphics.lineStyle(3, borderColor, alpha);
-            const dashLength = 6;
-            const gapLength = 4;
-            // Draw dashed border for blank box
-            this.drawDashedRect(-width/2, -height/2, width, height, 0, dashLength, gapLength);
-        } else {
-            this.graphics.lineStyle(3, borderColor);
-            this.graphics.drawRect(-width/2, -height/2, width, height);
-        }
+        // Border
+        this.graphics.lineStyle(3, 0x654321);
+        this.graphics.drawRect(-width/2, -height/2, width, height);
 
-        // Draw each hole
-        const holeWidth = PEG_WIDTH * 4; // Each hole is 4 pegs wide
-        const holeHeight = height - (WALL_WIDTH * 2); // Leave wall margin top/bottom
-
-        for (let i = 0; i < numHoles; i++) {
-            // Calculate hole position
-            // Original: insides_llx = llx + ((hole_index*5+1)*width)/x_tiles
-            const holeX = -width/2 + WALL_WIDTH + (i * (holeWidth + WALL_WIDTH));
-            const holeY = -height/2 + WALL_WIDTH;
-
-            // Hole interior (lighter brown)
-            this.graphics.beginFill(0xD2691E, alpha);
-            this.graphics.drawRect(holeX, holeY, holeWidth, holeHeight);
-            this.graphics.endFill();
-
-            // Hole border
-            this.graphics.lineStyle(2, borderColor, alpha);
-            this.graphics.drawRect(holeX, holeY, holeWidth, holeHeight);
-
-            // Show filled/empty state (unless blank box)
-            if (!isBlank && box.isHoleFilled(i)) {
-                // Green circle indicator for filled holes
-                this.graphics.beginFill(0x90EE90, 0.7);
-                this.graphics.drawCircle(holeX + holeWidth/2, holeY + holeHeight/2, 8);
-                this.graphics.endFill();
-            } else if (isBlank) {
-                // Show question mark in each hole for blank box
-                const blankText = new PIXI.Text('?', {
-                    fontSize: 18,
-                    fill: 0x999999,
-                    fontWeight: 'bold'
-                });
-                blankText.anchor.set(0.5);
-                blankText.x = holeX + holeWidth/2;
-                blankText.y = holeY + holeHeight/2;
-                blankText.alpha = alpha;
-                this.graphics.addChild(blankText);
-            }
-
-            // Show hole label if present
-            const label = box.getHoleLabel(i);
-            if (label && label.length > 0) {
-                const labelText = new PIXI.Text(label, {
-                    fontSize: 9,
-                    fill: 0xFFFFFF,
-                    fontWeight: 'bold',
-                    stroke: 0x000000,
-                    strokeThickness: 2
-                });
-                labelText.anchor.set(0.5, 1);
-                labelText.x = holeX + holeWidth/2;
-                labelText.y = holeY - 4;
-                labelText.alpha = alpha;
-                this.graphics.addChild(labelText);
-            }
-        }
-
-        // Overall box status text at bottom
-        const statusLabel = isBlank ? 'BLANK' : `${box.getCount()}/${numHoles}`;
-        const statusText = new PIXI.Text(statusLabel, {
-            fontSize: isBlank ? 10 : 12,
-            fill: isBlank ? 0xDDDDDD : 0xFFFFFF,
+        // Overall box status text
+        const statusText = new PIXI.Text(`${box.getCount()}/${numHoles}`, {
+            fontSize: 12,
+            fill: 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 2
         });
         statusText.anchor.set(0.5);
         statusText.y = height/2 - 10;
-        statusText.alpha = alpha;
         this.graphics.addChild(statusText);
 
         this.textDisplay = statusText;
@@ -1321,104 +1111,38 @@ export class WasmSpriteView {
 
     private drawScale(): void {
         const scale = this.wasmSprite as ToonTalkScale;
-        const tiltState = scale.getTiltState();
-        const isFrozen = scale.isFrozen();
-        const isRemembering = scale.isRemembering();
 
-        // TiltState enum values from C++:
-        // TOTTER = 0, TILT_LEFT = 1, TILT_RIGHT = 2, BALANCED = 3, FROZEN = 4, REMEMBERING = 5
-
-        // Base platform (silver metallic)
-        const alpha = isRemembering ? 0.5 : 1.0;
-        this.graphics.beginFill(0xC0C0C0, alpha);
-        this.graphics.drawRoundedRect(-62, -48, 125, 97, 5);
+        // Simple silver/gray scale platform
+        this.graphics.beginFill(0xC0C0C0);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
         this.graphics.endFill();
 
-        // Border (blue if frozen, gold if remembering, gray otherwise)
-        const borderColor = isFrozen ? 0x4169E1 : (isRemembering ? 0xFFD700 : 0x808080);
-        this.graphics.lineStyle(3, borderColor, alpha);
-        this.graphics.drawRoundedRect(-62, -48, 125, 97, 5);
+        // Border
+        this.graphics.lineStyle(3, 0x808080);
+        this.graphics.drawRoundedRect(-30, -30, 60, 60, 5);
 
-        // Central pivot/fulcrum (triangular support)
-        this.graphics.beginFill(0x696969, alpha);
-        this.graphics.moveTo(-10, 10);
-        this.graphics.lineTo(10, 10);
-        this.graphics.lineTo(0, -5);
-        this.graphics.lineTo(-10, 10);
+        // Simple balance beam
+        this.graphics.lineStyle(2, 0x404040);
+        this.graphics.moveTo(-25, 0);
+        this.graphics.lineTo(25, 0);
+
+        // Two pans (left and right)
+        this.graphics.beginFill(0xE0E0E0);
+        this.graphics.drawCircle(-15, -5, 10);
+        this.graphics.drawCircle(15, -5, 10);
         this.graphics.endFill();
 
-        // Calculate tilt angle based on state
-        let tiltAngle = 0;
-        let animationOffset = 0;
-
-        if (tiltState === 0) { // TOTTER
-            // Animate tottering back and forth
-            animationOffset = Math.sin(Date.now() / 200) * 10;
-        } else if (tiltState === 1) { // TILT_LEFT
-            tiltAngle = -15;
-        } else if (tiltState === 2) { // TILT_RIGHT
-            tiltAngle = 15;
-        } else if (tiltState === 3) { // BALANCED
-            tiltAngle = 0;
-        }
-
-        // Draw the beam (horizontal bar)
-        const beamLength = 50;
-        const beamY = -10;
-
-        this.graphics.lineStyle(4, 0x404040, alpha);
-        if (tiltState === 0) { // TOTTER - draw wavy
-            this.graphics.moveTo(-beamLength + animationOffset, beamY);
-            this.graphics.lineTo(beamLength - animationOffset, beamY);
-        } else {
-            // Draw tilted beam
-            const leftY = beamY - Math.tan(tiltAngle * Math.PI / 180) * beamLength;
-            const rightY = beamY + Math.tan(tiltAngle * Math.PI / 180) * beamLength;
-            this.graphics.moveTo(-beamLength, leftY);
-            this.graphics.lineTo(beamLength, rightY);
-        }
-
-        // Draw scale pans (dishes hanging from beam)
-        const panRadius = 12;
-        const leftPanY = beamY - Math.tan(tiltAngle * Math.PI / 180) * beamLength - 15;
-        const rightPanY = beamY + Math.tan(tiltAngle * Math.PI / 180) * beamLength - 15;
-
-        // Left pan
-        this.graphics.beginFill(0xE0E0E0, alpha);
-        this.graphics.drawEllipse(-beamLength, leftPanY, panRadius, panRadius * 0.4);
-        this.graphics.endFill();
-        this.graphics.lineStyle(2, 0x404040, alpha);
-        this.graphics.drawEllipse(-beamLength, leftPanY, panRadius, panRadius * 0.4);
-
-        // Right pan
-        this.graphics.beginFill(0xE0E0E0, alpha);
-        this.graphics.drawEllipse(beamLength, rightPanY, panRadius, panRadius * 0.4);
-        this.graphics.endFill();
-        this.graphics.lineStyle(2, 0x404040, alpha);
-        this.graphics.drawEllipse(beamLength, rightPanY, panRadius, panRadius * 0.4);
-
-        // Chains connecting pans to beam
-        this.graphics.lineStyle(1, 0x404040, alpha);
-        this.graphics.moveTo(-beamLength, beamY - Math.tan(tiltAngle * Math.PI / 180) * beamLength);
-        this.graphics.lineTo(-beamLength, leftPanY);
-        this.graphics.moveTo(beamLength, beamY + Math.tan(tiltAngle * Math.PI / 180) * beamLength);
-        this.graphics.lineTo(beamLength, rightPanY);
-
-        // Status label
-        const stateNames = ['TOTTER', 'LEFT', 'RIGHT', 'BALANCED', 'FROZEN', 'REMEMBER'];
-        const stateName = stateNames[tiltState] || 'UNKNOWN';
-
-        const statusText = new PIXI.Text(stateName, {
-            fontSize: 9,
-            fill: isFrozen ? 0x4169E1 : (isRemembering ? 0xFFD700 : 0xFFFFFF),
+        // Label
+        const label = new PIXI.Text('Scale', {
+            fontSize: 10,
+            fill: 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 2
         });
-        statusText.anchor.set(0.5);
-        statusText.y = 35;
-        statusText.alpha = alpha;
-        this.graphics.addChild(statusText);
+        label.anchor.set(0.5);
+        label.y = 20;
+        this.graphics.addChild(label);
     }
 
     private drawWand(): void {
