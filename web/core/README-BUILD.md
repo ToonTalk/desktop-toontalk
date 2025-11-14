@@ -26,14 +26,21 @@ This will:
 
 ### Building
 
-Once emsdk is activated, just run:
+The build script **automatically sources emsdk** if it's not already in PATH. You can run from:
 
+**Option 1: From project root (recommended)**
 ```bash
+bash build-wasm.sh
+```
+
+**Option 2: From web/core directory**
+```bash
+cd web/core
 bash build.sh
 ```
 
 The build script will:
-- Automatically source emsdk if needed
+- Automatically detect and source emsdk if needed (no manual activation required!)
 - Create a build directory
 - Compile the C++ code to WebAssembly
 - Copy the output files to `web/public/core/build/`
@@ -48,14 +55,16 @@ These are automatically copied to `web/public/core/build/` for use by the web ap
 
 ## For Each New Shell Session
 
-When you open a new Git Bash terminal, you need to reactivate Emscripten:
+**Good news:** The build script automatically sources emsdk, so you can just run:
 
 ```bash
-source web/core/setup-emsdk.sh
+# From anywhere in the project
+bash build-wasm.sh
 ```
 
-**OR** add this to your `~/.bash_profile` or `~/.bashrc` to automatically set it up:
+**Optional:** To have emsdk commands (like `emcc`) always available in your terminal without the build script, add this to your `~/.bash_profile`:
 
+**On Windows (Git Bash):**
 ```bash
 # Auto-setup Emscripten for ToonTalk
 if [ -f "$HOME/Documents/desktop-toontalk/web/core/emsdk/emsdk_env.sh" ]; then
@@ -63,7 +72,17 @@ if [ -f "$HOME/Documents/desktop-toontalk/web/core/emsdk/emsdk_env.sh" ]; then
 fi
 ```
 
-(Adjust the path to match your installation location)
+**On Linux/Mac:**
+```bash
+# Auto-setup Emscripten for ToonTalk
+if [ -f "$HOME/desktop-toontalk/web/core/emsdk/emsdk_env.sh" ]; then
+    source "$HOME/desktop-toontalk/web/core/emsdk/emsdk_env.sh" >/dev/null 2>&1
+fi
+```
+
+Then reload your profile: `source ~/.bash_profile`
+
+**Note:** Adjust the path to match where you cloned the repository.
 
 ## Manual Emscripten Setup
 
@@ -78,21 +97,47 @@ source emsdk_env.sh
 
 ## Troubleshooting
 
-### "emcc not found" error
+### "emcc not found" error when running build script
 
-Run: `source web/core/setup-emsdk.sh`
+The build script should automatically detect and source emsdk. If it's still failing:
+
+1. **Make sure you have the emsdk directory:**
+   ```bash
+   ls -la web/core/emsdk/emsdk_env.sh
+   ```
+   If this file doesn't exist, run the setup from web/core:
+   ```bash
+   cd web/core
+   git clone https://github.com/emscripten-core/emsdk.git
+   cd emsdk
+   python emsdk.py install latest
+   python emsdk.py activate latest
+   ```
+
+2. **Try running from the correct directory:**
+   ```bash
+   # From project root
+   bash build-wasm.sh
+
+   # OR from web/core
+   cd web/core && bash build.sh
+   ```
 
 ### "Python not found" error
 
 Make sure Python is in your PATH. On Windows with Git Bash:
 - Check: `which python` or `which python3`
-- If not found, install Python from python.org or use the full path: `/usr/local/bin/python`
+- If not found, install Python from python.org or use Git Bash's built-in: `/usr/local/bin/python`
 
-### Build fails
+### Build fails with errors
 
-1. Make sure emsdk is activated: `source setup-emsdk.sh`
-2. Check emcc version: `emcc --version`
-3. Clean and rebuild: `rm -rf build && bash build.sh`
+1. Clean the build directory: `rm -rf web/core/build`
+2. Try building again: `bash build-wasm.sh`
+3. Check for C++ syntax errors in the output
+
+### Wrong directory error
+
+If you see "Cannot find web/core directory", you're running the build-wasm.sh script from the wrong location. It should be run from the project root where build-wasm.sh is located.
 
 ## Development Workflow
 
