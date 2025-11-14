@@ -1,0 +1,83 @@
+# ToonTalk Web Port - Compiling Original C++ with JS Rendering
+cmake_minimum_required(VERSION 3.10)
+project(ToonTalkWasm)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Emscripten-specific flags
+if(EMSCRIPTEN)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s WASM=1")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s ALLOW_MEMORY_GROWTH=1")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s NO_EXIT_RUNTIME=1")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s EXPORTED_RUNTIME_METHODS=['ccall','cwrap']")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s EXPORTED_FUNCTIONS=['_malloc','_free']")
+
+    # Enable embind for easier JS bindings
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --bind")
+
+    # Allow async operations
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s ASYNCIFY=1")
+endif()
+
+# Platform abstraction layer (our code)
+set(PLATFORM_SOURCES
+    platform/platform.cpp
+    platform/graphics.cpp
+    platform/input.cpp
+    platform/audio.cpp
+)
+
+# Original ToonTalk sources we'll compile
+# Start with core objects first
+set(TOONTALK_SOURCES
+    # Base classes
+    ../../source/sprite.cpp
+    ../../source/animate.cpp
+
+    # Core objects
+    ../../source/number.cpp
+    ../../source/text.cpp
+    ../../source/cubby.cpp
+    ../../source/pad.cpp
+    ../../source/picture.cpp
+    ../../source/robot.cpp
+
+    # Support
+    ../../source/sprites.cpp
+    ../../source/globals.cpp
+    ../../source/utils.cpp
+
+    # Math
+    ../../source/numvalue.cpp
+)
+
+# Stub out Windows-specific files we don't need
+set(STUB_SOURCES
+    stubs/windows_stubs.cpp
+    stubs/directx_stubs.cpp
+)
+
+add_executable(toontalk
+    ${PLATFORM_SOURCES}
+    ${TOONTALK_SOURCES}
+    ${STUB_SOURCES}
+    bindings.cpp
+)
+
+# Include directories
+target_include_directories(toontalk PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/platform
+    ${CMAKE_CURRENT_SOURCE_DIR}/stubs
+    ${CMAKE_CURRENT_SOURCE_DIR}/../../source
+)
+
+# GMP for arbitrary precision math
+# (Emscripten has GMP port available)
+target_link_libraries(toontalk gmp)
+
+if(EMSCRIPTEN)
+    set_target_properties(toontalk PROPERTIES
+        SUFFIX ".js"
+        LINK_FLAGS "--bind -s MODULARIZE=1 -s EXPORT_NAME='createToonTalkModule'"
+    )
+endif()
