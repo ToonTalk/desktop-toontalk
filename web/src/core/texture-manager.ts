@@ -43,6 +43,7 @@ export class TextureManager {
             'number': '/assets/sprites/number.png',
             'text': '/assets/sprites/text.png',
             'robot': '/assets/sprites/robot.png',
+            'scale': '/assets/sprites/scale.png',
             'wand': '/assets/sprites/wand.png',
             'background': '/assets/backgrounds/city.png'
         };
