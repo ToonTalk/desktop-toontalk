@@ -1148,6 +1148,7 @@ export class WasmSpriteView {
     private drawBox(): void {
         const box = this.wasmSprite as ToonTalkBox;
         const numHoles = box.getNumHoles();
+        const isBlank = box.isBlank();
 
         // Get WASM dimensions (game world coordinates)
         const width = this.wasmSprite.getWidth();
@@ -1158,14 +1159,27 @@ export class WasmSpriteView {
         const PEG_WIDTH = 20;
         const WALL_WIDTH = PEG_WIDTH; // Wall between holes
 
-        // Brown box background
-        this.graphics.beginFill(0x8B4513);
+        // Color scheme: brown for regular, lighter brown for blank
+        const fillColor = isBlank ? 0xA0826D : 0x8B4513;
+        const borderColor = 0x654321;
+        const alpha = isBlank ? 0.7 : 1.0;
+
+        // Brown box background (classic ToonTalk wooden box)
+        this.graphics.beginFill(fillColor, alpha);
         this.graphics.drawRect(-width/2, -height/2, width, height);
         this.graphics.endFill();
 
-        // Outer border
-        this.graphics.lineStyle(3, 0x654321);
-        this.graphics.drawRect(-width/2, -height/2, width, height);
+        // Outer border (dashed if blank)
+        if (isBlank) {
+            this.graphics.lineStyle(3, borderColor, alpha);
+            const dashLength = 6;
+            const gapLength = 4;
+            // Draw dashed border for blank box
+            this.drawDashedRect(-width/2, -height/2, width, height, 0, dashLength, gapLength);
+        } else {
+            this.graphics.lineStyle(3, borderColor);
+            this.graphics.drawRect(-width/2, -height/2, width, height);
+        }
 
         // Draw each hole
         const holeWidth = PEG_WIDTH * 4; // Each hole is 4 pegs wide
@@ -1178,47 +1192,64 @@ export class WasmSpriteView {
             const holeY = -height/2 + WALL_WIDTH;
 
             // Hole interior (lighter brown)
-            this.graphics.beginFill(0xD2691E);
+            this.graphics.beginFill(0xD2691E, alpha);
             this.graphics.drawRect(holeX, holeY, holeWidth, holeHeight);
             this.graphics.endFill();
 
             // Hole border
-            this.graphics.lineStyle(2, 0x654321);
+            this.graphics.lineStyle(2, borderColor, alpha);
             this.graphics.drawRect(holeX, holeY, holeWidth, holeHeight);
 
-            // Show filled/empty state
-            if (box.isHoleFilled(i)) {
-                // Green checkmark or indicator for filled holes
+            // Show filled/empty state (unless blank box)
+            if (!isBlank && box.isHoleFilled(i)) {
+                // Green circle indicator for filled holes
                 this.graphics.beginFill(0x90EE90, 0.7);
                 this.graphics.drawCircle(holeX + holeWidth/2, holeY + holeHeight/2, 8);
                 this.graphics.endFill();
+            } else if (isBlank) {
+                // Show question mark in each hole for blank box
+                const blankText = new PIXI.Text('?', {
+                    fontSize: 18,
+                    fill: 0x999999,
+                    fontWeight: 'bold'
+                });
+                blankText.anchor.set(0.5);
+                blankText.x = holeX + holeWidth/2;
+                blankText.y = holeY + holeHeight/2;
+                blankText.alpha = alpha;
+                this.graphics.addChild(blankText);
             }
 
             // Show hole label if present
             const label = box.getHoleLabel(i);
             if (label && label.length > 0) {
                 const labelText = new PIXI.Text(label, {
-                    fontSize: 10,
-                    fill: 0x000000,
-                    fontWeight: 'bold'
+                    fontSize: 9,
+                    fill: 0xFFFFFF,
+                    fontWeight: 'bold',
+                    stroke: 0x000000,
+                    strokeThickness: 2
                 });
                 labelText.anchor.set(0.5, 1);
                 labelText.x = holeX + holeWidth/2;
-                labelText.y = holeY - 2;
+                labelText.y = holeY - 4;
+                labelText.alpha = alpha;
                 this.graphics.addChild(labelText);
             }
         }
 
         // Overall box status text at bottom
-        const statusText = new PIXI.Text(`${box.getCount()}/${numHoles}`, {
-            fontSize: 12,
-            fill: 0xFFFFFF,
+        const statusLabel = isBlank ? 'BLANK' : `${box.getCount()}/${numHoles}`;
+        const statusText = new PIXI.Text(statusLabel, {
+            fontSize: isBlank ? 10 : 12,
+            fill: isBlank ? 0xDDDDDD : 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 2
         });
         statusText.anchor.set(0.5);
         statusText.y = height/2 - 10;
+        statusText.alpha = alpha;
         this.graphics.addChild(statusText);
 
         this.textDisplay = statusText;
