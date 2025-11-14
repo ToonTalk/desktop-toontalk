@@ -30,25 +30,32 @@ if ! command -v emcc &> /dev/null; then
             done
 
             if [ -n "$PYTHON_EXE" ]; then
-                # Add Python directory directly to PATH (before Windows Store alias paths)
                 PYTHON_DIR=$(dirname "$PYTHON_EXE")
-                export PATH="$PYTHON_DIR:$PATH"
+                TEMP_BIN="$SCRIPT_DIR/.temp-bin"
+                mkdir -p "$TEMP_BIN"
 
-                # Create a python3 symlink/copy in Python's own directory if it doesn't exist
-                if [ ! -f "$PYTHON_DIR/python3.exe" ]; then
-                    # Try to create a copy of python.exe as python3.exe in the Python directory
-                    if cp "$PYTHON_EXE" "$PYTHON_DIR/python3.exe" 2>/dev/null; then
-                        echo "Created python3.exe in Python directory"
-                    else
-                        echo "Note: Could not create python3.exe (may need admin rights)"
-                    fi
-                fi
+                # Copy python.exe to temp bin as python3.exe
+                # The copied executable will find DLLs via PATH
+                cp "$PYTHON_EXE" "$TEMP_BIN/python3.exe" 2>/dev/null
+                cp "$PYTHON_EXE" "$TEMP_BIN/python.exe" 2>/dev/null
 
-                echo "Added Python directory to PATH: $PYTHON_DIR"
-                echo "Python executable: $PYTHON_EXE"
-                # Verify python3 can be found
+                # Add temp bin FIRST (for python3.exe), then Python dir (for DLLs)
+                export PATH="$TEMP_BIN:$PYTHON_DIR:$PATH"
+
+                echo "Created python executables in temp directory"
+                echo "Python directory: $PYTHON_DIR"
+
+                # Verify python3 resolves correctly
                 if command -v python3 &> /dev/null; then
-                    echo "python3 found at: $(command -v python3)"
+                    PYTHON3_PATH=$(command -v python3)
+                    echo "python3 resolved to: $PYTHON3_PATH"
+
+                    # Test if it actually works
+                    if "$PYTHON3_PATH" --version &> /dev/null; then
+                        echo "✓ python3 is working"
+                    else
+                        echo "✗ python3 found but not working"
+                    fi
                 fi
             fi
         fi
