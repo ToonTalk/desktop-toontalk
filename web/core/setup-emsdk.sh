@@ -40,12 +40,11 @@ EOF
         # Add temp bin to PATH FIRST
         export PATH="$TEMP_BIN:$PATH"
 
-        # Also set PYTHON environment variable that emsdk might use
-        export PYTHON="$PYTHON_EXE"
-        export EM_PYTHON="$PYTHON_EXE"
+        # Set EMSDK_PYTHON environment variable (emsdk wrapper script checks this first)
+        export EMSDK_PYTHON="$PYTHON_EXE"
 
         echo "Created Python wrapper in temporary bin directory"
-        echo "Set PYTHON=$PYTHON_EXE"
+        echo "Set EMSDK_PYTHON=$PYTHON_EXE"
     fi
 fi
 
