@@ -16,15 +16,50 @@ namespace toontalk {
 
 /**
  * Number class - Represents a numerical value
+ * Based on ToonTalk documentation (number.htm and newnum.htm)
+ *
+ * Operations supported:
+ * - Basic: + (add), - (subtract/negative), * or x (multiply), / (divide), % (remainder), = (set)
+ * - Power: ^ (exponentiation, added in version 2.50+)
+ * - Bitwise: ~ (complement), & (and), | (or)
+ *
+ * Advanced features (from documentation):
+ * - Arbitrarily large integers (limited only by memory)
+ * - Exact rational numbers (fractions like 4/3)
+ * - Composite operations (e.g., "/5 then +2")
+ * - Inexact numbers (from trig/log ops, displayed in gray)
+ * - Multiple display formats for fractions
+ * - Base conversion (bases 2-36)
+ * - Blank numbers for type testing/conversion
+ *
+ * Interactions:
+ * - Drop on notebook: Go to that page number
+ * - Drop on text pad: Change first/last letter by that amount
+ * - Drop on blank number: Converts box->size, team->count, text->number
+ * - Drop on zero or box size: Creates zero-holed box
+ *
+ * Note: This implementation uses double for simplicity. Full ToonTalk supports
+ * arbitrary precision integers and exact rational numbers.
  */
 class Number : public Sprite {
 public:
     Number(float x, float y, double value = 0.0)
-        : Sprite(x, y, 80.0f, 60.0f), value_(value) {}
+        : Sprite(x, y, 80.0f, 60.0f),
+          value_(value),
+          is_blank_(false),
+          is_operation_(false) {}
 
     // Get/set the numerical value
     double getValue() const { return value_; }
     void setValue(double v) { value_ = v; }
+
+    // Blank number state (for type testing)
+    bool isBlank() const { return is_blank_; }
+    void setBlank(bool blank) { is_blank_ = blank; }
+
+    // Operation state (e.g., "/5" is an operation, not a number)
+    bool isOperation() const { return is_operation_; }
+    void setOperation(bool op) { is_operation_ = op; }
 
     // Arithmetic operations
     void add(double amount) { value_ += amount; }
@@ -35,9 +70,31 @@ public:
             value_ /= amount;
         }
     }
+    void remainder(double amount) {
+        if (amount != 0.0) {
+            value_ = fmod(value_, amount);
+        }
+    }
+    void power(double exponent) {
+        value_ = pow(value_, exponent);
+    }
+
+    // Bitwise operations (for advanced users)
+    void bitwiseNot() {
+        value_ = ~static_cast<long>(value_);
+    }
+    void bitwiseAnd(double other) {
+        value_ = static_cast<long>(value_) & static_cast<long>(other);
+    }
+    void bitwiseOr(double other) {
+        value_ = static_cast<long>(value_) | static_cast<long>(other);
+    }
 
     // Get string representation
     std::string toString() const {
+        if (is_blank_) {
+            return "[blank]";
+        }
         std::ostringstream oss;
         // Format with 2 decimal places if not a whole number
         if (value_ == static_cast<long>(value_)) {
@@ -56,24 +113,98 @@ public:
 
 private:
     double value_;
+    bool is_blank_;      // Blank number for type testing
+    bool is_operation_;  // Is this an operation like "/5"?
 };
 
 /**
- * Text class - Represents a text string
+ * Text class - Represents a text pad with string content
+ * Based on ToonTalk documentation (text.htm)
+ *
+ * Features:
+ * - Two font types: Fixed width (like 'A' in Tooly) and Variable width (in notebooks)
+ * - Can add new lines with Enter key
+ * - Combining: Drop text on another combines them (left/right side matters)
+ * - Blank text pads: For type testing in robot thought bubbles
+ * - Can flip over to access remote controls (color, visibility)
+ * - Arrow keys to edit and change insertion point
+ *
+ * Interactions:
+ * - Drop on notebook: Find page with that text
+ * - Drop number on text: Change first/last letter by that amount
+ * - Drop on blank text: Converts number->text
+ * - Drop on blank box: "Explodes" text into individual letters in holes
+ *
+ * Font types:
+ * - Fixed width: Each character same width (W same as I)
+ * - Variable width: Natural character widths, easier to read
  */
 class Text : public Sprite {
 public:
+    enum FontType {
+        FIXED_WIDTH = 0,    // Fixed width font (like 'A' in Tooly)
+        VARIABLE_WIDTH = 1  // Variable width font (used in notebooks)
+    };
+
     Text(float x, float y, const std::string& text = "")
-        : Sprite(x, y, 100.0f, 40.0f), text_(text) {}
+        : Sprite(x, y, 100.0f, 40.0f),
+          text_(text),
+          font_type_(FIXED_WIDTH),
+          is_blank_(false),
+          insertion_point_(text.length()) {}
 
     // Get/set text
     std::string getText() const { return text_; }
-    void setText(const std::string& text) { text_ = text; }
+    void setText(const std::string& text) {
+        text_ = text;
+        insertion_point_ = text.length();
+    }
+
+    // Font type
+    FontType getFontType() const { return font_type_; }
+    void setFontType(FontType type) { font_type_ = type; }
+
+    // Blank text state (for type testing)
+    bool isBlank() const { return is_blank_; }
+    void setBlank(bool blank) { is_blank_ = blank; }
+
+    // Insertion point (cursor position for editing)
+    size_t getInsertionPoint() const { return insertion_point_; }
+    void setInsertionPoint(size_t pos) {
+        insertion_point_ = std::min(pos, text_.length());
+    }
 
     // Text operations
-    void append(const std::string& str) { text_ += str; }
-    void clear() { text_ = ""; }
+    void append(const std::string& str) {
+        text_ += str;
+        insertion_point_ = text_.length();
+    }
+    void clear() {
+        text_ = "";
+        insertion_point_ = 0;
+    }
     size_t length() const { return text_.length(); }
+
+    // Combining text pads (drop on left or right)
+    void combineLeft(const std::string& other) {
+        text_ = other + text_;
+        insertion_point_ += other.length();
+    }
+    void combineRight(const std::string& other) {
+        text_ = text_ + other;
+    }
+
+    // Change first or last letter by number
+    void changeFirstLetter(int amount) {
+        if (!text_.empty()) {
+            text_[0] = static_cast<char>(text_[0] + amount);
+        }
+    }
+    void changeLastLetter(int amount) {
+        if (!text_.empty()) {
+            text_[text_.length() - 1] = static_cast<char>(text_[text_.length() - 1] + amount);
+        }
+    }
 
     // Override update
     void update(float deltaTime) override {
@@ -83,11 +214,37 @@ public:
 
 private:
     std::string text_;
+    FontType font_type_;
+    bool is_blank_;
+    size_t insertion_point_;
 };
 
 /**
- * Box class - Container with multiple holes, like original ToonTalk Cubby
- * Based on ../source/cubby.h and ../source/cubby.cpp
+ * Box class - Container with multiple holes for storing items
+ * Based on ToonTalk documentation (box.htm) and ../source/cubby.h
+ *
+ * Features:
+ * - Can store anything except Tooly, Dusty, Pumpy, and Maggie (magic wand)
+ * - Number of holes: 0-9, changeable while holding by typing number
+ * - If new size smaller, extra part on right drops off
+ * - Labels: Point under hole and type to add label (robots ignore labels)
+ * - Zero-holed boxes: Type 0 or drop on number equal to box size
+ *
+ * Operations:
+ * - Join boxes: Drop box on edge of another with overlap
+ * - Break box: Drop on number N - splits into box with N holes and remainder
+ * - Blank boxes: Made with Dusty, for type testing in thought bubbles
+ *
+ * Advanced features:
+ * - Array indexing: Drop box on number to split at that position
+ * - Type coercion (blank boxes):
+ *   - Drop text pad -> explodes into letters in holes
+ *   - Drop team of robots -> each robot in separate hole
+ *   - Drop notebook -> one hole per page
+ *
+ * Example: Box with 5 holes dropped on 3 creates:
+ *   - Box with 3 holes (left piece)
+ *   - Box with 2 holes (right piece)
  */
 class Box : public Sprite {
 public:
@@ -95,7 +252,8 @@ public:
         : Sprite(x, y, calculateWidth(num_holes), 100.0f),
           num_holes_(num_holes),
           holes_filled_(num_holes, false),
-          labels_(num_holes, "") {
+          labels_(num_holes, ""),
+          is_blank_(false) {
         updateDimensions();
     }
 
@@ -108,6 +266,10 @@ public:
         labels_.resize(num, "");
         updateDimensions();
     }
+
+    // Blank box state (for type testing - doesn't care about size)
+    bool isBlank() const { return is_blank_; }
+    void setBlank(bool blank) { is_blank_ = blank; }
 
     // Hole-specific operations
     bool isHoleFilled(size_t index) const {
@@ -191,6 +353,7 @@ private:
     size_t num_holes_;
     std::vector<bool> holes_filled_;
     std::vector<std::string> labels_;
+    bool is_blank_;  // Blank box for type testing
 
     // Calculate width based on number of holes (like original ToonTalk)
     // Original: width = (5*number_of_holes+1)*peg_width
@@ -287,26 +450,100 @@ private:
 };
 
 /**
- * Scale class - Copy tool for duplicating objects
- * Based on ../source/scale.cpp - simplified version
+ * Scale class - Comparison tool that tilts to show which item is bigger/heavier
+ * Based on ToonTalk documentation (scale.htm)
+ *
+ * Scales compare two items placed in holes on either side:
+ * - Numbers: Tilts toward bigger/heavier number
+ * - Text: Tilts toward one that comes later in alphabetical order
+ * - Pictures: User pictures by filename, heavier than built-in pictures
+ *
+ * Scale states:
+ * - TOTTER: No comparison or empty holes (totters back and forth)
+ * - TILT_LEFT: Left side is greater
+ * - TILT_RIGHT: Right side is greater
+ * - BALANCED: Both sides are equal
+ * - FROZEN: Manually frozen with '.' key
+ * - REMEMBERING: Erased with Dusty, remembers previous tilt
  */
 class Scale : public Sprite {
 public:
-    Scale(float x, float y)
-        : Sprite(x, y, 60.0f, 60.0f), active_(false) {}
+    enum TiltState {
+        TOTTER = 0,      // Tottering back and forth (empty or unknown)
+        TILT_LEFT = 1,   // Tilts to left (left > right)
+        TILT_RIGHT = 2,  // Tilts to right (right > left)
+        BALANCED = 3,    // Both sides equal
+        FROZEN = 4,      // Manually frozen
+        REMEMBERING = 5  // Erased but remembering previous state
+    };
 
-    // Get/set active state (being used to copy)
+    Scale(float x, float y)
+        : Sprite(x, y, 125.0f, 97.0f), // Size from documentation image
+          tilt_state_(TOTTER),
+          active_(false),
+          frozen_(false),
+          remembering_(false) {}
+
+    // Get/set tilt state
+    TiltState getTiltState() const { return tilt_state_; }
+    void setTiltState(TiltState state) { tilt_state_ = state; }
+
+    // Get/set active state (currently being used)
     bool isActive() const { return active_; }
     void setActive(bool active) { active_ = active; }
+
+    // Frozen state (pressed '.' key)
+    bool isFrozen() const { return frozen_; }
+    void setFrozen(bool frozen) {
+        frozen_ = frozen;
+        if (frozen) {
+            tilt_state_ = FROZEN;
+        }
+    }
+
+    // Remembering state (erased with Dusty)
+    bool isRemembering() const { return remembering_; }
+    void setRemembering(bool remembering) {
+        remembering_ = remembering;
+        if (remembering) {
+            tilt_state_ = REMEMBERING;
+        }
+    }
+
+    // Cycle through states ('+' or '-' keys)
+    void nextState() {
+        int state = static_cast<int>(tilt_state_);
+        state = (state + 1) % 6;
+        tilt_state_ = static_cast<TiltState>(state);
+    }
+
+    void previousState() {
+        int state = static_cast<int>(tilt_state_);
+        state = (state - 1 + 6) % 6;
+        tilt_state_ = static_cast<TiltState>(state);
+    }
+
+    // Compare neighbors (space bar)
+    void compareNeighbors() {
+        // This would check adjacent items and update tilt_state_
+        // Implementation depends on integration with game engine
+        if (!frozen_ && !remembering_) {
+            // Reset to totter if not frozen/remembering
+            tilt_state_ = TOTTER;
+        }
+    }
 
     // Override update
     void update(float deltaTime) override {
         Sprite::update(deltaTime);
-        // Scales don't move on their own
+        // Scales don't move on their own, but may animate tilting
     }
 
 private:
+    TiltState tilt_state_;
     bool active_;
+    bool frozen_;
+    bool remembering_;
 };
 
 /**

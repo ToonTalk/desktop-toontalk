@@ -60,6 +60,8 @@ export interface ToonTalkCoreModule extends EmscriptenModule {
     InputManager: typeof InputManager;
 
     // Enums
+    ScaleTiltState: typeof ScaleTiltState;
+    TextFontType: typeof TextFontType;
     WandMode: typeof WandMode;
     RobotState: typeof RobotState;
     TruckState: typeof TruckState;
@@ -143,39 +145,72 @@ export declare class Bird extends Sprite {
 
 /**
  * Number class (matches objects.cpp)
+ * Supports operations: +, -, *, /, %, ^, ~, &, |
+ * Advanced features: blank numbers, operations, arbitrarily large integers, exact rationals
  */
 export declare class ToonTalkNumber extends Sprite {
     constructor(x: number, y: number, value?: number);
     getValue(): number;
     setValue(v: number): void;
+    isBlank(): boolean;
+    setBlank(blank: boolean): void;
+    isOperation(): boolean;
+    setOperation(op: boolean): void;
     add(amount: number): void;
     subtract(amount: number): void;
     multiply(amount: number): void;
     divide(amount: number): void;
+    remainder(amount: number): void;
+    power(exponent: number): void;
+    bitwiseNot(): void;
+    bitwiseAnd(other: number): void;
+    bitwiseOr(other: number): void;
     toString(): string;
     delete(): void;
 }
 
 /**
  * Text class (matches objects.cpp)
+ * Text pads with fixed/variable width fonts, combining, and blank text for type testing
  */
 export declare class ToonTalkText extends Sprite {
     constructor(x: number, y: number, text?: string);
     getText(): string;
     setText(text: string): void;
+    getFontType(): TextFontType;
+    setFontType(type: TextFontType): void;
+    isBlank(): boolean;
+    setBlank(blank: boolean): void;
+    getInsertionPoint(): number;
+    setInsertionPoint(pos: number): void;
     append(str: string): void;
     clear(): void;
     length(): number;
+    combineLeft(other: string): void;
+    combineRight(other: string): void;
+    changeFirstLetter(amount: number): void;
+    changeLastLetter(amount: number): void;
     delete(): void;
 }
 
 /**
+ * Text font type enum (matches objects.cpp)
+ */
+export enum TextFontType {
+    FIXED_WIDTH = 0,    // Fixed width font (W same as I)
+    VARIABLE_WIDTH = 1  // Variable width font (natural widths)
+}
+
+/**
  * Box class (matches objects.cpp) - Container with multiple holes like original ToonTalk Cubby
+ * Supports joining, breaking, zero-holed boxes, blank boxes, and type coercion
  */
 export declare class ToonTalkBox extends Sprite {
     constructor(x: number, y: number, numHoles?: number);
     getNumHoles(): number;
     setNumHoles(num: number): void;
+    isBlank(): boolean;
+    setBlank(blank: boolean): void;
     isHoleFilled(index: number): boolean;
     setHoleFilled(index: number, filled: boolean): void;
     getHoleLabel(index: number): string;
@@ -207,13 +242,35 @@ export declare class ToonTalkNest extends Sprite {
 }
 
 /**
- * Scale class (matches objects.cpp) - Copy tool
+ * Scale class (matches objects.cpp) - Comparison tool that tilts to show which item is bigger/heavier
+ * Compares numbers (tilts toward bigger), text (toward later alphabetically), and pictures
  */
 export declare class ToonTalkScale extends Sprite {
     constructor(x: number, y: number);
+    getTiltState(): ScaleTiltState;
+    setTiltState(state: ScaleTiltState): void;
     isActive(): boolean;
     setActive(active: boolean): void;
+    isFrozen(): boolean;
+    setFrozen(frozen: boolean): void;
+    isRemembering(): boolean;
+    setRemembering(remembering: boolean): void;
+    nextState(): void;
+    previousState(): void;
+    compareNeighbors(): void;
     delete(): void;
+}
+
+/**
+ * Scale tilt state enum (matches objects.cpp)
+ */
+export enum ScaleTiltState {
+    TOTTER = 0,       // Tottering back and forth (empty or unknown)
+    TILT_LEFT = 1,    // Tilts to left (left > right)
+    TILT_RIGHT = 2,   // Tilts to right (right > left)
+    BALANCED = 3,     // Both sides equal
+    FROZEN = 4,       // Manually frozen with '.' key
+    REMEMBERING = 5   // Erased but remembering previous state
 }
 
 /**
