@@ -16,6 +16,9 @@ public:
     Sprite(float x, float y, float width, float height);
     virtual ~Sprite() {}
 
+    // Unique ID
+    int getId() const;
+
     // Position
     float getX() const;
     float getY() const;
@@ -51,6 +54,7 @@ public:
     bool isDragging() const;
 
 protected:
+    int id_;
     float x_, y_;
     float width_, height_;
     float rotation_;
@@ -59,6 +63,9 @@ protected:
     // Drag state
     bool dragging_;
     float dragOffsetX_, dragOffsetY_;
+
+    // Static ID counter
+    static int nextId_;
 };
 
 } // namespace toontalk

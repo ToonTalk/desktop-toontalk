@@ -12,6 +12,7 @@ export class ToonTalkRenderer {
     private stage: PIXI.Container;
     private demoSprite?: PIXI.Graphics;
     private wasmSprites: WasmSpriteView[] = [];
+    private spriteRegistry: Map<number, WasmSpriteView> = new Map();  // ID -> WasmSpriteView mapping
 
     constructor() {
         // Create PixiJS application with options (v7 uses constructor, not init())
@@ -59,7 +60,12 @@ export class ToonTalkRenderer {
      */
     addWasmSprite(spriteView: WasmSpriteView): void {
         this.wasmSprites.push(spriteView);
-        console.log(`[Renderer] Added WASM sprite (total: ${this.wasmSprites.length})`);
+
+        // Register sprite by ID for box storage
+        const spriteId = spriteView.getWasmSprite().getId();
+        this.spriteRegistry.set(spriteId, spriteView);
+
+        console.log(`[Renderer] Added WASM sprite ID=${spriteId} (total: ${this.wasmSprites.length})`);
     }
 
     /**
@@ -69,9 +75,21 @@ export class ToonTalkRenderer {
         const index = this.wasmSprites.indexOf(spriteView);
         if (index !== -1) {
             this.wasmSprites.splice(index, 1);
+
+            // Unregister from registry
+            const spriteId = spriteView.getWasmSprite().getId();
+            this.spriteRegistry.delete(spriteId);
+
             spriteView.destroy();
-            console.log(`[Renderer] Removed WASM sprite (total: ${this.wasmSprites.length})`);
+            console.log(`[Renderer] Removed WASM sprite ID=${spriteId} (total: ${this.wasmSprites.length})`);
         }
+    }
+
+    /**
+     * Get sprite view by ID
+     */
+    getSpriteById(spriteId: number): WasmSpriteView | undefined {
+        return this.spriteRegistry.get(spriteId);
     }
 
     /**
@@ -80,6 +98,7 @@ export class ToonTalkRenderer {
     clearWasmSprites(): void {
         this.wasmSprites.forEach(sprite => sprite.destroy());
         this.wasmSprites = [];
+        this.spriteRegistry.clear();
         console.log('[Renderer] Cleared all WASM sprites');
     }
 

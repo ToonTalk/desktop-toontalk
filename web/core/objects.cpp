@@ -397,7 +397,7 @@ public:
     Box(float x, float y, size_t num_holes = 1)
         : Sprite(x, y, calculateWidth(num_holes), 100.0f),
           num_holes_(num_holes),
-          holes_filled_(num_holes, false),
+          hole_sprite_ids_(num_holes, 0),  // 0 means empty
           labels_(num_holes, ""),
           is_blank_(false) {
         updateDimensions();
@@ -408,7 +408,7 @@ public:
 
     void setNumHoles(size_t num) {
         num_holes_ = num;
-        holes_filled_.resize(num, false);
+        hole_sprite_ids_.resize(num, 0);
         labels_.resize(num, "");
         updateDimensions();
     }
@@ -417,14 +417,28 @@ public:
     bool isBlank() const { return is_blank_; }
     void setBlank(bool blank) { is_blank_ = blank; }
 
-    // Hole-specific operations
+    // Hole-specific operations (sprite ID-based)
+    int getHoleSpriteId(size_t index) const {
+        if (index < hole_sprite_ids_.size()) {
+            return hole_sprite_ids_[index];
+        }
+        return 0;
+    }
+
+    void setHoleSpriteId(size_t index, int sprite_id) {
+        if (index < hole_sprite_ids_.size()) {
+            hole_sprite_ids_[index] = sprite_id;
+        }
+    }
+
     bool isHoleFilled(size_t index) const {
-        return index < holes_filled_.size() && holes_filled_[index];
+        return index < hole_sprite_ids_.size() && hole_sprite_ids_[index] != 0;
     }
 
     void setHoleFilled(size_t index, bool filled) {
-        if (index < holes_filled_.size()) {
-            holes_filled_[index] = filled;
+        // Legacy method - just sets to 1 if filled, 0 if not
+        if (index < hole_sprite_ids_.size()) {
+            hole_sprite_ids_[index] = filled ? 1 : 0;
         }
     }
 
@@ -446,8 +460,8 @@ public:
     // Container-level operations
     size_t getCount() const {
         size_t count = 0;
-        for (bool filled : holes_filled_) {
-            if (filled) count++;
+        for (int sprite_id : hole_sprite_ids_) {
+            if (sprite_id != 0) count++;
         }
         return count;
     }
@@ -456,17 +470,17 @@ public:
     bool isFull() const { return getCount() >= num_holes_; }
 
     void clear() {
-        for (size_t i = 0; i < holes_filled_.size(); ++i) {
-            holes_filled_[i] = false;
+        for (size_t i = 0; i < hole_sprite_ids_.size(); ++i) {
+            hole_sprite_ids_[i] = 0;
         }
     }
 
     // Legacy methods for backward compatibility
     bool addItem() {
-        // Fill first empty hole
-        for (size_t i = 0; i < holes_filled_.size(); ++i) {
-            if (!holes_filled_[i]) {
-                holes_filled_[i] = true;
+        // Fill first empty hole with placeholder ID (1)
+        for (size_t i = 0; i < hole_sprite_ids_.size(); ++i) {
+            if (hole_sprite_ids_[i] == 0) {
+                hole_sprite_ids_[i] = 1;  // Placeholder
                 return true;
             }
         }
@@ -474,14 +488,37 @@ public:
     }
 
     bool removeItem() {
-        // Empty last filled hole
-        for (int i = holes_filled_.size() - 1; i >= 0; --i) {
-            if (holes_filled_[i]) {
-                holes_filled_[i] = false;
+        // Empty last filled hole and return its sprite ID
+        for (int i = hole_sprite_ids_.size() - 1; i >= 0; --i) {
+            if (hole_sprite_ids_[i] != 0) {
+                hole_sprite_ids_[i] = 0;
                 return true;
             }
         }
         return false;
+    }
+
+    // New method: Add sprite to box by ID
+    bool addSpriteById(int sprite_id) {
+        for (size_t i = 0; i < hole_sprite_ids_.size(); ++i) {
+            if (hole_sprite_ids_[i] == 0) {
+                hole_sprite_ids_[i] = sprite_id;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // New method: Remove and return sprite ID from last filled hole
+    int removeSpriteById() {
+        for (int i = hole_sprite_ids_.size() - 1; i >= 0; --i) {
+            if (hole_sprite_ids_[i] != 0) {
+                int sprite_id = hole_sprite_ids_[i];
+                hole_sprite_ids_[i] = 0;
+                return sprite_id;
+            }
+        }
+        return 0;  // No sprite to remove
     }
 
     // Get visual representation info
@@ -497,7 +534,7 @@ public:
 
 private:
     size_t num_holes_;
-    std::vector<bool> holes_filled_;
+    std::vector<int> hole_sprite_ids_;  // Sprite IDs in each hole (0 = empty)
     std::vector<std::string> labels_;
     bool is_blank_;  // Blank box for type testing
 
@@ -4256,6 +4293,8 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("setNumHoles", &Box::setNumHoles)
         .function("isHoleFilled", &Box::isHoleFilled)
         .function("setHoleFilled", &Box::setHoleFilled)
+        .function("getHoleSpriteId", &Box::getHoleSpriteId)
+        .function("setHoleSpriteId", &Box::setHoleSpriteId)
         .function("getHoleLabel", &Box::getHoleLabel)
         .function("setHoleLabel", &Box::setHoleLabel)
         .function("getCount", &Box::getCount)
@@ -4263,6 +4302,8 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("isFull", &Box::isFull)
         .function("addItem", &Box::addItem)
         .function("removeItem", &Box::removeItem)
+        .function("addSpriteById", &Box::addSpriteById)
+        .function("removeSpriteById", &Box::removeSpriteById)
         .function("clear", &Box::clear)
         .function("getFullness", &Box::getFullness)
         .function("isBlank", &Box::isBlank)

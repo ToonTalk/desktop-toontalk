@@ -12,11 +12,17 @@
 
 namespace toontalk {
 
+// Static ID counter initialization
+int Sprite::nextId_ = 1;
+
 // Sprite implementation
 Sprite::Sprite(float x, float y, float width, float height)
-    : x_(x), y_(y), width_(width), height_(height),
+    : id_(nextId_++), x_(x), y_(y), width_(width), height_(height),
       rotation_(0.0f), visible_(true),
       dragging_(false), dragOffsetX_(0.0f), dragOffsetY_(0.0f) {}
+
+// Get unique ID
+int Sprite::getId() const { return id_; }
 
 // Position
 float Sprite::getX() const { return x_; }
@@ -112,6 +118,7 @@ using namespace toontalk;
 EMSCRIPTEN_BINDINGS(toontalk_core) {
     class_<Sprite>("Sprite")
         .constructor<float, float, float, float>()
+        .function("getId", &Sprite::getId)
         .function("getX", &Sprite::getX)
         .function("getY", &Sprite::getY)
         .function("setX", &Sprite::setX)
