@@ -139,14 +139,31 @@
 
         // Load WASM module
         let Module;
-        createToonTalkCore().then(mod => {
-            Module = mod;
-            window.ToonTalkRenderer.log('✅ WASM module loaded successfully!');
-            window.ToonTalkRenderer.log('Ready to test platform layer');
-        }).catch(err => {
-            window.ToonTalkRenderer.log('❌ Error loading WASM: ' + err);
-            console.error(err);
-        });
+
+        // Wait for the external script to load, then initialize WASM
+        function initWasm() {
+            if (typeof createToonTalkCore === 'undefined') {
+                window.ToonTalkRenderer.log('⏳ Waiting for WASM module to load...');
+                setTimeout(initWasm, 100);
+                return;
+            }
+
+            createToonTalkCore().then(mod => {
+                Module = mod;
+                window.ToonTalkRenderer.log('✅ WASM module loaded successfully!');
+                window.ToonTalkRenderer.log('Ready to test platform layer');
+            }).catch(err => {
+                window.ToonTalkRenderer.log('❌ Error loading WASM: ' + err);
+                console.error(err);
+            });
+        }
+
+        // Start initialization after page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initWasm);
+        } else {
+            initWasm();
+        }
 
         function testPlatform() {
             if (!Module) {
