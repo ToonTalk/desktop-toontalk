@@ -29,7 +29,9 @@ endif()
 set(CORE_SOURCES
     platform/platform.cpp
     stubs/windows_stubs.cpp
-    minimal/number.cpp
+    sprite.cpp
+    core.cpp
+    objects.cpp
     test_platform.cpp
 )
 
