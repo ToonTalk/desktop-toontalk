@@ -15,7 +15,8 @@ namespace toontalk {
 // Sprite implementation
 Sprite::Sprite(float x, float y, float width, float height)
     : x_(x), y_(y), width_(width), height_(height),
-      rotation_(0.0f), visible_(true) {}
+      rotation_(0.0f), visible_(true),
+      dragging_(false), dragOffsetX_(0.0f), dragOffsetY_(0.0f) {}
 
 // Position
 float Sprite::getX() const { return x_; }
@@ -51,6 +52,28 @@ void Sprite::update(float deltaTime) {
 bool Sprite::containsPoint(float px, float py) const {
     return px >= x_ && px <= x_ + width_ &&
            py >= y_ && py <= y_ + height_;
+}
+
+// Drag methods
+void Sprite::startDrag(float mouseX, float mouseY) {
+    dragging_ = true;
+    dragOffsetX_ = mouseX - x_;
+    dragOffsetY_ = mouseY - y_;
+}
+
+void Sprite::updateDrag(float mouseX, float mouseY) {
+    if (dragging_) {
+        x_ = mouseX - dragOffsetX_;
+        y_ = mouseY - dragOffsetY_;
+    }
+}
+
+void Sprite::endDrag() {
+    dragging_ = false;
+}
+
+bool Sprite::isDragging() const {
+    return dragging_;
 }
 
 /**
@@ -104,7 +127,11 @@ EMSCRIPTEN_BINDINGS(toontalk_core) {
         .function("isVisible", &Sprite::isVisible)
         .function("setVisible", &Sprite::setVisible)
         .function("update", &Sprite::update)
-        .function("containsPoint", &Sprite::containsPoint);
+        .function("containsPoint", &Sprite::containsPoint)
+        .function("startDrag", &Sprite::startDrag)
+        .function("updateDrag", &Sprite::updateDrag)
+        .function("endDrag", &Sprite::endDrag)
+        .function("isDragging", &Sprite::isDragging);
 
     class_<Bird, base<Sprite>>("Bird")
         .constructor<float, float>()

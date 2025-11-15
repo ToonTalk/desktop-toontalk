@@ -44,11 +44,30 @@ public:
     // Returns the result
     double applyTo(double target) const;
 
+    // Mouse interaction methods
+    void startDrag(int mouseX, int mouseY);
+    void updateDrag(int mouseX, int mouseY);
+    void endDrag();
+    bool getDragging() const;
+
+    // Hit detection
+    bool containsPoint(int pointX, int pointY) const;
+
+    // Get position and size
+    int getX() const { return x; }
+    int getY() const { return y; }
+    int getWidth() const { return width; }
+    int getHeight() const { return height; }
+
 private:
     double value;
     NumberOperation operation;
     int x, y;           // Position
     int width, height;  // Size
+
+    // Drag state
+    bool isDragging;
+    int dragOffsetX, dragOffsetY;
 
     // Helper to get operation symbol
     const char* getOperationSymbol() const;
