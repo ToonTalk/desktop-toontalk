@@ -24,6 +24,9 @@ export class ToonTalkRenderer {
             antialias: true,
         });
         this.stage = new PIXI.Container();
+
+        // Enable z-index sorting for proper layering (drag to front behavior)
+        this.stage.sortableChildren = true;
     }
 
     async initialize(): Promise<void> {
