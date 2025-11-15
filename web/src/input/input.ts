@@ -343,14 +343,34 @@ export class InputManager {
         }
 
         // BOX: Remove/retrieve last item
-        if ('removeItem' in obj && 'getCount' in obj) {
+        if ('removeSpriteById' in obj && 'getCount' in obj) {
             const box = obj as any;
             const count = box.getCount();
             if (count > 0) {
-                box.removeItem();
-                console.log(`[Click] 📦 Removed item from Box (${box.getCount()}/${box.getNumHoles()} filled)`);
+                // Get the sprite ID from the box
+                const spriteId = box.removeSpriteById();
+                console.log(`[Click] 📦 Retrieved sprite ID=${spriteId} from Box (${box.getCount()}/${box.getNumHoles()} remaining)`);
+
+                // Retrieve the sprite from the registry
+                if (this.renderer && spriteId > 0) {
+                    const retrievedSprite = this.renderer.getSpriteById(spriteId);
+                    if (retrievedSprite) {
+                        // Re-add sprite to the scene
+                        this.renderer['wasmSprites'].push(retrievedSprite);
+                        retrievedSprite.getContainer().visible = true;
+                        this.renderer.getStage().addChild(retrievedSprite.getContainer());
+
+                        // Position it near the box
+                        const wasmSprite = retrievedSprite.getWasmSprite();
+                        wasmSprite.setPosition(box.getX() + 100, box.getY());
+
+                        console.log(`[Click] 📦 Sprite retrieved and placed at (${box.getX() + 100}, ${box.getY()})`);
+                    } else {
+                        console.log(`[Click] ⚠️ Warning: Sprite ID=${spriteId} not found in registry`);
+                    }
+                }
+
                 sprite.refresh();
-                // In full ToonTalk, this would create a sprite for the retrieved item
             } else {
                 console.log(`[Click] 📦 Box is empty`);
             }
@@ -445,17 +465,29 @@ export class InputManager {
         }
 
         // ANY + BOX: Store in box hole
-        if ('addItem' in target && 'getNumHoles' in target) {
+        if ('addSpriteById' in target && 'getNumHoles' in target) {
             const box = target as any;
             if (!box.isFull()) {
-                box.addItem();
-                console.log(`[Drop] Item added to Box (${box.getCount()}/${box.getNumHoles()} filled)`);
+                // Get the sprite's ID
+                const spriteId = dragged.getId();
+
+                // Store sprite by ID in box
+                box.addSpriteById(spriteId);
+                console.log(`[Drop] Sprite ID=${spriteId} stored in Box (${box.getCount()}/${box.getNumHoles()} filled)`);
 
                 // Refresh box visual to show new item
                 dropTarget.refresh();
 
-                // Destroy the dragged item (it's been stored in the box)
-                this.destroySprite(draggedSprite);
+                // Remove the sprite from the scene (it's now in the box)
+                // But DON'T destroy it - keep it in the registry for later retrieval
+                if (this.renderer) {
+                    const index = this.renderer['wasmSprites'].indexOf(draggedSprite);
+                    if (index !== -1) {
+                        this.renderer['wasmSprites'].splice(index, 1);
+                    }
+                    draggedSprite.getContainer().visible = false;
+                    draggedSprite.getContainer().removeFromParent();
+                }
             } else {
                 console.log(`[Drop] Box is full!`);
             }
