@@ -47,10 +47,6 @@ class ToonTalkWeb {
             container.appendChild(this.renderer.getView());
             this.updateStatus('Canvas mounted');
 
-            // Initialize input
-            this.inputManager.initialize(this.renderer.getView(), this.renderer);
-            this.updateStatus('Input system ready');
-
             // Load WASM module
             this.updateStatus('Loading WASM core...');
             const wasmCore = getWasmCore();
@@ -74,6 +70,10 @@ class ToonTalkWeb {
                 this.renderer.getView().height
             );
             this.updateStatus('Game engine ready');
+
+            // Initialize input (after game engine so we have camera transforms)
+            this.inputManager.initialize(this.renderer.getView(), this.renderer, gameEngine);
+            this.updateStatus('Input system ready');
 
             // Set up camera controls (like ToonTalk helicopter)
             this.setupCameraControls();
