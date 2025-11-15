@@ -350,6 +350,16 @@ export class InputManager {
     }
 
     /**
+     * Destroy a sprite (remove from renderer and clean up)
+     */
+    private destroySprite(sprite: WasmSpriteView): void {
+        if (this.renderer) {
+            this.renderer.removeWasmSprite(sprite);
+            console.log('[InputManager] Destroyed sprite');
+        }
+    }
+
+    /**
      * Handle drop interactions between sprites
      * Implements ToonTalk-style operations (Number + Number, Text + Text, Box storage, etc.)
      */
@@ -381,6 +391,9 @@ export class InputManager {
 
             // Refresh the visual display
             dropTarget.refresh();
+
+            // Destroy the dragged number (it's been consumed)
+            this.destroySprite(draggedSprite);
             return;
         }
 
@@ -394,6 +407,9 @@ export class InputManager {
 
             // Refresh the visual display
             dropTarget.refresh();
+
+            // Destroy the dragged text (it's been consumed)
+            this.destroySprite(draggedSprite);
             return;
         }
 
