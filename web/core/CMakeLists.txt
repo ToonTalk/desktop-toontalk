@@ -29,6 +29,7 @@ endif()
 set(CORE_SOURCES
     platform/platform.cpp
     stubs/windows_stubs.cpp
+    minimal/number.cpp
     test_platform.cpp
 )
 
@@ -36,6 +37,7 @@ set(CORE_SOURCES
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/platform
     ${CMAKE_CURRENT_SOURCE_DIR}/stubs
+    ${CMAKE_CURRENT_SOURCE_DIR}/minimal
 )
 
 # Create WASM library
