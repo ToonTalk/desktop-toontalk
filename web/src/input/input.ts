@@ -342,11 +342,52 @@ export class InputManager {
             return;
         }
 
+        // BOX: Remove/retrieve last item
+        if ('removeItem' in obj && 'getCount' in obj) {
+            const box = obj as any;
+            const count = box.getCount();
+            if (count > 0) {
+                box.removeItem();
+                console.log(`[Click] 📦 Removed item from Box (${box.getCount()}/${box.getNumHoles()} filled)`);
+                sprite.refresh();
+                // In full ToonTalk, this would create a sprite for the retrieved item
+            } else {
+                console.log(`[Click] 📦 Box is empty`);
+            }
+            return;
+        }
+
+        // NEST: Clear last occupied hole
+        if ('clearHole' in obj && 'countOccupied' in obj) {
+            const nest = obj as any;
+            const numHoles = nest.getNumHoles();
+            // Find last occupied hole and clear it
+            for (let i = numHoles - 1; i >= 0; i--) {
+                if (!nest.isHoleEmpty(i)) {
+                    nest.clearHole(i);
+                    console.log(`[Click] 🗂️ Cleared nest hole ${i} (${nest.countOccupied()}/${numHoles} occupied)`);
+                    sprite.refresh();
+                    // In full ToonTalk, this would create a sprite for the retrieved item
+                    break;
+                }
+            }
+            return;
+        }
+
         // NUMBER: Toggle between value and operation mode (future feature)
         // TEXT: Open for editing (future feature)
-        // BOX/NEST: Open to view contents (future feature)
 
         console.log('[Click] No click behavior defined for this object type');
+    }
+
+    /**
+     * Destroy a sprite (remove from renderer and clean up)
+     */
+    private destroySprite(sprite: WasmSpriteView): void {
+        if (this.renderer) {
+            this.renderer.removeWasmSprite(sprite);
+            console.log('[InputManager] Destroyed sprite');
+        }
     }
 
     /**
@@ -381,6 +422,9 @@ export class InputManager {
 
             // Refresh the visual display
             dropTarget.refresh();
+
+            // Destroy the dragged number (it's been consumed)
+            this.destroySprite(draggedSprite);
             return;
         }
 
@@ -394,6 +438,9 @@ export class InputManager {
 
             // Refresh the visual display
             dropTarget.refresh();
+
+            // Destroy the dragged text (it's been consumed)
+            this.destroySprite(draggedSprite);
             return;
         }
 
@@ -403,8 +450,12 @@ export class InputManager {
             if (!box.isFull()) {
                 box.addItem();
                 console.log(`[Drop] Item added to Box (${box.getCount()}/${box.getNumHoles()} filled)`);
-                // In full ToonTalk, we'd store a reference to the actual object
-                // For now, just increment the filled count
+
+                // Refresh box visual to show new item
+                dropTarget.refresh();
+
+                // Destroy the dragged item (it's been stored in the box)
+                this.destroySprite(draggedSprite);
             } else {
                 console.log(`[Drop] Box is full!`);
             }
@@ -421,6 +472,12 @@ export class InputManager {
                     if (nest.isHoleEmpty(i)) {
                         nest.setHole(i, true);
                         console.log(`[Drop] Filled nest hole ${i} (${nest.countOccupied()}/${numHoles} occupied)`);
+
+                        // Refresh nest visual to show new item
+                        dropTarget.refresh();
+
+                        // Destroy the dragged item (it's been stored in the nest)
+                        this.destroySprite(draggedSprite);
                         break;
                     }
                 }
