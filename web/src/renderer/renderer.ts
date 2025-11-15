@@ -152,15 +152,35 @@ export class ToonTalkRenderer {
      * Find the topmost sprite at a given position (excluding the one being dragged)
      */
     findSpriteAt(x: number, y: number, exclude?: WasmSpriteView): WasmSpriteView | null {
+        console.log(`[Renderer] findSpriteAt(${x.toFixed(2)}, ${y.toFixed(2)}) - checking ${this.wasmSprites.length} sprites`);
+
         // Check sprites in reverse order (top to bottom)
         for (let i = this.wasmSprites.length - 1; i >= 0; i--) {
             const sprite = this.wasmSprites[i];
-            if (sprite === exclude) continue;
+            if (sprite === exclude) {
+                console.log(`  [${i}] Skipping excluded sprite`);
+                continue;
+            }
 
-            if (sprite.containsPoint(x, y)) {
+            const wasmSprite = sprite.getWasmSprite();
+            const spriteX = wasmSprite.getX();
+            const spriteY = wasmSprite.getY();
+            const spriteW = wasmSprite.getWidth();
+            const spriteH = wasmSprite.getHeight();
+
+            console.log(`  [${i}] Sprite at (${spriteX.toFixed(2)}, ${spriteY.toFixed(2)}) size ${spriteW.toFixed(2)}x${spriteH.toFixed(2)}`);
+            console.log(`      Bounds: x[${spriteX.toFixed(2)} - ${(spriteX + spriteW).toFixed(2)}], y[${spriteY.toFixed(2)} - ${(spriteY + spriteH).toFixed(2)}]`);
+
+            const contains = sprite.containsPoint(x, y);
+            console.log(`      containsPoint(${x.toFixed(2)}, ${y.toFixed(2)}): ${contains}`);
+
+            if (contains) {
+                console.log(`  ✓ Found sprite at index ${i}`);
                 return sprite;
             }
         }
+
+        console.log('  ✗ No sprite found at position');
         return null;
     }
 

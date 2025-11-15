@@ -7,6 +7,7 @@
 
 import { ToonTalkRenderer } from '../renderer/renderer';
 import { WasmSpriteView } from '../renderer/wasm-sprite-view';
+import { GameEngine } from '../core/game-engine';
 
 export interface Point {
     x: number;
@@ -16,16 +17,19 @@ export interface Point {
 export class InputManager {
     private canvas?: HTMLCanvasElement;
     private renderer?: ToonTalkRenderer;
+    private gameEngine?: GameEngine;
     private mousePosition: Point = { x: 0, y: 0 };
     private keysPressed: Set<string> = new Set();
     private draggedSprite: WasmSpriteView | null = null;
 
-    initialize(canvas: HTMLCanvasElement, renderer?: ToonTalkRenderer): void {
+    initialize(canvas: HTMLCanvasElement, renderer?: ToonTalkRenderer, gameEngine?: GameEngine): void {
         this.canvas = canvas;
         this.renderer = renderer;
+        this.gameEngine = gameEngine;
         console.log('[InputManager] Initializing...', {
             canvas: canvas ? 'present' : 'missing',
             renderer: renderer ? 'present' : 'missing',
+            gameEngine: gameEngine ? 'present' : 'missing',
             canvasSize: canvas ? `${canvas.width}x${canvas.height}` : 'N/A'
         });
         this.setupEventListeners();
@@ -65,8 +69,18 @@ export class InputManager {
 
         // Update dragged sprite position
         if (this.draggedSprite) {
-            console.log('[InputManager] Dragging sprite to', this.mousePosition);
-            this.draggedSprite.getWasmSprite().updateDrag(this.mousePosition.x, this.mousePosition.y);
+            // Convert screen coordinates to world coordinates
+            let worldX = this.mousePosition.x;
+            let worldY = this.mousePosition.y;
+
+            if (this.gameEngine) {
+                const worldPos = this.gameEngine.screenToWorld(this.mousePosition.x, this.mousePosition.y);
+                worldX = worldPos.x;
+                worldY = worldPos.y;
+            }
+
+            console.log('[InputManager] Dragging sprite to world', worldX.toFixed(2), worldY.toFixed(2));
+            this.draggedSprite.getWasmSprite().updateDrag(worldX, worldY);
         }
     }
 
@@ -84,16 +98,27 @@ export class InputManager {
             return;
         }
 
-        console.log('[InputManager] Mouse down at', this.mousePosition);
+        // Convert screen coordinates to world coordinates
+        let worldX = this.mousePosition.x;
+        let worldY = this.mousePosition.y;
 
-        // Find sprite at mouse position
+        if (this.gameEngine) {
+            const worldPos = this.gameEngine.screenToWorld(this.mousePosition.x, this.mousePosition.y);
+            worldX = worldPos.x;
+            worldY = worldPos.y;
+            console.log(`[InputManager] Mouse down at screen(${this.mousePosition.x.toFixed(2)}, ${this.mousePosition.y.toFixed(2)}) -> world(${worldX.toFixed(2)}, ${worldY.toFixed(2)})`);
+        } else {
+            console.log('[InputManager] Mouse down at', this.mousePosition, '(no camera transform)');
+        }
+
+        // Find sprite at mouse position (in world coordinates)
         if (this.renderer) {
-            console.log('[InputManager] Looking for sprite at position');
-            const sprite = this.renderer.findSpriteAt(this.mousePosition.x, this.mousePosition.y);
+            console.log('[InputManager] Looking for sprite at world position');
+            const sprite = this.renderer.findSpriteAt(worldX, worldY);
             if (sprite) {
                 console.log('[InputManager] Found sprite! Starting drag');
                 this.draggedSprite = sprite;
-                sprite.getWasmSprite().startDrag(this.mousePosition.x, this.mousePosition.y);
+                sprite.getWasmSprite().startDrag(worldX, worldY);
             } else {
                 console.log('[InputManager] No sprite found at position');
             }
@@ -112,11 +137,21 @@ export class InputManager {
             // End the drag
             this.draggedSprite.getWasmSprite().endDrag();
 
-            // Check for drop target
+            // Convert screen coordinates to world coordinates for drop target check
+            let worldX = this.mousePosition.x;
+            let worldY = this.mousePosition.y;
+
+            if (this.gameEngine) {
+                const worldPos = this.gameEngine.screenToWorld(this.mousePosition.x, this.mousePosition.y);
+                worldX = worldPos.x;
+                worldY = worldPos.y;
+            }
+
+            // Check for drop target (in world coordinates)
             if (this.renderer) {
                 const dropTarget = this.renderer.findSpriteAt(
-                    this.mousePosition.x,
-                    this.mousePosition.y,
+                    worldX,
+                    worldY,
                     this.draggedSprite
                 );
 
