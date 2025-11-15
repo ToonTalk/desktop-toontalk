@@ -408,7 +408,7 @@ export class WasmSpriteView {
                 // Create or update sprite with texture
                 if (!this.sprite) {
                     this.sprite = new PIXI.Sprite(texture);
-                    this.sprite.anchor.set(0.5);
+                    this.sprite.anchor.set(0, 0);  // Top-left anchor to match WASM coordinates
                     this.container.addChild(this.sprite);
                 } else {
                     this.sprite.texture = texture;
