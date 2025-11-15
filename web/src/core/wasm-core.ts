@@ -884,12 +884,15 @@ export class WasmCore {
 
     /**
      * Create a Number instance from WASM
+     * Note: The WASM constructor signature is (value, x, y, width, height, operation)
+     * but we keep the function signature as (x, y, value) for backward compatibility
      */
-    createNumber(x: number, y: number, value: number = 0) {
+    createNumber(x: number, y: number, value: number = 0, width: number = 80, height: number = 60) {
         if (!this.module) {
             throw new Error('WASM module not loaded');
         }
-        return new this.module.Number(x, y, value);
+        // Reorder parameters to match WASM constructor: (value, x, y, width, height, operation)
+        return new this.module.Number(value, x, y, width, height, this.module.NumberOperation.NO_NUMBER_OPERATION);
     }
 
     /**

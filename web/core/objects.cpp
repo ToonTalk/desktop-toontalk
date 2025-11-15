@@ -54,11 +54,12 @@ enum NumberOperation {
  */
 class Number : public Sprite {
 public:
-    Number(float x, float y, double value = 0.0)
-        : Sprite(x, y, 80.0f, 60.0f),
+    Number(double value, float x, float y, float width = 80.0f, float height = 60.0f, NumberOperation op = NO_NUMBER_OPERATION)
+        : Sprite(x, y, width, height),
           value_(value),
           is_blank_(false),
-          is_operation_(false) {}
+          is_operation_(op != NO_NUMBER_OPERATION),
+          operation_(op) {}
 
     // Get/set the numerical value
     double getValue() const { return value_; }
@@ -71,6 +72,13 @@ public:
     // Operation state (e.g., "/5" is an operation, not a number)
     bool isOperation() const { return is_operation_; }
     void setOperation(bool op) { is_operation_ = op; }
+
+    // Get/set operation type
+    NumberOperation getOperationType() const { return operation_; }
+    void setOperationType(NumberOperation op) {
+        operation_ = op;
+        is_operation_ = (op != NO_NUMBER_OPERATION);
+    }
 
     // Arithmetic operations
     void add(double amount) { value_ += amount; }
@@ -124,8 +132,9 @@ public:
 
 private:
     double value_;
-    bool is_blank_;      // Blank number for type testing
-    bool is_operation_;  // Is this an operation like "/5"?
+    bool is_blank_;           // Blank number for type testing
+    bool is_operation_;       // Is this an operation like "/5"?
+    NumberOperation operation_;  // The operation type
 };
 
 /**
@@ -4070,7 +4079,7 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .value("NO_NUMBER_OPERATION", NO_NUMBER_OPERATION);
 
     class_<Number, base<Sprite>>("Number")
-        .constructor<float, float, double>()
+        .constructor<double, float, float, float, float, NumberOperation>()
         .function("getValue", &Number::getValue)
         .function("setValue", &Number::setValue)
         .function("add", &Number::add)
@@ -4086,6 +4095,8 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("setBlank", &Number::setBlank)
         .function("isOperation", &Number::isOperation)
         .function("setOperation", &Number::setOperation)
+        .function("getOperationType", &Number::getOperationType)
+        .function("setOperationType", &Number::setOperationType)
         .function("toString", &Number::toString);
 
     class_<Text, base<Sprite>>("Text")
