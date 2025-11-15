@@ -21,6 +21,10 @@ export class InputManager {
     private mousePosition: Point = { x: 0, y: 0 };
     private keysPressed: Set<string> = new Set();
     private draggedSprite: WasmSpriteView | null = null;
+    private mouseDownTime: number = 0;
+    private mouseDownPosition: Point = { x: 0, y: 0 };
+    private clickThreshold: number = 200; // milliseconds
+    private dragThreshold: number = 5; // pixels
 
     initialize(canvas: HTMLCanvasElement, renderer?: ToonTalkRenderer, gameEngine?: GameEngine): void {
         this.canvas = canvas;
@@ -98,6 +102,10 @@ export class InputManager {
             return;
         }
 
+        // Record mouse down time and position for click detection
+        this.mouseDownTime = Date.now();
+        this.mouseDownPosition = { ...this.mousePosition };
+
         // Convert screen coordinates to world coordinates
         let worldX = this.mousePosition.x;
         let worldY = this.mousePosition.y;
@@ -133,11 +141,20 @@ export class InputManager {
 
         console.log('[InputManager] Mouse up');
 
+        // Calculate time and distance since mouse down
+        const timeDelta = Date.now() - this.mouseDownTime;
+        const dx = this.mousePosition.x - this.mouseDownPosition.x;
+        const dy = this.mousePosition.y - this.mouseDownPosition.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // Determine if this was a click or a drag
+        const wasClick = timeDelta < this.clickThreshold && distance < this.dragThreshold;
+
         if (this.draggedSprite) {
             // End the drag
             this.draggedSprite.getWasmSprite().endDrag();
 
-            // Convert screen coordinates to world coordinates for drop target check
+            // Convert screen coordinates to world coordinates
             let worldX = this.mousePosition.x;
             let worldY = this.mousePosition.y;
 
@@ -147,16 +164,23 @@ export class InputManager {
                 worldY = worldPos.y;
             }
 
-            // Check for drop target (in world coordinates)
-            if (this.renderer) {
-                const dropTarget = this.renderer.findSpriteAt(
-                    worldX,
-                    worldY,
-                    this.draggedSprite
-                );
+            if (wasClick) {
+                // Handle click interaction
+                console.log('[InputManager] Detected click');
+                this.handleClickInteraction(this.draggedSprite);
+            } else {
+                // Check for drop target (in world coordinates)
+                console.log('[InputManager] Detected drag');
+                if (this.renderer) {
+                    const dropTarget = this.renderer.findSpriteAt(
+                        worldX,
+                        worldY,
+                        this.draggedSprite
+                    );
 
-                if (dropTarget) {
-                    this.handleDropInteraction(this.draggedSprite, dropTarget);
+                    if (dropTarget) {
+                        this.handleDropInteraction(this.draggedSprite, dropTarget);
+                    }
                 }
             }
 
@@ -215,44 +239,272 @@ export class InputManager {
     }
 
     /**
+     * Handle click interactions on sprites
+     * Implements ToonTalk tool behaviors (Wand, Bomb, Scale, etc.)
+     */
+    private handleClickInteraction(sprite: WasmSpriteView): void {
+        const obj = sprite.getWasmSprite();
+        console.log('[Click] Clicked on object');
+
+        // WAND: Cycle through creation modes
+        if ('nextMode' in obj && 'getModeInt' in obj) {
+            const wand = obj as any;
+            wand.nextMode();
+            const mode = wand.getModeInt();
+            const modes = ['Number', 'Text', 'Box', 'Nest', 'Bird'];
+            console.log(`[Click] ✨ Wand mode changed to: ${modes[mode] || mode}`);
+            return;
+        }
+
+        // BOMB: Arm/trigger bomb
+        if ('arm' in obj && 'getStateInt' in obj) {
+            const bomb = obj as any;
+            const state = bomb.getStateInt();
+            if (state === 0) { // INACTIVE
+                bomb.arm();
+                console.log('[Click] 💣 Bomb armed! Ticking...');
+            } else if (state === 1) { // ARMED
+                bomb.explode();
+                console.log('[Click] 💥 BOOM! Bomb exploded!');
+            } else {
+                bomb.reset();
+                console.log('[Click] Bomb reset');
+            }
+            return;
+        }
+
+        // SCALE: Cycle through comparison states
+        if ('nextState' in obj && 'getTiltState' in obj) {
+            const scale = obj as any;
+            scale.nextState();
+            const state = scale.getTiltState();
+            const states = ['Totter', 'Tilt Left', 'Tilt Right', 'Balanced', 'Frozen', 'Remembering'];
+            console.log(`[Click] ⚖️ Scale state: ${states[state] || state}`);
+            return;
+        }
+
+        // ROBOT: Toggle run/stop
+        if ('start' in obj && 'stop' in obj && 'getStateInt' in obj) {
+            const robot = obj as any;
+            const state = robot.getStateInt();
+            if (state === 0) { // IDLE
+                robot.start();
+                console.log('[Click] 🤖 Robot started!');
+            } else if (state === 1) { // RUNNING
+                robot.pause();
+                console.log('[Click] 🤖 Robot paused');
+            } else {
+                robot.stop();
+                console.log('[Click] 🤖 Robot stopped');
+            }
+            return;
+        }
+
+        // NOTEBOOK: Turn page
+        if ('nextPage' in obj && 'getCurrentPage' in obj) {
+            const notebook = obj as any;
+            notebook.nextPage();
+            const page = notebook.getCurrentPage();
+            console.log(`[Click] 📖 Notebook turned to page ${page}`);
+            return;
+        }
+
+        // SENSOR: Toggle active state
+        if ('isActive' in obj && 'setActive' in obj && 'getTypeInt' in obj) {
+            const sensor = obj as any;
+            const active = sensor.isActive();
+            sensor.setActive(!active);
+            const types = ['Mouse', 'Keyboard', 'Time', 'Collision'];
+            const type = types[sensor.getTypeInt()] || 'Unknown';
+            console.log(`[Click] 📡 ${type} sensor ${!active ? 'activated' : 'deactivated'}`);
+            return;
+        }
+
+        // MOUSE (arithmetic tool): Perform operation
+        if ('doOperation' in obj && 'getResult' in obj) {
+            const mouse = obj as any;
+            mouse.doOperation();
+            const result = mouse.getResult();
+            console.log(`[Click] 🖱️ Mouse calculation result: ${result}`);
+            return;
+        }
+
+        // NUMBER: Toggle between value and operation mode (future feature)
+        // TEXT: Open for editing (future feature)
+        // BOX/NEST: Open to view contents (future feature)
+
+        console.log('[Click] No click behavior defined for this object type');
+    }
+
+    /**
      * Handle drop interactions between sprites
-     * Implements ToonTalk-style operations (Number + Number, Text + Text, etc.)
+     * Implements ToonTalk-style operations (Number + Number, Text + Text, Box storage, etc.)
      */
     private handleDropInteraction(draggedSprite: WasmSpriteView, dropTarget: WasmSpriteView): void {
         const dragged = draggedSprite.getWasmSprite();
         const target = dropTarget.getWasmSprite();
 
-        // Check if both are Numbers
-        if ('getValue' in dragged && 'getValue' in target) {
-            const draggedNum = dragged as any; // Type as any to access Number methods
-            const targetNum = target as any;
+        console.log('[Drop] Checking interaction between objects');
 
-            // Get the dragged number's value
+        // NUMBER + NUMBER: Add values (or apply operation if dragged is an operation)
+        if ('getValue' in dragged && 'getValue' in target) {
+            const draggedNum = dragged as any;
+            const targetNum = target as any;
             const value = draggedNum.getValue();
 
-            // Add the dragged number's value to the target
-            // In the future, we'll check if dragged is an operation (e.g., "+ 5")
-            // and apply the operation accordingly
-            targetNum.add(value);
+            // Check if dragged number is an operation (has operation property)
+            if ('isOperation' in draggedNum && draggedNum.isOperation()) {
+                console.log(`[Drop] Applying operation to Number`);
+                // Apply the operation to target
+                if ('applyOperation' in targetNum) {
+                    targetNum.applyOperation(draggedNum.getOperation(), value);
+                }
+            } else {
+                // Simple addition
+                targetNum.add(value);
+            }
 
-            console.log(`[Drop] Number ${value} dropped on Number ${targetNum.getValue()}`);
-            console.log(`[Drop] Result: ${targetNum.getValue()}`);
+            console.log(`[Drop] Number ${value} → Number = ${targetNum.getValue()}`);
+            return;
         }
-        // Check if both are Text
-        else if ('getText' in dragged && 'getText' in target) {
+
+        // TEXT + TEXT: Concatenate
+        if ('getText' in dragged && 'getText' in target) {
             const draggedText = dragged as any;
             const targetText = target as any;
-
-            // Concatenate the dragged text to the target
             const text = draggedText.getText();
             targetText.append(text);
+            console.log(`[Drop] Text "${text}" → Text = "${targetText.getText()}"`);
+            return;
+        }
 
-            console.log(`[Drop] Text "${text}" appended to Text "${targetText.getText()}"`);
+        // ANY + BOX: Store in box hole
+        if ('addItem' in target && 'getNumHoles' in target) {
+            const box = target as any;
+            if (!box.isFull()) {
+                box.addItem();
+                console.log(`[Drop] Item added to Box (${box.getCount()}/${box.getNumHoles()} filled)`);
+                // In full ToonTalk, we'd store a reference to the actual object
+                // For now, just increment the filled count
+            } else {
+                console.log(`[Drop] Box is full!`);
+            }
+            return;
         }
-        // For other types, just log for now
-        else {
-            console.log('[Drop] Dropped sprite on another sprite (no interaction defined yet)');
+
+        // ANY + NEST: Fill nest hole
+        if ('setHole' in target && 'getNumHoles' in target) {
+            const nest = target as any;
+            if (!nest.isFull()) {
+                // Find first empty hole and fill it
+                const numHoles = nest.getNumHoles();
+                for (let i = 0; i < numHoles; i++) {
+                    if (nest.isHoleEmpty(i)) {
+                        nest.setHole(i, true);
+                        console.log(`[Drop] Filled nest hole ${i} (${nest.countOccupied()}/${numHoles} occupied)`);
+                        break;
+                    }
+                }
+            } else {
+                console.log(`[Drop] Nest is full!`);
+            }
+            return;
         }
+
+        // NUMBER + NOTEBOOK: Jump to page number
+        if ('getValue' in dragged && 'setCurrentPage' in target) {
+            const num = dragged as any;
+            const notebook = target as any;
+            const pageNum = Math.floor(num.getValue());
+            const maxPages = notebook.getNumPages();
+
+            if (pageNum >= 0 && pageNum < maxPages) {
+                notebook.setCurrentPage(pageNum);
+                console.log(`[Drop] Notebook jumped to page ${pageNum}`);
+            } else {
+                console.log(`[Drop] Page ${pageNum} out of range (0-${maxPages - 1})`);
+            }
+            return;
+        }
+
+        // ANY + NOTEBOOK: Store on current page
+        if ('setPageContent' in target && 'getCurrentPage' in target) {
+            const notebook = target as any;
+            const currentPage = notebook.getCurrentPage();
+            notebook.setPageContent(currentPage, true);
+            console.log(`[Drop] Content stored on notebook page ${currentPage}`);
+            return;
+        }
+
+        // NUMBER + SCALE: Update scale (for comparison)
+        if ('getValue' in dragged && 'compareNeighbors' in target) {
+            const scale = target as any;
+            scale.setActive(true);
+            console.log(`[Drop] Number placed on Scale for comparison`);
+            // In full ToonTalk, scale would compare left vs right values
+            return;
+        }
+
+        // BOMB + ANY: Destroy/remove target
+        if ('getStateInt' in dragged && 'getFuseTime' in dragged) {
+            const bomb = dragged as any;
+            // Check if this is actually a bomb (has explode method)
+            if ('explode' in bomb) {
+                console.log(`[Drop] 💣 BOOM! Bomb exploded the target!`);
+                bomb.explode();
+                // In full ToonTalk, this would remove/destroy the target sprite
+                // For now, just trigger the explosion animation
+                return;
+            }
+        }
+
+        // WAND + ANY: Create copy or transform based on wand mode
+        if ('getModeInt' in dragged && 'setActive' in dragged) {
+            const wand = dragged as any;
+            if ('nextMode' in wand) {
+                const mode = wand.getModeInt();
+                console.log(`[Drop] ✨ Wand used (mode ${mode})! Would create/transform object`);
+                // In full ToonTalk, wand would create new objects or transform existing ones
+                // Mode 0: CREATE_NUMBER, 1: CREATE_TEXT, 2: CREATE_BOX, 3: CREATE_NEST, 4: CREATE_BIRD
+                return;
+            }
+        }
+
+        // NUMBER + TEXT: Change first/last letter by amount
+        if ('getValue' in dragged && 'changeFirstLetter' in target) {
+            const num = dragged as any;
+            const text = target as any;
+            const amount = Math.floor(num.getValue());
+            text.changeFirstLetter(amount);
+            console.log(`[Drop] Number ${amount} changed first letter of Text`);
+            return;
+        }
+
+        // MOUSE (arithmetic tool) + NUMBER: Perform operation
+        if ('doOperation' in dragged && 'getValue' in target) {
+            const mouse = dragged as any;
+            const num = target as any;
+            if ('getOperand1' in mouse) {
+                mouse.setOperand2(num.getValue());
+                mouse.doOperation();
+                const result = mouse.getResult();
+                console.log(`[Drop] Mouse arithmetic result: ${result}`);
+                num.setValue(result);
+                return;
+            }
+        }
+
+        // ROBOT: Training mode - record actions
+        if ('train' in target && 'getInstructionCount' in target) {
+            const robot = target as any;
+            console.log(`[Drop] 🤖 Robot is watching and learning this action...`);
+            robot.addInstruction();
+            console.log(`[Drop] Robot now has ${robot.getInstructionCount()} instructions`);
+            return;
+        }
+
+        // Default: No specific interaction defined
+        console.log('[Drop] No specific interaction defined for these object types');
     }
 
     destroy(): void {
