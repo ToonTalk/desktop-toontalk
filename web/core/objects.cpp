@@ -14,6 +14,17 @@
 
 namespace toontalk {
 
+// NumberOperation enum (from minimal/number.h for compatibility)
+enum NumberOperation {
+    SUBTRACT_FROM = 0,    // -
+    MULTIPLY_BY,          // *
+    INCREASE_BY,          // +
+    DIVIDE_BY,            // /
+    MODULUS_BY,           // %
+    MAKE_EQUAL,           // =
+    NO_NUMBER_OPERATION   // Regular number (not an operation)
+};
+
 /**
  * Number class - Represents a numerical value
  * Based on ToonTalk documentation (number.htm and newnum.htm)
@@ -4048,6 +4059,16 @@ using namespace emscripten;
 using namespace toontalk;
 
 EMSCRIPTEN_BINDINGS(toontalk_objects) {
+    // NumberOperation enum
+    enum_<NumberOperation>("NumberOperation")
+        .value("SUBTRACT_FROM", SUBTRACT_FROM)
+        .value("MULTIPLY_BY", MULTIPLY_BY)
+        .value("INCREASE_BY", INCREASE_BY)
+        .value("DIVIDE_BY", DIVIDE_BY)
+        .value("MODULUS_BY", MODULUS_BY)
+        .value("MAKE_EQUAL", MAKE_EQUAL)
+        .value("NO_NUMBER_OPERATION", NO_NUMBER_OPERATION);
+
     class_<Number, base<Sprite>>("Number")
         .constructor<float, float, double>()
         .function("getValue", &Number::getValue)
