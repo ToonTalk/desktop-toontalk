@@ -14,12 +14,24 @@ void testPlatformLayer() {
 EMSCRIPTEN_BINDINGS(toontalk_core) {
     emscripten::function("testPlatformLayer", &testPlatformLayer);
 
+    // Expose NumberOperation enum
+    emscripten::enum_<NumberOperation>("NumberOperation")
+        .value("SUBTRACT_FROM", SUBTRACT_FROM)
+        .value("MULTIPLY_BY", MULTIPLY_BY)
+        .value("INCREASE_BY", INCREASE_BY)
+        .value("DIVIDE_BY", DIVIDE_BY)
+        .value("MODULUS_BY", MODULUS_BY)
+        .value("MAKE_EQUAL", MAKE_EQUAL)
+        .value("NO_NUMBER_OPERATION", NO_NUMBER_OPERATION);
+
     // Expose Number class
     emscripten::class_<Number>("Number")
-        .constructor<double, int, int, int, int>()
+        .constructor<double, int, int, int, int, NumberOperation>()
         .function("display", &Number::display)
         .function("setValue", &Number::setValue)
         .function("getValue", &Number::getValue)
+        .function("setOperation", &Number::setOperation)
+        .function("getOperation", &Number::getOperation)
         .function("setPosition", &Number::setPosition)
         .function("setSize", &Number::setSize);
 }
