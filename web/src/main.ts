@@ -48,7 +48,7 @@ class ToonTalkWeb {
             this.updateStatus('Canvas mounted');
 
             // Initialize input
-            this.inputManager.initialize(this.renderer.getView());
+            this.inputManager.initialize(this.renderer.getView(), this.renderer);
             this.updateStatus('Input system ready');
 
             // Load WASM module

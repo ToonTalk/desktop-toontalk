@@ -44,11 +44,21 @@ public:
     // Collision detection
     bool containsPoint(float px, float py) const;
 
+    // Mouse interaction / dragging
+    void startDrag(float mouseX, float mouseY);
+    void updateDrag(float mouseX, float mouseY);
+    void endDrag();
+    bool isDragging() const;
+
 protected:
     float x_, y_;
     float width_, height_;
     float rotation_;
     bool visible_;
+
+    // Drag state
+    bool dragging_;
+    float dragOffsetX_, dragOffsetY_;
 };
 
 } // namespace toontalk

@@ -12,7 +12,8 @@ const unsigned int NUMBER_BACKGROUND_COLOR = 0xB9FAC6;  // RGB(185,250,198) - li
 const unsigned int OPERATION_BACKGROUND_COLOR = 0xC3DC6C; // RGB(195,220,108) - yellowish green
 
 Number::Number(double value, int x, int y, int width, int height, NumberOperation op)
-    : value(value), operation(op), x(x), y(y), width(width), height(height) {
+    : value(value), operation(op), x(x), y(y), width(width), height(height),
+      isDragging(false), dragOffsetX(0), dragOffsetY(0) {
 }
 
 void Number::display() {
@@ -182,4 +183,32 @@ double Number::applyTo(double target) const {
         default:
             return target;
     }
+}
+
+void Number::startDrag(int mouseX, int mouseY) {
+    isDragging = true;
+    // Store offset from the object's top-left corner to where the mouse clicked
+    dragOffsetX = mouseX - x;
+    dragOffsetY = mouseY - y;
+}
+
+void Number::updateDrag(int mouseX, int mouseY) {
+    if (isDragging) {
+        // Update position, accounting for the drag offset
+        x = mouseX - dragOffsetX;
+        y = mouseY - dragOffsetY;
+    }
+}
+
+void Number::endDrag() {
+    isDragging = false;
+}
+
+bool Number::getDragging() const {
+    return isDragging;
+}
+
+bool Number::containsPoint(int pointX, int pointY) const {
+    return (pointX >= x && pointX <= x + width &&
+            pointY >= y && pointY <= y + height);
 }

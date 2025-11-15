@@ -5,6 +5,9 @@
  * Supports mouse, keyboard, and touch events.
  */
 
+import { ToonTalkRenderer } from '../renderer/renderer';
+import { WasmSpriteView } from '../renderer/wasm-sprite-view';
+
 export interface Point {
     x: number;
     y: number;
@@ -12,11 +15,14 @@ export interface Point {
 
 export class InputManager {
     private canvas?: HTMLCanvasElement;
+    private renderer?: ToonTalkRenderer;
     private mousePosition: Point = { x: 0, y: 0 };
     private keysPressed: Set<string> = new Set();
+    private draggedSprite: WasmSpriteView | null = null;
 
-    initialize(canvas: HTMLCanvasElement): void {
+    initialize(canvas: HTMLCanvasElement, renderer?: ToonTalkRenderer): void {
         this.canvas = canvas;
+        this.renderer = renderer;
         this.setupEventListeners();
         console.log('Input manager initialized');
     }
@@ -44,16 +50,54 @@ export class InputManager {
 
     private onMouseMove(event: MouseEvent): void {
         this.updateMousePosition(event.clientX, event.clientY);
+
+        // Update dragged sprite position
+        if (this.draggedSprite) {
+            this.draggedSprite.getWasmSprite().updateDrag(this.mousePosition.x, this.mousePosition.y);
+        }
     }
 
     private onMouseDown(event: MouseEvent): void {
-        console.log('Mouse down:', event.button, 'at', this.mousePosition);
-        // TODO: Send to WASM core
+        // Only handle left mouse button for dragging (button 0)
+        if (event.button !== 0) return;
+
+        console.log('Mouse down at', this.mousePosition);
+
+        // Find sprite at mouse position
+        if (this.renderer) {
+            const sprite = this.renderer.findSpriteAt(this.mousePosition.x, this.mousePosition.y);
+            if (sprite) {
+                console.log('Starting drag on sprite');
+                this.draggedSprite = sprite;
+                sprite.getWasmSprite().startDrag(this.mousePosition.x, this.mousePosition.y);
+            }
+        }
     }
 
     private onMouseUp(event: MouseEvent): void {
-        console.log('Mouse up:', event.button);
-        // TODO: Send to WASM core
+        if (event.button !== 0) return;
+
+        console.log('Mouse up');
+
+        if (this.draggedSprite) {
+            // End the drag
+            this.draggedSprite.getWasmSprite().endDrag();
+
+            // Check for drop target
+            if (this.renderer) {
+                const dropTarget = this.renderer.findSpriteAt(
+                    this.mousePosition.x,
+                    this.mousePosition.y,
+                    this.draggedSprite
+                );
+
+                if (dropTarget) {
+                    this.handleDropInteraction(this.draggedSprite, dropTarget);
+                }
+            }
+
+            this.draggedSprite = null;
+        }
     }
 
     private onTouchStart(event: TouchEvent): void {
@@ -104,6 +148,47 @@ export class InputManager {
 
     isKeyPressed(code: string): boolean {
         return this.keysPressed.has(code);
+    }
+
+    /**
+     * Handle drop interactions between sprites
+     * Implements ToonTalk-style operations (Number + Number, Text + Text, etc.)
+     */
+    private handleDropInteraction(draggedSprite: WasmSpriteView, dropTarget: WasmSpriteView): void {
+        const dragged = draggedSprite.getWasmSprite();
+        const target = dropTarget.getWasmSprite();
+
+        // Check if both are Numbers
+        if ('getValue' in dragged && 'getValue' in target) {
+            const draggedNum = dragged as any; // Type as any to access Number methods
+            const targetNum = target as any;
+
+            // Get the dragged number's value
+            const value = draggedNum.getValue();
+
+            // Add the dragged number's value to the target
+            // In the future, we'll check if dragged is an operation (e.g., "+ 5")
+            // and apply the operation accordingly
+            targetNum.add(value);
+
+            console.log(`[Drop] Number ${value} dropped on Number ${targetNum.getValue()}`);
+            console.log(`[Drop] Result: ${targetNum.getValue()}`);
+        }
+        // Check if both are Text
+        else if ('getText' in dragged && 'getText' in target) {
+            const draggedText = dragged as any;
+            const targetText = target as any;
+
+            // Concatenate the dragged text to the target
+            const text = draggedText.getText();
+            targetText.append(text);
+
+            console.log(`[Drop] Text "${text}" appended to Text "${targetText.getText()}"`);
+        }
+        // For other types, just log for now
+        else {
+            console.log('[Drop] Dropped sprite on another sprite (no interaction defined yet)');
+        }
     }
 
     destroy(): void {
