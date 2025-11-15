@@ -58,7 +58,8 @@ export class WasmSpriteView {
         this.container.cursor = 'pointer';
 
         // Add interaction handlers
-        this.setupInteractions();
+        // NOTE: Disabled in favor of InputManager handling drag-and-drop
+        // this.setupInteractions();
 
         // Add container to stage
         stage.addChild(this.container);
@@ -99,6 +100,40 @@ export class WasmSpriteView {
         } catch (e) {
             // Game engine systems not available (needs WASM rebuild)
         }
+    }
+
+    /**
+     * Update the sprite view - syncs PixiJS container with WASM sprite position
+     * Called each frame by the renderer
+     */
+    update(deltaTime: number): void {
+        // Sync container position with WASM sprite position
+        this.container.x = this.wasmSprite.getX();
+        this.container.y = this.wasmSprite.getY();
+
+        // Update WASM sprite (calls update on the C++ object)
+        this.wasmSprite.update(deltaTime);
+    }
+
+    /**
+     * Get the underlying WASM sprite object
+     */
+    getWasmSprite() {
+        return this.wasmSprite;
+    }
+
+    /**
+     * Check if a point is inside this sprite's bounds
+     */
+    containsPoint(x: number, y: number): boolean {
+        return this.wasmSprite.containsPoint(x, y);
+    }
+
+    /**
+     * Get the PixiJS container
+     */
+    getContainer(): PIXI.Container {
+        return this.container;
     }
 
     /**
