@@ -938,20 +938,40 @@ export class WasmSpriteView {
 
         // Position indicators for each hole
         const holeSpacing = width / (numHoles + 1);
+        const holeSize = 12; // Hole indicator size
 
         for (let i = 0; i < numHoles; i++) {
             const xPos = -width/2 + holeSpacing * (i + 1);
+            const yPos = height * 0.15; // Position in upper-middle of box
 
-            // Show filled state with a dot
+            // Draw hole rectangle background
+            const holeRect = new PIXI.Graphics();
+            holeRect.lineStyle(2, 0x654321);
+            holeRect.beginFill(box.isHoleFilled(i) ? 0xA0522D : 0x654321, 0.3);
+            holeRect.drawRect(-holeSize, -holeSize*1.5, holeSize*2, holeSize*3);
+            holeRect.endFill();
+            holeRect.x = xPos;
+            holeRect.y = yPos;
+            overlayContainer.addChild(holeRect);
+
+            // Show filled state with indicator
             if (box.isHoleFilled(i)) {
-                console.log(`[BoxOverlay] Adding green dot for filled hole ${i} at x=${xPos}`);
+                console.log(`[BoxOverlay] Adding indicator for filled hole ${i} at x=${xPos}`);
                 const dot = new PIXI.Graphics();
                 dot.beginFill(0x90EE90);  // Light green
-                dot.drawCircle(0, 0, 6);
+                dot.drawCircle(0, 0, 7);
                 dot.endFill();
                 dot.x = xPos;
-                dot.y = height/4;
+                dot.y = yPos;
                 overlayContainer.addChild(dot);
+            } else {
+                // Empty hole indicator
+                const emptyDot = new PIXI.Graphics();
+                emptyDot.lineStyle(2, 0x654321);
+                emptyDot.drawCircle(0, 0, 4);
+                emptyDot.x = xPos;
+                emptyDot.y = yPos;
+                overlayContainer.addChild(emptyDot);
             }
 
             // Show label if present
@@ -967,7 +987,7 @@ export class WasmSpriteView {
                 });
                 labelText.anchor.set(0.5);
                 labelText.x = xPos;
-                labelText.y = -height/2 + 10;
+                labelText.y = yPos + holeSize*2 + 10;
                 overlayContainer.addChild(labelText);
             }
         }
@@ -1087,11 +1107,11 @@ export class WasmSpriteView {
         const box = this.wasmSprite as ToonTalkBox;
         const numHoles = box.getNumHoles();
 
-        // Get WASM dimensions
+        // Get WASM dimensions (calculated based on number of holes)
         const width = this.wasmSprite.getWidth();
         const height = this.wasmSprite.getHeight();
 
-        // Simple brown box background
+        // Brown box background
         this.graphics.beginFill(0x8B4513);
         this.graphics.drawRect(-width/2, -height/2, width, height);
         this.graphics.endFill();
@@ -1100,83 +1120,119 @@ export class WasmSpriteView {
         this.graphics.lineStyle(3, 0x654321);
         this.graphics.drawRect(-width/2, -height/2, width, height);
 
-        // Overall box status text
-        const statusText = new PIXI.Text(`${box.getCount()}/${numHoles}`, {
-            fontSize: 12,
-            fill: 0xFFFFFF,
-            fontWeight: 'bold',
-            stroke: 0x000000,
-            strokeThickness: 2
-        });
-        statusText.anchor.set(0.5);
-        statusText.y = height/2 - 10;
-        this.graphics.addChild(statusText);
+        // Draw individual holes
+        const holeWidth = 20;
+        const holeHeight = 30;
+        const spacing = width / (numHoles + 1);
 
-        this.textDisplay = statusText;
+        for (let i = 0; i < numHoles; i++) {
+            const xPos = -width/2 + spacing * (i + 1);
+            const yPos = -5;
+
+            // Draw hole background (lighter brown)
+            this.graphics.lineStyle(0);
+            this.graphics.beginFill(0xA0522D);
+            this.graphics.drawRect(xPos - holeWidth/2, yPos - holeHeight/2, holeWidth, holeHeight);
+            this.graphics.endFill();
+
+            // Draw hole border
+            this.graphics.lineStyle(2, 0x654321);
+            this.graphics.drawRect(xPos - holeWidth/2, yPos - holeHeight/2, holeWidth, holeHeight);
+
+            // Show filled state
+            if (box.isHoleFilled(i)) {
+                // Green dot for filled hole
+                this.graphics.lineStyle(0);
+                this.graphics.beginFill(0x90EE90);
+                this.graphics.drawCircle(xPos, yPos, 6);
+                this.graphics.endFill();
+            } else {
+                // Empty hole - show as darker
+                this.graphics.lineStyle(0);
+                this.graphics.beginFill(0x654321);
+                this.graphics.drawCircle(xPos, yPos, 4);
+                this.graphics.endFill();
+            }
+
+            // Draw hole label if present
+            const label = box.getHoleLabel(i);
+            if (label && label.length > 0) {
+                const labelText = new PIXI.Text(label, {
+                    fontSize: 8,
+                    fill: 0xFFFFFF,
+                    fontWeight: 'bold'
+                });
+                labelText.anchor.set(0.5);
+                labelText.x = xPos;
+                labelText.y = yPos + holeHeight/2 + 6;
+                this.graphics.addChild(labelText);
+            }
+        }
     }
 
     private drawNest(): void {
         const nest = this.wasmSprite as ToonTalkNest;
         const numHoles = nest.getNumHoles();
-        const occupied = nest.countOccupied();
+
+        // Get WASM dimensions
+        const width = this.wasmSprite.getWidth();
+        const height = this.wasmSprite.getHeight();
 
         // Purple nest container
         this.graphics.beginFill(0x9370DB);
-        this.graphics.drawRoundedRect(-70, -45, 140, 90, 8);
+        this.graphics.drawRoundedRect(-width/2, -height/2, width, height, 8);
         this.graphics.endFill();
 
         // Border
         this.graphics.lineStyle(3, 0x663399);
-        this.graphics.drawRoundedRect(-70, -45, 140, 90, 8);
+        this.graphics.drawRoundedRect(-width/2, -height/2, width, height, 8);
+
+        // Draw individual nest slots
+        const slotWidth = 25;
+        const slotHeight = 35;
+        const spacing = width / (numHoles + 1);
+
+        for (let i = 0; i < numHoles; i++) {
+            const xPos = -width/2 + spacing * (i + 1);
+            const yPos = 0;
+
+            // Draw slot background
+            this.graphics.lineStyle(0);
+            this.graphics.beginFill(0x8A2BE2, 0.5);
+            this.graphics.drawRoundedRect(xPos - slotWidth/2, yPos - slotHeight/2, slotWidth, slotHeight, 4);
+            this.graphics.endFill();
+
+            // Draw slot border
+            this.graphics.lineStyle(2, 0x663399);
+            this.graphics.drawRoundedRect(xPos - slotWidth/2, yPos - slotHeight/2, slotWidth, slotHeight, 4);
+
+            // Show occupied state
+            if (!nest.isHoleEmpty(i)) {
+                // Yellow indicator for occupied slot
+                this.graphics.lineStyle(0);
+                this.graphics.beginFill(0xFFD700);
+                this.graphics.drawCircle(xPos, yPos, 8);
+                this.graphics.endFill();
+            } else {
+                // Empty slot indicator
+                this.graphics.lineStyle(2, 0x663399);
+                this.graphics.drawCircle(xPos, yPos, 5);
+            }
+        }
 
         // Label at top
-        const label = new PIXI.Text('Nest', {
-            fontSize: 12,
+        const label = new PIXI.Text(`Nest (${nest.countOccupied()}/${numHoles})`, {
+            fontSize: 11,
             fill: 0xFFFFFF,
             fontWeight: 'bold',
             stroke: 0x000000,
             strokeThickness: 2
         });
         label.anchor.set(0.5);
-        label.y = -35;
+        label.y = -height/2 + 10;
         this.graphics.addChild(label);
 
-        // Draw holes
-        const holeSpacing = 120 / (numHoles + 1);
-        for (let i = 0; i < numHoles; i++) {
-            const holeX = -60 + (i + 1) * holeSpacing;
-            const holeY = 5;
-            const isEmpty = nest.isHoleEmpty(i);
-
-            // Draw hole
-            if (isEmpty) {
-                // Empty hole - dark circle
-                this.graphics.beginFill(0x4B0082, 0.6);
-            } else {
-                // Occupied hole - light circle
-                this.graphics.beginFill(0xFFD700);
-            }
-            this.graphics.drawCircle(holeX, holeY, 12);
-            this.graphics.endFill();
-
-            // Hole border
-            this.graphics.lineStyle(2, isEmpty ? 0x663399 : 0xFFD700);
-            this.graphics.drawCircle(holeX, holeY, 12);
-        }
-
-        // Status text
-        const statusText = new PIXI.Text(`${occupied} / ${numHoles}`, {
-            fontSize: 14,
-            fill: 0xFFFFFF,
-            fontWeight: 'bold',
-            stroke: 0x000000,
-            strokeThickness: 2
-        });
-        statusText.anchor.set(0.5);
-        statusText.y = 30;
-        this.graphics.addChild(statusText);
-
-        this.textDisplay = statusText;
+        this.textDisplay = label;
     }
 
     private drawScale(): void {
