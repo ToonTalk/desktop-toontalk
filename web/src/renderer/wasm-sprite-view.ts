@@ -410,6 +410,12 @@ export class WasmSpriteView {
                     this.sprite = new PIXI.Sprite(texture);
                     this.sprite.anchor.set(0, 0);  // Top-left anchor to match WASM coordinates
                     this.container.addChild(this.sprite);
+
+                    // Update WASM sprite dimensions to match texture size for proper hit detection
+                    // This ensures the clickable area matches the visual area
+                    this.wasmSprite.setWidth(texture.width);
+                    this.wasmSprite.setHeight(texture.height);
+                    console.log(`[drawSprite] Updated WASM dimensions to match texture: ${texture.width}x${texture.height}`);
                 } else {
                     this.sprite.texture = texture;
                 }
