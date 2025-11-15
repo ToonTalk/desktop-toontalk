@@ -25,12 +25,14 @@ if(EMSCRIPTEN)
     )
 endif()
 
-# Source files (to be expanded)
+# Source files
 set(CORE_SOURCES
     platform/platform.cpp
     stubs/windows_stubs.cpp
-    minimal/number.cpp
-    test_platform.cpp
+    sprite.cpp
+    core.cpp
+    objects.cpp
+    # test_platform.cpp - excluded, uses minimal/number.h which conflicts with objects.cpp
 )
 
 # Include directories
