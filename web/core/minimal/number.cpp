@@ -7,13 +7,18 @@
 #include <sstream>
 #include <iomanip>
 
-Number::Number(double value, int x, int y, int width, int height)
-    : value(value), x(x), y(y), width(width), height(height) {
+// Original ToonTalk colors
+const unsigned int NUMBER_BACKGROUND_COLOR = 0xB9FAC6;  // RGB(185,250,198) - light green
+const unsigned int OPERATION_BACKGROUND_COLOR = 0xC3DC6C; // RGB(195,220,108) - yellowish green
+
+Number::Number(double value, int x, int y, int width, int height, NumberOperation op)
+    : value(value), operation(op), x(x), y(y), width(width), height(height) {
 }
 
 void Number::display() {
-    // Draw background plate (yellow for numbers in original ToonTalk)
-    TTPlatform::drawRect(x, y, width, height, 0xFFFFCC);  // Light yellow
+    // Draw background plate using appropriate color
+    unsigned int bg_color = getBackgroundColor();
+    TTPlatform::drawRect(x, y, width, height, bg_color);
 
     // Draw border
     TTPlatform::drawRect(x, y, width, 4, 0x000000);                    // Top
@@ -21,24 +26,35 @@ void Number::display() {
     TTPlatform::drawRect(x, y, 4, height, 0x000000);                   // Left
     TTPlatform::drawRect(x + width - 4, y, 4, height, 0x000000);       // Right
 
-    // Convert value to string
+    // Build text to display
     std::ostringstream oss;
 
-    // Format the number nicely
-    if (value == (long)value) {
-        // It's an integer, display without decimal point
-        oss << (long)value;
-    } else {
-        // It's a decimal, show up to 6 decimal places
-        oss << std::fixed << std::setprecision(6) << value;
+    // If it's an operation, show the operation symbol
+    if (operation != NO_NUMBER_OPERATION) {
+        oss << getOperationSymbol();
+        // If there's also a value, show it after the operation
+        if (value != 0.0) {
+            oss << " ";
+        }
+    }
 
-        // Remove trailing zeros
-        std::string str = oss.str();
-        str.erase(str.find_last_not_of('0') + 1, std::string::npos);
-        if (str.back() == '.') str.pop_back();
-        oss.str(str);
-        oss.clear();
-        oss << str;
+    // Add the value (if non-zero or if it's a regular number)
+    if (value != 0.0 || operation == NO_NUMBER_OPERATION) {
+        // Format the number nicely
+        if (value == (long)value) {
+            // It's an integer, display without decimal point
+            oss << (long)value;
+        } else {
+            // It's a decimal, show up to 6 decimal places
+            std::ostringstream temp;
+            temp << std::fixed << std::setprecision(6) << value;
+
+            // Remove trailing zeros
+            std::string str = temp.str();
+            str.erase(str.find_last_not_of('0') + 1, std::string::npos);
+            if (str.back() == '.') str.pop_back();
+            oss << str;
+        }
     }
 
     std::string text = oss.str();
@@ -79,6 +95,14 @@ double Number::getValue() const {
     return value;
 }
 
+void Number::setOperation(NumberOperation op) {
+    operation = op;
+}
+
+NumberOperation Number::getOperation() const {
+    return operation;
+}
+
 void Number::setPosition(int new_x, int new_y) {
     x = new_x;
     y = new_y;
@@ -87,4 +111,20 @@ void Number::setPosition(int new_x, int new_y) {
 void Number::setSize(int new_width, int new_height) {
     width = new_width;
     height = new_height;
+}
+
+const char* Number::getOperationSymbol() const {
+    switch (operation) {
+        case SUBTRACT_FROM:  return "-";
+        case MULTIPLY_BY:    return "*";
+        case INCREASE_BY:    return "+";
+        case DIVIDE_BY:      return "/";
+        case MODULUS_BY:     return "%";
+        case MAKE_EQUAL:     return "=";
+        default:             return "";
+    }
+}
+
+unsigned int Number::getBackgroundColor() const {
+    return (operation == NO_NUMBER_OPERATION) ? NUMBER_BACKGROUND_COLOR : OPERATION_BACKGROUND_COLOR;
 }

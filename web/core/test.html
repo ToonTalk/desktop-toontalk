@@ -201,33 +201,74 @@
                 // Clear canvas first
                 window.ToonTalkRenderer.clear();
 
-                // Create a number with value 42 at position (50, 50) with size 200x100
-                const number1 = new Module.Number(42, 50, 50, 200, 100);
-                window.ToonTalkRenderer.log('Created number with value: ' + number1.getValue());
+                // Row 1: Regular numbers (light green background)
+                // Create a number with value 42
+                const number1 = new Module.Number(42, 50, 50, 150, 80, Module.NumberOperation.NO_NUMBER_OPERATION);
+                window.ToonTalkRenderer.log('Created number: 42');
                 number1.display();
 
-                // Create another number with value 3.14159
-                const number2 = new Module.Number(3.14159, 300, 50, 250, 100);
-                window.ToonTalkRenderer.log('Created number with value: ' + number2.getValue());
+                // Create a decimal number
+                const number2 = new Module.Number(3.14159, 220, 50, 180, 80, Module.NumberOperation.NO_NUMBER_OPERATION);
+                window.ToonTalkRenderer.log('Created number: 3.14159');
                 number2.display();
 
                 // Create a negative number
-                const number3 = new Module.Number(-123.456, 50, 200, 220, 120);
-                window.ToonTalkRenderer.log('Created number with value: ' + number3.getValue());
+                const number3 = new Module.Number(-123.456, 420, 50, 180, 80, Module.NumberOperation.NO_NUMBER_OPERATION);
+                window.ToonTalkRenderer.log('Created number: -123.456');
                 number3.display();
 
-                // Create a large number
-                const number4 = new Module.Number(999999, 320, 200, 220, 120);
-                window.ToonTalkRenderer.log('Created number with value: ' + number4.getValue());
-                number4.display();
+                // Row 2: Operations (yellowish green background)
+                // Addition operation
+                const addOp = new Module.Number(5, 50, 160, 120, 80, Module.NumberOperation.INCREASE_BY);
+                window.ToonTalkRenderer.log('Created operation: + 5');
+                addOp.display();
+
+                // Subtraction operation
+                const subOp = new Module.Number(10, 190, 160, 120, 80, Module.NumberOperation.SUBTRACT_FROM);
+                window.ToonTalkRenderer.log('Created operation: - 10');
+                subOp.display();
+
+                // Multiplication operation
+                const mulOp = new Module.Number(2, 330, 160, 120, 80, Module.NumberOperation.MULTIPLY_BY);
+                window.ToonTalkRenderer.log('Created operation: * 2');
+                mulOp.display();
+
+                // Division operation
+                const divOp = new Module.Number(3, 470, 160, 120, 80, Module.NumberOperation.DIVIDE_BY);
+                window.ToonTalkRenderer.log('Created operation: / 3');
+                divOp.display();
+
+                // Row 3: Operations without values (just symbols)
+                const justAdd = new Module.Number(0, 50, 270, 100, 80, Module.NumberOperation.INCREASE_BY);
+                window.ToonTalkRenderer.log('Created operation: +');
+                justAdd.display();
+
+                const justMul = new Module.Number(0, 170, 270, 100, 80, Module.NumberOperation.MULTIPLY_BY);
+                window.ToonTalkRenderer.log('Created operation: *');
+                justMul.display();
+
+                const justEqual = new Module.Number(0, 290, 270, 100, 80, Module.NumberOperation.MAKE_EQUAL);
+                window.ToonTalkRenderer.log('Created operation: =');
+                justEqual.display();
 
                 window.ToonTalkRenderer.log('✅ Number test completed!');
+                window.ToonTalkRenderer.log('');
+                window.ToonTalkRenderer.log('Notice:');
+                window.ToonTalkRenderer.log('  - Top row: Regular numbers (light green)');
+                window.ToonTalkRenderer.log('  - Middle row: Operations with values (yellowish green)');
+                window.ToonTalkRenderer.log('  - Bottom row: Operations without values (just symbols)');
 
                 // Clean up
                 number1.delete();
                 number2.delete();
                 number3.delete();
-                number4.delete();
+                addOp.delete();
+                subOp.delete();
+                mulOp.delete();
+                divOp.delete();
+                justAdd.delete();
+                justMul.delete();
+                justEqual.delete();
             } catch (err) {
                 window.ToonTalkRenderer.log('❌ Error: ' + err);
                 console.error(err);
