@@ -23,12 +23,22 @@ export class InputManager {
     initialize(canvas: HTMLCanvasElement, renderer?: ToonTalkRenderer): void {
         this.canvas = canvas;
         this.renderer = renderer;
+        console.log('[InputManager] Initializing...', {
+            canvas: canvas ? 'present' : 'missing',
+            renderer: renderer ? 'present' : 'missing',
+            canvasSize: canvas ? `${canvas.width}x${canvas.height}` : 'N/A'
+        });
         this.setupEventListeners();
-        console.log('Input manager initialized');
+        console.log('[InputManager] Input manager initialized successfully');
     }
 
     private setupEventListeners(): void {
-        if (!this.canvas) return;
+        if (!this.canvas) {
+            console.error('[InputManager] Cannot setup listeners - canvas is missing!');
+            return;
+        }
+
+        console.log('[InputManager] Setting up event listeners on canvas');
 
         // Mouse events
         this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
@@ -46,6 +56,8 @@ export class InputManager {
 
         // Prevent context menu on right-click
         this.canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        console.log('[InputManager] Event listeners added successfully');
     }
 
     private onMouseMove(event: MouseEvent): void {
@@ -53,31 +65,48 @@ export class InputManager {
 
         // Update dragged sprite position
         if (this.draggedSprite) {
+            console.log('[InputManager] Dragging sprite to', this.mousePosition);
             this.draggedSprite.getWasmSprite().updateDrag(this.mousePosition.x, this.mousePosition.y);
         }
     }
 
     private onMouseDown(event: MouseEvent): void {
-        // Only handle left mouse button for dragging (button 0)
-        if (event.button !== 0) return;
+        console.log('[InputManager] Mouse down event received:', {
+            button: event.button,
+            clientX: event.clientX,
+            clientY: event.clientY,
+            target: event.target
+        });
 
-        console.log('Mouse down at', this.mousePosition);
+        // Only handle left mouse button for dragging (button 0)
+        if (event.button !== 0) {
+            console.log('[InputManager] Ignoring non-left button');
+            return;
+        }
+
+        console.log('[InputManager] Mouse down at', this.mousePosition);
 
         // Find sprite at mouse position
         if (this.renderer) {
+            console.log('[InputManager] Looking for sprite at position');
             const sprite = this.renderer.findSpriteAt(this.mousePosition.x, this.mousePosition.y);
             if (sprite) {
-                console.log('Starting drag on sprite');
+                console.log('[InputManager] Found sprite! Starting drag');
                 this.draggedSprite = sprite;
                 sprite.getWasmSprite().startDrag(this.mousePosition.x, this.mousePosition.y);
+            } else {
+                console.log('[InputManager] No sprite found at position');
             }
+        } else {
+            console.log('[InputManager] Renderer not available');
         }
     }
 
     private onMouseUp(event: MouseEvent): void {
+        console.log('[InputManager] Mouse up event received');
         if (event.button !== 0) return;
 
-        console.log('Mouse up');
+        console.log('[InputManager] Mouse up');
 
         if (this.draggedSprite) {
             // End the drag
