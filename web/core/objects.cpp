@@ -110,6 +110,33 @@ public:
         value_ = static_cast<long>(value_) | static_cast<long>(other);
     }
 
+    // Apply this number (if it's an operation) to a target value
+    // Returns the result of applying the operation
+    // Example: If this is "+ 5", calling applyTo(10) returns 15
+    double applyTo(double target) const {
+        // If this number is not an operation, return target unchanged
+        if (operation_ == NO_NUMBER_OPERATION) {
+            return target;
+        }
+
+        switch (operation_) {
+            case INCREASE_BY:
+                return target + value_;
+            case SUBTRACT_FROM:
+                return target - value_;
+            case MULTIPLY_BY:
+                return target * value_;
+            case DIVIDE_BY:
+                return (value_ != 0.0) ? target / value_ : target;
+            case MODULUS_BY:
+                return (value_ != 0.0) ? static_cast<long>(target) % static_cast<long>(value_) : target;
+            case MAKE_EQUAL:
+                return value_;
+            default:
+                return target;
+        }
+    }
+
     // Display the number (renders it using platform layer)
     void display() {
         // Draw background plate using appropriate color
@@ -4196,6 +4223,7 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("setOperation", &Number::setOperation)
         .function("getOperationType", &Number::getOperationType)
         .function("setOperationType", &Number::setOperationType)
+        .function("applyTo", &Number::applyTo)
         .function("display", &Number::display)
         .function("toString", &Number::toString);
 
