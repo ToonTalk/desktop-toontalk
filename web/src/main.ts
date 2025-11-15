@@ -139,6 +139,13 @@ class ToonTalkWeb {
         const centerX = 400;
         const centerY = 300;
 
+        // Position camera at the center of the demo scene so sprites are visible
+        const gameEngine = getGameEngine();
+        if (gameEngine.getSceneManager()) {
+            gameEngine.setCameraPosition(centerX, centerY);
+            console.log(`[Camera] Positioned at scene center (${centerX}, ${centerY})`);
+        }
+
         // Row 1 (Top): Birds
         const bird1 = wasmCore.createBird(centerX - 150, centerY - 120);
         bird1.setVelocity(0.1, -0.1);
