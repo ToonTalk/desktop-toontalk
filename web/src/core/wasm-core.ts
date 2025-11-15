@@ -129,8 +129,8 @@ export class WasmCore {
         console.log('[WASM Test] Bird velocity set');
         bird.delete(); // Important: clean up
 
-        // Test 6: Create a Number
-        const num = new this.module.Number(100, 100, 42);
+        // Test 6: Create a Number (value, x, y, width, height, operation)
+        const num = new this.module.Number(42, 100, 100, 80, 60, this.module.NumberOperation.NO_NUMBER_OPERATION);
         console.log('[WASM Test] Created Number with value:', num.getValue());
         num.add(13);
         console.log('[WASM Test] After add(13):', num.getValue(), '- String:', num.toString());
