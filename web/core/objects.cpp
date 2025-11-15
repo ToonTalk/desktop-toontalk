@@ -6,6 +6,7 @@
  */
 
 #include "sprite.h"
+#include "platform/platform.h"
 #include <emscripten/bind.h>
 #include <string>
 #include <sstream>
@@ -109,6 +110,84 @@ public:
         value_ = static_cast<long>(value_) | static_cast<long>(other);
     }
 
+    // Display the number (renders it using platform layer)
+    void display() {
+        // Draw background plate using appropriate color
+        unsigned int bg_color = getBackgroundColor();
+        TTPlatform::drawRect(static_cast<int>(x_), static_cast<int>(y_),
+                            static_cast<int>(width_), static_cast<int>(height_), bg_color);
+
+        // Draw border
+        TTPlatform::drawRect(static_cast<int>(x_), static_cast<int>(y_),
+                            static_cast<int>(width_), 4, 0x000000);  // Top
+        TTPlatform::drawRect(static_cast<int>(x_), static_cast<int>(y_ + height_ - 4),
+                            static_cast<int>(width_), 4, 0x000000);  // Bottom
+        TTPlatform::drawRect(static_cast<int>(x_), static_cast<int>(y_),
+                            4, static_cast<int>(height_), 0x000000);  // Left
+        TTPlatform::drawRect(static_cast<int>(x_ + width_ - 4), static_cast<int>(y_),
+                            4, static_cast<int>(height_), 0x000000);  // Right
+
+        // Build text to display
+        std::ostringstream oss;
+
+        // If it's an operation, show the operation symbol
+        if (operation_ != NO_NUMBER_OPERATION) {
+            oss << getOperationSymbol();
+            // If there's also a value, show it after the operation
+            if (value_ != 0.0) {
+                oss << " ";
+            }
+        }
+
+        // Add the value (if non-zero or if it's a regular number)
+        if (value_ != 0.0 || operation_ == NO_NUMBER_OPERATION) {
+            // Format the number nicely
+            if (value_ == static_cast<long>(value_)) {
+                // It's an integer, display without decimal point
+                oss << static_cast<long>(value_);
+            } else {
+                // It's a decimal, show up to 6 decimal places
+                std::ostringstream temp;
+                temp << std::fixed << std::setprecision(6) << value_;
+
+                // Remove trailing zeros
+                std::string str = temp.str();
+                str.erase(str.find_last_not_of('0') + 1, std::string::npos);
+                if (str.back() == '.') str.pop_back();
+                oss << str;
+            }
+        }
+
+        std::string text = oss.str();
+
+        // Calculate font size to fit the text
+        int padding = 20;
+        int text_width = static_cast<int>(width_) - 2 * padding;
+        int text_height = static_cast<int>(height_) - 2 * padding;
+
+        // Estimate character width (rough approximation)
+        int char_count = text.length();
+        int font_size = text_height;
+
+        // Adjust font size if text is too wide
+        if (char_count > 0) {
+            int estimated_width = font_size * char_count * 0.6;  // Rough approximation
+            if (estimated_width > text_width) {
+                font_size = text_width / (char_count * 0.6);
+            }
+        }
+
+        // Don't make font too small
+        if (font_size < 12) font_size = 12;
+
+        // Calculate text position (centered)
+        int text_x = static_cast<int>(x_) + padding;
+        int text_y = static_cast<int>(y_) + (static_cast<int>(height_) / 2) + (font_size / 3);
+
+        // Draw the text
+        TTPlatform::drawText(text.c_str(), text_x, text_y, font_size, 0x000000);  // Black text
+    }
+
     // Get string representation
     std::string toString() const {
         if (is_blank_) {
@@ -135,6 +214,26 @@ private:
     bool is_blank_;           // Blank number for type testing
     bool is_operation_;       // Is this an operation like "/5"?
     NumberOperation operation_;  // The operation type
+
+    // Helper to get operation symbol
+    const char* getOperationSymbol() const {
+        switch (operation_) {
+            case SUBTRACT_FROM:  return "-";
+            case MULTIPLY_BY:    return "*";
+            case INCREASE_BY:    return "+";
+            case DIVIDE_BY:      return "/";
+            case MODULUS_BY:     return "%";
+            case MAKE_EQUAL:     return "=";
+            default:             return "";
+        }
+    }
+
+    // Helper to get appropriate background color
+    unsigned int getBackgroundColor() const {
+        const unsigned int NUMBER_BACKGROUND_COLOR = 0xB9FAC6;     // RGB(185,250,198) - light green
+        const unsigned int OPERATION_BACKGROUND_COLOR = 0xC3DC6C;  // RGB(195,220,108) - yellowish green
+        return (operation_ == NO_NUMBER_OPERATION) ? NUMBER_BACKGROUND_COLOR : OPERATION_BACKGROUND_COLOR;
+    }
 };
 
 /**
@@ -4097,6 +4196,7 @@ EMSCRIPTEN_BINDINGS(toontalk_objects) {
         .function("setOperation", &Number::setOperation)
         .function("getOperationType", &Number::getOperationType)
         .function("setOperationType", &Number::setOperationType)
+        .function("display", &Number::display)
         .function("toString", &Number::toString);
 
     class_<Text, base<Sprite>>("Text")
