@@ -128,3 +128,58 @@ const char* Number::getOperationSymbol() const {
 unsigned int Number::getBackgroundColor() const {
     return (operation == NO_NUMBER_OPERATION) ? NUMBER_BACKGROUND_COLOR : OPERATION_BACKGROUND_COLOR;
 }
+
+void Number::applyOperation(NumberOperation op, double operand) {
+    switch (op) {
+        case INCREASE_BY:
+            value += operand;
+            break;
+        case SUBTRACT_FROM:
+            value -= operand;
+            break;
+        case MULTIPLY_BY:
+            value *= operand;
+            break;
+        case DIVIDE_BY:
+            if (operand != 0.0) {
+                value /= operand;
+            }
+            // Note: in original ToonTalk, division by zero is handled specially
+            break;
+        case MODULUS_BY:
+            if (operand != 0.0) {
+                value = (long)value % (long)operand;
+            }
+            break;
+        case MAKE_EQUAL:
+            value = operand;
+            break;
+        case NO_NUMBER_OPERATION:
+            // No operation to apply
+            break;
+    }
+}
+
+double Number::applyTo(double target) const {
+    // If this number is an operation, apply it to the target
+    if (operation == NO_NUMBER_OPERATION) {
+        return target;  // Not an operation, return target unchanged
+    }
+
+    switch (operation) {
+        case INCREASE_BY:
+            return target + value;
+        case SUBTRACT_FROM:
+            return target - value;
+        case MULTIPLY_BY:
+            return target * value;
+        case DIVIDE_BY:
+            return (value != 0.0) ? target / value : target;
+        case MODULUS_BY:
+            return (value != 0.0) ? (long)target % (long)value : target;
+        case MAKE_EQUAL:
+            return value;
+        default:
+            return target;
+    }
+}

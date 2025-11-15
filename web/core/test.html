@@ -43,7 +43,8 @@
 
     <div>
         <button onclick="testPlatform()">Test Platform Layer</button>
-        <button onclick="testNumber()">Test Number</button>
+        <button onclick="testNumber()">Test Number Display</button>
+        <button onclick="testArithmetic()">Test Arithmetic</button>
         <button onclick="clearCanvas()">Clear Canvas</button>
     </div>
 
@@ -269,6 +270,95 @@
                 justAdd.delete();
                 justMul.delete();
                 justEqual.delete();
+            } catch (err) {
+                window.ToonTalkRenderer.log('❌ Error: ' + err);
+                console.error(err);
+            }
+        }
+
+        function testArithmetic() {
+            if (!Module) {
+                alert('WASM not loaded yet!');
+                return;
+            }
+
+            window.ToonTalkRenderer.log('--- Testing Arithmetic Operations ---');
+
+            try {
+                // Clear canvas first
+                window.ToonTalkRenderer.clear();
+
+                // Create a starting number
+                const num = new Module.Number(10, 50, 50, 150, 80, Module.NumberOperation.NO_NUMBER_OPERATION);
+                window.ToonTalkRenderer.log('Starting with: 10');
+                num.display();
+
+                // Create operations
+                const addOp = new Module.Number(5, 220, 50, 120, 80, Module.NumberOperation.INCREASE_BY);
+                window.ToonTalkRenderer.log('Operation: + 5');
+                addOp.display();
+
+                const mulOp = new Module.Number(2, 360, 50, 120, 80, Module.NumberOperation.MULTIPLY_BY);
+                window.ToonTalkRenderer.log('Operation: * 2');
+                mulOp.display();
+
+                // Apply operations step by step
+                window.ToonTalkRenderer.log('');
+                window.ToonTalkRenderer.log('Step 1: Apply "+ 5" to 10');
+
+                // Get the result
+                let result1 = addOp.applyTo(num.getValue());
+                window.ToonTalkRenderer.log('  Result: ' + result1);
+
+                // Update the number
+                num.setValue(result1);
+                num.setPosition(50, 170);
+                num.display();
+
+                window.ToonTalkRenderer.log('');
+                window.ToonTalkRenderer.log('Step 2: Apply "* 2" to ' + result1);
+
+                let result2 = mulOp.applyTo(num.getValue());
+                window.ToonTalkRenderer.log('  Result: ' + result2);
+
+                // Update the number again
+                num.setValue(result2);
+                num.setPosition(50, 290);
+                num.display();
+
+                // Show the computation chain
+                window.ToonTalkRenderer.log('');
+                window.ToonTalkRenderer.log('Computation: 10 + 5 = 15, then 15 * 2 = 30');
+                window.ToonTalkRenderer.log('Final result: ' + num.getValue());
+
+                // Test more operations
+                window.ToonTalkRenderer.log('');
+                window.ToonTalkRenderer.log('--- Additional Operations ---');
+
+                const num2 = new Module.Number(100, 300, 170, 150, 80, Module.NumberOperation.NO_NUMBER_OPERATION);
+                window.ToonTalkRenderer.log('Number: 100');
+                num2.display();
+
+                const subOp = new Module.Number(25, 470, 170, 120, 80, Module.NumberOperation.SUBTRACT_FROM);
+                window.ToonTalkRenderer.log('Operation: - 25');
+                subOp.display();
+
+                let result3 = subOp.applyTo(num2.getValue());
+                window.ToonTalkRenderer.log('100 - 25 = ' + result3);
+
+                num2.setValue(result3);
+                num2.setPosition(300, 290);
+                num2.display();
+
+                window.ToonTalkRenderer.log('');
+                window.ToonTalkRenderer.log('✅ Arithmetic test completed!');
+
+                // Clean up
+                num.delete();
+                addOp.delete();
+                mulOp.delete();
+                num2.delete();
+                subOp.delete();
             } catch (err) {
                 window.ToonTalkRenderer.log('❌ Error: ' + err);
                 console.error(err);
