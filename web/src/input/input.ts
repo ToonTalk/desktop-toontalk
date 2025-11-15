@@ -127,6 +127,9 @@ export class InputManager {
                 console.log('[InputManager] Found sprite! Starting drag');
                 this.draggedSprite = sprite;
                 sprite.getWasmSprite().startDrag(worldX, worldY);
+
+                // Bring dragged sprite to front
+                sprite.bringToFront();
             } else {
                 console.log('[InputManager] No sprite found at position');
             }
@@ -153,6 +156,9 @@ export class InputManager {
         if (this.draggedSprite) {
             // End the drag
             this.draggedSprite.getWasmSprite().endDrag();
+
+            // Reset z-index
+            this.draggedSprite.resetZIndex();
 
             // Convert screen coordinates to world coordinates
             let worldX = this.mousePosition.x;
@@ -253,6 +259,7 @@ export class InputManager {
             const mode = wand.getModeInt();
             const modes = ['Number', 'Text', 'Box', 'Nest', 'Bird'];
             console.log(`[Click] ✨ Wand mode changed to: ${modes[mode] || mode}`);
+            sprite.refresh();
             return;
         }
 
@@ -270,6 +277,7 @@ export class InputManager {
                 bomb.reset();
                 console.log('[Click] Bomb reset');
             }
+            sprite.refresh();
             return;
         }
 
@@ -280,6 +288,7 @@ export class InputManager {
             const state = scale.getTiltState();
             const states = ['Totter', 'Tilt Left', 'Tilt Right', 'Balanced', 'Frozen', 'Remembering'];
             console.log(`[Click] ⚖️ Scale state: ${states[state] || state}`);
+            sprite.refresh();
             return;
         }
 
@@ -297,6 +306,7 @@ export class InputManager {
                 robot.stop();
                 console.log('[Click] 🤖 Robot stopped');
             }
+            sprite.refresh();
             return;
         }
 
@@ -306,6 +316,7 @@ export class InputManager {
             notebook.nextPage();
             const page = notebook.getCurrentPage();
             console.log(`[Click] 📖 Notebook turned to page ${page}`);
+            sprite.refresh();
             return;
         }
 
@@ -317,6 +328,7 @@ export class InputManager {
             const types = ['Mouse', 'Keyboard', 'Time', 'Collision'];
             const type = types[sensor.getTypeInt()] || 'Unknown';
             console.log(`[Click] 📡 ${type} sensor ${!active ? 'activated' : 'deactivated'}`);
+            sprite.refresh();
             return;
         }
 
@@ -326,6 +338,7 @@ export class InputManager {
             mouse.doOperation();
             const result = mouse.getResult();
             console.log(`[Click] 🖱️ Mouse calculation result: ${result}`);
+            sprite.refresh();
             return;
         }
 
@@ -365,6 +378,9 @@ export class InputManager {
             }
 
             console.log(`[Drop] Number ${value} → Number = ${targetNum.getValue()}`);
+
+            // Refresh the visual display
+            dropTarget.refresh();
             return;
         }
 
@@ -375,6 +391,9 @@ export class InputManager {
             const text = draggedText.getText();
             targetText.append(text);
             console.log(`[Drop] Text "${text}" → Text = "${targetText.getText()}"`);
+
+            // Refresh the visual display
+            dropTarget.refresh();
             return;
         }
 

@@ -116,6 +116,32 @@ export class WasmSpriteView {
     }
 
     /**
+     * Refresh the visual representation of the sprite
+     * Call this after the underlying WASM data changes (e.g., after drop interactions)
+     */
+    refresh(): void {
+        const type = this.getObjectType();
+        console.log(`[WasmSpriteView] Refreshing sprite of type: ${type}`);
+
+        // Redraw the sprite to reflect updated data
+        this.drawSprite();
+    }
+
+    /**
+     * Bring this sprite to the front (highest z-index)
+     */
+    bringToFront(): void {
+        this.container.zIndex = 1000;
+    }
+
+    /**
+     * Reset z-index to normal
+     */
+    resetZIndex(): void {
+        this.container.zIndex = 0;
+    }
+
+    /**
      * Get the underlying WASM sprite object
      */
     getWasmSprite() {
