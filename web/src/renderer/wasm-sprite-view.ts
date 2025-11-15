@@ -767,8 +767,9 @@ export class WasmSpriteView {
                 container.addChild(denomText);
             }
 
-            container.x = 0;  // Centered in this.container's coordinate system
-            container.y = 0;
+            // Position at center of sprite (sprite anchor is now at top-left)
+            container.x = width / 2;
+            container.y = height / 2;
             this.container.addChild(container);
             this.textDisplay = container;
 
@@ -805,8 +806,9 @@ export class WasmSpriteView {
                 fontFamily: 'Arial'
             });
             valueText.anchor.set(0.5);
-            valueText.x = 0;  // Centered in container's coordinate system
-            valueText.y = 0;
+            // Position at center of sprite (sprite anchor is now at top-left)
+            valueText.x = width / 2;
+            valueText.y = height / 2;
             this.container.addChild(valueText);
             this.textDisplay = valueText;
         }
@@ -876,8 +878,9 @@ export class WasmSpriteView {
                 breakWords: false  // Keep whole words together
             });
             valueText.anchor.set(0.5);
-            valueText.x = 0;  // Centered in container's coordinate system
-            valueText.y = 0;
+            // Position at center of sprite (sprite anchor is now at top-left)
+            valueText.x = width / 2;
+            valueText.y = height / 2;
             this.container.addChild(valueText);
             this.textDisplay = valueText;
         }
