@@ -33,5 +33,7 @@ EMSCRIPTEN_BINDINGS(toontalk_core) {
         .function("setOperation", &Number::setOperation)
         .function("getOperation", &Number::getOperation)
         .function("setPosition", &Number::setPosition)
-        .function("setSize", &Number::setSize);
+        .function("setSize", &Number::setSize)
+        .function("applyOperation", &Number::applyOperation)
+        .function("applyTo", &Number::applyTo);
 }

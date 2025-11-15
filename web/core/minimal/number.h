@@ -36,6 +36,14 @@ public:
     void setPosition(int new_x, int new_y);
     void setSize(int new_width, int new_height);
 
+    // Apply an operation to this number
+    // In original ToonTalk, dropping "+ 5" on "10" makes it "15"
+    void applyOperation(NumberOperation op, double operand);
+
+    // Apply this number (if it's an operation) to another number
+    // Returns the result
+    double applyTo(double target) const;
+
 private:
     double value;
     NumberOperation operation;
