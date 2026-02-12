@@ -1,0 +1,24 @@
+# Emscripten SDK (large download, install locally)
+web/core/emsdk/
+
+# Python wrapper bin (generated on Windows)
+web/core/.python-bin/
+web/core/.temp-bin/
+
+# Build outputs
+web/core/build/
+web/public/core/build/
+
+# Node modules
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
